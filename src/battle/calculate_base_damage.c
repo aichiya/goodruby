@@ -73,10 +73,10 @@ const u8 gHoldEffectToType[][2] =
 
 u8 GetBattlerSide(u8 bank);
 
-#define APPLY_STAT_MOD(var, mon, stat, statIndex)                                   \
+#define APPLY_STAT_MOD(var, mon, stat, statMod)                                     \
 {                                                                                   \
-    (var) = (stat) * (gStatStageRatios)[(mon)->statStages[(statIndex)]][0];         \
-    (var) /= (gStatStageRatios)[(mon)->statStages[(statIndex)]][1];                 \
+    (var) = (stat) * (gStatStageRatios)[statMod][0];                                \
+    (var) /= (gStatStageRatios)[statMod][1];                                        \
 }
 
 s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *defender, u32 move, u16 sideStatus, u16 powerOverride, u8 typeOverride, u8 bankAtk, u8 bankDef)
@@ -84,9 +84,10 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     u32 i;
     s32 damage = 0;
     s32 damageHelper;
-    u8 type;
+    u8 type, moveClass;
     u16 attack, defense;
     u16 spAttack, spDefense;
+    u8 attackMod, defenseMod;
     u8 defenderHoldEffect;
     u8 defenderHoldEffectParam;
     u8 attackerHoldEffect;
@@ -101,6 +102,8 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         type = gBattleMoves[move].type;
     else
         type = typeOverride & 0x3F;
+
+    moveClass = gBattleMoves[move].moveClass;
 
     attack = attacker->attack;
     defense = defender->defense;
@@ -170,10 +173,8 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         if (attackerHoldEffect == gHoldEffectToType[i][0]
             && type == gHoldEffectToType[i][1])
         {
-            if (type <= 8)
-                attack = (attack * (attackerHoldEffectParam + 100)) / 100;
-            else
-                spAttack = (spAttack * (attackerHoldEffectParam + 100)) / 100;
+            attack = (attack * (attackerHoldEffectParam + 100)) / 100;
+            spAttack = (spAttack * (attackerHoldEffectParam + 100)) / 100;
             break;
         }
     }
@@ -195,7 +196,10 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     if (attackerHoldEffect == HOLD_EFFECT_THICK_CLUB && (attacker->species == SPECIES_CUBONE || attacker->species == SPECIES_MAROWAK))
         attack *= 2;
     if (defender->ability == ABILITY_THICK_FAT && (type == TYPE_FIRE || type == TYPE_ICE))
+    {
+        attack /= 2;
         spAttack /= 2;
+    }
     if (attacker->ability == ABILITY_HUSTLE)
         attack = (150 * attack) / 100;
     if (attacker->ability == ABILITY_PLUS && AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, ABILITY_MINUS, 0, 0))
@@ -220,136 +224,120 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         gBattleMovePower = (150 * gBattleMovePower) / 100;
     if (gBattleMoves[gCurrentMove].effect == EFFECT_EXPLOSION)
         defense /= 2;
-
-    if (type < TYPE_MYSTERY) // is physical
+    
+    if (moveClass == 0)
     {
-        if (gCritMultiplier == 2)
-        {
-            if (attacker->statStages[STAT_STAGE_ATK] > 6)
-                APPLY_STAT_MOD(damage, attacker, attack, STAT_STAGE_ATK)
-            else
-                damage = attack;
-        }
-        else
-            APPLY_STAT_MOD(damage, attacker, attack, STAT_STAGE_ATK)
-
-        damage = damage * gBattleMovePower;
-        damage *= (2 * attacker->level / 5 + 2);
-
-        if (gCritMultiplier == 2)
-        {
-            if (defender->statStages[STAT_STAGE_DEF] < 6)
-                APPLY_STAT_MOD(damageHelper, defender, defense, STAT_STAGE_DEF)
-            else
-                damageHelper = defense;
-        }
-        else
-            APPLY_STAT_MOD(damageHelper, defender, defense, STAT_STAGE_DEF)
-
-        damage = damage / damageHelper;
-        damage /= 50;
-
-        if ((attacker->status1 & STATUS_BURN) && attacker->ability != ABILITY_GUTS)
-            damage /= 2;
-
+        attack = attack;
+        defense = defense;
+        attackMod = attacker->statStages[STAT_STAGE_ATK];
+        defenseMod = defender->statStages[STAT_STAGE_DEF];
+        
         if ((sideStatus & SIDE_STATUS_REFLECT) && gCritMultiplier == 1)
         {
             if ((gBattleTypeFlags & BATTLE_TYPE_DOUBLE) && CountAliveMons(2) == 2)
-                damage = 2 * (damage / 3);
+                defense = (defense * 3) / 2;
             else
-                damage /= 2;
+                defense *= 2;
         }
-
-        if ((gBattleTypeFlags & BATTLE_TYPE_DOUBLE) && gBattleMoves[move].target == 8 && CountAliveMons(2) == 2)
-            damage /= 2;
-
-        // moves always do at least 1 damage.
-        if (damage == 0)
-            damage = 1;
+        
+        if ((attacker->status1 & STATUS_BURN) && attacker->ability != ABILITY_GUTS)
+            attack /= 2;
     }
-
-    if (type == TYPE_MYSTERY)
-        damage = 0; // is ??? type. does 0 damage.
-
-    if (type > TYPE_MYSTERY) // is special?
+    else if (moveClass == 1)
     {
-        if (gCritMultiplier == 2)
-        {
-            if (attacker->statStages[STAT_STAGE_SPATK] > 6)
-                APPLY_STAT_MOD(damage, attacker, spAttack, STAT_STAGE_SPATK)
-            else
-                damage = spAttack;
-        }
-        else
-            APPLY_STAT_MOD(damage, attacker, spAttack, STAT_STAGE_SPATK)
-
-        damage = damage * gBattleMovePower;
-        damage *= (2 * attacker->level / 5 + 2);
-
-        if (gCritMultiplier == 2)
-        {
-            if (defender->statStages[STAT_STAGE_SPDEF] < 6)
-                APPLY_STAT_MOD(damageHelper, defender, spDefense, STAT_STAGE_SPDEF)
-            else
-                damageHelper = spDefense;
-        }
-        else
-            APPLY_STAT_MOD(damageHelper, defender, spDefense, STAT_STAGE_SPDEF)
-
-        damage = (damage / damageHelper);
-        damage /= 50;
-
+        attack = spAttack;
+        defense = spDefense;
+        attackMod = attacker->statStages[STAT_STAGE_SPATK];
+        defenseMod = defender->statStages[STAT_STAGE_SPDEF];
+        
         if ((sideStatus & SIDE_STATUS_LIGHTSCREEN) && gCritMultiplier == 1)
         {
             if ((gBattleTypeFlags & BATTLE_TYPE_DOUBLE) && CountAliveMons(2) == 2)
-                damage = 2 * (damage / 3);
+                defense = (defense * 3) / 2;
             else
+                defense *= 2;
+        }
+    }
+
+    if (gCritMultiplier == 2)
+    {
+        if (attackMod > 6)
+            APPLY_STAT_MOD(damage, attacker, attack, attackMod)
+        else
+            damage = attack;
+    }
+    else
+        APPLY_STAT_MOD(damage, attacker, attack, attackMod)
+
+    damage = damage * gBattleMovePower;
+    damage *= (2 * attacker->level / 5 + 2);
+
+    if (gCritMultiplier == 2)
+    {
+        if (defenseMod < 6)
+            APPLY_STAT_MOD(damageHelper, defender, defense, defenseMod)
+        else
+            damageHelper = defense;
+    }
+    else
+        APPLY_STAT_MOD(damageHelper, defender, defense, defenseMod)
+
+    damage = damage / damageHelper;
+    damage /= 50;
+    
+    // are effects of weather negated with cloud nine or air lock
+    if (!AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, ABILITY_CLOUD_NINE, 0, 0)
+        && !AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, ABILITY_AIR_LOCK, 0, 0))
+    {
+        if (gBattleWeather & WEATHER_RAIN_TEMPORARY)
+        {
+            switch (type)
+            {
+            case TYPE_FIRE:
                 damage /= 2;
+                break;
+            case TYPE_WATER:
+                damage = (15 * damage) / 10;
+                break;
+            }
         }
 
-        if ((gBattleTypeFlags & BATTLE_TYPE_DOUBLE) && gBattleMoves[move].target == 8 && CountAliveMons(2) == 2)
+        // any weather except sun weakens solar beam
+        if ((gBattleWeather & (WEATHER_RAIN_ANY | WEATHER_SANDSTORM_ANY | WEATHER_HAIL)) && gCurrentMove == MOVE_SOLAR_BEAM)
             damage /= 2;
 
-        // are effects of weather negated with cloud nine or air lock
-        if (!AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, ABILITY_CLOUD_NINE, 0, 0)
-            && !AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, ABILITY_AIR_LOCK, 0, 0))
+        // sunny
+        if (gBattleWeather & WEATHER_SUN_ANY)
         {
-            if (gBattleWeather & WEATHER_RAIN_TEMPORARY)
+            switch (type)
             {
-                switch (type)
-                {
-                case TYPE_FIRE:
-                    damage /= 2;
-                    break;
-                case TYPE_WATER:
-                    damage = (15 * damage) / 10;
-                    break;
-                }
-            }
-
-            // any weather except sun weakens solar beam
-            if ((gBattleWeather & (WEATHER_RAIN_ANY | WEATHER_SANDSTORM_ANY | WEATHER_HAIL)) && gCurrentMove == MOVE_SOLAR_BEAM)
+            case TYPE_FIRE:
+                damage = (15 * damage) / 10;
+                break;
+            case TYPE_WATER:
                 damage /= 2;
-
-            // sunny
-            if (gBattleWeather & WEATHER_SUN_ANY)
-            {
-                switch (type)
-                {
-                case TYPE_FIRE:
-                    damage = (15 * damage) / 10;
-                    break;
-                case TYPE_WATER:
-                    damage /= 2;
-                    break;
-                }
+                break;
             }
         }
-
-        // flash fire triggered
-        if ((eFlashFireArr.arr[bankAtk] & 1) && type == TYPE_FIRE)
-            damage = (15 * damage) / 10;
+        
+        // sand
+        if (gBattleWeather & WEATHER_SANDSTORM_ANY && moveClass == 1 && (defender->type1 == TYPE_ROCK || defender->type2 == TYPE_ROCK))
+        {
+            damage = (10 * damage) / 15;
+        }
     }
+    
+    // flash fire triggered
+    if ((eFlashFireArr.arr[bankAtk] & 1) && type == TYPE_FIRE)
+        damage = (15 * damage) / 10;
+
+    // spread move penalty
+    if ((gBattleTypeFlags & BATTLE_TYPE_DOUBLE) && gBattleMoves[move].target == 8 && CountAliveMons(2) == 2)
+        damage /= 2;
+
+     // moves always do at least 1 damage.
+    if (damage == 0)
+        damage = 1;
 
     return damage + 2;
 }

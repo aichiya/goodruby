@@ -1,0 +1,17 @@
+--update Spit Up
+--update Beat Up
+--update Hidden Power
+--update Knock off
+
+--update Bide acc
+--update Foresight, Odor Sleuth, Lock-On, Mind Reader acc
+--update Struggle acc
+--update Roar, Whirlwind acc
+
+--update Toxic acc for poison-types
+
+--figure out what's going on with razor wind/sky attack crit
+--make twineedle roll on both hits
+--give volt tackle a paralyze chance
+
+--update move targetting for surf, etc.
