@@ -15,3 +15,5 @@
 --give volt tackle a paralyze chance
 
 --update move targetting for surf, etc.
+
+--Go through movepools of Hoenn mons and add needed moves.

@@ -4976,3 +4976,59 @@ gBattleMoves:: @ 81FB12C
 	.byte 0
 	.byte CLASS_SPECIAL
 	.byte 0
+
+@ ENERGY_BALL
+	.byte EFFECT_SPECIAL_DEFENSE_DOWN_HIT
+	.byte 90 @ power
+	.byte TYPE_GRASS
+	.byte 100 @ accuracy
+	.byte 10 @ PP
+	.byte 10 @ secondary effect chance
+	.byte TARGET_SELECTED_POKEMON
+	.byte 0 @ priority
+	.byte F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT @ misc. flags
+	.byte 0
+	.byte CLASS_SPECIAL
+	.byte 0
+
+@ LEAF_STORM
+	.byte EFFECT_OVERHEAT
+	.byte 130 @ power
+	.byte TYPE_GRASS
+	.byte 90 @ accuracy
+	.byte 5 @ PP
+	.byte 100 @ secondary effect chance
+	.byte TARGET_SELECTED_POKEMON
+	.byte 0 @ priority
+	.byte F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT @ misc. flags
+	.byte 0
+	.byte CLASS_SPECIAL
+	.byte 0
+
+@ DUAL_CHOP
+	.byte EFFECT_DOUBLE_HIT
+	.byte 40 @ power
+	.byte TYPE_DRAGON
+	.byte 90 @ accuracy
+	.byte 15 @ PP
+	.byte 0 @ secondary effect chance
+	.byte TARGET_SELECTED_POKEMON
+	.byte 0 @ priority
+	.byte F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT @ misc. flags
+	.byte 0
+	.byte CLASS_PHYSICAL
+	.byte 0
+
+@ X_SCISSOR
+	.byte EFFECT_HIT
+	.byte 80 @ power
+	.byte TYPE_BUG
+	.byte 100 @ accuracy
+	.byte 15 @ PP
+	.byte 0 @ secondary effect chance
+	.byte TARGET_SELECTED_POKEMON
+	.byte 0 @ priority
+	.byte F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT @ misc. flags
+	.byte 0
+	.byte CLASS_PHYSICAL
+	.byte 0

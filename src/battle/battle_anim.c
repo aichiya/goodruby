@@ -1254,6 +1254,7 @@ const struct CompressedSpritePalette gBattleAnimPaletteTable[] =
     { (u8 *) &gBattleAnimSpritePalette_286, 10286 },
     { (u8 *) &gBattleAnimSpritePalette_287, 10287 },
     { (u8 *) &gBattleAnimSpritePalette_288, 10288 },
+    { (u8 *) &gBattleAnimSpritePalette_289, 10289 },
 };
 
 const struct BattleAnimBackground gBattleAnimBackgroundTable[] =

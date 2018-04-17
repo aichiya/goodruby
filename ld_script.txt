@@ -608,6 +608,7 @@ SECTIONS {
         src/rotating_gate.o(.rodata);
         src/item_use.o(.rodata);
         data/battle_anim_80CA710.o(.rodata);
+        data/battle_anim_new.o(.rodata);
         src/battle/anim/battle_intro.o(.rodata);
         src/bike.o(.rodata);
         src/easy_chat_1.o(.rodata);

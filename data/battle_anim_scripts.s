@@ -370,6 +370,10 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_WATER_PULSE
 	.4byte Move_DOOM_DESIRE
 	.4byte Move_PSYCHO_BOOST
+	.4byte Move_ENERGY_BALL
+	.4byte Move_LEAF_STORM
+	.4byte Move_DUAL_CHOP
+	.4byte Move_X_SCISSOR
 	.4byte PoundCopy
 
 	.align 2
@@ -10744,4 +10748,161 @@ Special_SubstituteToMon: @ 81D6BA6
 
 Special_MonToSubstitute: @ 81D6BB0
 	createvisualtask sub_814151C, 2, 0
+	end
+
+Move_ENERGY_BALL:
+	loadspritegfx 10150
+	loadspritegfx 10176
+	loadspritegfx 10289
+	call _81CA1C0
+	waitforvisualfinish
+	call _81CA1C0
+	waitforvisualfinish
+	createsoundtask sub_812B058, 168, -64, 63, 5, 5, 0, 5
+	createsprite gBattleAnimSpriteTemplate_EnergyBall1, 130, 16, 16, 8
+	waitforvisualfinish
+	playsewithpan SE_W028, 63
+	createsprite gBattleAnimSpriteTemplate_EnergyBall2, 130, 1, 1, 0, -36, 10
+	createsprite gBattleAnimSpriteTemplate_EnergyBall2, 130, 1, 1, 25, -25, 10
+	createsprite gBattleAnimSpriteTemplate_EnergyBall2, 130, 1, 1, 36, 0, 10
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BANK_TARGET, 4, 0, 8, 1
+	waitforvisualfinish
+	end
+	
+Move_LEAF_STORM:
+	loadspritegfx 10160
+	loadspritegfx 10135
+	loadspritegfx 10063
+	monbg ANIM_BANK_DEF_PARTNER
+	monbgprio_2A ANIM_BANK_TARGET
+	setalpha 12, 8
+	createsprite gBattleAnimSpriteTemplate_83DB3C4, 2, 1, 1, 0, 12, 13293
+	waitforvisualfinish
+
+	monbgprio_28 1
+	setalpha 12, 8
+	playsewithpan SE_W026, 192
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 14, -12, 0, -12, 15, 0, 0
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 26, 8, 12, 8, 15, 0, 0
+	delay 3
+	playsewithpan SE_W026, 192
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 14, -12, 0, -16, 19, 0, 0
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 26, 8, 12, 12, 19, 0, 0
+	delay 3
+	playsewithpan SE_W026, 192
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 14, -12, 0, -20, 23, 0, 0
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 26, 8, 12, 16, 23, 0, 0
+	delay 3
+	createvisualtask AnimTask_ShakeMon, 5, 1, 5, 0, 50, 1
+	playsewithpan SE_W026, 192
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 14, -12, 0, -24, 27, 0, 0
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 26, 8, 12, 20, 27, 0, 0
+	delay 3
+	playsewithpan SE_W026, 192
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 14, -12, 0, -24, 27, 0, 0
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 26, 8, 12, 20, 27, 0, 0
+	delay 3
+	playsewithpan SE_W026, 192
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 14, -12, 0, -20, 23, 0, 0
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 26, 8, 12, 16, 23, 0, 0
+	delay 3
+	playsewithpan SE_W026, 192
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 14, -12, 0, -16, 19, 0, 0
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 26, 8, 12, 12, 19, 0, 0
+	delay 3
+	playsewithpan SE_W026, 192
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 14, -12, 0, -12, 15, 0, 0
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 26, 8, 12, 8, 15, 0, 0
+	delay 3
+	playsewithpan SE_W026, 192
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 14, -12, 0, -8, 11, 0, 0
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 26, 8, 12, 8, 15, 0, 0
+	delay 3
+	playsewithpan SE_W026, 192
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 14, -12, 0, -16, 19, 0, 0
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 26, 8, 12, 12, 19, 0, 0
+	delay 3
+	playsewithpan SE_W026, 192
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 14, -12, 0, -20, 23, 0, 0
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 26, 8, 12, 16, 23, 0, 0
+	delay 3
+	playsewithpan SE_W026, 192
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 14, -12, 0, -24, 27, 0, 0
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 26, 8, 12, 20, 27, 0, 0
+	delay 3
+	playsewithpan SE_W026, 192
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 14, -12, 0, -24, 27, 0, 0
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 26, 8, 12, 20, 27, 0, 0
+	delay 3
+	playsewithpan SE_W026, 192
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 14, -12, 0, -20, 23, 0, 0
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 26, 8, 12, 16, 23, 0, 0
+	delay 3
+	playsewithpan SE_W026, 192
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 14, -12, 0, -16, 19, 0, 0
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 26, 8, 12, 12, 19, 0, 0
+	delay 3
+	playsewithpan SE_W026, 192
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 14, -12, 0, -12, 15, 0, 0
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 26, 8, 12, 8, 15, 0, 0
+	delay 3
+	playsewithpan SE_W026, 192
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 14, -12, 0, -16, 19, 0, 0
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 26, 8, 12, 12, 19, 0, 0
+	delay 3
+	playsewithpan SE_W026, 192
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 14, -12, 0, -20, 23, 0, 0
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 26, 8, 12, 16, 23, 0, 0
+	delay 3
+	playsewithpan SE_W026, 192
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 14, -12, 0, -24, 27, 0, 0
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, 2, 26, 8, 12, 20, 27, 0, 0
+	delay 3
+	waitforvisualfinish
+	createsprite gBasicHitSplatSpriteTemplate, 2, 0, 0, 1, 0
+	createsprite gBattleAnimSpriteTemplate_LeafStorm2, 130, 1, 1, 0, -36, 10
+	createsprite gBattleAnimSpriteTemplate_LeafStorm2, 130, 1, 1, 24, -12, 10
+	createsprite gBattleAnimSpriteTemplate_LeafStorm2, 130, 1, 1, 24, 12, 10
+	createsprite gBattleAnimSpriteTemplate_LeafStorm2, 130, 1, 1, 0, 36, 10
+	createsprite gBattleAnimSpriteTemplate_LeafStorm2, 130, 1, 1, -24, 12, 10
+	createsprite gBattleAnimSpriteTemplate_LeafStorm2, 130, 1, 1, -24, -12, 10
+	playsewithpan SE_W013, 63
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_LeafStorm2, 130, 1, 1, 36, 0, 10
+	createsprite gBattleAnimSpriteTemplate_LeafStorm2, 130, 1, 1, 12, -24, 10
+	createsprite gBattleAnimSpriteTemplate_LeafStorm2, 130, 1, 1, 12, 24, 10
+	createsprite gBattleAnimSpriteTemplate_LeafStorm2, 130, 1, 1, -36, 0, 10
+	createsprite gBattleAnimSpriteTemplate_LeafStorm2, 130, 1, 1, -12, 24, 10
+	createsprite gBattleAnimSpriteTemplate_LeafStorm2, 130, 1, 1, -12, -24, 10
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_DEF_PARTNER
+	blendoff
+	delay 0
+
+	createsprite gBattleAnimSpriteTemplate_83DB3C4, 2, 1, 1, 12, 0, 13293
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_DEF_PARTNER
+	end
+	
+Move_DUAL_CHOP:
+	loadspritegfx 10138
+	monbg ANIM_BANK_TARGET
+	setalpha 12, 8
+	playsewithpan SE_W015, 63
+	createsprite gCuttingSliceSpriteTemplate, 2, 40, -32, 0
+	delay 5
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_TARGET, 0, 3, 10, 1
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_TARGET
+	blendoff
+	waitforvisualfinish
+	end
+
+Move_X_SCISSOR:
+	loadspritegfx 10285
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BANK_TARGET, 6, 0, 18, 1
+	createsprite gBattleAnimSpriteTemplate_83DB520, 130, 0, 0, 1, 36
+	playsewithpan SE_W013, 63
+	waitforvisualfinish
+	blendoff
 	end

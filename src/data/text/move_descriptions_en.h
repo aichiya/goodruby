@@ -1414,6 +1414,23 @@ static const u8 MoveDescription_PsychoBoost[] = _(
     "Allows a full-power attack,\n"
     "but sharply lowers SP. ATK.");
 
+static const u8 MoveDescription_EnergyBall[] = _(
+    "A burst of natural power\n"
+    "that may lower SP. DEF.");
+
+static const u8 MoveDescription_LeafStorm[] = _(
+    "Allows a full-power attack,\n"
+    "but sharply lowers SP. ATK.");
+
+static const u8 MoveDescription_DualChop[] = _(
+    "A double-chopping attack\n"
+    "that strikes the foe twice.");
+
+static const u8 MoveDescription_XScissor[] = _(
+    "A crossing scythe attack\n"
+    "with no special effect.");
+
+
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
     MoveDescription_KarateChop,
@@ -1769,4 +1786,8 @@ const u8 * const gMoveDescriptions[] = {
     MoveDescription_WaterPulse,
     MoveDescription_DoomDesire,
     MoveDescription_PsychoBoost,
+    MoveDescription_EnergyBall,
+    MoveDescription_LeafStorm,
+    MoveDescription_DualChop,
+    MoveDescription_XScissor,
 };
