@@ -1446,6 +1446,14 @@ static const u8 MoveDescription_BraveBird[] = _(
     "A life-risking tackle that\n"
     "also hurts the user.");
 
+static const u8 MoveDescription_MudBomb[] = _(
+    "Throws a ball of mud\n"
+    "that may reduce accuracy.");
+
+static const u8 MoveDescription_HammerArm[] = _(
+    "A heavy attack that\n"
+    "reduces the user’s SPEED.");
+
 
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
@@ -1810,4 +1818,6 @@ const u8 * const gMoveDescriptions[] = {
     MoveDescription_FlameCharge,
     MoveDescription_FlareBlitz,
     MoveDescription_BraveBird,
+	MoveDescription_MudBomb,
+	MoveDescription_HammerArm,
 };

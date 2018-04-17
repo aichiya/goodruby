@@ -5088,3 +5088,31 @@ gBattleMoves:: @ 81FB12C
 	.byte 0
 	.byte CLASS_PHYSICAL
 	.byte 0
+
+@ MUD_BOMB
+	.byte EFFECT_ACCURACY_DOWN_HIT
+	.byte 65 @ power
+	.byte TYPE_GROUND
+	.byte 85 @ accuracy
+	.byte 10 @ PP
+	.byte 30 @ secondary effect chance
+	.byte TARGET_SELECTED_POKEMON
+	.byte 0 @ priority
+	.byte F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT @ misc. flags
+	.byte 0
+	.byte CLASS_SPECIAL
+	.byte 0
+
+@ HAMMER_ARM
+	.byte EFFECT_HAMMER_ARM
+	.byte 100 @ power
+	.byte TYPE_FIGHTING
+	.byte 90 @ accuracy
+	.byte 10 @ PP
+	.byte 0 @ secondary effect chance
+	.byte TARGET_SELECTED_POKEMON
+	.byte 0 @ priority
+	.byte F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT @ misc. flags
+	.byte 0
+	.byte CLASS_PHYSICAL
+	.byte 0

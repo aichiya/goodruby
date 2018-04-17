@@ -378,6 +378,8 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_FLAME_CHARGE
 	.4byte Move_FLARE_BLITZ
 	.4byte Move_BRAVE_BIRD
+	.4byte Move_MUD_BOMB
+	.4byte Move_HAMMER_ARM
 	.4byte PoundCopy
 
 	.align 2
@@ -11012,10 +11014,8 @@ Move_FLARE_BLITZ:
 	playsewithpan SE_W172, 192
 	waitforvisualfinish
 	delay 1
-	
 	createvisualtask AnimTask_TranslateMonEllipticalRespectSide, 2, ANIM_BANK_ATTACKER, 18, 6, 1, 4
 	waitforvisualfinish
-	
 	createsprite gSlideMonToOffsetSpriteTemplate, 2, 0, 24, 0, 0, 4
 	delay 2
 	call _81C85E9
@@ -11033,11 +11033,6 @@ Move_FLARE_BLITZ:
 	restorebg
 	waitbgfadein
 	end
-	
-	
-
-	
-	
 
 Move_BRAVE_BIRD:
 	loadspritegfx 10135
@@ -11061,4 +11056,49 @@ Move_BRAVE_BIRD:
 	waitforvisualfinish
 	clearmonbg ANIM_BANK_ATTACKER
 	call Unknown_81D622B
+	end
+
+Move_MUD_BOMB:
+	loadspritegfx 10074
+	loadspritegfx 10150
+	playsewithpan SE_W145C, 192
+	createsprite gBattleAnimSpriteTemplate_MudBomb1, 130, 20, 0, 40, 0
+	waitforvisualfinish
+	createvisualtask AnimTask_ShakeMon2, 5, 1, 3, 0, 15, 1
+	createvisualtask sub_80E1F8C, 2, 4, 1, 2, 0, 12, 0x298F
+	createsprite gBattleAnimSpriteTemplate_MudBomb2, 130, 42, 27, 20
+	createsprite gBattleAnimSpriteTemplate_MudBomb2, 130, -27, 44, 20
+	createsprite gBattleAnimSpriteTemplate_MudBomb2, 130, 39, -28, 20
+	createsprite gBattleAnimSpriteTemplate_MudBomb2, 130, -42, -42, 20
+	playsewithpan SE_W091, 63
+	delay 5
+	createsprite gBattleAnimSpriteTemplate_MudBomb2, 130, 0, 40, 20
+	createsprite gBattleAnimSpriteTemplate_MudBomb2, 130, -8, -44, 20
+	createsprite gBattleAnimSpriteTemplate_MudBomb2, 130, -46, -28, 20
+	createsprite gBattleAnimSpriteTemplate_MudBomb2, 130, 46, 9, 20
+	playsewithpan SE_W091, 63
+	delay 5
+	createsprite gBattleAnimSpriteTemplate_MudBomb2, 130, 42, 0, 20
+	createsprite gBattleAnimSpriteTemplate_MudBomb2, 130, -43, -12, 20
+	createsprite gBattleAnimSpriteTemplate_MudBomb2, 130, 16, -46, 20
+	createsprite gBattleAnimSpriteTemplate_MudBomb2, 130, -16, 44, 20
+	playsewithpan SE_W091, 63
+	waitsound
+	waitforvisualfinish
+	end
+
+Move_HAMMER_ARM:
+	loadspritegfx 10143
+	loadspritegfx 10135
+	monbg ANIM_BANK_TARGET
+	setalpha 12, 8
+	playsewithpan SE_W104, 63
+	createsprite gBattleAnimSpriteTemplate_HammerArm, 3, 0, -32, 15
+	delay 19
+	createsprite gBasicHitSplatSpriteTemplate, 2, 0, -8, 1, 1
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_TARGET, 0, 4, 9, 1
+	playsewithpan SE_W025B, 63
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_TARGET
+	blendoff
 	end

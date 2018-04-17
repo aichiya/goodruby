@@ -226,6 +226,7 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectCamouflage
 	.4byte BattleScript_EffectSpeedUpHit
 	.4byte BattleScript_EffectFlareBlitz
+	.4byte BattleScript_EffectHammerArm
 
 BattleScript_EffectHit: @ 81D6F14
 BattleScript_EffectAccuracyDown2: @ 81D6F14
@@ -4502,6 +4503,41 @@ BattleScript_EffectFlareBlitz:
 	seteffectwithchance
 	setmoveeffect EFFECT_RECOIL_33_PARALYSIS | AFFECTS_USER | CERTAIN
 	seteffectwithchance
+	tryfaintmon TARGET, FALSE, NULL
+	setbyte sMOVEEND_STATE, 0
+	moveend 0, 0
+	end
+
+BattleScript_EffectHammerArm:
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation TARGET
+	waitstate
+	healthbarupdate TARGET
+	datahpupdate TARGET
+	critmessage
+	waitmessage 64
+	resultmessage
+	waitmessage 64
+	jumpifstat USER, EQUAL, SPEED, 0, BattleScript_HammerArmFinish
+	jumpifmovehadnoeffect BattleScript_HammerArmFinish
+	setbyte sFIELD_1B, 0
+	playstatchangeanimation USER, 0x8, 1
+	setstatchanger SPEED, 1, TRUE
+	statbuffchange AFFECTS_USER | 0x1, BattleScript_HammerArmFinish
+	printfromtable gStatDownStringIds
+	waitmessage 64
+	
+BattleScript_HammerArmFinish:
 	tryfaintmon TARGET, FALSE, NULL
 	setbyte sMOVEEND_STATE, 0
 	moveend 0, 0

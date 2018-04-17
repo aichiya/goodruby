@@ -31,5 +31,15 @@ gBattleAnimSpriteTemplate_FlameBurst1::
 gBattleAnimSpriteTemplate_FlameCharge::
 	spr_template 10029, 10029, gOamData_837DF34, gSpriteAnimTable_83D9264, NULL, gDummySpriteAffineAnimTable, sub_80CC6CC
 
+	.align 2
+gBattleAnimSpriteTemplate_MudBomb1::
+	spr_template 10150, 10074, gOamData_837DFEC, gSpriteAnimTable_83DA274, NULL, gSpriteAffineAnimTable_83DA2B0, sub_80D9D70
 
+	.align 2
+gBattleAnimSpriteTemplate_MudBomb2::
+	spr_template 10150, 10074, gOamData_837DF8C, gSpriteAnimTable_83DA27C, NULL, gSpriteAffineAnimTable_83DA2B4, sub_80D9E94
+
+	.align 2
+gBattleAnimSpriteTemplate_HammerArm::
+	spr_template 10143, 10143, gOamData_837DF34, gSpriteAnimTable_83D9F64, NULL, gDummySpriteAffineAnimTable, AnimStompFoot
 

@@ -362,4 +362,6 @@ const u8 gMoveNames[][13] = {
     [MOVE_FLAME_CHARGE] = _("FLAME CHARGE"),
     [MOVE_FLARE_BLITZ] = _("FLARE BLITZ"),
     [MOVE_BRAVE_BIRD] = _("BRAVE BIRD"),
+    [MOVE_MUD_BOMB] = _("MUD BOMB"),
+    [MOVE_HAMMER_ARM] = _("HAMMER ARM"),
 };
