@@ -224,6 +224,8 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectCalmMind
 	.4byte BattleScript_EffectDragonDance
 	.4byte BattleScript_EffectCamouflage
+	.4byte BattleScript_EffectSpeedUpHit
+	.4byte BattleScript_EffectFlareBlitz
 
 BattleScript_EffectHit: @ 81D6F14
 BattleScript_EffectAccuracyDown2: @ 81D6F14
@@ -4471,3 +4473,36 @@ BattleScript_ActionSelectionItemsCantBeUsed:: @ 81D9B29
 gUnknown_081D9B2D:: @ 81D9B2D
 	printstring BATTLE_TEXT_Terminator2
 	return
+
+BattleScript_EffectSpeedUpHit:
+	setbyte cEFFECT_CHOOSER, 81
+	goto BattleScript_EffectHit
+
+BattleScript_EffectFlareBlitz:
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation TARGET
+	waitstate
+	healthbarupdate TARGET
+	datahpupdate TARGET
+	critmessage
+	waitmessage 64
+	resultmessage
+	waitmessage 64
+	setmoveeffect EFFECT_BURN
+	seteffectwithchance
+	setmoveeffect EFFECT_RECOIL_33_PARALYSIS | AFFECTS_USER | CERTAIN
+	seteffectwithchance
+	tryfaintmon TARGET, FALSE, NULL
+	setbyte sMOVEEND_STATE, 0
+	moveend 0, 0
+	end

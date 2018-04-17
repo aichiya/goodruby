@@ -5032,3 +5032,59 @@ gBattleMoves:: @ 81FB12C
 	.byte 0
 	.byte CLASS_PHYSICAL
 	.byte 0
+
+@ FLAME_BURST
+	.byte EFFECT_HIT
+	.byte 70 @ power
+	.byte TYPE_FIRE
+	.byte 100 @ accuracy
+	.byte 15 @ PP
+	.byte 0 @ secondary effect chance
+	.byte TARGET_BOTH_ENEMIES
+	.byte 0 @ priority
+	.byte F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT @ misc. flags
+	.byte 0
+	.byte CLASS_SPECIAL
+	.byte 0
+
+@ FLAME_CHARGE
+	.byte EFFECT_SPEED_UP_HIT
+	.byte 50 @ power
+	.byte TYPE_FIRE
+	.byte 100 @ accuracy
+	.byte 20 @ PP
+	.byte 100 @ secondary effect chance
+	.byte TARGET_SELECTED_POKEMON
+	.byte 0 @ priority
+	.byte F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT @ misc. flags
+	.byte 0
+	.byte CLASS_PHYSICAL
+	.byte 0
+
+@ FLARE_BLITZ
+	.byte EFFECT_FLARE_BLITZ
+	.byte 120 @ power
+	.byte TYPE_FIRE
+	.byte 100 @ accuracy
+	.byte 15 @ PP
+	.byte 10 @ secondary effect chance
+	.byte TARGET_SELECTED_POKEMON
+	.byte 0 @ priority
+	.byte F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT @ misc. flags
+	.byte 0
+	.byte CLASS_PHYSICAL
+	.byte 0
+
+@ BRAVE_BIRD
+	.byte EFFECT_DOUBLE_EDGE
+	.byte 120 @ power
+	.byte TYPE_FLYING
+	.byte 100 @ accuracy
+	.byte 15 @ PP
+	.byte 0 @ secondary effect chance
+	.byte TARGET_SELECTED_POKEMON
+	.byte 0 @ priority
+	.byte F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT @ misc. flags
+	.byte 0
+	.byte CLASS_PHYSICAL
+	.byte 0

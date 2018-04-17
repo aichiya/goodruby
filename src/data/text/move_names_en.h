@@ -358,4 +358,8 @@ const u8 gMoveNames[][13] = {
 	[MOVE_LEAF_STORM] = _("LEAF STORM"),
 	[MOVE_DUAL_CHOP] = _("DUAL CHOP"),
 	[MOVE_X_SCISSOR] = _("X-SCISSOR"),
+    [MOVE_FLAME_BURST] = _("FLAME BURST"),
+    [MOVE_FLAME_CHARGE] = _("FLAME CHARGE"),
+    [MOVE_FLARE_BLITZ] = _("FLARE BLITZ"),
+    [MOVE_BRAVE_BIRD] = _("BRAVE BIRD"),
 };

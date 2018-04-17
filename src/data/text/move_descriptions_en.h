@@ -1430,6 +1430,22 @@ static const u8 MoveDescription_XScissor[] = _(
     "A crossing scythe attack\n"
     "with no special effect.");
 
+static const u8 MoveDescription_FlameBurst[] = _(
+    "A bursting flame attack\n"
+    "that damages both foes.");
+
+static const u8 MoveDescription_FlameCharge[] = _(
+    "A flame-cloaked rush that\n"
+    "raises the user’s SPEED.");
+
+static const u8 MoveDescription_FlareBlitz[] = _(
+    "An attack that hurts the\n"
+    "user. May inflict a burn.");
+
+static const u8 MoveDescription_BraveBird[] = _(
+    "A life-risking tackle that\n"
+    "also hurts the user.");
+
 
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
@@ -1790,4 +1806,8 @@ const u8 * const gMoveDescriptions[] = {
     MoveDescription_LeafStorm,
     MoveDescription_DualChop,
     MoveDescription_XScissor,
+    MoveDescription_FlameBurst,
+    MoveDescription_FlameCharge,
+    MoveDescription_FlareBlitz,
+    MoveDescription_BraveBird,
 };
