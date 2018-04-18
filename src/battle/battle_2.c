@@ -6023,8 +6023,13 @@ u8 GetWhoStrikesFirst(u8 bank1, u8 bank2, bool8 ignoreMovePriorities)
     if (heldItemEffect == HOLD_EFFECT_MACHO_BRACE)
         bank1AdjustedSpeed /= 2;
 
-    if (gBattleMons[bank1].status1 & STATUS_PARALYSIS)
-        bank1AdjustedSpeed /= 4;
+    if (gBattleMons[bank1].status1)
+    {
+		if (gBattleMons[bank1].ability == ABILITY_QUICK_FEET)
+			bank1AdjustedSpeed = (bank1AdjustedSpeed * 15) / 10;
+		else if (gBattleMons[bank1].status1 & STATUS_PARALYSIS)
+			bank1AdjustedSpeed /= 4;
+	}
 
     if (heldItemEffect == HOLD_EFFECT_QUICK_CLAW && gRandomTurnNumber < (heldItemEffectParam * 0xFFFF) / 100)
         bank1AdjustedSpeed = UINT_MAX;
@@ -6053,8 +6058,13 @@ u8 GetWhoStrikesFirst(u8 bank1, u8 bank2, bool8 ignoreMovePriorities)
     if (heldItemEffect == HOLD_EFFECT_MACHO_BRACE)
         bank2AdjustedSpeed /= 2;
 
-    if (gBattleMons[bank2].status1 & STATUS_PARALYSIS)
-        bank2AdjustedSpeed /= 4;
+    if (gBattleMons[bank2].status1)
+    {
+		if (gBattleMons[bank2].ability == ABILITY_QUICK_FEET)
+			bank2AdjustedSpeed = (bank2AdjustedSpeed * 15) / 10;
+		else if (gBattleMons[bank2].status1 & STATUS_PARALYSIS)
+			bank2AdjustedSpeed /= 4;
+	}
 
     if (heldItemEffect == HOLD_EFFECT_QUICK_CLAW && gRandomTurnNumber < (heldItemEffectParam * 0xFFFF) / 100)
         bank2AdjustedSpeed = UINT_MAX;

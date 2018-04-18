@@ -1454,6 +1454,30 @@ static const u8 MoveDescription_HammerArm[] = _(
     "A heavy attack that\n"
     "reduces the user’s SPEED.");
 
+static const u8 MoveDescription_SuckerPunch[] = _(
+    "Goes first, but only works\n"
+    "if foe readies an attack.");
+
+static const u8 MoveDescription_PlayRough[] = _(
+    "A frolicking attack that\n"
+    "may lower ATTACK.");
+
+static const u8 MoveDescription_Snarl[] = _(
+    "A violent and disruptive\n"
+    "howl that reduces SP.ATK.");
+
+static const u8 MoveDescription_FireFang[] = _(
+    "Bites with flame-cloaked\n"
+    "fangs. May burn or flinch.");
+
+static const u8 MoveDescription_ThunderFang[] = _(
+    "Bites with shocking fangs.\n"
+    "May paralyze or flinch.");
+
+static const u8 MoveDescription_IceFang[] = _(
+    "Bites with cold-infused.\n"
+    "fangs. May freeze or flinch.");
+
 
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
@@ -1820,4 +1844,10 @@ const u8 * const gMoveDescriptions[] = {
     MoveDescription_BraveBird,
 	MoveDescription_MudBomb,
 	MoveDescription_HammerArm,
+	MoveDescription_SuckerPunch,
+	MoveDescription_PlayRough,
+	MoveDescription_Snarl,
+	MoveDescription_FireFang,
+	MoveDescription_ThunderFang,
+	MoveDescription_IceFang,
 };

@@ -232,6 +232,9 @@ gAbilityDescription_Cacophony: @ 81FA0DC
 gAbilityDescription_AirLock: @ 81FA0F6
 	.string "Negates weather effects.$"
 
+gAbilityDescription_QuickFeet:
+	.string "Ups SPEED if suffering.$"
+
 	.align 2
 gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_None
@@ -312,3 +315,4 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_ShellArmor
 	.4byte gAbilityDescription_Cacophony
 	.4byte gAbilityDescription_AirLock
+	.4byte gAbilityDescription_QuickFeet

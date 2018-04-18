@@ -42,4 +42,8 @@ gBattleAnimSpriteTemplate_MudBomb2::
 	.align 2
 gBattleAnimSpriteTemplate_HammerArm::
 	spr_template 10143, 10143, gOamData_837DF34, gSpriteAnimTable_83D9F64, NULL, gDummySpriteAffineAnimTable, AnimStompFoot
+    
+    .align 2
+gBattleAnimSpriteTemplate_PlayRoughHeart::
+    spr_template 10216, 10216, gOamData_837DF2C, gDummySpriteAnimTable, NULL, gDummySpriteAffineAnimTable, sub_80D9540
 

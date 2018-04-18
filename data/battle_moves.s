@@ -2446,7 +2446,7 @@ gBattleMoves:: @ 81FB12C
 @ CURSE
 	.byte EFFECT_CURSE
 	.byte 0 @ power
-	.byte TYPE_FAIRY
+	.byte TYPE_GHOST
 	.byte 0 @ accuracy
 	.byte 10 @ PP
 	.byte 0 @ secondary effect chance
@@ -5110,6 +5110,90 @@ gBattleMoves:: @ 81FB12C
 	.byte 90 @ accuracy
 	.byte 10 @ PP
 	.byte 0 @ secondary effect chance
+	.byte TARGET_SELECTED_POKEMON
+	.byte 0 @ priority
+	.byte F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT @ misc. flags
+	.byte 0
+	.byte CLASS_PHYSICAL
+	.byte 0
+
+@ SUCKER_PUNCH
+	.byte EFFECT_SUCKER_PUNCH
+	.byte 70 @ power
+	.byte TYPE_DARK
+	.byte 100 @ accuracy
+	.byte 5 @ PP
+	.byte 0 @ secondary effect chance
+	.byte TARGET_SELECTED_POKEMON
+	.byte 1 @ priority
+	.byte F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT @ misc. flags
+	.byte 0
+	.byte CLASS_PHYSICAL
+	.byte 0
+
+@ PLAY_ROUGH
+	.byte EFFECT_ATTACK_DOWN_HIT
+	.byte 90 @ power
+	.byte TYPE_FAIRY
+	.byte 90 @ accuracy
+	.byte 10 @ PP
+	.byte 10 @ secondary effect chance
+	.byte TARGET_SELECTED_POKEMON
+	.byte 0 @ priority
+	.byte F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT @ misc. flags
+	.byte 0
+	.byte CLASS_PHYSICAL
+	.byte 0
+
+@ SNARL
+	.byte EFFECT_SPECIAL_ATTACK_DOWN_HIT
+	.byte 55 @ power
+	.byte TYPE_DARK
+	.byte 95 @ accuracy
+	.byte 15 @ PP
+	.byte 100 @ secondary effect chance
+	.byte TARGET_BOTH_ENEMIES
+	.byte 0 @ priority
+	.byte F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT @ misc. flags
+	.byte 0
+	.byte CLASS_SPECIAL
+	.byte 0
+
+@ FIRE_FANG
+	.byte EFFECT_FIRE_FANG
+	.byte 65 @ power
+	.byte TYPE_FIRE
+	.byte 95 @ accuracy
+	.byte 15 @ PP
+	.byte 10 @ secondary effect chance
+	.byte TARGET_SELECTED_POKEMON
+	.byte 0 @ priority
+	.byte F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT @ misc. flags
+	.byte 0
+	.byte CLASS_PHYSICAL
+	.byte 0
+
+@ THUNDER_FANG
+	.byte EFFECT_THUNDER_FANG
+	.byte 65 @ power
+	.byte TYPE_ELECTRIC
+	.byte 95 @ accuracy
+	.byte 15 @ PP
+	.byte 10 @ secondary effect chance
+	.byte TARGET_SELECTED_POKEMON
+	.byte 0 @ priority
+	.byte F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT @ misc. flags
+	.byte 0
+	.byte CLASS_PHYSICAL
+	.byte 0
+
+@ ICE_FANG
+	.byte EFFECT_ICE_FANG
+	.byte 65 @ power
+	.byte TYPE_ICE
+	.byte 95 @ accuracy
+	.byte 15 @ PP
+	.byte 10 @ secondary effect chance
 	.byte TARGET_SELECTED_POKEMON
 	.byte 0 @ priority
 	.byte F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT @ misc. flags

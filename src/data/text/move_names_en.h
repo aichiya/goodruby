@@ -364,4 +364,10 @@ const u8 gMoveNames[][13] = {
     [MOVE_BRAVE_BIRD] = _("BRAVE BIRD"),
     [MOVE_MUD_BOMB] = _("MUD BOMB"),
     [MOVE_HAMMER_ARM] = _("HAMMER ARM"),
+    [MOVE_SUCKER_PUNCH] = _("SUCKER PUNCH"),
+    [MOVE_PLAY_ROUGH] = _("PLAY ROUGH"),
+    [MOVE_SNARL] = _("SNARL"),
+    [MOVE_FIRE_FANG] = _("FIRE FANG"),
+    [MOVE_THUNDER_FANG] = _("THUNDER FANG"),
+    [MOVE_ICE_FANG] = _("ICE FANG"),
 };

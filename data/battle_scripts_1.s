@@ -227,6 +227,10 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectSpeedUpHit
 	.4byte BattleScript_EffectFlareBlitz
 	.4byte BattleScript_EffectHammerArm
+	.4byte BattleScript_EffectSuckerPunch
+	.4byte BattleScript_EffectFireFang
+	.4byte BattleScript_EffectIceFang
+	.4byte BattleScript_EffectThunderFang
 
 BattleScript_EffectHit: @ 81D6F14
 BattleScript_EffectAccuracyDown2: @ 81D6F14
@@ -4542,3 +4546,101 @@ BattleScript_HammerArmFinish:
 	setbyte sMOVEEND_STATE, 0
 	moveend 0, 0
 	end
+
+
+BattleScript_EffectSuckerPunch:
+	attackcanceler
+	attackstring
+	ppreduce
+	special 0x0
+	accuracycheck BattleScript_MoveMissedPause, ACC_CURR_MOVE
+	goto BattleScript_HitFromCritCalc
+
+BattleScript_EffectFireFang:
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation TARGET
+	waitstate
+	healthbarupdate TARGET
+	datahpupdate TARGET
+	critmessage
+	waitmessage 64
+	resultmessage
+	waitmessage 64
+	setmoveeffect EFFECT_BURN
+	seteffectwithchance
+	setmoveeffect EFFECT_FLINCH
+	seteffectwithchance
+	tryfaintmon TARGET, FALSE, NULL
+	setbyte sMOVEEND_STATE, 0
+	moveend 0, 0
+	end
+
+BattleScript_EffectThunderFang:
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation TARGET
+	waitstate
+	healthbarupdate TARGET
+	datahpupdate TARGET
+	critmessage
+	waitmessage 64
+	resultmessage
+	waitmessage 64
+	setmoveeffect EFFECT_PARALYSIS
+	seteffectwithchance
+	setmoveeffect EFFECT_FLINCH
+	seteffectwithchance
+	tryfaintmon TARGET, FALSE, NULL
+	setbyte sMOVEEND_STATE, 0
+	moveend 0, 0
+	end
+
+BattleScript_EffectIceFang:
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation TARGET
+	waitstate
+	healthbarupdate TARGET
+	datahpupdate TARGET
+	critmessage
+	waitmessage 64
+	resultmessage
+	waitmessage 64
+	setmoveeffect EFFECT_FREEZE
+	seteffectwithchance
+	setmoveeffect EFFECT_FLINCH
+	seteffectwithchance
+	tryfaintmon TARGET, FALSE, NULL
+	setbyte sMOVEEND_STATE, 0
+	moveend 0, 0
+	end
+
+

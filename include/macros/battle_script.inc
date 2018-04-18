@@ -1222,6 +1222,11 @@
 	.byte 0xf7
 	.endm
 
+	.macro special index
+	.byte 0xf8
+	.byte \index
+	.endm
+
 	.macro trainerslideout bank
 	.byte 0xf8
 	.byte \bank

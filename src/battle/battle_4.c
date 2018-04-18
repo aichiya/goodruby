@@ -602,6 +602,9 @@ static void atkF4_subattackerhpbydmg(void);
 static void atkF5_removeattackerstatus1(void);
 static void atkF6_finishaction(void);
 static void atkF7_finishturn(void);
+static void atkF8_special(void);
+
+static void sp00_suckerpunch(void);
 
 void (* const gBattleScriptingCommandsTable[])(void) =
 {
@@ -853,6 +856,7 @@ void (* const gBattleScriptingCommandsTable[])(void) =
     atkF5_removeattackerstatus1,
     atkF6_finishaction,
     atkF7_finishturn,
+	atkF8_special,
 };
 
 struct StatFractions
@@ -16050,3 +16054,52 @@ static void atkF7_finishturn(void)
     gCurrentActionFuncId = 0xC;
     gCurrentTurnActionNumber = gBattlersCount;
 }
+
+
+void (* const gBattleScriptingSpecialTable[])(void) =
+{
+	sp00_suckerpunch,
+};
+
+
+static void atkF8_special(void)
+{
+    u8 index = gBattlescriptCurrInstr[1];
+    gBattlescriptCurrInstr += 2;
+    gBattleScriptingSpecialTable[index]();
+}
+
+static void sp00_suckerpunch(void)
+{
+	u8 i = 0;
+	u8 success = 1;
+	
+	// Sucker Punch only works if:
+	// The target is using a move
+	// The move the target is using is not status
+	// The attacker goes before the target
+	
+	if (gActionsByTurnOrder[gBankTarget] != ACTION_USE_MOVE)
+		success = 0;
+	else if (!(gProtectStructs[gBankTarget].onlyStruggle) && 
+			gBattleMoves[gBattleMons[gBankTarget].moves[ewram1608Carr(gBankTarget)]].moveClass == 2)
+		success = 0;
+	else
+	{
+		for (i = 0; i < 4; i++)
+		{
+			if (gBanksByTurnOrder[i] == gBankAttacker)
+				break;
+			if (gBanksByTurnOrder[i] == gBankTarget)
+			{
+				success = 0;
+				break;
+			}
+		}
+	}
+	
+	if (!success)
+		gBattlescriptCurrInstr = BattleScript_ButItFailed;
+}
+
+
