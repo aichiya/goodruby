@@ -24,6 +24,7 @@ struct Item
     u8 battleUsage;
     ItemUseFunc battleUseFunc;
     u8 secondaryId;
+	u8 flingPower;
 };
 
 extern u8 gUnknown_02038560;
@@ -694,4 +695,9 @@ ItemUseFunc ItemId_GetBattleFunc(u16 itemId)
 u8 ItemId_GetSecondaryId(u16 itemId)
 {
     return gItems[SanitizeItemId(itemId)].secondaryId;
+}
+
+u8 ItemId_GetFlingPower(u16 itemId)
+{
+	return gItems[SanitizeItemId(itemId)].flingPower;
 }

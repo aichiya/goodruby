@@ -168,6 +168,7 @@ extern u16 gBattle_BG3_X;
 extern u16 gUnknown_02024C4C[4]; //last used moves by banks, another one
 extern u8 gCurrentTurnActionNumber;
 extern u16 gTrappingMoves[];
+extern const struct Item gItems[];
 
 extern u8 BattleScript_MoveEffectSleep[];
 extern u8 BattleScript_MoveEffectPoison[];
@@ -605,6 +606,8 @@ static void atkF7_finishturn(void);
 static void atkF8_special(void);
 
 static void sp00_suckerpunch(void);
+static void sp01_fling(void);
+static void sp02_flingloseitem(void);
 
 void (* const gBattleScriptingCommandsTable[])(void) =
 {
@@ -16059,6 +16062,8 @@ static void atkF7_finishturn(void)
 void (* const gBattleScriptingSpecialTable[])(void) =
 {
 	sp00_suckerpunch,
+	sp01_fling,
+	sp02_flingloseitem,
 };
 
 
@@ -16102,4 +16107,73 @@ static void sp00_suckerpunch(void)
 		gBattlescriptCurrInstr = BattleScript_ButItFailed;
 }
 
+static void sp01_fling(void)
+{
+	u16 itemthrown = gBattleMons[gBankAttacker].item;
+	u8 failed = 0;
+	
+	if (gWishFutureKnock.knockedOffPokes[gBankAttacker])
+		failed = 1;
+	else
+	{
+		gLastUsedItem = itemthrown;
+		gDynamicBasePower = ItemId_GetFlingPower(itemthrown);
+		if (gDynamicBasePower == 0)
+			failed = 1;
+	}
+	
+	if (failed)
+	{
+		gBattlescriptCurrInstr = BattleScript_ButItFailed;
+	}
+}
 
+static void sp02_flingloseitem(void)
+{
+	u16 itemthrown = gBattleMons[gBankAttacker].item;
+	u8 i;
+	
+	if (itemthrown == ITEM_LIGHT_BALL) //paralyze
+		gBattleCommunication[MOVE_EFFECT_BYTE] = 0x85;
+	else if (itemthrown == ITEM_POISON_BARB)
+		gBattleCommunication[MOVE_EFFECT_BYTE] = 0x82;
+	else if (itemthrown == ITEM_KINGS_ROCK)
+		gBattleCommunication[MOVE_EFFECT_BYTE] = 0x88;
+	else if (itemthrown == ITEM_LIECHI_BERRY)
+		gBattleCommunication[MOVE_EFFECT_BYTE] = 0x8F;
+	else if (itemthrown == ITEM_GANLON_BERRY)
+		gBattleCommunication[MOVE_EFFECT_BYTE] = 0x90;
+	else if (itemthrown == ITEM_SALAC_BERRY)
+		gBattleCommunication[MOVE_EFFECT_BYTE] = 0x91;
+	else if (itemthrown == ITEM_PETAYA_BERRY)
+		gBattleCommunication[MOVE_EFFECT_BYTE] = 0x92;
+	else if (itemthrown == ITEM_APICOT_BERRY)
+		gBattleCommunication[MOVE_EFFECT_BYTE] = 0x93;
+	else if (itemthrown == ITEM_STARF_BERRY)
+	{
+		for (i = 0; i < 5; i++)
+		{
+			if (gBattleMons[gBankTarget].statStages[STAT_STAGE_ATK + i] < 0xC)
+				break;
+		}
+		if (i != 5)
+		{
+            do
+			{
+				i = Random() % 5;
+            } while (gBattleMons[gBankTarget].statStages[STAT_STAGE_ATK + i] == 0xC);
+			gBattleCommunication[MOVE_EFFECT_BYTE] = 0xA7 + i;
+		}
+	}
+	// TODO:
+	// mental herb: cures mental state
+	// white herb: raises negative stat mods to +0
+	// cheri, chesto, pecha, rawst, aspear, persim, lum: cures status
+	// leppa: restores 10 PP to a move
+	// oran: restores 10 HP
+	// sitrus: restores 30 HP
+	// figy+clones: restores 50%, may confuse
+	// lansat: raises crit rate
+	
+	
+}

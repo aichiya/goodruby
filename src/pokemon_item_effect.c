@@ -313,6 +313,9 @@ bool8 PokemonUseItemEffects(struct Pokemon *pkmn, u16 item, u8 partyIndex, u8 mo
                         case 0xFD:
                             data = eStatHp;
                             break;
+						case 0xFC:
+							data = GetMonData(pkmn, MON_DATA_MAX_HP, NULL) / 4;
+							break;
                         }
                         if (GetMonData(pkmn, MON_DATA_MAX_HP, NULL) != GetMonData(pkmn, MON_DATA_HP, NULL))
                         {

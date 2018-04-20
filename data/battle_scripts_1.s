@@ -229,8 +229,9 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectHammerArm
 	.4byte BattleScript_EffectSuckerPunch
 	.4byte BattleScript_EffectFireFang
-	.4byte BattleScript_EffectIceFang
 	.4byte BattleScript_EffectThunderFang
+	.4byte BattleScript_EffectIceFang
+	.4byte BattleScript_EffectFling
 
 BattleScript_EffectHit: @ 81D6F14
 BattleScript_EffectAccuracyDown2: @ 81D6F14
@@ -1809,7 +1810,7 @@ BattleScript_EffectSonicboom: @ 81D7FB4
 	ppreduce
 	typecalc
 	bicbyte gMoveResultFlags, MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE
-	setword gBattleMoveDamage, 20
+	setword gBattleMoveDamage, 1
 	adjustsetdamage
 	goto BattleScript_HitFromAtkAnimation
 
@@ -4643,4 +4644,35 @@ BattleScript_EffectIceFang:
 	moveend 0, 0
 	end
 
+BattleScript_EffectFling:
+	attackcanceler
+	attackstring
+	ppreduce
+	special 0x1
+	pause 32
+	printstring BATTLE_TEXT_Flung
+	accuracycheck BattleScript_FlingMissed, ACC_CURR_MOVE
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation TARGET
+	waitstate
+	healthbarupdate TARGET
+	datahpupdate TARGET
+	critmessage
+	waitmessage 64
+	resultmessage
+	waitmessage 64
+	special 0x2
+	removeitem USER
+	seteffectwithchance
+	tryfaintmon TARGET, FALSE, NULL
+	end
 
+BattleScript_FlingMissed:
+	removeitem USER
+	goto BattleScript_MoveMissedPause

@@ -2685,6 +2685,17 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                     effect = 4;
                 }
                 break;
+            case HOLD_EFFECT_SITRUS:
+                if (gBattleMons[bank].hp <= gBattleMons[bank].maxHP / 2 && !moveTurn)
+                {
+                    gBattleMoveDamage = gBattleMons[bank].maxHP / 4;
+                    if (gBattleMons[bank].hp + gBattleMoveDamage > gBattleMons[bank].maxHP)
+                        gBattleMoveDamage = gBattleMons[bank].maxHP - gBattleMons[bank].hp;
+                    gBattleMoveDamage *= -1;
+                    BattleScriptExecute(BattleScript_ItemHealHP_RemoveItem);
+                    effect = 4;
+                }
+                break;
             case HOLD_EFFECT_RESTORE_PP:
                 if (!moveTurn)
                 {
@@ -2756,13 +2767,13 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                 break;
             // nice copy/paste there gamefreak, making a function for confuse berries was too much eh?
             case HOLD_EFFECT_CONFUSE_SPICY:
-                if (gBattleMons[bank].hp <= gBattleMons[bank].maxHP / 2 && !moveTurn)
+                if (gBattleMons[bank].hp <= gBattleMons[bank].maxHP / (gBattleMons[bank].ability == ABILITY_GLUTTONY ? 2 : 4) && !moveTurn)
                 {
                     gBattleTextBuff1[0] = 0xFD;
                     gBattleTextBuff1[1] = 8;
                     gBattleTextBuff1[2] = FLAVOR_SPICY;
                     gBattleTextBuff1[3] = EOS;
-                    gBattleMoveDamage = gBattleMons[bank].maxHP / bankQuality;
+                    gBattleMoveDamage = gBattleMons[bank].maxHP / 2;
                     if (gBattleMoveDamage == 0)
                         gBattleMoveDamage = 1;
                     if (gBattleMons[bank].hp + gBattleMoveDamage > gBattleMons[bank].maxHP)
@@ -2776,13 +2787,13 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_CONFUSE_DRY:
-                if (gBattleMons[bank].hp <= gBattleMons[bank].maxHP / 2 && !moveTurn)
+                if (gBattleMons[bank].hp <= gBattleMons[bank].maxHP / (gBattleMons[bank].ability == ABILITY_GLUTTONY ? 2 : 4) && !moveTurn)
                 {
                     gBattleTextBuff1[0] = 0xFD;
                     gBattleTextBuff1[1] = 8;
                     gBattleTextBuff1[2] = FLAVOR_DRY;
                     gBattleTextBuff1[3] = EOS;
-                    gBattleMoveDamage = gBattleMons[bank].maxHP / bankQuality;
+                    gBattleMoveDamage = gBattleMons[bank].maxHP / 2;
                     if (gBattleMoveDamage == 0)
                         gBattleMoveDamage = 1;
                     if (gBattleMons[bank].hp + gBattleMoveDamage > gBattleMons[bank].maxHP)
@@ -2796,13 +2807,13 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_CONFUSE_SWEET:
-                if (gBattleMons[bank].hp <= gBattleMons[bank].maxHP / 2 && !moveTurn)
+                if (gBattleMons[bank].hp <= gBattleMons[bank].maxHP / (gBattleMons[bank].ability == ABILITY_GLUTTONY ? 2 : 4) && !moveTurn)
                 {
                     gBattleTextBuff1[0] = 0xFD;
                     gBattleTextBuff1[1] = 8;
                     gBattleTextBuff1[2] = FLAVOR_SWEET;
                     gBattleTextBuff1[3] = EOS;
-                    gBattleMoveDamage = gBattleMons[bank].maxHP / bankQuality;
+                    gBattleMoveDamage = gBattleMons[bank].maxHP / 2;
                     if (gBattleMoveDamage == 0)
                         gBattleMoveDamage = 1;
                     if (gBattleMons[bank].hp + gBattleMoveDamage > gBattleMons[bank].maxHP)
@@ -2816,13 +2827,13 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_CONFUSE_BITTER:
-                if (gBattleMons[bank].hp <= gBattleMons[bank].maxHP / 2 && !moveTurn)
+                if (gBattleMons[bank].hp <= gBattleMons[bank].maxHP / (gBattleMons[bank].ability == ABILITY_GLUTTONY ? 2 : 4) && !moveTurn)
                 {
                     gBattleTextBuff1[0] = 0xFD;
                     gBattleTextBuff1[1] = 8;
                     gBattleTextBuff1[2] = FLAVOR_BITTER;
                     gBattleTextBuff1[3] = EOS;
-                    gBattleMoveDamage = gBattleMons[bank].maxHP / bankQuality;
+                    gBattleMoveDamage = gBattleMons[bank].maxHP / 2;
                     if (gBattleMoveDamage == 0)
                         gBattleMoveDamage = 1;
                     if (gBattleMons[bank].hp + gBattleMoveDamage > gBattleMons[bank].maxHP)
@@ -2836,13 +2847,13 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_CONFUSE_SOUR:
-                if (gBattleMons[bank].hp <= gBattleMons[bank].maxHP / 2 && !moveTurn)
+                if (gBattleMons[bank].hp <= gBattleMons[bank].maxHP / (gBattleMons[bank].ability == ABILITY_GLUTTONY ? 2 : 4) && !moveTurn)
                 {
                     gBattleTextBuff1[0] = 0xFD;
                     gBattleTextBuff1[1] = 8;
                     gBattleTextBuff1[2] = FLAVOR_SOUR;
                     gBattleTextBuff1[3] = EOS;
-                    gBattleMoveDamage = gBattleMons[bank].maxHP / bankQuality;
+                    gBattleMoveDamage = gBattleMons[bank].maxHP / 2;
                     if (gBattleMoveDamage == 0)
                         gBattleMoveDamage = 1;
                     if (gBattleMons[bank].hp + gBattleMoveDamage > gBattleMons[bank].maxHP)
@@ -2857,7 +2868,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                 break;
             // copy/paste again, smh
             case HOLD_EFFECT_ATTACK_UP:
-                if (gBattleMons[bank].hp <= gBattleMons[bank].maxHP / bankQuality && !moveTurn && gBattleMons[bank].statStages[STAT_STAGE_ATK] < 0xC)
+                if (gBattleMons[bank].hp <= gBattleMons[bank].maxHP / (gBattleMons[bank].ability == ABILITY_GLUTTONY ? 2 : 4) && !moveTurn && gBattleMons[bank].statStages[STAT_STAGE_ATK] < 0xC)
                 {
                     gBattleTextBuff1[0] = 0xFD;
                     gBattleTextBuff1[1] = 5;
@@ -2879,7 +2890,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_DEFENSE_UP:
-                if (gBattleMons[bank].hp <= gBattleMons[bank].maxHP / bankQuality && !moveTurn && gBattleMons[bank].statStages[STAT_STAGE_DEF] < 0xC)
+                if (gBattleMons[bank].hp <= gBattleMons[bank].maxHP / (gBattleMons[bank].ability == ABILITY_GLUTTONY ? 2 : 4) && !moveTurn && gBattleMons[bank].statStages[STAT_STAGE_DEF] < 0xC)
                 {
                     gBattleTextBuff1[0] = 0xFD;
                     gBattleTextBuff1[1] = 5;
@@ -2895,7 +2906,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_SPEED_UP:
-                if (gBattleMons[bank].hp <= gBattleMons[bank].maxHP / bankQuality && !moveTurn && gBattleMons[bank].statStages[STAT_STAGE_SPEED] < 0xC)
+                if (gBattleMons[bank].hp <= gBattleMons[bank].maxHP / (gBattleMons[bank].ability == ABILITY_GLUTTONY ? 2 : 4) && !moveTurn && gBattleMons[bank].statStages[STAT_STAGE_SPEED] < 0xC)
                 {
                     gBattleTextBuff1[0] = 0xFD;
                     gBattleTextBuff1[1] = 5;
@@ -2911,7 +2922,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_SP_ATTACK_UP:
-                if (gBattleMons[bank].hp <= gBattleMons[bank].maxHP / bankQuality && !moveTurn && gBattleMons[bank].statStages[STAT_STAGE_SPATK] < 0xC)
+                if (gBattleMons[bank].hp <= gBattleMons[bank].maxHP / (gBattleMons[bank].ability == ABILITY_GLUTTONY ? 2 : 4) && !moveTurn && gBattleMons[bank].statStages[STAT_STAGE_SPATK] < 0xC)
                 {
                     gBattleTextBuff1[0] = 0xFD;
                     gBattleTextBuff1[1] = 5;
@@ -2927,7 +2938,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_SP_DEFENSE_UP:
-                if (gBattleMons[bank].hp <= gBattleMons[bank].maxHP / bankQuality && !moveTurn && gBattleMons[bank].statStages[STAT_STAGE_SPDEF] < 0xC)
+                if (gBattleMons[bank].hp <= gBattleMons[bank].maxHP / (gBattleMons[bank].ability == ABILITY_GLUTTONY ? 2 : 4) && !moveTurn && gBattleMons[bank].statStages[STAT_STAGE_SPDEF] < 0xC)
                 {
                     gBattleTextBuff1[0] = 0xFD;
                     gBattleTextBuff1[1] = 5;
@@ -2943,7 +2954,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_CRITICAL_UP:
-                if (gBattleMons[bank].hp <= gBattleMons[bank].maxHP / bankQuality && !moveTurn && !(gBattleMons[bank].status2 & STATUS2_FOCUS_ENERGY))
+                if (gBattleMons[bank].hp <= gBattleMons[bank].maxHP / (gBattleMons[bank].ability == ABILITY_GLUTTONY ? 2 : 4) && !moveTurn && !(gBattleMons[bank].status2 & STATUS2_FOCUS_ENERGY))
                 {
                     gBattleMons[bank].status2 |= STATUS2_FOCUS_ENERGY;
                     BattleScriptExecute(BattleScript_BerryFocusEnergyEnd2);
@@ -2951,7 +2962,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_RANDOM_STAT_UP:
-                if (!moveTurn && gBattleMons[bank].hp <= gBattleMons[bank].maxHP / bankQuality)
+                if (!moveTurn && gBattleMons[bank].hp <= gBattleMons[bank].maxHP / (gBattleMons[bank].ability == ABILITY_GLUTTONY ? 2 : 4))
                 {
                     for (i = 0; i < 5; i++)
                     {

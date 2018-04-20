@@ -47,3 +47,12 @@ gBattleAnimSpriteTemplate_HammerArm::
 gBattleAnimSpriteTemplate_PlayRoughHeart::
     spr_template 10216, 10216, gOamData_837DF2C, gDummySpriteAnimTable, NULL, gDummySpriteAffineAnimTable, sub_80D9540
 
+	.align 2
+gBattleAnimSpriteTemplate_Fling::
+	spr_template 10224, 10224, gOamData_837DF94, gSpriteAnimTable_83D66B8, NULL, gSpriteAffineAnimTable_83D6714, sub_80794A8
+
+	.align 2
+gBattleAnimSpriteTemplate_PuppyEyes::
+	spr_template 10027, 10084, gOamData_837DF34, gSpriteAnimTable_84022AC, NULL, gDummySpriteAffineAnimTable, sub_812C80C
+
+

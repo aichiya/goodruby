@@ -78,3 +78,4 @@ gAbilityNames:: @ 81FA248
 	.string "CACOPHONY$", 13
 	.string "AIR LOCK$", 13
 	.string "QUICK FEET$", 13
+	.string "GLUTTONY$", 13

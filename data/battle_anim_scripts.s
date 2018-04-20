@@ -386,6 +386,9 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_FIRE_FANG
 	.4byte Move_THUNDER_FANG
 	.4byte Move_ICE_FANG
+	.4byte Move_PUPPY_EYES
+	.4byte Move_FLING
+	.4byte Move_TRICK
 	.4byte PoundCopy
 
 	.align 2
@@ -11264,4 +11267,34 @@ Move_ICE_FANG:
 	delay 1
 	end
 
+Move_PUPPY_EYES:
+	loadspritegfx 10027
+	loadspritegfx 10084
+	monbg ANIM_BANK_ATTACKER
+	monbgprio_28 0
+	setalpha 8, 8
+	playsewithpan SE_W197, 192
+	createsprite gBattleAnimSpriteTemplate_PuppyEyes, 2, 24, -12
+	createvisualtask AnimTask_ScaleMonAndRestore, 5, -5, -5, 10, ANIM_BANK_ATTACKER, 1
+	waitforvisualfinish
+	delay 10
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BANK_TARGET, 1, 0, 9, 1
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BANK_DEF_PARTNER, 1, 0, 9, 1
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_ATTACKER
+	blendoff
+	delay 1
+	waitforvisualfinish
+	end
 
+Move_FLING:
+	loadspritegfx 10224
+	loadspritegfx 10135
+	playsewithpan SE_W039, 192
+	createsprite gBattleAnimSpriteTemplate_Fling, 130, 10, 0, 0, 0, 25, -32
+	waitforvisualfinish
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BANK_TARGET, 4, 0, 16, 1
+	createsprite gBasicHitSplatSpriteTemplate, 2, 0, 0, 1, 2
+	playsewithpan SE_W003, 63
+	waitforvisualfinish
+	end

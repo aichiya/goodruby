@@ -17,3 +17,5 @@
 --update move targetting for surf, etc.
 
 --Go through movepools of Hoenn mons and add needed moves.
+
+--Fling currently does not activate most berries (except pinch stat-boosters).

@@ -5200,3 +5200,45 @@ gBattleMoves:: @ 81FB12C
 	.byte 0
 	.byte CLASS_PHYSICAL
 	.byte 0
+
+@ PUPPY_EYES
+	.byte EFFECT_ATTACK_DOWN
+	.byte 0 @ power
+	.byte TYPE_FAIRY
+	.byte 100 @ accuracy
+	.byte 30 @ PP
+	.byte 0 @ secondary effect chance
+	.byte TARGET_SELECTED_POKEMON
+	.byte 0 @ priority
+	.byte F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT @ misc. flags
+	.byte 0
+	.byte CLASS_STATUS
+	.byte 0
+
+@ FLING
+	.byte EFFECT_FLING
+	.byte 1 @ power
+	.byte TYPE_DARK
+	.byte 100 @ accuracy
+	.byte 10 @ PP
+	.byte 0 @ secondary effect chance
+	.byte TARGET_SELECTED_POKEMON
+	.byte 0 @ priority
+	.byte F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT @ misc. flags
+	.byte 0
+	.byte CLASS_PHYSICAL
+	.byte 0
+
+@ SWITCHEROO
+	.byte EFFECT_TRICK
+	.byte 0 @ power
+	.byte TYPE_DARK
+	.byte 100 @ accuracy
+	.byte 10 @ PP
+	.byte 0 @ secondary effect chance
+	.byte TARGET_SELECTED_POKEMON
+	.byte 0 @ priority
+	.byte F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT @ misc. flags
+	.byte 0
+	.byte CLASS_STATUS
+	.byte 0

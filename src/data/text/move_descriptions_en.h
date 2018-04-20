@@ -1478,6 +1478,18 @@ static const u8 MoveDescription_IceFang[] = _(
     "Bites with cold-infused.\n"
     "fangs. May freeze or flinch.");
 
+static const u8 MoveDescription_PuppyEyes[] = _(
+    "Gazes adorably to reduce\n"
+    "ATTACK before most moves.");
+
+static const u8 MoveDescription_Fling[] = _(
+    "Attacks by throwing a held\n"
+    "item, with variable effects.");
+
+static const u8 MoveDescription_Switcheroo[] = _(
+    "Trades items with the foe\n"
+    "faster than they can spot.");
+
 
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
@@ -1850,4 +1862,7 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_FireFang,
 	MoveDescription_ThunderFang,
 	MoveDescription_IceFang,
+	MoveDescription_PuppyEyes,
+	MoveDescription_Fling,
+	MoveDescription_Switcheroo,
 };

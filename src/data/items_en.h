@@ -15,6 +15,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("MASTER BALL"),
@@ -31,6 +32,7 @@ const struct Item gItems[] =
         .battleUsage = 2,
         .battleUseFunc = ItemUseInBattle_PokeBall,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("ULTRA BALL"),
@@ -47,6 +49,7 @@ const struct Item gItems[] =
         .battleUsage = 2,
         .battleUseFunc = ItemUseInBattle_PokeBall,
         .secondaryId = 1,
+		.flingPower = 0,
     },
     {
         .name = _("GREAT BALL"),
@@ -63,6 +66,7 @@ const struct Item gItems[] =
         .battleUsage = 2,
         .battleUseFunc = ItemUseInBattle_PokeBall,
         .secondaryId = 2,
+		.flingPower = 0,
     },
     {
         .name = _("POKé BALL"),
@@ -79,6 +83,7 @@ const struct Item gItems[] =
         .battleUsage = 2,
         .battleUseFunc = ItemUseInBattle_PokeBall,
         .secondaryId = 3,
+		.flingPower = 0,
     },
     {
         .name = _("SAFARI BALL"),
@@ -95,6 +100,7 @@ const struct Item gItems[] =
         .battleUsage = 2,
         .battleUseFunc = ItemUseInBattle_PokeBall,
         .secondaryId = 4,
+		.flingPower = 0,
     },
     {
         .name = _("NET BALL"),
@@ -111,6 +117,7 @@ const struct Item gItems[] =
         .battleUsage = 2,
         .battleUseFunc = ItemUseInBattle_PokeBall,
         .secondaryId = 5,
+		.flingPower = 0,
     },
     {
         .name = _("DIVE BALL"),
@@ -127,6 +134,7 @@ const struct Item gItems[] =
         .battleUsage = 2,
         .battleUseFunc = ItemUseInBattle_PokeBall,
         .secondaryId = 6,
+		.flingPower = 0,
     },
     {
         .name = _("NEST BALL"),
@@ -143,6 +151,7 @@ const struct Item gItems[] =
         .battleUsage = 2,
         .battleUseFunc = ItemUseInBattle_PokeBall,
         .secondaryId = 7,
+		.flingPower = 0,
     },
     {
         .name = _("REPEAT BALL"),
@@ -159,6 +168,7 @@ const struct Item gItems[] =
         .battleUsage = 2,
         .battleUseFunc = ItemUseInBattle_PokeBall,
         .secondaryId = 8,
+		.flingPower = 0,
     },
     {
         .name = _("TIMER BALL"),
@@ -175,6 +185,7 @@ const struct Item gItems[] =
         .battleUsage = 2,
         .battleUseFunc = ItemUseInBattle_PokeBall,
         .secondaryId = 9,
+		.flingPower = 0,
     },
     {
         .name = _("LUXURY BALL"),
@@ -191,6 +202,7 @@ const struct Item gItems[] =
         .battleUsage = 2,
         .battleUseFunc = ItemUseInBattle_PokeBall,
         .secondaryId = 10,
+		.flingPower = 0,
     },
     {
         .name = _("PREMIER BALL"),
@@ -207,6 +219,7 @@ const struct Item gItems[] =
         .battleUsage = 2,
         .battleUseFunc = ItemUseInBattle_PokeBall,
         .secondaryId = 11,
+		.flingPower = 0,
     },
     {
         .name = _("POTION"),
@@ -223,6 +236,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("ANTIDOTE"),
@@ -239,6 +253,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("BURN HEAL"),
@@ -255,6 +270,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("ICE HEAL"),
@@ -271,6 +287,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("AWAKENING"),
@@ -287,6 +304,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("PARLYZ HEAL"),
@@ -303,6 +321,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("FULL RESTORE"),
@@ -319,6 +338,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("MAX POTION"),
@@ -335,6 +355,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("HYPER POTION"),
@@ -351,6 +372,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("SUPER POTION"),
@@ -367,6 +389,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("FULL HEAL"),
@@ -383,6 +406,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("REVIVE"),
@@ -399,6 +423,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("MAX REVIVE"),
@@ -415,6 +440,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("FRESH WATER"),
@@ -431,6 +457,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("SODA POP"),
@@ -447,6 +474,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("LEMONADE"),
@@ -463,6 +491,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("MOOMOO MILK"),
@@ -479,6 +508,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("ENERGYPOWDER"),
@@ -495,6 +525,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("ENERGY ROOT"),
@@ -511,6 +542,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("HEAL POWDER"),
@@ -527,6 +559,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("REVIVAL HERB"),
@@ -543,6 +576,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("ETHER"),
@@ -559,6 +593,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_PPRecovery,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("MAX ETHER"),
@@ -575,6 +610,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_PPRecovery,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("ELIXIR"),
@@ -591,6 +627,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_PPRecovery,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("MAX ELIXIR"),
@@ -607,6 +644,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_PPRecovery,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("LAVA COOKIE"),
@@ -623,6 +661,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("BLUE FLUTE"),
@@ -655,6 +694,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("RED FLUTE"),
@@ -671,6 +711,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("BLACK FLUTE"),
@@ -687,6 +728,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("WHITE FLUTE"),
@@ -703,6 +745,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("BERRY JUICE"),
@@ -719,6 +762,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("SACRED ASH"),
@@ -735,6 +779,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("SHOAL SALT"),
@@ -751,6 +796,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("SHOAL SHELL"),
@@ -767,6 +813,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("RED SHARD"),
@@ -783,6 +830,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("BLUE SHARD"),
@@ -799,6 +847,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("YELLOW SHARD"),
@@ -815,6 +864,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("GREEN SHARD"),
@@ -831,6 +881,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("????????"),
@@ -847,6 +898,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -863,6 +915,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -879,6 +932,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -895,6 +949,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -911,6 +966,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -927,6 +983,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -943,6 +1000,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -959,6 +1017,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -975,6 +1034,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -991,6 +1051,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -1007,6 +1068,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("HP UP"),
@@ -1023,6 +1085,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("PROTEIN"),
@@ -1039,6 +1102,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("IRON"),
@@ -1055,6 +1119,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("CARBOS"),
@@ -1071,6 +1136,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("CALCIUM"),
@@ -1087,6 +1153,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("RARE CANDY"),
@@ -1103,6 +1170,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("PP UP"),
@@ -1119,6 +1187,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("ZINC"),
@@ -1135,6 +1204,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("PP MAX"),
@@ -1151,6 +1221,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("????????"),
@@ -1167,6 +1238,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("GUARD SPEC."),
@@ -1183,6 +1255,7 @@ const struct Item gItems[] =
         .battleUsage = 2,
         .battleUseFunc = ItemUseInBattle_StatIncrease,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("DIRE HIT"),
@@ -1199,6 +1272,7 @@ const struct Item gItems[] =
         .battleUsage = 2,
         .battleUseFunc = ItemUseInBattle_StatIncrease,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("X ATTACK"),
@@ -1215,6 +1289,7 @@ const struct Item gItems[] =
         .battleUsage = 2,
         .battleUseFunc = ItemUseInBattle_StatIncrease,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("X DEFEND"),
@@ -1231,6 +1306,7 @@ const struct Item gItems[] =
         .battleUsage = 2,
         .battleUseFunc = ItemUseInBattle_StatIncrease,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("X SPEED"),
@@ -1247,6 +1323,7 @@ const struct Item gItems[] =
         .battleUsage = 2,
         .battleUseFunc = ItemUseInBattle_StatIncrease,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("X ACCURACY"),
@@ -1263,6 +1340,7 @@ const struct Item gItems[] =
         .battleUsage = 2,
         .battleUseFunc = ItemUseInBattle_StatIncrease,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("X SPECIAL"),
@@ -1279,6 +1357,7 @@ const struct Item gItems[] =
         .battleUsage = 2,
         .battleUseFunc = ItemUseInBattle_StatIncrease,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("POKé DOLL"),
@@ -1295,6 +1374,7 @@ const struct Item gItems[] =
         .battleUsage = 2,
         .battleUseFunc = ItemUseInBattle_Escape,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("FLUFFY TAIL"),
@@ -1311,6 +1391,7 @@ const struct Item gItems[] =
         .battleUsage = 2,
         .battleUseFunc = ItemUseInBattle_Escape,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("????????"),
@@ -1327,6 +1408,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("SUPER REPEL"),
@@ -1359,6 +1441,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("ESCAPE ROPE"),
@@ -1375,6 +1458,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("REPEL"),
@@ -1391,6 +1475,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("????????"),
@@ -1407,6 +1492,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -1423,6 +1509,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -1439,6 +1526,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -1455,6 +1543,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -1471,6 +1560,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -1487,6 +1577,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("SUN STONE"),
@@ -1503,6 +1594,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("MOON STONE"),
@@ -1519,6 +1611,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("FIRE STONE"),
@@ -1535,6 +1628,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("THUNDERSTONE"),
@@ -1551,6 +1645,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("WATER STONE"),
@@ -1567,6 +1662,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("LEAF STONE"),
@@ -1583,6 +1679,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("????????"),
@@ -1599,6 +1696,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -1615,6 +1713,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -1631,6 +1730,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -1647,6 +1747,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TINYMUSHROOM"),
@@ -1663,6 +1764,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("BIG MUSHROOM"),
@@ -1679,6 +1781,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("????????"),
@@ -1695,6 +1798,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("PEARL"),
@@ -1711,6 +1815,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("BIG PEARL"),
@@ -1727,6 +1832,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("STARDUST"),
@@ -1743,6 +1849,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("STAR PIECE"),
@@ -1759,6 +1866,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("NUGGET"),
@@ -1775,6 +1883,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("HEART SCALE"),
@@ -1791,6 +1900,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("????????"),
@@ -1807,6 +1917,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -1823,6 +1934,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -1839,6 +1951,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -1855,6 +1968,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -1871,6 +1985,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -1887,6 +2002,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -1903,6 +2019,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -1919,6 +2036,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -1935,6 +2053,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("ORANGE MAIL"),
@@ -1951,6 +2070,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("HARBOR MAIL"),
@@ -1967,6 +2087,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 1,
+		.flingPower = 0,
     },
     {
         .name = _("GLITTER MAIL"),
@@ -1983,6 +2104,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 2,
+		.flingPower = 0,
     },
     {
         .name = _("MECH MAIL"),
@@ -1999,6 +2121,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 3,
+		.flingPower = 0,
     },
     {
         .name = _("WOOD MAIL"),
@@ -2015,6 +2138,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 4,
+		.flingPower = 0,
     },
     {
         .name = _("WAVE MAIL"),
@@ -2031,6 +2155,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 5,
+		.flingPower = 0,
     },
     {
         .name = _("BEAD MAIL"),
@@ -2047,6 +2172,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 6,
+		.flingPower = 0,
     },
     {
         .name = _("SHADOW MAIL"),
@@ -2063,6 +2189,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 7,
+		.flingPower = 0,
     },
     {
         .name = _("TROPIC MAIL"),
@@ -2079,6 +2206,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 8,
+		.flingPower = 0,
     },
     {
         .name = _("DREAM MAIL"),
@@ -2095,6 +2223,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 9,
+		.flingPower = 0,
     },
     {
         .name = _("FAB MAIL"),
@@ -2111,6 +2240,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 10,
+		.flingPower = 0,
     },
     {
         .name = _("RETRO MAIL"),
@@ -2127,6 +2257,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 11,
+		.flingPower = 0,
     },
     {
         .name = _("CHERI BERRY"),
@@ -2143,6 +2274,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("CHESTO BERRY"),
@@ -2159,6 +2291,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("PECHA BERRY"),
@@ -2175,6 +2308,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("RAWST BERRY"),
@@ -2191,6 +2325,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("ASPEAR BERRY"),
@@ -2207,6 +2342,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("LEPPA BERRY"),
@@ -2223,6 +2359,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_PPRecovery,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("ORAN BERRY"),
@@ -2239,6 +2376,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("PERSIM BERRY"),
@@ -2255,6 +2393,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("LUM BERRY"),
@@ -2271,12 +2410,13 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("SITRUS BERRY"),
         .itemId = ITEM_SITRUS_BERRY,
         .price = 20,
-        .holdEffect = HOLD_EFFECT_RESTORE_HP,
+        .holdEffect = HOLD_EFFECT_SITRUS,
         .holdEffectParam = 30,
         .description = gItemDescription_SitrusBerry,
         .importance = 0,
@@ -2287,6 +2427,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("FIGY BERRY"),
@@ -2303,6 +2444,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("WIKI BERRY"),
@@ -2319,6 +2461,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("MAGO BERRY"),
@@ -2335,6 +2478,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("AGUAV BERRY"),
@@ -2351,6 +2495,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("IAPAPA BERRY"),
@@ -2367,6 +2512,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("RAZZ BERRY"),
@@ -2383,6 +2529,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("BLUK BERRY"),
@@ -2399,6 +2546,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("NANAB BERRY"),
@@ -2415,6 +2563,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("WEPEAR BERRY"),
@@ -2431,6 +2580,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("PINAP BERRY"),
@@ -2447,6 +2597,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("POMEG BERRY"),
@@ -2463,6 +2614,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("KELPSY BERRY"),
@@ -2479,6 +2631,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("QUALOT BERRY"),
@@ -2495,6 +2648,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("HONDEW BERRY"),
@@ -2511,6 +2665,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("GREPA BERRY"),
@@ -2527,6 +2682,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("TAMATO BERRY"),
@@ -2543,6 +2699,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("CORNN BERRY"),
@@ -2559,6 +2716,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("MAGOST BERRY"),
@@ -2575,6 +2733,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("RABUTA BERRY"),
@@ -2591,6 +2750,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("NOMEL BERRY"),
@@ -2607,6 +2767,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("SPELON BERRY"),
@@ -2623,6 +2784,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("PAMTRE BERRY"),
@@ -2639,6 +2801,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("WATMEL BERRY"),
@@ -2655,6 +2818,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("DURIN BERRY"),
@@ -2671,6 +2835,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("BELUE BERRY"),
@@ -2687,6 +2852,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("LIECHI BERRY"),
@@ -2703,6 +2869,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("GANLON BERRY"),
@@ -2719,6 +2886,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("SALAC BERRY"),
@@ -2735,6 +2903,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("PETAYA BERRY"),
@@ -2751,6 +2920,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("APICOT BERRY"),
@@ -2767,6 +2937,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("LANSAT BERRY"),
@@ -2783,6 +2954,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("STARF BERRY"),
@@ -2799,6 +2971,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("ENIGMA BERRY"),
@@ -2815,6 +2988,7 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_EnigmaBerry,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("????????"),
@@ -2831,6 +3005,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -2847,6 +3022,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -2863,6 +3039,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("BRIGHTPOWDER"),
@@ -2879,6 +3056,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("WHITE HERB"),
@@ -2895,6 +3073,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("MACHO BRACE"),
@@ -2911,6 +3090,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 60,
     },
     {
         .name = _("EXP. SHARE"),
@@ -2927,6 +3107,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("QUICK CLAW"),
@@ -2943,6 +3124,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 80,
     },
     {
         .name = _("SOOTHE BELL"),
@@ -2959,6 +3141,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("MENTAL HERB"),
@@ -2975,6 +3158,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("CHOICE BAND"),
@@ -2991,6 +3175,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("KING’S ROCK"),
@@ -3007,6 +3192,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("SILVERPOWDER"),
@@ -3023,6 +3209,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("AMULET COIN"),
@@ -3039,6 +3226,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("CLEANSE TAG"),
@@ -3055,6 +3243,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("SOUL DEW"),
@@ -3071,6 +3260,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("DEEPSEATOOTH"),
@@ -3087,6 +3277,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 90,
     },
     {
         .name = _("DEEPSEASCALE"),
@@ -3103,6 +3294,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("SMOKE BALL"),
@@ -3119,6 +3311,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("EVERSTONE"),
@@ -3135,6 +3328,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("FOCUS BAND"),
@@ -3151,6 +3345,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("LUCKY EGG"),
@@ -3167,6 +3362,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("SCOPE LENS"),
@@ -3183,6 +3379,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("METAL COAT"),
@@ -3199,6 +3396,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("LEFTOVERS"),
@@ -3215,6 +3413,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("DRAGON SCALE"),
@@ -3231,6 +3430,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("LIGHT BALL"),
@@ -3247,6 +3447,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("SOFT SAND"),
@@ -3263,6 +3464,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("HARD STONE"),
@@ -3279,6 +3481,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 100,
     },
     {
         .name = _("MIRACLE SEED"),
@@ -3295,6 +3498,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("BLACKGLASSES"),
@@ -3311,6 +3515,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("BLACK BELT"),
@@ -3327,6 +3532,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("MAGNET"),
@@ -3343,6 +3549,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("MYSTIC WATER"),
@@ -3359,6 +3566,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("SHARP BEAK"),
@@ -3375,6 +3583,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 50,
     },
     {
         .name = _("POISON BARB"),
@@ -3391,6 +3600,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 70,
     },
     {
         .name = _("NEVERMELTICE"),
@@ -3407,6 +3617,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("SPELL TAG"),
@@ -3423,6 +3634,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("TWISTEDSPOON"),
@@ -3439,6 +3651,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("CHARCOAL"),
@@ -3455,6 +3668,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("DRAGON FANG"),
@@ -3471,6 +3685,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 70,
     },
     {
         .name = _("SILK SCARF"),
@@ -3487,6 +3702,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("UP-GRADE"),
@@ -3503,6 +3719,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("SHELL BELL"),
@@ -3519,6 +3736,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 30,
     },
     {
         .name = _("SEA INCENSE"),
@@ -3535,6 +3753,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("LAX INCENSE"),
@@ -3551,6 +3770,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("LUCKY PUNCH"),
@@ -3567,6 +3787,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 40,
     },
     {
         .name = _("METAL POWDER"),
@@ -3583,6 +3804,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("THICK CLUB"),
@@ -3599,6 +3821,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 90,
     },
     {
         .name = _("STICK"),
@@ -3615,6 +3838,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 60,
     },
     {
         .name = _("????????"),
@@ -3631,6 +3855,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -3647,6 +3872,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -3663,6 +3889,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -3679,6 +3906,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -3695,6 +3923,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -3711,6 +3940,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -3727,6 +3957,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -3743,6 +3974,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -3759,6 +3991,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -3775,6 +4008,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -3791,6 +4025,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -3807,6 +4042,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -3823,6 +4059,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -3839,6 +4076,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -3855,6 +4093,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -3871,6 +4110,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -3887,6 +4127,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -3903,6 +4144,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -3919,6 +4161,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -3935,6 +4178,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -3951,6 +4195,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -3967,6 +4212,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -3983,6 +4229,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -3999,6 +4246,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -4015,6 +4263,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -4031,6 +4280,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -4047,6 +4297,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -4063,6 +4314,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("RED SCARF"),
@@ -4079,6 +4331,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("BLUE SCARF"),
@@ -4095,6 +4348,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("PINK SCARF"),
@@ -4111,6 +4365,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("GREEN SCARF"),
@@ -4127,6 +4382,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("YELLOW SCARF"),
@@ -4143,6 +4399,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 10,
     },
     {
         .name = _("MACH BIKE"),
@@ -4159,6 +4416,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("COIN CASE"),
@@ -4175,6 +4433,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("ITEMFINDER"),
@@ -4191,6 +4450,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("OLD ROD"),
@@ -4207,6 +4467,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("GOOD ROD"),
@@ -4223,6 +4484,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 1,
+		.flingPower = 0,
     },
     {
         .name = _("SUPER ROD"),
@@ -4239,6 +4501,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 2,
+		.flingPower = 0,
     },
     {
         .name = _("S.S. TICKET"),
@@ -4255,6 +4518,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("CONTEST PASS"),
@@ -4271,6 +4535,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -4287,6 +4552,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("WAILMER PAIL"),
@@ -4303,6 +4569,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("DEVON GOODS"),
@@ -4319,6 +4586,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("SOOT SACK"),
@@ -4335,6 +4603,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("BASEMENT KEY"),
@@ -4351,6 +4620,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("ACRO BIKE"),
@@ -4367,6 +4637,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 1,
+		.flingPower = 0,
     },
     {
         .name = _("{POKEBLOCK} CASE"),
@@ -4383,6 +4654,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("LETTER"),
@@ -4399,6 +4671,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("EON TICKET"),
@@ -4415,6 +4688,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 1,
+		.flingPower = 0,
     },
     {
         .name = _("RED ORB"),
@@ -4431,6 +4705,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("BLUE ORB"),
@@ -4447,6 +4722,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("SCANNER"),
@@ -4463,6 +4739,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("GO-GOGGLES"),
@@ -4479,6 +4756,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("METEORITE"),
@@ -4495,6 +4773,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("RM. 1 KEY"),
@@ -4511,6 +4790,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("RM. 2 KEY"),
@@ -4527,6 +4807,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("RM. 4 KEY"),
@@ -4543,6 +4824,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("RM. 6 KEY"),
@@ -4559,6 +4841,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("STORAGE KEY"),
@@ -4575,6 +4858,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("ROOT FOSSIL"),
@@ -4591,6 +4875,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("CLAW FOSSIL"),
@@ -4607,6 +4892,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("DEVON SCOPE"),
@@ -4623,15 +4909,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM01"),
         .itemId = ITEM_TM01_FOCUS_PUNCH,
-        .price = 3000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM01,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -4639,15 +4926,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM02"),
         .itemId = ITEM_TM02_DRAGON_CLAW,
-        .price = 3000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM02,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -4655,15 +4943,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM03"),
         .itemId = ITEM_TM03_WATER_PULSE,
-        .price = 3000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM03,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -4671,15 +4960,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM04"),
         .itemId = ITEM_TM04_CALM_MIND,
-        .price = 3000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM04,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -4687,15 +4977,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM05"),
         .itemId = ITEM_TM05_ROAR,
-        .price = 1000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM05,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -4703,15 +4994,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM06"),
         .itemId = ITEM_TM06_TOXIC,
-        .price = 3000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM06,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -4719,15 +5011,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM07"),
         .itemId = ITEM_TM07_HAIL,
-        .price = 3000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM07,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -4735,15 +5028,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM08"),
         .itemId = ITEM_TM08_BULK_UP,
-        .price = 3000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM08,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -4751,15 +5045,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM09"),
         .itemId = ITEM_TM09_BULLET_SEED,
-        .price = 3000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM09,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -4767,15 +5062,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM10"),
         .itemId = ITEM_TM10_HIDDEN_POWER,
-        .price = 3000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM10,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -4783,15 +5079,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM11"),
         .itemId = ITEM_TM11_SUNNY_DAY,
-        .price = 2000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM11,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -4799,15 +5096,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM12"),
         .itemId = ITEM_TM12_TAUNT,
-        .price = 3000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM12,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -4815,15 +5113,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM13"),
         .itemId = ITEM_TM13_ICE_BEAM,
-        .price = 3000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM13,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -4831,15 +5130,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM14"),
         .itemId = ITEM_TM14_BLIZZARD,
-        .price = 5500,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM14,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -4847,15 +5147,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM15"),
         .itemId = ITEM_TM15_HYPER_BEAM,
-        .price = 7500,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM15,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -4863,15 +5164,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM16"),
         .itemId = ITEM_TM16_LIGHT_SCREEN,
-        .price = 3000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM16,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -4879,15 +5181,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM17"),
         .itemId = ITEM_TM17_PROTECT,
-        .price = 3000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM17,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -4895,15 +5198,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM18"),
         .itemId = ITEM_TM18_RAIN_DANCE,
-        .price = 2000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM18,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -4911,15 +5215,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM19"),
         .itemId = ITEM_TM19_GIGA_DRAIN,
-        .price = 3000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM19,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -4927,15 +5232,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM20"),
         .itemId = ITEM_TM20_SAFEGUARD,
-        .price = 3000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM20,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -4943,15 +5249,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM21"),
         .itemId = ITEM_TM21_FRUSTRATION,
-        .price = 1000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM21,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -4959,15 +5266,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM22"),
         .itemId = ITEM_TM22_SOLARBEAM,
-        .price = 3000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM22,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -4975,15 +5283,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM23"),
         .itemId = ITEM_TM23_IRON_TAIL,
-        .price = 3000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM23,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -4991,15 +5300,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM24"),
         .itemId = ITEM_TM24_THUNDERBOLT,
-        .price = 3000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM24,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -5007,15 +5317,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM25"),
         .itemId = ITEM_TM25_THUNDER,
-        .price = 5500,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM25,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -5023,15 +5334,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM26"),
         .itemId = ITEM_TM26_EARTHQUAKE,
-        .price = 3000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM26,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -5039,15 +5351,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM27"),
         .itemId = ITEM_TM27_RETURN,
-        .price = 1000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM27,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -5055,15 +5368,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM28"),
         .itemId = ITEM_TM28_DIG,
-        .price = 2000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM28,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -5071,15 +5385,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM29"),
         .itemId = ITEM_TM29_PSYCHIC,
-        .price = 2000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM29,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -5087,15 +5402,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM30"),
         .itemId = ITEM_TM30_SHADOW_BALL,
-        .price = 3000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM30,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -5103,15 +5419,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM31"),
         .itemId = ITEM_TM31_BRICK_BREAK,
-        .price = 3000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM31,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -5119,15 +5436,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM32"),
         .itemId = ITEM_TM32_DOUBLE_TEAM,
-        .price = 2000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM32,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -5135,15 +5453,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM33"),
         .itemId = ITEM_TM33_REFLECT,
-        .price = 3000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM33,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -5151,15 +5470,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM34"),
         .itemId = ITEM_TM34_SHOCK_WAVE,
-        .price = 3000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM34,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -5167,15 +5487,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM35"),
         .itemId = ITEM_TM35_FLAMETHROWER,
-        .price = 3000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM35,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -5183,15 +5504,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM36"),
         .itemId = ITEM_TM36_SLUDGE_BOMB,
-        .price = 1000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM36,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -5199,15 +5521,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM37"),
         .itemId = ITEM_TM37_SANDSTORM,
-        .price = 2000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM37,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -5215,15 +5538,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM38"),
         .itemId = ITEM_TM38_FIRE_BLAST,
-        .price = 5500,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM38,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -5231,15 +5555,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM39"),
         .itemId = ITEM_TM39_ROCK_TOMB,
-        .price = 3000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM39,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -5247,15 +5572,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM40"),
         .itemId = ITEM_TM40_AERIAL_ACE,
-        .price = 3000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM40,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -5263,15 +5589,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM41"),
         .itemId = ITEM_TM41_TORMENT,
-        .price = 3000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM41,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -5279,15 +5606,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM42"),
         .itemId = ITEM_TM42_FACADE,
-        .price = 3000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM42,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -5295,15 +5623,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM43"),
         .itemId = ITEM_TM43_SECRET_POWER,
-        .price = 3000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM43,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -5311,15 +5640,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM44"),
         .itemId = ITEM_TM44_REST,
-        .price = 3000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM44,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -5327,15 +5657,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM45"),
         .itemId = ITEM_TM45_ATTRACT,
-        .price = 3000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM45,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -5343,15 +5674,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM46"),
         .itemId = ITEM_TM46_THIEF,
-        .price = 3000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM46,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -5359,15 +5691,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM47"),
         .itemId = ITEM_TM47_STEEL_WING,
-        .price = 3000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM47,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -5375,15 +5708,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM48"),
         .itemId = ITEM_TM48_SKILL_SWAP,
-        .price = 3000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM48,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -5391,15 +5725,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM49"),
         .itemId = ITEM_TM49_SNATCH,
-        .price = 3000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM49,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -5407,15 +5742,16 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("TM50"),
         .itemId = ITEM_TM50_OVERHEAT,
-        .price = 3000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM50,
-        .importance = 0,
+        .importance = 1,
         .unk19 = 0,
         .pocket = POCKET_TM_HM,
         .type = 1,
@@ -5423,6 +5759,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("HM01"),
@@ -5439,6 +5776,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("HM02"),
@@ -5455,6 +5793,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("HM03"),
@@ -5471,6 +5810,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("HM04"),
@@ -5487,6 +5827,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("HM05"),
@@ -5503,6 +5844,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("HM06"),
@@ -5519,6 +5861,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("HM07"),
@@ -5535,6 +5878,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("HM08"),
@@ -5551,6 +5895,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -5567,6 +5912,7 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
     {
         .name = _("????????"),
@@ -5583,5 +5929,6 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.flingPower = 0,
     },
 };

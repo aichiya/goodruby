@@ -370,4 +370,7 @@ const u8 gMoveNames[][13] = {
     [MOVE_FIRE_FANG] = _("FIRE FANG"),
     [MOVE_THUNDER_FANG] = _("THUNDER FANG"),
     [MOVE_ICE_FANG] = _("ICE FANG"),
+    [MOVE_PUPPY_EYES] = _("PUPPY EYES"),
+    [MOVE_FLING] = _("FLING"),
+    [MOVE_SWITCHEROO] = _("SWITCHEROO"),
 };

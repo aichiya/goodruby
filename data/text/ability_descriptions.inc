@@ -235,6 +235,10 @@ gAbilityDescription_AirLock: @ 81FA0F6
 gAbilityDescription_QuickFeet:
 	.string "Ups SPEED if suffering.$"
 
+gAbilityDescription_Gluttony:
+	.string "Eats berries more readily.$"
+
+
 	.align 2
 gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_None
@@ -316,3 +320,4 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Cacophony
 	.4byte gAbilityDescription_AirLock
 	.4byte gAbilityDescription_QuickFeet
+	.4byte gAbilityDescription_Gluttony
