@@ -8,14 +8,44 @@
 --update Struggle acc
 --update Roar, Whirlwind acc
 
+--update string shot, sweet scent, other effects?
+
 --update Toxic acc for poison-types
+--make Electric-types immune to Paralysis
+--nerf paralysis
+--nerf confusion
+--nerf burn
+--nerf sleep
+--make Ghosts immune to trapping
 
 --figure out what's going on with razor wind/sky attack crit
 --make twineedle roll on both hits
 --give volt tackle a paralyze chance
+--Things that alter abilities (Skill Swap) reveal abilities
+--Weather abilities aren't permanent
 
 --update move targetting for surf, etc.
+
+--Decapitalize.
+--Implement cross-gen evos.
+--Implement cross-gen items and balls.
+--Make eggs hatch at level 1.
+--Display nature stat mods.
+--Implement auto-run.
+--Allow running indoors.
+--Destroy the low HP beep.
+--Update Exp Yields, move to gen 5 exp formula
+--Update base stats
+--Allow evolution of fainted mons, or on a wipe
+--Evolution moves
 
 --Go through movepools of Hoenn mons and add needed moves.
 
 --Fling currently does not activate most berries (except pinch stat-boosters).
+--Flame Burst is a standard multi-target attack
+
+
+Distant future:
+--Hidden abilities?
+--Misc. past and future gen mons available?
+--Expand TMs?

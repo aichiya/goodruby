@@ -1490,6 +1490,22 @@ static const u8 MoveDescription_Switcheroo[] = _(
     "Trades items with the foe\n"
     "faster than they can spot.");
 
+static const u8 MoveDescription_BugBite[] = _(
+    "Bites the foe and attempts\n"
+    "to eat its held berry.");
+
+static const u8 MoveDescription_BugBuzz[] = _(
+    "Attacks with a sound wave\n"
+    "that may lower SP.DEF.");
+
+static const u8 MoveDescription_Venoshock[] = _(
+    "Does double damage if\n"
+    "the target is poisoned.");
+
+static const u8 MoveDescription_QuiverDance[] = _(
+    "A mystical dance that ups\n"
+    "SP.ATK, SP.DEF, and SPEED.");
+
 
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
@@ -1865,4 +1881,8 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_PuppyEyes,
 	MoveDescription_Fling,
 	MoveDescription_Switcheroo,
+	MoveDescription_BugBite,
+	MoveDescription_BugBuzz,
+	MoveDescription_QuiverDance,
+	MoveDescription_Venoshock,
 };

@@ -55,4 +55,10 @@ gBattleAnimSpriteTemplate_Fling::
 gBattleAnimSpriteTemplate_PuppyEyes::
 	spr_template 10027, 10084, gOamData_837DF34, gSpriteAnimTable_84022AC, NULL, gDummySpriteAffineAnimTable, sub_812C80C
 
+	.align 2
+gBattleAnimSpriteTemplate_BugBite:: @ 83DAC4C
+	spr_template 10291, 10058, gOamData_837DF24, gDummySpriteAnimTable, NULL, gDummySpriteAffineAnimTable, sub_80DB458
 
+	.align 2
+gBattleAnimSpriteTemplate_BugBuzz:: @ 83D7CC8
+	spr_template 10225, 10291, gOamData_837DF34, gDummySpriteAnimTable, NULL, gDummySpriteAffineAnimTable, sub_80D2D68

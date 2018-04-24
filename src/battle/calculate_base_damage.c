@@ -224,6 +224,9 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         gBattleMovePower = (150 * gBattleMovePower) / 100;
     if (gBattleMoves[gCurrentMove].effect == EFFECT_EXPLOSION)
         defense /= 2;
+
+	if (gCurrentMove == MOVE_VENOSHOCK && defender->status1 & (STATUS_POISON | STATUS_TOXIC_POISON))
+		spAttack *= 2;
     
     if (moveClass == 0)
     {

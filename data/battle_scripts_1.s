@@ -232,6 +232,8 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectThunderFang
 	.4byte BattleScript_EffectIceFang
 	.4byte BattleScript_EffectFling
+	.4byte BattleScript_EffectQuiverDance
+	.4byte BattleScript_EffectBugBite
 
 BattleScript_EffectHit: @ 81D6F14
 BattleScript_EffectAccuracyDown2: @ 81D6F14
@@ -4671,8 +4673,159 @@ BattleScript_EffectFling:
 	removeitem USER
 	seteffectwithchance
 	tryfaintmon TARGET, FALSE, NULL
+	setbyte sMOVEEND_STATE, 0
+	moveend 0, 0
 	end
 
 BattleScript_FlingMissed:
 	removeitem USER
 	goto BattleScript_MoveMissedPause
+
+BattleScript_EffectQuiverDance:
+	attackcanceler
+	attackstring
+	ppreduce
+	jumpifstat USER, LESS_THAN, SP_ATTACK, 12, BattleScript_QuiverDanceDoMoveAnim
+	jumpifstat USER, LESS_THAN, SP_DEFENSE, 12, BattleScript_QuiverDanceDoMoveAnim
+	jumpifstat USER, EQUAL, SPEED, 12, BattleScript_CantRaiseMultipleStats
+	
+BattleScript_QuiverDanceDoMoveAnim:
+	attackanimation
+	waitanimation
+	setbyte sFIELD_1B, 0
+	playstatchangeanimation USER, 0x38, 0
+	
+	setstatchanger SP_ATTACK, 1, FALSE
+	statbuffchange AFFECTS_USER | 0x1, BattleScript_QuiverDanceTrySpDef
+	jumpifbyte EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_QuiverDanceTrySpDef
+	printfromtable gStatUpStringIds
+	waitmessage 64
+
+BattleScript_QuiverDanceTrySpDef:
+	setstatchanger SP_DEFENSE, 1, FALSE
+	statbuffchange AFFECTS_USER | 0x1, BattleScript_QuiverDanceTrySpeed
+	jumpifbyte EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_QuiverDanceTrySpeed
+	printfromtable gStatUpStringIds
+	waitmessage 64
+	
+BattleScript_QuiverDanceTrySpeed:
+	setstatchanger SPEED, 1, FALSE
+	statbuffchange AFFECTS_USER | 0x1, BattleScript_QuiverDanceEnd
+	jumpifbyte EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_QuiverDanceEnd
+	printfromtable gStatUpStringIds
+	waitmessage 64
+
+BattleScript_QuiverDanceEnd:
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectBugBite:
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation TARGET
+	waitstate
+	healthbarupdate TARGET
+	datahpupdate TARGET
+	critmessage
+	waitmessage 64
+	resultmessage
+	waitmessage 64
+	special 0x3
+	tryfaintmon TARGET, FALSE, NULL
+	setbyte sMOVEEND_STATE, 0
+	moveend 0, 0
+	end
+
+BattleScript_BugBiteEatBerry::
+	removeitem TARGET
+	printstring BATTLE_TEXT_BugBiteEat
+	waitmessage 64
+	tryfaintmon TARGET, FALSE, NULL
+	setbyte sMOVEEND_STATE, 0
+	moveend 0, 0
+	end
+
+BattleScript_BugBiteGainHP::
+	removeitem TARGET
+	printstring BATTLE_TEXT_BugBiteEat
+	waitmessage 64
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
+	healthbarupdate USER
+	datahpupdate USER
+	tryfaintmon TARGET, FALSE, NULL
+	setbyte sMOVEEND_STATE, 0
+	moveend 0, 0
+	end
+	
+BattleScript_BugBiteHealStatus::
+	removeitem TARGET
+	printstring BATTLE_TEXT_BugBiteEat
+	waitmessage 64
+	printstring BATTLE_TEXT_StatusNormal
+	waitmessage 64
+	updatestatusicon USER
+	tryfaintmon TARGET, FALSE, NULL
+	setbyte sMOVEEND_STATE, 0
+	moveend 0, 0
+	end
+
+BattleScript_BugBiteGainHPConfuse::
+	removeitem TARGET
+	printstring BATTLE_TEXT_BugBiteEat
+	waitmessage 64
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
+	healthbarupdate USER
+	datahpupdate USER
+	printstring BATTLE_TEXT_UnknownString2
+	waitmessage 64
+	setmoveeffect EFFECT_CONFUSION | AFFECTS_USER
+	seteffectprimary
+	tryfaintmon TARGET, FALSE, NULL
+	setbyte sMOVEEND_STATE, 0
+	moveend 0, 0
+	end
+
+BattleScript_BugBiteRaiseStat::
+	removeitem TARGET
+	printstring BATTLE_TEXT_BugBiteEat
+	waitmessage 64
+	seteffectwithchance
+	tryfaintmon TARGET, FALSE, NULL
+	setbyte sMOVEEND_STATE, 0
+	moveend 0, 0
+	end
+
+BattleScript_BugBiteLansat::
+	removeitem TARGET
+	printstring BATTLE_TEXT_BugBiteEat
+	waitmessage 64
+	jumpifstatus2 USER, STATUS2_FOCUS_ENERGY, BattleScript_BugBiteLansatEnd
+	setfocusenergy
+	printfromtable gFocusEnergyUsedStringIds
+	waitmessage 64
+BattleScript_BugBiteLansatEnd:
+	tryfaintmon TARGET, FALSE, NULL
+	setbyte sMOVEEND_STATE, 0
+	moveend 0, 0
+	end
+
+BattleScript_BugBiteLeppa::
+	removeitem TARGET
+	printstring BATTLE_TEXT_BugBiteEat
+	waitmessage 64
+	printstring BATTLE_TEXT_RestoredPP
+	waitmessage 64
+	tryfaintmon TARGET, FALSE, NULL
+	setbyte sMOVEEND_STATE, 0
+	moveend 0, 0
+	end
+
+

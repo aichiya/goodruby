@@ -373,4 +373,8 @@ const u8 gMoveNames[][13] = {
     [MOVE_PUPPY_EYES] = _("PUPPY EYES"),
     [MOVE_FLING] = _("FLING"),
     [MOVE_SWITCHEROO] = _("SWITCHEROO"),
+    [MOVE_BUG_BITE] = _("BUG BITE"),
+    [MOVE_BUG_BUZZ] = _("BUG BUZZ"),
+    [MOVE_QUIVER_DANCE] = _("QUIVER DANCE"),
+    [MOVE_VENOSHOCK] = _("VENOSHOCK"),
 };

@@ -351,3 +351,8 @@
 	enum BATTLE_TEXT_NoEffect
 	enum BATTLE_TEXT_NoEffectOn
 	enum BATTLE_TEXT_Flung
+	enum BATTLE_TEXT_BugBiteEat,
+	enum BATTLE_TEXT_BugBiteGainHP,
+	enum BATTLE_TEXT_BugBiteGainPP,
+	enum BATTLE_TEXT_BugBiteCureStatus,
+	enum BATTLE_TEXT_BugBiteConfused,

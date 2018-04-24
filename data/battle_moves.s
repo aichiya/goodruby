@@ -5242,3 +5242,61 @@ gBattleMoves:: @ 81FB12C
 	.byte 0
 	.byte CLASS_STATUS
 	.byte 0
+
+@ BUG_BITE
+	.byte EFFECT_BUG_BITE
+	.byte 60 @ power
+	.byte TYPE_BUG
+	.byte 100 @ accuracy
+	.byte 20 @ PP
+	.byte 0 @ secondary effect chance
+	.byte TARGET_SELECTED_POKEMON
+	.byte 0 @ priority
+	.byte F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT @ misc. flags
+	.byte 0
+	.byte CLASS_PHYSICAL
+	.byte 0
+
+@ BUG_BUZZ
+	.byte EFFECT_SPECIAL_DEFENSE_DOWN_HIT
+	.byte 90 @ power
+	.byte TYPE_BUG
+	.byte 100 @ accuracy
+	.byte 10 @ PP
+	.byte 10 @ secondary effect chance
+	.byte TARGET_SELECTED_POKEMON
+	.byte 0 @ priority
+	.byte F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT @ misc. flags
+	.byte 0
+	.byte CLASS_SPECIAL
+	.byte 0
+
+@ QUIVER_DANCE
+	.byte EFFECT_QUIVER_DANCE
+	.byte 0 @ power
+	.byte TYPE_BUG
+	.byte 0 @ accuracy
+	.byte 20 @ PP
+	.byte 0 @ secondary effect chance
+	.byte TARGET_USER
+	.byte 0 @ priority
+	.byte F_AFFECTED_BY_SNATCH @ misc. flags
+	.byte 0
+	.byte CLASS_STATUS
+	.byte 0
+
+@ VENOSHOCK
+	.byte EFFECT_HIT
+	.byte 65 @ power
+	.byte TYPE_POISON
+	.byte 100 @ accuracy
+	.byte 10 @ PP
+	.byte 0 @ secondary effect chance
+	.byte TARGET_SELECTED_POKEMON
+	.byte 0 @ priority
+	.byte F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT @ misc. flags
+	.byte 0
+	.byte CLASS_SPECIAL
+	.byte 0
+
+

@@ -21,6 +21,8 @@
 #include "constants/songs.h"
 #include "sound.h"
 #include "task.h"
+#include "string.h"
+#include "string_util.h"
 #include "decompress.h"
 #include "pokemon_summary_screen.h"
 #include "naming_screen.h"
@@ -92,6 +94,16 @@ enum
     /*new controllers should go here*/
     CONTROLLER_TERMINATOR_NOP,
     CONTROLLER_CMDS_COUNT
+};
+
+
+enum
+{
+    FLAVOR_SPICY, // 0
+    FLAVOR_DRY, // 1
+    FLAVOR_SWEET, // 2
+    FLAVOR_BITTER, // 3
+    FLAVOR_SOUR, // 4
 };
 
 //extern needed variables
@@ -207,7 +219,6 @@ void HandleLowHpMusicChange(struct Pokemon*, u8 bank);
 bool8 IsTradedMon(struct Pokemon*);
 void BattleScriptPop(void);
 void SwitchInClearSetData(void);
-u8* ConvertIntToDecimalStringN(u8*, s32, u8, u8);
 u8 GetSetPokedexFlag(u16 nationalNum, u8 caseID);
 u16 SpeciesToNationalPokedexNum(u16 species);
 u8 sub_803FC34(u8 bank);
@@ -242,6 +253,7 @@ void MenuCursor_SetPos814A880(u8 a1, u8 a2);
 u8 CheckMoveLimitations(u8 bank, u8 unusable_moves, u8 flags);
 bool8 IsLinkDoubleBattle(void);
 void sub_8094B6C(u8 bank, u8 partyID, u8 r2);
+s8 GetPokeFlavourRelation(u32 pid, u8 flavor);
 
 //extern BattleScripts
 extern u8 BattleScript_MoveEnd[];
@@ -297,6 +309,20 @@ extern u8 BattleScript_FaintAttacker[];
 extern u8 BattleScript_FaintTarget[];
 extern u8 BattleScript_DestinyBondTakesLife[];
 extern u8 BattleScript_SelectingImprisionedMoveInPalace[];
+extern u8 BattleScript_BugBiteEatBerry[];
+extern u8 BattleScript_BugBiteGainHP[];
+extern u8 BattleScript_BugBiteHealStatus[];
+extern u8 BattleScript_BugBiteGainHPConfuse[];
+extern u8 BattleScript_BugBiteRaiseStat[];
+extern u8 BattleScript_BugBiteLansat[];
+extern u8 BattleScript_BugBiteLeppa[];
+
+extern const u8 gStatusConditionString_PoisonJpn[];
+extern const u8 gStatusConditionString_SleepJpn[];
+extern const u8 gStatusConditionString_ParalysisJpn[];
+extern const u8 gStatusConditionString_BurnJpn[];
+extern const u8 gStatusConditionString_IceJpn[];
+extern const u8 gStatusConditionString_ConfusionJpn[];
 
 // read via orr
 #define BSScriptRead32(ptr) ((ptr)[0] | (ptr)[1] << 8 | (ptr)[2] << 16 | (ptr)[3] << 24)
@@ -608,6 +634,7 @@ static void atkF8_special(void);
 static void sp00_suckerpunch(void);
 static void sp01_fling(void);
 static void sp02_flingloseitem(void);
+static void sp03_bugbite(void);
 
 void (* const gBattleScriptingCommandsTable[])(void) =
 {
@@ -16064,6 +16091,7 @@ void (* const gBattleScriptingSpecialTable[])(void) =
 	sp00_suckerpunch,
 	sp01_fling,
 	sp02_flingloseitem,
+	sp03_bugbite,
 };
 
 
@@ -16177,3 +16205,231 @@ static void sp02_flingloseitem(void)
 	
 	
 }
+
+static void _bugBiteFigy(u8 flavor)
+{
+	gBattleTextBuff1[0] = 0xFD;
+	gBattleTextBuff1[1] = 8;
+	gBattleTextBuff1[2] = flavor;
+	gBattleTextBuff1[3] = EOS;
+	gBattleMoveDamage = gBattleMons[gBankAttacker].maxHP / 2;
+	if (gBattleMoveDamage == 0)
+		gBattleMoveDamage = 1;
+	if (gBattleMons[gBankAttacker].hp + gBattleMoveDamage > gBattleMons[gBankAttacker].maxHP)
+		gBattleMoveDamage = gBattleMons[gBankAttacker].maxHP - gBattleMons[gBankAttacker].hp;
+	gBattleMoveDamage *= -1;
+	if (GetPokeFlavourRelation(gBattleMons[gBankAttacker].personality, flavor) < 0)
+		gBattlescriptCurrInstr = BattleScript_BugBiteGainHPConfuse;
+	else
+		gBattlescriptCurrInstr = BattleScript_BugBiteGainHP;
+}
+
+static void sp03_bugbite(void)
+{
+	//asasdfghasgfh;efjwi
+	u16 itemstolen = gBattleMons[gBankTarget].item;
+	u8 i;
+	struct Pokemon* poke;
+	u8 changedPP, ppBonuses, maxPP;
+	u16 move;
+	
+	if (ItemId_GetPocket(itemstolen) == 0x4) //evil magic number: POCKET_BERRIES
+	{
+		gLastUsedItem = itemstolen;
+		
+		switch (itemstolen)
+		{
+			case ITEM_ORAN_BERRY: 
+				gBattleMoveDamage = 10;
+				if (gBattleMons[gBankAttacker].hp + gBattleMoveDamage > gBattleMons[gBankAttacker].maxHP)
+					gBattleMoveDamage = gBattleMons[gBankAttacker].maxHP - gBattleMons[gBankAttacker].hp;
+				gBattleMoveDamage *= -1;
+				gBattlescriptCurrInstr = BattleScript_BugBiteGainHP;
+				break;
+			case ITEM_SITRUS_BERRY:
+				gBattleMoveDamage = gBattleMons[gBankAttacker].maxHP / 4;
+				if (gBattleMons[gBankAttacker].hp + gBattleMoveDamage > gBattleMons[gBankAttacker].maxHP)
+					gBattleMoveDamage = gBattleMons[gBankAttacker].maxHP - gBattleMons[gBankAttacker].hp;
+				gBattleMoveDamage *= -1;
+				gBattlescriptCurrInstr = BattleScript_BugBiteGainHP;
+				break;
+			case ITEM_CHERI_BERRY:
+				if (gBattleMons[gBankAttacker].status1 & STATUS_PARALYSIS)
+				{
+					gBattleMons[gBankAttacker].status1 = 0;
+					EmitSetMonData(0, REQUEST_STATUS_BATTLE, 0, 4, &gBattleMons[gActiveBattler].status1);
+					gBattlescriptCurrInstr = BattleScript_BugBiteHealStatus;
+				}
+				else
+				{
+					gBattlescriptCurrInstr = BattleScript_BugBiteEatBerry;
+				}
+				break;
+			case ITEM_PECHA_BERRY:
+				if (gBattleMons[gBankAttacker].status1 & (STATUS_PSN_ANY))
+				{
+					gBattleMons[gBankAttacker].status1 = 0;
+					EmitSetMonData(0, REQUEST_STATUS_BATTLE, 0, 4, &gBattleMons[gActiveBattler].status1);
+					gBattlescriptCurrInstr = BattleScript_BugBiteHealStatus;
+				}
+				else
+				{
+					gBattlescriptCurrInstr = BattleScript_BugBiteEatBerry;
+				}
+				break;
+			case ITEM_RAWST_BERRY:
+				if (gBattleMons[gBankAttacker].status1 & (STATUS_BURN))
+				{
+					gBattleMons[gBankAttacker].status1 = 0;
+					EmitSetMonData(0, REQUEST_STATUS_BATTLE, 0, 4, &gBattleMons[gActiveBattler].status1);
+					gBattlescriptCurrInstr = BattleScript_BugBiteHealStatus;
+				}
+				else
+				{
+					gBattlescriptCurrInstr = BattleScript_BugBiteEatBerry;
+				}
+				break;
+			case ITEM_CHESTO_BERRY:
+				if (gBattleMons[gBankAttacker].status1 & (STATUS_SLEEP))
+				{
+					gBattleMons[gBankAttacker].status1 = 0;
+                    gBattleMons[gBankAttacker].status2 &= ~(STATUS2_NIGHTMARE);
+					EmitSetMonData(0, REQUEST_STATUS_BATTLE, 0, 4, &gBattleMons[gActiveBattler].status1);
+					gBattlescriptCurrInstr = BattleScript_BugBiteHealStatus;
+				}
+				else
+				{
+					gBattlescriptCurrInstr = BattleScript_BugBiteEatBerry;
+				}
+				break;
+			case ITEM_PERSIM_BERRY:
+				if (gBattleMons[gBankAttacker].status2 & (STATUS2_CONFUSION))
+				{
+                    gBattleMons[gBankAttacker].status2 &= ~(STATUS2_CONFUSION);
+					EmitSetMonData(0, REQUEST_STATUS_BATTLE, 0, 4, &gBattleMons[gActiveBattler].status1);
+					gBattlescriptCurrInstr = BattleScript_BugBiteHealStatus;
+				}
+				else
+				{
+					gBattlescriptCurrInstr = BattleScript_BugBiteEatBerry;
+				}
+			case ITEM_LUM_BERRY:
+				if (gBattleMons[gBankAttacker].status1 || (gBattleMons[gBankAttacker].status2) & STATUS2_CONFUSION)
+				{
+					gBattleMons[gBankAttacker].status1 = 0;
+                    gBattleMons[gBankAttacker].status2 &= ~(STATUS2_CONFUSION);
+                    gBattleMons[gBankAttacker].status2 &= ~(STATUS2_NIGHTMARE);
+					EmitSetMonData(0, REQUEST_STATUS_BATTLE, 0, 4, &gBattleMons[gActiveBattler].status1);
+					gBattlescriptCurrInstr = BattleScript_BugBiteHealStatus;
+				}
+				else
+				{
+					gBattlescriptCurrInstr = BattleScript_BugBiteEatBerry;
+				}
+				break;
+			case ITEM_FIGY_BERRY:
+				_bugBiteFigy(FLAVOR_SPICY);
+				break;
+			case ITEM_WIKI_BERRY:
+				_bugBiteFigy(FLAVOR_DRY);
+				break;
+			case ITEM_MAGO_BERRY:
+				_bugBiteFigy(FLAVOR_SWEET);
+				break;
+			case ITEM_AGUAV_BERRY:
+				_bugBiteFigy(FLAVOR_BITTER);
+				break;
+			case ITEM_IAPAPA_BERRY:
+				_bugBiteFigy(FLAVOR_SOUR);
+				break;
+			case ITEM_LIECHI_BERRY:
+				gBattleCommunication[MOVE_EFFECT_BYTE] = 0xCF;
+				gBattlescriptCurrInstr = BattleScript_BugBiteRaiseStat;
+				break;
+			case ITEM_GANLON_BERRY:
+				gBattleCommunication[MOVE_EFFECT_BYTE] = 0xD0;
+				gBattlescriptCurrInstr = BattleScript_BugBiteRaiseStat;
+				break;
+			case ITEM_SALAC_BERRY:
+				gBattleCommunication[MOVE_EFFECT_BYTE] = 0xD1;
+				gBattlescriptCurrInstr = BattleScript_BugBiteRaiseStat;
+				break;
+			case ITEM_PETAYA_BERRY:
+				gBattleCommunication[MOVE_EFFECT_BYTE] = 0xD2;
+				gBattlescriptCurrInstr = BattleScript_BugBiteRaiseStat;
+				break;
+			case ITEM_APICOT_BERRY:
+				gBattleCommunication[MOVE_EFFECT_BYTE] = 0xD3;
+				gBattlescriptCurrInstr = BattleScript_BugBiteRaiseStat;
+				break;
+			case ITEM_STARF_BERRY:
+				for (i = 0; i < 5; i++)
+				{
+					if (gBattleMons[gBankAttacker].statStages[STAT_STAGE_ATK + i] < 0xC)
+						break;
+				}
+				if (i != 5)
+				{
+					do
+					{
+						i = Random() % 5;
+					} while (gBattleMons[gBankAttacker].statStages[STAT_STAGE_ATK + i] == 0xC);
+					gBattleCommunication[MOVE_EFFECT_BYTE] = 0xE7 + i;
+					gBattlescriptCurrInstr = BattleScript_BugBiteRaiseStat;
+				}
+				else
+				{
+					gBattlescriptCurrInstr = BattleScript_BugBiteEatBerry;
+				}
+				break;
+			case ITEM_LANSAT_BERRY:
+				gBattlescriptCurrInstr = BattleScript_BugBiteLansat;
+				break;
+			case ITEM_LEPPA_BERRY:
+				if (GetBattlerSide(gBankAttacker) == 0)
+					poke = &gPlayerParty[gBattlerPartyIndexes[gBankAttacker]];
+				else
+					poke = &gEnemyParty[gBattlerPartyIndexes[gBankAttacker]];
+				for (i = 0; i < 4; i++)
+				{
+					move = GetMonData(poke, MON_DATA_MOVE1 + i);
+					changedPP = GetMonData(poke, MON_DATA_PP1 + i);
+					ppBonuses = GetMonData(poke, MON_DATA_PP_BONUSES);
+					maxPP = CalculatePPWithBonus(move, ppBonuses, i);
+					if (move && changedPP == 0)
+						break;
+				}
+				if (i == 4)
+				{
+					for (i = 0; i < 4; i++)
+					{
+						move = GetMonData(poke, MON_DATA_MOVE1 + i);
+						changedPP = GetMonData(poke, MON_DATA_PP1 + i);
+						ppBonuses = GetMonData(poke, MON_DATA_PP_BONUSES);
+						maxPP = CalculatePPWithBonus(move, ppBonuses, i);
+						if (move && changedPP != maxPP)
+							break;
+					}
+				}
+				if (i != 4)
+				{
+					if (changedPP + 10 > maxPP)
+						changedPP = maxPP;
+					else
+						changedPP = changedPP + 10;
+					gBattleTextBuff1[0] = 0xFD;
+					gBattleTextBuff1[1] = 2;
+					gBattleTextBuff1[2] = move;
+					gBattleTextBuff1[3] = move >> 8;
+					gBattleTextBuff1[4] = 0xFF;
+					EmitSetMonData(0, i + REQUEST_PPMOVE1_BATTLE, 0, 1, &changedPP);
+					MarkBufferBankForExecution(gActiveBattler);
+					gBattlescriptCurrInstr = BattleScript_BugBiteLeppa;
+				}
+			default:
+				gBattlescriptCurrInstr = BattleScript_BugBiteEatBerry;
+				break;
+		}
+	}
+}
+
