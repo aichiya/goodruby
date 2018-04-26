@@ -42,6 +42,10 @@
 #define TYPE_FORESIGHT  0xFE
 #define TYPE_ENDTABLE   0xFF
 
+// physical/special types
+#define TYPE_IS_PHYSICAL(type) ((type) < TYPE_MYSTERY)
+#define TYPE_IS_SPECIAL(type) ((type) > TYPE_MYSTERY)
+
 enum
 {
     BATTLE_TERRAIN_GRASS,
@@ -720,6 +724,10 @@ void Emitcmd55(u8 a, u8 b); //0x37
 void MarkBufferBankForExecution(u8 bank);
 
 extern u8 gBattleTextBuff1[];
+
+extern u16 gBattleTypeFlags;
+extern u8 gUnknown_02023A14_50;
+extern u16 gTrainerBattleOpponent;
 
 // src/battle_bg.o
 void sub_800D6D4();

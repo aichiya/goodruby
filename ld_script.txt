@@ -152,7 +152,6 @@ SECTIONS {
         src/fldeff_escalator.o(.text);
         src/berry.o(.text);
         src/debug/watanabe_debug_menu.o(.text);
-        asm/watanabe_debug_menu.o(.text);
         src/script_menu.o(.text);
         src/naming_screen.o(.text);
         src/money.o(.text);
@@ -166,7 +165,6 @@ SECTIONS {
         src/field_poison.o(.text);
         src/pokemon_size_record.o(.text);
         src/pc_screen_effect.o(.text);
-        asm/pc_screen_effect.o(.text);
         src/fldeff_secretpower.o(.text);
         src/fldeff_secret_base_pc.o(.text);
         src/fldeff_decoration.o(.text);
@@ -499,7 +497,7 @@ SECTIONS {
         data/battle_7.o(.rodata);
         src/battle/battle_controller_opponent.o(.rodata);
         src/battle/battle_controller_linkopponent.o(.rodata);
-        data/battle_moves.o(.rodata);
+        src/data/battle_moves.o(.rodata);
         src/battle/battle_util.o(.rodata);
         src/pokemon_1.o(.rodata);
         src/pokemon_1.o(.data); /* gEvolutionTable needs to be non-const to match */
@@ -587,7 +585,8 @@ SECTIONS {
         src/shop.o(.rodata);
         src/fldeff_escalator.o(.rodata);
         src/berry.o(.rodata);
-        data/debug_menu_watanabe.o(.rodata);
+        src/debug/watanabe_debug_menu.o(.rodata);
+        src/debug/watanabe_debug_menu.o(.data);
         src/script_menu.o(.rodata);
         src/naming_screen.o(.rodata);
         src/money.o(.rodata);
@@ -600,7 +599,7 @@ SECTIONS {
         data/contest_link_80C2020.o(.rodata);
         src/pokemon_size_record.o(.rodata);
         src/pc_screen_effect.o(.rodata);
-        data/pc_screen_effect.o(.rodata);
+        src/pc_screen_effect.o(.data);
         src/fldeff_secretpower.o(.rodata);
         src/fldeff_decoration.o(.rodata);
         src/fldeff_recordmixing.o(.rodata);
