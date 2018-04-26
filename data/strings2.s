@@ -44,40 +44,40 @@ gSystemText_ButtonMode:: @ 842C3FA
 	.string "{PALETTE 9}BUTTON MODE$"
 
 gSystemText_Slow:: @ 842C409
-	.string "{PALETTE 15}SLOW$"
+	.string "{PALETTE 15}Mid$"
 
 gSystemText_Mid:: @ 842C411
-	.string "{PALETTE 15}MID$"
+	.string "{PALETTE 15}Fast$"
 
 gSystemText_Fast:: @ 842C418
-	.string "{PALETTE 15}FAST$"
+	.string "{PALETTE 15}Instant$"
 
 gSystemText_On:: @ 842C420
-	.string "{PALETTE 15}ON$"
+	.string "{PALETTE 15}On$"
 
 gSystemText_Off:: @ 842C426
-	.string "{PALETTE 15}OFF$"
+	.string "{PALETTE 15}Off$"
 
 gSystemText_Shift:: @ 842C42D
-	.string "{PALETTE 15}SHIFT$"
+	.string "{PALETTE 15}Shift$"
 
 gSystemText_Set:: @ 842C436
-	.string "{PALETTE 15}SET$"
+	.string "{PALETTE 15}Set$"
 
 gSystemText_Mono:: @ 842C43D
-	.string "{PALETTE 15}MONO$"
+	.string "{PALETTE 15}Mono$"
 
 gSystemText_Stereo:: @ 842C445
-	.string "{PALETTE 15}STEREO$"
+	.string "{PALETTE 15}Stereo$"
 
 gSystemText_Type:: @ 842C44F
-	.string "{PALETTE 15}TYPE$"
+	.string "{PALETTE 15}Type$"
 
 gSystemText_Terminator:: @ 842C457
 	.string "{PALETTE 8}$"
 
 gSystemText_Normal:: @ 842C45B
-	.string "{PALETTE 15}NORMAL$"
+	.string "{PALETTE 15}Normal$"
 
 gSystemText_LR:: @ 842C465
 	.string "{PALETTE 15}LR$"
@@ -86,26 +86,26 @@ gSystemText_LA:: @ 842C46B
 	.string "{PALETTE 15}L=A$"
 
 SystemText_Pokedex::
-	.string "POKéDEX$"
+	.string "Pokédex$"
 SystemText_Pokemon::
-	.string "POKéMON$"
+	.string "Pokémon$"
 SystemText_BAG::
-	.string "BAG$"
+	.string "Bag$"
 SystemText_Pokenav::
-	.string "POKéNAV$"
+	.string "Pokénav$"
 SystemText_Player::
 	.string "{PLAYER}$"
 SystemText_Save::
-	.string "SAVE$"
+	.string "Save$"
 SystemText_Option::
-	.string "OPTION$"
+	.string "Option$"
 SystemText_Exit::
-	.string "EXIT$"
+	.string "Exit$"
 SystemText_Retire:: @ safari zone?
-	.string "RETIRE$"
+	.string "Retire$"
 
 gOtherText_SafariStock:: @ 842C4A9
-	.string "SAFARI BALLS\nStock: {STR_VAR_1}$"
+	.string "Safari Balls\nStock: {STR_VAR_1}$"
 
 gSystemText_LinkStandby:: @ 842C4C0
 	.string "Link standby...\n... ... B Button: Cancel$"
