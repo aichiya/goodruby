@@ -234,6 +234,7 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectFling
 	.4byte BattleScript_EffectQuiverDance
 	.4byte BattleScript_EffectBugBite
+	.4byte BattleScript_EffectNaturalGift
 
 BattleScript_EffectHit: @ 81D6F14
 BattleScript_EffectAccuracyDown2: @ 81D6F14
@@ -4829,3 +4830,34 @@ BattleScript_BugBiteLeppa::
 	end
 
 
+BattleScript_EffectNaturalGift:
+	attackcanceler
+	attackstring
+	ppreduce
+	special 0x4
+	accuracycheck BattleScript_NatGiftMissed, ACC_CURR_MOVE
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation TARGET
+	waitstate
+	healthbarupdate TARGET
+	datahpupdate TARGET
+	critmessage
+	waitmessage 64
+	resultmessage
+	waitmessage 64
+	removeitem USER
+	seteffectwithchance
+	tryfaintmon TARGET, FALSE, NULL
+	setbyte sMOVEEND_STATE, 0
+	moveend 0, 0
+	end
+
+BattleScript_NatGiftMissed:
+	removeitem USER
+	goto BattleScript_MoveMissedPause

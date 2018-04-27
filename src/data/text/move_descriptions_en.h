@@ -1506,6 +1506,22 @@ static const u8 MoveDescription_QuiverDance[] = _(
     "A mystical dance that ups\n"
     "SP.ATK, SP.DEF, and SPEED.");
 
+static const u8 MoveDescription_NaturalGift[] = _(
+    "Consumes held berry, which\n"
+    "controls type and power.");
+
+static const u8 MoveDescription_ZenHeadbutt[] = _(
+    "A ramming attack that may\n"
+    "cause flinching.");
+
+static const u8 MoveDescription_PowerGem[] = _(
+    "Attacks with a burst of\n"
+    "gemstone-like light.");
+
+static const u8 MoveDescription_EarthPower[] = _(
+    "The floor erupts with power.\n"
+    "May reduce Sp. Def.");
+
 
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
@@ -1885,4 +1901,8 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_BugBuzz,
 	MoveDescription_QuiverDance,
 	MoveDescription_Venoshock,
+	MoveDescription_NaturalGift,
+	MoveDescription_ZenHeadbutt,
+	MoveDescription_PowerGem,
+	MoveDescription_EarthPower,
 };

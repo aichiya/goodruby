@@ -393,6 +393,10 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_BUG_BUZZ
 	.4byte Move_QUIVER_DANCE
 	.4byte Move_VENOSHOCK
+	.4byte Move_NaturalGift
+	.4byte Move_ZenHeadbutt
+	.4byte Move_PowerGem
+	.4byte Move_EarthPower
 	.4byte PoundCopy
 
 	.align 2
@@ -11468,5 +11472,60 @@ Move_VENOSHOCK:
 	waitforvisualfinish
 	delay 15
 	end
+
+
+
+Move_NaturalGift:
+	loadspritegfx 10203
+	monbg ANIM_BANK_DEF_PARTNER
+	monbgprio_2A ANIM_BANK_TARGET
+	setalpha 12, 8
+	createsprite gBattleAnimSpriteTemplate_83DB3C4, 2, 1, 1, 0, 12, 13293
+	waitforvisualfinish
+	loopsewithpan SE_W234, 192, 4, 3
+	createsprite gBattleAnimSpriteTemplate_83D79A4, 3, 0, 0, 0, 0, 0x5A94, 8
+	delay 4
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_TARGET, 3, 0, 6, 1
+	createsprite gBattleAnimSpriteTemplate_83D79A4, 3, 0, 0, 0, 0, 0x5A94, 8
+	delay 4
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_TARGET, 3, 0, 6, 1
+	createsprite gBattleAnimSpriteTemplate_83D79A4, 3, 0, 0, 0, 0, 0x5A94, 8
+	delay 4
+	
+	createsprite gBattleAnimSpriteTemplate_83DB3C4, 2, 1, 1, 12, 0, 13293
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_DEF_PARTNER
+	blendoff
+	end
+
+Move_ZenHeadbutt:
+	loadspritegfx 10135
+	monbg ANIM_BANK_DEF_PARTNER
+	call Unknown_81D61E7
+	setalpha 8, 8
+	createsprite gBattleAnimSpriteTemplate_83D6DE4, 2, 0
+	playsewithpan SE_W029, 192
+	waitforvisualfinish
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83D6DE4, 2, 1
+	waitforvisualfinish
+	createvisualtask AnimTask_ShakeMonInPlace, 2, ANIM_BANK_ATTACKER, 2, 0, 4, 1
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_TARGET, 5, 0, 6, 1
+	createsprite gBattleAnimSpriteTemplate_83D6DE4, 2, 2
+	createsprite gBattleAnimSpriteTemplate_83DB538, 131, 0, 0, 1, 1
+	playsewithpan SE_W233B, 63
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_DEF_PARTNER
+	blendoff
+	delay 1
+	call Unknown_81D61F3
+	end
+
+Move_PowerGem:
+	end
+
+Move_EarthPower:
+	end
+
 
 

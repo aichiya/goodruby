@@ -635,6 +635,7 @@ static void sp00_suckerpunch(void);
 static void sp01_fling(void);
 static void sp02_flingloseitem(void);
 static void sp03_bugbite(void);
+static void sp04_naturalgift(void);
 
 void (* const gBattleScriptingCommandsTable[])(void) =
 {
@@ -1072,15 +1073,15 @@ static const u8 sFlailHpScaleToPowerTable[] = //reversal+flail HP thresholds to 
 
 static const u16 sNaturePowerMoves[] =
 {
-    MOVE_STUN_SPORE,
-    MOVE_RAZOR_LEAF,
-    MOVE_EARTHQUAKE,
-    MOVE_HYDRO_PUMP,
-    MOVE_SURF,
-    MOVE_BUBBLE_BEAM,
-    MOVE_ROCK_SLIDE,
-    MOVE_SHADOW_BALL,
-    MOVE_SWIFT,
+    MOVE_ENERGY_BALL, // grass
+    MOVE_LEAF_STORM, // long grass
+    MOVE_EARTH_POWER, // sand
+    MOVE_HYDRO_PUMP, // underwater
+    MOVE_HYDRO_PUMP, // sea water
+    MOVE_HYDRO_PUMP, // pond
+    MOVE_POWER_GEM, // rock
+    MOVE_POWER_GEM, // cave
+    MOVE_SWIFT, // plain, etc.
     MOVE_SWIFT
 };
 
@@ -16092,6 +16093,7 @@ void (* const gBattleScriptingSpecialTable[])(void) =
 	sp01_fling,
 	sp02_flingloseitem,
 	sp03_bugbite,
+	sp04_naturalgift,
 };
 
 
@@ -16433,3 +16435,24 @@ static void sp03_bugbite(void)
 	}
 }
 
+static void sp04_naturalgift(void)
+{
+	u16 itemthrown = gBattleMons[gBankAttacker].item;
+	u8 failed = 0;
+	
+	if (gWishFutureKnock.knockedOffPokes[gBankAttacker])
+		failed = 1;
+	else
+	{
+		gLastUsedItem = itemthrown;
+		gBattleStruct->dynamicMoveType = ItemId_GetNatGiftType(itemthrown);
+		gDynamicBasePower = ItemId_GetNatGiftPower(itemthrown);
+		if (gDynamicBasePower == 0)
+			failed = 1;
+	}
+	
+	if (failed)
+	{
+		gBattlescriptCurrInstr = BattleScript_ButItFailed;
+	}
+}

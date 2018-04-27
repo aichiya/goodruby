@@ -16,6 +16,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Master Ball"),
@@ -33,6 +35,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_PokeBall,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Ultra Ball"),
@@ -50,6 +54,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_PokeBall,
         .secondaryId = 1,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Great Ball"),
@@ -67,6 +73,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_PokeBall,
         .secondaryId = 2,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Poké Ball"),
@@ -84,6 +92,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_PokeBall,
         .secondaryId = 3,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Safari Ball"),
@@ -101,6 +111,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_PokeBall,
         .secondaryId = 4,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Net Ball"),
@@ -118,6 +130,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_PokeBall,
         .secondaryId = 5,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Dive Ball"),
@@ -135,6 +149,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_PokeBall,
         .secondaryId = 6,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Nest Ball"),
@@ -152,6 +168,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_PokeBall,
         .secondaryId = 7,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Repeat Ball"),
@@ -169,6 +187,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_PokeBall,
         .secondaryId = 8,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Timer Ball"),
@@ -186,6 +206,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_PokeBall,
         .secondaryId = 9,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Luxury Ball"),
@@ -203,6 +225,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_PokeBall,
         .secondaryId = 10,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Premier Ball"),
@@ -220,6 +244,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_PokeBall,
         .secondaryId = 11,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Potion"),
@@ -237,6 +263,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Antidote"),
@@ -254,6 +282,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Burn Heal"),
@@ -271,6 +301,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Ice Heal"),
@@ -288,6 +320,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Awakening"),
@@ -305,6 +339,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Parlyz Heal"),
@@ -322,6 +358,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Full Restore"),
@@ -339,6 +377,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Max Potion"),
@@ -356,6 +396,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Hyper Potion"),
@@ -373,6 +415,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Super Potion"),
@@ -390,6 +434,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Full Heal"),
@@ -407,6 +453,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Revive"),
@@ -424,6 +472,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Max Revive"),
@@ -441,6 +491,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Fresh Water"),
@@ -458,6 +510,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Soda Pop"),
@@ -475,6 +529,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Lemonade"),
@@ -492,6 +548,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Moomoo Milk"),
@@ -509,6 +567,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("EnergyPowder"),
@@ -526,6 +586,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Energy Roost"),
@@ -543,6 +605,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Heal Powder"),
@@ -560,6 +624,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Revival Herb"),
@@ -577,6 +643,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Ether"),
@@ -594,6 +662,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_PPRecovery,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Max Ether"),
@@ -611,6 +681,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_PPRecovery,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Elixir"),
@@ -628,6 +700,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_PPRecovery,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Max Elixir"),
@@ -645,6 +719,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_PPRecovery,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Lava Cookie"),
@@ -662,6 +738,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Blue Flute"),
@@ -678,6 +756,8 @@ const struct Item gItems[] =
         .battleUsage = 1,
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Yellow Flute"),
@@ -695,6 +775,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Red Flute"),
@@ -712,6 +794,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Black Flute"),
@@ -729,6 +813,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("White Flute"),
@@ -746,6 +832,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Berry Juice"),
@@ -763,6 +851,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Sacred Ash"),
@@ -780,6 +870,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Shoal Salt"),
@@ -797,6 +889,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Shoal Shell"),
@@ -814,6 +908,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Red Shard"),
@@ -831,6 +927,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Blue Shard"),
@@ -848,6 +946,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Yellow Shard"),
@@ -865,6 +965,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Green Shard"),
@@ -882,6 +984,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),
@@ -899,6 +1003,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),
@@ -916,6 +1022,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),
@@ -933,6 +1041,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),
@@ -950,6 +1060,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),
@@ -967,6 +1079,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),
@@ -984,6 +1098,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),
@@ -1001,6 +1117,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),
@@ -1018,6 +1136,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),
@@ -1035,6 +1155,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),
@@ -1052,6 +1174,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),
@@ -1069,6 +1193,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("HP Up"),
@@ -1086,6 +1212,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Protein"),
@@ -1103,6 +1231,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Iron"),
@@ -1120,6 +1250,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Carbos"),
@@ -1137,6 +1269,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Calcium"),
@@ -1154,6 +1288,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Rare Candy"),
@@ -1171,6 +1307,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("PP Up"),
@@ -1188,6 +1326,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Zinc"),
@@ -1205,6 +1345,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("PP Max"),
@@ -1222,6 +1364,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),
@@ -1239,6 +1383,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Guard Spec."),
@@ -1256,6 +1402,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_StatIncrease,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Dire Hit"),
@@ -1273,6 +1421,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_StatIncrease,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("X Attack"),
@@ -1290,6 +1440,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_StatIncrease,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("X Defend"),
@@ -1307,6 +1459,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_StatIncrease,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("X Speed"),
@@ -1324,6 +1478,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_StatIncrease,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("X Accuracy"),
@@ -1341,6 +1497,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_StatIncrease,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("X Special"),
@@ -1358,6 +1516,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_StatIncrease,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Poké Doll"),
@@ -1375,6 +1535,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_Escape,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Fluffy Tail"),
@@ -1392,6 +1554,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_Escape,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),
@@ -1409,6 +1573,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Super Repel"),
@@ -1425,6 +1591,8 @@ const struct Item gItems[] =
         .battleUsage = 0,
         .battleUseFunc = NULL,
         .secondaryId = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Max Repel"),
@@ -1442,6 +1610,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Escape Rope"),
@@ -1459,6 +1629,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Repel"),
@@ -1476,6 +1648,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),
@@ -1493,6 +1667,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),
@@ -1510,6 +1686,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),
@@ -1527,6 +1705,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),
@@ -1544,6 +1724,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),
@@ -1561,6 +1743,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),
@@ -1578,6 +1762,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Sun Stone"),
@@ -1595,6 +1781,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Moon Stone"),
@@ -1612,6 +1800,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Fire Stone"),
@@ -1629,6 +1819,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("ThunderStone"),
@@ -1646,6 +1838,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Water Stone"),
@@ -1663,6 +1857,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Leaf Stone"),
@@ -1680,6 +1876,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),
@@ -1697,6 +1895,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),
@@ -1714,6 +1914,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),
@@ -1731,6 +1933,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),
@@ -1748,6 +1952,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("TinyMushroom"),
@@ -1765,6 +1971,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Big Mushroom"),
@@ -1782,6 +1990,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),
@@ -1799,6 +2009,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Pearl"),
@@ -1816,6 +2028,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Big Pearl"),
@@ -1833,6 +2047,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Stardust"),
@@ -1850,6 +2066,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Star Piece"),
@@ -1867,6 +2085,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Nugget"),
@@ -1884,6 +2104,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Heart Scale"),
@@ -1901,6 +2123,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),
@@ -1918,6 +2142,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),
@@ -1935,6 +2161,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),
@@ -1952,6 +2180,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),
@@ -1969,6 +2199,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),
@@ -1986,6 +2218,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),
@@ -2003,6 +2237,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),
@@ -2020,6 +2256,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),
@@ -2037,6 +2275,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),
@@ -2054,6 +2294,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Orange Mail"),
@@ -2071,6 +2313,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Harbor Mail"),
@@ -2088,6 +2332,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 1,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Glitter Mail"),
@@ -2105,6 +2351,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 2,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Mech Mail"),
@@ -2122,6 +2370,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 3,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Wood Mail"),
@@ -2139,6 +2389,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 4,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Wave Mail"),
@@ -2156,6 +2408,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 5,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Bead Mail"),
@@ -2173,6 +2427,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 6,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Shadow Mail"),
@@ -2190,6 +2446,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 7,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Tropic Mail"),
@@ -2207,6 +2465,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 8,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Dream Mail"),
@@ -2224,6 +2484,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 9,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Fab Mail"),
@@ -2241,6 +2503,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 10,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Retro Mail"),
@@ -2258,6 +2522,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 11,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Cheri Berry"),
@@ -2275,6 +2541,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_FIRE,
+		.natGiftPower = 80,
     },
     {
         .name = _("Chesto Berry"),
@@ -2292,6 +2560,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_WATER,
+		.natGiftPower = 80,
     },
     {
         .name = _("Pecha Berry"),
@@ -2309,6 +2579,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_ELECTRIC,
+		.natGiftPower = 80,
     },
     {
         .name = _("Rawst Berry"),
@@ -2326,6 +2598,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_GRASS,
+		.natGiftPower = 80,
     },
     {
         .name = _("Aspear Berry"),
@@ -2343,6 +2617,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_ICE,
+		.natGiftPower = 80,
     },
     {
         .name = _("Leppa Berry"),
@@ -2360,6 +2636,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_PPRecovery,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_FIGHTING,
+		.natGiftPower = 80,
     },
     {
         .name = _("Oran Berry"),
@@ -2377,6 +2655,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_POISON,
+		.natGiftPower = 80,
     },
     {
         .name = _("Persim Berry"),
@@ -2394,6 +2674,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_GROUND,
+		.natGiftPower = 80,
     },
     {
         .name = _("Lum Berry"),
@@ -2411,6 +2693,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_FLYING,
+		.natGiftPower = 80,
     },
     {
         .name = _("Sitrus Berry"),
@@ -2428,6 +2712,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_Medicine,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_PSYCHIC,
+		.natGiftPower = 80,
     },
     {
         .name = _("Figy Berry"),
@@ -2445,6 +2731,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_BUG,
+		.natGiftPower = 80,
     },
     {
         .name = _("Wiki Berry"),
@@ -2462,6 +2750,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_ROCK,
+		.natGiftPower = 80,
     },
     {
         .name = _("Mago Berry"),
@@ -2479,6 +2769,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_GHOST,
+		.natGiftPower = 80,
     },
     {
         .name = _("Aguav Berry"),
@@ -2496,6 +2788,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_DRAGON,
+		.natGiftPower = 80,
     },
     {
         .name = _("Iapapa Berry"),
@@ -2513,6 +2807,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_DARK,
+		.natGiftPower = 80,
     },
     {
         .name = _("Razz Berry"),
@@ -2530,6 +2826,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_STEEL,
+		.natGiftPower = 80,
     },
     {
         .name = _("Bluk Berry"),
@@ -2547,6 +2845,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_FIRE,
+		.natGiftPower = 90,
     },
     {
         .name = _("Nanab Berry"),
@@ -2564,6 +2864,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_WATER,
+		.natGiftPower = 90,
     },
     {
         .name = _("Wepear Berry"),
@@ -2581,6 +2883,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_ELECTRIC,
+		.natGiftPower = 90,
     },
     {
         .name = _("Pinap Berry"),
@@ -2598,6 +2902,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_GRASS,
+		.natGiftPower = 90,
     },
     {
         .name = _("Pomeg Berry"),
@@ -2615,6 +2921,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_ICE,
+		.natGiftPower = 90,
     },
     {
         .name = _("Kelpsy Berry"),
@@ -2632,6 +2940,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_FIGHTING,
+		.natGiftPower = 90,
     },
     {
         .name = _("Qualot Berry"),
@@ -2649,6 +2959,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_POISON,
+		.natGiftPower = 90,
     },
     {
         .name = _("Hondew Berry"),
@@ -2666,6 +2978,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_GROUND,
+		.natGiftPower = 90,
     },
     {
         .name = _("Grepa Berry"),
@@ -2683,6 +2997,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_FLYING,
+		.natGiftPower = 90,
     },
     {
         .name = _("Tamato Berry"),
@@ -2700,6 +3016,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_PSYCHIC,
+		.natGiftPower = 90,
     },
     {
         .name = _("Cornn Berry"),
@@ -2717,6 +3035,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_BUG,
+		.natGiftPower = 90,
     },
     {
         .name = _("Magost Berry"),
@@ -2734,6 +3054,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_ROCK,
+		.natGiftPower = 90,
     },
     {
         .name = _("Rabuta Berry"),
@@ -2751,6 +3073,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_GHOST,
+		.natGiftPower = 90,
     },
     {
         .name = _("Nomel Berry"),
@@ -2768,6 +3092,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_DRAGON,
+		.natGiftPower = 90,
     },
     {
         .name = _("Spelon Berry"),
@@ -2785,6 +3111,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_DARK,
+		.natGiftPower = 90,
     },
     {
         .name = _("Pamtre Berry"),
@@ -2802,6 +3130,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_STEEL,
+		.natGiftPower = 90,
     },
     {
         .name = _("Watmel Berry"),
@@ -2819,6 +3149,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_FIRE,
+		.natGiftPower = 100,
     },
     {
         .name = _("Durin Berry"),
@@ -2836,6 +3168,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_WATER,
+		.natGiftPower = 100,
     },
     {
         .name = _("Belue Berry"),
@@ -2853,6 +3187,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_ELECTRIC,
+		.natGiftPower = 0,
     },
     {
         .name = _("Liechi Berry"),
@@ -2870,6 +3206,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_GRASS,
+		.natGiftPower = 100,
     },
     {
         .name = _("Ganlon Berry"),
@@ -2887,6 +3225,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_ICE,
+		.natGiftPower = 100,
     },
     {
         .name = _("Salac Berry"),
@@ -2904,6 +3244,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_FIGHTING,
+		.natGiftPower = 100,
     },
     {
         .name = _("Petaya Berry"),
@@ -2921,6 +3263,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_POISON,
+		.natGiftPower = 100,
     },
     {
         .name = _("Apicot Berry"),
@@ -2938,6 +3282,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_GROUND,
+		.natGiftPower = 100,
     },
     {
         .name = _("Lansat Berry"),
@@ -2955,6 +3301,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_FLYING,
+		.natGiftPower = 100,
     },
     {
         .name = _("Starf Berry"),
@@ -2972,6 +3320,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_PSYCHIC,
+		.natGiftPower = 100,
     },
     {
         .name = _("Enigma Berry"),
@@ -2989,6 +3339,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_EnigmaBerry,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),
@@ -3006,6 +3358,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),
@@ -3023,6 +3377,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),
@@ -3040,6 +3396,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("BrightPowder"),
@@ -3057,6 +3415,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("White Herb"),
@@ -3074,6 +3434,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Macho Brace"),
@@ -3091,6 +3453,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 60,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Exp. Share"),
@@ -3108,6 +3472,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Quick Claw"),
@@ -3125,6 +3491,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 80,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Soothe Bell"),
@@ -3142,6 +3510,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Mental Herb"),
@@ -3159,6 +3529,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Choice Band"),
@@ -3176,6 +3548,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("King’s Rock"),
@@ -3193,6 +3567,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("SilverPowder"),
@@ -3210,6 +3586,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Amulet Coin"),
@@ -3227,6 +3605,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Cleanse Tag"),
@@ -3244,6 +3624,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Soul Dew"),
@@ -3261,6 +3643,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("DeepSeaTooth"),
@@ -3278,6 +3662,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 90,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("DeepSeaTooth"),
@@ -3295,6 +3681,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Smoke Ball"),
@@ -3312,6 +3700,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Everstone"),
@@ -3329,6 +3719,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Focus Band"),
@@ -3346,6 +3738,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Lucky Egg"),
@@ -3363,6 +3757,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Scope Lens"),
@@ -3380,6 +3776,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Metal Coat"),
@@ -3397,6 +3795,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Leftovers"),
@@ -3414,6 +3814,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Dragon Scale"),
@@ -3431,6 +3833,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Light Ball"),
@@ -3448,6 +3852,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Soft Sand"),
@@ -3465,6 +3871,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Hard Stone"),
@@ -3482,6 +3890,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 100,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Miracle Seed"),
@@ -3499,6 +3909,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("BlackGlasses"),
@@ -3516,6 +3928,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Black Belt"),
@@ -3533,6 +3947,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Magnet"),
@@ -3550,6 +3966,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Mystic Water"),
@@ -3567,6 +3985,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Sharp Beak"),
@@ -3584,6 +4004,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 50,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Poison Barb"),
@@ -3601,6 +4023,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 70,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("NeverMeltIce"),
@@ -3618,6 +4042,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Spell Tag"),
@@ -3635,6 +4061,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("TwistedSpoon"),
@@ -3652,6 +4080,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Charcoal"),
@@ -3669,6 +4099,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Dragon Fang"),
@@ -3686,6 +4118,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 70,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Silk Scarf"),
@@ -3703,6 +4137,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Up-Grade"),
@@ -3720,6 +4156,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Shell Bell"),
@@ -3737,6 +4175,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 30,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Sea Incense"),
@@ -3754,6 +4194,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Lax Incense"),
@@ -3771,6 +4213,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Lucky Punch"),
@@ -3788,6 +4232,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 40,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Metal Powder"),
@@ -3805,6 +4251,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 10,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Thick Club"),
@@ -3822,6 +4270,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 90,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("Stick"),
@@ -3839,6 +4289,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 60,
+		.natGiftType = TYPE_NORMAL,
+		.natGiftPower = 0,
     },
     {
         .name = _("????????"),

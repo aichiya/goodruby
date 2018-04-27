@@ -377,4 +377,8 @@ const u8 gMoveNames[][13] = {
     [MOVE_BUG_BUZZ] = _("Bug Buzz"),
     [MOVE_QUIVER_DANCE] = _("Quiver Dance"),
     [MOVE_VENOSHOCK] = _("Venoshock"),
+	[MOVE_NATURAL_GIFT] = _("Natural Gift"),
+	[MOVE_ZEN_HEADBUTT] = _("Zen Headbutt"),
+	[MOVE_POWER_GEM] = _("Power Gem"),
+	[MOVE_EARTH_POWER] = _("Earth Power"),
 };
