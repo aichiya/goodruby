@@ -397,6 +397,9 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_ZenHeadbutt
 	.4byte Move_PowerGem
 	.4byte Move_EarthPower
+	.4byte Move_NastyPlot
+	.4byte Move_LeafTornado
+	.4byte Move_Hurricane
 	.4byte PoundCopy
 
 	.align 2
@@ -11527,5 +11530,105 @@ Move_PowerGem:
 Move_EarthPower:
 	end
 
+Move_NastyPlot:
+	loadspritegfx 10093
+	loadspritegfx 10291
+	loadspritegfx 10087
+	loadspritegfx 10209
+	monbg ANIM_BANK_DEF_PARTNER
+	call Unknown_81D61E7
+	setalpha 8, 8
+	
+	createvisualtask sub_812D008, 2
+	waitforvisualfinish
 
+	playsewithpan SE_W100, 192
+	createsprite gBattleAnimSpriteTemplate_NastyPlot, 3, 0, -35, 12, 0, 0
+	delay 12
+	
+	clearmonbg ANIM_BANK_DEF_PARTNER
+	blendoff
+	delay 1
+	call Unknown_81D61F3
+	end
+
+Move_LeafTornado:
+	loadspritegfx 10063
+	playsewithpan SE_W016, 63
+	createvisualtask AnimTask_ShakeMon, 5, 1, 0, 2, 47, 1
+	call _LeafTornadoSub
+	call _LeafTornadoSub
+	call _LeafTornadoSub
+	waitforvisualfinish
+	playsewithpan SE_W016B, 63
+	end
+_LeafTornadoSub:
+	createsprite gBattleAnimSpriteTemplate_LeafTornado, 130, 0, 28, 528, 30, 13, 50, 1
+	createsprite gBattleAnimSpriteTemplate_LeafTornado, 130, 0, 32, 480, 20, 16, -46, 1
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_LeafTornado, 130, 0, 33, 576, 20, 8, 42, 1
+	createsprite gBattleAnimSpriteTemplate_LeafTornado, 130, 0, 31, 400, 25, 11, -42, 1
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_LeafTornado, 130, 0, 28, 512, 25, 16, 46, 1
+	createsprite gBattleAnimSpriteTemplate_LeafTornado, 130, 0, 33, 464, 30, 15, -50, 1
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_LeafTornado, 130, 0, 33, 576, 20, 8, 42, 1
+	createsprite gBattleAnimSpriteTemplate_LeafTornado, 130, 0, 28, 512, 25, 16, 46, 1
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_LeafTornado, 130, 0, 28, 528, 30, 13, 50, 1
+	createsprite gBattleAnimSpriteTemplate_LeafTornado, 130, 0, 33, 464, 30, 15, -50, 1
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_LeafTornado, 130, 0, 32, 480, 20, 16, -46, 1
+	createsprite gBattleAnimSpriteTemplate_LeafTornado, 130, 0, 31, 400, 25, 11, -42, 1
+	delay 2
+	return
+
+Move_Hurricane:
+	loadspritegfx 10154
+	createvisualtask sub_80E3B4C, 2
+	jumpargeq 7, 1, _HurricaneBG
+	fadetobg 9
+_HurricaneRejoin:
+	waitbgfadeout
+	createvisualtask sub_80E3A58, 5, -2304, 0, 1, -1
+	waitbgfadein
+	createvisualtask AnimTask_ShakeMon, 5, 1, 0, 2, 43, 1
+	call _HurricaneSubCall
+	call _HurricaneSubCall
+	call _HurricaneSubCall
+	waitforvisualfinish
+	restorebg
+	waitbgfadeout
+	setarg 7, -1
+	waitbgfadein
+	clearmonbg ANIM_BANK_TARGET
+	blendoff
+	delay 1
+	setarg 7, 4096
+	delay 1
+	end
+_HurricaneBG:
+	fadetobg 10
+	goto _HurricaneRejoin
+	end
+_HurricaneSubCall:
+	playsewithpan SE_W026, 192
+	createsprite gBattleAnimSpriteTemplate_Hurricane, 130, 0, 32, 528, 30, 10, 50, 1
+	delay 2
+	playsewithpan SE_W026, 192
+	createsprite gBattleAnimSpriteTemplate_Hurricane, 130, 0, 36, 480, 20, 13, -46, 1
+	delay 2
+	playsewithpan SE_W026, 192
+	createsprite gBattleAnimSpriteTemplate_Hurricane, 130, 0, 37, 576, 20, 5, 42, 1
+	delay 2
+	playsewithpan SE_W026, 192
+	createsprite gBattleAnimSpriteTemplate_Hurricane, 130, 0, 35, 400, 25, 8, -42, 1
+	delay 2
+	playsewithpan SE_W026, 192
+	createsprite gBattleAnimSpriteTemplate_Hurricane, 130, 0, 32, 512, 25, 13, 46, 1
+	delay 2
+	playsewithpan SE_W026, 192
+	createsprite gBattleAnimSpriteTemplate_Hurricane, 130, 0, 37, 464, 30, 12, -50, 1
+	delay 2
+	return
 

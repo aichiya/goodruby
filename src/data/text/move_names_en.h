@@ -381,4 +381,7 @@ const u8 gMoveNames[][13] = {
 	[MOVE_ZEN_HEADBUTT] = _("Zen Headbutt"),
 	[MOVE_POWER_GEM] = _("Power Gem"),
 	[MOVE_EARTH_POWER] = _("Earth Power"),
+	[MOVE_NASTY_PLOT] = _("Nasty Plot"),
+	[MOVE_LEAF_TORNADO] = _("Leaf Tornado"),
+	[MOVE_HURRICANE] = _("Hurricane"),
 };

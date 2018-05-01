@@ -56,9 +56,21 @@ gBattleAnimSpriteTemplate_PuppyEyes::
 	spr_template 10027, 10084, gOamData_837DF34, gSpriteAnimTable_84022AC, NULL, gDummySpriteAffineAnimTable, sub_812C80C
 
 	.align 2
-gBattleAnimSpriteTemplate_BugBite:: @ 83DAC4C
+gBattleAnimSpriteTemplate_BugBite::
 	spr_template 10291, 10058, gOamData_837DF24, gDummySpriteAnimTable, NULL, gDummySpriteAffineAnimTable, sub_80DB458
 
 	.align 2
-gBattleAnimSpriteTemplate_BugBuzz:: @ 83D7CC8
+gBattleAnimSpriteTemplate_BugBuzz::
 	spr_template 10225, 10291, gOamData_837DF34, gDummySpriteAnimTable, NULL, gDummySpriteAffineAnimTable, sub_80D2D68
+
+	.align 2
+gBattleAnimSpriteTemplate_NastyPlot::
+	spr_template 10292, 10093, gOamData_837DF34, gDummySpriteAnimTable, NULL, gSpriteAffineAnimTable_83DB498, AnimBasicFistOrFoot
+
+	.align 2
+gBattleAnimSpriteTemplate_LeafTornado::
+	spr_template 10063, 10063, gOamData_837DFEC, gSpriteAnimTable_83D6494, NULL, gDummySpriteAffineAnimTable, sub_80DCFE4
+
+	.align 2
+gBattleAnimSpriteTemplate_Hurricane:: @ 83D63F8
+	spr_template 10154, 10154, gOamData_837DF54, gSpriteAnimTable_83DA3E0, NULL, gDummySpriteAffineAnimTable, sub_80DCFE4

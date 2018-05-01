@@ -1522,6 +1522,18 @@ static const u8 MoveDescription_EarthPower[] = _(
     "The floor erupts with power.\n"
     "May reduce Sp. Def.");
 
+static const u8 MoveDescription_NastyPlot[] = _(
+    "Schemes bad thoughts to\n"
+    "sharply raise Sp. Atk.");
+
+static const u8 MoveDescription_LeafTornado[] = _(
+    "Throws a whirlwind of leaves\n"
+    "that may reduce accuracy.");
+
+static const u8 MoveDescription_Hurricane[] = _(
+    "A windstorm attack that\n"
+    "may cause confusion.");
+
 
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
@@ -1905,4 +1917,7 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_ZenHeadbutt,
 	MoveDescription_PowerGem,
 	MoveDescription_EarthPower,
+	MoveDescription_NastyPlot,
+	MoveDescription_LeafTornado,
+	MoveDescription_Hurricane,
 };

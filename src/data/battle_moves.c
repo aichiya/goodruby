@@ -4970,4 +4970,43 @@ const struct BattleMove gBattleMoves[] = {
         .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
 		.moveClass = CLASS_SPECIAL,
     },
+
+    [MOVE_NASTY_PLOT] = {
+        .effect = EFFECT_SPECIAL_ATTACK_UP_2,
+        .power = 0,
+        .type = TYPE_DARK,
+        .accuracy = 100,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = TARGET_USER,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_SNATCH,
+		.moveClass = CLASS_STATUS,
+    },
+
+    [MOVE_LEAF_TORNADO] = {
+        .effect = EFFECT_ACCURACY_DOWN_HIT,
+        .power = 65,
+        .type = TYPE_GRASS,
+        .accuracy = 90,
+        .pp = 10,
+        .secondaryEffectChance = 50,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
+		.moveClass = CLASS_SPECIAL,
+    },
+
+    [MOVE_HURRICANE] = {
+        .effect = EFFECT_HURRICANE,
+        .power = 110,
+        .type = TYPE_FLYING,
+        .accuracy = 70,
+        .pp = 10,
+        .secondaryEffectChance = 30,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
+		.moveClass = CLASS_SPECIAL,
+    },
 };

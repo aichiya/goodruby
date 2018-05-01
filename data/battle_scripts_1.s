@@ -235,6 +235,7 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectQuiverDance
 	.4byte BattleScript_EffectBugBite
 	.4byte BattleScript_EffectNaturalGift
+	.4byte BattleScript_EffectHurricane
 
 BattleScript_EffectHit: @ 81D6F14
 BattleScript_EffectAccuracyDown2: @ 81D6F14
@@ -4861,3 +4862,8 @@ BattleScript_EffectNaturalGift:
 BattleScript_NatGiftMissed:
 	removeitem USER
 	goto BattleScript_MoveMissedPause
+
+BattleScript_EffectHurricane:
+	setmoveeffect EFFECT_CONFUSION
+	orword gHitMarker, HITMARKER_IGNORE_ON_AIR
+	goto BattleScript_EffectHit
