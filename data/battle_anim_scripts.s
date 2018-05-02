@@ -400,6 +400,8 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_NastyPlot
 	.4byte Move_LeafTornado
 	.4byte Move_Hurricane
+	.4byte Move_ShadowSneak
+	.4byte Move_PhantomForce
 	.4byte PoundCopy
 
 	.align 2
@@ -11632,3 +11634,42 @@ _HurricaneSubCall:
 	delay 2
 	return
 
+Move_ShadowSneak:
+	loadspritegfx 10135
+	fadetobg 2
+	waitbgfadein
+	delay 15
+	monbg ANIM_BANK_ATK_PARTNER
+	setalpha 12, 8
+	createvisualtask AnimTask_TranslateMonEllipticalRespectSide, 2, ANIM_BANK_ATTACKER, 24, 6, 1, 5
+	createvisualtask sub_80E2DD8, 2, 0, 4, 7, 3
+	playsewithpan SE_W026, 192
+	delay 4
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_TARGET, 5, 0, 6, 1
+	createsprite gBasicHitSplatSpriteTemplate, 132, 0, 0, 1, 1
+	playsewithpan SE_W233B, 63
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_ATK_PARTNER
+	blendoff
+	restorebg
+	waitbgfadein
+	end
+
+Move_PhantomForce:
+	choosetwoturnanim _81D0480 _PhantomForceAttack
+	
+_PhantomForceDive:
+	createvisualtask sub_80E2324, 2, 257, 257, 257
+	delay 1
+	createvisualtask sub_80DBCFC, 2
+	playsewithpan SE_W100, 192
+	waitforvisualfinish
+	createvisualtask sub_80E2324, 2, 257, 257, 257
+	blendoff
+	end
+
+_PhantomForceAttack:
+	visible 0
+	clearmonbg ANIM_BANK_DEF_PARTNER
+	blendoff
+	end

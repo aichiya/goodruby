@@ -1303,6 +1303,13 @@ static bool8 AccuracyCalcHelper(u16 move)
     }
 
     gHitMarker &= ~HITMARKER_IGNORE_UNDERWATER;
+	
+	if (gStatuses3[gBankTarget] & STATUS3_IN_SHADOWS)
+	{
+        gMoveResultFlags |= MOVE_RESULT_MISSED;
+        JumpIfMoveFailed(7, move);
+        return TRUE;
+	}
 
     if ((WEATHER_HAS_EFFECT && (gBattleWeather & WEATHER_RAIN_ANY) && (gBattleMoves[move].effect == EFFECT_THUNDER || gBattleMoves[move].effect == EFFECT_HURRICANE))
      || (gBattleMoves[move].effect == EFFECT_ALWAYS_HIT || gBattleMoves[move].effect == EFFECT_VITAL_THROW))
@@ -14521,6 +14528,9 @@ static void atkC5_setsemiinvulnerablebit(void)
     case MOVE_DIVE:
         gStatuses3[gBankAttacker] |= STATUS3_UNDERWATER;
         break;
+	case MOVE_PHANTOM_FORCE:
+        gStatuses3[gBankAttacker] |= STATUS3_IN_SHADOWS;
+        break;
     }
     gBattlescriptCurrInstr++;
 }
@@ -14538,6 +14548,9 @@ static void atkC6_clearsemiinvulnerablebit(void)
         break;
     case MOVE_DIVE:
         gStatuses3[gBankAttacker] &= ~STATUS3_UNDERWATER;
+        break;
+	case MOVE_PHANTOM_FORCE:
+        gStatuses3[gBankAttacker] &= ~STATUS3_IN_SHADOWS;
         break;
     }
     gBattlescriptCurrInstr++;

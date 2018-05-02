@@ -384,4 +384,6 @@ const u8 gMoveNames[][13] = {
 	[MOVE_NASTY_PLOT] = _("Nasty Plot"),
 	[MOVE_LEAF_TORNADO] = _("Leaf Tornado"),
 	[MOVE_HURRICANE] = _("Hurricane"),
+	[MOVE_SHADOW_SNEAK] = _("Shadow Sneak"),
+	[MOVE_PHANTOM_FORCE] = _("PhantomForce"),
 };

@@ -1534,6 +1534,14 @@ static const u8 MoveDescription_Hurricane[] = _(
     "A windstorm attack that\n"
     "may cause confusion.");
 
+static const u8 MoveDescription_ShadowSneak[] = _(
+    "An extremely fast attack\n"
+    "that always strikes first.");
+
+static const u8 MoveDescription_PhantomForce[] = _(
+    "A two-turn attack. Cuts\n"
+    "through moves like Protect.");
+
 
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
@@ -1920,4 +1928,6 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_NastyPlot,
 	MoveDescription_LeafTornado,
 	MoveDescription_Hurricane,
+	MoveDescription_ShadowSneak,
+	MoveDescription_PhantomForce,
 };

@@ -355,10 +355,7 @@ enum
     BATTLE_TEXT_NoEffectOn,
     BATTLE_TEXT_Flung,
 	BATTLE_TEXT_BugBiteEat,
-	BATTLE_TEXT_BugBiteGainHP,
-	BATTLE_TEXT_BugBiteGainPP,
-	BATTLE_TEXT_BugBiteCureStatus,
-	BATTLE_TEXT_BugBiteConfused,
+	BATTLE_TEXT_HidInShadows,
 };
 
 const u8 BattleText_UnknownString[] = _("{STRING 33}");
@@ -848,10 +845,7 @@ const u8 BattleText_Dragon[] = _("a DRAGON move");
 const u8 BattleText_Dark[] = _("a DARK move");
 const u8 BattleText_Flung[] = _("{ATTACKING_MON} flung\nits {STRING 19}!");
 const u8 BattleText_BugBiteEat[] = _("{ATTACKING_MON} ate\n{DEFENDING_MON}’s {STRING 19}!");
-const u8 BattleText_BugBiteGainHP[] = _(".");
-const u8 BattleText_BugBiteGainPP[] = _(".");
-const u8 BattleText_BugBiteCureStatus[] = _(".");
-const u8 BattleText_BugBiteConfused[] = _(".");
+const u8 BattleText_HidInShadows[] = _("{ATTACKING_MON} vanished\ninstantly!");
 
 const u8 *const gUnknown_08400F58[] =
 {
@@ -1229,10 +1223,7 @@ const u8 *const gBattleStringsTable[] =
     BattleText_NoEffectOn,
 	BattleText_Flung,
 	BattleText_BugBiteEat,
-	BattleText_BugBiteGainHP,
-	BattleText_BugBiteGainPP,
-	BattleText_BugBiteCureStatus,
-	BattleText_BugBiteConfused,
+	BattleText_HidInShadows,
 };
 
 // below are lists of battle string enums and NOT pointers to the strings.
@@ -1380,6 +1371,7 @@ const u16 gFirstTurnOfTwoStringIds[] =
     BATTLE_TEXT_DugHole,
     BATTLE_TEXT_HidUnderwater,
     BATTLE_TEXT_SprangUp,
+	BATTLE_TEXT_HidInShadows,
 };
 
 const u16 gWrappedStringIds[] =
