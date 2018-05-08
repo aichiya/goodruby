@@ -351,5 +351,8 @@
 	enum BATTLE_TEXT_NoEffect
 	enum BATTLE_TEXT_NoEffectOn
 	enum BATTLE_TEXT_Flung
-	enum BATTLE_TEXT_BugBiteEat,
-	enum BATTLE_TEXT_HidInShadows,
+	enum BATTLE_TEXT_BugBiteEat
+	enum BATTLE_TEXT_HidInShadows
+	enum BATTLE_TEXT_DefogScreens
+	enum BATTLE_TEXT_DefogHazards
+	enum BATTLE_TEXT_DefogOwnHazards

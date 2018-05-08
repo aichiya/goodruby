@@ -636,6 +636,12 @@ static void sp01_fling(void);
 static void sp02_flingloseitem(void);
 static void sp03_bugbite(void);
 static void sp04_naturalgift(void);
+static void sp05_defogreflect(void);
+static void sp06_defoglightscreen(void);
+static void sp07_defogsafeguard(void);
+static void sp08_defogmist(void);
+static void sp09_defogfoespikes(void);
+static void sp0A_defogownspikes(void);
 
 void (* const gBattleScriptingCommandsTable[])(void) =
 {
@@ -1276,6 +1282,8 @@ static bool8 AccuracyCalcHelper(u16 move)
         JumpIfMoveFailed(7, move);
         return TRUE;
     }
+	
+	// TODO: toxic used by poison-types goes here
 
     if (!(gHitMarker & HITMARKER_IGNORE_ON_AIR) && gStatuses3[gBankTarget] & STATUS3_ON_AIR)
     {
@@ -1312,7 +1320,7 @@ static bool8 AccuracyCalcHelper(u16 move)
 	}
 
     if ((WEATHER_HAS_EFFECT && (gBattleWeather & WEATHER_RAIN_ANY) && (gBattleMoves[move].effect == EFFECT_THUNDER || gBattleMoves[move].effect == EFFECT_HURRICANE))
-     || (gBattleMoves[move].effect == EFFECT_ALWAYS_HIT || gBattleMoves[move].effect == EFFECT_VITAL_THROW))
+     || (gBattleMoves[move].accuracy == 0))
     {
         JumpIfMoveFailed(7, move);
         return TRUE;
@@ -15700,7 +15708,7 @@ static void atkED_snatchsetbanks(void)
 
 static void atkEE_removelightscreenreflect(void) //brick break
 {
-    u8 side = GetBattlerSide(gBankAttacker) ^ 1;
+    u8 side = GetBattlerSide(gBankTarget);
     if (gSideTimers[side].reflectTimer || gSideTimers[side].lightscreenTimer)
     {
         gSideAffecting[side] &= ~(SIDE_STATUS_REFLECT);
@@ -16107,6 +16115,12 @@ void (* const gBattleScriptingSpecialTable[])(void) =
 	sp02_flingloseitem,
 	sp03_bugbite,
 	sp04_naturalgift,
+	sp05_defogreflect,
+	sp06_defoglightscreen,
+	sp07_defogsafeguard,
+	sp08_defogmist,
+	sp09_defogfoespikes,
+	sp0A_defogownspikes,
 };
 
 
@@ -16467,5 +16481,119 @@ static void sp04_naturalgift(void)
 	if (failed)
 	{
 		gBattlescriptCurrInstr = BattleScript_ButItFailed;
+	}
+}
+
+static void sp05_defogreflect(void)
+{
+    u8 side = GetBattlerSide(gBankTarget);
+    if (gSideTimers[side].reflectTimer)
+    {
+        gSideAffecting[side] &= ~(SIDE_STATUS_REFLECT);
+        gSideTimers[side].reflectTimer = 0;
+		gBattleTextBuff1[0] = 0xFD;
+		gBattleTextBuff1[1] = 2;
+		gBattleTextBuff1[2] = MOVE_REFLECT;
+		gBattleTextBuff1[3] = MOVE_REFLECT >> 8;
+		gBattleTextBuff1[4] = EOS;
+    }
+	else
+	{
+		gBattlescriptCurrInstr += 4;
+	}
+}
+
+static void sp06_defoglightscreen(void)
+{
+    u8 side = GetBattlerSide(gBankTarget);
+    if (gSideTimers[side].lightscreenTimer)
+    {
+        gSideAffecting[side] &= ~(SIDE_STATUS_LIGHTSCREEN);
+        gSideTimers[side].lightscreenTimer = 0;
+		gBattleTextBuff1[0] = 0xFD;
+		gBattleTextBuff1[1] = 2;
+		gBattleTextBuff1[2] = MOVE_LIGHT_SCREEN;
+		gBattleTextBuff1[3] = MOVE_LIGHT_SCREEN >> 8;
+		gBattleTextBuff1[4] = EOS;
+    }
+	else
+	{
+		gBattlescriptCurrInstr += 4;
+	}
+}
+
+static void sp07_defogsafeguard(void)
+{
+    u8 side = GetBattlerSide(gBankTarget);
+    if (gSideTimers[side].safeguardTimer)
+    {
+        gSideAffecting[side] &= ~(SIDE_STATUS_SAFEGUARD);
+        gSideTimers[side].safeguardTimer = 0;
+		gBattleTextBuff1[0] = 0xFD;
+		gBattleTextBuff1[1] = 2;
+		gBattleTextBuff1[2] = MOVE_SAFEGUARD;
+		gBattleTextBuff1[3] = MOVE_SAFEGUARD >> 8;
+		gBattleTextBuff1[4] = EOS;
+    }
+	else
+	{
+		gBattlescriptCurrInstr += 4;
+	}
+}
+
+static void sp08_defogmist(void)
+{
+    u8 side = GetBattlerSide(gBankTarget);
+    if (gSideTimers[side].mistTimer)
+    {
+        gSideAffecting[side] &= ~(SIDE_STATUS_MIST);
+        gSideTimers[side].mistTimer = 0;
+		gBattleTextBuff1[0] = 0xFD;
+		gBattleTextBuff1[1] = 2;
+		gBattleTextBuff1[2] = MOVE_MIST;
+		gBattleTextBuff1[3] = MOVE_MIST >> 8;
+		gBattleTextBuff1[4] = EOS;
+    }
+	else
+	{
+		gBattlescriptCurrInstr += 4;
+	}
+}
+
+static void sp09_defogfoespikes(void)
+{
+    u8 side = GetBattlerSide(gBankTarget);
+    if (gSideTimers[side].spikesAmount)
+    {
+        gSideAffecting[side] &= ~(SIDE_STATUS_SPIKES);
+        gSideTimers[side].spikesAmount = 0;
+		gBattleTextBuff1[0] = 0xFD;
+		gBattleTextBuff1[1] = 2;
+		gBattleTextBuff1[2] = MOVE_SPIKES;
+		gBattleTextBuff1[3] = MOVE_SPIKES >> 8;
+		gBattleTextBuff1[4] = EOS;
+    }
+	else
+	{
+		gBattlescriptCurrInstr += 4;
+	}
+}
+
+static void sp0A_defogownspikes(void)
+{
+    u8 side = GetBattlerSide(gBankAttacker);
+    if (gSideTimers[side].spikesAmount)
+    {
+        gSideAffecting[side] &= ~(SIDE_STATUS_SPIKES);
+        gSideTimers[side].spikesAmount = 0;
+		gBattleTextBuff1[0] = 0xFD;
+		gBattleTextBuff1[1] = 2;
+		gBattleTextBuff1[2] = MOVE_SPIKES;
+		gBattleTextBuff1[3] = MOVE_SPIKES >> 8;
+		gBattleTextBuff1[4] = EOS;
+    }
+	else
+	{
+		gBattlescriptCurrInstr += 4;
 	}
 }

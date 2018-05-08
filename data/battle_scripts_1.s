@@ -236,6 +236,7 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectBugBite
 	.4byte BattleScript_EffectNaturalGift
 	.4byte BattleScript_EffectHurricane
+	.4byte BattleScript_EffectDefog
 
 BattleScript_EffectHit: @ 81D6F14
 BattleScript_EffectAccuracyDown2: @ 81D6F14
@@ -4872,3 +4873,46 @@ BattleScript_EffectHurricane:
 	setmoveeffect EFFECT_CONFUSION
 	orword gHitMarker, HITMARKER_IGNORE_ON_AIR
 	goto BattleScript_EffectHit
+
+BattleScript_EffectDefog:
+	setstatchanger EVASION, 1, TRUE
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	attackanimation
+	waitanimation
+	jumpifstatus2 TARGET, STATUS2_SUBSTITUTE, Defog_StatDownEnd
+	statbuffchange 1, Defog_StatDownEnd
+	jumpifbyte LESS_THAN, cMULTISTRING_CHOOSER, 2, Defog_StatDownDoAnim
+	jumpifbyte EQUAL, cMULTISTRING_CHOOSER, 3, Defog_StatDownEnd
+	goto BattleScript_StatDownPrintString
+Defog_StatDownDoAnim: @ 81D725F
+	setgraphicalstatchangevalues
+	playanimation TARGET, B_ANIM_STATS_CHANGE, sANIM_ARG1
+
+Defog_StatDownPrintString: @ 81D7269
+	printfromtable gStatDownStringIds
+	waitmessage 64
+
+Defog_StatDownEnd: @ 81D7271
+	special 0x5
+	printstring BATTLE_TEXT_DefogScreens
+	waitmessage
+	special 0x6
+	printstring BATTLE_TEXT_DefogScreens
+	waitmessage
+	special 0x7
+	printstring BATTLE_TEXT_DefogScreens
+	waitmessage
+	special 0x8
+	printstring BATTLE_TEXT_DefogScreens
+	waitmessage
+	special 0x9
+	printstring BATTLE_TEXT_DefogHazards
+	waitmessage
+	special 0xA
+	printstring BATTLE_TEXT_DefogOwnHazards
+	waitmessage
+	
+	goto BattleScript_MoveEnd

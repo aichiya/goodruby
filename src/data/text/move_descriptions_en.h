@@ -1542,6 +1542,18 @@ static const u8 MoveDescription_PhantomForce[] = _(
     "A two-turn attack. Cuts\n"
     "through moves like Protect.");
 
+static const u8 MoveDescription_Defog[] = _(
+    "Blows away defensive walls\n"
+    "and all entry hazards.");
+
+static const u8 MoveDescription_AirSlash[] = _(
+    "Attacks with a blade of air\n"
+    "that may cause flinching.");
+
+static const u8 MoveDescription_Pluck[] = _(
+    "Pecks the foe and attempts\n"
+    "to eat its held berry.");
+
 
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
@@ -1930,4 +1942,7 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_Hurricane,
 	MoveDescription_ShadowSneak,
 	MoveDescription_PhantomForce,
+	MoveDescription_Defog,
+	MoveDescription_AirSlash,
+	MoveDescription_Pluck,
 };
