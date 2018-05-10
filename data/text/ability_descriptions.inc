@@ -238,6 +238,9 @@ gAbilityDescription_QuickFeet:
 gAbilityDescription_Gluttony:
 	.string "Eats berries more readily.$"
 
+gAbilityDescription_Hydration:
+	.string "Heals status in rain.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -321,3 +324,4 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_AirLock
 	.4byte gAbilityDescription_QuickFeet
 	.4byte gAbilityDescription_Gluttony
+	.4byte gAbilityDescription_Hydration

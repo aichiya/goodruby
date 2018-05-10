@@ -389,4 +389,8 @@ const u8 gMoveNames[][13] = {
 	[MOVE_DEFOG] = _("Defog"),
 	[MOVE_AIR_SLASH] = _("Air Slash"),
 	[MOVE_PLUCK] = _("Pluck"),
+	[MOVE_ROOST] = _("Roost"),
+	[MOVE_PAYBACK] = _("Payback"),
+	[MOVE_BRINE] = _("Brine"),
+	[MOVE_TAILWIND] = _("Tailwind"),
 };

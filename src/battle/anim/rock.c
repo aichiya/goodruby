@@ -20,6 +20,7 @@ extern u16 gBattle_BG3_Y;
 extern const u8 gBattleAnimBackgroundTilemap_SandstormBrew[];
 extern const u8 gBattleAnimBackgroundImage_SandstormBrew[];
 extern const u16 gBattleAnimSpritePalette_261[];
+extern const u16 gBattleAnimSpritePalette_293[];
 extern const union AnimCmd *const gSpriteAnimTable_83D91F0[];
 extern const union AnimCmd *const gSpriteAnimTable_83D95E0[];
 
@@ -433,6 +434,40 @@ void do_boulder_dust(u8 taskId)
     LZDecompressVram(&gBattleAnimBackgroundTilemap_SandstormBrew, subStruct.field_4);
     LZDecompressVram(&gBattleAnimBackgroundImage_SandstormBrew, subStruct.field_0);
     LoadCompressedPalette(&gBattleAnimSpritePalette_261, subStruct.field_8 << 4, 32);
+
+    if (IsContest())
+        sub_80763FC(subStruct.field_8, (u16 *)subStruct.field_4, 0, 0);
+
+    if (gBattleAnimArgs[0] != 0 && GetBattlerSide(gAnimBankAttacker) != B_SIDE_PLAYER)
+        var0 = 1;
+
+    gTasks[taskId].data[0] = var0;
+    gTasks[taskId].func = sub_80DD190;
+}
+
+void do_tailwind_dust(u8 taskId)
+{
+    struct Struct_sub_8078914 subStruct;
+    int var0 = 0;
+
+    REG_BLDCNT = 0x3F42;
+    REG_BLDALPHA = 0x1000;
+    REG_BG1CNT_BITFIELD.priority = 1;
+    REG_BG1CNT_BITFIELD.screenSize = 0;
+
+    if (!IsContest())
+        REG_BG1CNT_BITFIELD.charBaseBlock = 1;
+
+    gBattle_BG1_X = 0;
+    gBattle_BG1_Y = 0;
+    REG_BG1HOFS = 0;
+    REG_BG1VOFS = 0;
+
+    sub_8078914(&subStruct);
+    DmaFill32Defvars(3, 0, subStruct.field_4, 0x1000);
+    LZDecompressVram(&gBattleAnimBackgroundTilemap_SandstormBrew, subStruct.field_4);
+    LZDecompressVram(&gBattleAnimBackgroundImage_SandstormBrew, subStruct.field_0);
+    LoadCompressedPalette(&gBattleAnimSpritePalette_293, subStruct.field_8 << 4, 32);
 
     if (IsContest())
         sub_80763FC(subStruct.field_8, (u16 *)subStruct.field_4, 0, 0);

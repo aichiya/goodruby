@@ -237,6 +237,8 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectNaturalGift
 	.4byte BattleScript_EffectHurricane
 	.4byte BattleScript_EffectDefog
+	.4byte BattleScript_EffectPayback
+	.4byte BattleScript_EffectTailwind
 
 BattleScript_EffectHit: @ 81D6F14
 BattleScript_EffectAccuracyDown2: @ 81D6F14
@@ -735,20 +737,6 @@ BattleScript_EffectConversion: @ 81D73B1
 BattleScript_EffectFlinchHit: @ 81D73C6
 	setmoveeffect EFFECT_FLINCH
 	goto BattleScript_EffectHit
-
-BattleScript_EffectRestoreHp: @ 81D73D1
-	attackcanceler
-	attackstring
-	ppreduce
-	tryhealhalfhealth BattleScript_AlreadyAtFullHp, 1
-	attackanimation
-	waitanimation
-	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
-	healthbarupdate USER
-	datahpupdate USER
-	printstring BATTLE_TEXT_RegainedHealth
-	waitmessage 64
-	goto BattleScript_MoveEnd
 
 BattleScript_EffectToxic: @ 81D73F4
 	attackcanceler
@@ -4914,5 +4902,50 @@ Defog_StatDownEnd: @ 81D7271
 	special 0xA
 	printstring BATTLE_TEXT_DefogOwnHazards
 	waitmessage
-	
 	goto BattleScript_MoveEnd
+
+BattleScript_EffectPayback:
+	special 0xC
+	goto BattleScript_EffectHit
+
+BattleScript_EffectTailwind:
+	attackcanceler
+	attackstring
+	ppreduce
+	special 0xD
+	attackanimation
+	waitanimation
+	printfromtable gTailwindStringIDs
+	waitmessage 64
+	goto BattleScript_MoveEnd
+	end
+
+BattleScript_EffectRestoreHp:
+	jumpifnotmove MOVE_ROOST, RealBattleScript_EffectRestoreHp
+	attackcanceler
+	attackstring
+	ppreduce
+	tryhealhalfhealth BattleScript_AlreadyAtFullHp, 1
+	special 0xB
+	goto RealBattleScript_EffectRestoreHpAnim
+	
+RealBattleScript_EffectRestoreHp:
+	attackcanceler
+	attackstring
+	ppreduce
+	tryhealhalfhealth BattleScript_AlreadyAtFullHp, 1
+RealBattleScript_EffectRestoreHpAnim:
+	attackanimation
+	waitanimation
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
+	healthbarupdate USER
+	datahpupdate USER
+	printstring BATTLE_TEXT_RegainedHealth
+	waitmessage 64
+	goto BattleScript_MoveEnd
+	
+BattleScript_TailwindEnds::
+	pause 32
+	printstring BATTLE_TEXT_TailwindFaded
+	waitmessage 64
+	end2

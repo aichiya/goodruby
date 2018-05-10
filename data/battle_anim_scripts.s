@@ -393,18 +393,22 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_BUG_BUZZ
 	.4byte Move_QUIVER_DANCE
 	.4byte Move_VENOSHOCK
-	.4byte Move_NaturalGift
-	.4byte Move_ZenHeadbutt
-	.4byte Move_PowerGem
-	.4byte Move_EarthPower
-	.4byte Move_NastyPlot
-	.4byte Move_LeafTornado
-	.4byte Move_Hurricane
-	.4byte Move_ShadowSneak
-	.4byte Move_PhantomForce
-	.4byte Move_Defog
-	.4byte Move_AirSlash
-	.4byte Move_Pluck
+	.4byte Move_NATURAL_GIFT
+	.4byte Move_ZEN_HEADBUTT
+	.4byte Move_POWER_GEM
+	.4byte Move_EARTH_POWER
+	.4byte Move_NASTY_PLOT
+	.4byte Move_LEAF_TORNADO
+	.4byte Move_HURRICANE
+	.4byte Move_SHADOW_SNEAK
+	.4byte Move_PHANTOM_FORCE
+	.4byte Move_DEFOG
+	.4byte Move_AIR_SLASH
+	.4byte Move_PLUCK
+	.4byte Move_ROOST
+	.4byte Move_PAYBACK
+	.4byte Move_BRINE
+	.4byte Move_TAILWIND
 	.4byte PoundCopy
 
 	.align 2
@@ -11462,7 +11466,7 @@ Move_VENOSHOCK:
 
 
 
-Move_NaturalGift:
+Move_NATURAL_GIFT:
 	loadspritegfx 10203
 	monbg ANIM_BANK_DEF_PARTNER
 	monbgprio_2A ANIM_BANK_TARGET
@@ -11485,7 +11489,7 @@ Move_NaturalGift:
 	blendoff
 	end
 
-Move_ZenHeadbutt:
+Move_ZEN_HEADBUTT:
 	loadspritegfx 10135
 	monbg ANIM_BANK_DEF_PARTNER
 	call Unknown_81D61E7
@@ -11508,13 +11512,13 @@ Move_ZenHeadbutt:
 	call Unknown_81D61F3
 	end
 
-Move_PowerGem:
+Move_POWER_GEM:
 	end
 
-Move_EarthPower:
+Move_EARTH_POWER:
 	end
 
-Move_NastyPlot:
+Move_NASTY_PLOT:
 	loadspritegfx 10093
 	loadspritegfx 10291
 	loadspritegfx 10087
@@ -11536,7 +11540,7 @@ Move_NastyPlot:
 	call Unknown_81D61F3
 	end
 
-Move_LeafTornado:
+Move_LEAF_TORNADO:
 	loadspritegfx 10063
 	playsewithpan SE_W016, 63
 	createvisualtask AnimTask_ShakeMon, 5, 1, 0, 2, 47, 1
@@ -11567,7 +11571,7 @@ _LeafTornadoSub:
 	delay 2
 	return
 
-Move_Hurricane:
+Move_HURRICANE:
 	loadspritegfx 10154
 	createvisualtask sub_80E3B4C, 2
 	jumpargeq 7, 1, _HurricaneBG
@@ -11616,7 +11620,7 @@ _HurricaneSubCall:
 	delay 2
 	return
 
-Move_ShadowSneak:
+Move_SHADOW_SNEAK:
 	loadspritegfx 10135
 	fadetobg 2
 	waitbgfadein
@@ -11637,7 +11641,7 @@ Move_ShadowSneak:
 	waitbgfadein
 	end
 
-Move_PhantomForce:
+Move_PHANTOM_FORCE:
 	choosetwoturnanim _81D0480 _PhantomForceAttack
 	
 _PhantomForceDive:
@@ -11656,7 +11660,7 @@ _PhantomForceAttack:
 	blendoff
 	end
 
-Move_Defog:
+Move_DEFOG:
 	loadspritegfx 10009
 	playsewithpan SE_W016, 192
 	createsprite gBattleAnimSpriteTemplate_83DB3C4, 2, 1, 1, 0, 9, 65535
@@ -11669,7 +11673,7 @@ Move_Defog:
 	playsewithpan SE_W016B, 192
 	end
 
-Move_AirSlash:
+Move_AIR_SLASH:
 	loadspritegfx 10003
 	loadspritegfx 10138
 	loadspritegfx 10135
@@ -11689,7 +11693,7 @@ Move_AirSlash:
 	delay 0
 	end
 
-Move_Pluck:
+Move_PLUCK:
 	loadspritegfx 10135
 	playsewithpan SE_W030, 63
 	createvisualtask sub_80A8EFC, 2, 3, -768, 1, 2
@@ -11744,4 +11748,109 @@ Move_AIR_CUTTER:
 	clearmonbg ANIM_BANK_TARGET
 	blendoff
 	end
+
+Move_ROOST:
+	loadspritegfx 10031
+	loadspritegfx 10270
+	monbg ANIM_BANK_DEF_PARTNER
+	monbgprio_29
+	playsewithpan SE_W080, 63
+	delay 0
+	createsprite gBattleAnimSpriteTemplate_83DA498, 128, 0, -16, 64, 2, 104, 11304, 32, 1
+	delay 6
+	createsprite gBattleAnimSpriteTemplate_83DA498, 128, 0, -16, 32, 2, 104, 11304, 32, 1
+	createsprite gBattleAnimSpriteTemplate_83DA498, 128, 0, -16, 0, 2, 104, 11304, 32, 1
+	delay 6
+	createsprite gBattleAnimSpriteTemplate_83DA498, 128, 0, -16, 224, 2, 104, 11304, 32, 1
+	createsprite gBattleAnimSpriteTemplate_83DA498, 128, 0, -16, 128, 2, 104, 11304, 32, 1
+	delay 6
+	createsprite gBattleAnimSpriteTemplate_83DA498, 128, 0, -16, 192, 2, 104, 11304, 32, 1
+	createsprite gBattleAnimSpriteTemplate_83DA498, 128, 0, -16, 160, 2, 104, 11304, 32, 1
+	delay 6
+	createsprite gBattleAnimSpriteTemplate_83DA498, 128, 0, -16, 96, 2, 104, 11304, 32, 1
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_DEF_PARTNER
+	delay 1
+	call Unknown_81D5EF5
+	waitforvisualfinish
+	end
+
+Move_BRINE:
+	loadspritegfx 10155
+	loadspritegfx 10148
+	monbg ANIM_BANK_DEF_PARTNER
+	monbgprio_28 1
+	setalpha 12, 8
+	createsprite gBattleAnimSpriteTemplate_83D9318, 2, 20, 0, 0, 0, 20, -25
+	playsewithpan SE_W145, 192
+	waitforvisualfinish
+	playsewithpan SE_W291, 192
+	createvisualtask AnimTask_ShakeMon2, 5, 1, 1, 0, 8, 1
+	createsprite gBattleAnimSpriteTemplate_83D9360, 4, 0, 0
+	createsprite gBattleAnimSpriteTemplate_83D9360, 4, 0, 0
+	createsprite gBattleAnimSpriteTemplate_83D9360, 4, 0, 0
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83D9360, 4, 0, 0
+	createsprite gBattleAnimSpriteTemplate_83D9360, 4, 0, 0
+	createsprite gBattleAnimSpriteTemplate_83D9360, 4, 0, 0
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83D9360, 4, 0, 0
+	createsprite gBattleAnimSpriteTemplate_83D9360, 4, 0, 0
+	createsprite gBattleAnimSpriteTemplate_83D9360, 4, 0, 0
+	delay 2
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_DEF_PARTNER
+	blendoff
+	end
+
+Move_PAYBACK:
+	loadspritegfx 10135
+	loadspritegfx 10087
+	choosetwoturnanim _PaybackOne, _PaybackTwo
+_PaybackOne:
+	monbg ANIM_BANK_TARGET
+	setalpha 12, 8
+	createvisualtask AnimTask_BlendMonInAndOut, 3, ANIM_BANK_ATTACKER, 0x3C0F, 7, 0, 2
+	playsewithpan SE_W036, 192
+	waitforvisualfinish
+	createsprite gHorizontalLungeSpriteTemplate, 2, 4, 6
+	delay 4
+	createsprite gBasicHitSplatSpriteTemplate, 2, 0, 0, 1, 2
+	createvisualtask sub_80A9058, 2, 1, 1, 10, 1, 0
+	playsewithpan SE_W233B, 63
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_TARGET
+	end
+	
+_PaybackTwo:
+	monbg ANIM_BANK_TARGET
+	setalpha 12, 8
+	createvisualtask AnimTask_BlendMonInAndOut, 3, ANIM_BANK_ATTACKER, 0x3C0F, 12, 0, 3
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BANK_ATTACKER, 4, 0, 36, 1
+	playsewithpan SE_W036, 192
+	waitforvisualfinish
+	createsprite gHorizontalLungeSpriteTemplate, 2, 4, 6
+	delay 4
+	createsprite gBasicHitSplatSpriteTemplate, 2, -2, 0, 2, 1
+	createvisualtask sub_80A9058, 2, 1, 1, 10, 1, 0
+	playsewithpan SE_W233B, 63
+	delay 2
+	createsprite gBasicHitSplatSpriteTemplate, 2, 4, 0, 2, 1
+	createvisualtask sub_80A9058, 2, 1, 1, 10, 1, 0
+	playsewithpan SE_W025B, 63
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_TARGET
+	end
+
+Move_TAILWIND:
+	loadspritegfx 10261
+	loadspritegfx 10293
+	playsewithpan SE_W201, 0
+	createvisualtask do_tailwind_dust, 5, 0
+	delay 4
+	createvisualtask AnimTask_SwayMon, 5, 0, 10, 1536, 6, 0
+	waitforvisualfinish
+	end
+
+
 

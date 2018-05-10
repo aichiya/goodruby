@@ -108,7 +108,7 @@
 #define TYPE_BUG      0x06
 #define TYPE_GHOST    0x07
 #define TYPE_STEEL    0x08
-#define TYPE_FAIRY  0x09
+#define TYPE_FAIRY    0x09
 #define TYPE_FIRE     0x0a
 #define TYPE_WATER    0x0b
 #define TYPE_GRASS    0x0c
@@ -117,6 +117,7 @@
 #define TYPE_ICE      0x0f
 #define TYPE_DRAGON   0x10
 #define TYPE_DARK     0x11
+#define TYPE_ROOSTING 0x12
 
 #define FRIENDSHIP_EVENT_GROW_LEVEL           0x0
 #define FRIENDSHIP_EVENT_VITAMIN              0x1 // unused

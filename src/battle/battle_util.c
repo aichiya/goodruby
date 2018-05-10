@@ -118,6 +118,7 @@ extern u8 BattleScript_DamagingWeatherContinues[];
 extern u8 BattleScript_SunlightFaded[];
 extern u8 BattleScript_SunlightContinues[];
 extern u8 BattleScript_SafeguardEnds[];
+extern u8 BattleScript_TailwindEnds[];
 extern u8 BattleScript_MonWokeUpInUproar[]; //uproar wakeup BS
 extern u8 BattleScript_PrintUproarOverTurns[]; //uproar BS
 extern u8 BattleScript_ThrashConfuses[];
@@ -744,6 +745,28 @@ u8 UpdateTurnCounters(void)
             }
             break;
         case 5:
+            while (gBattleStruct->turnSideTracker < 2)
+            {
+                gActiveBattler = gBankAttacker = sideBank = gBattleStruct->turnSideTracker;
+                if (gSideTimers[sideBank].tailwindTimer > 0)
+                {
+                    if (--gSideTimers[sideBank].tailwindTimer == 0)
+                    {
+                        BattleScriptExecute(BattleScript_TailwindEnds); // TW ENDS
+                        effect++;
+                    }
+                }
+                gBattleStruct->turnSideTracker++;
+                if (effect)
+                    break;
+            }
+            if (!effect)
+            {
+                gBattleStruct->turncountersTracker++;
+                gBattleStruct->turnSideTracker = 0;
+            }
+            break;
+        case 6:
             while (gBattleStruct->turnSideTracker < gBattlersCount)
             {
                 gActiveBattler = gBanksByTurnOrder[gBattleStruct->turnSideTracker];
@@ -762,7 +785,7 @@ u8 UpdateTurnCounters(void)
                 gBattleStruct->turncountersTracker++;
             }
             break;
-        case 6:
+        case 7:
             if (gBattleWeather & WEATHER_RAIN_ANY)
             {
                 if (!(gBattleWeather & WEATHER_RAIN_PERMANENT))
@@ -787,7 +810,7 @@ u8 UpdateTurnCounters(void)
             }
             gBattleStruct->turncountersTracker++;
             break;
-        case 7:
+        case 8:
             if (gBattleWeather & WEATHER_SANDSTORM_ANY)
             {
                 if (!(gBattleWeather & WEATHER_SANDSTORM_PERMANENT) && --gWishFutureKnock.weatherDuration == 0)
@@ -805,7 +828,7 @@ u8 UpdateTurnCounters(void)
             }
             gBattleStruct->turncountersTracker++;
             break;
-        case 8:
+        case 9:
             if (gBattleWeather & WEATHER_SUN_ANY)
             {
                 if (!(gBattleWeather & WEATHER_SUN_PERMANENT) && --gWishFutureKnock.weatherDuration == 0)
@@ -821,7 +844,7 @@ u8 UpdateTurnCounters(void)
             }
             gBattleStruct->turncountersTracker++;
             break;
-        case 9:
+        case 10:
             if (gBattleWeather & WEATHER_HAIL)
             {
                 if (--gWishFutureKnock.weatherDuration == 0)
@@ -839,7 +862,7 @@ u8 UpdateTurnCounters(void)
             }
             gBattleStruct->turncountersTracker++;
             break;
-        case 10:
+        case 11:
             effect++;
             break;
         }
@@ -847,7 +870,7 @@ u8 UpdateTurnCounters(void)
     return (gBattleMainFunc != BattleTurnPassed);
 }
 
-#define TURNBASED_MAX_CASE 19
+#define TURNBASED_MAX_CASE 20
 
 u8 TurnBasedEffects(void)
 {
@@ -1146,7 +1169,14 @@ u8 TurnBasedEffects(void)
                 }
                 gBattleStruct->turnEffectsTracker++;
                 break;
-            case 19:  // done
+			case 19:  // roost
+				if (gBattleMons[gActiveBattler].type1 == TYPE_ROOSTING)
+					gBattleMons[gActiveBattler].type1 = TYPE_FLYING;
+				if (gBattleMons[gActiveBattler].type2 == TYPE_ROOSTING)
+					gBattleMons[gActiveBattler].type2 = TYPE_FLYING;
+				gBattleStruct->turnEffectsTracker++;
+				break;
+            case 20:  // done
                 gBattleStruct->turnEffectsTracker = 0;
                 gBattleStruct->turnEffectsBank++;
                 break;
@@ -1886,8 +1916,29 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
                         if (gBattleMons[bank].status1 & STATUS_FREEZE)
                             StringCopy(gBattleTextBuff1, gStatusConditionString_IceJpn);
                         gBattleMons[bank].status1 = 0;
-                        // BUG: The nightmare status does not get cleared here. This was fixed in Emerald.
-                        //gBattleMons[bank].status2 &= ~(STATUS2_NIGHTMARE);
+                        gBattleMons[bank].status2 &= ~(STATUS2_NIGHTMARE);
+                        gBattleStruct->scriptingActive = gActiveBattler = bank;
+                        BattleScriptPushCursorAndCallback(BattleScript_ShedSkinActivates);
+                        EmitSetMonData(0, REQUEST_STATUS_BATTLE, 0, 4, &gBattleMons[bank].status1);
+                        MarkBufferBankForExecution(gActiveBattler);
+                        effect++;
+                    }
+                    break;
+                case ABILITY_HYDRATION:
+                    if (gBattleMons[bank].status1 & STATUS_ANY && WEATHER_HAS_EFFECT && gBattleWeather & WEATHER_RAIN_ANY)
+                    {
+                        if (gBattleMons[bank].status1 & (STATUS_POISON | STATUS_TOXIC_POISON))
+                            StringCopy(gBattleTextBuff1, gStatusConditionString_PoisonJpn);
+                        if (gBattleMons[bank].status1 & STATUS_SLEEP)
+                            StringCopy(gBattleTextBuff1, gStatusConditionString_SleepJpn);
+                        if (gBattleMons[bank].status1 & STATUS_PARALYSIS)
+                            StringCopy(gBattleTextBuff1, gStatusConditionString_ParalysisJpn);
+                        if (gBattleMons[bank].status1 & STATUS_BURN)
+                            StringCopy(gBattleTextBuff1, gStatusConditionString_BurnJpn);
+                        if (gBattleMons[bank].status1 & STATUS_FREEZE)
+                            StringCopy(gBattleTextBuff1, gStatusConditionString_IceJpn);
+                        gBattleMons[bank].status1 = 0;
+                        gBattleMons[bank].status2 &= ~(STATUS2_NIGHTMARE);
                         gBattleStruct->scriptingActive = gActiveBattler = bank;
                         BattleScriptPushCursorAndCallback(BattleScript_ShedSkinActivates);
                         EmitSetMonData(0, REQUEST_STATUS_BATTLE, 0, 4, &gBattleMons[bank].status1);

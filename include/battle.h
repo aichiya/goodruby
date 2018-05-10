@@ -531,7 +531,7 @@ struct sideTimer
     u8 safeguardTimer;      //0x7
     u8 followmeTimer;       //0x8
     u8 followmeTarget;      //0x9
-    u8 fieldA;              //0xA
+    u8 tailwindTimer;       //0xA
     u8 fieldB;              //0xB
 };
 

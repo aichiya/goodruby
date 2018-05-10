@@ -5965,6 +5965,55 @@ void SwapTurnOrder(u8 a, u8 b)
     gBanksByTurnOrder[b] = temp;
 }
 
+u32 GetModifiedSpeed(u8 bank)
+{
+	u32 speed = gBattleMons[bank].speed;
+    u8 heldItemEffect;
+    u8 heldItemEffectParam;
+	
+	speed = speed * gStatStageRatios[gBattleMons[bank].statStages[STAT_STAGE_SPEED]][0] / gStatStageRatios[gBattleMons[bank].statStages[STAT_STAGE_SPEED]][1];
+	
+	if (WEATHER_HAS_EFFECT)
+	{
+		if (gBattleMons[bank].ability == ABILITY_SWIFT_SWIM && (gBattleWeather & WEATHER_RAIN_ANY))
+			speed *= 2;
+		else if (gBattleMons[bank].ability == ABILITY_CHLOROPHYLL && (gBattleWeather & WEATHER_SUN_ANY))
+			speed *= 2;
+	}
+	
+	if (gSideTimers[GetBattlerSide(bank)].tailwindTimer > 0)
+		speed *= 2;
+	
+
+    if (gBattleMons[bank].item == ITEM_ENIGMA_BERRY)
+    {
+        heldItemEffect = gEnigmaBerries[bank].holdEffect;
+        heldItemEffectParam = gEnigmaBerries[bank].holdEffectParam;
+    }
+    else
+    {
+        heldItemEffect = ItemId_GetHoldEffect(gBattleMons[bank].item);
+        heldItemEffectParam = ItemId_GetHoldEffectParam(gBattleMons[bank].item);
+    }
+	
+    // Only give badge speed boost to the player's mon.
+    if (!(gBattleTypeFlags & BATTLE_TYPE_LINK) && FlagGet(FLAG_BADGE03_GET) && GetBattlerSide(bank) == 0)
+        speed = (speed * 110) / 100;
+
+    if (heldItemEffect == HOLD_EFFECT_MACHO_BRACE)
+        speed /= 2;
+
+    if (gBattleMons[bank].status1)
+    {
+		if (gBattleMons[bank].ability == ABILITY_QUICK_FEET)
+			speed = (speed * 15) / 10;
+		else if (gBattleMons[bank].status1 & STATUS_PARALYSIS)
+			speed /= 4;
+	}
+	
+	return speed;
+}
+
 // Determines which of the two given mons will strike first in a battle.
 // Returns:
 // 0 = first mon moves first
@@ -5972,7 +6021,6 @@ void SwapTurnOrder(u8 a, u8 b)
 // 2 = second mon moves first because it won a 50/50 roll
 u8 GetWhoStrikesFirst(u8 bank1, u8 bank2, bool8 ignoreMovePriorities)
 {
-    int bank1SpeedMultiplier, bank2SpeedMultiplier;
     u32 bank1AdjustedSpeed, bank2AdjustedSpeed;
     u8 heldItemEffect;
     u8 heldItemEffectParam;
@@ -5980,30 +6028,8 @@ u8 GetWhoStrikesFirst(u8 bank1, u8 bank2, bool8 ignoreMovePriorities)
     u16 bank2Move;
     u8 strikesFirst = 0;
 
-    // Check for abilities that boost speed in weather.
-    if (WEATHER_HAS_EFFECT)
-    {
-        if ((gBattleMons[bank1].ability == ABILITY_SWIFT_SWIM && (gBattleWeather & WEATHER_RAIN_ANY))
-            || (gBattleMons[bank1].ability == ABILITY_CHLOROPHYLL && (gBattleWeather & WEATHER_SUN_ANY)))
-            bank1SpeedMultiplier = 2;
-        else
-            bank1SpeedMultiplier = 1;
-
-        if ((gBattleMons[bank2].ability == ABILITY_SWIFT_SWIM && (gBattleWeather & WEATHER_RAIN_ANY))
-            || (gBattleMons[bank2].ability == ABILITY_CHLOROPHYLL && (gBattleWeather & WEATHER_SUN_ANY)))
-            bank2SpeedMultiplier = 2;
-        else
-            bank2SpeedMultiplier = 1;
-    }
-    else
-    {
-        bank1SpeedMultiplier = 1;
-        bank2SpeedMultiplier = 1;
-    }
-
-    // Calculate adjusted speed for first mon.
-    bank1AdjustedSpeed = (gBattleMons[bank1].speed * bank1SpeedMultiplier)
-        * gStatStageRatios[gBattleMons[bank1].statStages[STAT_STAGE_SPEED]][0] / gStatStageRatios[gBattleMons[bank1].statStages[STAT_STAGE_SPEED]][1];
+    bank1AdjustedSpeed = GetModifiedSpeed(bank1);
+	bank2AdjustedSpeed = GetModifiedSpeed(bank2);
 
     if (gBattleMons[bank1].item == ITEM_ENIGMA_BERRY)
     {
@@ -6016,27 +6042,8 @@ u8 GetWhoStrikesFirst(u8 bank1, u8 bank2, bool8 ignoreMovePriorities)
         heldItemEffectParam = ItemId_GetHoldEffectParam(gBattleMons[bank1].item);
     }
 
-    // Only give badge speed boost to the player's mon.
-    if (!(gBattleTypeFlags & BATTLE_TYPE_LINK) && FlagGet(FLAG_BADGE03_GET) && GetBattlerSide(bank1) == 0)
-        bank1AdjustedSpeed = (bank1AdjustedSpeed * 110) / 100;
-
-    if (heldItemEffect == HOLD_EFFECT_MACHO_BRACE)
-        bank1AdjustedSpeed /= 2;
-
-    if (gBattleMons[bank1].status1)
-    {
-		if (gBattleMons[bank1].ability == ABILITY_QUICK_FEET)
-			bank1AdjustedSpeed = (bank1AdjustedSpeed * 15) / 10;
-		else if (gBattleMons[bank1].status1 & STATUS_PARALYSIS)
-			bank1AdjustedSpeed /= 4;
-	}
-
     if (heldItemEffect == HOLD_EFFECT_QUICK_CLAW && gRandomTurnNumber < (heldItemEffectParam * 0xFFFF) / 100)
         bank1AdjustedSpeed = UINT_MAX;
-
-    // Calculate adjusted speed for second mon.
-    bank2AdjustedSpeed = gBattleMons[bank2].speed * bank2SpeedMultiplier
-        * gStatStageRatios[gBattleMons[bank2].statStages[STAT_STAGE_SPEED]][0] / gStatStageRatios[gBattleMons[bank2].statStages[STAT_STAGE_SPEED]][1];
 
     if (gBattleMons[bank2].item == ITEM_ENIGMA_BERRY)
     {
@@ -6048,23 +6055,6 @@ u8 GetWhoStrikesFirst(u8 bank1, u8 bank2, bool8 ignoreMovePriorities)
         heldItemEffect = ItemId_GetHoldEffect(gBattleMons[bank2].item);
         heldItemEffectParam = ItemId_GetHoldEffectParam(gBattleMons[bank2].item);
     }
-
-    // Only give badge speed boost to the player's mon.
-    if (!(gBattleTypeFlags & BATTLE_TYPE_LINK) && FlagGet(FLAG_BADGE03_GET) && GetBattlerSide(bank2) == 0)
-    {
-        bank2AdjustedSpeed = (bank2AdjustedSpeed * 110) / 100;
-    }
-
-    if (heldItemEffect == HOLD_EFFECT_MACHO_BRACE)
-        bank2AdjustedSpeed /= 2;
-
-    if (gBattleMons[bank2].status1)
-    {
-		if (gBattleMons[bank2].ability == ABILITY_QUICK_FEET)
-			bank2AdjustedSpeed = (bank2AdjustedSpeed * 15) / 10;
-		else if (gBattleMons[bank2].status1 & STATUS_PARALYSIS)
-			bank2AdjustedSpeed /= 4;
-	}
 
     if (heldItemEffect == HOLD_EFFECT_QUICK_CLAW && gRandomTurnNumber < (heldItemEffectParam * 0xFFFF) / 100)
         bank2AdjustedSpeed = UINT_MAX;

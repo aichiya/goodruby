@@ -227,6 +227,8 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
 
 	if (gCurrentMove == MOVE_VENOSHOCK && defender->status1 & (STATUS_POISON | STATUS_TOXIC_POISON))
 		spAttack *= 2;
+	if (gCurrentMove == MOVE_BRINE && defender->hp *2 <= defender->maxHP)
+		spAttack *= 2;
     
     if (moveClass == 0)
     {

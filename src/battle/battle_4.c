@@ -642,6 +642,9 @@ static void sp07_defogsafeguard(void);
 static void sp08_defogmist(void);
 static void sp09_defogfoespikes(void);
 static void sp0A_defogownspikes(void);
+static void sp0B_roost(void);
+static void sp0C_payback(void);
+static void sp0D_tailwind(void);
 
 void (* const gBattleScriptingCommandsTable[])(void) =
 {
@@ -16121,6 +16124,9 @@ void (* const gBattleScriptingSpecialTable[])(void) =
 	sp08_defogmist,
 	sp09_defogfoespikes,
 	sp0A_defogownspikes,
+	sp0B_roost,
+	sp0C_payback,
+	sp0D_tailwind,
 };
 
 
@@ -16596,4 +16602,54 @@ static void sp0A_defogownspikes(void)
 	{
 		gBattlescriptCurrInstr += 4;
 	}
+}
+
+static void sp0B_roost(void)
+{
+	if (gBattleMons[gBankAttacker].type1 == TYPE_FLYING)
+		gBattleMons[gBankAttacker].type1 = TYPE_ROOSTING;
+	if (gBattleMons[gBankAttacker].type2 == TYPE_FLYING)
+		gBattleMons[gBankAttacker].type2 = TYPE_ROOSTING;
+}
+
+static void sp0C_payback(void)
+{
+	u8 i;
+	// Payback's power doubles if:
+	// The target has already acted
+	// The target is not switching
+	
+	
+	gBattleStruct->animTurn = 0;
+	
+	if (gActionsByTurnOrder[gBankTarget] == ACTION_USE_MOVE)
+	{
+		for (i = 0; i < 4; i++)
+		{
+			if (gBanksByTurnOrder[i] == gBankAttacker)
+				break;
+			if (gBanksByTurnOrder[i] == gBankTarget)
+			{
+				// Double base power instead of using the multiplier due to Technician.
+				gDynamicBasePower = 100;
+				gBattleStruct->animTurn = 1;
+				break;
+			}
+		}
+	}
+}
+
+static void sp0D_tailwind(void)
+{
+    u8 side = GetBattlerSide(gBankAttacker);
+    if (gSideTimers[side].tailwindTimer > 0)
+    {
+        gMoveResultFlags |= MOVE_RESULT_MISSED;
+        gBattleCommunication[MULTISTRING_CHOOSER] = 0;
+    }
+    else
+    {
+        gSideTimers[side].tailwindTimer = 4;
+        gBattleCommunication[MULTISTRING_CHOOSER] = 1;
+    }
 }

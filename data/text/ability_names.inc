@@ -79,3 +79,4 @@ gAbilityNames:: @ 81FA248
 	.string "AIR LOCK$", 13
 	.string "QUICK FEET$", 13
 	.string "GLUTTONY$", 13
+	.string "HYDRATION$", 13

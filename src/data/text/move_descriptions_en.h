@@ -1554,6 +1554,23 @@ static const u8 MoveDescription_Pluck[] = _(
     "Pecks the foe and attempts\n"
     "to eat its held berry.");
 
+static const u8 MoveDescription_Roost[] = _(
+    "Perches to recover up to\n"
+    "half the user’s maximum HP.");
+
+static const u8 MoveDescription_Payback[] = _(
+	"Doubles in power if the\n"
+	"target uses a move first.");
+
+static const u8 MoveDescription_Brine[] = _(
+	"Doubles in power if foe’s HP\n"
+	"is down to under half.");
+
+static const u8 MoveDescription_Tailwind[] = _(
+	"Doubles the team’s Speed\n"
+	"for four turns.");
+
+
 
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
@@ -1945,4 +1962,8 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_Defog,
 	MoveDescription_AirSlash,
 	MoveDescription_Pluck,
+	MoveDescription_Roost,
+	MoveDescription_Payback,
+	MoveDescription_Brine,
+	MoveDescription_Tailwind,
 };

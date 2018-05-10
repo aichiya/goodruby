@@ -359,6 +359,8 @@ enum
 	BATTLE_TEXT_DefogScreen,
 	BATTLE_TEXT_DefogHazard,
 	BATTLE_TEXT_DefogOwnHazard,
+	BATTLE_TEXT_TailwindSet,
+	BATTLE_TEXT_TailwindFaded,
 };
 
 const u8 BattleText_UnknownString[] = _("{STRING 33}");
@@ -850,6 +852,8 @@ const u8 BattleText_HidInShadows[] = _("{ATTACKING_MON} vanished\ninstantly!");
 const u8 BattleText_DefogScreen[] = _("{STRING 39}’s {STRING 0}\nwore off!");
 const u8 BattleText_DefogHazard[] = _("{STRING 39} team’s {STRING 0}\nwere blown away!");
 const u8 BattleText_DefogOwnHazard[] = _("{STRING 38} team’s {STRING 0}\nwere blown away!");
+const u8 BattleText_TailwindSet[] = _("A Tailwind blows from\nbehind {STRING 38}’s team!");
+const u8 BattleText_TailwindFaded[] = _("{STRING 38}’s Tailwind\npetered out!");
 
 const u8 *const gUnknown_08400F58[] =
 {
@@ -1231,6 +1235,8 @@ const u8 *const gBattleStringsTable[] =
 	BattleText_DefogScreen,
 	BattleText_DefogHazard,
 	BattleText_DefogOwnHazard,
+	BattleText_TailwindSet,
+	BattleText_TailwindFaded,
 };
 
 // below are lists of battle string enums and NOT pointers to the strings.
@@ -1583,6 +1589,12 @@ const u16 gFlashFireStringIds[] =
 {
     BATTLE_TEXT_RaisedFirePower,
     BATTLE_TEXT_MadeIneffective,
+};
+
+const u16 gTailwindStringIDs[] =
+{
+    BATTLE_TEXT_Failed,
+    BATTLE_TEXT_TailwindSet,
 };
 
 const u16 gTrappingMoves[] =

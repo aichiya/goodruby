@@ -356,3 +356,5 @@
 	enum BATTLE_TEXT_DefogScreens
 	enum BATTLE_TEXT_DefogHazards
 	enum BATTLE_TEXT_DefogOwnHazards
+	enum BATTLE_TEXT_TailwindSet
+	enum BATTLE_TEXT_TailwindFaded
