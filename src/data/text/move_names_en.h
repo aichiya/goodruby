@@ -393,4 +393,12 @@ const u8 gMoveNames[][13] = {
 	[MOVE_PAYBACK] = _("Payback"),
 	[MOVE_BRINE] = _("Brine"),
 	[MOVE_TAILWIND] = _("Tailwind"),
+	[MOVE_DISARM_VOICE] = _("Disarm Voice"),
+	[MOVE_DRAIN_KISS] = _("Drain Kiss"),
+	[MOVE_MOONBLAST] = _("Moonblast"),
+	[MOVE_LUCKY_CHANT] = _("Lucky Chant"),
+	[MOVE_STORED_POWER] = _("Stored Power"),
+	[MOVE_CAPTIVATE] = _("Captivate"),
+	[MOVE_HEAL_PULSE] = _("Heal Pulse"),
+	[MOVE_HEALING_WISH] = _("Healing Wish"),
 };

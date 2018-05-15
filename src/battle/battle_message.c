@@ -16,7 +16,7 @@
 #include "ewram.h"
 
 #define BATTLESTRING_TO_SUB 12
-#define BATTLESTRINGS_NO    359
+#define BATTLESTRINGS_NO    362
 #define BATTLESTRINGS_MAX   BATTLESTRINGS_NO + BATTLESTRING_TO_SUB
 
 #ifdef GERMAN
@@ -771,13 +771,13 @@ u32 StrCpyDecodeBattle(const u8* src, u8* dst)
                 if (GetBattlerSide(gBankAttacker) == 0)
                     toCpy = BattleText_Ally;
                 else
-                    toCpy = BattleText_Foe3;
+                    toCpy = BattleText_Foe2;
                 break;
             case 39:
                 if (GetBattlerSide(gBankTarget) == 0)
                     toCpy = BattleText_Ally;
                 else
-                    toCpy = BattleText_Foe3;
+                    toCpy = BattleText_Foe2;
                 break;
             case 36:
                 if (GetBattlerSide(gBankAttacker) == 0)
@@ -795,13 +795,13 @@ u32 StrCpyDecodeBattle(const u8* src, u8* dst)
                 if (GetBattlerSide(gBankAttacker) == 0)
                     toCpy = BattleText_Ally;
                 else
-                    toCpy = BattleText_Foe4;
+                    toCpy = BattleText_Foe2;
                 break;
             case 41:
                 if (GetBattlerSide(gBankTarget) == 0)
                     toCpy = BattleText_Ally;
                 else
-                    toCpy = BattleText_Foe4;
+                    toCpy = BattleText_Foe2;
                 break;
             }
             //if (toCpy != NULL) really GF, why did you forget about this?

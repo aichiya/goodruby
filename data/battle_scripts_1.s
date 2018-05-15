@@ -239,6 +239,11 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectDefog
 	.4byte BattleScript_EffectPayback
 	.4byte BattleScript_EffectTailwind
+	.4byte BattleScript_EffectLuckyChant
+	.4byte BattleScript_EffectStoredPower
+	.4byte BattleScript_EffectCaptivate
+	.4byte BattleScript_EffectHealPulse
+	.4byte BattleScript_EffectHealingWish
 
 BattleScript_EffectHit: @ 81D6F14
 BattleScript_EffectAccuracyDown2: @ 81D6F14
@@ -4886,22 +4891,22 @@ Defog_StatDownPrintString: @ 81D7269
 Defog_StatDownEnd: @ 81D7271
 	special 0x5
 	printstring BATTLE_TEXT_DefogScreens
-	waitmessage
+	waitmessage 64
 	special 0x6
 	printstring BATTLE_TEXT_DefogScreens
-	waitmessage
+	waitmessage 64
 	special 0x7
 	printstring BATTLE_TEXT_DefogScreens
-	waitmessage
+	waitmessage 64
 	special 0x8
 	printstring BATTLE_TEXT_DefogScreens
-	waitmessage
+	waitmessage 64
 	special 0x9
 	printstring BATTLE_TEXT_DefogHazards
-	waitmessage
+	waitmessage 64
 	special 0xA
 	printstring BATTLE_TEXT_DefogOwnHazards
-	waitmessage
+	waitmessage 64
 	goto BattleScript_MoveEnd
 
 BattleScript_EffectPayback:
@@ -4915,10 +4920,9 @@ BattleScript_EffectTailwind:
 	special 0xD
 	attackanimation
 	waitanimation
-	printfromtable gTailwindStringIDs
+	printfromtable gReflectLightScreenSafeguardStringIds
 	waitmessage 64
 	goto BattleScript_MoveEnd
-	end
 
 BattleScript_EffectRestoreHp:
 	jumpifnotmove MOVE_ROOST, RealBattleScript_EffectRestoreHp
@@ -4949,3 +4953,120 @@ BattleScript_TailwindEnds::
 	printstring BATTLE_TEXT_TailwindFaded
 	waitmessage 64
 	end2
+
+BattleScript_EffectLuckyChant:
+	attackcanceler
+	attackstring
+	ppreduce
+	special 0xE
+	attackanimation
+	waitanimation
+	printfromtable gReflectLightScreenSafeguardStringIds
+	waitmessage 64
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectStoredPower:
+	special 0xF
+	goto BattleScript_EffectHit
+
+BattleScript_EffectCaptivate:
+	special 0x10
+	setstatchanger SP_ATTACK, 2, TRUE
+	goto BattleScript_EffectStatDown
+	end
+
+BattleScript_CaptivateFail::
+	attackcanceler
+	goto BattleScript_ButItFailedAtkStringPpReduce
+
+BattleScript_CaptivateFailOblivious::
+	attackcanceler
+	attackstring
+	ppreduce
+	accuracycheck BattleScript_ButItFailed, ACC_CURR_MOVE
+	goto BattleScript_ObliviousPreventsAttraction
+
+BattleScript_EffectHealPulse:
+	attackcanceler
+	attackstring
+	ppreduce
+	jumpifstatus2 TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
+	accuracycheck BattleScript_ButItFailed, ACC_CURR_MOVE
+	tryhealhalfhealth BattleScript_AlreadyAtFullHp, 0
+	attackanimation
+	waitanimation
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
+	healthbarupdate TARGET
+	datahpupdate TARGET
+	printstring BATTLE_TEXT_RegainedHealth
+	waitmessage 64
+	goto BattleScript_MoveEnd
+	end
+
+BattleScript_EffectHealingWish:
+	attackcanceler
+	attackstring
+	ppreduce
+	jumpifcantswitch ATK4F_DONT_CHECK_STATUSES | USER, BattleScript_ButItFailed
+	special 0x11
+	setatkhptozero
+	attackanimation
+	waitanimation
+	tryfaintmon USER, FALSE, NULL
+	goto BattleScript_MoveEnd
+
+BattleScript_LuckyChantEnds::
+	pause 32
+	printstring BATTLE_TEXT_LuckyChantFaded
+	waitmessage 64
+	end2
+
+BattleScript_HazardsUser::
+	special 0x13
+	call BattleScript_HealingWishOnAttacker
+	special 0x12
+	call BattleScript_SpikesOnAttacker
+	return
+
+BattleScript_HazardsTarget::
+	special 0x13
+	call BattleScript_HealingWishOnTarget
+	special 0x12
+	call BattleScript_SpikesOnTarget
+	return
+
+BattleScript_HazardsgBank1::
+	special 0x13
+	call BattleScript_HealingWishOngBank1
+	special 0x12
+	call BattleScript_SpikesOngBank1
+	return
+
+BattleScript_HealingWishOnAttacker:
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_x100000
+	healthbarupdate USER
+	datahpupdate USER
+	call BattleScript_PrintHealingWishMessage
+	updatestatusicon USER
+	return
+
+BattleScript_HealingWishOnTarget:
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_x100000
+	healthbarupdate TARGET
+	datahpupdate TARGET
+	call BattleScript_PrintHealingWishMessage
+	updatestatusicon TARGET
+	return
+
+BattleScript_HealingWishOngBank1:
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_x100000
+	healthbarupdate GBANK_1
+	datahpupdate GBANK_1
+	call BattleScript_PrintHealingWishMessage
+	updatestatusicon GBANK_1
+	return
+
+BattleScript_PrintHealingWishMessage:
+	printstring BATTLE_TEXT_HealingWishCameTrue
+	waitmessage 64
+	return

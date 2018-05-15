@@ -532,7 +532,7 @@ struct sideTimer
     u8 followmeTimer;       //0x8
     u8 followmeTarget;      //0x9
     u8 tailwindTimer;       //0xA
-    u8 fieldB;              //0xB
+    u8 luckyChantTimer;     //0xB
 };
 
 struct WishFutureKnock

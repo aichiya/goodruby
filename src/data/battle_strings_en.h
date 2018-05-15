@@ -361,6 +361,9 @@ enum
 	BATTLE_TEXT_DefogOwnHazard,
 	BATTLE_TEXT_TailwindSet,
 	BATTLE_TEXT_TailwindFaded,
+	BATTLE_TEXT_LuckyChantSet,
+	BATTLE_TEXT_LuckyChantFaded,
+	BATTLE_TEXT_HealingWishCameTrue,
 };
 
 const u8 BattleText_UnknownString[] = _("{STRING 33}");
@@ -719,10 +722,8 @@ const u8 BattleText_WithdrewPoke2[] = _("{STRING 29} withdrew\n{STRING 0}!");
 const u8 BattleText_WithdrewPoke3[] = _("{STRING 31} withdrew\n{STRING 0}!");
 const u8 BattleText_Wild[] = _("Wild ");
 const u8 BattleText_Foe[] = _("Foe ");
-const u8 BattleText_Foe2[] = _("Foe ");
+const u8 BattleText_Foe2[] = _("Foe");
 const u8 BattleText_Ally[] = _("Ally");
-const u8 BattleText_Foe3[] = _("Foe ");
-const u8 BattleText_Foe4[] = _("Foe ");
 const u8 BattleText_OpponentUsedMove[] = _("{ATTACKING_MON} used\n{STRING 1}");
 const u8 BattleText_Exclamation2[] = _("!");
 const u8 BattleText_Exclamation3[] = _("!");
@@ -854,6 +855,9 @@ const u8 BattleText_DefogHazard[] = _("{STRING 39} team’s {STRING 0}\nwere blo
 const u8 BattleText_DefogOwnHazard[] = _("{STRING 38} team’s {STRING 0}\nwere blown away!");
 const u8 BattleText_TailwindSet[] = _("A Tailwind blows from\nbehind {STRING 38}’s team!");
 const u8 BattleText_TailwindFaded[] = _("{STRING 38}’s Tailwind\npetered out!");
+const u8 BattleText_LuckyChantSet[] = _("Lucky Chant shields {STRING 38}’s\nteam from critical hits!");
+const u8 BattleText_LuckyChantFaded[] = _("{STRING 38}’s Lucky Chant\nwore off!");
+const u8 BattleText_HealingWishCameTrue[] = _("The Healing Wish came true!");
 
 const u8 *const gUnknown_08400F58[] =
 {
@@ -1237,6 +1241,9 @@ const u8 *const gBattleStringsTable[] =
 	BattleText_DefogOwnHazard,
 	BattleText_TailwindSet,
 	BattleText_TailwindFaded,
+	BattleText_LuckyChantSet,
+	BattleText_LuckyChantFaded,
+	BattleText_HealingWishCameTrue,
 };
 
 // below are lists of battle string enums and NOT pointers to the strings.
@@ -1308,6 +1315,8 @@ const u16 gReflectLightScreenSafeguardStringIds[] =
     BATTLE_TEXT_RaisedSpDef,
     BATTLE_TEXT_RaisedSpDefLittle,
     BATTLE_TEXT_CoveredVeil,
+	BATTLE_TEXT_LuckyChantSet,
+    BATTLE_TEXT_TailwindSet,
 };
 
 const u16 gLeechSeedStringIds[] =
@@ -1589,12 +1598,6 @@ const u16 gFlashFireStringIds[] =
 {
     BATTLE_TEXT_RaisedFirePower,
     BATTLE_TEXT_MadeIneffective,
-};
-
-const u16 gTailwindStringIDs[] =
-{
-    BATTLE_TEXT_Failed,
-    BATTLE_TEXT_TailwindSet,
 };
 
 const u16 gTrappingMoves[] =

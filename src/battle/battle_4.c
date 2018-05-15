@@ -294,9 +294,9 @@ extern u8 BattleScript_AllStatsUp[];
 extern u8 BattleScript_AtkDefDown[];
 extern u8 BattleScript_SAtkDown2[];
 
-extern u8 BattleScript_SpikesOnTarget[]; //spikes1
-extern u8 BattleScript_SpikesOnAttacker[]; //spikes2
-extern u8 BattleScript_SpikesOngBank1[]; //spikes3
+extern u8 BattleScript_HazardsUser[]; //spikes1
+extern u8 BattleScript_HazardsTarget[]; //spikes2
+extern u8 BattleScript_HazardsgBank1[]; //spikes3
 extern u8 BattleScript_HitFromCritCalc[]; //present dmg
 extern u8 BattleScript_AlreadyAtFullHp[]; //present full hp
 extern u8 BattleScript_PresentHealTarget[]; //present hp heal
@@ -316,6 +316,8 @@ extern u8 BattleScript_BugBiteGainHPConfuse[];
 extern u8 BattleScript_BugBiteRaiseStat[];
 extern u8 BattleScript_BugBiteLansat[];
 extern u8 BattleScript_BugBiteLeppa[];
+extern u8 BattleScript_CaptivateFail[];
+extern u8 BattleScript_CaptivateFailOblivious[];
 
 extern const u8 gStatusConditionString_PoisonJpn[];
 extern const u8 gStatusConditionString_SleepJpn[];
@@ -645,6 +647,12 @@ static void sp0A_defogownspikes(void);
 static void sp0B_roost(void);
 static void sp0C_payback(void);
 static void sp0D_tailwind(void);
+static void sp0E_luckychant(void);
+static void sp0F_storedpower(void);
+static void sp10_captivate(void);
+static void sp11_healingwish(void);
+static void sp12_spikesaffect(void);
+static void sp13_healingwishaffect(void);
 
 void (* const gBattleScriptingCommandsTable[])(void) =
 {
@@ -1512,6 +1520,7 @@ static void atk04_critcalc(void)
     if ((gBattleMons[gBankTarget].ability != ABILITY_BATTLE_ARMOR && gBattleMons[gBankTarget].ability != ABILITY_SHELL_ARMOR)
      && !(gStatuses3[gBankAttacker] & STATUS3_CANT_SCORE_A_CRIT)
      && !(gBattleTypeFlags & (BATTLE_TYPE_WALLY_TUTORIAL | BATTLE_TYPE_FIRST_BATTLE))
+	 && !(gSideTimers[GetBattlerSide(gBankTarget)].luckyChantTimer)
      && !(Random() % sCriticalHitChance[critChance]))
         gCritMultiplier = 2;
     else
@@ -9629,27 +9638,19 @@ static void atk52_switchineffects(void)
     gHitMarker &= ~(HITMARKER_FAINTED(gActiveBattler));
     gSpecialStatuses[gActiveBattler].flag40 = 0;
 
-    if (!(gSideAffecting[GetBattlerSide(gActiveBattler)] & SIDE_STATUS_SPIKES_DAMAGED) && (gSideAffecting[GetBattlerSide(gActiveBattler)] & SIDE_STATUS_SPIKES)
-        && gBattleMons[gActiveBattler].type1 != TYPE_FLYING && gBattleMons[gActiveBattler].type2 != TYPE_FLYING && gBattleMons[gActiveBattler].ability != ABILITY_LEVITATE)
+    if (!(gSideAffecting[GetBattlerSide(gActiveBattler)] & SIDE_STATUS_SPIKES_DAMAGED))
     {
-        u8 spikesDmg;
-
         gSideAffecting[GetBattlerSide(gActiveBattler)] |= SIDE_STATUS_SPIKES_DAMAGED;
-
-        spikesDmg = (5 - gSideTimers[GetBattlerSide(gActiveBattler)].spikesAmount) * 2;
-        gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / (spikesDmg);
-        if (gBattleMoveDamage == 0)
-            gBattleMoveDamage = 1;
 
         gBattleStruct->scriptingActive = gActiveBattler;
         BattleScriptPushCursor();
 
         if (T2_READ_8(gBattlescriptCurrInstr + 1) == 0)
-            gBattlescriptCurrInstr = BattleScript_SpikesOnTarget;
+            gBattlescriptCurrInstr = BattleScript_HazardsTarget;
         else if (T2_READ_8(gBattlescriptCurrInstr + 1) == 1)
-            gBattlescriptCurrInstr = BattleScript_SpikesOnAttacker;
+            gBattlescriptCurrInstr = BattleScript_HazardsUser;
         else
-            gBattlescriptCurrInstr = BattleScript_SpikesOngBank1;
+            gBattlescriptCurrInstr = BattleScript_HazardsgBank1;
     }
     else
     {
@@ -11545,7 +11546,10 @@ static void atk87_stockpiletohpheal(void)
 
 static void atk88_negativedamage(void)
 {
-    gBattleMoveDamage = -(gHpDealt / 2);
+	if (gCurrentMove == MOVE_DRAIN_KISS)
+		gBattleMoveDamage = -(gHpDealt * 3 / 4);
+	else
+		gBattleMoveDamage = -(gHpDealt / 2);
     if (gBattleMoveDamage == 0)
         gBattleMoveDamage = -1;
     gBattlescriptCurrInstr++;
@@ -13685,7 +13689,7 @@ static void atkAF_cursetarget(void)
 static void atkB0_trysetspikes(void)
 {
     u8 side = GetBattlerSide(gBankAttacker) ^ 1;
-    if (gSideTimers[side].spikesAmount == 3)
+    if ((gSideTimers[side].spikesAmount & HAZARD_SPIKES) == 3)
     {
         gSpecialStatuses[gBankAttacker].flag20 = 1;
         gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
@@ -16127,6 +16131,12 @@ void (* const gBattleScriptingSpecialTable[])(void) =
 	sp0B_roost,
 	sp0C_payback,
 	sp0D_tailwind,
+	sp0E_luckychant,
+	sp0F_storedpower,
+	sp10_captivate,
+	sp11_healingwish,
+	sp12_spikesaffect,
+	sp13_healingwishaffect
 };
 
 
@@ -16505,7 +16515,7 @@ static void sp05_defogreflect(void)
     }
 	else
 	{
-		gBattlescriptCurrInstr += 4;
+		gBattlescriptCurrInstr += 6;
 	}
 }
 
@@ -16524,7 +16534,7 @@ static void sp06_defoglightscreen(void)
     }
 	else
 	{
-		gBattlescriptCurrInstr += 4;
+		gBattlescriptCurrInstr += 6;
 	}
 }
 
@@ -16543,7 +16553,7 @@ static void sp07_defogsafeguard(void)
     }
 	else
 	{
-		gBattlescriptCurrInstr += 4;
+		gBattlescriptCurrInstr += 6;
 	}
 }
 
@@ -16562,7 +16572,7 @@ static void sp08_defogmist(void)
     }
 	else
 	{
-		gBattlescriptCurrInstr += 4;
+		gBattlescriptCurrInstr += 6;
 	}
 }
 
@@ -16581,7 +16591,7 @@ static void sp09_defogfoespikes(void)
     }
 	else
 	{
-		gBattlescriptCurrInstr += 4;
+		gBattlescriptCurrInstr += 6;
 	}
 }
 
@@ -16600,7 +16610,7 @@ static void sp0A_defogownspikes(void)
     }
 	else
 	{
-		gBattlescriptCurrInstr += 4;
+		gBattlescriptCurrInstr += 6;
 	}
 }
 
@@ -16650,6 +16660,125 @@ static void sp0D_tailwind(void)
     else
     {
         gSideTimers[side].tailwindTimer = 4;
-        gBattleCommunication[MULTISTRING_CHOOSER] = 1;
+        gBattleCommunication[MULTISTRING_CHOOSER] = 7;
     }
+}
+
+static void sp0E_luckychant(void)
+{
+    u8 side = GetBattlerSide(gBankAttacker);
+    if (gSideTimers[side].luckyChantTimer > 0)
+    {
+        gMoveResultFlags |= MOVE_RESULT_MISSED;
+        gBattleCommunication[MULTISTRING_CHOOSER] = 0;
+    }
+    else
+    {
+        gSideTimers[side].luckyChantTimer = 5;
+        gBattleCommunication[MULTISTRING_CHOOSER] = 6;
+    }
+}
+
+static void sp0F_storedpower(void)
+{
+	u16 power = 20;
+	
+	if (gBattleMons[gBankAttacker].statStages[STAT_STAGE_ATK] > 6)
+		power += (gBattleMons[gBankAttacker].statStages[STAT_STAGE_ATK] - 6) * 20;
+	if (gBattleMons[gBankAttacker].statStages[STAT_STAGE_DEF] > 6)
+		power += (gBattleMons[gBankAttacker].statStages[STAT_STAGE_DEF] - 6) * 20;
+	if (gBattleMons[gBankAttacker].statStages[STAT_STAGE_SPEED] > 6)
+		power += (gBattleMons[gBankAttacker].statStages[STAT_STAGE_SPEED] - 6) * 20;
+	if (gBattleMons[gBankAttacker].statStages[STAT_STAGE_SPATK] > 6)
+		power += (gBattleMons[gBankAttacker].statStages[STAT_STAGE_SPATK] - 6) * 20;
+	if (gBattleMons[gBankAttacker].statStages[STAT_STAGE_SPDEF] > 6)
+		power += (gBattleMons[gBankAttacker].statStages[STAT_STAGE_SPDEF] - 6) * 20;
+	if (gBattleMons[gBankAttacker].statStages[STAT_STAGE_ACC] > 6)
+		power += (gBattleMons[gBankAttacker].statStages[STAT_STAGE_ACC] - 6) * 20;
+	if (gBattleMons[gBankAttacker].statStages[STAT_STAGE_EVASION] > 6)
+		power += (gBattleMons[gBankAttacker].statStages[STAT_STAGE_EVASION] - 6) * 20;
+	
+	gDynamicBasePower = power;
+}
+
+static void sp10_captivate(void)
+{
+    struct Pokemon *attacker, *target;
+    u16 atk_species, def_species;
+    u32 atk_pid, def_pid;
+    if (!GetBattlerSide(gBankAttacker))
+        attacker = &gPlayerParty[gBattlerPartyIndexes[gBankAttacker]];
+    else
+        attacker = &gEnemyParty[gBattlerPartyIndexes[gBankAttacker]];
+
+    if (!GetBattlerSide(gBankTarget))
+        target = &gPlayerParty[gBattlerPartyIndexes[gBankTarget]];
+    else
+        target = &gEnemyParty[gBattlerPartyIndexes[gBankTarget]];
+
+    atk_species = GetMonData(attacker, MON_DATA_SPECIES);
+    atk_pid = GetMonData(attacker, MON_DATA_PERSONALITY);
+
+    def_species = GetMonData(target, MON_DATA_SPECIES);
+    def_pid = GetMonData(target, MON_DATA_PERSONALITY);
+
+    if (gBattleMons[gBankTarget].ability == ABILITY_OBLIVIOUS)
+    {
+        gBattlescriptCurrInstr = BattleScript_CaptivateFailOblivious;
+        gLastUsedAbility = ABILITY_OBLIVIOUS;
+        RecordAbilityBattle(gBankTarget, ABILITY_OBLIVIOUS);
+    }
+    else
+    {
+        if (GetGenderFromSpeciesAndPersonality(atk_species, atk_pid) == GetGenderFromSpeciesAndPersonality(def_species, def_pid)
+            || gStatuses3[gBankTarget] & STATUS3_SEMI_INVULNERABLE || gBattleMons[gBankTarget].status2 & STATUS2_INFATUATION || GetGenderFromSpeciesAndPersonality(atk_species, atk_pid) == 0xFF
+            || GetGenderFromSpeciesAndPersonality(def_species, def_pid) == 0xFF)
+            {
+                gBattlescriptCurrInstr = BattleScript_CaptivateFail;
+            }
+    }
+}
+
+static void sp11_healingwish(void)
+{
+	gActiveBattler = gBankAttacker;
+	gBattleMoveDamage = gBattleMons[gActiveBattler].hp;
+	EmitHealthBarUpdate(0, 0x7FFF);
+	MarkBufferBankForExecution(gActiveBattler);
+	gSideTimers[GetBattlerSide(gActiveBattler)].spikesAmount |= HAZARD_HEALING_WISH;
+}
+
+static void sp12_spikesaffect(void)
+{
+	u8 spikes;
+	gActiveBattler = gBattleStruct->scriptingActive;
+	spikes = gSideTimers[GetBattlerSide(gActiveBattler)].spikesAmount & HAZARD_SPIKES; // 0x3
+	if (spikes == 0 || gBattleMons[gActiveBattler].type1 == TYPE_FLYING || gBattleMons[gActiveBattler].type2 == TYPE_FLYING || gBattleMons[gActiveBattler].ability == ABILITY_LEVITATE)
+	{
+		gBattlescriptCurrInstr += 5;
+	}
+	else
+	{
+		gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / (10 - (2 * spikes));
+	}
+}
+
+static void sp13_healingwishaffect(void)
+{
+	u8 wish;
+	gActiveBattler = gBattleStruct->scriptingActive;
+	wish = gSideTimers[GetBattlerSide(gActiveBattler)].spikesAmount & HAZARD_HEALING_WISH;
+	if (!wish)
+	{
+		gBattlescriptCurrInstr += 5;
+	}
+	else
+	{
+		gSideTimers[GetBattlerSide(gActiveBattler)].spikesAmount &= ~HAZARD_HEALING_WISH;
+		gBattleMoveDamage = gBattleMons[gBankTarget].maxHP * (-1);
+		gBattleMons[gBankTarget].status1 = 0;
+		
+        EmitSetMonData(0, REQUEST_STATUS_BATTLE, 0, 4, &gBattleMons[gActiveBattler].status1);
+		MarkBufferBankForExecution(gActiveBattler);
+	}
 }

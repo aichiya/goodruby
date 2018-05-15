@@ -358,3 +358,6 @@
 	enum BATTLE_TEXT_DefogOwnHazards
 	enum BATTLE_TEXT_TailwindSet
 	enum BATTLE_TEXT_TailwindFaded
+	enum BATTLE_TEXT_LuckyChantSet
+	enum BATTLE_TEXT_LuckyChantFaded
+	enum BATTLE_TEXT_HealingWishCameTrue

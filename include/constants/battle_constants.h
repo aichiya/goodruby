@@ -175,6 +175,13 @@
 #define SIDE_STATUS_MIST             (1 << 8)
 #define SIDE_STATUS_SPIKES_DAMAGED   (1 << 9)
 
+#define HAZARD_SPIKES               0x03
+#define HAZARD_STEALTH_ROCK         0x04
+#define HAZARD_TOXIC_SPIKES         0x18
+#define HAZARD_STICKY_WEB           0x20
+#define HAZARD_HEALING_WISH         0x40
+#define HAZARD_LUNAR_DANCE          0x80
+
 #define ACTION_USE_MOVE             0
 #define ACTION_USE_ITEM             1
 #define ACTION_SWITCH               2

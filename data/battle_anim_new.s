@@ -74,3 +74,16 @@ gBattleAnimSpriteTemplate_LeafTornado::
 	.align 2
 gBattleAnimSpriteTemplate_Hurricane:: @ 83D63F8
 	spr_template 10154, 10154, gOamData_837DF54, gSpriteAnimTable_83DA3E0, NULL, gDummySpriteAffineAnimTable, sub_80DCFE4
+
+	.align 2
+gBattleAnimSpriteTemplate_DisarmVoice::
+	spr_template 10216, 10216, gOamData_837DF8C, gDummySpriteAnimTable, NULL, gDummySpriteAffineAnimTable, sub_80CC6CC
+
+	.align 2
+gBattleAnimSpriteTemplate_Captivate::
+	spr_template 10210, 10210, gOamData_837DF2C, gDummySpriteAnimTable, NULL, gDummySpriteAffineAnimTable, sub_80D53B4
+	
+	.align 2
+gBattleAnimSpriteTemplate_LuckyChant::
+	spr_template 10072, 10072, gOamData_837DFEC, gSpriteAnimTable_83D70D8, NULL, gSpriteAffineAnimTable_83D7110, sub_80D7F10
+

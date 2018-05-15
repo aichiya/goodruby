@@ -119,6 +119,7 @@ extern u8 BattleScript_SunlightFaded[];
 extern u8 BattleScript_SunlightContinues[];
 extern u8 BattleScript_SafeguardEnds[];
 extern u8 BattleScript_TailwindEnds[];
+extern u8 BattleScript_LuckyChantEnds[];
 extern u8 BattleScript_MonWokeUpInUproar[]; //uproar wakeup BS
 extern u8 BattleScript_PrintUproarOverTurns[]; //uproar BS
 extern u8 BattleScript_ThrashConfuses[];
@@ -752,7 +753,7 @@ u8 UpdateTurnCounters(void)
                 {
                     if (--gSideTimers[sideBank].tailwindTimer == 0)
                     {
-                        BattleScriptExecute(BattleScript_TailwindEnds); // TW ENDS
+                        BattleScriptExecute(BattleScript_TailwindEnds);
                         effect++;
                     }
                 }
@@ -767,6 +768,28 @@ u8 UpdateTurnCounters(void)
             }
             break;
         case 6:
+            while (gBattleStruct->turnSideTracker < 2)
+            {
+                gActiveBattler = gBankAttacker = sideBank = gBattleStruct->turnSideTracker;
+                if (gSideTimers[sideBank].luckyChantTimer > 0)
+                {
+                    if (--gSideTimers[sideBank].luckyChantTimer == 0)
+                    {
+                        BattleScriptExecute(BattleScript_LuckyChantEnds);
+                        effect++;
+                    }
+                }
+                gBattleStruct->turnSideTracker++;
+                if (effect)
+                    break;
+            }
+            if (!effect)
+            {
+                gBattleStruct->turncountersTracker++;
+                gBattleStruct->turnSideTracker = 0;
+            }
+            break;
+        case 7:
             while (gBattleStruct->turnSideTracker < gBattlersCount)
             {
                 gActiveBattler = gBanksByTurnOrder[gBattleStruct->turnSideTracker];
@@ -785,7 +808,7 @@ u8 UpdateTurnCounters(void)
                 gBattleStruct->turncountersTracker++;
             }
             break;
-        case 7:
+        case 8:
             if (gBattleWeather & WEATHER_RAIN_ANY)
             {
                 if (!(gBattleWeather & WEATHER_RAIN_PERMANENT))
@@ -810,7 +833,7 @@ u8 UpdateTurnCounters(void)
             }
             gBattleStruct->turncountersTracker++;
             break;
-        case 8:
+        case 9:
             if (gBattleWeather & WEATHER_SANDSTORM_ANY)
             {
                 if (!(gBattleWeather & WEATHER_SANDSTORM_PERMANENT) && --gWishFutureKnock.weatherDuration == 0)
@@ -828,7 +851,7 @@ u8 UpdateTurnCounters(void)
             }
             gBattleStruct->turncountersTracker++;
             break;
-        case 9:
+        case 10:
             if (gBattleWeather & WEATHER_SUN_ANY)
             {
                 if (!(gBattleWeather & WEATHER_SUN_PERMANENT) && --gWishFutureKnock.weatherDuration == 0)
@@ -844,7 +867,7 @@ u8 UpdateTurnCounters(void)
             }
             gBattleStruct->turncountersTracker++;
             break;
-        case 10:
+        case 11:
             if (gBattleWeather & WEATHER_HAIL)
             {
                 if (--gWishFutureKnock.weatherDuration == 0)
@@ -862,7 +885,7 @@ u8 UpdateTurnCounters(void)
             }
             gBattleStruct->turncountersTracker++;
             break;
-        case 11:
+        case 12:
             effect++;
             break;
         }

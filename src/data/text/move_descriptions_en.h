@@ -1570,6 +1570,37 @@ static const u8 MoveDescription_Tailwind[] = _(
 	"Doubles the team’s Speed\n"
 	"for four turns.");
 
+static const u8 MoveDescription_DisarmVoice[] = _(
+    "A charming shout attack\n"
+    "that will never miss.");
+
+static const u8 MoveDescription_DrainKiss[] = _(
+    "An attack that absorbs\n"
+    "half the damage inflicted.");
+
+static const u8 MoveDescription_Moonblast[] = _(
+    "Attacks with a burst of\n"
+    "moonlight. May lower Sp. Atk.");
+
+static const u8 MoveDescription_LuckyChant[] = _(
+    "An incantation that blocks\n"
+    "critical hits for 5 turns.");
+
+static const u8 MoveDescription_StoredPower[] = _(
+	"Power rises the more the\n"
+	"user’s stats are raised.");
+
+static const u8 MoveDescription_Captivate[] = _(
+    "Charms opposite gender foe\n"
+    "to lower its Sp. Atk.");
+
+static const u8 MoveDescription_HealPulse[] = _(
+    "Recovers up to half the\n"
+    "target’s maximum HP.");
+
+static const u8 MoveDescription_HealingWish[] = _(
+    "The user faints to fully\n"
+    "restore the next POKéMON.");
 
 
 const u8 * const gMoveDescriptions[] = {
@@ -1966,4 +1997,12 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_Payback,
 	MoveDescription_Brine,
 	MoveDescription_Tailwind,
+	MoveDescription_DisarmVoice,
+	MoveDescription_DrainKiss,
+	MoveDescription_Moonblast,
+	MoveDescription_LuckyChant,
+	MoveDescription_StoredPower,
+	MoveDescription_Captivate,
+	MoveDescription_HealPulse,
+	MoveDescription_HealingWish,
 };
