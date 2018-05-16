@@ -401,4 +401,7 @@ const u8 gMoveNames[][13] = {
 	[MOVE_CAPTIVATE] = _("Captivate"),
 	[MOVE_HEAL_PULSE] = _("Heal Pulse"),
 	[MOVE_HEALING_WISH] = _("Healing Wish"),
+	[MOVE_AQUA_JET] = _("Aqua Jet"),
+	[MOVE_STICKY_WEB] = _("Sticky Web"),
+	[MOVE_OMINOUS_WIND] = _("Ominous Wind"),
 };

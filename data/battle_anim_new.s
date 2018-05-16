@@ -87,3 +87,13 @@ gBattleAnimSpriteTemplate_Captivate::
 gBattleAnimSpriteTemplate_LuckyChant::
 	spr_template 10072, 10072, gOamData_837DFEC, gSpriteAnimTable_83D70D8, NULL, gSpriteAffineAnimTable_83D7110, sub_80D7F10
 
+	.align 2
+gBattleAnimSpriteTemplate_OminousWind::
+	spr_template 10261, 10294, gOamData_837DF54, gDummySpriteAnimTable, NULL, gDummySpriteAffineAnimTable, sub_80DD3AC
+
+	.align 2
+gBattleAnimSpriteTemplate_StickyWeb::
+	spr_template 10180, 10180, gOamData_837DF24, gDummySpriteAnimTable, NULL, gDummySpriteAffineAnimTable, sub_80794A8
+
+
+

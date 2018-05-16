@@ -200,6 +200,10 @@ gBattleAnimSpritePalette_291:: @ 8D03724
 	.align 2
 gBattleAnimSpritePalette_293::
 	.incbin "graphics/battle_anims/sprites/293.gbapal.lz"
+	
+	.align 2
+gBattleAnimSpritePalette_294::
+	.incbin "graphics/battle_anims/sprites/294.gbapal.lz"
 
 	.align 2
 gBattleAnimSpriteSheet_161:: @ 8D0374C

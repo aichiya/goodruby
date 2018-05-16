@@ -244,6 +244,7 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectCaptivate
 	.4byte BattleScript_EffectHealPulse
 	.4byte BattleScript_EffectHealingWish
+	.4byte BattleScript_EffectStickyWeb
 
 BattleScript_EffectHit: @ 81D6F14
 BattleScript_EffectAccuracyDown2: @ 81D6F14
@@ -4904,8 +4905,14 @@ Defog_StatDownEnd: @ 81D7271
 	special 0x9
 	printstring BATTLE_TEXT_DefogHazards
 	waitmessage 64
+	special 0x16
+	printstring BATTLE_TEXT_DefogHazards
+	waitmessage 64
 	special 0xA
 	printstring BATTLE_TEXT_DefogOwnHazards
+	waitmessage 64
+	special 0x17
+	printstring BATTLE_TEXT_DefogHazards
 	waitmessage 64
 	goto BattleScript_MoveEnd
 
@@ -5022,6 +5029,8 @@ BattleScript_LuckyChantEnds::
 	end2
 
 BattleScript_HazardsUser::
+	special 0x15
+	call BattleScript_StickyWebOnAttacker
 	special 0x13
 	call BattleScript_HealingWishOnAttacker
 	special 0x12
@@ -5029,6 +5038,8 @@ BattleScript_HazardsUser::
 	return
 
 BattleScript_HazardsTarget::
+	special 0x15
+	call BattleScript_StickyWebOnTarget
 	special 0x13
 	call BattleScript_HealingWishOnTarget
 	special 0x12
@@ -5036,6 +5047,8 @@ BattleScript_HazardsTarget::
 	return
 
 BattleScript_HazardsgBank1::
+	special 0x15
+	call BattleScript_StickyWebOngBank1
 	special 0x13
 	call BattleScript_HealingWishOngBank1
 	special 0x12
@@ -5070,3 +5083,72 @@ BattleScript_PrintHealingWishMessage:
 	printstring BATTLE_TEXT_HealingWishCameTrue
 	waitmessage 64
 	return
+
+BattleScript_EffectStickyWeb:
+	attackcanceler
+	special 0x14
+	goto BattleScript_ButItFailedAtkStringPpReduce
+	attackstring
+	ppreduce
+	attackanimation
+	waitanimation
+	printstring BATTLE_TEXT_WebSet
+	waitmessage 64
+	goto BattleScript_MoveEnd
+
+BattleScript_StickyWebOnAttacker:
+	call BattleScript_PrintStickyWebMessage
+	setstatchanger SPEED, 1, TRUE
+	statbuffchange 1, BattleScript_StatDownEnd
+	jumpifbyte LESS_THAN, cMULTISTRING_CHOOSER, 2, BattleScript_StickyWebUserStatAnim
+	jumpifbyte EQUAL, cMULTISTRING_CHOOSER, 3, BattleScript_StickyWebUserStatAnim
+	pause 32
+	goto BattleScript_StickyWebStatMessage
+	
+BattleScript_StickyWebUserStatAnim:
+	setgraphicalstatchangevalues
+	playanimation USER, B_ANIM_STATS_CHANGE, sANIM_ARG1
+	goto BattleScript_StickyWebStatMessage
+
+BattleScript_StickyWebOnTarget:
+	call BattleScript_PrintStickyWebMessage
+	setstatchanger SPEED, 1, TRUE
+	statbuffchange 1, BattleScript_StatDownEnd
+	jumpifbyte LESS_THAN, cMULTISTRING_CHOOSER, 2, BattleScript_StickyWebTargetStatAnim
+	jumpifbyte EQUAL, cMULTISTRING_CHOOSER, 3, BattleScript_StickyWebTargetStatAnim
+	pause 32
+	goto BattleScript_StickyWebStatMessage
+	
+BattleScript_StickyWebTargetStatAnim:
+	setgraphicalstatchangevalues
+	playanimation TARGET, B_ANIM_STATS_CHANGE, sANIM_ARG1
+	goto BattleScript_StickyWebStatMessage
+
+BattleScript_StickyWebOngBank1:
+	call BattleScript_PrintStickyWebMessage
+	setstatchanger SPEED, 1, TRUE
+	statbuffchange 1, BattleScript_StatDownEnd
+	jumpifbyte LESS_THAN, cMULTISTRING_CHOOSER, 2, BattleScript_StickyWebgBank1StatAnim
+	jumpifbyte EQUAL, cMULTISTRING_CHOOSER, 3, BattleScript_StickyWebgBank1StatAnim
+	pause 32
+	goto BattleScript_StickyWebStatMessage
+	
+BattleScript_StickyWebgBank1StatAnim:
+	setgraphicalstatchangevalues
+	playanimation GBANK_1, B_ANIM_STATS_CHANGE, sANIM_ARG1
+	goto BattleScript_StickyWebStatMessage
+
+BattleScript_StickyWebStatMessage:
+	printfromtable gStatDownStringIds
+	waitmessage 64	
+	return
+
+BattleScript_PrintStickyWebMessage:
+	printstring BATTLE_TEXT_CaughtInWeb
+	waitmessage 64
+	return
+
+
+
+
+

@@ -361,3 +361,5 @@
 	enum BATTLE_TEXT_LuckyChantSet
 	enum BATTLE_TEXT_LuckyChantFaded
 	enum BATTLE_TEXT_HealingWishCameTrue
+    enum BATTLE_TEXT_WebSet
+	enum BATTLE_TEXT_CaughtInWeb

@@ -653,6 +653,10 @@ static void sp10_captivate(void);
 static void sp11_healingwish(void);
 static void sp12_spikesaffect(void);
 static void sp13_healingwishaffect(void);
+static void sp14_setstickyweb(void);
+static void sp15_webaffect(void);
+static void sp16_defogfoeweb(void);
+static void sp17_defogownweb(void);
 
 void (* const gBattleScriptingCommandsTable[])(void) =
 {
@@ -14002,12 +14006,27 @@ static void atkBE_rapidspinfree(void) //rapid spin
         BattleScriptPushCursor();
         gBattlescriptCurrInstr = BattleScript_LeechSeedFree;
     }
-    else if (gSideAffecting[GetBattlerSide(gBankAttacker)] & SIDE_STATUS_SPIKES)
+    else if (gSideTimers[GetBattlerSide(gBankAttacker)].spikesAmount & HAZARD_SPIKES)
     {
-        gSideAffecting[GetBattlerSide(gBankAttacker)] &= ~(SIDE_STATUS_SPIKES);
-        gSideTimers[GetBattlerSide(gBankAttacker)].spikesAmount = 0;
+        gSideTimers[GetBattlerSide(gBankAttacker)].spikesAmount &= ~(HAZARD_SPIKES);
         BattleScriptPushCursor();
         gBattlescriptCurrInstr = BattleScript_SpikesFree;
+		gBattleTextBuff1[0] = 0xFD;
+		gBattleTextBuff1[1] = 2;
+		gBattleTextBuff1[2] = MOVE_SPIKES;
+		gBattleTextBuff1[3] = MOVE_SPIKES >> 8;
+		gBattleTextBuff1[4] = EOS;
+    }
+    else if (gSideTimers[GetBattlerSide(gBankAttacker)].spikesAmount & HAZARD_STICKY_WEB)
+    {
+        gSideTimers[GetBattlerSide(gBankAttacker)].spikesAmount &= ~(HAZARD_STICKY_WEB);
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = BattleScript_SpikesFree;
+		gBattleTextBuff1[0] = 0xFD;
+		gBattleTextBuff1[1] = 2;
+		gBattleTextBuff1[2] = (u8)MOVE_STICKY_WEB;
+		gBattleTextBuff1[3] = MOVE_STICKY_WEB >> 8;
+		gBattleTextBuff1[4] = EOS;
     }
     else
         gBattlescriptCurrInstr++;
@@ -16136,7 +16155,11 @@ void (* const gBattleScriptingSpecialTable[])(void) =
 	sp10_captivate,
 	sp11_healingwish,
 	sp12_spikesaffect,
-	sp13_healingwishaffect
+	sp13_healingwishaffect,
+	sp14_setstickyweb,
+	sp15_webaffect,
+	sp16_defogfoeweb,
+	sp17_defogownweb,
 };
 
 
@@ -16579,10 +16602,9 @@ static void sp08_defogmist(void)
 static void sp09_defogfoespikes(void)
 {
     u8 side = GetBattlerSide(gBankTarget);
-    if (gSideTimers[side].spikesAmount)
+    if (gSideTimers[side].spikesAmount & HAZARD_SPIKES)
     {
-        gSideAffecting[side] &= ~(SIDE_STATUS_SPIKES);
-        gSideTimers[side].spikesAmount = 0;
+        gSideTimers[side].spikesAmount &= ~(HAZARD_SPIKES);
 		gBattleTextBuff1[0] = 0xFD;
 		gBattleTextBuff1[1] = 2;
 		gBattleTextBuff1[2] = MOVE_SPIKES;
@@ -16598,10 +16620,9 @@ static void sp09_defogfoespikes(void)
 static void sp0A_defogownspikes(void)
 {
     u8 side = GetBattlerSide(gBankAttacker);
-    if (gSideTimers[side].spikesAmount)
+    if (gSideTimers[side].spikesAmount & HAZARD_SPIKES)
     {
-        gSideAffecting[side] &= ~(SIDE_STATUS_SPIKES);
-        gSideTimers[side].spikesAmount = 0;
+        gSideTimers[side].spikesAmount &= ~(HAZARD_SPIKES);
 		gBattleTextBuff1[0] = 0xFD;
 		gBattleTextBuff1[1] = 2;
 		gBattleTextBuff1[2] = MOVE_SPIKES;
@@ -16780,5 +16801,71 @@ static void sp13_healingwishaffect(void)
 		
         EmitSetMonData(0, REQUEST_STATUS_BATTLE, 0, 4, &gBattleMons[gActiveBattler].status1);
 		MarkBufferBankForExecution(gActiveBattler);
+	}
+}
+
+static void sp14_setstickyweb(void)
+{
+    u8 side = GetBattlerSide(gBankAttacker) ^ 1;
+    if ((gSideTimers[side].spikesAmount & HAZARD_STICKY_WEB) != 0)
+    {
+        gSpecialStatuses[gBankAttacker].flag20 = 1;
+    }
+    else
+    {
+        gSideTimers[side].spikesAmount |= HAZARD_STICKY_WEB;
+        gBattlescriptCurrInstr += 5;
+    }
+}
+
+static void sp15_webaffect(void)
+{
+	u8 web;
+	gActiveBattler = gBattleStruct->scriptingActive;
+	web = gSideTimers[GetBattlerSide(gActiveBattler)].spikesAmount & HAZARD_STICKY_WEB;
+	if (web == 0 || gBattleMons[gActiveBattler].type1 == TYPE_FLYING || gBattleMons[gActiveBattler].type2 == TYPE_FLYING || gBattleMons[gActiveBattler].ability == ABILITY_LEVITATE)
+	{
+		gBattlescriptCurrInstr += 5;
+	}
+	else
+	{
+	}
+}
+
+
+
+static void sp16_defogfoeweb(void)
+{
+    u8 side = GetBattlerSide(gBankTarget);
+    if (gSideTimers[side].spikesAmount & HAZARD_STICKY_WEB)
+    {
+        gSideTimers[side].spikesAmount &= ~(HAZARD_STICKY_WEB);
+		gBattleTextBuff1[0] = 0xFD;
+		gBattleTextBuff1[1] = 2;
+		gBattleTextBuff1[2] = (u8)MOVE_STICKY_WEB;
+		gBattleTextBuff1[3] = MOVE_STICKY_WEB >> 8;
+		gBattleTextBuff1[4] = EOS;
+    }
+	else
+	{
+		gBattlescriptCurrInstr += 6;
+	}
+}
+
+static void sp17_defogownweb(void)
+{
+    u8 side = GetBattlerSide(gBankAttacker);
+    if (gSideTimers[side].spikesAmount)
+    {
+        gSideTimers[side].spikesAmount &= ~(HAZARD_STICKY_WEB);
+		gBattleTextBuff1[0] = 0xFD;
+		gBattleTextBuff1[1] = 2;
+		gBattleTextBuff1[2] = (u8)MOVE_STICKY_WEB;
+		gBattleTextBuff1[3] = MOVE_STICKY_WEB >> 8;
+		gBattleTextBuff1[4] = EOS;
+    }
+	else
+	{
+		gBattlescriptCurrInstr += 6;
 	}
 }

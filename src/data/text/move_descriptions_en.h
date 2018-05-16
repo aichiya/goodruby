@@ -1600,7 +1600,19 @@ static const u8 MoveDescription_HealPulse[] = _(
 
 static const u8 MoveDescription_HealingWish[] = _(
     "The user faints to fully\n"
-    "restore the next POKéMON.");
+    "restore the next Pokémon.");
+
+static const u8 MoveDescription_AquaJet[] = _(
+    "An extremely fast attack\n"
+    "that always strikes first.");
+
+static const u8 MoveDescription_StickyWeb[] = _(
+    "Sets a trap that lowers\n"
+    "incoming Pokémon’s Speed.");
+
+static const u8 MoveDescription_OminousWind[] = _(
+    "An repulsive attack that\n"
+    "may raise all stats.");
 
 
 const u8 * const gMoveDescriptions[] = {
@@ -2005,4 +2017,7 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_Captivate,
 	MoveDescription_HealPulse,
 	MoveDescription_HealingWish,
+	MoveDescription_AquaJet,
+	MoveDescription_StickyWeb,
+	MoveDescription_OminousWind,
 };

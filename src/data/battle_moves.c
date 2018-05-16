@@ -5230,4 +5230,43 @@ const struct BattleMove gBattleMoves[] = {
         .flags = F_AFFECTED_BY_SNATCH,
 		.moveClass = CLASS_STATUS,
     },
+
+    [MOVE_AQUA_JET] = {
+        .effect = EFFECT_QUICK_ATTACK,
+        .power = 40,
+        .type = TYPE_WATER,
+        .accuracy = 100,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 1,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+		.moveClass = CLASS_PHYSICAL,
+    },
+
+    [MOVE_STICKY_WEB] = {
+        .effect = EFFECT_STICKY_WEB,
+        .power = 0,
+        .type = TYPE_BUG,
+        .accuracy = 0,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = TARGET_ENEMY_SIDE,
+        .priority = 0,
+        .flags = 0,
+		.moveClass = CLASS_STATUS,
+    },
+
+    [MOVE_OMINOUS_WIND] = {
+        .effect = EFFECT_ALL_STATS_UP_HIT,
+        .power = 60,
+        .type = TYPE_GHOST,
+        .accuracy = 100,
+        .pp = 5,
+        .secondaryEffectChance = 10,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
+		.moveClass = CLASS_SPECIAL,
+    },
 };

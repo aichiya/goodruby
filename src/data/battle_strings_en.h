@@ -364,6 +364,8 @@ enum
 	BATTLE_TEXT_LuckyChantSet,
 	BATTLE_TEXT_LuckyChantFaded,
 	BATTLE_TEXT_HealingWishCameTrue,
+	BATTLE_TEXT_WebSet,
+	BATTLE_TEXT_CaughtInWeb,
 };
 
 const u8 BattleText_UnknownString[] = _("{STRING 33}");
@@ -524,7 +526,7 @@ const u8 BattleText_CutHPMaxATK[] = _("{ATTACKING_MON} cut its own HP\nand maxim
 const u8 BattleText_CopyStatChanges[] = _("{ATTACKING_MON} copied\n{DEFENDING_MON}’s stat changes!");
 const u8 BattleText_GotFreeFrom[] = _("{ATTACKING_MON} got free of\n{DEFENDING_MON}’s {STRING 0}!");
 const u8 BattleText_LeechShed[] = _("{ATTACKING_MON} shed\nLeech Seed!");
-const u8 BattleText_SpikesBlownAway[] = _("{ATTACKING_MON} blew away\nSpikes!");
+const u8 BattleText_SpikesBlownAway[] = _("{ATTACKING_MON} blew away\n{STRING 0}!");
 const u8 BattleText_FledBattle[] = _("{ATTACKING_MON} fled from\nbattle!");
 const u8 BattleText_ForesawAttack[] = _("{ATTACKING_MON} foresaw\nan attack!");
 const u8 BattleText_TookAttack[] = _("{DEFENDING_MON} took\n{STRING 0}’s attack!");
@@ -851,13 +853,15 @@ const u8 BattleText_Flung[] = _("{ATTACKING_MON} flung\nits {STRING 19}!");
 const u8 BattleText_BugBiteEat[] = _("{ATTACKING_MON} ate\n{DEFENDING_MON}’s {STRING 19}!");
 const u8 BattleText_HidInShadows[] = _("{ATTACKING_MON} vanished\ninstantly!");
 const u8 BattleText_DefogScreen[] = _("{STRING 39}’s {STRING 0}\nwore off!");
-const u8 BattleText_DefogHazard[] = _("{STRING 39} team’s {STRING 0}\nwere blown away!");
-const u8 BattleText_DefogOwnHazard[] = _("{STRING 38} team’s {STRING 0}\nwere blown away!");
+const u8 BattleText_DefogHazard[] = _("{ATTACKING_MON} blew away\n{STRING 39} team’s {STRING 0}!");
+const u8 BattleText_DefogOwnHazard[] = _("{ATTACKING_MON} blew away\n{STRING 38} team’s {STRING 0}!");
 const u8 BattleText_TailwindSet[] = _("A Tailwind blows from\nbehind {STRING 38}’s team!");
 const u8 BattleText_TailwindFaded[] = _("{STRING 38}’s Tailwind\npetered out!");
 const u8 BattleText_LuckyChantSet[] = _("Lucky Chant shields {STRING 38}’s\nteam from critical hits!");
 const u8 BattleText_LuckyChantFaded[] = _("{STRING 38}’s Lucky Chant\nwore off!");
 const u8 BattleText_HealingWishCameTrue[] = _("The Healing Wish came true!");
+const u8 BattleText_WebSet[] = _("A sticky web has been laid\nout beneath {STRING 37} team!");
+const u8 BattleText_CaughtInWeb[] = _("{STRING 16} was caught\nin the sticky web!");
 
 const u8 *const gUnknown_08400F58[] =
 {
@@ -1244,6 +1248,8 @@ const u8 *const gBattleStringsTable[] =
 	BattleText_LuckyChantSet,
 	BattleText_LuckyChantFaded,
 	BattleText_HealingWishCameTrue,
+	BattleText_WebSet,
+	BattleText_CaughtInWeb,
 };
 
 // below are lists of battle string enums and NOT pointers to the strings.
