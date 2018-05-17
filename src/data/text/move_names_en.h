@@ -409,4 +409,6 @@ const u8 gMoveNames[][13] = {
 	[MOVE_FORCE_PALM] = _("Force Palm"),
 	[MOVE_CHIP_AWAY] = _("Chip Away"),
 	[MOVE_PUNISHMENT] = _("Punishment"),
+	[MOVE_MIRACLE_EYE] = _("Miracle Eye"),
+	[MOVE_PSYCHO_CUT] = _("Psycho Cut"),
 };

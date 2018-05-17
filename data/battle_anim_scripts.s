@@ -425,6 +425,8 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_FORCE_PALM
 	.4byte Move_CHIP_AWAY
 	.4byte Move_PUNISHMENT
+	.4byte Move_MIRACLE_EYE
+	.4byte Move_PSYCHO_CUT
 	.4byte PoundCopy
 
 	.align 2
@@ -12302,4 +12304,61 @@ Move_PUNISHMENT:
 	waitbgfadein
 	end
 
+Move_MIRACLE_EYE:
+	loadspritegfx 10027
+	loadspritegfx 10189
+	monbg 4
+	playsewithpan SE_W043, 63
+	createsprite gBattleAnimSpriteTemplate_84022B0, 2, 24, -12
+	createvisualtask AnimTask_ScaleMonAndRestore, 5, -5, -5, 10, ANIM_BANK_ATTACKER, 1
+	createvisualtask shimmerFlexible, 5, 10189, 10027
+	call _MiracleEyeSubcall
+	call _MiracleEyeSubcall
+	call _MiracleEyeSubcall
+	call _MiracleEyeSubcall
+	setarg 7, -1
+	waitforvisualfinish
+	clearmonbg 4
+	end
+_MiracleEyeSubcall:
+	createsprite gBattleAnimSpriteTemplate_840220C, 4, 70, 0, 6
+	createsprite gBattleAnimSpriteTemplate_840220C, 4, 40, 40, 6
+	createsprite gBattleAnimSpriteTemplate_840220C, 4, 10, -60, 6
+	createsprite gBattleAnimSpriteTemplate_840220C, 4, -50, -40, 6
+	createsprite gBattleAnimSpriteTemplate_840220C, 4, -40, 40, 6
+	createsprite gBattleAnimSpriteTemplate_840220C, 4, 50, -50, 6
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_840220C, 4, 50, -30, 6
+	createsprite gBattleAnimSpriteTemplate_840220C, 4, 60, 10, 6
+	createsprite gBattleAnimSpriteTemplate_840220C, 4, 0, 60, 6
+	createsprite gBattleAnimSpriteTemplate_840220C, 4, 0, -40, 6
+	createsprite gBattleAnimSpriteTemplate_840220C, 4, -60, 20, 6
+	createsprite gBattleAnimSpriteTemplate_840220C, 4, -60, -30, 6
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_840220C, 4, -50, 50, 6
+	createsprite gBattleAnimSpriteTemplate_840220C, 4, -60, 20, 6
+	createsprite gBattleAnimSpriteTemplate_840220C, 4, -40, -40, 6
+	createsprite gBattleAnimSpriteTemplate_840220C, 4, 20, -60, 6
+	createsprite gBattleAnimSpriteTemplate_840220C, 4, 50, -50, 6
+	createsprite gBattleAnimSpriteTemplate_840220C, 4, 35, 40, 6
+	delay 2
+	return
 
+Move_PSYCHO_CUT:
+	loadspritegfx 10003
+	loadspritegfx 10135
+	monbg ANIM_BANK_DEF_PARTNER
+	monbgprio_28 1
+	setalpha 12, 8
+	call Unknown_81D61E7
+	call Move_SONIC_BOOM_CreateBlast
+	call Move_SONIC_BOOM_CreateBlast
+	call Move_SONIC_BOOM_CreateBlast
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_TARGET, 3, 0, 10, 1
+	call Move_SONIC_BOOM_CreateHitSplat
+	waitforvisualfinish
+	call Unknown_81D61F3
+	clearmonbg ANIM_BANK_DEF_PARTNER
+	blendoff
+	waitforvisualfinish
+	end

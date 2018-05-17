@@ -1375,7 +1375,9 @@ static void atk01_accuracycheck(void)
         if (AccuracyCalcHelper(move))
             return;
 
-        if (gBattleMons[gBankTarget].status2 & STATUS2_FORESIGHT || gCurrentMove == MOVE_CHIP_AWAY)
+        if (gBattleMons[gBankTarget].status2 & STATUS2_FORESIGHT
+		  || gStatuses3[gBankTarget] & STATUS3_MIRACLE_EYE
+		  || gCurrentMove == MOVE_CHIP_AWAY)
         {
             u8 acc = gBattleMons[gBankAttacker].statStages[STAT_STAGE_ACC];
             buff = acc;
@@ -1568,10 +1570,6 @@ void AI_CalcDmg(u8 BankAtk, u8 BankDef)
 
 static void ModulateDmgByType(u8 multiplier)
 {
-    gBattleMoveDamage = gBattleMoveDamage * multiplier / 10;
-    if (gBattleMoveDamage == 0 && multiplier != 0)
-        gBattleMoveDamage = 1;
-
     switch (multiplier)
     {
     case 0: //no effect
@@ -1579,6 +1577,29 @@ static void ModulateDmgByType(u8 multiplier)
         gMoveResultFlags &= ~MOVE_RESULT_NOT_VERY_EFFECTIVE;
         gMoveResultFlags &= ~MOVE_RESULT_SUPER_EFFECTIVE;
         break;
+	case 1: // no effect unless foresight
+		if (gBattleMons[gBankTarget].status2 & STATUS2_FORESIGHT)
+		{
+			multiplier = 10;
+			break;
+		}
+        gMoveResultFlags |= MOVE_RESULT_DOESNT_AFFECT_FOE;
+        gMoveResultFlags &= ~MOVE_RESULT_NOT_VERY_EFFECTIVE;
+        gMoveResultFlags &= ~MOVE_RESULT_SUPER_EFFECTIVE;
+		multiplier = 0;
+        break;
+	case 2: // no effect unless miracle eye
+		if (gStatuses3[gBankTarget] & STATUS3_MIRACLE_EYE)
+		{
+			multiplier = 10;
+			break;
+		}
+        gMoveResultFlags |= MOVE_RESULT_DOESNT_AFFECT_FOE;
+        gMoveResultFlags &= ~MOVE_RESULT_NOT_VERY_EFFECTIVE;
+        gMoveResultFlags &= ~MOVE_RESULT_SUPER_EFFECTIVE;
+		multiplier = 0;
+        break;
+		
     case 5: //not very effecting
         if (gBattleMoves[gCurrentMove].power && !(gMoveResultFlags & MOVE_RESULT_NO_EFFECT))
         {
@@ -1598,11 +1619,14 @@ static void ModulateDmgByType(u8 multiplier)
         }
         break;
     }
+    gBattleMoveDamage = gBattleMoveDamage * multiplier / 10;
+    if (gBattleMoveDamage == 0 && multiplier != 0)
+        gBattleMoveDamage = 1;
+
 }
 
 static void atk06_typecalc(void)
 {
-    int i = 0;
     u8 move_type;
     if (gCurrentMove != MOVE_STRUGGLE)
     {
@@ -1629,28 +1653,9 @@ static void atk06_typecalc(void)
         }
         else
         {
-            while (gTypeEffectiveness[i]!= TYPE_ENDTABLE)
-            {
-                if (gTypeEffectiveness[i] == TYPE_FORESIGHT)
-                {
-                    if (gBattleMons[gBankTarget].status2 & STATUS2_FORESIGHT)
-                        break;
-                    i += 3;
-                    continue;
-                }
-
-                else if (gTypeEffectiveness[i] == move_type)
-                {
-                    //check type1
-                    if (gTypeEffectiveness[i + 1] == gBattleMons[gBankTarget].type1)
-                        ModulateDmgByType(gTypeEffectiveness[i + 2]);
-                    //check type2
-                    if (gTypeEffectiveness[i + 1] == gBattleMons[gBankTarget].type2 &&
-                        gBattleMons[gBankTarget].type1 != gBattleMons[gBankTarget].type2)
-                        ModulateDmgByType(gTypeEffectiveness[i + 2]);
-                }
-                i += 3;
-            }
+			ModulateDmgByType(gTypeEffectiveness[move_type * 20 + gBattleMons[gBankTarget].type1]);
+			if (gBattleMons[gBankTarget].type1 != gBattleMons[gBankTarget].type2)
+				ModulateDmgByType(gTypeEffectiveness[move_type * 20 + gBattleMons[gBankTarget].type2]);
         }
 
         if (gBattleMons[gBankTarget].ability == ABILITY_WONDER_GUARD && AttacksThisTurn(gBankAttacker, gCurrentMove) == 2
@@ -1672,7 +1677,7 @@ static void atk06_typecalc(void)
 static void CheckWonderGuardAndLevitate(void)
 {
     u8 flags = 0;
-    int i = 0;
+    u8 typemu = 0;
     u8 move_type;
 
     if (gCurrentMove == MOVE_STRUGGLE || !gBattleMoves[gCurrentMove].power)
@@ -1688,51 +1693,36 @@ static void CheckWonderGuardAndLevitate(void)
         RecordAbilitySetField6(ABILITY_LEVITATE, move_type);
         return;
     }
-
-    while (gTypeEffectiveness[i]!= TYPE_ENDTABLE)
-    {
-        if (gTypeEffectiveness[i] == TYPE_FORESIGHT)
-        {
-            if (gBattleMons[gBankTarget].status2 & STATUS2_FORESIGHT)
-                break;
-            i += 3;
-            continue;
-        }
-
-        if (gTypeEffectiveness[i] == move_type)
-        {
-            //check no effect
-            if (gTypeEffectiveness[i + 1] == gBattleMons[gBankTarget].type1 && gTypeEffectiveness[i + 2] == 0)
-            {
-                gMoveResultFlags |= MOVE_RESULT_DOESNT_AFFECT_FOE;
-                gProtectStructs[gBankAttacker].notEffective = 1;
-            }
-            if (gTypeEffectiveness[i + 1] == gBattleMons[gBankTarget].type2 &&
-                gBattleMons[gBankTarget].type1 != gBattleMons[gBankTarget].type2 &&
-                gTypeEffectiveness[i + 2] == 0)
-            {
-                gMoveResultFlags |= MOVE_RESULT_DOESNT_AFFECT_FOE;
-                gProtectStructs[gBankAttacker].notEffective = 1;
-            }
-
-            //check super effective
-            if (gTypeEffectiveness[i + 1] == gBattleMons[gBankTarget].type1 && gTypeEffectiveness[i + 2] == 20)
-                flags |= 1;
-            if (gTypeEffectiveness[i + 1] == gBattleMons[gBankTarget].type2
-             && gBattleMons[gBankTarget].type1 != gBattleMons[gBankTarget].type2
-             && gTypeEffectiveness[i + 2] == 20)
-                flags |= 1;
-
-            //check not very effective
-            if (gTypeEffectiveness[i + 1] == gBattleMons[gBankTarget].type1 && gTypeEffectiveness[i + 2] == 5)
-                flags |= 2;
-            if (gTypeEffectiveness[i + 1] == gBattleMons[gBankTarget].type2
-             && gBattleMons[gBankTarget].type1 != gBattleMons[gBankTarget].type2
-             && gTypeEffectiveness[i + 2] == 5)
-                flags |= 2;
-        }
-        i += 3;
-    }
+	
+	typemu = gTypeEffectiveness[move_type * 20  + gBattleMons[gBankTarget].type1];
+	if (typemu == 1 && !(gBattleMons[gBankTarget].status2 & STATUS2_FORESIGHT))
+		typemu = 0;
+	else if (typemu == 2 && !(gStatuses3[gBankTarget] & STATUS3_MIRACLE_EYE))
+		typemu = 0;
+	if (typemu == 0)
+	{
+		gMoveResultFlags |= MOVE_RESULT_DOESNT_AFFECT_FOE;
+		gProtectStructs[gBankAttacker].notEffective = 1;
+	}
+	else if (typemu == 5)
+		flags |= 2;
+	else if (typemu == 20)
+		flags |= 1;
+	
+	typemu = gTypeEffectiveness[move_type * 20  + gBattleMons[gBankTarget].type2];
+	if (typemu == 1 && !(gBattleMons[gBankTarget].status2 & STATUS2_FORESIGHT))
+		typemu = 0;
+	else if (typemu == 2 && !(gStatuses3[gBankTarget] & STATUS3_MIRACLE_EYE))
+		typemu = 0;
+	if (typemu == 0)
+	{
+		gMoveResultFlags |= MOVE_RESULT_DOESNT_AFFECT_FOE;
+		gProtectStructs[gBankAttacker].notEffective = 1;
+	}
+	else if (typemu == 5)
+		flags |= 2;
+	else if (typemu == 20)
+		flags |= 1;
 
     if (gBattleMons[gBankTarget].ability == ABILITY_WONDER_GUARD && AttacksThisTurn(gBankAttacker, gCurrentMove) == 2)
     {
@@ -1745,16 +1735,34 @@ static void CheckWonderGuardAndLevitate(void)
 
 static void ModulateDmgByType2(u8 multiplier, u16 move, u8* flags) //a literal copy of the ModulateDmgbyType1 with different args...
 {
-    gBattleMoveDamage = gBattleMoveDamage * multiplier / 10;
-    if (gBattleMoveDamage == 0 && multiplier != 0)
-        gBattleMoveDamage = 1;
-
     switch (multiplier)
     {
     case 0: //no effect
         *flags |= MOVE_RESULT_DOESNT_AFFECT_FOE;
         *flags &= ~MOVE_RESULT_NOT_VERY_EFFECTIVE;
         *flags &= ~MOVE_RESULT_SUPER_EFFECTIVE;
+        break;
+	case 1: //no effect unless foresight on target
+		if (gBattleMons[gBankTarget].status2 & STATUS2_FORESIGHT)
+		{
+			multiplier = 10;
+			break;
+		}
+        *flags |= MOVE_RESULT_DOESNT_AFFECT_FOE;
+        *flags &= ~MOVE_RESULT_NOT_VERY_EFFECTIVE;
+        *flags &= ~MOVE_RESULT_SUPER_EFFECTIVE;
+		multiplier = 0;
+        break;
+	case 2: //no effect unless miracle eye on target
+		if (gStatuses3[gBankTarget] & STATUS3_MIRACLE_EYE)
+		{
+			multiplier = 10;
+			break;
+		}
+        *flags |= MOVE_RESULT_DOESNT_AFFECT_FOE;
+        *flags &= ~MOVE_RESULT_NOT_VERY_EFFECTIVE;
+        *flags &= ~MOVE_RESULT_SUPER_EFFECTIVE;
+		multiplier = 0;
         break;
     case 5: //not very effecting
         if (gBattleMoves[move].power && !(*flags & MOVE_RESULT_NO_EFFECT))
@@ -1775,11 +1783,14 @@ static void ModulateDmgByType2(u8 multiplier, u16 move, u8* flags) //a literal c
         }
         break;
     }
+	
+    gBattleMoveDamage = gBattleMoveDamage * multiplier / 10;
+    if (gBattleMoveDamage == 0 && multiplier != 0)
+        gBattleMoveDamage = 1;
 }
 
 u8 TypeCalc(u16 move, u8 bank_atk, u8 bank_def)
 {
-    int i = 0;
     u8 flags = 0;
     u8 move_type;
 
@@ -1801,28 +1812,9 @@ u8 TypeCalc(u16 move, u8 bank_atk, u8 bank_def)
     }
     else
     {
-        while (gTypeEffectiveness[i]!= TYPE_ENDTABLE)
-        {
-            if (gTypeEffectiveness[i] == TYPE_FORESIGHT)
-            {
-                if (gBattleMons[bank_def].status2 & STATUS2_FORESIGHT)
-                    break;
-                i += 3;
-                continue;
-            }
-
-            else if (gTypeEffectiveness[i] == move_type)
-            {
-                //check type1
-                if (gTypeEffectiveness[i + 1] == gBattleMons[bank_def].type1)
-                    ModulateDmgByType2(gTypeEffectiveness[i + 2], move, &flags);
-                //check type2
-                if (gTypeEffectiveness[i + 1] == gBattleMons[bank_def].type2 &&
-                    gBattleMons[gBankTarget /* what the christ */].type1 != gBattleMons[bank_def].type2)
-                    ModulateDmgByType2(gTypeEffectiveness[i + 2], move, &flags);
-            }
-            i += 3;
-        }
+		ModulateDmgByType2(gTypeEffectiveness[move_type * 20 + gBattleMons[bank_def].type1], move, &flags);
+		if (gBattleMons[bank_def].type1 != gBattleMons[bank_def].type2)
+			ModulateDmgByType2(gTypeEffectiveness[move_type * 20 + gBattleMons[bank_def].type2], move, &flags);
     }
 
     if (gBattleMons[bank_def].ability == ABILITY_WONDER_GUARD && !(flags & MOVE_RESULT_MISSED) &&
@@ -1837,7 +1829,6 @@ u8 TypeCalc(u16 move, u8 bank_atk, u8 bank_def)
 
 u8 AI_TypeCalc(u16 move, u16 species, u8 ability)
 {
-    int i = 0;
     u8 flags = 0;
     u8 type1 = gBaseStats[species].type1, type2 = gBaseStats[species].type2, move_type;
 
@@ -1850,24 +1841,9 @@ u8 AI_TypeCalc(u16 move, u16 species, u8 ability)
         flags = MOVE_RESULT_MISSED | MOVE_RESULT_DOESNT_AFFECT_FOE;
     else
     {
-        while (gTypeEffectiveness[i]!= TYPE_ENDTABLE)
-        {
-            if (gTypeEffectiveness[i] == TYPE_FORESIGHT)
-            {
-                i += 3;
-                continue;
-            }
-            if (gTypeEffectiveness[i] == move_type)
-            {
-                //check type1
-                if (gTypeEffectiveness[i + 1] == type1)
-                    ModulateDmgByType2(gTypeEffectiveness[i + 2], move, &flags);
-                //check type2
-                if (gTypeEffectiveness[i + 1] == type2 && gBattleMons[gBankTarget].type1 != type2) //gf you morons, you should check if (type1 != type2)...
-                    ModulateDmgByType2(gTypeEffectiveness[i + 2], move, &flags);
-            }
-            i += 3;
-        }
+		ModulateDmgByType2(gTypeEffectiveness[move_type * 20 + type1], move, &flags);
+		if (type1 != type2)
+			ModulateDmgByType2(gTypeEffectiveness[move_type * 20 + type2], move, &flags);
     }
     if (ability == ABILITY_WONDER_GUARD
      && (!(flags & MOVE_RESULT_SUPER_EFFECTIVE) || ((flags & (MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE)) == (MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE)))
@@ -8276,7 +8252,7 @@ _080222D8: .4byte gBattlescriptCurrInstr\n\
 static void atk4A_typecalc2(void)
 {
     u8 flags = 0;
-    int i = 0;
+    u8 typemu = 0;
     u8 move_type = gBattleMoves[gCurrentMove].type;
 
     if (gBattleMons[gBankTarget].ability == ABILITY_LEVITATE && move_type == TYPE_GROUND)
@@ -8289,47 +8265,29 @@ static void atk4A_typecalc2(void)
     }
     else
     {
-        while (gTypeEffectiveness[i]!= TYPE_ENDTABLE)
-        {
-            if (gTypeEffectiveness[i] == TYPE_FORESIGHT)
-            {
-                if (gBattleMons[gBankTarget].status2 & STATUS2_FORESIGHT) {break;}
-                else {i += 3; continue;}
-            }
-
-            if (gTypeEffectiveness[i] == move_type)
-            {
-                //check type1
-                if (gTypeEffectiveness[i + 1] == gBattleMons[gBankTarget].type1)
-                {
-                    if (gTypeEffectiveness[i + 2] == 0)
-                    {
-                        gMoveResultFlags |= MOVE_RESULT_DOESNT_AFFECT_FOE;
-                        break;
-                    }
-                    if (gTypeEffectiveness[i + 2] == 5)
-                        flags |= MOVE_RESULT_NOT_VERY_EFFECTIVE;
-                    if (gTypeEffectiveness[i + 2] == 20)
-                        flags |= MOVE_RESULT_SUPER_EFFECTIVE;
-                }
-                //check type2
-                if (gTypeEffectiveness[i + 1] == gBattleMons[gBankTarget].type2)
-                {
-                    if (gBattleMons[gBankTarget].type1 != gBattleMons[gBankTarget].type2
-                        && gTypeEffectiveness[i + 2] == 0)
-                    {
-                        gMoveResultFlags |= MOVE_RESULT_DOESNT_AFFECT_FOE;
-                        break;
-                    }
-                    if (gTypeEffectiveness[i + 1] == gBattleMons[gBankTarget].type2 && gBattleMons[gBankTarget].type1 != gBattleMons[gBankTarget].type2 && gTypeEffectiveness[i + 2] == 5)
-                        flags |= MOVE_RESULT_NOT_VERY_EFFECTIVE;
-                    if (gTypeEffectiveness[i + 1] == gBattleMons[gBankTarget].type2
-                        && gBattleMons[gBankTarget].type1 != gBattleMons[gBankTarget].type2 && gTypeEffectiveness[i + 2] == 20)
-                            flags |= MOVE_RESULT_SUPER_EFFECTIVE;
-                }
-            }
-            i += 3;
-        }
+		typemu = gTypeEffectiveness[move_type * 20 + gBattleMons[gBankTarget].type1];
+		if (typemu == 1 && !(gBattleMons[gBankTarget].status2 & STATUS2_FORESIGHT))
+			typemu = 0;
+		else if (typemu == 2 && !(gStatuses3[gBankTarget] & STATUS3_MIRACLE_EYE))
+			typemu = 0;
+		if (typemu == 0)
+            gMoveResultFlags |= MOVE_RESULT_DOESNT_AFFECT_FOE;
+		else if (typemu == 5)
+			gMoveResultFlags |= MOVE_RESULT_NOT_VERY_EFFECTIVE;
+		else if (typemu == 20)
+			gMoveResultFlags |= MOVE_RESULT_SUPER_EFFECTIVE;
+		typemu = gTypeEffectiveness[move_type * 20 + gBattleMons[gBankTarget].type2];
+		
+		if (typemu == 1 && !(gBattleMons[gBankTarget].status2 & STATUS2_FORESIGHT))
+			typemu = 0;
+		else if (typemu == 2 && !(gStatuses3[gBankTarget] & STATUS3_MIRACLE_EYE))
+			typemu = 0;
+		if (typemu == 0)
+            gMoveResultFlags |= MOVE_RESULT_DOESNT_AFFECT_FOE;
+		else if (typemu == 5)
+			gMoveResultFlags |= MOVE_RESULT_NOT_VERY_EFFECTIVE;
+		else if (typemu == 20)
+			gMoveResultFlags |= MOVE_RESULT_SUPER_EFFECTIVE;
     }
 
     if (gBattleMons[gBankTarget].ability == ABILITY_WONDER_GUARD && !(flags & MOVE_RESULT_NO_EFFECT) && AttacksThisTurn(gBankAttacker, gCurrentMove) == 2 &&
@@ -13710,7 +13668,10 @@ static void atkB0_trysetspikes(void)
 
 static void atkB1_setforesight(void)
 {
-    gBattleMons[gBankTarget].status2 |= STATUS2_FORESIGHT;
+	if (gCurrentMove == MOVE_MIRACLE_EYE)
+		gStatuses3[gBankTarget] |= STATUS3_MIRACLE_EYE;
+	else
+		gBattleMons[gBankTarget].status2 |= STATUS2_FORESIGHT;
     gBattlescriptCurrInstr++;
 }
 

@@ -55,3 +55,36 @@ void sub_80CC5F8(u8 taskId)
     if (gBattleAnimArgs[7] == -1)
         DestroyAnimVisualTask(taskId);
 }
+
+void shimmerFlexible(u8 taskId)
+{
+    struct Task* task = &gTasks[taskId];
+    switch (task->data[0])
+    {
+    case 0:
+        task->data[8] = IndexOfSpritePaletteTag(gBattleAnimArgs[0]) * 16 + 256;
+        task->data[12] = IndexOfSpritePaletteTag(gBattleAnimArgs[1]) * 16 + 256;
+        task->data[0]++;
+        break;
+    case 1:
+        task->data[9]++;
+        if (task->data[9] >= 0)
+        {
+            task->data[9] = 0;
+            BlendPalette(task->data[8], 0x10, task->data[10], sMagicalLeafBlendColors[task->data[11]]);
+            BlendPalette(task->data[12], 0x10, task->data[10], sMagicalLeafBlendColors[task->data[11]]);
+            task->data[10]++;
+            if (task->data[10] == 17)
+            {
+                task->data[10] = 0;
+                task->data[11]++;
+                if (task->data[11] == 7)
+                    task->data[11] = 0;
+            }
+        }
+        break;
+    }
+
+    if (gBattleAnimArgs[7] == -1)
+        DestroyAnimVisualTask(taskId);
+}

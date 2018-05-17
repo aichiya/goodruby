@@ -1634,6 +1634,14 @@ static const u8 MoveDescription_Punishment[] = _(
     "Power rises the more the\n"
     "target’s stats are raised.");
 
+static const u8 MoveDescription_MiracleEye[] = _(
+    "Negates the foe’s efforts\n"
+    "to heighten evasiveness.");
+
+static const u8 MoveDescription_PsychoCut[] = _(
+    "A psychic blade attack.\n"
+    "High critical-hit ratio.");
+
 
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
@@ -2045,4 +2053,6 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_ForcePalm,
 	MoveDescription_ChipAway,
 	MoveDescription_Punishment,
+	MoveDescription_MiracleEye,
+	MoveDescription_PsychoCut,
 };

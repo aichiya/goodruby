@@ -1,10 +1,152 @@
-@ format: attacking type, defending type, damage multiplier
-@ the multiplier is a (decimal) fixed-point number:
-@     20 is ×2.0
-@     05 is ×0.5
-@     00 is ×0
+@ no this is too stupid i'm overhauling it
+@ type order: 
+@ normal, fighting, flying, poison,   ground
+@ rock,   bug,      ghost,  steel,    fairy
+@ fire,   water,    grass,  electric, psychic
+@ ice,    dragon,   dark,   roosting, --
+@
+@ 0 = ineffective
+@ 1 = ineffective ; neutral if foresight or scrappy
+@ 2 = ineffective ; neutral if miracle eye
+@ 5 == NVE
+@ 10 == neutral
+@ 20 = SE
 
 gTypeEffectiveness:: @ 81F9720
+
+@ Normal
+	.byte 10, 10, 10, 10, 10
+	.byte  5, 10,  1,  5, 10
+	.byte 10, 10, 10, 10, 10
+	.byte 10, 10, 10, 10, 10
+
+@ Fighting
+	.byte 20, 10,  5,  5, 10
+	.byte 20,  5,  1, 20,  5
+	.byte 10, 10, 10, 10,  5
+	.byte 20, 10, 20, 10, 10
+
+@ Flying
+	.byte 10, 20, 10, 10, 10
+	.byte  5, 20, 10,  5, 10
+	.byte 10, 10, 10,  5, 10
+	.byte 10, 10, 10, 10, 10
+
+@ Poison
+	.byte 10, 10, 10,  5,  5
+	.byte  5, 10,  5,  0, 20
+	.byte 10, 10, 20, 10, 10
+	.byte 10, 10, 10, 10, 10
+
+@ Ground
+	.byte 10, 10,  0, 20, 10
+	.byte 20,  5, 10, 20, 10
+	.byte 20, 10,  5, 20, 10
+	.byte 10, 10, 10, 10, 10
+
+@ Rock
+	.byte 10,  5, 20, 10,  5
+	.byte 10, 20, 10,  5, 10
+	.byte 20, 10, 10, 10, 10
+	.byte 20, 10, 10, 10, 10
+
+@ Bug
+	.byte 10,  5,  5,  5, 10
+	.byte 10, 10,  5,  5,  5
+	.byte  5, 10, 20, 10, 20
+	.byte 10, 10, 20, 10, 10
+	
+@ normal, fighting, flying, poison,   ground
+@ rock,   bug,      ghost,  steel,    fairy
+@ fire,   water,    grass,  electric, psychic
+@ ice,    dragon,   dark,   roosting, --
+
+@ Ghost
+	.byte  0, 10, 10, 10, 10
+	.byte 10, 10, 20, 10, 10
+	.byte 10, 10, 10, 10, 20
+	.byte 10, 10,  5, 10, 10
+
+@ Steel
+	.byte 10, 10, 10, 10, 10
+	.byte 20, 10, 10,  5, 20
+	.byte  5,  5, 10,  5, 10
+	.byte 20, 10, 10, 10, 10
+
+@ Fairy
+	.byte 10, 20, 10,  5, 10
+	.byte 10, 10, 10,  5, 10
+	.byte  5, 10, 10, 10, 10
+	.byte 10, 20, 20, 10, 10
+
+@ Fire
+	.byte 10, 10, 10, 10, 10
+	.byte  5, 20, 10, 20, 10
+	.byte  5,  5, 20, 10, 10
+	.byte 20,  5, 10, 10, 10
+
+@ Water
+	.byte 10, 10, 10, 10, 20
+	.byte 20, 10, 10, 10, 10
+	.byte 20,  5,  5, 10, 10
+	.byte 10,  5, 10, 10, 10
+
+@ Grass
+	.byte 10, 10,  5,  5, 20
+	.byte 20,  5, 10,  5, 10
+	.byte  5, 20,  5, 10, 10
+	.byte 10,  5, 10, 10, 10
+
+@ Electric
+	.byte 10, 10, 20, 10,  0
+	.byte 10, 10, 10, 10, 10
+	.byte 10, 20,  5,  5, 10
+	.byte 10,  5, 10, 10, 10
+	
+@ normal, fighting, flying, poison,   ground
+@ rock,   bug,      ghost,  steel,    fairy
+@ fire,   water,    grass,  electric, psychic
+@ ice,    dragon,   dark,   roosting, --
+
+@ Psychic
+	.byte 10, 20, 10, 20, 10
+	.byte 10, 10, 10,  5, 10
+	.byte 10, 10, 10, 10,  5
+	.byte 10, 10,  2, 10, 10
+
+@ Ice
+	.byte 10, 10, 20, 10, 20
+	.byte 10, 10, 10,  5, 10
+	.byte  5,  5, 20, 10, 10
+	.byte  5, 20, 10, 10, 10
+
+@ Dragon
+	.byte 10, 10, 10, 10, 10
+	.byte 10, 10, 10,  5,  0
+	.byte 10, 10, 10, 10, 10
+	.byte 10, 20, 10, 10, 10
+
+@ Dark
+	.byte 10,  5, 10, 10, 10
+	.byte 10, 10, 20, 10,  5
+	.byte 10, 10, 10, 10, 20
+	.byte 10, 10,  5, 10, 10
+
+@ Roosting (flying ; shouldn't be used)
+	.byte 10, 20, 10, 10, 10
+	.byte  5, 20, 10,  5, 10
+	.byte 10, 10, 10,  5, 10
+	.byte 10, 10, 10, 10, 10
+
+@ Untype
+	.byte 10, 10, 10, 10, 10
+	.byte 10, 10, 10, 10, 10
+	.byte 10, 10, 10, 10, 10
+	.byte 10, 10, 10, 10, 10
+	.byte 10, 10, 10, 10, 10
+
+
+@ Old abomination
 	.byte   TYPE_NORMAL,     TYPE_ROCK,  5
 	.byte   TYPE_NORMAL,    TYPE_STEEL,  5
 	.byte     TYPE_FIRE,     TYPE_FIRE,  5
