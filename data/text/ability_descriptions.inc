@@ -241,6 +241,9 @@ gAbilityDescription_Gluttony:
 gAbilityDescription_Hydration:
 	.string "Heals status in rain.$"
 
+gAbilityDescription_PoisonHeal:
+	.string "Recover HP while poisoned.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -325,3 +328,4 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_QuickFeet
 	.4byte gAbilityDescription_Gluttony
 	.4byte gAbilityDescription_Hydration
+	.4byte gAbilityDescription_PoisonHeal

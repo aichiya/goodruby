@@ -363,3 +363,5 @@
 	enum BATTLE_TEXT_HealingWishCameTrue
     enum BATTLE_TEXT_WebSet
 	enum BATTLE_TEXT_CaughtInWeb
+	enum BATTLE_TEXT_WorrySeed
+	enum BATTLE_TEXT_PoisonHeal

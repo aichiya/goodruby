@@ -420,6 +420,9 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_AQUA_JET
 	.4byte Move_STICKY_WEB
 	.4byte Move_OMINOUS_WIND
+	.4byte Move_WORRY_SEED
+	.4byte Move_SEED_BOMB
+	.4byte Move_FORCE_PALM
 	.4byte PoundCopy
 
 	.align 2
@@ -12184,4 +12187,64 @@ Move_CRABHAMMER:
 	blendoff
 	end
 
+Move_WORRY_SEED:
+	loadspritegfx 10006
+	loadspritegfx 10198
+	playsewithpan SE_W039, 192
+	createsprite gBattleAnimSpriteTemplate_SeedBomb, 130, 10, 0, 0, 0, 25, -32
+	waitforvisualfinish
+	createvisualtask sub_80E2A38, 10, 4, 1, 0, 9, 16912
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BANK_TARGET, 2, 0, 16, 1
+	playsewithpan SE_W060, 192
+	waitforvisualfinish
+	createvisualtask sub_80E2A38, 10, 4, 1, 9, 0, 16912
+	waitforvisualfinish
+	end
+
+Move_SEED_BOMB:
+	loadspritegfx 10006
+	loadspritegfx 10198
+	playsewithpan SE_W039, 192
+	createsprite gBattleAnimSpriteTemplate_SeedBomb, 130, 10, 0, 0, 0, 25, -32
+	waitforvisualfinish
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BANK_TARGET, 4, 0, 16, 1
+	createsprite gBattleAnimSpriteTemplate_83D7828, 132, 6, 5, 1, 0
+	playsewithpan SE_W120, 63
+	delay 3
+	createsprite gBattleAnimSpriteTemplate_83D7828, 132, -16, -15, 1, 0
+	playsewithpan SE_W120, 63
+	delay 3
+	createsprite gBattleAnimSpriteTemplate_83D7828, 132, 16, -5, 1, 0
+	playsewithpan SE_W120, 63
+	delay 3
+	createsprite gBattleAnimSpriteTemplate_83D7828, 132, -12, 18, 1, 0
+	playsewithpan SE_W120, 63
+	delay 3
+	createsprite gBattleAnimSpriteTemplate_83D7828, 132, 0, 5, 1, 0
+	playsewithpan SE_W120, 63
+	delay 3
+	waitforvisualfinish
+	end
+
+Move_FORCE_PALM:
+	loadspritegfx 10143
+	loadspritegfx 10135
+	loadspritegfx 10011
+	monbgprio_28 1
+	setalpha 12, 8
+	createvisualtask sub_80A8E04, 5, 8, 5, 0, 0
+	delay 6
+	createsprite gHorizontalLungeSpriteTemplate, 2, 4, 3
+	delay 4
+	playsewithpan SE_W207, 63
+	createsprite gBattleAnimSpriteTemplate_83DA144, 130, 10, -8, 14, 3
+	waitforvisualfinish
+	createvisualtask sub_80A8E04, 5, 8, 5, 0, 1
+	playsewithpan SE_W003, 63
+	createsprite gBasicHitSplatSpriteTemplate, 130, 8, 0, 1, 2
+	createvisualtask AnimTask_ShakeMon, 5, 1, 4, 0, 6, 1
+	call ElectricityEffect
+	waitforvisualfinish
+	blendoff
+	end
 

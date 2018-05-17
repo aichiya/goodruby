@@ -245,6 +245,7 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectHealPulse
 	.4byte BattleScript_EffectHealingWish
 	.4byte BattleScript_EffectStickyWeb
+	.4byte BattleScript_EffectWorrySeed
 
 BattleScript_EffectHit: @ 81D6F14
 BattleScript_EffectAccuracyDown2: @ 81D6F14
@@ -3779,6 +3780,11 @@ BattleScript_MonWokeUpInUproar:: @ 81D950F
 	waitmessage 64
 	updatestatusicon USER
 	end2
+	
+BattleScript_PoisonHealDmg::
+	printstring BATTLE_TEXT_PoisonHeal
+	waitmessage 64
+	goto BattleScript_DoTurnDmg
 
 BattleScript_PoisonTurnDmg:: @ 81D9518
 	printstring BATTLE_TEXT_PoisonHurt
@@ -5148,7 +5154,19 @@ BattleScript_PrintStickyWebMessage:
 	waitmessage 64
 	return
 
-
+BattleScript_EffectWorrySeed:
+    attackcanceler
+    attackstring
+    ppreduce
+	jumpifstatus2 TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
+	jumpifability TARGET, ABILITY_INSOMNIA, BattleScript_ButItFailed
+	jumpifability TARGET, ABILITY_VITAL_SPIRIT, BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	printstring BATTLE_TEXT_WorrySeed
+	waitmessage 64
+    special 0x18
+	goto BattleScript_MoveEnd
 
 
 

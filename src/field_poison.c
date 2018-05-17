@@ -8,6 +8,7 @@
 #include "string_util.h"
 #include "task.h"
 #include "text.h"
+#include "constants/abilities.h"
 #include "constants/species.h"
 
 extern u16 gSpecialVar_Result;
@@ -124,7 +125,8 @@ s32 DoPoisonFieldEffect(void)
         u32 hp;
 
         if (GetMonData(mon, MON_DATA_SANITY_BIT2) != 0
-         && GetPrimaryStatus(GetMonData(mon, MON_DATA_STATUS)) == STATUS_PRIMARY_POISON)
+         && GetPrimaryStatus(GetMonData(mon, MON_DATA_STATUS)) == STATUS_PRIMARY_POISON
+		 && GetMonAbility(mon) != ABILITY_POISON_HEAL)
         {
             // decrement HP of poisoned mon
             hp = GetMonData(mon, MON_DATA_HP);

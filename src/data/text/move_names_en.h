@@ -404,4 +404,7 @@ const u8 gMoveNames[][13] = {
 	[MOVE_AQUA_JET] = _("Aqua Jet"),
 	[MOVE_STICKY_WEB] = _("Sticky Web"),
 	[MOVE_OMINOUS_WIND] = _("Ominous Wind"),
+	[MOVE_WORRY_SEED] = _("Worry Seed"),
+	[MOVE_SEED_BOMB] = _("Seed Bomb"),
+	[MOVE_FORCE_PALM] = _("Force Palm"),
 };

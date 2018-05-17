@@ -657,6 +657,7 @@ static void sp14_setstickyweb(void);
 static void sp15_webaffect(void);
 static void sp16_defogfoeweb(void);
 static void sp17_defogownweb(void);
+static void sp18_worryseed(void);
 
 void (* const gBattleScriptingCommandsTable[])(void) =
 {
@@ -16160,6 +16161,7 @@ void (* const gBattleScriptingSpecialTable[])(void) =
 	sp15_webaffect,
 	sp16_defogfoeweb,
 	sp17_defogownweb,
+	sp18_worryseed,
 };
 
 
@@ -16868,4 +16870,12 @@ static void sp17_defogownweb(void)
 	{
 		gBattlescriptCurrInstr += 6;
 	}
+}
+
+static void sp18_worryseed(void)
+{
+    //Set target's ability to Insomnia.
+    //Don't worry about fail-checking, script accounts for that.
+   
+    gBattleMons[gBankTarget].ability = ABILITY_INSOMNIA;
 }

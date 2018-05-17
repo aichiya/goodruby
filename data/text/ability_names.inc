@@ -80,3 +80,4 @@ gAbilityNames:: @ 81FA248
 	.string "QUICK FEET$", 13
 	.string "GLUTTONY$", 13
 	.string "HYDRATION$", 13
+	.string "POISON HEAL$", 13

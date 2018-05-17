@@ -1614,6 +1614,18 @@ static const u8 MoveDescription_OminousWind[] = _(
     "An repulsive attack that\n"
     "may raise all stats.");
 
+static const u8 MoveDescription_WorrySeed[] = _(
+    "Changes the target’s\n"
+    "Ability to Insomnia.");
+
+static const u8 MoveDescription_SeedBomb[] = _(
+    "Hurls an explosive seed\n"
+    "at the target.");
+
+static const u8 MoveDescription_ForcePalm[] = _(
+    "A open-palm strike that\n"
+    "may cause paralysis.");
+
 
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
@@ -2020,4 +2032,7 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_AquaJet,
 	MoveDescription_StickyWeb,
 	MoveDescription_OminousWind,
+	MoveDescription_WorrySeed,
+	MoveDescription_SeedBomb,
+	MoveDescription_ForcePalm,
 };

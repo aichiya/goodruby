@@ -103,6 +103,7 @@ extern u8 BattleScript_WishComesTrue[];
 extern u8 BattleScript_IngrainTurnHeal[];
 extern u8 BattleScript_LeechSeedTurnDrain[];
 extern u8 BattleScript_PoisonTurnDmg[];
+extern u8 BattleScript_PoisonHealDmg[];
 extern u8 BattleScript_BurnTurnDmg[];
 extern u8 BattleScript_NightmareTurnDmg[];
 extern u8 BattleScript_CurseTurnDmg[];
@@ -960,7 +961,15 @@ u8 TurnBasedEffects(void)
                     gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 8;
                     if (gBattleMoveDamage == 0)
                         gBattleMoveDamage = 1;
-                    BattleScriptExecute(BattleScript_PoisonTurnDmg);
+					if (gBattleMons[gActiveBattler].ability == ABILITY_POISON_HEAL)
+					{
+						gBattleMoveDamage *= -1;
+						BattleScriptExecute(BattleScript_PoisonHealDmg);
+					}
+                    else
+					{
+						BattleScriptExecute(BattleScript_PoisonTurnDmg);
+					}
                     effect++;
                 }
                 gBattleStruct->turnEffectsTracker++;
