@@ -5308,4 +5308,30 @@ const struct BattleMove gBattleMoves[] = {
         .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
 		.moveClass = CLASS_PHYSICAL,
     },
+	
+	[MOVE_CHIP_AWAY] = {
+        .effect = EFFECT_HIT,
+        .power = 70,
+        .type = TYPE_NORMAL,
+        .accuracy = 100,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+		.moveClass = CLASS_PHYSICAL,
+    },
+	
+	[MOVE_PUNISHMENT] = {
+        .effect = EFFECT_PUNISHMENT,
+        .power = 60,
+        .type = TYPE_DARK,
+        .accuracy = 100,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+		.moveClass = CLASS_PHYSICAL,
+    },
 };

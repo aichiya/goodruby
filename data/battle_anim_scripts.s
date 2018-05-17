@@ -423,6 +423,8 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_WORRY_SEED
 	.4byte Move_SEED_BOMB
 	.4byte Move_FORCE_PALM
+	.4byte Move_CHIP_AWAY
+	.4byte Move_PUNISHMENT
 	.4byte PoundCopy
 
 	.align 2
@@ -12247,4 +12249,57 @@ Move_FORCE_PALM:
 	waitforvisualfinish
 	blendoff
 	end
+
+Move_CHIP_AWAY:
+	loadspritegfx 10135
+	monbg ANIM_BANK_TARGET
+	setalpha 12, 8
+	playsewithpan SE_W233, 63
+	createsprite gHorizontalLungeSpriteTemplate, 2, 4, 4
+	delay 6
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_TARGET, 3, 0, 18, 1
+	loopsewithpan SE_W004, 63, 5, 5
+	createsprite gBasicHitSplatSpriteTemplate, 2, -16, 0, 1, 2
+    delay 5
+	createsprite gBasicHitSplatSpriteTemplate, 2, -8, 0, 1, 2
+    delay 5
+	createsprite gBasicHitSplatSpriteTemplate, 2, 0, 0, 1, 2
+    delay 5
+	createsprite gBasicHitSplatSpriteTemplate, 2, 8, 0, 1, 2
+    delay 5
+	createsprite gBasicHitSplatSpriteTemplate, 2, 16, 0, 1, 2
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_TARGET
+	blendoff
+	end
+
+Move_PUNISHMENT:
+	loadspritegfx 10277
+	loadspritegfx 10135
+	monbg ANIM_BANK_ATTACKER
+	fadetobg 1
+	waitbgfadein
+	delay 0
+	createsprite gHorizontalLungeSpriteTemplate, 2, 4, 6
+	delay 4
+	playsewithpan SE_W233, 63
+	createsprite gBattleAnimSpriteTemplate_8402AE4, 130, -16, -16
+	delay 8
+	createsprite gBattleAnimSpriteTemplate_83DB3DC, 2, 31, 5, 1, 32767, 10, 0, 0
+	createsprite gBasicHitSplatSpriteTemplate, 131, 0, 0, 1, 2
+	playsewithpan SE_W004, 63
+	createsprite gSlideMonToOffsetSpriteTemplate, 2, 1, -12, 10, 0, 3
+	createsprite gSlideMonToOriginalPosSpriteTemplate, 2, 0, 0, 5
+	delay 3
+	createvisualtask AnimTask_ShakeMonInPlace, 2, ANIM_BANK_TARGET, 0, 3, 6, 1
+	delay 5
+	createsprite gSlideMonToOriginalPosSpriteTemplate, 2, 1, 0, 6
+	delay 10
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_ATTACKER
+	delay 1
+	restorebg
+	waitbgfadein
+	end
+
 

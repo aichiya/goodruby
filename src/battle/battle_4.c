@@ -658,6 +658,7 @@ static void sp15_webaffect(void);
 static void sp16_defogfoeweb(void);
 static void sp17_defogownweb(void);
 static void sp18_worryseed(void);
+static void sp19_punishment(void);
 
 void (* const gBattleScriptingCommandsTable[])(void) =
 {
@@ -1374,7 +1375,7 @@ static void atk01_accuracycheck(void)
         if (AccuracyCalcHelper(move))
             return;
 
-        if (gBattleMons[gBankTarget].status2 & STATUS2_FORESIGHT)
+        if (gBattleMons[gBankTarget].status2 & STATUS2_FORESIGHT || gCurrentMove == MOVE_CHIP_AWAY)
         {
             u8 acc = gBattleMons[gBankAttacker].statStages[STAT_STAGE_ACC];
             buff = acc;
@@ -16162,6 +16163,7 @@ void (* const gBattleScriptingSpecialTable[])(void) =
 	sp16_defogfoeweb,
 	sp17_defogownweb,
 	sp18_worryseed,
+	sp19_punishment,
 };
 
 
@@ -16878,4 +16880,29 @@ static void sp18_worryseed(void)
     //Don't worry about fail-checking, script accounts for that.
    
     gBattleMons[gBankTarget].ability = ABILITY_INSOMNIA;
+}
+
+static void sp19_punishment(void)
+{
+	u16 power = 20;
+	
+	if (gBattleMons[gBankTarget].statStages[STAT_STAGE_ATK] > 6)
+		power += (gBattleMons[gBankTarget].statStages[STAT_STAGE_ATK] - 6) * 20;
+	if (gBattleMons[gBankTarget].statStages[STAT_STAGE_DEF] > 6)
+		power += (gBattleMons[gBankTarget].statStages[STAT_STAGE_DEF] - 6) * 20;
+	if (gBattleMons[gBankTarget].statStages[STAT_STAGE_SPEED] > 6)
+		power += (gBattleMons[gBankTarget].statStages[STAT_STAGE_SPEED] - 6) * 20;
+	if (gBattleMons[gBankTarget].statStages[STAT_STAGE_SPATK] > 6)
+		power += (gBattleMons[gBankTarget].statStages[STAT_STAGE_SPATK] - 6) * 20;
+	if (gBattleMons[gBankTarget].statStages[STAT_STAGE_SPDEF] > 6)
+		power += (gBattleMons[gBankTarget].statStages[STAT_STAGE_SPDEF] - 6) * 20;
+	if (gBattleMons[gBankTarget].statStages[STAT_STAGE_ACC] > 6)
+		power += (gBattleMons[gBankTarget].statStages[STAT_STAGE_ACC] - 6) * 20;
+	if (gBattleMons[gBankTarget].statStages[STAT_STAGE_EVASION] > 6)
+		power += (gBattleMons[gBankTarget].statStages[STAT_STAGE_EVASION] - 6) * 20;
+	
+	if (power > 200)
+		power = 200;
+	
+	gDynamicBasePower = power;
 }

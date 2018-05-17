@@ -263,6 +263,9 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
                 defense *= 2;
         }
     }
+	
+	if (gCurrentMove == MOVE_CHIP_AWAY)
+		defenseMod = 6;
 
     if (gCritMultiplier == 2)
     {

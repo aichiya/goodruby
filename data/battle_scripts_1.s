@@ -246,6 +246,7 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectHealingWish
 	.4byte BattleScript_EffectStickyWeb
 	.4byte BattleScript_EffectWorrySeed
+	.4byte BattleScript_EffectPunishment
 
 BattleScript_EffectHit: @ 81D6F14
 BattleScript_EffectAccuracyDown2: @ 81D6F14
@@ -5168,5 +5169,8 @@ BattleScript_EffectWorrySeed:
     special 0x18
 	goto BattleScript_MoveEnd
 
+BattleScript_EffectPunishment:
+	special 0x19
+	goto BattleScript_EffectHit
 
 

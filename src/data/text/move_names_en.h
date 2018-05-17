@@ -407,4 +407,6 @@ const u8 gMoveNames[][13] = {
 	[MOVE_WORRY_SEED] = _("Worry Seed"),
 	[MOVE_SEED_BOMB] = _("Seed Bomb"),
 	[MOVE_FORCE_PALM] = _("Force Palm"),
+	[MOVE_CHIP_AWAY] = _("Chip Away"),
+	[MOVE_PUNISHMENT] = _("Punishment"),
 };

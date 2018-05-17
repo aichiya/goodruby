@@ -1626,6 +1626,14 @@ static const u8 MoveDescription_ForcePalm[] = _(
     "A open-palm strike that\n"
     "may cause paralysis.");
 
+static const u8 MoveDescription_ChipAway[] = _(
+    "An attack that ignores\n"
+    "the foe’s stat changes.");
+
+static const u8 MoveDescription_Punishment[] = _(
+    "Power rises the more the\n"
+    "target’s stats are raised.");
+
 
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
@@ -2035,4 +2043,6 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_WorrySeed,
 	MoveDescription_SeedBomb,
 	MoveDescription_ForcePalm,
+	MoveDescription_ChipAway,
+	MoveDescription_Punishment,
 };
