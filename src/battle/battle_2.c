@@ -3654,6 +3654,8 @@ void sub_8010874(void)
     gBankAttacker = 0;
     gBankTarget = 0;
     gBattleWeather = 0;
+	gBattleStruct->echoedVoiceMarker = 0;
+	gBattleStruct->echoedVoiceCounter = 0;
 
     MEMSET_ALT(&gWishFutureKnock, 0, 0x2C, i, r4);
 

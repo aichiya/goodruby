@@ -659,6 +659,7 @@ static void sp16_defogfoeweb(void);
 static void sp17_defogownweb(void);
 static void sp18_worryseed(void);
 static void sp19_punishment(void);
+static void sp1A_echoedvoice(void);
 
 void (* const gBattleScriptingCommandsTable[])(void) =
 {
@@ -1628,6 +1629,19 @@ static void ModulateDmgByType(u8 multiplier)
 static void atk06_typecalc(void)
 {
     u8 move_type;
+	if (gCurrentMove == MOVE_SYNCHRONOISE)
+	{
+		if (!(gBattleMons[gBankAttacker].type1 == gBattleMons[gBankTarget].type1
+		   || gBattleMons[gBankAttacker].type1 == gBattleMons[gBankTarget].type2
+		   || gBattleMons[gBankAttacker].type2 == gBattleMons[gBankTarget].type1
+		   || gBattleMons[gBankAttacker].type2 == gBattleMons[gBankTarget].type2))
+		{
+			gBattleMoveDamage = 0;
+			gMoveResultFlags |= MOVE_RESULT_DOESNT_AFFECT_FOE;
+            gProtectStructs[gBankAttacker].notEffective = 1;
+			gBattlescriptCurrInstr++;
+		}
+	}
     if (gCurrentMove != MOVE_STRUGGLE)
     {
         if (gBattleStruct->dynamicMoveType)
@@ -16125,6 +16139,7 @@ void (* const gBattleScriptingSpecialTable[])(void) =
 	sp17_defogownweb,
 	sp18_worryseed,
 	sp19_punishment,
+	sp1A_echoedvoice,
 };
 
 
@@ -16867,3 +16882,11 @@ static void sp19_punishment(void)
 	
 	gDynamicBasePower = power;
 }
+
+static void sp1A_echoedvoice(void)
+{
+	gBattleStruct->echoedVoiceMarker = 1;
+	gDynamicBasePower = 40 + (40 * gBattleStruct->echoedVoiceCounter);
+	gBattleStruct->animTurn = gBattleStruct->echoedVoiceCounter;
+}
+

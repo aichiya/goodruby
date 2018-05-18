@@ -247,6 +247,7 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectStickyWeb
 	.4byte BattleScript_EffectWorrySeed
 	.4byte BattleScript_EffectPunishment
+	.4byte BattleScript_EffectEchoedVoice
 
 BattleScript_EffectHit: @ 81D6F14
 BattleScript_EffectAccuracyDown2: @ 81D6F14
@@ -4919,7 +4920,7 @@ Defog_StatDownEnd: @ 81D7271
 	printstring BATTLE_TEXT_DefogOwnHazards
 	waitmessage 64
 	special 0x17
-	printstring BATTLE_TEXT_DefogHazards
+	printstring BATTLE_TEXT_DefogOwnHazards
 	waitmessage 64
 	goto BattleScript_MoveEnd
 
@@ -5173,4 +5174,7 @@ BattleScript_EffectPunishment:
 	special 0x19
 	goto BattleScript_EffectHit
 
-
+BattleScript_EffectEchoedVoice:
+	attackcanceler
+	special 0x1A
+	goto BattleScript_HitFromAccCheck

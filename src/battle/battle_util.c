@@ -887,6 +887,18 @@ u8 UpdateTurnCounters(void)
             gBattleStruct->turncountersTracker++;
             break;
         case 12:
+			// Echoed Voice
+			if (gBattleStruct->echoedVoiceMarker)
+			{
+				if (gBattleStruct->echoedVoiceCounter < 4)
+					gBattleStruct->echoedVoiceCounter++;
+			}
+			else
+				gBattleStruct->echoedVoiceCounter = 0;
+			gBattleStruct->echoedVoiceMarker = 0;
+            gBattleStruct->turncountersTracker++;
+            break;
+		case 13:
             effect++;
             break;
         }

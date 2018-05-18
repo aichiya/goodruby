@@ -1642,6 +1642,18 @@ static const u8 MoveDescription_PsychoCut[] = _(
     "A psychic blade attack.\n"
     "High critical-hit ratio.");
 
+static const u8 MoveDescription_EchoedVoice[] = _(
+    "An attack that powers\n"
+    "up if used every round.");
+
+static const u8 MoveDescription_Synchronoise[] = _(
+    "Only works on Pokémon that\n"
+    "share the user’s type.");
+
+static const u8 MoveDescription_Boomburst[] = _(
+    "A terrible, explosive sound\n"
+    "wave attack.");
+
 
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
@@ -2055,4 +2067,7 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_Punishment,
 	MoveDescription_MiracleEye,
 	MoveDescription_PsychoCut,
+	MoveDescription_EchoedVoice,
+	MoveDescription_Synchronoise,
+	MoveDescription_Boomburst,
 };

@@ -99,5 +99,9 @@ gBattleAnimSpriteTemplate_StickyWeb::
 gBattleAnimSpriteTemplate_SeedBomb::
 	spr_template 10006, 10006, gOamData_837DF2C, gDummySpriteAnimTable, NULL, gDummySpriteAffineAnimTable, sub_80794A8
 
+	.align 2
+gBattleAnimSpriteTemplate_Synchronoise::
+	spr_template 10225, 10225, gOamData_837DF34, gDummySpriteAnimTable, NULL, gDummySpriteAffineAnimTable, sub_80DA208
+
 
 
