@@ -789,6 +789,7 @@ void sub_80324E0(u8 a)
 
 void HandleLowHpMusicChange(struct Pokemon *pkmn, u8 b)
 {
+	/*
     u16 hp = GetMonData(pkmn, MON_DATA_HP);
     u16 maxHP = GetMonData(pkmn, MON_DATA_MAX_HP);
 
@@ -814,7 +815,7 @@ void HandleLowHpMusicChange(struct Pokemon *pkmn, u8 b)
             m4aSongNumStop(SE_HINSI);
             return;
         }
-    }
+    } */
 }
 
 void BattleStopLowHpSound(void)
