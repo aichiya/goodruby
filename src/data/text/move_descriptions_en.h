@@ -1654,6 +1654,18 @@ static const u8 MoveDescription_Boomburst[] = _(
     "A terrible, explosive sound\n"
     "wave attack.");
 
+static const u8 MoveDescription_WakeUpSlap[] = _(
+    "Powerful against sleeping\n"
+    "foes, but also wakes them.");
+
+static const u8 MoveDescription_CloseCombat[] = _(
+    "A powerful attack, but\n"
+    "lowers Defense and Sp. Def.");
+
+static const u8 MoveDescription_HeavySlam[] = _(
+    "A slam that inflicts more\n"
+    "damage on lighter foes.");
+
 
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
@@ -2070,4 +2082,7 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_EchoedVoice,
 	MoveDescription_Synchronoise,
 	MoveDescription_Boomburst,
+	MoveDescription_WakeUpSlap,
+	MoveDescription_CloseCombat,
+	MoveDescription_HeavySlam,
 };

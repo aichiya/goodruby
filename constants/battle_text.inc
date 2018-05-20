@@ -365,3 +365,4 @@
 	enum BATTLE_TEXT_CaughtInWeb
 	enum BATTLE_TEXT_WorrySeed
 	enum BATTLE_TEXT_PoisonHeal
+	enum BATTLE_TEXT_SlappedAwake

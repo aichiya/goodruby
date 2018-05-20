@@ -245,7 +245,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
                 defense *= 2;
         }
         
-        if ((attacker->status1 & STATUS_BURN) && attacker->ability != ABILITY_GUTS)
+        if ((attacker->status1 & STATUS_BURN) && attacker->ability != ABILITY_GUTS && gCurrentMove != MOVE_FACADE)
             attack /= 2;
     }
     else if (moveClass == 1)

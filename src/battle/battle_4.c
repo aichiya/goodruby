@@ -318,6 +318,7 @@ extern u8 BattleScript_BugBiteLansat[];
 extern u8 BattleScript_BugBiteLeppa[];
 extern u8 BattleScript_CaptivateFail[];
 extern u8 BattleScript_CaptivateFailOblivious[];
+extern u8 BattleScript_TargetSLPHeal[];
 
 extern const u8 gStatusConditionString_PoisonJpn[];
 extern const u8 gStatusConditionString_SleepJpn[];
@@ -660,6 +661,8 @@ static void sp17_defogownweb(void);
 static void sp18_worryseed(void);
 static void sp19_punishment(void);
 static void sp1A_echoedvoice(void);
+static void sp1B_sleepremoval(void);
+static void sp1C_heavyslam(void);
 
 void (* const gBattleScriptingCommandsTable[])(void) =
 {
@@ -16140,6 +16143,8 @@ void (* const gBattleScriptingSpecialTable[])(void) =
 	sp18_worryseed,
 	sp19_punishment,
 	sp1A_echoedvoice,
+	sp1B_sleepremoval,
+	sp1C_heavyslam,
 };
 
 
@@ -16889,4 +16894,46 @@ static void sp1A_echoedvoice(void)
 	gDynamicBasePower = 40 + (40 * gBattleStruct->echoedVoiceCounter);
 	gBattleStruct->animTurn = gBattleStruct->echoedVoiceCounter;
 }
+
+static void sp1B_sleepremoval(void)
+{
+    if (gBattleMons[gBankTarget].status1 & STATUS_SLEEP)
+    {
+        gBattleMons[gBankTarget].status1 &= ~(STATUS_SLEEP);
+        gActiveBattler = gBankTarget;
+        EmitSetMonData(0, REQUEST_STATUS_BATTLE, 0, 4, &gBattleMons[gBankTarget].status1);
+        MarkBufferBankForExecution(gActiveBattler);
+        BattleScriptPush(gBattlescriptCurrInstr);
+        gBattlescriptCurrInstr = BattleScript_TargetSLPHeal;
+    }
+}
+
+static void sp1C_heavyslam(void)
+{
+	u16 attackerwt = GetPokedexHeightWeight(SpeciesToNationalPokedexNum(gBattleMons[gBankAttacker].species), 1);
+	u16 targetwt = GetPokedexHeightWeight(SpeciesToNationalPokedexNum(gBattleMons[gBankTarget].species), 1);
+	
+	if (targetwt*2 >= attackerwt)
+	{
+		gDynamicBasePower = 40;
+	}
+	else if (targetwt*3 >= attackerwt)
+	{
+		gDynamicBasePower = 60;
+	}
+	else if (targetwt*4 >= attackerwt)
+	{
+		gDynamicBasePower = 80;
+	}
+	else if (targetwt*5 >= attackerwt)
+	{
+		gDynamicBasePower = 100;
+	}
+	else
+	{
+		gDynamicBasePower = 120;
+	}
+}
+
+
 

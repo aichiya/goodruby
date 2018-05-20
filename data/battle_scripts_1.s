@@ -248,6 +248,9 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectWorrySeed
 	.4byte BattleScript_EffectPunishment
 	.4byte BattleScript_EffectEchoedVoice
+	.4byte BattleScript_EffectWakeUpSlap
+	.4byte BattleScript_EffectCloseCombat
+	.4byte BattleScript_EffectHeavySlam
 
 BattleScript_EffectHit: @ 81D6F14
 BattleScript_EffectAccuracyDown2: @ 81D6F14
@@ -3923,6 +3926,12 @@ BattleScript_TargetPRLZHeal:: @ 81D9635
 	updatestatusicon TARGET
 	return
 
+BattleScript_TargetSLPHeal::
+	printstring BATTLE_TEXT_SlappedAwake
+	waitmessage 64
+	updatestatusicon TARGET
+	return
+
 BattleScript_MoveEffectSleep:: @ 81D963E
 	statusanimation EFFECT_BANK
 	printfromtable gFellAsleepStringIds
@@ -5178,3 +5187,88 @@ BattleScript_EffectEchoedVoice:
 	attackcanceler
 	special 0x1A
 	goto BattleScript_HitFromAccCheck
+
+BattleScript_EffectWakeUpSlap:
+	jumpifstatus2 TARGET, STATUS2_SUBSTITUTE, BattleScript_EffectHit
+	jumpifstatus TARGET, SLP, BattleScript_WakeUpSlapDoubleDmg
+	goto BattleScript_EffectHit
+	end
+
+BattleScript_WakeUpSlapDoubleDmg:
+	setbyte sDMG_MULTIPLIER, 2
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation TARGET
+	waitstate
+	healthbarupdate TARGET
+	datahpupdate TARGET
+	critmessage
+	waitmessage 64
+	resultmessage
+	waitmessage 64
+	special 0x1B
+	tryfaintmon TARGET, FALSE, NULL
+    goto BattleScript_MoveEnd
+
+BattleScript_EffectCloseCombat:
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation TARGET
+	waitstate
+	healthbarupdate TARGET
+	datahpupdate TARGET
+	critmessage
+	waitmessage 64
+	resultmessage
+	waitmessage 64
+	jumpifstat USER, GREATER_THAN, DEFENSE, 0, BattleScript_CloseCombatStartDrops
+	jumpifstat USER, EQUAL, SPEED, 0, BattleScript_CloseCombatFinish
+BattleScript_CloseCombatStartDrops:
+	jumpifmovehadnoeffect BattleScript_CloseCombatFinish
+	setbyte sFIELD_1B, 0
+	playstatchangeanimation USER, 0x24, 1
+
+	jumpifstat USER, EQUAL, DEFENSE, 0, BattleScriptCloseCombatSDefDrop
+	setstatchanger DEFENSE, 1, TRUE
+	statbuffchange AFFECTS_USER | 0x1, BattleScriptCloseCombatSDefDrop
+	printfromtable gStatDownStringIds
+	waitmessage 64
+BattleScriptCloseCombatSDefDrop:
+	jumpifstat USER, EQUAL, SP_DEFENSE, 0, BattleScript_CloseCombatFinish
+	setstatchanger SP_DEFENSE, 1, TRUE
+	statbuffchange AFFECTS_USER | 0x1, BattleScript_CloseCombatFinish
+	printfromtable gStatDownStringIds
+	waitmessage 64
+	
+BattleScript_CloseCombatFinish:
+	tryfaintmon TARGET, FALSE, NULL
+	setbyte sMOVEEND_STATE, 0
+	moveend 0, 0
+	end
+
+BattleScript_EffectHeavySlam:
+	attackcanceler
+	attackstring
+	ppreduce
+	special 0x1C
+	accuracycheck BattleScript_MoveMissed, ACC_CURR_MOVE
+	goto BattleScript_HitFromCritCalc
+

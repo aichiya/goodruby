@@ -414,4 +414,7 @@ const u8 gMoveNames[][13] = {
 	[MOVE_ECHOED_VOICE] = _("Echoed Voice"),
 	[MOVE_SYNCHRONOISE] = _("Synchronoise"),
 	[MOVE_BOOMBURST] = _("Boomburst"),
+	[MOVE_WAKE_UP_SLAP] = _("Wake-Up Slap"),
+	[MOVE_CLOSE_COMBAT] = _("Close Combat"),
+	[MOVE_HEAVY_SLAM] = _("Heavy Slam"),
 };
