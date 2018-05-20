@@ -103,5 +103,12 @@ gBattleAnimSpriteTemplate_SeedBomb::
 gBattleAnimSpriteTemplate_Synchronoise::
 	spr_template 10225, 10225, gOamData_837DF34, gDummySpriteAnimTable, NULL, gDummySpriteAffineAnimTable, sub_80DA208
 
+	.align 2
+gBattleAnimSpriteTemplate_AquaRing::
+	spr_template 10203, 10115, gOamData_837E11C, gDummySpriteAnimTable, NULL, gSpriteAffineAnimTable_83D7958, sub_80793C4
+
+	.align 2
+gBattleAnimSpriteTemplate_PoisonJab::
+	spr_template 10020, 10295, gOamData_837DF34, gDummySpriteAnimTable, NULL, gDummySpriteAffineAnimTable, sub_80CE670
 
 

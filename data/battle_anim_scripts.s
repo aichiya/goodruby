@@ -433,6 +433,9 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_WAKE_UP_SLAP
 	.4byte Move_CLOSE_COMBAT
 	.4byte Move_HEAVY_SLAM
+	.4byte Move_AQUA_RING
+	.4byte Move_SOAK
+	.4byte Move_POISON_JAB
 	.4byte PoundCopy
 
 	.align 2
@@ -12685,4 +12688,89 @@ Move_HEAVY_SLAM:
 	clearmonbg ANIM_BANK_DEF_PARTNER
 	blendoff
 	end
+
+Move_AQUA_RING:
+	loadspritegfx 10115
+	loadspritegfx 10155
+	loadspritegfx 10288
+	loadspritegfx 10203
+	monbg ANIM_BANK_TARGET
+	monbgprio_28 1
+	playsewithpan SE_W145C, 192
+	createsprite gBattleAnimSpriteTemplate_83DB3C4, 2, 1, 0, 0, 7, 29472
+	delay 10
+	createsprite gBattleAnimSpriteTemplate_83D9408, 66, 100, 100, 8, 1, 20, 40, 0
+	createsprite gBattleAnimSpriteTemplate_83D9408, 66, 20, 100, 16, 2, 10, 35, 1
+	createsprite gBattleAnimSpriteTemplate_83D9408, 66, 200, 80, 8, 1, 40, 20, 0
+	createsprite gBattleAnimSpriteTemplate_83D9408, 66, 80, 60, 10, 3, 20, 50, 0
+	createsprite gBattleAnimSpriteTemplate_83D9408, 66, 140, 100, 16, 1, 20, 30, 1
+	playsewithpan SE_W145C, 63
+	waitforvisualfinish
 	
+	playsewithpan SE_W202, 192
+	createsprite gBattleAnimSpriteTemplate_AquaRing, 40, 0, 0, 0, 0
+	delay 5
+	playsewithpan SE_W202, 192
+	createsprite gBattleAnimSpriteTemplate_AquaRing, 40, 0, 0, 0, 0
+	delay 5
+	playsewithpan SE_W202, 192
+	createsprite gBattleAnimSpriteTemplate_AquaRing, 40, 0, 0, 0, 0
+	delay 5
+	playsewithpan SE_REAPOKE, 192
+	createvisualtask sub_80E1F8C, 2, 10, 0, 2, 0, 10, 32767
+	waitforvisualfinish
+	createsprite gBattleAnimSpriteTemplate_83DB3C4, 2, 1, 1, 7, 0, 29472
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_DEF_PARTNER
+	end
+
+Move_SOAK:
+	loadspritegfx 10155
+	loadspritegfx 10148
+	monbg ANIM_BANK_DEF_PARTNER
+	monbgprio_28 1
+	setalpha 12, 8
+	createsprite gBattleAnimSpriteTemplate_83D9318, 2, 20, 0, 0, 0, 40, -25
+	playsewithpan SE_W145, 192
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83D9318, 2, 20, 0, 5, 0, 40, -25
+	playsewithpan SE_W145, 192
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83D9318, 2, 20, 0, -5, 0, 40, -25
+	playsewithpan SE_W145, 192
+	delay 30
+	playsewithpan SE_W127, 63
+	createvisualtask AnimTask_ShakeMon2, 5, 1, 4, 0, 17, 1
+	createvisualtask sub_80E1F8C, 2, 4, 1, 2, 0, 12, 0x7C00
+	createsprite gBattleAnimSpriteTemplate_83DB4D8, 3, 0, 0, 1, 1
+	createsprite gBattleAnimSpriteTemplate_83D9360, 4, 0, 0
+	createsprite gBattleAnimSpriteTemplate_83D9360, 4, 0, 0
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83DB4D8, 3, 5, 0, 1, 1
+	createsprite gBattleAnimSpriteTemplate_83D9360, 4, 5, 0
+	createsprite gBattleAnimSpriteTemplate_83D9360, 4, 5, 0
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83DB4D8, 3, -5, 0, 1, 1
+	createsprite gBattleAnimSpriteTemplate_83D9360, 4, -5, 0
+	createsprite gBattleAnimSpriteTemplate_83D9360, 4, -5, 0
+	delay 2
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_DEF_PARTNER
+	blendoff
+	end
+
+Move_POISON_JAB:
+	loadspritegfx 10295
+	loadspritegfx 10135
+	loadspritegfx 10150
+	loadspritegfx 10020
+	createvisualtask sub_80A8E04, 2, 4, 256, 0, 2
+	createsprite gBattleAnimSpriteTemplate_PoisonJab, 132, -8, -8, 10
+	waitforvisualfinish
+	createsprite gBattleAnimSpriteTemplate_83DB538, 131, 0, 0, 1, 1
+	playsewithpan SE_W030, 63
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_TARGET, 5, 0, 6, 1
+	delay 6
+	call PoisonBubblesAnim
+	waitforvisualfinish
+	end

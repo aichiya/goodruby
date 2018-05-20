@@ -663,6 +663,8 @@ static void sp19_punishment(void);
 static void sp1A_echoedvoice(void);
 static void sp1B_sleepremoval(void);
 static void sp1C_heavyslam(void);
+static void sp1D_aquaring(void);
+static void sp1E_soak(void);
 
 void (* const gBattleScriptingCommandsTable[])(void) =
 {
@@ -16145,6 +16147,8 @@ void (* const gBattleScriptingSpecialTable[])(void) =
 	sp1A_echoedvoice,
 	sp1B_sleepremoval,
 	sp1C_heavyslam,
+	sp1D_aquaring,
+	sp1E_soak,
 };
 
 
@@ -16935,5 +16939,23 @@ static void sp1C_heavyslam(void)
 	}
 }
 
+static void sp1D_aquaring(void)
+{
+	gStatuses3[gBankAttacker] |= STATUS3_AQUA_RING;
+}
+
+static void sp1E_soak(void)
+{
+	if (gBattleMons[gBankTarget].type1 == TYPE_WATER && gBattleMons[gBankTarget].type2 == TYPE_WATER)
+	{
+		// don't jump 5 so we goto butitfailed
+	}
+	else
+	{
+		gBattleMons[gBankTarget].type1 = TYPE_WATER;
+		gBattleMons[gBankTarget].type2 = TYPE_WATER;
+		gBattlescriptCurrInstr += 5;
+	}
+}
 
 

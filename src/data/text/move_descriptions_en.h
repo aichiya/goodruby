@@ -1666,6 +1666,18 @@ static const u8 MoveDescription_HeavySlam[] = _(
     "A slam that inflicts more\n"
     "damage on lighter foes.");
 
+static const u8 MoveDescription_AquaRing[] = _(
+    "Creates a veil of water\n"
+    "to slowly heal HP.");
+
+static const u8 MoveDescription_Soak[] = _(
+    "A torrent of water changes\n"
+    "the target’s type to Water.");
+
+static const u8 MoveDescription_PoisonJab[] = _(
+    "A basic stabbing attack.\n"
+    "May also poison the foe.");
+
 
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
@@ -2085,4 +2097,7 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_WakeUpSlap,
 	MoveDescription_CloseCombat,
 	MoveDescription_HeavySlam,
+	MoveDescription_AquaRing,
+	MoveDescription_Soak,
+	MoveDescription_PoisonJab,
 };

@@ -100,6 +100,7 @@ extern u8 BattleScript_MoveSelectionChoiceBanded[];
 extern u8 BattleScript_MoveSelectionNoPP[];
 extern u8 BattleScript_NoMovesLeft[];
 extern u8 BattleScript_WishComesTrue[];
+extern u8 BattleScript_AquaRingTurnHeal[];
 extern u8 BattleScript_IngrainTurnHeal[];
 extern u8 BattleScript_LeechSeedTurnDrain[];
 extern u8 BattleScript_PoisonTurnDmg[];
@@ -906,7 +907,7 @@ u8 UpdateTurnCounters(void)
     return (gBattleMainFunc != BattleTurnPassed);
 }
 
-#define TURNBASED_MAX_CASE 20
+#define TURNBASED_MAX_CASE 21
 
 u8 TurnBasedEffects(void)
 {
@@ -924,7 +925,21 @@ u8 TurnBasedEffects(void)
         {
             switch (gBattleStruct->turnEffectsTracker)
             {
-            case 0:  // ingrain
+			case 0:  // aqua ring
+                if ((gStatuses3[gActiveBattler] & STATUS3_AQUA_RING)
+                 && gBattleMons[gActiveBattler].hp != gBattleMons[gActiveBattler].maxHP
+                 && gBattleMons[gActiveBattler].hp != 0)
+                {
+                    gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 16;
+                    if (gBattleMoveDamage == 0)
+                        gBattleMoveDamage = 1;
+                    gBattleMoveDamage *= -1;
+                    BattleScriptExecute(BattleScript_AquaRingTurnHeal);
+                    effect++;
+                }
+                gBattleStruct->turnEffectsTracker++;
+                break;
+            case 1:  // ingrain
                 if ((gStatuses3[gActiveBattler] & STATUS3_ROOTED)
                  && gBattleMons[gActiveBattler].hp != gBattleMons[gActiveBattler].maxHP
                  && gBattleMons[gActiveBattler].hp != 0)
@@ -938,22 +953,22 @@ u8 TurnBasedEffects(void)
                 }
                 gBattleStruct->turnEffectsTracker++;
                 break;
-            case 1:  // end turn abilities
+            case 2:  // end turn abilities
                 if (AbilityBattleEffects(ABILITYEFFECT_ENDTURN, gActiveBattler, 0, 0, 0))
                     effect++;
                 gBattleStruct->turnEffectsTracker++;
                 break;
-            case 2:  // item effects
+            case 3:  // item effects
                 if (ItemBattleEffects(1, gActiveBattler, 0))
                     effect++;
                 gBattleStruct->turnEffectsTracker++;
                 break;
-            case 18:  // item effects again
+            case 19:  // item effects again
                 if (ItemBattleEffects(1, gActiveBattler, 1))
                     effect++;
                 gBattleStruct->turnEffectsTracker++;
                 break;
-            case 3:  // leech seed
+            case 4:  // leech seed
                 if (gStatuses3[gActiveBattler] & STATUS3_LEECHSEED && gBattleMons[gStatuses3[gActiveBattler] & STATUS3_LEECHSEED_BANK].hp != 0 && gBattleMons[gActiveBattler].hp != 0)
                 {
                     gBankTarget = gStatuses3[gActiveBattler] & STATUS3_LEECHSEED_BANK; //funny how the 'target' is actually the bank that receives HP
@@ -967,7 +982,7 @@ u8 TurnBasedEffects(void)
                 }
                 gBattleStruct->turnEffectsTracker++;
                 break;
-            case 4:  // poison
+            case 5:  // poison
                 if ((gBattleMons[gActiveBattler].status1 & STATUS_POISON) && gBattleMons[gActiveBattler].hp != 0)
                 {
                     gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 8;
@@ -986,7 +1001,7 @@ u8 TurnBasedEffects(void)
                 }
                 gBattleStruct->turnEffectsTracker++;
                 break;
-            case 5:  // toxic poison
+            case 6:  // toxic poison
                 if ((gBattleMons[gActiveBattler].status1 & STATUS_TOXIC_POISON) && gBattleMons[gActiveBattler].hp != 0)
                 {
                     if ((gBattleMons[gActiveBattler].status1 & 0xF00) != 0xF00) //not 16 turns
@@ -1011,7 +1026,7 @@ u8 TurnBasedEffects(void)
                 }
                 gBattleStruct->turnEffectsTracker++;
                 break;
-            case 6:  // burn
+            case 7:  // burn
                 if ((gBattleMons[gActiveBattler].status1 & STATUS_BURN) && gBattleMons[gActiveBattler].hp != 0)
                 {
                     gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 8;
@@ -1022,7 +1037,7 @@ u8 TurnBasedEffects(void)
                 }
                 gBattleStruct->turnEffectsTracker++;
                 break;
-            case 7:  // spooky nightmares
+            case 8:  // spooky nightmares
                 if ((gBattleMons[gActiveBattler].status2 & STATUS2_NIGHTMARE) && gBattleMons[gActiveBattler].hp != 0)
                 {
                     // missing sleep check
@@ -1034,7 +1049,7 @@ u8 TurnBasedEffects(void)
                 }
                 gBattleStruct->turnEffectsTracker++;
                 break;
-            case 8:  // curse
+            case 9:  // curse
                 if ((gBattleMons[gActiveBattler].status2 & STATUS2_CURSED) && gBattleMons[gActiveBattler].hp != 0)
                 {
                     gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 4;
@@ -1045,7 +1060,7 @@ u8 TurnBasedEffects(void)
                 }
                 gBattleStruct->turnEffectsTracker++;
                 break;
-            case 9:  // wrap
+            case 10:  // wrap
                 if ((gBattleMons[gActiveBattler].status2 & STATUS2_WRAPPED) && gBattleMons[gActiveBattler].hp != 0)
                 {
                     gBattleMons[gActiveBattler].status2 -= 0x2000;
@@ -1077,7 +1092,7 @@ u8 TurnBasedEffects(void)
                 }
                 gBattleStruct->turnEffectsTracker++;
                 break;
-            case 10:  // uproar
+            case 11:  // uproar
                 if (gBattleMons[gActiveBattler].status2 & STATUS2_UPROAR)
                 {
                     for (gBankAttacker = 0; gBankAttacker < gBattlersCount; gBankAttacker++)
@@ -1126,7 +1141,7 @@ u8 TurnBasedEffects(void)
                 if (effect != 2)
                     gBattleStruct->turnEffectsTracker++;
                 break;
-            case 11:  // thrash
+            case 12:  // thrash
                 if (gBattleMons[gActiveBattler].status2 & STATUS2_LOCK_CONFUSE)
                 {
                     gBattleMons[gActiveBattler].status2 -= 0x400;
@@ -1148,7 +1163,7 @@ u8 TurnBasedEffects(void)
                 }
                 gBattleStruct->turnEffectsTracker++;
                 break;
-            case 12:  // disable
+            case 13:  // disable
                 if (gDisableStructs[gActiveBattler].disableTimer1 != 0)
                 {
                     int i;
@@ -1171,7 +1186,7 @@ u8 TurnBasedEffects(void)
                 }
                 gBattleStruct->turnEffectsTracker++;
                 break;
-            case 13:  // encore
+            case 14:  // encore
                 if (gDisableStructs[gActiveBattler].encoreTimer1 != 0)
                 {
                     if (gBattleMons[gActiveBattler].moves[gDisableStructs[gActiveBattler].encoredMovePos] != gDisableStructs[gActiveBattler].encoredMove)  // pokemon does not have the encored move anymore
@@ -1190,22 +1205,22 @@ u8 TurnBasedEffects(void)
                 }
                 gBattleStruct->turnEffectsTracker++;
                 break;
-            case 14:  // lock-on decrement
+            case 15:  // lock-on decrement
                 if (gStatuses3[gActiveBattler] & STATUS3_ALWAYS_HITS)
                     gStatuses3[gActiveBattler] -= 0x8;
                 gBattleStruct->turnEffectsTracker++;
                 break;
-            case 15:  // charge
+            case 16:  // charge
                 if (gDisableStructs[gActiveBattler].chargeTimer1 && --gDisableStructs[gActiveBattler].chargeTimer1 == 0)
                     gStatuses3[gActiveBattler] &= ~STATUS3_CHARGED_UP;
                 gBattleStruct->turnEffectsTracker++;
                 break;
-            case 16:  // taunt
+            case 17:  // taunt
                 if (gDisableStructs[gActiveBattler].tauntTimer1)
                     gDisableStructs[gActiveBattler].tauntTimer1--;
                 gBattleStruct->turnEffectsTracker++;
                 break;
-            case 17:  // yawn
+            case 18:  // yawn
                 if (gStatuses3[gActiveBattler] & STATUS3_YAWN)
                 {
                     gStatuses3[gActiveBattler] -= 0x800;
@@ -1224,14 +1239,14 @@ u8 TurnBasedEffects(void)
                 }
                 gBattleStruct->turnEffectsTracker++;
                 break;
-			case 19:  // roost
+			case 20:  // roost
 				if (gBattleMons[gActiveBattler].type1 == TYPE_ROOSTING)
 					gBattleMons[gActiveBattler].type1 = TYPE_FLYING;
 				if (gBattleMons[gActiveBattler].type2 == TYPE_ROOSTING)
 					gBattleMons[gActiveBattler].type2 = TYPE_FLYING;
 				gBattleStruct->turnEffectsTracker++;
 				break;
-            case 20:  // done
+            case 21:  // done
                 gBattleStruct->turnEffectsTracker = 0;
                 gBattleStruct->turnEffectsBank++;
                 break;

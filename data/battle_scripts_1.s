@@ -251,6 +251,8 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectWakeUpSlap
 	.4byte BattleScript_EffectCloseCombat
 	.4byte BattleScript_EffectHeavySlam
+	.4byte BattleScript_EffectAquaRing
+	.4byte BattleScript_EffectSoak
 
 BattleScript_EffectHit: @ 81D6F14
 BattleScript_EffectAccuracyDown2: @ 81D6F14
@@ -3660,6 +3662,14 @@ BattleScript_WishButFullHp: @ 81D93C1
 	waitmessage 64
 	end2
 
+BattleScript_AquaRingTurnHeal:: @ 81D93D1
+	printstring BATTLE_TEXT_AquaRingHeal
+	waitmessage 64
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
+	healthbarupdate USER
+	datahpupdate USER
+	end2
+
 BattleScript_IngrainTurnHeal:: @ 81D93D1
 	playanimation USER, B_ANIM_INGRAIN_HEAL, NULL
 	printstring BATTLE_TEXT_AbsorbNutrients
@@ -5271,4 +5281,30 @@ BattleScript_EffectHeavySlam:
 	special 0x1C
 	accuracycheck BattleScript_MoveMissed, ACC_CURR_MOVE
 	goto BattleScript_HitFromCritCalc
+
+BattleScript_EffectAquaRing:
+	attackcanceler
+	attackstring
+	ppreduce
+	jumpifstatus3 USER, STATUS3_AQUA_RING, BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	special 0x1D
+	printstring BATTLE_TEXT_AquaRing
+	waitmessage 64
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectSoak:
+	attackcanceler
+	attackstring
+	ppreduce
+	jumpifstatus2 TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
+	special 0x1E
+	goto BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	printstring BATTLE_TEXT_Soaked
+	waitmessage 64
+	goto BattleScript_MoveEnd
+
 

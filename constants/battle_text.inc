@@ -366,3 +366,6 @@
 	enum BATTLE_TEXT_WorrySeed
 	enum BATTLE_TEXT_PoisonHeal
 	enum BATTLE_TEXT_SlappedAwake
+	enum BATTLE_TEXT_AquaRing
+	enum BATTLE_TEXT_Soaked
+	enum BATTLE_TEXT_AquaRingHeal

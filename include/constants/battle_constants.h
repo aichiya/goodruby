@@ -75,26 +75,27 @@
 #define STATUS2_DEFENSE_CURL        0x40000000
 #define STATUS2_TORMENT             0x80000000
 
-#define STATUS3_LEECHSEED_BANK          0x3
-#define STATUS3_LEECHSEED               0x4
-#define STATUS3_ALWAYS_HITS             0x18    //two bits
-#define STATUS3_PERISH_SONG             0x20
-#define STATUS3_ON_AIR                  0x40
-#define STATUS3_UNDERGROUND             0x80
-#define STATUS3_MINIMIZED               0x100
-#define STATUS3_ROOTED                  0x400
-#define STATUS3_CHARGED_UP              0x200
-#define STATUS3_YAWN                    0x1800  //two bits
-#define STATUS3_IMPRISIONED             0x2000
-#define STATUS3_GRUDGE                  0x4000
-#define STATUS3_CANT_SCORE_A_CRIT       0x8000
-#define STATUS3_MUDSPORT                0x10000
-#define STATUS3_WATERSPORT              0x20000
-#define STATUS3_UNDERWATER              0x40000
-#define STATUS3_INTIMIDATE_POKES        0x80000
-#define STATUS3_TRACE                   0x100000
-#define STATUS3_IN_SHADOWS              0x200000
-#define STATUS3_MIRACLE_EYE             0x400000
+#define STATUS3_LEECHSEED_BANK          0x00000003
+#define STATUS3_LEECHSEED               0x00000004
+#define STATUS3_ALWAYS_HITS             0x00000018  //two bits
+#define STATUS3_PERISH_SONG             0x00000020
+#define STATUS3_ON_AIR                  0x00000040
+#define STATUS3_UNDERGROUND             0x00000080
+#define STATUS3_MINIMIZED               0x00000100
+#define STATUS3_ROOTED                  0x00000400
+#define STATUS3_CHARGED_UP              0x00000200
+#define STATUS3_YAWN                    0x00001800  //two bits
+#define STATUS3_IMPRISIONED             0x00002000
+#define STATUS3_GRUDGE                  0x00004000
+#define STATUS3_CANT_SCORE_A_CRIT       0x00008000
+#define STATUS3_MUDSPORT                0x00010000
+#define STATUS3_WATERSPORT              0x00020000
+#define STATUS3_UNDERWATER              0x00040000
+#define STATUS3_INTIMIDATE_POKES        0x00080000
+#define STATUS3_TRACE                   0x00100000
+#define STATUS3_IN_SHADOWS              0x00200000
+#define STATUS3_MIRACLE_EYE             0x00400000
+#define STATUS3_AQUA_RING               0x00800000
 
 #define STATUS3_SEMI_INVULNERABLE       ((STATUS3_UNDERGROUND | STATUS3_ON_AIR | STATUS3_UNDERWATER | STATUS3_IN_SHADOWS))
 

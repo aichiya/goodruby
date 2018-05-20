@@ -417,4 +417,7 @@ const u8 gMoveNames[][13] = {
 	[MOVE_WAKE_UP_SLAP] = _("Wake-Up Slap"),
 	[MOVE_CLOSE_COMBAT] = _("Close Combat"),
 	[MOVE_HEAVY_SLAM] = _("Heavy Slam"),
+	[MOVE_AQUA_RING] = _("Aqua Ring"),
+	[MOVE_SOAK] = _("Soak"),
+	[MOVE_POISON_JAB] = _("Poison Jab"),
 };
