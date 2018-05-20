@@ -422,7 +422,8 @@
 #define MOVE_AQUA_RING 418
 #define MOVE_SOAK 419
 #define MOVE_POISON_JAB 420
+#define MOVE_AQUA_TAIL 421
 
-#define NUM_MOVES 421
+#define NUM_MOVES 422
 
 #endif  // GUARD_CONSTANTS_MOVES_H

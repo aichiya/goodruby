@@ -1678,6 +1678,10 @@ static const u8 MoveDescription_PoisonJab[] = _(
     "A basic stabbing attack.\n"
     "May also poison the foe.");
 
+static const u8 MoveDescription_AquaTail[] = _(
+    "Slams with a tail like\n"
+    "a wave in a storm.");
+
 
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
@@ -2100,4 +2104,5 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_AquaRing,
 	MoveDescription_Soak,
 	MoveDescription_PoisonJab,
+	MoveDescription_AquaTail,
 };

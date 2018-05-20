@@ -111,4 +111,8 @@ gBattleAnimSpriteTemplate_AquaRing::
 gBattleAnimSpriteTemplate_PoisonJab::
 	spr_template 10020, 10295, gOamData_837DF34, gDummySpriteAnimTable, NULL, gDummySpriteAffineAnimTable, sub_80CE670
 
+	.align 2
+gBattleAnimSpriteTemplate_AquaTail::
+	spr_template 10056, 10296, gOamData_837DF34, gSpriteAnimTable_83D69D4, NULL, gDummySpriteAffineAnimTable, sub_80CC884
+
 

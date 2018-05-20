@@ -420,4 +420,5 @@ const u8 gMoveNames[][13] = {
 	[MOVE_AQUA_RING] = _("Aqua Ring"),
 	[MOVE_SOAK] = _("Soak"),
 	[MOVE_POISON_JAB] = _("Poison Jab"),
+	[MOVE_AQUA_TAIL] = _("Aqua Tail"),
 };

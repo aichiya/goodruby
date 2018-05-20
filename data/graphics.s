@@ -208,6 +208,10 @@ gBattleAnimSpritePalette_294::
 	.align 2
 gBattleAnimSpritePalette_295::
 	.incbin "graphics/battle_anims/sprites/295.gbapal.lz"
+	
+	.align 2
+gBattleAnimSpritePalette_296::
+	.incbin "graphics/battle_anims/sprites/296.gbapal.lz"
 
 	.align 2
 gBattleAnimSpriteSheet_161:: @ 8D0374C

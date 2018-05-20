@@ -436,6 +436,7 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_AQUA_RING
 	.4byte Move_SOAK
 	.4byte Move_POISON_JAB
+	.4byte Move_AQUA_TAIL
 	.4byte PoundCopy
 
 	.align 2
@@ -12774,3 +12775,69 @@ Move_POISON_JAB:
 	call PoisonBubblesAnim
 	waitforvisualfinish
 	end
+
+Move_AQUA_TAIL:
+	loadspritegfx 10148
+	loadspritegfx 10141
+	loadspritegfx 10155
+	monbg ANIM_BANK_DEF_PARTNER
+	setalpha 12, 8
+	createvisualtask AnimTask_ShakeMon, 5, 0, 0, 2, 23, 1
+	delay 5
+	playsewithpan SE_W152, 192
+	createsprite gBattleAnimSpriteTemplate_83D9348, 2, 10, 10, 25, 0
+	delay 4
+	playsewithpan SE_W152, 192
+	createsprite gBattleAnimSpriteTemplate_83D9348, 2, -15, 0, 25, 0
+	delay 4
+	playsewithpan SE_W152, 192
+	createsprite gBattleAnimSpriteTemplate_83D9348, 2, 20, 10, 25, 0
+	delay 4
+	playsewithpan SE_W152, 192
+	createsprite gBattleAnimSpriteTemplate_83D9348, 2, 0, -10, 25, 0
+	delay 4
+	playsewithpan SE_W152, 192
+	createsprite gBattleAnimSpriteTemplate_83D9348, 2, -10, 15, 25, 0
+	delay 4
+	playsewithpan SE_W152, 192
+	createsprite gBattleAnimSpriteTemplate_83D9348, 2, 25, 20, 25, 0
+	delay 4
+	playsewithpan SE_W152, 192
+	createsprite gBattleAnimSpriteTemplate_83D9348, 2, -20, 20, 25, 0
+	delay 4
+	playsewithpan SE_W152, 192
+	createsprite gBattleAnimSpriteTemplate_83D9348, 2, 12, 0, 25, 0
+	waitforvisualfinish
+    
+	loadspritegfx 10056
+	loadspritegfx 10135
+    loadspritegfx 10296
+	monbg ANIM_BANK_TARGET
+	setalpha 12, 8
+	playsewithpan SE_W004, 192
+	createsprite gSlideMonToOffsetSpriteTemplate, 2, 0, 20, 3, 0, 4
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_AquaTail, 2, 0, 0
+	delay 3
+	playsewithpan SE_W233B, 63
+	createsprite gBasicHitSplatSpriteTemplate, 3, 0, 0, 1, 1
+	createsprite gSlideMonToOriginalPosSpriteTemplate, 2, 0, 0, 5
+	createsprite gBattleAnimSpriteTemplate_83D9360, 4, 0, 0
+	createsprite gBattleAnimSpriteTemplate_83D9360, 4, 0, 0
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83D9360, 4, 0, 0
+	createsprite gBattleAnimSpriteTemplate_83D9360, 4, 0, 0
+    delay 1
+	createsprite gBattleAnimSpriteTemplate_83D9360, 4, 0, 0
+	createsprite gBattleAnimSpriteTemplate_83D9360, 4, 0, 0
+    delay 1
+	createvisualtask AnimTask_ShakeMonInPlace, 2, ANIM_BANK_TARGET, 0, 3, 6, 1
+	createsprite gBattleAnimSpriteTemplate_83D9360, 4, 0, 0
+	createsprite gBattleAnimSpriteTemplate_83D9360, 4, 0, 0
+	waitforvisualfinish
+	delay 5
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_TARGET
+	blendoff
+	end
+
