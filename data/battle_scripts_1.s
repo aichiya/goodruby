@@ -254,6 +254,7 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectAquaRing
 	.4byte BattleScript_EffectSoak
 	.4byte BattleScript_EffectStealthRock
+	.4byte BattleScript_EffectCopycat
 
 BattleScript_EffectHit: @ 81D6F14
 BattleScript_EffectAccuracyDown2: @ 81D6F14
@@ -5383,3 +5384,12 @@ BattleScript_PrintHurtByStealthRock: @ 81D91FB
 	waitmessage 64
 	return
 	
+BattleScript_EffectCopycat:
+	attackcanceler
+	attackstring
+	pause 64
+	special 0x23
+	ppreduce
+	goto BattleScript_ButItFailed
+	end
+

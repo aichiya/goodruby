@@ -1706,6 +1706,10 @@ static const u8 MoveDescription_Discharge[] = _(
     "A wide-angle electric burst.\n"
     "Likley to paralyze the foe.");
 
+static const u8 MoveDescription_Copycat[] = _(
+    "The user mimics the move\n"
+    "used immediately before it.");
+
 
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
@@ -2135,4 +2139,5 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_StoneEdge,
 	MoveDescription_Steamroller,
 	MoveDescription_Discharge,
+	MoveDescription_Copycat,
 };

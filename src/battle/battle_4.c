@@ -670,6 +670,7 @@ static void sp1F_setstealthrock(void);
 static void sp20_rocksaffect(void);
 static void sp21_defogfoerocks(void);
 static void sp22_defogownrocks(void);
+static void sp23_copycat(void);
 
 
 void (* const gBattleScriptingCommandsTable[])(void) =
@@ -1460,6 +1461,8 @@ static void atk02_attackstring(void)
         PrepareStringBattle(4, gBankAttacker);
         gHitMarker |= HITMARKER_ATTACKSTRING_PRINTED;
     }
+	if (gCurrentMove != MOVE_COPYCAT)
+		gBattleStruct->copycatTracker = gCurrentMove;
     gBattlescriptCurrInstr++;
     gBattleCommunication[MSG_DISPLAY] = 0;
 }
@@ -16181,6 +16184,7 @@ void (* const gBattleScriptingSpecialTable[])(void) =
 	sp20_rocksaffect,
 	sp21_defogfoerocks,
 	sp22_defogownrocks,
+	sp23_copycat,
 };
 
 
@@ -17057,4 +17061,61 @@ static void sp22_defogownrocks(void)
 	}
 }
 
+static const u16 sMovesForbiddenToCopycat[] =
+{
+	 MOVE_ASSIST,
+	 // baneful bunker
+	 // bestow
+	 // chatter
+	 // circle throw
+	 MOVE_COPYCAT,
+	 MOVE_COUNTER,
+	 MOVE_COVET,
+	 MOVE_DESTINY_BOND,
+	 MOVE_DETECT,
+	 // dragon tail
+	 MOVE_ENDURE,
+	 // feint
+	 MOVE_FOCUS_PUNCH,
+	 MOVE_FOLLOW_ME,
+	 MOVE_HELPING_HAND,
+	 // me first
+	 MOVE_METRONOME,
+	 MOVE_MIMIC,
+	 MOVE_MIRROR_COAT,
+	 MOVE_MIRROR_MOVE,
+	 MOVE_NATURE_POWER,
+	 MOVE_PROTECT,
+	 // rage powder
+	 MOVE_ROAR,
+	 MOVE_SKETCH,
+	 MOVE_SLEEP_TALK,
+	 MOVE_SNATCH,
+	 MOVE_STRUGGLE,
+	 MOVE_SWITCHEROO,
+	 MOVE_THIEF,
+	 MOVE_TRANSFORM,
+	 MOVE_TRICK,
+	 MOVE_WHIRLWIND,
+	 0,
+};
 
+static void sp23_copycat(void)
+{
+	u8 i = 0;
+	while (sMovesForbiddenToCopycat[i])
+	{
+		if (gBattleStruct->copycatTracker == sMovesForbiddenToCopycat[i])
+			return;
+		else
+			i++;
+	}
+	if (gBattleStruct->copycatTracker != 0)
+	{
+        gHitMarker &= ~(HITMARKER_ATTACKSTRING_PRINTED);
+        gCurrentMove = gBattleStruct->copycatTracker;
+        gBankTarget = GetMoveTarget(gCurrentMove, 0);
+        gBattlescriptCurrInstr = gBattleScriptsForMoveEffects[gBattleMoves[gCurrentMove].effect];
+	}
+	// else current instruction stays the same and move fails
+}

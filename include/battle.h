@@ -138,8 +138,7 @@ struct BattleStruct /* 0x2000000 */
     /*0x16020*/ u8 wrappedBy[4];
     /*0x16024*/ u8 echoedVoiceMarker;
     /*0x16025*/ u8 echoedVoiceCounter;
-    /*0x16026*/ u8 unk16026;
-    /*0x16027*/ u8 unk16027;
+    /*0x16026*/ u16 copycatTracker;
     /*0x16028*/ u8 unk16028;
     /*0x16029*/ u8 unk16029;
     /*0x1602A*/ u8 unk1602A;
