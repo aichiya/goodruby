@@ -17018,10 +17018,10 @@ static void sp20_rocksaffect(void)
 	}
 	else
 	{
-		damagerate = 8;
+		damagerate = 4;
 		damagerate = damagerate * gTypeEffectiveness[20 * TYPE_ROCK + gBattleMons[gActiveBattler].type1] / 10;
 		damagerate = damagerate * gTypeEffectiveness[20 * TYPE_ROCK + gBattleMons[gActiveBattler].type2] / 10;
-		gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP * damagerate / 8;
+		gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP * damagerate / 32;
 	}
 }
 

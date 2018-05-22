@@ -443,6 +443,7 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_STONE_EDGE
 	.4byte Move_STEAMROLLER
 	.4byte Move_DISCHARGE
+	.4byte Move_PAY_DAY
 	.4byte PoundCopy
 
 	.align 2
@@ -12780,6 +12781,9 @@ Move_AQUA_TAIL:
 	loadspritegfx 10148
 	loadspritegfx 10141
 	loadspritegfx 10155
+	loadspritegfx 10056
+	loadspritegfx 10135
+    loadspritegfx 10296
 	monbg ANIM_BANK_DEF_PARTNER
 	setalpha 12, 8
 	createvisualtask AnimTask_ShakeMon, 5, 0, 0, 2, 23, 1
@@ -12809,11 +12813,6 @@ Move_AQUA_TAIL:
 	createsprite gBattleAnimSpriteTemplate_83D9348, 2, 12, 0, 25, 0
 	waitforvisualfinish
     
-	loadspritegfx 10056
-	loadspritegfx 10135
-    loadspritegfx 10296
-	monbg ANIM_BANK_TARGET
-	setalpha 12, 8
 	playsewithpan SE_W004, 192
 	createsprite gSlideMonToOffsetSpriteTemplate, 2, 0, 20, 3, 0, 4
 	delay 1
@@ -12837,7 +12836,7 @@ Move_AQUA_TAIL:
 	waitforvisualfinish
 	delay 5
 	waitforvisualfinish
-	clearmonbg ANIM_BANK_TARGET
+	clearmonbg ANIM_BANK_DEF_PARTNER
 	blendoff
 	end
 
@@ -12984,6 +12983,7 @@ Move_DISCHARGE:
 	clearmonbg ANIM_BANK_ATTACKER
 	blendoff
 	delay 8
+	end
 
 Move_POWER_GEM:
 	loadspritegfx 10135

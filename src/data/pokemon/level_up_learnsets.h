@@ -4279,7 +4279,7 @@ const u16 gSkittyLevelUpLearnset[] = {
 };
 
 const u16 gDelcattyLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_GROWL),
+    LEVEL_UP_MOVE( 1, MOVE_FAKE_OUT),
     LEVEL_UP_MOVE( 1, MOVE_ATTRACT),
     LEVEL_UP_MOVE( 1, MOVE_SING),
     LEVEL_UP_MOVE( 1, MOVE_DOUBLE_SLAP),
