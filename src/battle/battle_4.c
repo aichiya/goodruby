@@ -144,7 +144,7 @@ extern const u8* gBattlescriptCurrInstr;
 extern u8 gCurrMovePos;
 extern u8 gCurrentActionFuncId;
 extern u32 gHitMarker;
-extern u8 gMoveResultFlags;
+extern u16 gMoveResultFlags;
 extern u8 gBattleCommunication[];
 extern u16 gLastLandedMoves[4];
 extern u16 gLastHitByType[4];
@@ -266,6 +266,7 @@ extern u8 BattleScript_SubstituteFade[];
 extern u8 BattleScript_HangedOnMsg[];
 extern u8 BattleScript_OneHitKOMsg[];
 extern u8 BattleScript_EnduredMsg[];
+extern u8 BattleScript_SturdyMsg[];
 extern u8 BattleScript_PSNPrevention[];
 extern u8 BattleScript_BRNPrevention[];
 extern u8 BattleScript_PRLZPrevention[];
@@ -665,6 +666,11 @@ static void sp1B_sleepremoval(void);
 static void sp1C_heavyslam(void);
 static void sp1D_aquaring(void);
 static void sp1E_soak(void);
+static void sp1F_setstealthrock(void);
+static void sp20_rocksaffect(void);
+static void sp21_defogfoerocks(void);
+static void sp22_defogownrocks(void);
+
 
 void (* const gBattleScriptingCommandsTable[])(void) =
 {
@@ -1912,30 +1918,31 @@ static void atk07_adjustnormaldamage(void)
         RecordItemBattle(gBankTarget, hold_effect);
         gSpecialStatuses[gBankTarget].focusBanded = 1;
     }
-    if (gBattleMons[gBankTarget].status2 & STATUS2_SUBSTITUTE)
-        goto END;
-    if (gBattleMoves[gCurrentMove].effect != EFFECT_FALSE_SWIPE && !gProtectStructs[gBankTarget].endured
-     && !gSpecialStatuses[gBankTarget].focusBanded)
-        goto END;
-
-    if (gBattleMons[gBankTarget].hp > gBattleMoveDamage)
-        goto END;
-
-    gBattleMoveDamage = gBattleMons[gBankTarget].hp - 1;
-
-    if (gProtectStructs[gBankTarget].endured)
+    if (!(gBattleMons[gBankTarget].status2 & STATUS2_SUBSTITUTE) && gBattleMons[gBankTarget].hp <= gBattleMoveDamage)
     {
-        gMoveResultFlags |= MOVE_RESULT_FOE_ENDURED;
-        goto END;
-    }
-    if (gSpecialStatuses[gBankTarget].focusBanded)
-    {
-        gMoveResultFlags |= MOVE_RESULT_FOE_HUNG_ON;
-        gLastUsedItem = gBattleMons[gBankTarget].item;
-    }
-
-    END:
-        gBattlescriptCurrInstr++;
+		if (gBattleMoves[gCurrentMove].effect == EFFECT_FALSE_SWIPE)
+		{
+			gBattleMoveDamage = gBattleMons[gBankTarget].hp - 1;
+		}
+		else if (gProtectStructs[gBankTarget].endured)
+		{
+			gBattleMoveDamage = gBattleMons[gBankTarget].hp - 1;
+			gMoveResultFlags |= MOVE_RESULT_FOE_ENDURED;
+		}
+		else if (gBattleMons[gBankTarget].ability == ABILITY_STURDY && gBattleMons[gBankTarget].hp == gBattleMons[gBankTarget].maxHP)
+		{
+			gBattleMoveDamage = gBattleMons[gBankTarget].hp - 1;
+			gMoveResultFlags |= MOVE_RESULT_STURDY;
+		}
+		else if (gSpecialStatuses[gBankTarget].focusBanded)
+		{
+			gBattleMoveDamage = gBattleMons[gBankTarget].hp - 1;
+			gMoveResultFlags |= MOVE_RESULT_FOE_HUNG_ON;
+			gLastUsedItem = gBattleMons[gBankTarget].item;
+		}
+	}
+    
+	gBattlescriptCurrInstr++;
 }
 
 static void atk08_adjustnormaldamage2(void) //literally the same as 0x7 except it doesn't check for false swipe move effect...
@@ -2272,7 +2279,7 @@ static void atk0F_resultmessage(void)
     else
     {
         gBattleCommunication[MSG_DISPLAY] = 1;
-        switch (gMoveResultFlags & (u8)(~(MOVE_RESULT_MISSED)))
+        switch (gMoveResultFlags & ~(MOVE_RESULT_MISSED))
         {
         case MOVE_RESULT_SUPER_EFFECTIVE:
             stringId = STRINGID_SUPEREFFECTIVE;
@@ -2286,6 +2293,9 @@ static void atk0F_resultmessage(void)
         case MOVE_RESULT_FOE_ENDURED:
             stringId = STRINGID_PKMNENDUREDHIT;
             break;
+		case MOVE_RESULT_STURDY:
+			stringId = 384; // hack alert
+			break;
         case MOVE_RESULT_FAILED:
             stringId = STRINGID_BUTITFAILED;
             break;
@@ -2315,16 +2325,23 @@ static void atk0F_resultmessage(void)
             }
             else if (gMoveResultFlags & MOVE_RESULT_FOE_ENDURED)
             {
-                gMoveResultFlags &= ~(MOVE_RESULT_FOE_ENDURED | MOVE_RESULT_FOE_HUNG_ON);
+                gMoveResultFlags &= ~(MOVE_RESULT_FOE_ENDURED | MOVE_RESULT_FOE_HUNG_ON | MOVE_RESULT_STURDY);
                 BattleScriptPushCursor();
                 gBattlescriptCurrInstr = BattleScript_EnduredMsg;
                 return;
             }
+			else if (gMoveResultFlags & MOVE_RESULT_STURDY)
+			{
+                gMoveResultFlags &= ~(MOVE_RESULT_FOE_ENDURED | MOVE_RESULT_FOE_HUNG_ON | MOVE_RESULT_STURDY);
+                BattleScriptPushCursor();
+                gBattlescriptCurrInstr = BattleScript_SturdyMsg;
+                return;
+			}
             else if (gMoveResultFlags & MOVE_RESULT_FOE_HUNG_ON)
             {
                 gLastUsedItem = gBattleMons[gBankTarget].item;
                 gStringBank = gBankTarget;
-                gMoveResultFlags &= ~(MOVE_RESULT_FOE_ENDURED | MOVE_RESULT_FOE_HUNG_ON);
+                gMoveResultFlags &= ~(MOVE_RESULT_FOE_ENDURED | MOVE_RESULT_FOE_HUNG_ON | MOVE_RESULT_STURDY);
                 BattleScriptPushCursor();
                 gBattlescriptCurrInstr = BattleScript_HangedOnMsg;
                 return;
@@ -13999,6 +14016,17 @@ static void atkBE_rapidspinfree(void) //rapid spin
 		gBattleTextBuff1[3] = MOVE_SPIKES >> 8;
 		gBattleTextBuff1[4] = EOS;
     }
+    else if (gSideTimers[GetBattlerSide(gBankAttacker)].spikesAmount & HAZARD_STEALTH_ROCK)
+    {
+        gSideTimers[GetBattlerSide(gBankAttacker)].spikesAmount &= ~(HAZARD_STEALTH_ROCK);
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = BattleScript_SpikesFree;
+		gBattleTextBuff1[0] = 0xFD;
+		gBattleTextBuff1[1] = 2;
+		gBattleTextBuff1[2] = (u8)MOVE_STEALTH_ROCK;
+		gBattleTextBuff1[3] = MOVE_STEALTH_ROCK >> 8;
+		gBattleTextBuff1[4] = EOS;
+    }
     else if (gSideTimers[GetBattlerSide(gBankAttacker)].spikesAmount & HAZARD_STICKY_WEB)
     {
         gSideTimers[GetBattlerSide(gBankAttacker)].spikesAmount &= ~(HAZARD_STICKY_WEB);
@@ -16149,6 +16177,10 @@ void (* const gBattleScriptingSpecialTable[])(void) =
 	sp1C_heavyslam,
 	sp1D_aquaring,
 	sp1E_soak,
+	sp1F_setstealthrock,
+	sp20_rocksaffect,
+	sp21_defogfoerocks,
+	sp22_defogownrocks,
 };
 
 
@@ -16821,8 +16853,6 @@ static void sp15_webaffect(void)
 	}
 }
 
-
-
 static void sp16_defogfoeweb(void)
 {
     u8 side = GetBattlerSide(gBankTarget);
@@ -16844,7 +16874,7 @@ static void sp16_defogfoeweb(void)
 static void sp17_defogownweb(void)
 {
     u8 side = GetBattlerSide(gBankAttacker);
-    if (gSideTimers[side].spikesAmount)
+    if (gSideTimers[side].spikesAmount & HAZARD_STICKY_WEB)
     {
         gSideTimers[side].spikesAmount &= ~(HAZARD_STICKY_WEB);
 		gBattleTextBuff1[0] = 0xFD;
@@ -16955,6 +16985,75 @@ static void sp1E_soak(void)
 		gBattleMons[gBankTarget].type1 = TYPE_WATER;
 		gBattleMons[gBankTarget].type2 = TYPE_WATER;
 		gBattlescriptCurrInstr += 5;
+	}
+}
+
+static void sp1F_setstealthrock(void)
+{
+    u8 side = GetBattlerSide(gBankAttacker) ^ 1;
+    if ((gSideTimers[side].spikesAmount & HAZARD_STEALTH_ROCK) != 0)
+    {
+        gSpecialStatuses[gBankAttacker].flag20 = 1;
+    }
+    else
+    {
+        gSideTimers[side].spikesAmount |= HAZARD_STEALTH_ROCK;
+        gBattlescriptCurrInstr += 5;
+    }
+}
+
+static void sp20_rocksaffect(void)
+{
+	u8 spikes;
+	u8 damagerate;
+	gActiveBattler = gBattleStruct->scriptingActive;
+	spikes = gSideTimers[GetBattlerSide(gActiveBattler)].spikesAmount & HAZARD_STEALTH_ROCK;
+	if (spikes == 0)
+	{
+		gBattlescriptCurrInstr += 5;
+	}
+	else
+	{
+		damagerate = 8;
+		damagerate = damagerate * gTypeEffectiveness[20 * TYPE_ROCK + gBattleMons[gActiveBattler].type1] / 10;
+		damagerate = damagerate * gTypeEffectiveness[20 * TYPE_ROCK + gBattleMons[gActiveBattler].type2] / 10;
+		gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP * damagerate / 8;
+	}
+}
+
+static void sp21_defogfoerocks(void)
+{
+    u8 side = GetBattlerSide(gBankTarget);
+    if (gSideTimers[side].spikesAmount & HAZARD_STEALTH_ROCK)
+    {
+        gSideTimers[side].spikesAmount &= ~(HAZARD_STEALTH_ROCK);
+		gBattleTextBuff1[0] = 0xFD;
+		gBattleTextBuff1[1] = 2;
+		gBattleTextBuff1[2] = (u8)MOVE_STEALTH_ROCK;
+		gBattleTextBuff1[3] = MOVE_STEALTH_ROCK >> 8;
+		gBattleTextBuff1[4] = EOS;
+    }
+	else
+	{
+		gBattlescriptCurrInstr += 6;
+	}
+}
+
+static void sp22_defogownrocks(void)
+{
+    u8 side = GetBattlerSide(gBankAttacker);
+    if (gSideTimers[side].spikesAmount & HAZARD_STEALTH_ROCK)
+    {
+        gSideTimers[side].spikesAmount &= ~(HAZARD_STEALTH_ROCK);
+		gBattleTextBuff1[0] = 0xFD;
+		gBattleTextBuff1[1] = 2;
+		gBattleTextBuff1[2] = (u8)MOVE_STEALTH_ROCK;
+		gBattleTextBuff1[3] = MOVE_STEALTH_ROCK >> 8;
+		gBattleTextBuff1[4] = EOS;
+    }
+	else
+	{
+		gBattlescriptCurrInstr += 6;
 	}
 }
 

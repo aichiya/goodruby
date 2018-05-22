@@ -115,4 +115,12 @@ gBattleAnimSpriteTemplate_PoisonJab::
 gBattleAnimSpriteTemplate_AquaTail::
 	spr_template 10056, 10296, gOamData_837DF34, gSpriteAnimTable_83D69D4, NULL, gDummySpriteAffineAnimTable, sub_80CC884
 
+	.align 2
+gBattleAnimSpriteTemplate_StealthRock:: @ 840227C
+	spr_template 10058, 10058, gOamData_837DF34, gSpriteAnimTable_83DAC40, NULL, gDummySpriteAffineAnimTable, sub_812C720
+
+	.align 2
+gBattleAnimSpriteTemplate_StoneEdge::
+	spr_template 10058, 10058, gOamData_837DF34, gSpriteAnimTable_83DAC40, NULL, gDummySpriteAffineAnimTable, sub_80794A8
+
 

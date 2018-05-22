@@ -372,6 +372,9 @@ enum
 	BATTLE_TEXT_AquaRing,
 	BATTLE_TEXT_Soaked,
 	BATTLE_TEXT_AquaRingHeal,
+	BATTLE_TEXT_RocksSet,
+	BATTLE_TEXT_RocksHurt,
+	BATTLE_TEXT_Sturdy,
 };
 
 const u8 BattleText_UnknownString[] = _("{STRING 33}");
@@ -874,6 +877,9 @@ const u8 BattleText_SlappedAwake[] = _("{DEFENDING_MON} woke up!");
 const u8 BattleText_AquaRing[] = _("{ATTACKING_MON} surrounded\nitself with a veil of water!");
 const u8 BattleText_Soaked[] = _("{DEFENDING_MON} transformed\ninto the Water type!");
 const u8 BattleText_AquaRingHeal[] = _("{ATTACKING_MON} is\nhealed by Aqua Ring!");
+const u8 BattleText_RocksSet[] = _("Pointed stones float in the\nair around {STRING 37} team!");
+const u8 BattleText_RocksHurt[] = _("Pointed stones dug into\n{STRING 16}!");
+const u8 BattleText_Sturdy[] = _("{DEFENDING_MON} endured the\nhit using Sturdy!");
 
 const u8 *const gUnknown_08400F58[] =
 {
@@ -1268,6 +1274,9 @@ const u8 *const gBattleStringsTable[] =
 	BattleText_AquaRing,
 	BattleText_Soaked,
 	BattleText_AquaRingHeal,
+	BattleText_RocksSet,
+	BattleText_RocksHurt,
+	BattleText_Sturdy,
 };
 
 // below are lists of battle string enums and NOT pointers to the strings.

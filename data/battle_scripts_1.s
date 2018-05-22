@@ -253,6 +253,7 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectHeavySlam
 	.4byte BattleScript_EffectAquaRing
 	.4byte BattleScript_EffectSoak
+	.4byte BattleScript_EffectStealthRock
 
 BattleScript_EffectHit: @ 81D6F14
 BattleScript_EffectAccuracyDown2: @ 81D6F14
@@ -713,7 +714,6 @@ BattleScript_DoMultiHit: @ 81D7322
 	addbyte sMULTIHIT_STRING + 4, 1
 	setbyte sMOVEEND_STATE, 0
 	moveend 2, 16
-	jumpifbyte COMMON_BITS, gMoveResultFlags, MOVE_RESULT_FOE_ENDURED, BattleScript_MultiHitPrintStrings
 	decrementmultihit BattleScript_MultiHitLoop
 	goto BattleScript_MultiHitPrintStrings
 
@@ -3752,6 +3752,11 @@ BattleScript_EnduredMsg:: @ 81D94A2
 	waitmessage 64
 	return
 
+BattleScript_SturdyMsg::
+	printstring BATTLE_TEXT_Sturdy
+	waitmessage 64
+	return
+
 BattleScript_OneHitKOMsg:: @ 81D94A9
 	printstring BATTLE_TEXT_GrandSlam
 	waitmessage 64
@@ -4932,10 +4937,16 @@ Defog_StatDownEnd: @ 81D7271
 	special 0x9
 	printstring BATTLE_TEXT_DefogHazards
 	waitmessage 64
+	special 0x21
+	printstring BATTLE_TEXT_DefogHazards
+	waitmessage 64
 	special 0x16
 	printstring BATTLE_TEXT_DefogHazards
 	waitmessage 64
 	special 0xA
+	printstring BATTLE_TEXT_DefogOwnHazards
+	waitmessage 64
+	special 0x22
 	printstring BATTLE_TEXT_DefogOwnHazards
 	waitmessage 64
 	special 0x17
@@ -5062,6 +5073,8 @@ BattleScript_HazardsUser::
 	call BattleScript_HealingWishOnAttacker
 	special 0x12
 	call BattleScript_SpikesOnAttacker
+	special 0x20
+	call BattleScript_StealthRockOnAttacker
 	return
 
 BattleScript_HazardsTarget::
@@ -5071,6 +5084,8 @@ BattleScript_HazardsTarget::
 	call BattleScript_HealingWishOnTarget
 	special 0x12
 	call BattleScript_SpikesOnTarget
+	special 0x20
+	call BattleScript_StealthRockOnTarget
 	return
 
 BattleScript_HazardsgBank1::
@@ -5080,6 +5095,8 @@ BattleScript_HazardsgBank1::
 	call BattleScript_HealingWishOngBank1
 	special 0x12
 	call BattleScript_SpikesOngBank1
+	special 0x20
+	call BattleScript_StealthRockOngBank1
 	return
 
 BattleScript_HealingWishOnAttacker:
@@ -5307,4 +5324,62 @@ BattleScript_EffectSoak:
 	waitmessage 64
 	goto BattleScript_MoveEnd
 
+BattleScript_EffectStealthRock:
+	attackcanceler
+	special 0x1F
+	goto BattleScript_ButItFailedAtkStringPpReduce
+	attackstring
+	ppreduce
+	attackanimation
+	waitanimation
+	printstring BATTLE_TEXT_RocksSet
+	waitmessage 64
+	goto BattleScript_MoveEnd
 
+BattleScript_StealthRockOnAttacker:: @ 81D9171
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_x100000
+	healthbarupdate USER
+	datahpupdate USER
+	call BattleScript_PrintHurtByStealthRock
+	tryfaintmon USER, FALSE, NULL
+	tryfaintmon USER, TRUE, BattleScript_StealthRockOnAttackerFainted
+	return
+
+BattleScript_StealthRockOnAttackerFainted: @ 81D9192
+	setbyte sGIVEEXP_STATE, 0
+	getexp USER
+	goto BattleScript_HandleFaintedMon
+
+BattleScript_StealthRockOnTarget:: @ 81D919F
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_x100000
+	healthbarupdate TARGET
+	datahpupdate TARGET
+	call BattleScript_PrintHurtByStealthRock
+	tryfaintmon TARGET, FALSE, NULL
+	tryfaintmon TARGET, TRUE, BattleScript_StealthRockOnTargetFainted
+	return
+
+BattleScript_StealthRockOnTargetFainted: @ 81D91C0
+	setbyte sGIVEEXP_STATE, 0
+	getexp TARGET
+	goto BattleScript_HandleFaintedMon
+
+BattleScript_StealthRockOngBank1:: @ 81D91CD
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_x100000
+	healthbarupdate 3
+	datahpupdate 3
+	call BattleScript_PrintHurtByStealthRock
+	tryfaintmon GBANK_1, FALSE, NULL
+	tryfaintmon GBANK_1, TRUE, BattleScript_StealthRockOngBank1Fainted
+	return
+
+BattleScript_StealthRockOngBank1Fainted: @ 81D91EE
+	setbyte sGIVEEXP_STATE, 0
+	getexp 3
+	goto BattleScript_HandleFaintedMon
+
+BattleScript_PrintHurtByStealthRock: @ 81D91FB
+	printstring BATTLE_TEXT_RocksHurt
+	waitmessage 64
+	return
+	

@@ -759,8 +759,8 @@ static const u8 MoveDescription_Octazooka[] = _(
     "damage and cut accuracy.");
 
 static const u8 MoveDescription_Spikes[] = _(
-    "Sets spikes that hurt a \n"
-    "foe switching out.");
+    "Sets spikes that hurt a\n"
+    "foe switching in.");
 
 static const u8 MoveDescription_ZapCannon[] = _(
     "Powerful and sure to cause\n"
@@ -1682,6 +1682,26 @@ static const u8 MoveDescription_AquaTail[] = _(
     "Slams with a tail like\n"
     "a wave in a storm.");
 
+static const u8 MoveDescription_RockPolish[] = _(
+    "Polishes the body to\n"
+    "sharply boost Speed.");
+
+static const u8 MoveDescription_Bulldoze[] = _(
+    "Smashes the ground apart\n"
+    "to lower Speed.");
+
+static const u8 MoveDescription_StealthRock[] = _(
+    "Sets floating stones that\n"
+    "hurt foes switching in.");
+
+static const u8 MoveDescription_StoneEdge[] = _(
+    "Slams with sharpened rocks.\n"
+    "High critical-hit ratio.");
+
+static const u8 MoveDescription_Steamroller[] = _(
+    "A crushing ram attack\n"
+    "that may cause flinching.");
+
 
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
@@ -2105,4 +2125,9 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_Soak,
 	MoveDescription_PoisonJab,
 	MoveDescription_AquaTail,
+	MoveDescription_RockPolish,
+	MoveDescription_Bulldoze,
+	MoveDescription_StealthRock,
+	MoveDescription_StoneEdge,
+	MoveDescription_Steamroller,
 };

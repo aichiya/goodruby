@@ -369,3 +369,6 @@
 	enum BATTLE_TEXT_AquaRing
 	enum BATTLE_TEXT_Soaked
 	enum BATTLE_TEXT_AquaRingHeal
+	enum BATTLE_TEXT_RocksSet
+	enum BATTLE_TEXT_RocksHurt
+	enum BATTLE_TEXT_Sturdy

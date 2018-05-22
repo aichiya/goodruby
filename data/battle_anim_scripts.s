@@ -437,6 +437,11 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_SOAK
 	.4byte Move_POISON_JAB
 	.4byte Move_AQUA_TAIL
+	.4byte Move_ROCK_POLISH
+	.4byte Move_BULLDOZE
+	.4byte Move_STEALTH_ROCK
+	.4byte Move_STONE_EDGE
+	.4byte Move_STEAMROLLER
 	.4byte PoundCopy
 
 	.align 2
@@ -12840,4 +12845,117 @@ Move_AQUA_TAIL:
 	clearmonbg ANIM_BANK_TARGET
 	blendoff
 	end
+
+Move_ROCK_POLISH:
+	loadspritegfx 10138
+	monbg ANIM_BANK_TARGET
+	setalpha 12, 8
+	playsewithpan SE_W015, 63
+	createsprite gCuttingSliceSpriteTemplate, 2, 40, -32, 0
+	delay 5
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_TARGET, 0, 3, 10, 1
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_TARGET
+	blendoff
+	waitforvisualfinish
+	playsewithpan SE_W043, 192
+	createvisualtask sub_80E388C, 2
+	waitforvisualfinish
+	end
+
+Move_BULLDOZE:
+	createvisualtask sub_80E1B88, 2
+	waitforvisualfinish
+	createvisualtask sub_80E1864, 5, 5, 0, 50
+	createvisualtask sub_80E1864, 5, 4, 0, 50
+	loopsewithpan SE_W070, 63, 8, 10
+	end
+
+Move_STEALTH_ROCK:
+	loadspritegfx 10058
+	monbg ANIM_BANK_DEF_PARTNER
+	playsewithpan SE_W026, 192
+	waitplaysewithpan SE_W030, 63, 28
+	createsprite gBattleAnimSpriteTemplate_StealthRock, 130, 20, 0, 0, -12, 30
+	delay 10
+	playsewithpan SE_W026, 192
+	waitplaysewithpan SE_W030, 63, 28
+	createsprite gBattleAnimSpriteTemplate_StealthRock, 130, 20, 0, -24, -12, 30
+	delay 10
+	waitplaysewithpan SE_W030, 63, 28
+	createsprite gBattleAnimSpriteTemplate_StealthRock, 130, 20, 0, 24, -12, 30
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_DEF_PARTNER
+	end
+
+Move_STONE_EDGE:
+	loadspritegfx 10135
+	loadspritegfx 10058
+	monbg ANIM_BANK_DEF_PARTNER
+	monbgprio_28 1
+	setalpha 12, 8
+	playsewithpan SE_W025B, 63
+	createsprite gBattleAnimSpriteTemplate_StoneEdge, 3, 20, 0, 20, -60, 40, 65
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_StoneEdge, 3, 20, 0, 0, -60, 40, 65
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_StoneEdge, 3, 20, 0, -20, -60, 40, 65
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_StoneEdge, 3, 20, 0, 10, -60, 40, 65
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_StoneEdge, 3, 20, 0, -15, -60, 40, 65
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_StoneEdge, 3, 20, 0, 15, -60, 40, 65
+	delay 9
+	createsprite gBasicHitSplatSpriteTemplate, 2, 4, 0, 1, 2
+	playsewithpan SE_W088, 63
+	createvisualtask AnimTask_ShakeMonInPlace, 2, ANIM_BANK_TARGET, 4, 0, 16, 1
+	delay 2
+	createsprite gBasicHitSplatSpriteTemplate, 2, -12, 0, 1, 2
+	playsewithpan SE_W088, 63
+	delay 2
+	createsprite gBasicHitSplatSpriteTemplate, 2, -28, 0, 1, 2
+	playsewithpan SE_W088, 63
+	delay 2
+	createsprite gBasicHitSplatSpriteTemplate, 2, -4, 0, 1, 2
+	playsewithpan SE_W088, 63
+	delay 2
+	createsprite gBasicHitSplatSpriteTemplate, 2, -20, 0, 1, 2
+	playsewithpan SE_W088, 63
+	delay 2
+	createsprite gBasicHitSplatSpriteTemplate, 2, 0, 0, 1, 2
+	playsewithpan SE_W088, 63
+	delay 2
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_DEF_PARTNER
+	blendoff
+	end
+
+Move_STEAMROLLER:
+	loadspritegfx 10135
+	monbg ANIM_BANK_DEF_PARTNER
+	setalpha 12, 8
+	createsprite gSlideMonToOffsetSpriteTemplate, 2, 0, 26, 0, 0, 5
+	delay 6
+	createsprite gBasicHitSplatSpriteTemplate, 4, -10, 0, 1, 0
+	loopsewithpan SE_W025B, 63, 6, 3
+	delay 1
+	createsprite gSlideMonToOffsetSpriteTemplate, 2, 1, -28, 0, 0, 3
+	createsprite gBasicHitSplatSpriteTemplate, 4, 0, 3, 1, 0
+	delay 1
+	createsprite gBasicHitSplatSpriteTemplate, 4, 10, 6, 1, 0
+	delay 1
+	waitforvisualfinish
+	createvisualtask AnimTask_ShakeMonInPlace, 2, ANIM_BANK_TARGET, 4, 0, 12, 1
+	waitforvisualfinish
+	delay 10
+	createsprite gSlideMonToOriginalPosSpriteTemplate, 2, 0, 0, 6
+	delay 5
+	createsprite gSlideMonToOriginalPosSpriteTemplate, 2, 1, 0, 6
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_DEF_PARTNER
+	blendoff
+	end
+
+
 

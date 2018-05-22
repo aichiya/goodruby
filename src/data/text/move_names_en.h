@@ -421,4 +421,9 @@ const u8 gMoveNames[][13] = {
 	[MOVE_SOAK] = _("Soak"),
 	[MOVE_POISON_JAB] = _("Poison Jab"),
 	[MOVE_AQUA_TAIL] = _("Aqua Tail"),
+	[MOVE_ROCK_POLISH] = _("Rock Polish"),
+	[MOVE_BULLDOZE] = _("Bulldoze"),
+	[MOVE_STEALTH_ROCK] = _("Stealth Rock"),
+	[MOVE_STONE_EDGE] = _("Stone Edge"),
+	[MOVE_STEAMROLLER] = _("Steamroller"),
 };
