@@ -426,4 +426,5 @@ const u8 gMoveNames[][13] = {
 	[MOVE_STEALTH_ROCK] = _("Stealth Rock"),
 	[MOVE_STONE_EDGE] = _("Stone Edge"),
 	[MOVE_STEAMROLLER] = _("Steamroller"),
+	[MOVE_DISCHARGE] = _("Discharge"),
 };

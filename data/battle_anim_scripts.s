@@ -442,6 +442,7 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_STEALTH_ROCK
 	.4byte Move_STONE_EDGE
 	.4byte Move_STEAMROLLER
+	.4byte Move_DISCHARGE
 	.4byte PoundCopy
 
 	.align 2
@@ -11506,12 +11507,6 @@ Move_ZEN_HEADBUTT:
 	call Unknown_81D61F3
 	end
 
-Move_POWER_GEM:
-	end
-
-Move_EARTH_POWER:
-	end
-
 Move_NASTY_PLOT:
 	loadspritegfx 10093
 	loadspritegfx 10291
@@ -12957,5 +12952,94 @@ Move_STEAMROLLER:
 	blendoff
 	end
 
+Move_DISCHARGE:
+	loadspritegfx 10001
+	loadspritegfx 10011
+	loadspritegfx 10211
+	loadspritegfx 10212
+	loadspritegfx 10213
+	monbg ANIM_BANK_ATTACKER
+	setalpha 12, 8
+	
+	createvisualtask sub_80D6B3C, 2, 0, 20, 0, 2
+	playsewithpan SE_W268, 192
+	delay 12
+	createsprite gBattleAnimSpriteTemplate_83D9B28, 2
+	delay 4
+	
+	createsprite gBattleAnimSpriteTemplate_83DB3C4, 2, 1, 1, 0, 15, 0x2FFF
+	delay 8
+	createvisualtask AnimTask_ShakeMon, 5, 1, 0, 3, 45, 1
+	
+	call ElectricityEffect
+	playsewithpan SE_W085B, 192
+	createsprite gBattleAnimSpriteTemplate_83D9A9C, 2, 1, 16, 16
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83D9A9C, 2, 1, -16, -16
+	delay 2
+	
+	call ElectricityEffect
+	
+	createsprite gBattleAnimSpriteTemplate_83DB3C4, 2, 1, 1, 15, 0, 0x2FFF
+	clearmonbg ANIM_BANK_ATTACKER
+	blendoff
+	delay 8
+
+Move_POWER_GEM:
+	loadspritegfx 10135
+	playsewithpan SE_W043, 192
+	createvisualtask AnimTask_BlendMonInAndOut, 3, ANIM_BANK_ATTACKER, 0x7FFF, 12, 1, 1
+	waitforvisualfinish
+	playsewithpan SE_W043, 192
+	createvisualtask AnimTask_BlendMonInAndOut, 3, ANIM_BANK_ATTACKER, 0x7FFF, 12, 1, 1
+	waitforvisualfinish
+	playsewithpan SE_W043, 192
+	createsprite gBattleAnimSpriteTemplate_83DB3C4, 2, 1, 1, 0, 15, 0x7FFF
+	createvisualtask AnimTask_BlendMonInAndOut, 3, ANIM_BANK_ATTACKER, 0x7FFF, 12, 1, 1
+	delay 4
+	
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_TARGET, 3, 0, 8, 1
+	playsewithpan SE_W003, 63
+	createsprite gBasicHitSplatSpriteTemplate, 2, 4, -3, 1, 2
+	delay 2
+	playsewithpan SE_W003, 63
+	createsprite gBasicHitSplatSpriteTemplate, 2, -3, 0, 1, 2
+	delay 2
+	playsewithpan SE_W003, 63
+	createsprite gBasicHitSplatSpriteTemplate, 2, 2, 2, 1, 2
+	
+	waitforvisualfinish
+	createsprite gBattleAnimSpriteTemplate_83DB3C4, 2, 1, 1, 15, 0, 0x7FFF
+	end
+
+Move_EARTH_POWER:
+	loadspritegfx 10035
+	fadetobg 21
+	waitbgfadeout
+	createvisualtask sub_80E1BB0, 5, 1, 5, -1
+	waitbgfadein
+	loopsewithpan SE_W172B, 63, 11, 3
+	createvisualtask AnimTask_ShakeMon, 5, 1, 0, 3, 25, 1
+	createsprite gBattleAnimSpriteTemplate_83DB078, 194, 1, 5, 0
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83DB078, 194, 1, -10, -15
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83DB078, 130, 1, 0, 25
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83DB078, 194, 1, 15, 5
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83DB078, 194, 1, -25, 0
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83DB078, 130, 1, 30, 30
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83DB078, 130, 1, -27, 25
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83DB078, 194, 1, 0, 8
+	waitforvisualfinish
+	restorebg
+	waitbgfadeout
+	setarg 7, -1
+	waitbgfadein
+	end
 
 

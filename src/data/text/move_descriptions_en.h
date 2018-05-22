@@ -1519,8 +1519,8 @@ static const u8 MoveDescription_PowerGem[] = _(
     "gemstone-like light.");
 
 static const u8 MoveDescription_EarthPower[] = _(
-    "The floor erupts with power.\n"
-    "May reduce Sp. Def.");
+    "The floor erupts with\n"
+    "power. May lower Sp. Def.");
 
 static const u8 MoveDescription_NastyPlot[] = _(
     "Schemes bad thoughts to\n"
@@ -1701,6 +1701,10 @@ static const u8 MoveDescription_StoneEdge[] = _(
 static const u8 MoveDescription_Steamroller[] = _(
     "A crushing ram attack\n"
     "that may cause flinching.");
+
+static const u8 MoveDescription_Discharge[] = _(
+    "A wide-angle electric burst.\n"
+    "Likley to paralyze the foe.");
 
 
 const u8 * const gMoveDescriptions[] = {
@@ -2130,4 +2134,5 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_StealthRock,
 	MoveDescription_StoneEdge,
 	MoveDescription_Steamroller,
+	MoveDescription_Discharge,
 };
