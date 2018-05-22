@@ -1710,6 +1710,9 @@ static const u8 MoveDescription_Copycat[] = _(
     "The user mimics the move\n"
     "used immediately before it.");
 
+static const u8 MoveDescription_CrossPoison[] = _(
+    "Has a high critical-hit\n"
+    "ratio. May also poison.");
 
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
@@ -2140,4 +2143,5 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_Steamroller,
 	MoveDescription_Discharge,
 	MoveDescription_Copycat,
+	MoveDescription_CrossPoison,
 };

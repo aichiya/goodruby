@@ -428,4 +428,5 @@ const u8 gMoveNames[][13] = {
 	[MOVE_STEAMROLLER] = _("Steamroller"),
 	[MOVE_DISCHARGE] = _("Discharge"),
 	[MOVE_COPYCAT] = _("Copycat"),
+	[MOVE_CROSS_POISON] = _("Cross Poison"),
 };

@@ -444,6 +444,7 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_STEAMROLLER
 	.4byte Move_DISCHARGE
 	.4byte Move_PAY_DAY
+	.4byte Move_CROSS_POISON
 	.4byte PoundCopy
 
 	.align 2
@@ -13042,4 +13043,15 @@ Move_EARTH_POWER:
 	waitbgfadein
 	end
 
+Move_CROSS_POISON:
+	loadspritegfx 10285
+	loadspritegfx 10150
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BANK_TARGET, 6, 0, 18, 1
+	createsprite gBattleAnimSpriteTemplate_83DB520, 130, 0, 0, 1, 36
+	playsewithpan SE_W013, 63
+	waitforvisualfinish
+	blendoff
+	call PoisonBubblesAnim
+	waitforvisualfinish
+	end
 
