@@ -429,4 +429,10 @@ const u8 gMoveNames[][13] = {
 	[MOVE_DISCHARGE] = _("Discharge"),
 	[MOVE_COPYCAT] = _("Copycat"),
 	[MOVE_CROSS_POISON] = _("Cross Poison"),
+	[MOVE_TOXIC_SPIKES] = _("Toxic Spikes"),
+	[MOVE_ACID_SPRAY] = _("Acid Spray"),
+	[MOVE_HEX] = _("Hex"),
+	[MOVE_SLUDGE_WAVE] = _("Sludge Wave"),
+	[MOVE_WRING_OUT] = _("Wring Out"),
+	[MOVE_REFLECT_TYPE] = _("Reflect Type"),
 };

@@ -123,4 +123,15 @@ gBattleAnimSpriteTemplate_StealthRock:: @ 840227C
 gBattleAnimSpriteTemplate_StoneEdge::
 	spr_template 10058, 10058, gOamData_837DF34, gSpriteAnimTable_83DAC40, NULL, gDummySpriteAffineAnimTable, sub_80794A8
 
+	.align 2
+gBattleAnimSpriteTemplate_ToxicSpikes::
+	spr_template 10152, 10295, gOamData_837DF2C, gDummySpriteAnimTable, NULL, gDummySpriteAffineAnimTable, sub_812C720
+
+	.align 2
+gBattleAnimSpriteTemplate_WringOut::
+	spr_template 10186, 10221, gOamData_837DFBC, gSpriteAnimTable_83D6550, NULL, gSpriteAffineAnimTable_83D6598, sub_80CB25C
+
+	.align 2
+gBattleAnimSpriteTemplate_Hex::
+	spr_template 10200, 10200, gOamData_837E054, gDummySpriteAnimTable, NULL, gDummySpriteAffineAnimTable, sub_80D9E94
 

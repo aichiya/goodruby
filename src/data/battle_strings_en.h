@@ -375,6 +375,11 @@ enum
 	BATTLE_TEXT_RocksSet,
 	BATTLE_TEXT_RocksHurt,
 	BATTLE_TEXT_Sturdy,
+	BATTLE_TEXT_ToxicSpikesScattered,
+	BATTLE_TEXT_ToxicSpikesAbsorbed,
+	BATTLE_TEXT_Poisoned3,
+	BATTLE_TEXT_BadlyPoisoned2,
+	BATTLE_TEXT_ReflectType,
 };
 
 const u8 BattleText_UnknownString[] = _("{STRING 33}");
@@ -524,7 +529,7 @@ const u8 BattleText_NightmareStart[] = _("{DEFENDING_MON} fell into\na Nightmare
 const u8 BattleText_NightmareLock[] = _("{ATTACKING_MON} is locked\nin a Nightmare!");
 const u8 BattleText_CurseLay[] = _("{ATTACKING_MON} cut its own HP\nand laid a Curse on\l{DEFENDING_MON}!");
 const u8 BattleText_CurseAfflict[] = _("{ATTACKING_MON} is afflicted\nby the Curse!");
-const u8 BattleText_SpikesScattered[] = _("{STRING 37} Pokémon team had Spikes\nscattered around it!");
+const u8 BattleText_SpikesScattered[] = _("{STRING 37} team had Spikes\nscattered around it!");
 const u8 BattleText_SpikesHurt[] = _("{STRING 16} is hurt\nby Spikes!");
 const u8 BattleText_IdentifiedPoke[] = _("{ATTACKING_MON} identified\n{DEFENDING_MON}!");
 const u8 BattleText_PerishSongFell[] = _("{ATTACKING_MON}’s Perish count\nfell to {STRING 0}!");
@@ -880,6 +885,11 @@ const u8 BattleText_AquaRingHeal[] = _("{ATTACKING_MON} is\nhealed by Aqua Ring!
 const u8 BattleText_RocksSet[] = _("Pointed stones float in the\nair around {STRING 37} team!");
 const u8 BattleText_RocksHurt[] = _("Pointed stones dug into\n{STRING 16}!");
 const u8 BattleText_Sturdy[] = _("{DEFENDING_MON} endured the\nhit using Sturdy!");
+const u8 BattleText_ToxicSpikesScattered[] = _("{STRING 37} team had Toxic\nSpikes scattered around it!");
+const u8 BattleText_ToxicSpikesAbsorbed[] = _("{STRING 16} absorbed the\nToxic Spikes!");
+const u8 BattleText_Poisoned3[] = _("{STRING 16}\nwas poisoned!");
+const u8 BattleText_BadlyPoisoned2[] = _("{STRING 16} is badly\npoisoned!");
+const u8 BattleText_ReflectType[] = _("{ATTACKING_MON} transformed\ninto {DEFENDING_MON}’s type!");
 
 const u8 *const gUnknown_08400F58[] =
 {
@@ -1277,6 +1287,11 @@ const u8 *const gBattleStringsTable[] =
 	BattleText_RocksSet,
 	BattleText_RocksHurt,
 	BattleText_Sturdy,
+	BattleText_ToxicSpikesScattered,
+	BattleText_ToxicSpikesAbsorbed,
+	BattleText_Poisoned3,
+	BattleText_BadlyPoisoned2,
+	BattleText_ReflectType,
 };
 
 // below are lists of battle string enums and NOT pointers to the strings.

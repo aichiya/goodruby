@@ -372,3 +372,8 @@
 	enum BATTLE_TEXT_RocksSet
 	enum BATTLE_TEXT_RocksHurt
 	enum BATTLE_TEXT_Sturdy
+	enum BATTLE_TEXT_ToxicSpikesScattered
+	enum BATTLE_TEXT_ToxicSpikesAbsorbed
+	enum BATTLE_TEXT_Poisoned3
+	enum BATTLE_TEXT_BadlyPoisoned2
+	enum BATTLE_TEXT_ReflectType

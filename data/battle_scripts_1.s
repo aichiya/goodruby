@@ -255,6 +255,10 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectSoak
 	.4byte BattleScript_EffectStealthRock
 	.4byte BattleScript_EffectCopycat
+	.4byte BattleScript_EffectToxicSpikes
+	.4byte BattleScript_EffectSpecialDefenseDown2Hit
+	.4byte BattleScript_EffectWringOut
+	.4byte BattleScript_EffectReflectType
 
 BattleScript_EffectHit: @ 81D6F14
 BattleScript_EffectAccuracyDown2: @ 81D6F14
@@ -4941,6 +4945,9 @@ Defog_StatDownEnd: @ 81D7271
 	special 0x21
 	printstring BATTLE_TEXT_DefogHazards
 	waitmessage 64
+	special 0x27
+	printstring BATTLE_TEXT_DefogHazards
+	waitmessage 64
 	special 0x16
 	printstring BATTLE_TEXT_DefogHazards
 	waitmessage 64
@@ -4948,6 +4955,9 @@ Defog_StatDownEnd: @ 81D7271
 	printstring BATTLE_TEXT_DefogOwnHazards
 	waitmessage 64
 	special 0x22
+	printstring BATTLE_TEXT_DefogOwnHazards
+	waitmessage 64
+	special 0x28
 	printstring BATTLE_TEXT_DefogOwnHazards
 	waitmessage 64
 	special 0x17
@@ -5068,36 +5078,45 @@ BattleScript_LuckyChantEnds::
 	end2
 
 BattleScript_HazardsUser::
-	special 0x15
-	call BattleScript_StickyWebOnAttacker
 	special 0x13
 	call BattleScript_HealingWishOnAttacker
 	special 0x12
 	call BattleScript_SpikesOnAttacker
 	special 0x20
 	call BattleScript_StealthRockOnAttacker
+	special 0x25
+	.4byte BattleScript_ToxicSpikesOnAttacker
+	.4byte BattleScript_ToxicSpikes2OnAttacker
+	special 0x15
+	call BattleScript_StickyWebOnAttacker
 	return
 
 BattleScript_HazardsTarget::
-	special 0x15
-	call BattleScript_StickyWebOnTarget
 	special 0x13
 	call BattleScript_HealingWishOnTarget
 	special 0x12
 	call BattleScript_SpikesOnTarget
 	special 0x20
 	call BattleScript_StealthRockOnTarget
+	special 0x25
+	.4byte BattleScript_ToxicSpikesOnTarget
+	.4byte BattleScript_ToxicSpikes2OnTarget
+	special 0x15
+	call BattleScript_StickyWebOnTarget
 	return
 
 BattleScript_HazardsgBank1::
-	special 0x15
-	call BattleScript_StickyWebOngBank1
 	special 0x13
 	call BattleScript_HealingWishOngBank1
 	special 0x12
 	call BattleScript_SpikesOngBank1
 	special 0x20
 	call BattleScript_StealthRockOngBank1
+	special 0x25
+	.4byte BattleScript_ToxicSpikesOngBank1
+	.4byte BattleScript_ToxicSpikes2OngBank1
+	special 0x15
+	call BattleScript_StickyWebOngBank1
 	return
 
 BattleScript_HealingWishOnAttacker:
@@ -5393,3 +5412,89 @@ BattleScript_EffectCopycat:
 	goto BattleScript_ButItFailed
 	end
 
+BattleScript_EffectToxicSpikes:
+	attackcanceler
+	special 0x24
+	goto BattleScript_ButItFailedAtkStringPpReduce
+	attackstring
+	ppreduce
+	attackanimation
+	waitanimation
+	printstring BATTLE_TEXT_ToxicSpikesScattered
+	waitmessage 64
+	goto BattleScript_MoveEnd
+	end
+
+BattleScript_EffectSpecialDefenseDown2Hit:
+	setmoveeffect EFFECT_SP_DEF_MINUS_2
+	goto BattleScript_EffectHit
+
+BattleScript_EffectWringOut:
+	special 0x26
+	goto BattleScript_EffectHit
+
+BattleScript_EffectReflectType:
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	special 0x29
+	attackanimation
+	waitanimation
+	printstring BATTLE_TEXT_ReflectType
+	waitmessage 64
+	goto BattleScript_MoveEnd
+	end
+
+BattleScript_AbsorbToxicSpikes::
+	printstring BATTLE_TEXT_ToxicSpikesAbsorbed
+	waitmessage 64
+	return
+
+BattleScript_ToxicSpikesOnAttacker:: @ 81D969D
+	statusanimation USER
+	printstring BATTLE_TEXT_Poisoned3
+	waitmessage 64
+	updatestatusicon USER
+	waitstate
+	return
+
+BattleScript_ToxicSpikesOnTarget:: @ 81D969D
+	statusanimation TARGET
+	printstring BATTLE_TEXT_Poisoned3
+	waitmessage 64
+	updatestatusicon TARGET
+	waitstate
+	return
+
+BattleScript_ToxicSpikesOngBank1:: @ 81D969D
+	statusanimation 3
+	printstring BATTLE_TEXT_Poisoned3
+	waitmessage 64
+	updatestatusicon 3
+	waitstate
+	return
+
+BattleScript_ToxicSpikes2OnAttacker:: @ 81D969D
+	statusanimation USER
+	printstring BATTLE_TEXT_BadlyPoisoned2
+	waitmessage 64
+	updatestatusicon USER
+	waitstate
+	return
+
+BattleScript_ToxicSpikes2OnTarget:: @ 81D969D
+	statusanimation TARGET
+	printstring BATTLE_TEXT_BadlyPoisoned2
+	waitmessage 64
+	updatestatusicon TARGET
+	waitstate
+	return
+
+BattleScript_ToxicSpikes2OngBank1:: @ 81D969D
+	statusanimation 3
+	printstring BATTLE_TEXT_BadlyPoisoned2
+	waitmessage 64
+	updatestatusicon 3
+	waitstate
+	return

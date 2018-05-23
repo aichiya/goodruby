@@ -320,6 +320,7 @@ extern u8 BattleScript_BugBiteLeppa[];
 extern u8 BattleScript_CaptivateFail[];
 extern u8 BattleScript_CaptivateFailOblivious[];
 extern u8 BattleScript_TargetSLPHeal[];
+extern u8 BattleScript_AbsorbToxicSpikes[];
 
 extern const u8 gStatusConditionString_PoisonJpn[];
 extern const u8 gStatusConditionString_SleepJpn[];
@@ -671,6 +672,12 @@ static void sp20_rocksaffect(void);
 static void sp21_defogfoerocks(void);
 static void sp22_defogownrocks(void);
 static void sp23_copycat(void);
+static void sp24_settoxicspikes(void);
+static void sp25_toxicspikesaffect(void);
+static void sp26_wringout(void);
+static void sp27_defogfoetoxicspikes(void);
+static void sp28_defogowntoxicspikes(void);
+static void sp29_reflecttype(void);
 
 
 void (* const gBattleScriptingCommandsTable[])(void) =
@@ -14030,6 +14037,17 @@ static void atkBE_rapidspinfree(void) //rapid spin
 		gBattleTextBuff1[3] = MOVE_STEALTH_ROCK >> 8;
 		gBattleTextBuff1[4] = EOS;
     }
+    else if (gSideTimers[GetBattlerSide(gBankAttacker)].spikesAmount & HAZARD_TOXIC_SPIKES_ANY)
+    {
+        gSideTimers[GetBattlerSide(gBankAttacker)].spikesAmount &= ~(HAZARD_TOXIC_SPIKES_ANY);
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = BattleScript_SpikesFree;
+		gBattleTextBuff1[0] = 0xFD;
+		gBattleTextBuff1[1] = 2;
+		gBattleTextBuff1[2] = (u8)MOVE_TOXIC_SPIKES;
+		gBattleTextBuff1[3] = MOVE_TOXIC_SPIKES >> 8;
+		gBattleTextBuff1[4] = EOS;
+    }
     else if (gSideTimers[GetBattlerSide(gBankAttacker)].spikesAmount & HAZARD_STICKY_WEB)
     {
         gSideTimers[GetBattlerSide(gBankAttacker)].spikesAmount &= ~(HAZARD_STICKY_WEB);
@@ -16185,6 +16203,12 @@ void (* const gBattleScriptingSpecialTable[])(void) =
 	sp21_defogfoerocks,
 	sp22_defogownrocks,
 	sp23_copycat,
+	sp24_settoxicspikes,
+	sp25_toxicspikesaffect,
+	sp26_wringout,
+	sp27_defogfoetoxicspikes,
+	sp28_defogowntoxicspikes,
+	sp29_reflecttype,
 };
 
 
@@ -17118,4 +17142,128 @@ static void sp23_copycat(void)
         gBattlescriptCurrInstr = gBattleScriptsForMoveEffects[gBattleMoves[gCurrentMove].effect];
 	}
 	// else current instruction stays the same and move fails
+}
+
+static void sp24_settoxicspikes(void)
+{
+	//t-spikes occupies 0x18
+    u8 side = GetBattlerSide(gBankAttacker) ^ 1;
+    if ((gSideTimers[side].spikesAmount & HAZARD_TOXIC_SPIKES2) != 0)
+    {
+        gSpecialStatuses[gBankAttacker].flag20 = 1;
+    }
+    else if ((gSideTimers[side].spikesAmount & HAZARD_TOXIC_SPIKES) != 0)
+	{
+        gSideTimers[side].spikesAmount |= HAZARD_TOXIC_SPIKES2;
+        gBattlescriptCurrInstr += 5;
+	}
+    else
+    {
+        gSideTimers[side].spikesAmount |= HAZARD_TOXIC_SPIKES;
+        gBattlescriptCurrInstr += 5;
+    }
+}
+
+static void sp25_toxicspikesaffect(void)
+{
+	u8 spikes;
+	gActiveBattler = gBattleStruct->scriptingActive;
+	spikes = gSideTimers[GetBattlerSide(gActiveBattler)].spikesAmount;
+    gBattlescriptCurrInstr += 8;
+	
+	if (!(spikes & HAZARD_TOXIC_SPIKES))
+	{
+		// no t-spikes
+	}
+	else if (gBattleMons[gActiveBattler].type1 == TYPE_FLYING || gBattleMons[gActiveBattler].type2 == TYPE_FLYING || gBattleMons[gActiveBattler].ability == ABILITY_LEVITATE)
+	{
+		// floated over t-spikes
+	}
+	else if (gBattleMons[gActiveBattler].type1 == TYPE_POISON || gBattleMons[gActiveBattler].type2 == TYPE_POISON)
+	{
+		// absorbed t-spikes
+		gSideTimers[GetBattlerSide(gActiveBattler)].spikesAmount &= ~(HAZARD_TOXIC_SPIKES | HAZARD_TOXIC_SPIKES2);
+		
+        BattleScriptPushCursor();
+		gBattlescriptCurrInstr = BattleScript_AbsorbToxicSpikes;
+		
+	}
+	else if (gBattleMons[gActiveBattler].type1 == TYPE_STEEL || gBattleMons[gActiveBattler].type2 == TYPE_STEEL
+	 || gBattleMons[gActiveBattler].ability == ABILITY_IMMUNITY || gBattleMons[gActiveBattler].status1
+	 || gSideAffecting[gActiveBattler] & SIDE_STATUS_SAFEGUARD)
+	{
+		// can't be poisoned
+	}
+	else if (spikes & HAZARD_TOXIC_SPIKES2)
+	{
+		gBattleMons[gActiveBattler].status1 = STATUS_TOXIC_POISON;
+        EmitSetMonData(0, REQUEST_STATUS_BATTLE, 0, 4, &gBattleMons[gActiveBattler].status1);
+        MarkBufferBankForExecution(gActiveBattler);
+		
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr - 4);
+	}
+	else if (spikes & HAZARD_TOXIC_SPIKES)
+	{
+		gBattleMons[gActiveBattler].status1 = STATUS_POISON;
+        EmitSetMonData(0, REQUEST_STATUS_BATTLE, 0, 4, &gBattleMons[gActiveBattler].status1);
+        MarkBufferBankForExecution(gActiveBattler);
+		
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr - 8);
+	}
+}
+
+static void sp26_wringout(void)
+{
+	gDynamicBasePower = 120 * gBattleMons[gBankTarget].hp / gBattleMons[gBankTarget].maxHP;
+	if (gDynamicBasePower == 0)
+		gDynamicBasePower = 1;
+}
+
+
+static void sp27_defogfoetoxicspikes(void)
+{
+    u8 side = GetBattlerSide(gBankTarget);
+    if (gSideTimers[side].spikesAmount & HAZARD_TOXIC_SPIKES_ANY)
+    {
+        gSideTimers[side].spikesAmount &= ~(HAZARD_TOXIC_SPIKES_ANY);
+		gBattleTextBuff1[0] = 0xFD;
+		gBattleTextBuff1[1] = 2;
+		gBattleTextBuff1[2] = (u8)MOVE_TOXIC_SPIKES;
+		gBattleTextBuff1[3] = MOVE_TOXIC_SPIKES >> 8;
+		gBattleTextBuff1[4] = EOS;
+    }
+	else
+	{
+		gBattlescriptCurrInstr += 6;
+	}
+}
+
+static void sp28_defogowntoxicspikes(void)
+{
+    u8 side = GetBattlerSide(gBankAttacker);
+    if (gSideTimers[side].spikesAmount & HAZARD_TOXIC_SPIKES_ANY)
+    {
+        gSideTimers[side].spikesAmount &= ~(HAZARD_TOXIC_SPIKES_ANY);
+		gBattleTextBuff1[0] = 0xFD;
+		gBattleTextBuff1[1] = 2;
+		gBattleTextBuff1[2] = (u8)MOVE_TOXIC_SPIKES;
+		gBattleTextBuff1[3] = MOVE_TOXIC_SPIKES >> 8;
+		gBattleTextBuff1[4] = EOS;
+    }
+	else
+	{
+		gBattlescriptCurrInstr += 6;
+	}
+}
+
+static void sp29_reflecttype(void)
+{
+	gBattleMons[gBankAttacker].type1 = gBattleMons[gBankTarget].type1;
+	gBattleMons[gBankAttacker].type2 = gBattleMons[gBankTarget].type2;
+	if (gBattleMons[gBankAttacker].type1 == TYPE_ROOSTING)
+		gBattleMons[gBankAttacker].type1 = TYPE_FLYING;
+	if (gBattleMons[gBankAttacker].type2 == TYPE_ROOSTING)
+		gBattleMons[gBankAttacker].type2 = TYPE_FLYING;
 }

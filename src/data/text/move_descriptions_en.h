@@ -200,7 +200,7 @@ static const u8 MoveDescription_Disable[] = _(
 
 static const u8 MoveDescription_Acid[] = _(
     "Sprays a hide-melting acid.\n"
-    "May lower DEFENSE.");
+    "May lower Sp. Def.");
 
 static const u8 MoveDescription_Ember[] = _(
     "A weak fire attack that may\n"
@@ -964,7 +964,7 @@ static const u8 MoveDescription_SunnyDay[] = _(
 
 static const u8 MoveDescription_Crunch[] = _(
     "Crunches with sharp fangs.\n"
-    "May lower SP. DEF.");
+    "May lower Defense.");
 
 static const u8 MoveDescription_MirrorCoat[] = _(
     "Counters the foe’s special\n"
@@ -1714,6 +1714,32 @@ static const u8 MoveDescription_CrossPoison[] = _(
     "Has a high critical-hit\n"
     "ratio. May also poison.");
 
+static const u8 MoveDescription_ToxicSpikes[] = _(
+    "Sets spikes that poison a\n"
+    "foe switching in.");
+
+static const u8 MoveDescription_AcidSpray[] = _(
+    "Sprays a hide-melting acid.\n"
+    "Harshly lowers Sp. Def.");
+
+static const u8 MoveDescription_Hex[] = _(
+    "Damage doubles if the foe\n"
+    "has a status condition.");
+
+static const u8 MoveDescription_SludgeWave[] = _(
+    "Attacks with a great wave\n"
+    "of garbage. May also poison.");
+
+static const u8 MoveDescription_WringOut[] = _(
+    "The more HP the target has,\n"
+    "the greater the power.");
+
+static const u8 MoveDescription_ReflectType[] = _(
+    "The user’s type becomes\n"
+    "the same as the target’s.");
+
+
+
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
     MoveDescription_KarateChop,
@@ -2144,4 +2170,10 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_Discharge,
 	MoveDescription_Copycat,
 	MoveDescription_CrossPoison,
+	MoveDescription_ToxicSpikes,
+	MoveDescription_AcidSpray,
+	MoveDescription_Hex,
+	MoveDescription_SludgeWave,
+	MoveDescription_WringOut,
+	MoveDescription_ReflectType,
 };

@@ -445,6 +445,12 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_DISCHARGE
 	.4byte Move_PAY_DAY
 	.4byte Move_CROSS_POISON
+	.4byte Move_TOXIC_SPIKES
+	.4byte Move_ACID_SPRAY
+	.4byte Move_HEX
+	.4byte Move_SLUDGE_WAVE
+	.4byte Move_WRING_OUT
+	.4byte Move_REFLECT_TYPE
 	.4byte PoundCopy
 
 	.align 2
@@ -13054,4 +13060,119 @@ Move_CROSS_POISON:
 	call PoisonBubblesAnim
 	waitforvisualfinish
 	end
+
+Move_TOXIC_SPIKES:
+	loadspritegfx 10152
+	loadspritegfx 10295
+	monbg ANIM_BANK_DEF_PARTNER
+	playsewithpan SE_W026, 192
+	waitplaysewithpan SE_W030, 63, 28
+	createsprite gBattleAnimSpriteTemplate_ToxicSpikes, 130, 20, 0, 0, 24, 30
+	delay 10
+	playsewithpan SE_W026, 192
+	waitplaysewithpan SE_W030, 63, 28
+	createsprite gBattleAnimSpriteTemplate_ToxicSpikes, 130, 20, 0, -24, 24, 30
+	delay 10
+	waitplaysewithpan SE_W030, 63, 28
+	createsprite gBattleAnimSpriteTemplate_ToxicSpikes, 130, 20, 0, 24, 24, 30
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_DEF_PARTNER
+	end
+
+Move_ACID_SPRAY:
+	loadspritegfx 10150
+	monbg ANIM_BANK_DEF_PARTNER
+	createsprite gBattleAnimSpriteTemplate_83DA2D0, 130, 20, 0, 40, 1, 0, -20
+	playsewithpan SE_W145C, 192
+	delay 33
+	createvisualtask AnimTask_ShakeMon2, 5, 1, 2, 0, 10, 1
+	createvisualtask AnimTask_ShakeMon2, 5, 3, 2, 0, 10, 1
+	createvisualtask sub_80E1F8C, 2, 20, 2, 2, 0, 12, 31774
+	playsewithpan SE_W291, 192
+	
+	createsprite gBattleAnimSpriteTemplate_83DA31C, 130, 0, -20, 10, 15, 55
+	createsprite gBattleAnimSpriteTemplate_83DA31C, 130, 0, -20, -20, 15, 55
+	delay 3
+	createsprite gBattleAnimSpriteTemplate_83DA31C, 130, 0, -20, 5, 15, 55
+	createsprite gBattleAnimSpriteTemplate_83DA31C, 130, 0, -20, -10, 15, 55
+	delay 3
+	createsprite gBattleAnimSpriteTemplate_83DA31C, 130, 0, -20, 30, 15, 55
+	createsprite gBattleAnimSpriteTemplate_83DA31C, 130, 0, -20, -30, 15, 55
+	delay 3
+	createsprite gBattleAnimSpriteTemplate_83DA31C, 130, 0, -20, 2, 15, 55
+	createsprite gBattleAnimSpriteTemplate_83DA31C, 130, 0, -20, -5, 15, 55
+	delay 3
+	createsprite gBattleAnimSpriteTemplate_83DA31C, 130, 0, -20, 20, 15, 55
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_DEF_PARTNER
+	end
+
+Move_HEX:
+	loadspritegfx 10221
+	loadspritegfx 10232
+	fadetobg 2
+	waitbgfadein
+	createsprite gBattleAnimSpriteTemplate_83D7C00, 130, 0, -24
+	playsewithpan SE_W060B, 63
+	waitforvisualfinish
+	playsewithpan SE_W172B, 63
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BANK_TARGET, 4, 0, 13, 1
+	createsprite gBattleAnimSpriteTemplate_83D977C, 2, 0
+	createsprite gBattleAnimSpriteTemplate_83D977C, 2, 42
+	createsprite gBattleAnimSpriteTemplate_83D977C, 2, 84
+	createsprite gBattleAnimSpriteTemplate_83D977C, 2, 126
+	createsprite gBattleAnimSpriteTemplate_83D977C, 2, 168
+	createsprite gBattleAnimSpriteTemplate_83D977C, 2, 210
+	waitforvisualfinish
+	restorebg
+	waitbgfadein
+	end
+
+Move_SLUDGE_WAVE:
+	panse_1B SE_W250, 192, 63, 2, 0
+	createvisualtask sub_80D38BC, 2, 2
+	waitforvisualfinish
+	end
+
+Move_WRING_OUT:
+	loadspritegfx 10186
+	loadspritegfx 10221
+	loopsewithpan SE_W010, 63, 6, 5
+	createsprite gBattleAnimSpriteTemplate_WringOut, 132, 0, 16, 0, 2
+	delay 7
+	createsprite gBattleAnimSpriteTemplate_WringOut, 131, 0, 4, 0, 2
+	createsprite gBattleAnimSpriteTemplate_WringOut, 130, 0, 10, 1, 2
+	delay 7
+	createsprite gBattleAnimSpriteTemplate_WringOut, 131, 0, -4, 0, 2
+	createsprite gBattleAnimSpriteTemplate_WringOut, 130, 0, -10, 1, 2
+	delay 7
+	createsprite gBattleAnimSpriteTemplate_WringOut, 131, 0, -16, 1, 2
+	delay 8
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BANK_TARGET, 3, 0, 6, 1
+	delay 20
+	playsewithpan SE_W020, 63
+	createvisualtask AnimTask_BlendMonInAndOut, 3, ANIM_BANK_TARGET, 0x1F, 12, 1, 1
+	setarg 7, -1
+	waitforvisualfinish
+	end
+
+Move_REFLECT_TYPE:
+	playsewithpan SE_W112, 192
+	createvisualtask AnimTask_BlendMonInAndOut, 3, ANIM_BANK_ATTACKER, 0x3C00, 12, 1, 1
+	createvisualtask AnimTask_BlendMonInAndOut, 3, ANIM_BANK_TARGET,   0x1C0F, 12, 1, 1
+	waitforvisualfinish
+	playsewithpan SE_W112, 192
+	createvisualtask AnimTask_BlendMonInAndOut, 3, ANIM_BANK_ATTACKER, 0x1C0F, 12, 1, 1
+	createvisualtask AnimTask_BlendMonInAndOut, 3, ANIM_BANK_TARGET,   0x3C00, 12, 1, 1
+	waitforvisualfinish
+	playsewithpan SE_W112, 192
+	createvisualtask AnimTask_BlendMonInAndOut, 3, ANIM_BANK_ATTACKER, 0x3C00, 12, 1, 1
+	createvisualtask AnimTask_BlendMonInAndOut, 3, ANIM_BANK_TARGET,   0x1C0F, 12, 1, 1
+	waitforvisualfinish
+	playsewithpan SE_W112, 192
+	createvisualtask AnimTask_BlendMonInAndOut, 3, ANIM_BANK_ATTACKER, 0x1C0F, 12, 1, 1
+	createvisualtask AnimTask_BlendMonInAndOut, 3, ANIM_BANK_TARGET,   0x3C00, 12, 1, 1
+	waitforvisualfinish
+	end
+
 

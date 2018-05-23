@@ -180,7 +180,9 @@
 
 #define HAZARD_SPIKES               0x03
 #define HAZARD_STEALTH_ROCK         0x04
-#define HAZARD_TOXIC_SPIKES         0x18
+#define HAZARD_TOXIC_SPIKES         0x08
+#define HAZARD_TOXIC_SPIKES2        0x10
+#define HAZARD_TOXIC_SPIKES_ANY     0x18
 #define HAZARD_STICKY_WEB           0x20
 #define HAZARD_HEALING_WISH         0x40
 #define HAZARD_LUNAR_DANCE          0x80

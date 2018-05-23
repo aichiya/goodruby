@@ -229,6 +229,8 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
 		spAttack *= 2;
 	if (gCurrentMove == MOVE_BRINE && defender->hp *2 <= defender->maxHP)
 		spAttack *= 2;
+	if (gCurrentMove == MOVE_HEX && defender->status1)
+		spAttack *= 2;
     
     if (moveClass == 0)
     {
