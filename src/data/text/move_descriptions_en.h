@@ -1746,6 +1746,14 @@ static const u8 MoveDescription_FoulPlay[] = _(
     "Uses the Attack stat of\n"
     "the target for damage.");
 
+static const u8 MoveDescription_FairyWind[] = _(
+    "Stirs up a fairy wind\n"
+    "and attacks with it.");
+
+static const u8 MoveDescription_IronHead[] = _(
+    "A ramming attack that may\n"
+    "cause flinching.");
+
 
 
 const u8 * const gMoveDescriptions[] = {
@@ -2186,4 +2194,6 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_ReflectType,
 	MoveDescription_ShadowClaw,
 	MoveDescription_FoulPlay,
+	MoveDescription_FairyWind,
+	MoveDescription_Headbutt,
 };

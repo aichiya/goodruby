@@ -437,4 +437,6 @@ const u8 gMoveNames[][13] = {
 	[MOVE_REFLECT_TYPE] = _("Reflect Type"),
 	[MOVE_SHADOW_CLAW] = _("Shadow Claw"),
 	[MOVE_FOUL_PLAY] = _("Foul Play"),
+	[MOVE_FAIRY_WIND] = _("Fairy Wind"),
+	[MOVE_IRON_HEAD] = _("Iron Head"),
 };

@@ -453,6 +453,8 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_REFLECT_TYPE
 	.4byte Move_SHADOW_CLAW
 	.4byte Move_FOUL_PLAY
+	.4byte Move_FAIRY_WIND
+	.4byte Move_IRON_HEAD
 	.4byte PoundCopy
 
 	.align 2
@@ -13209,4 +13211,53 @@ Move_FOUL_PLAY:
 	waitforvisualfinish
 	clearmonbg ANIM_BANK_DEF_PARTNER
 	blendoff
+	end
+
+Move_FAIRY_WIND:
+	loadspritegfx 10271
+	playsewithpan SE_W234, 0
+	createsprite gBattleAnimSpriteTemplate_83D693C, 194, -32, 16, 0, 6, 2, 3, 1
+	createsprite gBattleAnimSpriteTemplate_83D693C, 194, -8, 18, 64, 3, 2, 2, 1
+	createsprite gBattleAnimSpriteTemplate_83D693C, 120, -24, 18, 90, 5, 1, 2, 1
+	createsprite gBattleAnimSpriteTemplate_83D693C, 120, -40, 14, 128, 4, 1, 2, 1
+	delay 0
+	createsprite gBattleAnimSpriteTemplate_83D6954, 194, -32, 16, 0, 6, 2, 3, 1
+	createsprite gBattleAnimSpriteTemplate_83D6954, 194, -8, 18, 64, 3, 2, 2, 1
+	createsprite gBattleAnimSpriteTemplate_83D6954, 120, -24, 18, 90, 5, 1, 2, 1
+	createsprite gBattleAnimSpriteTemplate_83D6954, 120, -40, 14, 128, 4, 1, 2, 1
+	delay 0
+	createsprite gBattleAnimSpriteTemplate_83D696C, 194, -32, 16, 0, 6, 2, 3, 1
+	createsprite gBattleAnimSpriteTemplate_83D696C, 194, -8, 18, 64, 3, 2, 2, 1
+	createsprite gBattleAnimSpriteTemplate_83D696C, 120, -24, 18, 90, 5, 1, 2, 1
+	createsprite gBattleAnimSpriteTemplate_83D696C, 120, -40, 14, 128, 4, 1, 2, 1
+	delay 6
+	createsprite gBattleAnimSpriteTemplate_83D693C, 194, -4, 16, 0, 6, 1, 2, 1
+	createsprite gBattleAnimSpriteTemplate_83D693C, 194, -16, 12, 192, 5, 2, 3, 1
+	delay 0
+	createsprite gBattleAnimSpriteTemplate_83D6954, 194, -4, 16, 0, 6, 1, 2, 1
+	createsprite gBattleAnimSpriteTemplate_83D6954, 194, -16, 12, 192, 5, 2, 3, 1
+	delay 0
+	createsprite gBattleAnimSpriteTemplate_83D696C, 194, -4, 16, 0, 6, 1, 2, 1
+	createsprite gBattleAnimSpriteTemplate_83D696C, 194, -16, 12, 192, 5, 2, 3, 1
+	waitforvisualfinish
+	end
+
+Move_IRON_HEAD:
+	loadspritegfx 10135
+	loadspritegfx 10039
+	loopsewithpan SE_W231, 192, 28, 2
+	createvisualtask sub_80E0A4C, 5, 0, 0, 0
+	waitforvisualfinish
+	createsprite gBattleAnimSpriteTemplate_83D6DE4, 2, 0
+	playsewithpan SE_W029, 192
+	waitforvisualfinish
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83D6DE4, 2, 1
+	waitforvisualfinish
+	createvisualtask AnimTask_ShakeMonInPlace, 2, ANIM_BANK_ATTACKER, 2, 0, 4, 1
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_TARGET, 5, 0, 6, 1
+	createsprite gBattleAnimSpriteTemplate_83D6DE4, 2, 2
+	createsprite gBattleAnimSpriteTemplate_83DB538, 131, 0, 0, 1, 1
+	playsewithpan SE_W233B, 63
+	waitforvisualfinish
 	end
