@@ -6029,6 +6029,8 @@ u8 GetWhoStrikesFirst(u8 bank1, u8 bank2, bool8 ignoreMovePriorities)
     u8 heldItemEffectParam;
     u16 bank1Move;
     u16 bank2Move;
+	s8 bank1Prio;
+	s8 bank2Prio;
     u8 strikesFirst = 0;
 
     bank1AdjustedSpeed = GetModifiedSpeed(bank1);
@@ -6089,17 +6091,25 @@ u8 GetWhoStrikesFirst(u8 bank1, u8 bank2, bool8 ignoreMovePriorities)
         else
             bank2Move = MOVE_NONE;
     }
+	
+	bank1Prio = gBattleMoves[bank1Move].priority * 2;
+	bank2Prio = gBattleMoves[bank2Move].priority * 2;
+	
+	if (gBattleMons[bank1].ability == ABILITY_STALL)
+		bank1Prio -= 1;
+	else if (gBattleMons[bank2].ability == ABILITY_STALL)
+		bank2Prio -= 1;
 
-    if (gBattleMoves[bank1Move].priority != 0 || gBattleMoves[bank2Move].priority != 0)
+    if (bank1Prio != 0 || bank2Prio != 0)
     {
-        if (gBattleMoves[bank1Move].priority == gBattleMoves[bank2Move].priority)
+        if (bank1Prio == bank2Prio)
         {
             if (bank1AdjustedSpeed == bank2AdjustedSpeed && (Random() & 1))
                 strikesFirst = 2;
             else if (bank1AdjustedSpeed < bank2AdjustedSpeed)
                 strikesFirst = 1;
         }
-        else if (gBattleMoves[bank1Move].priority < gBattleMoves[bank2Move].priority)
+        else if (bank1Prio < bank2Prio)
             strikesFirst = 1;
     }
     else

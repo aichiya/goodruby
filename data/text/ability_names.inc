@@ -81,3 +81,4 @@ gAbilityNames:: @ 81FA248
 	.string "GLUTTONY$", 13
 	.string "HYDRATION$", 13
 	.string "POISON HEAL$", 13
+	.string "STALL$", 13

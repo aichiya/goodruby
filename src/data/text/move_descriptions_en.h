@@ -1738,6 +1738,14 @@ static const u8 MoveDescription_ReflectType[] = _(
     "The user’s type becomes\n"
     "the same as the target’s.");
 
+static const u8 MoveDescription_ShadowClaw[] = _(
+    "Slashes with sharp claws.\n"
+    "High critical-hit ratio.");
+
+static const u8 MoveDescription_FoulPlay[] = _(
+    "Uses the Attack stat of\n"
+    "the target for damage.");
+
 
 
 const u8 * const gMoveDescriptions[] = {
@@ -2176,4 +2184,6 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_SludgeWave,
 	MoveDescription_WringOut,
 	MoveDescription_ReflectType,
+	MoveDescription_ShadowClaw,
+	MoveDescription_FoulPlay,
 };

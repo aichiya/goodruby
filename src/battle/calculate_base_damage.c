@@ -109,6 +109,9 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     defense = defender->defense;
     spAttack = attacker->spAttack;
     spDefense = defender->spDefense;
+	
+	if (move == MOVE_FOUL_PLAY)
+		attack = defender->attack;
 
     if (attacker->item == ITEM_ENIGMA_BERRY)
     {
@@ -238,6 +241,9 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         defense = defense;
         attackMod = attacker->statStages[STAT_STAGE_ATK];
         defenseMod = defender->statStages[STAT_STAGE_DEF];
+		
+		if (move == MOVE_FOUL_PLAY)
+			attackMod = defender->statStages[STAT_STAGE_ATK];
         
         if ((sideStatus & SIDE_STATUS_REFLECT) && gCritMultiplier == 1)
         {

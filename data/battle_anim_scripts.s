@@ -451,6 +451,8 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_SLUDGE_WAVE
 	.4byte Move_WRING_OUT
 	.4byte Move_REFLECT_TYPE
+	.4byte Move_SHADOW_CLAW
+	.4byte Move_FOUL_PLAY
 	.4byte PoundCopy
 
 	.align 2
@@ -13175,4 +13177,36 @@ Move_REFLECT_TYPE:
 	waitforvisualfinish
 	end
 
+Move_SHADOW_CLAW:
+	loadspritegfx 10183
+	fadetobg 2
+	waitbgfadein
+	createsprite gBattleAnimSpriteTemplate_83D6E38, 130, 1, -8, 0
+	playsewithpan SE_W013, 63
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_83D6E38, 130, 1, 8, 0
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BANK_TARGET, 4, 0, 18, 1
+	playsewithpan SE_W013, 63	
+	waitforvisualfinish
+	restorebg
+	waitbgfadein
+	end
 
+Move_FOUL_PLAY:
+	loadspritegfx 10135
+	monbg ANIM_BANK_DEF_PARTNER
+	setalpha 12, 8
+	playsewithpan SE_W185, 192
+	createvisualtask AnimTask_TranslateMonEllipticalRespectSide, 2, ANIM_BANK_ATTACKER, 18, 4, 1, 2
+	waitforvisualfinish
+	playsewithpan SE_W104, 192
+	createsprite gHorizontalLungeSpriteTemplate, 2, 4, 5
+	createvisualtask AnimTask_TranslateMonEllipticalRespectSide, 2, ANIM_BANK_TARGET, 24, 6, 1, 5
+	waitforvisualfinish
+	playsewithpan SE_W003, 63
+	createsprite gBasicHitSplatSpriteTemplate, 2, 0, 0, 1, 2
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BANK_TARGET, 4, 0, 13, 1
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_DEF_PARTNER
+	blendoff
+	end

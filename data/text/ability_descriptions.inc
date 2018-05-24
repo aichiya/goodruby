@@ -244,6 +244,9 @@ gAbilityDescription_Hydration:
 gAbilityDescription_PoisonHeal:
 	.string "Recover HP while poisoned.$"
 
+gAbilityDescription_Stall:
+	.string "Always moves last.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -329,3 +332,4 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Gluttony
 	.4byte gAbilityDescription_Hydration
 	.4byte gAbilityDescription_PoisonHeal
+	.4byte gAbilityDescription_Stall

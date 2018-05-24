@@ -435,4 +435,6 @@ const u8 gMoveNames[][13] = {
 	[MOVE_SLUDGE_WAVE] = _("Sludge Wave"),
 	[MOVE_WRING_OUT] = _("Wring Out"),
 	[MOVE_REFLECT_TYPE] = _("Reflect Type"),
+	[MOVE_SHADOW_CLAW] = _("Shadow Claw"),
+	[MOVE_FOUL_PLAY] = _("Foul Play"),
 };
