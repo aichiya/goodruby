@@ -2965,6 +2965,10 @@ gBattleAnimBackgroundImageMuddyWater_Pal:: @ 8E6A704
 	.incbin "graphics/battle_anims/backgrounds/water_muddy.gbapal.lz"
 
 	.align 2
+gBattleAnimBackgroundImageSludgeWave_Pal::
+	.incbin "graphics/battle_anims/backgrounds/water_sludge.gbapal.lz"
+
+	.align 2
 gEnemyMonShadow_Gfx:: @ 8E6A728
 	.incbin "graphics/battle_interface/enemy_mon_shadow.4bpp.lz"
 
