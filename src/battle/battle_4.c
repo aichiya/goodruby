@@ -1321,6 +1321,12 @@ static bool8 AccuracyCalcHelper(u16 move)
         return TRUE;
     }
 	
+	if (gBattleMons[gBankAttacker].ability == ABILITY_NO_GUARD || gBattleMons[gBankTarget].ability == ABILITY_NO_GUARD)
+	{
+        JumpIfMoveFailed(7, move);
+        return TRUE;
+	}
+	
 	// TODO: toxic used by poison-types goes here
 
     if (!(gHitMarker & HITMARKER_IGNORE_ON_AIR) && gStatuses3[gBankTarget] & STATUS3_ON_AIR)

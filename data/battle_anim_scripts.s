@@ -457,6 +457,7 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_IRON_HEAD
 	.4byte Move_AUTOTOMIZE
 	.4byte Move_METAL_BURST
+	.4byte Move_LOW_SWEEP
 	.4byte PoundCopy
 
 	.align 2
@@ -13328,4 +13329,15 @@ Move_METAL_BURST:
 	waitforvisualfinish
 	end
 
+Move_LOW_SWEEP:
+	loadspritegfx 10143
+	loadspritegfx 10135
+	createsprite gSlideMonToOffsetSpriteTemplate, 2, 0, 20, 0, 0, 4
+	createsprite gBattleAnimSpriteTemplate_83D9FF0, 130, -24, 14, 40, 8, 160, 0
+	delay 4
+	createsprite gBasicHitSplatSpriteTemplate, 130, -8, 8, 1, 2
+	playsewithpan SE_W233B, 63
+	waitforvisualfinish
+	createsprite gSlideMonToOriginalPosSpriteTemplate, 2, 0, 1, 4
+	end
 

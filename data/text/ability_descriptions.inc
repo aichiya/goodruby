@@ -247,6 +247,9 @@ gAbilityDescription_PoisonHeal:
 gAbilityDescription_Stall:
 	.string "Always moves last.$"
 
+gAbilityDescription_NoGuard:
+	.string "Cannot miss or evade.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -333,3 +336,4 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Hydration
 	.4byte gAbilityDescription_PoisonHeal
 	.4byte gAbilityDescription_Stall
+	.4byte gAbilityDescription_NoGuard

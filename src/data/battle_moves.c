@@ -5641,10 +5641,10 @@ const struct BattleMove gBattleMoves[] = {
         .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 10,
-        .target = TARGET_SELECTED_POKEMON,
+        .target = TARGET_BOTH_ENEMIES,
         .priority = 0,
         .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
-		.moveClass = TARGET_BOTH_ENEMIES,
+		.moveClass = CLASS_SPECIAL,
     },
 
     [MOVE_WRING_OUT] = {
@@ -5748,6 +5748,19 @@ const struct BattleMove gBattleMoves[] = {
         .target = TARGET_SPECIAL,
         .priority = 0,
         .flags = F_MIRROR_MOVE_COMPATIBLE,
+		.moveClass = CLASS_PHYSICAL,
+    },
+
+    [MOVE_LOW_SWEEP] = {
+        .effect = EFFECT_SPEED_DOWN_HIT,
+        .power = 65,
+        .type = TYPE_FIGHTING,
+        .accuracy = 100,
+        .pp = 20,
+        .secondaryEffectChance = 100,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
 		.moveClass = CLASS_PHYSICAL,
     },
 };

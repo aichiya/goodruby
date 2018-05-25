@@ -1762,6 +1762,10 @@ static const u8 MoveDescription_MetalBurst[] = _(
     "Retaliates to any hit\n"
     "with increased power.");
 
+static const u8 MoveDescription_LowSweep[] = _(
+    "A tripping attack that\n"
+    "lowers the foe’s Speed.");
+
 
 
 const u8 * const gMoveDescriptions[] = {
@@ -2206,4 +2210,5 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_Headbutt,
 	MoveDescription_Autotomize,
 	MoveDescription_MetalBurst,
+	MoveDescription_LowSweep,
 };
