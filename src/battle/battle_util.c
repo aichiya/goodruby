@@ -162,6 +162,8 @@ extern u8 BattleScript_SpeedBoostActivates[];
 extern u8 BattleScript_SoundproofProtected[];
 extern u8 BattleScript_MoveHPDrain[];
 extern u8 BattleScript_MoveHPDrain_PPLoss[];
+extern u8 BattleScript_MoveSAtkDrain[];
+extern u8 BattleScript_MoveSAtkDrain_PPLoss[];
 extern u8 BattleScript_FlashFireBoost[];
 extern u8 BattleScript_FlashFireBoost_PPLoss[];
 extern u8 BattleScript_MoveHPDrain_FullHP[];
@@ -2056,7 +2058,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
                 switch (gLastUsedAbility)
                 {
                 case ABILITY_VOLT_ABSORB:
-                    if (moveType == TYPE_ELECTRIC && gBattleMoves[move].power != 0)
+                    if (moveType == TYPE_ELECTRIC)
                     {
                         if (gProtectStructs[gBankAttacker].notFirstStrike)
                             gBattlescriptCurrInstr = BattleScript_MoveHPDrain;
@@ -2065,6 +2067,28 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
                         effect = 1;
                     }
                     break;
+				case ABILITY_LIGHTNING_ROD:
+					if (moveType == TYPE_ELECTRIC)
+					{
+						if (gBattleMons[bank].statStages[STAT_STAGE_SPATK] == 12)
+						{
+							if ((gProtectStructs[gBankAttacker].notFirstStrike))
+								gBattlescriptCurrInstr = BattleScript_MoveHPDrain_FullHP;
+							else
+								gBattlescriptCurrInstr = BattleScript_MoveHPDrain_FullHP_PPLoss;
+						}
+						else
+						{
+							gBattleMons[bank].statStages[STAT_STAGE_SPATK]++;
+							gBattleStruct->animArg1 = 0xE + STAT_STAGE_SPATK;
+							gBattleStruct->animArg2 = 0;
+							if (gProtectStructs[gBankAttacker].notFirstStrike)
+								gBattlescriptCurrInstr = BattleScript_MoveSAtkDrain;
+							else
+								gBattlescriptCurrInstr = BattleScript_MoveSAtkDrain_PPLoss;
+						}
+                        effect = 2;
+					}
                 case ABILITY_WATER_ABSORB:
                     if (moveType == TYPE_WATER && gBattleMoves[move].power != 0)
                     {

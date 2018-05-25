@@ -377,3 +377,4 @@
 	enum BATTLE_TEXT_Poisoned3
 	enum BATTLE_TEXT_BadlyPoisoned2
 	enum BATTLE_TEXT_ReflectType
+	enum BATTLE_TEXT_SpAtkRisen

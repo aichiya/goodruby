@@ -442,4 +442,5 @@ const u8 gMoveNames[][13] = {
 	[MOVE_AUTOTOMIZE] = _("Autotomize"),
 	[MOVE_METAL_BURST] = _("Metal Burst"),
 	[MOVE_LOW_SWEEP] = _("Low Sweep"),
+	[MOVE_WILD_CHARGE] = _("Wild Charge"),
 };

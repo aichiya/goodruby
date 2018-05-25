@@ -380,6 +380,7 @@ enum
 	BATTLE_TEXT_Poisoned3,
 	BATTLE_TEXT_BadlyPoisoned2,
 	BATTLE_TEXT_ReflectType,
+	BATTLE_TEXT_SpAtkRisen,
 };
 
 const u8 BattleText_UnknownString[] = _("{STRING 33}");
@@ -890,6 +891,7 @@ const u8 BattleText_ToxicSpikesAbsorbed[] = _("{STRING 16} absorbed the\nToxic S
 const u8 BattleText_Poisoned3[] = _("{STRING 16}\nwas poisoned!");
 const u8 BattleText_BadlyPoisoned2[] = _("{STRING 16} is badly\npoisoned!");
 const u8 BattleText_ReflectType[] = _("{ATTACKING_MON} transformed\ninto {DEFENDING_MON}’s type!");
+const u8 BattleText_SpAtkRisen[] = _("{DEFENDING_MON}’s {STRING 22}\nraised its Sp. Atk!");
 
 const u8 *const gUnknown_08400F58[] =
 {
@@ -1292,6 +1294,7 @@ const u8 *const gBattleStringsTable[] =
 	BattleText_Poisoned3,
 	BattleText_BadlyPoisoned2,
 	BattleText_ReflectType,
+	BattleText_SpAtkRisen,
 };
 
 // below are lists of battle string enums and NOT pointers to the strings.

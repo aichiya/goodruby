@@ -458,6 +458,7 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_AUTOTOMIZE
 	.4byte Move_METAL_BURST
 	.4byte Move_LOW_SWEEP
+	.4byte Move_WILD_CHARGE
 	.4byte PoundCopy
 
 	.align 2
@@ -13341,3 +13342,40 @@ Move_LOW_SWEEP:
 	createsprite gSlideMonToOriginalPosSpriteTemplate, 2, 0, 1, 4
 	end
 
+Move_WILD_CHARGE:
+	loadspritegfx 10001
+	loadspritegfx 10011
+	loadspritegfx 10211
+	loadspritegfx 10212
+	loadspritegfx 10213
+	loadspritegfx 10135
+	monbg ANIM_BANK_ATTACKER
+	setalpha 12, 8
+	
+	createvisualtask sub_80D6B3C, 2, 0, 20, 0, 2
+	playsewithpan SE_W268, 192
+	delay 12
+	createsprite gBattleAnimSpriteTemplate_83D9B28, 2
+	delay 46
+	
+	createsprite gSlideMonToOffsetSpriteTemplate, 2, 0, 20, 0, 0, 4
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_83DB3C4, 2, 1, 0, 16, 0, 0x2FFF
+	playsewithpan SE_W025B, 63
+	createsprite gBasicHitSplatSpriteTemplate, 132, -10, 0, 1, 0
+	createsprite gSlideMonToOffsetSpriteTemplate, 2, 1, -32, 0, 0, 3
+	createvisualtask sub_80E1F8C, 2, 4, -31, 2, 0, 6, 23551
+	delay 4
+	createvisualtask AnimTask_ShakeMonInPlace, 2, ANIM_BANK_ATTACKER, 4, 0, 12, 1
+	createvisualtask AnimTask_ShakeMonInPlace, 2, ANIM_BANK_TARGET, 4, 0, 12, 1
+	delay 5
+	waitforvisualfinish
+	
+	createsprite gSlideMonToOriginalPosSpriteTemplate, 2, 0, 0, 5
+	delay 3
+	createsprite gSlideMonToOriginalPosSpriteTemplate, 2, 1, 0, 7
+	waitforvisualfinish
+	
+	clearmonbg ANIM_BANK_ATTACKER
+	blendoff
+	end

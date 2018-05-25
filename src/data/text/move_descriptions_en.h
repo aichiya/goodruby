@@ -1766,6 +1766,10 @@ static const u8 MoveDescription_LowSweep[] = _(
     "A tripping attack that\n"
     "lowers the foe’s Speed.");
 
+static const u8 MoveDescription_WildCharge[] = _(
+    "A reckless charge attack\n"
+    "that also hurts the user.");
+
 
 
 const u8 * const gMoveDescriptions[] = {
@@ -2211,4 +2215,5 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_Autotomize,
 	MoveDescription_MetalBurst,
 	MoveDescription_LowSweep,
+	MoveDescription_WildCharge,
 };
