@@ -496,7 +496,8 @@ struct ProtectStruct
     u32 specialDmg;
     u8 physicalBank;
     u8 specialBank;
-    u16 fieldE;
+    u8 classLastHit;
+    u8 fieldF;
 };
 
 struct SpecialStatus

@@ -455,6 +455,8 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_FOUL_PLAY
 	.4byte Move_FAIRY_WIND
 	.4byte Move_IRON_HEAD
+	.4byte Move_AUTOTOMIZE
+	.4byte Move_METAL_BURST
 	.4byte PoundCopy
 
 	.align 2
@@ -13261,3 +13263,69 @@ Move_IRON_HEAD:
 	playsewithpan SE_W233B, 63
 	waitforvisualfinish
 	end
+
+Move_AUTOTOMIZE:
+	loadspritegfx 10126
+	loopsewithpan SE_REAPOKE, 192, 10, 8
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_ATTACKER, 5, 0, 10, 1
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_Autotomize, 130, 1, 1, 34, -34, 10
+	delay 5
+	createsprite gBattleAnimSpriteTemplate_Autotomize, 130, 1, 1, 10, -34, 10
+	waitforvisualfinish
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_ATTACKER, 11, 0, 10, 1
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_Autotomize, 130, 1, 1, -24, -34, 10
+	delay 5
+	createsprite gBattleAnimSpriteTemplate_Autotomize, 130, 1, 1, 16, -34, 10
+	waitforvisualfinish
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_ATTACKER, 17, 0, 10, 1
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_Autotomize, 130, 1, 1, 46, -34, 10
+	delay 5
+	createsprite gBattleAnimSpriteTemplate_Autotomize, 130, 1, 1, -16, -34, 10
+	waitforvisualfinish
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_ATTACKER, 11, 0, 10, 1
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_Autotomize, 130, 1, 1, -8, -34, 10
+	delay 5
+	createsprite gBattleAnimSpriteTemplate_Autotomize, 130, 1, 1, 24, -34, 10
+	waitforvisualfinish
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_ATTACKER, 5, 0, 10, 1
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_Autotomize, 130, 1, 1, -34, -34, 10
+	delay 5
+	createsprite gBattleAnimSpriteTemplate_Autotomize, 130, 1, 1, 1, -34, 10
+	waitforvisualfinish
+	end
+
+Move_METAL_BURST:
+	loadspritegfx 10003
+	loopsewithpan SE_W231, 192, 28, 2
+	createvisualtask sub_80E0A4C, 5, 0, 0, 0
+	waitforvisualfinish
+	playsewithpan SE_W013B, 192
+	createsprite gSonicBoomSpriteTemplate, 130, 16, 0, -32, -32, 15
+	createsprite gSonicBoomSpriteTemplate, 130, 16, 0, -16, -16, 15
+	createsprite gSonicBoomSpriteTemplate, 130, 16, 0, 0, 0, 15
+	createsprite gSonicBoomSpriteTemplate, 130, 16, 0, 16, 16, 15
+	createsprite gSonicBoomSpriteTemplate, 130, 16, 0, 32, 32, 15
+	delay 7
+	playsewithpan SE_W013B, 192
+	createsprite gSonicBoomSpriteTemplate, 130, 16, 0, -32, -32, 15
+	createsprite gSonicBoomSpriteTemplate, 130, 16, 0, -16, -16, 15
+	createsprite gSonicBoomSpriteTemplate, 130, 16, 0, 0, 0, 15
+	createsprite gSonicBoomSpriteTemplate, 130, 16, 0, 16, 16, 15
+	createsprite gSonicBoomSpriteTemplate, 130, 16, 0, 32, 32, 15
+	delay 7
+	playsewithpan SE_W013B, 192
+	createsprite gSonicBoomSpriteTemplate, 130, 16, 0, -32, -32, 15
+	createsprite gSonicBoomSpriteTemplate, 130, 16, 0, -16, -16, 15
+	createsprite gSonicBoomSpriteTemplate, 130, 16, 0, 0, 0, 15
+	createsprite gSonicBoomSpriteTemplate, 130, 16, 0, 16, 16, 15
+	createsprite gSonicBoomSpriteTemplate, 130, 16, 0, 32, 32, 15
+	delay 7
+	waitforvisualfinish
+	end
+
+

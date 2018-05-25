@@ -5724,4 +5724,30 @@ const struct BattleMove gBattleMoves[] = {
         .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
 		.moveClass = CLASS_PHYSICAL,
     },
+
+    [MOVE_AUTOTOMIZE] = {
+        .effect = EFFECT_SPEED_UP_2,
+        .power = 0,
+        .type = TYPE_STEEL,
+        .accuracy = 0,
+        .pp = 15,
+        .secondaryEffectChance = 0,
+        .target = TARGET_USER,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_SNATCH,
+		.moveClass = CLASS_STATUS,
+    },
+
+    [MOVE_METAL_BURST] = {
+        .effect = EFFECT_METAL_BURST,
+        .power = 1,
+        .type = TYPE_STEEL,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SPECIAL,
+        .priority = 0,
+        .flags = F_MIRROR_MOVE_COMPATIBLE,
+		.moveClass = CLASS_PHYSICAL,
+    },
 };

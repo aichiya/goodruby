@@ -1754,6 +1754,14 @@ static const u8 MoveDescription_IronHead[] = _(
     "A ramming attack that may\n"
     "cause flinching.");
 
+static const u8 MoveDescription_Autotomize[] = _(
+    "Casts off body mass to\n"
+    "sharply raise Speed.");
+
+static const u8 MoveDescription_MetalBurst[] = _(
+    "Retaliates to any hit\n"
+    "with increased power.");
+
 
 
 const u8 * const gMoveDescriptions[] = {
@@ -2196,4 +2204,6 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_FoulPlay,
 	MoveDescription_FairyWind,
 	MoveDescription_Headbutt,
+	MoveDescription_Autotomize,
+	MoveDescription_MetalBurst,
 };

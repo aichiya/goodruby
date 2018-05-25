@@ -132,6 +132,5 @@ gBattleAnimSpriteTemplate_WringOut::
 	spr_template 10186, 10221, gOamData_837DFBC, gSpriteAnimTable_83D6550, NULL, gSpriteAffineAnimTable_83D6598, sub_80CB25C
 
 	.align 2
-gBattleAnimSpriteTemplate_Hex::
-	spr_template 10200, 10200, gOamData_837E054, gDummySpriteAnimTable, NULL, gDummySpriteAffineAnimTable, sub_80D9E94
-
+gBattleAnimSpriteTemplate_Autotomize::
+	spr_template 10126, 10126, gOamData_837DFEC, gSpriteAnimTable_83DA274, NULL, gSpriteAffineAnimTable_83DA2B0, sub_80CC6CC

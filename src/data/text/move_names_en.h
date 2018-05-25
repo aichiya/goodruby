@@ -439,4 +439,6 @@ const u8 gMoveNames[][13] = {
 	[MOVE_FOUL_PLAY] = _("Foul Play"),
 	[MOVE_FAIRY_WIND] = _("Fairy Wind"),
 	[MOVE_IRON_HEAD] = _("Iron Head"),
+	[MOVE_AUTOTOMIZE] = _("Autotomize"),
+	[MOVE_METAL_BURST] = _("Metal Burst"),
 };

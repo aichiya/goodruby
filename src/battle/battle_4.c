@@ -678,6 +678,7 @@ static void sp26_wringout(void);
 static void sp27_defogfoetoxicspikes(void);
 static void sp28_defogowntoxicspikes(void);
 static void sp29_reflecttype(void);
+static void sp2A_metalburst(void);
 
 
 void (* const gBattleScriptingCommandsTable[])(void) =
@@ -2175,11 +2176,13 @@ static void atk0C_datahpupdate(void)
                     gSpecialStatuses[gActiveBattler].moveturnLostHP_physical = gHpDealt;
                     if (gBattlescriptCurrInstr[1] == BS_GET_TARGET)
                     {
+                        gProtectStructs[gActiveBattler].classLastHit = CLASS_PHYSICAL;
                         gProtectStructs[gActiveBattler].physicalBank = gBankAttacker;
                         gSpecialStatuses[gActiveBattler].moveturnPhysicalBank = gBankAttacker;
                     }
                     else
                     {
+                        gProtectStructs[gActiveBattler].classLastHit = CLASS_PHYSICAL;
                         gProtectStructs[gActiveBattler].physicalBank = gBankTarget;
                         gSpecialStatuses[gActiveBattler].moveturnPhysicalBank = gBankTarget;
                     }
@@ -2190,11 +2193,13 @@ static void atk0C_datahpupdate(void)
                     gSpecialStatuses[gActiveBattler].moveturnLostHP_special = gHpDealt;
                     if (gBattlescriptCurrInstr[1] == BS_GET_TARGET)
                     {
+                        gProtectStructs[gActiveBattler].classLastHit = CLASS_SPECIAL;
                         gProtectStructs[gActiveBattler].specialBank = gBankAttacker;
                         gSpecialStatuses[gActiveBattler].moveturnSpecialBank = gBankAttacker;
                     }
                     else
                     {
+                        gProtectStructs[gActiveBattler].classLastHit = CLASS_SPECIAL;
                         gProtectStructs[gActiveBattler].specialBank = gBankTarget;
                         gSpecialStatuses[gActiveBattler].moveturnSpecialBank = gBankTarget;
                     }
@@ -16209,6 +16214,7 @@ void (* const gBattleScriptingSpecialTable[])(void) =
 	sp27_defogfoetoxicspikes,
 	sp28_defogowntoxicspikes,
 	sp29_reflecttype,
+	sp2A_metalburst,
 };
 
 
@@ -17266,4 +17272,44 @@ static void sp29_reflecttype(void)
 		gBattleMons[gBankAttacker].type1 = TYPE_FLYING;
 	if (gBattleMons[gBankAttacker].type2 == TYPE_ROOSTING)
 		gBattleMons[gBankAttacker].type2 = TYPE_FLYING;
+}
+
+static void sp2A_metalburst(void)
+{
+    u8 atk_side = GetBattlerSide(gBankAttacker);
+    u8 def_side = GetBattlerSide(gProtectStructs[gBankAttacker].specialBank);
+	if (gProtectStructs[gBankAttacker].classLastHit == CLASS_PHYSICAL)
+	{
+		def_side = GetBattlerSide(gProtectStructs[gBankAttacker].physicalBank);
+		if (gProtectStructs[gBankAttacker].physicalDmg && atk_side != def_side && gBattleMons[gProtectStructs[gBankAttacker].physicalBank].hp)
+		{
+			gBattleMoveDamage = gProtectStructs[gBankAttacker].physicalDmg * 3 / 2;
+			if (gSideTimers[def_side].followmeTimer && gBattleMons[gSideTimers[def_side].followmeTarget].hp)
+				gBankTarget = gSideTimers[def_side].followmeTarget;
+			else
+				gBankTarget = gProtectStructs[gBankAttacker].physicalBank;
+			gBattlescriptCurrInstr += 5;
+		}
+		else
+		{
+			gSpecialStatuses[gBankAttacker].flag20 = 1;
+		}
+	}
+	else
+	{
+		if (gProtectStructs[gBankAttacker].specialDmg && atk_side != def_side && gBattleMons[gProtectStructs[gBankAttacker].specialBank].hp)
+		{
+			gBattleMoveDamage = gProtectStructs[gBankAttacker].specialDmg * 3 / 2;
+			if (gSideTimers[def_side].followmeTimer && gBattleMons[gSideTimers[def_side].followmeTarget].hp)
+				gBankTarget = gSideTimers[def_side].followmeTarget;
+			else
+				gBankTarget = gProtectStructs[gBankAttacker].specialBank;
+			gBattlescriptCurrInstr += 5;
+		}
+		else
+		{
+			gSpecialStatuses[gBankAttacker].flag20 = 1;
+		}
+	}
+
 }

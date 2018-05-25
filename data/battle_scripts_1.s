@@ -259,6 +259,7 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectSpecialDefenseDown2Hit
 	.4byte BattleScript_EffectWringOut
 	.4byte BattleScript_EffectReflectType
+	.4byte BattleScript_EffectMetalBurst
 
 BattleScript_EffectHit: @ 81D6F14
 BattleScript_EffectAccuracyDown2: @ 81D6F14
@@ -5498,3 +5499,16 @@ BattleScript_ToxicSpikes2OngBank1:: @ 81D969D
 	updatestatusicon 3
 	waitstate
 	return
+
+BattleScript_EffectMetalBurst:
+	attackcanceler
+	special 0x2A
+	goto BattleScript_ButItFailedAtkStringPpReduce
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	typecalc2
+	adjustsetdamage
+	goto BattleScript_HitFromAtkAnimation
+
+
