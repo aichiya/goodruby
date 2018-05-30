@@ -779,6 +779,7 @@ void BattleTurnPassed(void);
 void RunBattleScriptCommands_PopCallbacksStack(void);
 void RunBattleScriptCommands(void);
 bool8 TryRunFromBattle(u8 bank);
+u32 GetModifiedSpeed(u8 bank);
 
 // asm/battle_2.o
 void sub_8012324(void);

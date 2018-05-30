@@ -459,6 +459,11 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_METAL_BURST
 	.4byte Move_LOW_SWEEP
 	.4byte Move_WILD_CHARGE
+	.4byte Move_NUZZLE
+	.4byte Move_PLAY_NICE
+	.4byte Move_ELECTRO_BALL
+	.4byte Move_ENTRAINMENT
+	.4byte Move_TRUMP_CARD
 	.4byte PoundCopy
 
 	.align 2
@@ -13379,3 +13384,226 @@ Move_WILD_CHARGE:
 	clearmonbg ANIM_BANK_ATTACKER
 	blendoff
 	end
+
+Move_NUZZLE:
+	loadspritegfx 10001
+	loadspritegfx 10011
+	loadspritegfx 10135
+	monbg ANIM_BANK_TARGET
+	setalpha 12, 8
+	createsprite gHorizontalLungeSpriteTemplate, 2, 4, 4
+	delay 6
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_TARGET, 3, 0, 6, 1
+	call ElectricityEffect
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_TARGET
+	blendoff
+	end
+
+Move_PLAY_NICE:
+	createsprite gVerticalDipSpriteTemplate, 2, 6, 1, ANIM_BANK_ATTACKER
+	createvisualtask sub_812B340, 5, 167, -64
+	waitforvisualfinish
+	createsprite gVerticalDipSpriteTemplate, 2, 6, 1, ANIM_BANK_ATTACKER
+	createvisualtask sub_812B340, 5, 167, -64
+	waitforvisualfinish
+	createsprite gVerticalDipSpriteTemplate, 2, 6, 1, ANIM_BANK_ATTACKER
+	createvisualtask sub_812B340, 5, 167, -64
+	waitforvisualfinish
+	createsprite gVerticalDipSpriteTemplate, 2, 6, 1, ANIM_BANK_ATTACKER
+	createvisualtask sub_812B340, 5, 167, -64
+	waitforvisualfinish
+	end
+
+Move_ELECTRO_BALL:
+	loadspritegfx 10001
+	loadspritegfx 10011
+	loadspritegfx 10124
+	loadspritegfx 10282
+	playsewithpan SE_W086, 192
+	createsprite gBattleAnimSpriteTemplate_ElectroBall, 130, 10, 0, 0, 0, 25, -32
+	waitforvisualfinish
+	
+	createsprite gBattleAnimSpriteTemplate_83D98F0, 131, 44, 0, 0, 3
+	createsprite gBattleAnimSpriteTemplate_83D9908, 132, 0, 0, 32, 44, 0, 40, 0, -32765
+	createsprite gBattleAnimSpriteTemplate_83D9908, 132, 0, 0, 32, 44, 64, 40, 1, -32765
+	createsprite gBattleAnimSpriteTemplate_83D9908, 132, 0, 0, 32, 44, 128, 40, 0, -32765
+	createsprite gBattleAnimSpriteTemplate_83D9908, 132, 0, 0, 32, 44, 192, 40, 2, -32765
+	createsprite gBattleAnimSpriteTemplate_83D9908, 132, 0, 0, 16, 44, 32, 40, 0, -32765
+	createsprite gBattleAnimSpriteTemplate_83D9908, 132, 0, 0, 16, 44, 96, 40, 1, -32765
+	createsprite gBattleAnimSpriteTemplate_83D9908, 132, 0, 0, 16, 44, 160, 40, 0, -32765
+	createsprite gBattleAnimSpriteTemplate_83D9908, 132, 0, 0, 16, 44, 224, 40, 2, -32765
+	playsewithpan SE_W063, 63
+	delay 0
+	createvisualtask sub_80E2A38, 10, 1, 0, 2, 2, 0
+	delay 6
+	createvisualtask sub_80E2A38, 10, 1, 0, 6, 6, 0
+	delay 6
+	createvisualtask sub_80E2A38, 10, 1, 0, 2, 2, 0
+	delay 6
+	createvisualtask sub_80E2A38, 10, 1, 0, 6, 6, 0
+	delay 6
+	createvisualtask sub_80E2A38, 10, 1, 0, 6, 0, 0
+	waitforvisualfinish
+	
+	end
+
+Move_ENTRAINMENT:
+	loopsewithpan SE_W039, 192, 18, 3
+	createvisualtask sub_812E568, 5, 0, 2, 0
+	waitforvisualfinish
+	loopsewithpan SE_W039, 192, 18, 3
+	createvisualtask sub_812E568, 5, 0, 2, 0
+	createvisualtask sub_812E568, 5, 1, 2, 0
+	end
+
+Move_TRUMP_CARD:
+	jumpifmoveturn 0, TrumpCard5
+	jumpifmoveturn 1, TrumpCard4
+	jumpifmoveturn 2, TrumpCard3
+	jumpifmoveturn 3, TrumpCard2
+	jumpifmoveturn 4, TrumpCard1
+	end
+
+
+TrumpCard5:
+	loadspritegfx 10138
+	loadspritegfx 10297
+	monbg ANIM_BANK_TARGET
+	setalpha 12, 8
+	createsprite gBattleAnimSpriteTemplate_TrumpCard, 2, -24, 0, 32, 0, 32, 1, 2, 0
+	playsewithpan SE_CARD, 63
+	delay 12
+	createsprite gBattleAnimSpriteTemplate_TrumpCard, 2, -24, 0, 32, 0, 32, 1, 1, 0
+	playsewithpan SE_CARD, 63
+	delay 12
+	createsprite gBattleAnimSpriteTemplate_TrumpCard, 2, -24, 0, 32, 0, 32, 1, 1, 0
+	playsewithpan SE_CARD, 63
+	delay 12
+	createsprite gBattleAnimSpriteTemplate_TrumpCard, 2, -24, 0, 32, 0, 32, 1, 0, 0
+	playsewithpan SE_CARD, 63
+	delay 12
+	createsprite gBattleAnimSpriteTemplate_TrumpCard, 2, -24, 0, 32, 0, 32, 1, 1, 0
+	playsewithpan SE_CARD, 63
+	delay 12
+	createsprite gBattleAnimSpriteTemplate_TrumpCard, 2, -24, 0, 32, 0, 32, 1, 0, 0
+	playsewithpan SE_CARD, 63
+	delay 2
+	playsewithpan SE_W015, 63
+	createsprite gCuttingSliceSpriteTemplate, 2, 40, -32, 0
+	delay 5
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_TARGET, 0, 3, 10, 1
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_TARGET
+	blendoff
+	waitforvisualfinish
+	end
+
+TrumpCard4:
+	loadspritegfx 10138
+	loadspritegfx 10297
+	monbg ANIM_BANK_TARGET
+	setalpha 12, 8
+	createsprite gBattleAnimSpriteTemplate_TrumpCard, 2, -24, 0, 32, 0, 32, 1, 2, 0
+	playsewithpan SE_CARD, 63
+	delay 12
+	createsprite gBattleAnimSpriteTemplate_TrumpCard, 2, -24, 0, 32, 0, 32, 1, 2, 0
+	playsewithpan SE_CARD, 63
+	delay 12
+	createsprite gBattleAnimSpriteTemplate_TrumpCard, 2, -24, 0, 32, 0, 32, 1, 0, 0
+	playsewithpan SE_CARD, 63
+	delay 12
+	createsprite gBattleAnimSpriteTemplate_TrumpCard, 2, -24, 0, 32, 0, 32, 1, 0, 0
+	playsewithpan SE_CARD, 63
+	delay 12
+	createsprite gBattleAnimSpriteTemplate_TrumpCard, 2, -24, 0, 32, 0, 32, 1, 1, 0
+	playsewithpan SE_CARD, 63
+	delay 2
+	playsewithpan SE_W015, 63
+	createsprite gCuttingSliceSpriteTemplate, 2, 40, -32, 0
+	delay 5
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_TARGET, 0, 3, 10, 1
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_TARGET
+	blendoff
+	waitforvisualfinish
+	end
+
+TrumpCard3:
+	loadspritegfx 10138
+	loadspritegfx 10297
+	monbg ANIM_BANK_TARGET
+	setalpha 12, 8
+	createsprite gBattleAnimSpriteTemplate_TrumpCard, 2, -24, 0, 32, 0, 32, 1, 0, 0
+	playsewithpan SE_CARD, 63
+	delay 12
+	createsprite gBattleAnimSpriteTemplate_TrumpCard, 2, -24, 0, 32, 0, 32, 1, 2, 0
+	playsewithpan SE_CARD, 63
+	delay 12
+	createsprite gBattleAnimSpriteTemplate_TrumpCard, 2, -24, 0, 32, 0, 32, 1, 0, 0
+	playsewithpan SE_CARD, 63
+	delay 12
+	createsprite gBattleAnimSpriteTemplate_TrumpCard, 2, -24, 0, 32, 0, 32, 1, 2, 0
+	playsewithpan SE_CARD, 63
+	delay 2
+	playsewithpan SE_W015, 63
+	createsprite gCuttingSliceSpriteTemplate, 2, 40, -32, 0
+	delay 5
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_TARGET, 0, 3, 10, 1
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_TARGET
+	blendoff
+	waitforvisualfinish
+	end
+
+TrumpCard2:
+	loadspritegfx 10138
+	loadspritegfx 10297
+	monbg ANIM_BANK_TARGET
+	setalpha 12, 8
+	createsprite gBattleAnimSpriteTemplate_TrumpCard, 2, -24, 0, 32, 0, 32, 1, 1, 0
+	playsewithpan SE_CARD, 63
+	delay 12
+	createsprite gBattleAnimSpriteTemplate_TrumpCard, 2, -24, 0, 32, 0, 32, 1, 2, 0
+	playsewithpan SE_CARD, 63
+	delay 12
+	createsprite gBattleAnimSpriteTemplate_TrumpCard, 2, -24, 0, 32, 0, 32, 1, 1, 0
+	playsewithpan SE_CARD, 63
+	delay 2
+	playsewithpan SE_W015, 63
+	createsprite gCuttingSliceSpriteTemplate, 2, 40, -32, 0
+	delay 5
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_TARGET, 0, 3, 10, 1
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_TARGET
+	blendoff
+	waitforvisualfinish
+	end
+
+TrumpCard1:
+	loadspritegfx 10138
+	loadspritegfx 10297
+	monbg ANIM_BANK_TARGET
+	setalpha 12, 8
+	createsprite gBattleAnimSpriteTemplate_TrumpCard, 2, -24, 0, 32, 0, 32, 1, 1, 0
+	playsewithpan SE_CARD, 63
+	delay 12
+	createsprite gBattleAnimSpriteTemplate_TrumpCard, 2, -24, 0, 32, 0, 32, 1, 0, 0
+	playsewithpan SE_CARD, 63
+	delay 2
+	createvisualtask sub_80E2324, 2, 257, 257, 257
+	playsewithpan SE_W015, 63
+	createsprite gCuttingSliceSpriteTemplate, 2, 40, -32, 0
+	delay 5
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_TARGET, 0, 3, 10, 1
+	waitforvisualfinish
+	createvisualtask sub_80E2324, 2, 257, 257, 257
+	clearmonbg ANIM_BANK_TARGET
+	blendoff
+	waitforvisualfinish
+	end
+
+
+
+
+

@@ -1770,6 +1770,26 @@ static const u8 MoveDescription_WildCharge[] = _(
     "A reckless charge attack\n"
     "that also hurts the user.");
 
+static const u8 MoveDescription_Nuzzle[] = _(
+    "A gentle rubbing that is\n"
+    "sure to cause paralysis.");
+
+static const u8 MoveDescription_PlayNice[] = _(
+    "Makes friends with the\n"
+    "target, lowering Attack.");
+
+static const u8 MoveDescription_ElectroBall[] = _(
+    "Power rises the faster the\n"
+    "user is than the target.");
+
+static const u8 MoveDescription_Entrainment[] = _(
+    "Changes the target’s\n"
+    "Ability to the user’s.");
+
+static const u8 MoveDescription_TrumpCard[] = _(
+    "Power rises as this move\n"
+    "runs out of PP.");
+
 
 
 const u8 * const gMoveDescriptions[] = {
@@ -2216,4 +2236,9 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_MetalBurst,
 	MoveDescription_LowSweep,
 	MoveDescription_WildCharge,
+	MoveDescription_Nuzzle,
+	MoveDescription_PlayNice,
+	MoveDescription_ElectroBall,
+	MoveDescription_Entrainment,
+	MoveDescription_TrumpCard,
 };

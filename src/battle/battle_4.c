@@ -679,6 +679,10 @@ static void sp27_defogfoetoxicspikes(void);
 static void sp28_defogowntoxicspikes(void);
 static void sp29_reflecttype(void);
 static void sp2A_metalburst(void);
+static void sp2B_electroball(void);
+static void sp2C_entrainmentfailcheck(void);
+static void sp2D_trumpcard(void);
+static void sp2E_entrainmentapply(void);
 
 
 void (* const gBattleScriptingCommandsTable[])(void) =
@@ -16221,6 +16225,10 @@ void (* const gBattleScriptingSpecialTable[])(void) =
 	sp28_defogowntoxicspikes,
 	sp29_reflecttype,
 	sp2A_metalburst,
+	sp2B_electroball,
+	sp2C_entrainmentfailcheck,
+	sp2D_trumpcard,
+	sp2E_entrainmentapply,
 };
 
 
@@ -17318,4 +17326,60 @@ static void sp2A_metalburst(void)
 		}
 	}
 
+}
+
+static void sp2B_electroball(void)
+{
+	u16 attackerspeed = GetModifiedSpeed(gBankAttacker);
+	u16 targetspeed = GetModifiedSpeed(gBankTarget);
+	
+	if (targetspeed > attackerspeed)
+	{
+		gDynamicBasePower = 40;
+	}
+	else if (targetspeed*2 > attackerspeed)
+	{
+		gDynamicBasePower = 60;
+	}
+	else if (targetspeed*3 > attackerspeed)
+	{
+		gDynamicBasePower = 80;
+	}
+	else if (targetspeed*4 > attackerspeed)
+	{
+		gDynamicBasePower = 120;
+	}
+	else
+	{
+		gDynamicBasePower = 150;
+	}
+}
+
+static void sp2C_entrainmentfailcheck(void)
+{
+	if (gBattleMons[gBankTarget].ability == ABILITY_TRUANT ||
+		gBattleMons[gBankAttacker].ability == ABILITY_TRACE ||
+		gBattleMons[gBankAttacker].ability == ABILITY_FORECAST ||
+		gBattleMons[gBankTarget].ability == gBattleMons[gBankAttacker].ability)
+	{
+		gBattlescriptCurrInstr = BattleScript_ButItFailed;
+		return;
+	}
+}
+
+static void sp2D_trumpcard(void)
+{
+	switch (gBattleMons[gBankAttacker].pp[gCurrMovePos])
+	{
+		case 0: gDynamicBasePower = 200; gBattleStruct->animTurn = 4; break;
+		case 1: gDynamicBasePower = 80; gBattleStruct->animTurn = 3; break;
+		case 2: gDynamicBasePower = 60; gBattleStruct->animTurn = 2; break;
+		case 3: gDynamicBasePower = 50; gBattleStruct->animTurn = 1; break;
+		default: gDynamicBasePower = 40; gBattleStruct->animTurn = 0; break;
+	}
+}
+
+static void sp2E_entrainmentapply(void)
+{
+    gBattleMons[gBankTarget].ability = gBattleMons[gBankAttacker].ability;
 }

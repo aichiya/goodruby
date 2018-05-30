@@ -260,6 +260,9 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectWringOut
 	.4byte BattleScript_EffectReflectType
 	.4byte BattleScript_EffectMetalBurst
+	.4byte BattleScript_EffectElectroBall
+	.4byte BattleScript_EffectEntrainment
+	.4byte BattleScript_EffectTrumpCard
 
 BattleScript_EffectHit: @ 81D6F14
 BattleScript_EffectAccuracyDown2: @ 81D6F14
@@ -590,10 +593,6 @@ BattleScript_StatUp:: @ 81D71E5
 	printfromtable gStatUpStringIds
 	waitmessage 64
 	return
-
-BattleScript_EffectAttackDown: @ 81D71F5
-	setstatchanger ATTACK, 1, TRUE
-	goto BattleScript_EffectStatDown
 
 BattleScript_EffectDefenseDown: @ 81D7200
 	setstatchanger DEFENSE, 1, TRUE
@@ -5525,3 +5524,44 @@ BattleScript_MoveSAtkDrain:: @ 81D9843
 	orbyte gMoveResultFlags, MOVE_RESULT_DOESNT_AFFECT_FOE
 	goto BattleScript_MoveEnd
 
+BattleScript_EffectElectroBall:
+	special 0x2B
+	goto BattleScript_EffectHit
+
+BattleScript_EffectEntrainment:
+	attackcanceler
+	attackstring
+	ppreduce
+	accuracycheck BattleScript_ButItFailed, NO_ACC_CALC_CHECK_LOCK_ON
+	special 0x2C
+	attackanimation
+	waitanimation
+	printstring BATTLE_TEXT_Entrainment
+	waitmessage 64
+	special 0x2E
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectTrumpCard:
+	attackcanceler
+	attackstring
+	ppreduce
+	special 0x2D
+	accuracycheck BattleScript_MoveMissed, ACC_CURR_MOVE
+	goto BattleScript_HitFromCritCalc
+
+BattleScript_EffectAttackDown: @ 81D71F5
+	jumpifmove MOVE_PLAY_NICE, BattleScript_PlayNice
+	setstatchanger ATTACK, 1, TRUE
+	goto BattleScript_EffectStatDown
+
+BattleScript_PlayNice:
+	setstatchanger ATTACK, 1, TRUE
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	statbuffchange 1, BattleScript_StatDownEnd
+	jumpifbyte LESS_THAN, cMULTISTRING_CHOOSER, 2, BattleScript_StatDownDoAnim
+	jumpifbyte EQUAL, cMULTISTRING_CHOOSER, 3, BattleScript_StatDownEnd
+	pause 32
+	goto BattleScript_StatDownPrintString

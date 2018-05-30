@@ -72,7 +72,7 @@ gBattleAnimSpriteTemplate_LeafTornado::
 	spr_template 10063, 10063, gOamData_837DFEC, gSpriteAnimTable_83D6494, NULL, gDummySpriteAffineAnimTable, sub_80DCFE4
 
 	.align 2
-gBattleAnimSpriteTemplate_Hurricane:: @ 83D63F8
+gBattleAnimSpriteTemplate_Hurricane::
 	spr_template 10154, 10154, gOamData_837DF54, gSpriteAnimTable_83DA3E0, NULL, gDummySpriteAffineAnimTable, sub_80DCFE4
 
 	.align 2
@@ -116,7 +116,7 @@ gBattleAnimSpriteTemplate_AquaTail::
 	spr_template 10056, 10296, gOamData_837DF34, gSpriteAnimTable_83D69D4, NULL, gDummySpriteAffineAnimTable, sub_80CC884
 
 	.align 2
-gBattleAnimSpriteTemplate_StealthRock:: @ 840227C
+gBattleAnimSpriteTemplate_StealthRock::
 	spr_template 10058, 10058, gOamData_837DF34, gSpriteAnimTable_83DAC40, NULL, gDummySpriteAffineAnimTable, sub_812C720
 
 	.align 2
@@ -134,3 +134,44 @@ gBattleAnimSpriteTemplate_WringOut::
 	.align 2
 gBattleAnimSpriteTemplate_Autotomize::
 	spr_template 10126, 10126, gOamData_837DFEC, gSpriteAnimTable_83DA274, NULL, gSpriteAffineAnimTable_83DA2B0, sub_80CC6CC
+
+	.align 2
+gBattleAnimSpriteTemplate_ElectroBall::
+	spr_template 10124, 10124, gOamData_837DF94, gSpriteAnimTable_ElectroBall, NULL, gDummySpriteAffineAnimTable, sub_80794A8
+
+	.align 2
+gSpriteAnimTable_ElectroBall:
+	.4byte gSpriteAnim_ElectroBall
+
+	.align 2
+gSpriteAnim_ElectroBall:
+	obj_image_anim_frame 0, 1
+	obj_image_anim_frame 16, 1
+	obj_image_anim_frame 32, 1
+	obj_image_anim_jump 0
+
+	.align 2
+gBattleAnimSpriteTemplate_TrumpCard::
+	spr_template 10297, 10297, gOamData_837DF54, gSpriteAnimTable_TrumpCard, NULL, gDummySpriteAffineAnimTable, sub_80D902C
+
+	.align 2
+gSpriteAnimTable_TrumpCard:
+	.4byte gSpriteAnim_TrumpCard1
+	.4byte gSpriteAnim_TrumpCard2
+	.4byte gSpriteAnim_TrumpCard3
+
+	.align 2
+gSpriteAnim_TrumpCard1:
+	obj_image_anim_frame 0, 1
+	obj_image_anim_end
+
+	.align 2
+gSpriteAnim_TrumpCard2:
+	obj_image_anim_frame 8, 1
+	obj_image_anim_end
+
+	.align 2
+gSpriteAnim_TrumpCard3:
+	obj_image_anim_frame 16, 1
+	obj_image_anim_end
+

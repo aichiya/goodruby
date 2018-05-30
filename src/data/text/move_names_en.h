@@ -443,4 +443,9 @@ const u8 gMoveNames[][13] = {
 	[MOVE_METAL_BURST] = _("Metal Burst"),
 	[MOVE_LOW_SWEEP] = _("Low Sweep"),
 	[MOVE_WILD_CHARGE] = _("Wild Charge"),
+	[MOVE_NUZZLE] = _("Nuzzle"),
+	[MOVE_PLAY_NICE] = _("Play Nice"),
+	[MOVE_ELECTRO_BALL] = _("Electro Ball"),
+	[MOVE_ENTRAINMENT] = _("Entrainment"),
+	[MOVE_TRUMP_CARD] = _("Trump Card"),
 };

@@ -26,4 +26,5 @@ void BattleScriptExecute(const u8* BS_ptr);
 void BattleScriptPushCursorAndCallback(u8* BS_ptr);
 u8 IsMonDisobedient(void);
 
+
 #endif // GUARD_BATTLE_UTIL_H
