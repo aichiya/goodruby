@@ -41,9 +41,12 @@
 --Phantom Force's animation is broken, atk49 needs to be decompiled to make it work right
 --Fix Conversion2
 --Autotomize doesn't touch weight
---Meditite
 --Infestation
 
+--Meditite
+--Voltorb
+--Magnemite
+--Doduo
 
 Distant future:
 --Hidden abilities?
