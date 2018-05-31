@@ -380,3 +380,4 @@
 	enum BATTLE_TEXT_SpAtkRisen
 	enum BATTLE_TEXT_Entrainment
 	enum BATTLE_TEXT_InfestationTrapped
+	enum BATTLE_TEXT_CantBelch

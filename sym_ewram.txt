@@ -251,10 +251,10 @@ gBattleWeather = .; /* 2024DB8 */
     . += 0x4;
 
 gWishFutureKnock = .; /* 2024DBC */
-    . += 0x20;
+    . += 0x22;
 
-gUnknown_02024DDC = .; /* 2024DDC */
-    . += 0xC;
+gUnknown_02024DDE = .; /* 2024DDE */
+    . += 0xA;
 
 gUnknown_02024DE8 = .; /* 2024DE8 */
     . += 0x2;

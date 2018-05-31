@@ -467,6 +467,9 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_STRUGGLE_BUG
 	.4byte Move_INFESTATION
 	.4byte Move_PETAL_STORM
+	.4byte Move_GUNK_SHOT
+	.4byte Move_VENOM_DRENCH
+	.4byte Move_BELCH
 	.4byte PoundCopy
 
 	.align 2
@@ -6025,49 +6028,6 @@ Move_SLUDGE: @ 81CF9F2
 	call PoisonBubblesAnim
 	waitforvisualfinish
 	end
-
-Move_SLUDGE_BOMB: @ 81CFA34
-	loadspritegfx 10150
-	call _81CFB44
-	call _81CFB44
-	call _81CFB44
-	call _81CFB44
-	call _81CFB44
-	call _81CFB44
-	call _81CFB44
-	call _81CFB44
-	call _81CFB44
-	call _81CFB44
-	createvisualtask AnimTask_ShakeMon2, 5, 1, 3, 0, 15, 1
-	createvisualtask sub_80E1F8C, 2, 4, 1, 2, 0, 12, 31774
-	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, 42, 27, 20
-	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, -27, 44, 20
-	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, 39, -28, 20
-	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, -42, -42, 20
-	playsewithpan SE_W091, 63
-	delay 5
-	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, 0, 40, 20
-	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, -8, -44, 20
-	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, -46, -28, 20
-	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, 46, 9, 20
-	playsewithpan SE_W091, 63
-	delay 5
-	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, 42, 0, 20
-	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, -43, -12, 20
-	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, 16, -46, 20
-	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, -16, 44, 20
-	playsewithpan SE_W091, 63
-	delay 0
-	waitsound
-	waitforvisualfinish
-	call PoisonBubblesAnim
-	waitforvisualfinish
-	end
-_81CFB44:
-	playsewithpan SE_W145C, 192
-	createsprite gBattleAnimSpriteTemplate_83DA2B8, 130, 20, 0, 40, 0
-	delay 3
-	return
 
 Move_ACID: @ 81CFB5A
 	loadspritegfx 10150
@@ -13744,5 +13704,161 @@ _PetalStormSubcall2:
 	createsprite gBattleAnimSpriteTemplate_PetalStorm, 2, 0, 1, -25, -40, 10
 	return
 
-	
+Move_GUNK_SHOT:
+	loadspritegfx 10150
+	createsprite gBattleAnimSpriteTemplate_83DB3C4, 2, 1, 1, 0, 12, 0x2D0D
+	waitforvisualfinish
+	call _GunkShotSubcall
+	call _GunkShotSubcall
+	call _GunkShotSubcall
+	call _GunkShotSubcall
+	call _GunkShotSubcall
+	call _GunkShotSubcall
+	call _GunkShotSubcall
+	createvisualtask AnimTask_ShakeMon2, 5, 1, 3, 0, 15, 1
+	createvisualtask sub_80E1F8C, 2, 4, 1, 2, 0, 12, 31774
+	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, 42, 27, 20
+	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, -27, 44, 20
+	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, 39, -28, 20
+	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, -42, -42, 20
+	playsewithpan SE_W091, 63
+	delay 5
+	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, 0, 40, 20
+	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, -8, -44, 20
+	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, -46, -28, 20
+	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, 46, 9, 20
+	playsewithpan SE_W091, 63
+	delay 5
+	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, 42, 0, 20
+	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, -43, -12, 20
+	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, 16, -46, 20
+	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, -16, 44, 20
+	playsewithpan SE_W091, 63
+	delay 0
+	waitsound
+	waitforvisualfinish
+	call PoisonBubblesAnim
+	waitforvisualfinish
+	createsprite gBattleAnimSpriteTemplate_83DB3C4, 2, 1, 1, 12, 0, 0x2D0D
+	waitforvisualfinish
+	end
+_GunkShotSubcall:
+	playsewithpan SE_W145C, 192
+	createsprite gBattleAnimSpriteTemplate_GunkShot, 131, 10, 0, 0, 0, 20, 0
+	delay 1
+	return
+	end
+
+Move_VENOM_DRENCH:
+	loadspritegfx 10150
+	monbg ANIM_BANK_DEF_PARTNER
+	loopsewithpan SE_W145C, 192, 4, 10
+	createsprite gBattleAnimSpriteTemplate_83DA2D0, 130, 20, 0, 40, 1, 0, 0
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83DA2D0, 130, 20, 0, 40, 1, 16, 0
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83DA2D0, 130, 20, 0, 40, 1, 32, 0
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83DA2D0, 130, 20, 0, 40, 1, 16, 0
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83DA2D0, 130, 20, 0, 40, 1, 0, 0
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83DA2D0, 130, 20, 0, 40, 1, -16, 0
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83DA2D0, 130, 20, 0, 40, 1, -32, 0
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83DA2D0, 130, 20, 0, 40, 1, -16, 0
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83DA2D0, 130, 20, 0, 40, 1, 0, 0
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83DA2D0, 130, 20, 0, 40, 1, 16, 0
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83DA2D0, 130, 20, 0, 40, 1, 32, 0
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83DA2D0, 130, 20, 0, 40, 1, 16, 0
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83DA2D0, 130, 20, 0, 40, 1, 0, 0
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83DA2D0, 130, 20, 0, 40, 1, -16, 0
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83DA2D0, 130, 20, 0, 40, 1, -32, 0
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83DA2D0, 130, 20, 0, 40, 1, -16, 0
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83DA2D0, 130, 20, 0, 40, 1, 0, 0
+	delay 1
+	createvisualtask AnimTask_ShakeMon2, 5, 1, 2, 0, 10, 1
+	createvisualtask AnimTask_ShakeMon2, 5, 3, 2, 0, 10, 1
+	createvisualtask sub_80E1F8C, 2, 20, 2, 2, 0, 12, 31774
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_DEF_PARTNER
+	end
+
+Move_SLUDGE_BOMB: @ 81CFA34
+	loadspritegfx 10150
+	playsewithpan SE_W145C, 192
+	createsprite gBattleAnimSpriteTemplate_83DA2B8, 130, 20, 0, 40, 0
+	waitforvisualfinish
+	createvisualtask AnimTask_ShakeMon2, 5, 1, 3, 0, 15, 1
+	createvisualtask sub_80E1F8C, 2, 4, 1, 2, 0, 12, 31774
+	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, 44, 0, 20
+	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, -44, 0, 20
+	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, 0, -44, 20
+	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, 0, 44, 20
+	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, 36, 36, 20
+	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, -36, 36, 20
+	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, 36, -36, 20
+	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, -36, -36, 20
+	playsewithpan SE_W091, 63
+	delay 0
+	waitsound
+	call PoisonBubblesAnim
+	waitforvisualfinish
+	end
+
+Move_BELCH:
+	loadspritegfx 10150
+	call _BelchSubcall
+	call _BelchSubcall
+	call _BelchSubcall
+	call _BelchSubcall
+	call _BelchSubcall
+	call _BelchSubcall
+	call _BelchSubcall
+	call _BelchSubcall
+	call _BelchSubcall
+	call _BelchSubcall
+	createvisualtask AnimTask_ShakeMon2, 5, 1, 3, 0, 15, 1
+	createvisualtask sub_80E1F8C, 2, 4, 1, 2, 0, 12, 31774
+	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, 42, 27, 20
+	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, -27, 44, 20
+	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, 39, -28, 20
+	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, -42, -42, 20
+	playsewithpan SE_W091, 63
+	delay 5
+	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, 0, 40, 20
+	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, -8, -44, 20
+	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, -46, -28, 20
+	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, 46, 9, 20
+	playsewithpan SE_W091, 63
+	delay 5
+	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, 42, 0, 20
+	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, -43, -12, 20
+	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, 16, -46, 20
+	createsprite gBattleAnimSpriteTemplate_83DA2E8, 130, -16, 44, 20
+	playsewithpan SE_W091, 63
+	delay 0
+	waitsound
+	waitforvisualfinish
+	call PoisonBubblesAnim
+	waitforvisualfinish
+	end
+_BelchSubcall:
+	playsewithpan SE_W145C, 192
+	createsprite gBattleAnimSpriteTemplate_83DA2B8, 130, 20, 0, 40, 0
+	delay 3
+	return
+	end
+
+
 

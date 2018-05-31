@@ -263,6 +263,8 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectElectroBall
 	.4byte BattleScript_EffectEntrainment
 	.4byte BattleScript_EffectTrumpCard
+	.4byte BattleScript_EffectVenomDrench
+	.4byte BattleScript_EffectBelch
 
 BattleScript_EffectHit: @ 81D6F14
 BattleScript_EffectAccuracyDown2: @ 81D6F14
@@ -3624,6 +3626,10 @@ BattleScript_MoveSelectionNoPP:: @ 81D9369
 	printselectionstring BATTLE_TEXT_NoPP1
 	endselectionscript
 
+BattleScript_MoveSelectionCantBelch::
+	printselectionstring BATTLE_TEXT_CantBelch
+	endselectionscript
+
 BattleScript_NoPPForMove:: @ 81D936D
 	attackstring
 	pause 32
@@ -5565,3 +5571,47 @@ BattleScript_PlayNice:
 	jumpifbyte EQUAL, cMULTISTRING_CHOOSER, 3, BattleScript_StatDownEnd
 	pause 32
 	goto BattleScript_StatDownPrintString
+
+BattleScript_EffectVenomDrench:
+	attackcanceler
+	attackstring
+	ppreduce
+	jumpifstatus TARGET, PSN, BattleScript_VenomDrenchReal
+	goto BattleScript_NotAffected
+	
+BattleScript_VenomDrenchReal:
+	accuracycheck BattleScript_ButItFailed, ACC_CURR_MOVE
+	jumpifstatus2 TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
+	
+	jumpifstat TARGET, GREATER_THAN, ATTACK, 0, BattleScript_VenomDrenchStartDrops
+	jumpifstat TARGET, GREATER_THAN, SP_ATTACK, 0, BattleScript_VenomDrenchStartDrops
+	jumpifstat TARGET, EQUAL, SPEED, 0, BattleScript_CantLowerMultipleStats
+BattleScript_VenomDrenchStartDrops:
+	attackanimation
+	waitanimation
+	setbyte sFIELD_1B, 0
+	playstatchangeanimation TARGET, 0x1A, 1
+
+	jumpifstat TARGET, EQUAL, ATTACK, 0, BattleScriptVenomDrenchSAtkDrop
+	setstatchanger ATTACK, 1, TRUE
+	statbuffchange 0x1, BattleScriptVenomDrenchSAtkDrop
+	printfromtable gStatDownStringIds
+	waitmessage 64
+BattleScriptVenomDrenchSAtkDrop:
+	jumpifstat TARGET, EQUAL, SP_ATTACK, 0, BattleScriptVenomDrenchSpeedDrop
+	setstatchanger SP_ATTACK, 1, TRUE
+	statbuffchange 0x1, BattleScriptVenomDrenchSpeedDrop
+	printfromtable gStatDownStringIds
+	waitmessage 64
+BattleScriptVenomDrenchSpeedDrop:
+	jumpifstat TARGET, EQUAL, SP_ATTACK, 0, BattleScriptVenomDrenchEnd
+	setstatchanger SPEED, 1, TRUE
+	statbuffchange 0x1, BattleScriptVenomDrenchEnd
+	printfromtable gStatDownStringIds
+	waitmessage 64
+BattleScriptVenomDrenchEnd:
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectBelch:
+	end
+

@@ -451,4 +451,7 @@ const u8 gMoveNames[][13] = {
 	[MOVE_STRUGGLE_BUG] = _("Struggle Bug"),
 	[MOVE_INFESTATION] = _("Infestation"),
 	[MOVE_PETAL_STORM] = _("Petal Storm"),
+	[MOVE_GUNK_SHOT] = _("Gunk Shot"),
+	[MOVE_VENOM_DRENCH] = _("Venom Drench"),
+	[MOVE_BELCH] = _("Belch"),
 };

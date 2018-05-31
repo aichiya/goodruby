@@ -1802,6 +1802,19 @@ static const u8 MoveDescription_PetalStorm[] = _(
     "Attacks by stirring up a\n"
     "violent blizzard of petals.");
 
+static const u8 MoveDescription_GunkShot[] = _(
+    "Garbage is fired to inflict\n"
+    "damage. May also poison.");
+
+static const u8 MoveDescription_VenomDrench[] = _(
+    "Lowers Attack, Sp. Atk, and\n"
+    "Speed if foe is poisoned.");
+
+static const u8 MoveDescription_Belch[] = _(
+    "Only usable after eating a\n"
+    "berry in the same battle.");
+
+
 
 
 
@@ -2257,4 +2270,7 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_StruggleBug,
 	MoveDescription_Infestation,
 	MoveDescription_PetalStorm,
+	MoveDescription_GunkShot,
+	MoveDescription_VenomDrench,
+	MoveDescription_Belch,
 };

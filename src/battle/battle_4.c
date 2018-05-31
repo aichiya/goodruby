@@ -16380,6 +16380,7 @@ static void sp03_bugbite(void)
 	if (ItemId_GetPocket(itemstolen) == 0x4) //evil magic number: POCKET_BERRIES
 	{
 		gLastUsedItem = itemstolen;
+		gWishFutureKnock.berryEatenPokes[GetBattlerSide(gBankAttacker)] |= gBitTable[gBattlerPartyIndexes[gBankAttacker]];
 		
 		switch (itemstolen)
 		{

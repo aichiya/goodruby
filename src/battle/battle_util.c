@@ -98,6 +98,7 @@ extern u8 BattleScript_MoveSelectionTaunted[];
 extern u8 BattleScript_MoveSelectionImprisoned[];
 extern u8 BattleScript_MoveSelectionChoiceBanded[];
 extern u8 BattleScript_MoveSelectionNoPP[];
+extern u8 BattleScript_MoveSelectionCantBelch[];
 extern u8 BattleScript_NoMovesLeft[];
 extern u8 BattleScript_WishComesTrue[];
 extern u8 BattleScript_AquaRingTurnHeal[];
@@ -525,6 +526,11 @@ u8 TrySetCantSelectMoveBattleScript(void) //msg can't select a move
         gUnknown_02024C1C[gActiveBattler] = BattleScript_MoveSelectionNoPP;
         limitations++;
     }
+    if (move == MOVE_BELCH && !(gWishFutureKnock.berryEatenPokes[GetBattlerSide(gActiveBattler)] & gBitTable[gBattlerPartyIndexes[gActiveBattler]]))
+    {
+        gUnknown_02024C1C[gActiveBattler] = BattleScript_MoveSelectionCantBelch;
+        limitations++;
+    }
     return limitations;
 }
 
@@ -563,6 +569,9 @@ u8 CheckMoveLimitations(u8 bank, u8 unusableMoves, u8 check)
             unusableMoves |= gBitTable[i];
         if (holdEffect == HOLD_EFFECT_CHOICE_BAND && *choicedMove != 0 && *choicedMove != 0xFFFF && *choicedMove != gBattleMons[bank].moves[i])
             unusableMoves |= gBitTable[i];
+		if (gBattleMons[bank].moves[i] == MOVE_BELCH && !(gWishFutureKnock.berryEatenPokes[GetBattlerSide(bank)] & gBitTable[gBattlerPartyIndexes[bank]]))
+			unusableMoves |= gBitTable[i];
+		
     }
     return unusableMoves;
 }
@@ -2828,6 +2837,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                     gBattleMoveDamage *= -1;
                     BattleScriptExecute(BattleScript_ItemHealHP_RemoveItem);
                     effect = 4;
+					gWishFutureKnock.berryEatenPokes[GetBattlerSide(bank)] |= gBitTable[gBattlerPartyIndexes[bank]];
                 }
                 break;
             case HOLD_EFFECT_SITRUS:
@@ -2839,6 +2849,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                     gBattleMoveDamage *= -1;
                     BattleScriptExecute(BattleScript_ItemHealHP_RemoveItem);
                     effect = 4;
+					gWishFutureKnock.berryEatenPokes[GetBattlerSide(bank)] |= gBitTable[gBattlerPartyIndexes[bank]];
                 }
                 break;
             case HOLD_EFFECT_RESTORE_PP:
@@ -2876,6 +2887,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                         EmitSetMonData(0, i + REQUEST_PPMOVE1_BATTLE, 0, 1, &changedPP);
                         MarkBufferBankForExecution(gActiveBattler);
                         effect = ITEM_PP_CHANGE;
+						gWishFutureKnock.berryEatenPokes[GetBattlerSide(bank)] |= gBitTable[gBattlerPartyIndexes[bank]];
                     }
                 }
                 break;
@@ -2929,6 +2941,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                     else
                         BattleScriptExecute(BattleScript_ItemHealHP_RemoveItem);
                     effect = ITEM_HP_CHANGE;
+					gWishFutureKnock.berryEatenPokes[GetBattlerSide(bank)] |= gBitTable[gBattlerPartyIndexes[bank]];
                 }
                 break;
             case HOLD_EFFECT_CONFUSE_DRY:
@@ -2949,6 +2962,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                     else
                         BattleScriptExecute(BattleScript_ItemHealHP_RemoveItem);
                     effect = ITEM_HP_CHANGE;
+					gWishFutureKnock.berryEatenPokes[GetBattlerSide(bank)] |= gBitTable[gBattlerPartyIndexes[bank]];
                 }
                 break;
             case HOLD_EFFECT_CONFUSE_SWEET:
@@ -2969,6 +2983,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                     else
                         BattleScriptExecute(BattleScript_ItemHealHP_RemoveItem);
                     effect = ITEM_HP_CHANGE;
+					gWishFutureKnock.berryEatenPokes[GetBattlerSide(bank)] |= gBitTable[gBattlerPartyIndexes[bank]];
                 }
                 break;
             case HOLD_EFFECT_CONFUSE_BITTER:
@@ -2989,6 +3004,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                     else
                         BattleScriptExecute(BattleScript_ItemHealHP_RemoveItem);
                     effect = ITEM_HP_CHANGE;
+					gWishFutureKnock.berryEatenPokes[GetBattlerSide(bank)] |= gBitTable[gBattlerPartyIndexes[bank]];
                 }
                 break;
             case HOLD_EFFECT_CONFUSE_SOUR:
@@ -3009,6 +3025,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                     else
                         BattleScriptExecute(BattleScript_ItemHealHP_RemoveItem);
                     effect = ITEM_HP_CHANGE;
+					gWishFutureKnock.berryEatenPokes[GetBattlerSide(bank)] |= gBitTable[gBattlerPartyIndexes[bank]];
                 }
                 break;
             // copy/paste again, smh
@@ -3032,6 +3049,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                     gBattleStruct->animArg2 = 0;
                     BattleScriptExecute(BattleScript_BerryStatRaiseEnd2);
                     effect = ITEM_STATS_CHANGE;
+					gWishFutureKnock.berryEatenPokes[GetBattlerSide(bank)] |= gBitTable[gBattlerPartyIndexes[bank]];
                 }
                 break;
             case HOLD_EFFECT_DEFENSE_UP:
@@ -3048,6 +3066,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                     gBattleStruct->animArg2 = 0;
                     BattleScriptExecute(BattleScript_BerryStatRaiseEnd2);
                     effect = ITEM_STATS_CHANGE;
+					gWishFutureKnock.berryEatenPokes[GetBattlerSide(bank)] |= gBitTable[gBattlerPartyIndexes[bank]];
                 }
                 break;
             case HOLD_EFFECT_SPEED_UP:
@@ -3064,6 +3083,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                     gBattleStruct->animArg2 = 0;
                     BattleScriptExecute(BattleScript_BerryStatRaiseEnd2);
                     effect = ITEM_STATS_CHANGE;
+					gWishFutureKnock.berryEatenPokes[GetBattlerSide(bank)] |= gBitTable[gBattlerPartyIndexes[bank]];
                 }
                 break;
             case HOLD_EFFECT_SP_ATTACK_UP:
@@ -3080,6 +3100,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                     gBattleStruct->animArg2 = 0;
                     BattleScriptExecute(BattleScript_BerryStatRaiseEnd2);
                     effect = ITEM_STATS_CHANGE;
+					gWishFutureKnock.berryEatenPokes[GetBattlerSide(bank)] |= gBitTable[gBattlerPartyIndexes[bank]];
                 }
                 break;
             case HOLD_EFFECT_SP_DEFENSE_UP:
@@ -3096,6 +3117,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                     gBattleStruct->animArg2 = 0;
                     BattleScriptExecute(BattleScript_BerryStatRaiseEnd2);
                     effect = ITEM_STATS_CHANGE;
+					gWishFutureKnock.berryEatenPokes[GetBattlerSide(bank)] |= gBitTable[gBattlerPartyIndexes[bank]];
                 }
                 break;
             case HOLD_EFFECT_CRITICAL_UP:
@@ -3104,6 +3126,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                     gBattleMons[bank].status2 |= STATUS2_FOCUS_ENERGY;
                     BattleScriptExecute(BattleScript_BerryFocusEnergyEnd2);
                     effect = ITEM_EFFECT_OTHER;
+					gWishFutureKnock.berryEatenPokes[GetBattlerSide(bank)] |= gBitTable[gBattlerPartyIndexes[bank]];
                 }
                 break;
             case HOLD_EFFECT_RANDOM_STAT_UP:
@@ -3141,6 +3164,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                         gBattleStruct->animArg2 = 0;
                         BattleScriptExecute(BattleScript_BerryStatRaiseEnd2);
                         effect = ITEM_STATS_CHANGE;
+						gWishFutureKnock.berryEatenPokes[GetBattlerSide(bank)] |= gBitTable[gBattlerPartyIndexes[bank]];
                     }
                 }
                 break;
@@ -3150,6 +3174,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                     gBattleMons[bank].status1 &= ~(STATUS_PARALYSIS);
                     BattleScriptExecute(BattleScript_BerryCurePrlzEnd2);
                     effect = ITEM_STATUS_CHANGE;
+					gWishFutureKnock.berryEatenPokes[GetBattlerSide(bank)] |= gBitTable[gBattlerPartyIndexes[bank]];
                 }
                 break;
             case HOLD_EFFECT_CURE_PSN:
@@ -3158,6 +3183,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                     gBattleMons[bank].status1 &= ~(STATUS_PSN_ANY | STATUS_TOXIC_COUNTER);
                     BattleScriptExecute(BattleScript_BerryCurePsnEnd2);
                     effect = ITEM_STATUS_CHANGE;
+					gWishFutureKnock.berryEatenPokes[GetBattlerSide(bank)] |= gBitTable[gBattlerPartyIndexes[bank]];
                 }
                 break;
             case HOLD_EFFECT_CURE_BRN:
@@ -3166,6 +3192,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                     gBattleMons[bank].status1 &= ~(STATUS_BURN);
                     BattleScriptExecute(BattleScript_BerryCureBrnEnd2);
                     effect = ITEM_STATUS_CHANGE;
+					gWishFutureKnock.berryEatenPokes[GetBattlerSide(bank)] |= gBitTable[gBattlerPartyIndexes[bank]];
                 }
                 break;
             case HOLD_EFFECT_CURE_FRZ:
@@ -3174,6 +3201,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                     gBattleMons[bank].status1 &= ~(STATUS_FREEZE);
                     BattleScriptExecute(BattleScript_BerryCureFrzEnd2);
                     effect = ITEM_STATUS_CHANGE;
+					gWishFutureKnock.berryEatenPokes[GetBattlerSide(bank)] |= gBitTable[gBattlerPartyIndexes[bank]];
                 }
                 break;
             case HOLD_EFFECT_CURE_SLP:
@@ -3183,6 +3211,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                     gBattleMons[bank].status2 &= ~(STATUS2_NIGHTMARE);
                     BattleScriptExecute(BattleScript_BerryCureSlpEnd2);
                     effect = ITEM_STATUS_CHANGE;
+					gWishFutureKnock.berryEatenPokes[GetBattlerSide(bank)] |= gBitTable[gBattlerPartyIndexes[bank]];
                 }
                 break;
             case HOLD_EFFECT_CURE_CONFUSION:
@@ -3191,6 +3220,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                     gBattleMons[bank].status2 &= ~(STATUS2_CONFUSION);
                     BattleScriptExecute(BattleScript_BerryCureConfusionEnd2);
                     effect = ITEM_EFFECT_OTHER;
+					gWishFutureKnock.berryEatenPokes[GetBattlerSide(bank)] |= gBitTable[gBattlerPartyIndexes[bank]];
                 }
                 break;
             case HOLD_EFFECT_CURE_STATUS:
@@ -3236,6 +3266,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                     gBattleMons[bank].status2 &= ~(STATUS2_CONFUSION);
                     BattleScriptExecute(BattleScript_BerryCureChosenStatusEnd2);
                     effect = ITEM_STATUS_CHANGE;
+					gWishFutureKnock.berryEatenPokes[GetBattlerSide(bank)] |= gBitTable[gBattlerPartyIndexes[bank]];
                 }
                 break;
             case HOLD_EFFECT_CURE_ATTRACT:
@@ -3293,6 +3324,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                     BattleScriptPushCursor();
                     gBattlescriptCurrInstr = BattleScript_BerryCureParRet;
                     effect = ITEM_STATUS_CHANGE;
+					gWishFutureKnock.berryEatenPokes[GetBattlerSide(bank)] |= gBitTable[gBattlerPartyIndexes[bank]];
                 }
                 break;
             case HOLD_EFFECT_CURE_PSN:
@@ -3302,6 +3334,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                     BattleScriptPushCursor();
                     gBattlescriptCurrInstr = BattleScript_BerryCurePsnRet;
                     effect = ITEM_STATUS_CHANGE;
+					gWishFutureKnock.berryEatenPokes[GetBattlerSide(bank)] |= gBitTable[gBattlerPartyIndexes[bank]];
                 }
                 break;
             case HOLD_EFFECT_CURE_BRN:
@@ -3311,6 +3344,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                     BattleScriptPushCursor();
                     gBattlescriptCurrInstr = BattleScript_BerryCureBrnRet;
                     effect = ITEM_STATUS_CHANGE;
+					gWishFutureKnock.berryEatenPokes[GetBattlerSide(bank)] |= gBitTable[gBattlerPartyIndexes[bank]];
                 }
                 break;
             case HOLD_EFFECT_CURE_FRZ:
@@ -3320,6 +3354,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                     BattleScriptPushCursor();
                     gBattlescriptCurrInstr = BattleScript_BerryCureFrzRet;
                     effect = ITEM_STATUS_CHANGE;
+					gWishFutureKnock.berryEatenPokes[GetBattlerSide(bank)] |= gBitTable[gBattlerPartyIndexes[bank]];
                 }
                 break;
             case HOLD_EFFECT_CURE_SLP:
@@ -3330,6 +3365,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                     BattleScriptPushCursor();
                     gBattlescriptCurrInstr = BattleScript_BerryCureSlpRet;
                     effect = ITEM_STATUS_CHANGE;
+					gWishFutureKnock.berryEatenPokes[GetBattlerSide(bank)] |= gBitTable[gBattlerPartyIndexes[bank]];
                 }
                 break;
             case HOLD_EFFECT_CURE_CONFUSION:
@@ -3339,6 +3375,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                     BattleScriptPushCursor();
                     gBattlescriptCurrInstr = BattleScript_BerryCureConfusionRet;
                     effect = ITEM_EFFECT_OTHER;
+					gWishFutureKnock.berryEatenPokes[GetBattlerSide(bank)] |= gBitTable[gBattlerPartyIndexes[bank]];
                 }
                 break;
             case HOLD_EFFECT_CURE_ATTRACT:
@@ -3386,6 +3423,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                     gBattleCommunication[MULTISTRING_CHOOSER] = 0;
                     gBattlescriptCurrInstr = BattleScript_BerryCureChosenStatusRet;
                     effect = ITEM_STATUS_CHANGE;
+					gWishFutureKnock.berryEatenPokes[GetBattlerSide(bank)] |= gBitTable[gBattlerPartyIndexes[bank]];
                 }
                 break;
             case HOLD_EFFECT_RESTORE_STATS:
