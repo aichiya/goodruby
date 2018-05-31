@@ -448,4 +448,7 @@ const u8 gMoveNames[][13] = {
 	[MOVE_ELECTRO_BALL] = _("Electro Ball"),
 	[MOVE_ENTRAINMENT] = _("Entrainment"),
 	[MOVE_TRUMP_CARD] = _("Trump Card"),
+	[MOVE_STRUGGLE_BUG] = _("Struggle Bug"),
+	[MOVE_INFESTATION] = _("Infestation"),
+	[MOVE_PETAL_STORM] = _("Petal Storm"),
 };

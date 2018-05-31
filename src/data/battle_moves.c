@@ -5841,4 +5841,43 @@ const struct BattleMove gBattleMoves[] = {
         .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
 		.moveClass = CLASS_SPECIAL,
     },
+
+    [MOVE_STRUGGLE_BUG] = {
+        .effect = EFFECT_SPECIAL_ATTACK_DOWN_HIT,
+        .power = 50,
+        .type = TYPE_BUG,
+        .accuracy = 100,
+        .pp = 20,
+        .secondaryEffectChance = 100,
+        .target = TARGET_BOTH_ENEMIES,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
+		.moveClass = CLASS_SPECIAL,
+    },
+
+    [MOVE_INFESTATION] = {
+        .effect = EFFECT_TRAP,
+        .power = 20,
+        .type = TYPE_BUG,
+        .accuracy = 100,
+        .pp = 20,
+        .secondaryEffectChance = 100,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+		.moveClass = CLASS_SPECIAL,
+    },
+
+    [MOVE_PETAL_STORM] = {
+        .effect = EFFECT_HIT,
+        .power = 90,
+        .type = TYPE_GRASS,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
+		.moveClass = CLASS_PHYSICAL,
+    },
 };

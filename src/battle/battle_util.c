@@ -1076,7 +1076,7 @@ u8 TurnBasedEffects(void)
                         gBattleTextBuff1[3] = ewram16004arr(1, gActiveBattler);
                         gBattleTextBuff1[4] = EOS;
                         gBattlescriptCurrInstr = BattleScript_WrapTurnDmg;
-                        gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 16;
+                        gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 8;
                         if (gBattleMoveDamage == 0)
                             gBattleMoveDamage = 1;
                     }

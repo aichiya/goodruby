@@ -382,6 +382,7 @@ enum
 	BATTLE_TEXT_ReflectType,
 	BATTLE_TEXT_SpAtkRisen,
 	BATTLE_TEXT_Entrainment,
+	BATTLE_TEXT_InfestationTrapped,
 };
 
 const u8 BattleText_UnknownString[] = _("{STRING 33}");
@@ -894,6 +895,7 @@ const u8 BattleText_BadlyPoisoned2[] = _("{STRING 16} is badly\npoisoned!");
 const u8 BattleText_ReflectType[] = _("{ATTACKING_MON} transformed\ninto {DEFENDING_MON}’s type!");
 const u8 BattleText_SpAtkRisen[] = _("{DEFENDING_MON}’s {STRING 22}\nraised its Sp. Atk!");
 const u8 BattleText_Entrainment[] = _("{DEFENDING_MON}’s {STRING 22}\nbecame {STRING 21}!");
+const u8 BattleText_InfestationTrapped[] = _("{DEFENDING_MON} was trapped\nin the Infestation!");
 
 const u8 *const gUnknown_08400F58[] =
 {
@@ -1298,6 +1300,7 @@ const u8 *const gBattleStringsTable[] =
 	BattleText_ReflectType,
 	BattleText_SpAtkRisen,
 	BattleText_Entrainment,
+	BattleText_InfestationTrapped,
 };
 
 // below are lists of battle string enums and NOT pointers to the strings.
@@ -1458,6 +1461,7 @@ const u16 gWrappedStringIds[] =
     BATTLE_TEXT_Clamped, 
     BATTLE_TEXT_TrappedVortex, 
     BATTLE_TEXT_SandTombTrapped, 
+    BATTLE_TEXT_InfestationTrapped, 
 };
 
 const u16 gMistUsedStringIds[] =
@@ -1662,6 +1666,7 @@ const u16 gTrappingMoves[] =
     MOVE_CLAMP,
     MOVE_WHIRLPOOL,
     MOVE_SAND_TOMB,
+    MOVE_INFESTATION,
     0xFFFF,
 };
 

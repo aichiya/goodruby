@@ -83,3 +83,4 @@ gAbilityNames:: @ 81FA248
 	.string "POISON HEAL$", 13
 	.string "STALL$", 13
 	.string "NO GUARD$", 13
+	.string "TINTED LENS$", 13

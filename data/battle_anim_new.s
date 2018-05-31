@@ -175,3 +175,16 @@ gSpriteAnim_TrumpCard3:
 	obj_image_anim_frame 16, 1
 	obj_image_anim_end
 
+	.align 2
+gBattleAnimSpriteTemplate_StruggleBug::
+	spr_template 10180, 10002, gOamData_837DF24, gDummySpriteAnimTable, NULL, gDummySpriteAffineAnimTable, sub_80DC9A0
+
+	.align 2
+gBattleAnimSpriteTemplate_PetalStorm::
+	spr_template 10159, 10159, gOamData_837DF24, gSpriteAnimTable_83D6424, NULL, gDummySpriteAffineAnimTable, sub_80CC6CC
+
+	.align 2
+gBattleAnimSpriteTemplate_PetalStorm2::
+	spr_template 10159, 10159, gOamData_837DF2C, gSpriteAnimTable_83D6420, NULL, gDummySpriteAffineAnimTable, sub_80CC6CC
+
+

@@ -1717,6 +1717,9 @@ static void atk06_typecalc(void)
         }
         if (gMoveResultFlags & MOVE_RESULT_DOESNT_AFFECT_FOE)
             gProtectStructs[gBankAttacker].notEffective = 1;
+		
+		if (gMoveResultFlags & MOVE_RESULT_NOT_VERY_EFFECTIVE && gBattleMons[gBankAttacker].ability == ABILITY_TINTED_LENS)
+			gBattleMoveDamage *= 2;
     }
     gBattlescriptCurrInstr++;
 }
@@ -1870,6 +1873,10 @@ u8 TypeCalc(u16 move, u8 bank_atk, u8 bank_def)
     {
         flags |= MOVE_RESULT_MISSED;
     }
+	
+	if (flags & MOVE_RESULT_NOT_VERY_EFFECTIVE && gBattleMons[bank_atk].ability == ABILITY_TINTED_LENS)
+		gBattleMoveDamage *= 2;
+	
     return flags;
 }
 

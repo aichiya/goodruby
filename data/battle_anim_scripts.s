@@ -464,6 +464,9 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_ELECTRO_BALL
 	.4byte Move_ENTRAINMENT
 	.4byte Move_TRUMP_CARD
+	.4byte Move_STRUGGLE_BUG
+	.4byte Move_INFESTATION
+	.4byte Move_PETAL_STORM
 	.4byte PoundCopy
 
 	.align 2
@@ -13603,7 +13606,143 @@ TrumpCard1:
 	waitforvisualfinish
 	end
 
+Move_STRUGGLE_BUG:
+	loadspritegfx 10179
+	loadspritegfx 10180
+	loadspritegfx 10002
+	monbg ANIM_BANK_DEF_PARTNER
+	delay 0
+	createsprite gBattleAnimSpriteTemplate_83DB3C4, 5, 1, 2, 0, 9, 0
+	waitforvisualfinish
+	loopsewithpan SE_W081, 192, 9, 6
+	createsprite gBattleAnimSpriteTemplate_StruggleBug, 130, 20, 0, 512, 10, 1
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_StruggleBug, 130, 20, 0, 512, 20, 1
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_StruggleBug, 130, 20, 0, 512, 30, 1
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_StruggleBug, 130, 20, 0, 512, 40, 1
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_StruggleBug, 130, 20, 0, 512, 30, 1
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_StruggleBug, 130, 20, 0, 512, 20, 1
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_StruggleBug, 130, 20, 0, 512, 10, 1
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_StruggleBug, 130, 20, 0, 512, 0, 1
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_StruggleBug, 130, 20, 0, 512, -10, 1
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_StruggleBug, 130, 20, 0, 512, -20, 1
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_StruggleBug, 130, 20, 0, 512, -30, 1
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_StruggleBug, 130, 20, 0, 512, -40, 1
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_StruggleBug, 130, 20, 0, 512, -30, 1
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_StruggleBug, 130, 20, 0, 512, -20, 1
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_StruggleBug, 130, 20, 0, 512, -10, 1
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_StruggleBug, 130, 20, 0, 512, 0, 1
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_StruggleBug, 130, 20, 0, 512, 10, 1
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_StruggleBug, 130, 20, 0, 512, 20, 1
+	delay 1
+	waitforvisualfinish
+	createsprite gBattleAnimSpriteTemplate_83DB3C4, 5, 1, 2, 9, 0, 0
+	clearmonbg ANIM_BANK_DEF_PARTNER
+	waitforvisualfinish
+	end
 
+Move_INFESTATION:
+	end
 
+Move_PETAL_STORM:
+	loadspritegfx 10159
+	createsprite gBattleAnimSpriteTemplate_83DB3C4, 2, 1, 1, 0, 8, 0x625D
+	waitforvisualfinish
+	
+	loopsewithpan SE_W077, 192, 4, 16
+	call _PetalStormSubcall1
+	createsprite gBattleAnimSpriteTemplate_PetalStorm2, 2, 0, 1,  37, -28, 9
+	delay 4
+	call _PetalStormSubcall2
+	createsprite gBattleAnimSpriteTemplate_PetalStorm2, 2, 0, 1,  43, -18, 9
+	
+	createvisualtask AnimTask_ShakeMon2, 5, 4, 3, 0, 40, 1
+	createvisualtask AnimTask_ShakeMon2, 5, 5, 3, 0, 40, 1
+	createvisualtask AnimTask_ShakeMon2, 5, 6, 3, 0, 40, 1
+	createvisualtask AnimTask_ShakeMon2, 5, 7, 3, 0, 40, 1
+	createvisualtask AnimTask_ShakeMon2, 5, 8, 3, 0, 40, 1
+	
+	delay 4
+	call _PetalStormSubcall1
+	createsprite gBattleAnimSpriteTemplate_PetalStorm2, 2, 0, 1,  43,  18, 9
+	delay 4
+	call _PetalStormSubcall2
+	createsprite gBattleAnimSpriteTemplate_PetalStorm2, 2, 0, 1,  37,  28, 9
+	delay 4
+	call _PetalStormSubcall1
+	createsprite gBattleAnimSpriteTemplate_PetalStorm2, 2, 0, 1,  28,  37, 9
+	delay 4
+	call _PetalStormSubcall2
+	createsprite gBattleAnimSpriteTemplate_PetalStorm2, 2, 0, 1,  18,  43, 9
+	delay 4
+	call _PetalStormSubcall1
+	createsprite gBattleAnimSpriteTemplate_PetalStorm2, 2, 0, 1, -18,  43, 9
+	delay 4
+	call _PetalStormSubcall2
+	createsprite gBattleAnimSpriteTemplate_PetalStorm2, 2, 0, 1, -28,  37, 9
+	delay 4
+	call _PetalStormSubcall1
+	createsprite gBattleAnimSpriteTemplate_PetalStorm2, 2, 0, 1, -37,  28, 9
+	delay 4
+	call _PetalStormSubcall2
+	createsprite gBattleAnimSpriteTemplate_PetalStorm2, 2, 0, 1, -43,  18, 9
+	delay 4
+	call _PetalStormSubcall1
+	createsprite gBattleAnimSpriteTemplate_PetalStorm2, 2, 0, 1, -43, -18, 9
+	delay 4
+	call _PetalStormSubcall2
+	createsprite gBattleAnimSpriteTemplate_PetalStorm2, 2, 0, 1, -37, -28, 9
+	delay 4
+	call _PetalStormSubcall1
+	createsprite gBattleAnimSpriteTemplate_PetalStorm2, 2, 0, 1, -28, -37, 9
+	delay 4
+	call _PetalStormSubcall2
+	createsprite gBattleAnimSpriteTemplate_PetalStorm2, 2, 0, 1, -18, -43, 9
+	delay 4
+	call _PetalStormSubcall1
+	createsprite gBattleAnimSpriteTemplate_PetalStorm2, 2, 0, 1,  18, -43, 9
+	delay 4
+	call _PetalStormSubcall2
+	createsprite gBattleAnimSpriteTemplate_PetalStorm2, 2, 0, 1,  28, -37, 9
+	delay 4
+	
+	
+	createsprite gBattleAnimSpriteTemplate_83DB3C4, 2, 1, 1, 8, 0, 0x625D
+	end
 
+_PetalStormSubcall1:
+	createsprite gBattleAnimSpriteTemplate_PetalStorm, 2, 0, 1,   0,  47, 10
+	createsprite gBattleAnimSpriteTemplate_PetalStorm, 2, 0, 1,   0,  47, 10
+	createsprite gBattleAnimSpriteTemplate_PetalStorm, 2, 0, 1,  40,  25, 10
+	createsprite gBattleAnimSpriteTemplate_PetalStorm, 2, 0, 1, -40,  25, 10
+	createsprite gBattleAnimSpriteTemplate_PetalStorm, 2, 0, 1,  40, -25, 10
+	createsprite gBattleAnimSpriteTemplate_PetalStorm, 2, 0, 1, -40, -25, 10
+	return
+
+_PetalStormSubcall2:
+	createsprite gBattleAnimSpriteTemplate_PetalStorm, 2, 0, 1, -47,   0, 10
+	createsprite gBattleAnimSpriteTemplate_PetalStorm, 2, 0, 1,  47,   0, 10
+	createsprite gBattleAnimSpriteTemplate_PetalStorm, 2, 0, 1,  25,  40, 10
+	createsprite gBattleAnimSpriteTemplate_PetalStorm, 2, 0, 1, -25,  40, 10
+	createsprite gBattleAnimSpriteTemplate_PetalStorm, 2, 0, 1,  25, -40, 10
+	createsprite gBattleAnimSpriteTemplate_PetalStorm, 2, 0, 1, -25, -40, 10
+	return
+
+	
 

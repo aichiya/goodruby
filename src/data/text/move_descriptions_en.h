@@ -1790,6 +1790,19 @@ static const u8 MoveDescription_TrumpCard[] = _(
     "Power rises as this move\n"
     "runs out of PP.");
 
+static const u8 MoveDescription_StruggleBug[] = _(
+    "A firm opposition that\n"
+    "lowers the target’s Sp. Atk.");
+
+static const u8 MoveDescription_Infestation[] = _(
+    "Traps the foe in a swarm of\n"
+    "insects for 2 to 5 turns.");
+
+static const u8 MoveDescription_PetalStorm[] = _(
+    "Attacks by stirring up a\n"
+    "violent blizzard of petals.");
+
+
 
 
 const u8 * const gMoveDescriptions[] = {
@@ -2241,4 +2254,7 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_ElectroBall,
 	MoveDescription_Entrainment,
 	MoveDescription_TrumpCard,
+	MoveDescription_StruggleBug,
+	MoveDescription_Infestation,
+	MoveDescription_PetalStorm,
 };

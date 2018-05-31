@@ -250,6 +250,9 @@ gAbilityDescription_Stall:
 gAbilityDescription_NoGuard:
 	.string "Cannot miss or evade.$"
 
+gAbilityDescription_TintedLens:
+	.string "Boosts resisted moves.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -337,3 +340,4 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_PoisonHeal
 	.4byte gAbilityDescription_Stall
 	.4byte gAbilityDescription_NoGuard
+	.4byte gAbilityDescription_TintedLens

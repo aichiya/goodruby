@@ -42,6 +42,7 @@
 --Fix Conversion2
 --Autotomize doesn't touch weight
 --Meditite
+--Infestation
 
 
 Distant future:
