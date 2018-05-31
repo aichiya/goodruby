@@ -470,6 +470,7 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_GUNK_SHOT
 	.4byte Move_VENOM_DRENCH
 	.4byte Move_BELCH
+	.4byte Move_LAVA_PLUME
 	.4byte PoundCopy
 
 	.align 2
@@ -13860,5 +13861,46 @@ _BelchSubcall:
 	return
 	end
 
+Move_LAVA_PLUME:
+	loadspritegfx 10029
+	loadspritegfx 10135
+	monbg ANIM_BANK_DEF_PARTNER
+	setalpha 12, 18
+	playsewithpan SE_W172B, 192
+	createsprite gBattleAnimSpriteTemplate_83DB100, 2, 1, 0, 30, 25, 0
+	createsprite gBattleAnimSpriteTemplate_83DB100, 2, 1, 32, 30, 25, 0
+	createsprite gBattleAnimSpriteTemplate_83DB100, 2, 1, 64, 30, 25, 0
+	createsprite gBattleAnimSpriteTemplate_83DB100, 2, 1, 96, 30, 25, 0
+	createsprite gBattleAnimSpriteTemplate_83DB100, 2, 1, 128, 30, 25, 0
+	createsprite gBattleAnimSpriteTemplate_83DB100, 66, 1, 160, 30, 25, 0
+	createsprite gBattleAnimSpriteTemplate_83DB100, 66, 1, 192, 30, 25, 0
+	createsprite gBattleAnimSpriteTemplate_83DB100, 66, 1, 224, 30, 25, 0
+	delay 5
+	createsprite gBattleAnimSpriteTemplate_83DB100, 2, 1, 16, 30, 25, 0
+	createsprite gBattleAnimSpriteTemplate_83DB100, 2, 1, 48, 30, 25, 0
+	createsprite gBattleAnimSpriteTemplate_83DB100, 2, 1, 80, 30, 25, 0
+	createsprite gBattleAnimSpriteTemplate_83DB100, 2, 1, 112, 30, 25, 0
+	createsprite gBattleAnimSpriteTemplate_83DB100, 2, 1, 144, 30, 25, 0
+	createsprite gBattleAnimSpriteTemplate_83DB100, 66, 1, 176, 30, 25, 0
+	createsprite gBattleAnimSpriteTemplate_83DB100, 66, 1, 208, 30, 25, 0
+	createsprite gBattleAnimSpriteTemplate_83DB100, 66, 1, 232, 30, 25, 0
+	delay 5
+	createsprite gBattleAnimSpriteTemplate_83DB100, 2, 1, 0, 30, 25, 10
+	createsprite gBattleAnimSpriteTemplate_83DB100, 2, 1, 32, 30, 25, 10
+	createsprite gBattleAnimSpriteTemplate_83DB100, 2, 1, 64, 30, 25, 10
+	createsprite gBattleAnimSpriteTemplate_83DB100, 2, 1, 96, 30, 25, 10
+	createsprite gBattleAnimSpriteTemplate_83DB100, 2, 1, 128, 30, 25, 10
+	createsprite gBattleAnimSpriteTemplate_83DB100, 66, 1, 160, 30, 25, 10
+	createsprite gBattleAnimSpriteTemplate_83DB100, 66, 1, 192, 30, 25, 10
+	createsprite gBattleAnimSpriteTemplate_83DB100, 66, 1, 224, 30, 25, 10
+	delay 5
+	createvisualtask AnimTask_ShakeMon2, 5, 1, 2, 0, 10, 1
+	createvisualtask AnimTask_ShakeMon2, 5, 2, 2, 0, 10, 1
+	createvisualtask AnimTask_ShakeMon2, 5, 3, 2, 0, 10, 1
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_DEF_PARTNER
+	blendoff
+	waitforvisualfinish
+	end
 
 

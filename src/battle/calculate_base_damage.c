@@ -348,8 +348,8 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         damage = (15 * damage) / 10;
 
     // spread move penalty
-    if ((gBattleTypeFlags & BATTLE_TYPE_DOUBLE) && gBattleMoves[move].target == 8 && CountAliveMons(2) == 2)
-        damage /= 2;
+    if ((gBattleTypeFlags & BATTLE_TYPE_DOUBLE) && (gBattleMoves[move].target == 8 || gBattleMoves[move].target == 32) && CountAliveMons(2) == 2)
+        damage = (3 * damage) / 4;
 
      // moves always do at least 1 damage.
     if (damage == 0)

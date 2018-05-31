@@ -264,7 +264,8 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectEntrainment
 	.4byte BattleScript_EffectTrumpCard
 	.4byte BattleScript_EffectVenomDrench
-	.4byte BattleScript_EffectBelch
+	.4byte BattleScript_EffectAllHit
+	.4byte BattleScript_EffectAllHitBurn
 
 BattleScript_EffectHit: @ 81D6F14
 BattleScript_EffectAccuracyDown2: @ 81D6F14
@@ -5614,4 +5615,50 @@ BattleScriptVenomDrenchEnd:
 
 BattleScript_EffectBelch:
 	end
+
+BattleScript_EffectAllHit:: @ 81D708A
+	attackcanceler
+	attackstring
+	ppreduce
+	selectfirstvalidtarget
+	attackanimation
+	waitanimation
+
+_AllHitDoStuff: @ 81D70A7
+	movevaluescleanup
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	accuracycheck _AllHitMissed, ACC_CURR_MOVE
+	effectivenesssound
+	hitanimation TARGET
+	waitstate
+	healthbarupdate TARGET
+	datahpupdate TARGET
+	critmessage
+	waitmessage 64
+	resultmessage
+	waitmessage 64
+	seteffectwithchance
+	tryfaintmon TARGET, FALSE, NULL
+	setbyte sMOVEEND_STATE, 0
+	moveend 2, 16
+	jumpifnexttargetvalid _AllHitDoStuff
+	tryfaintmon USER, FALSE, NULL
+	end
+
+_AllHitMissed: @ 81D70E0
+	effectivenesssound
+	resultmessage
+	waitmessage 64
+	setbyte sMOVEEND_STATE, 0
+	moveend 2, 16
+	jumpifnexttargetvalid BattleScript_1D70A7
+	tryfaintmon USER, FALSE, NULL
+	end
+
+BattleScript_EffectAllHitBurn::
+	setmoveeffect EFFECT_BURN
+	goto BattleScript_EffectAllHit
 

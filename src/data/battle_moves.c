@@ -5869,13 +5869,13 @@ const struct BattleMove gBattleMoves[] = {
     },
 
     [MOVE_PETAL_STORM] = {
-        .effect = EFFECT_HIT,
+        .effect = EFFECT_ALL_HIT,
         .power = 90,
         .type = TYPE_GRASS,
         .accuracy = 100,
         .pp = 15,
         .secondaryEffectChance = 0,
-        .target = TARGET_SELECTED_POKEMON,
+        .target = TARGET_ALL_EXCEPT_USER,
         .priority = 0,
         .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
 		.moveClass = CLASS_PHYSICAL,
@@ -5917,6 +5917,19 @@ const struct BattleMove gBattleMoves[] = {
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
         .flags = F_AFFECTED_BY_PROTECT,
+		.moveClass = CLASS_SPECIAL,
+    },
+
+    [MOVE_LAVA_PLUME] = {
+        .effect = EFFECT_ALL_HIT_BURN,
+        .power = 80,
+        .type = TYPE_FIRE,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 30,
+        .target = TARGET_ALL_EXCEPT_USER,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
 		.moveClass = CLASS_SPECIAL,
     },
 };

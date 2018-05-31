@@ -454,4 +454,5 @@ const u8 gMoveNames[][13] = {
 	[MOVE_GUNK_SHOT] = _("Gunk Shot"),
 	[MOVE_VENOM_DRENCH] = _("Venom Drench"),
 	[MOVE_BELCH] = _("Belch"),
+	[MOVE_LAVA_PLUME] = _("Lava Plume"),
 };

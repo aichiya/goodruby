@@ -1814,6 +1814,10 @@ static const u8 MoveDescription_Belch[] = _(
     "Only usable after eating a\n"
     "berry in the same battle.");
 
+static const u8 MoveDescription_LavaPlume[] = _(
+    "An inferno that hurts all\n"
+    "other battlers. May burn.");
+
 
 
 
@@ -2273,4 +2277,5 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_GunkShot,
 	MoveDescription_VenomDrench,
 	MoveDescription_Belch,
+	MoveDescription_LavaPlume,
 };

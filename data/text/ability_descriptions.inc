@@ -253,6 +253,9 @@ gAbilityDescription_NoGuard:
 gAbilityDescription_TintedLens:
 	.string "Boosts resisted moves.$"
 
+gAbilityDescription_SolidRock:
+	.string "Buffers effective hits.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -341,3 +344,4 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Stall
 	.4byte gAbilityDescription_NoGuard
 	.4byte gAbilityDescription_TintedLens
+	.4byte gAbilityDescription_SolidRock
