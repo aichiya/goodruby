@@ -474,6 +474,7 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_INCINERATE
 	.4byte Move_CLEAR_SMOG
 	.4byte Move_SHELL_SMASH
+	.4byte Move_INFERNO
 	.4byte PoundCopy
 
 	.align 2
@@ -14012,4 +14013,66 @@ Move_SHELL_SMASH:
 	waitforvisualfinish
 	end
 
+Move_INFERNO:
+	loadspritegfx 10029
+	createvisualtask sub_80E4200, 2
+	jumpargeq 7, 1, _InfernoBG3
+	createvisualtask sub_812C924, 2
+	jumpargeq 7, 0, _InfernoBG1
+	goto _InfernoBG2
+_InfernoBG1:
+	fadetobg 4
+	goto _InfernoRejoin
+_InfernoBG2:
+	fadetobg 5
+	goto _InfernoRejoin
+_InfernoBG3:
+	fadetobg 6
+	goto _InfernoRejoin
+_InfernoRejoin:
+	waitbgfadeout
+	waitbgfadein
+	loopsewithpan SE_W221B, 63, 40, 4
+	createvisualtask AnimTask_ShakeMon, 5, 1, 0, 2, 94, 1
+	createvisualtask sub_80E2A38, 10, 4, 1, 0, 9, 31
+	call _InfernoSubcall
+	call _InfernoSubcall
+	call _InfernoSubcall
+	call _InfernoSubcall
+	call _InfernoSubcall
+	call _InfernoSubcall
+	createvisualtask sub_80E2A38, 10, 4, 1, 9, 0, 31
+	restorebg
+	waitbgfadein
+	waitforvisualfinish
+	end
+	
+	waitforvisualfinish
+	end
+_InfernoSubcall:
+	createsprite gBattleAnimSpriteTemplate_83DACD0, 130, 0, 28, 528, 30, 13, 50, 1
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83DACD0, 130, 0, 33, 464, 30, 15, -25, 1
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83DACD0, 130, 0, 32, 480, 20, 16, -46, 1
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83DACD0, 130, 0, 28, 512, 25, 16, 23, 1
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83DACD0, 130, 0, 33, 576, 20, 8, 42, 1
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83DACD0, 130, 0, 31, 400, 25, 11, -21, 1
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83DACD0, 130, 0, 31, 400, 25, 11, -42, 1
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83DACD0, 130, 0, 33, 576, 20, 8, 21, 1
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83DACD0, 130, 0, 28, 512, 25, 16, 46, 1
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83DACD0, 130, 0, 32, 480, 20, 16, -23, 1
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83DACD0, 130, 0, 33, 464, 30, 15, -50, 1
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83DACD0, 130, 0, 28, 528, 30, 13, 25, 1
+	delay 1
+	return
 

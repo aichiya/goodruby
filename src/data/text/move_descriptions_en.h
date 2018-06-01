@@ -1830,6 +1830,10 @@ static const u8 MoveDescription_ShellSmash[] = _(
     "Abandons defenses to\n"
     "boost offensive stats.");
 
+static const u8 MoveDescription_Inferno[] = _(
+    "Powerful and sure to cause\n"
+    "a burn, but inaccurate.");
+
 
 
 
@@ -2294,4 +2298,5 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_Incinerate,
 	MoveDescription_ClearSmog,
 	MoveDescription_ShellSmash,
+	MoveDescription_Inferno,
 };

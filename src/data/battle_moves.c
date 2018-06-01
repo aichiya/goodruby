@@ -5971,4 +5971,17 @@ const struct BattleMove gBattleMoves[] = {
         .flags = F_AFFECTED_BY_SNATCH,
 		.moveClass = CLASS_STATUS,
     },
+
+    [MOVE_INFERNO] = {
+        .effect = EFFECT_BURN_HIT,
+        .power = 100,
+        .type = TYPE_FIRE,
+        .accuracy = 50,
+        .pp = 5,
+        .secondaryEffectChance = 100,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
+		.moveClass = CLASS_SPECIAL,
+    },
 };
