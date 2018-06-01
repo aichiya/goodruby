@@ -191,3 +191,6 @@ gBattleAnimSpriteTemplate_PetalStorm2::
 gBattleAnimSpriteTemplate_GunkShot::
 	spr_template 10150, 10150, gOamData_837DFEC, gSpriteAnimTable_83DA27C, NULL, gSpriteAffineAnimTable_83DA2B0, TranslateAnimSpriteToTargetMonLocation
 
+	.align 2
+gBattleAnimSpriteTemplate_Incinerate::
+	spr_template 10029, 10029, gOamData_837DF34, gSpriteAnimTable_83D9264, NULL, gDummySpriteAffineAnimTable, TranslateAnimSpriteToTargetMonLocation

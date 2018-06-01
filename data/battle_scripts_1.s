@@ -141,7 +141,7 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectPursuit
 	.4byte BattleScript_EffectRapidSpin
 	.4byte BattleScript_EffectSonicboom
-	.4byte BattleScript_EffectUnused83
+	.4byte BattleScript_EffectClearSmog
 	.4byte BattleScript_EffectMorningSun
 	.4byte BattleScript_EffectSynthesis
 	.4byte BattleScript_EffectMoonlight
@@ -151,7 +151,7 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectDefenseUpHit
 	.4byte BattleScript_EffectAttackUpHit
 	.4byte BattleScript_EffectAllStatsUpHit
-	.4byte BattleScript_EffectUnused8D
+	.4byte BattleScript_EffectShellSmash
 	.4byte BattleScript_EffectBellyDrum
 	.4byte BattleScript_EffectPsychUp
 	.4byte BattleScript_EffectMirrorCoat
@@ -173,7 +173,7 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectStockpile
 	.4byte BattleScript_EffectSpitUp
 	.4byte BattleScript_EffectSwallow
-	.4byte BattleScript_EffectUnusedA3
+	.4byte BattleScript_EffectIncinerate
 	.4byte BattleScript_EffectHail
 	.4byte BattleScript_EffectTorment
 	.4byte BattleScript_EffectFlatter
@@ -287,9 +287,6 @@ BattleScript_EffectSpecialDefenseUp: @ 81D6F14
 BattleScript_EffectSpeedUp: @ 81D6F14
 BattleScript_EffectUnused60: @ 81D6F14
 BattleScript_EffectUnused6E: @ 81D6F14
-BattleScript_EffectUnused83: @ 81D6F14
-BattleScript_EffectUnused8D: @ 81D6F14
-BattleScript_EffectUnusedA3: @ 81D6F14
 BattleScript_EffectVitalThrow: @ 81D6F14
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
 	jumpifnostatus3 TARGET, STATUS3_UNDERWATER, BattleScript_HitFromAtkCanceler
@@ -5661,4 +5658,134 @@ _AllHitMissed: @ 81D70E0
 BattleScript_EffectAllHitBurn::
 	setmoveeffect EFFECT_BURN
 	goto BattleScript_EffectAllHit
+
+BattleScript_EffectIncinerate::
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation TARGET
+	waitstate
+	healthbarupdate TARGET
+	datahpupdate TARGET
+	critmessage
+	waitmessage 64
+	resultmessage
+	waitmessage 64
+	jumpifstatus2 TARGET, STATUS2_SUBSTITUTE, BattleScript_IncinerateEnd
+	jumpifmovehadnoeffect BattleScript_IncinerateEnd
+	special 0x2F
+BattleScript_IncinerateEnd:
+	tryfaintmon TARGET, FALSE, NULL
+	setbyte sMOVEEND_STATE, 0
+	moveend 0, 0
+	end
+
+BattleScript_EffectClearSmog::
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation TARGET
+	waitstate
+	healthbarupdate TARGET
+	datahpupdate TARGET
+	critmessage
+	waitmessage 64
+	resultmessage
+	waitmessage 64
+	jumpifstatus2 TARGET, STATUS2_SUBSTITUTE, BattleScript_ClearSmogEnd
+	jumpifmovehadnoeffect BattleScript_ClearSmogEnd
+	special 0x30
+	printstring BATTLE_TEXT_ClearSmogClearBuffs
+	waitmessage 64
+BattleScript_ClearSmogEnd:
+	tryfaintmon TARGET, FALSE, NULL
+	setbyte sMOVEEND_STATE, 0
+	moveend 0, 0
+	end
+
+BattleScript_EffectShellSmash::
+	attackcanceler
+	attackstring
+	ppreduce
+	jumpifstat USER, LESS_THAN, ATTACK, 12, BattleScript_ShellSmashDoMoveAnim
+	jumpifstat USER, LESS_THAN, SP_ATTACK, 12, BattleScript_ShellSmashDoMoveAnim
+	jumpifstat USER, EQUAL, SPEED, 12, BattleScript_CantRaiseMultipleStats
+	
+BattleScript_ShellSmashDoMoveAnim:
+	attackanimation
+	waitanimation
+	setbyte sFIELD_1B, 0
+	playstatchangeanimation USER, 0x1A, 0
+	
+	setstatchanger ATTACK, 2, FALSE
+	statbuffchange AFFECTS_USER | 0x1, BattleScript_ShellSmashTrySpAtk
+	jumpifbyte EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_ShellSmashTrySpAtk
+	printfromtable gStatUpStringIds
+	waitmessage 64
+
+BattleScript_ShellSmashTrySpAtk:
+	setstatchanger SP_ATTACK, 2, FALSE
+	statbuffchange AFFECTS_USER | 0x1, BattleScript_ShellSmashTrySpeed
+	jumpifbyte EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_ShellSmashTrySpeed
+	printfromtable gStatUpStringIds
+	waitmessage 64
+	
+BattleScript_ShellSmashTrySpeed:
+	setstatchanger SPEED, 2, FALSE
+	statbuffchange AFFECTS_USER | 0x1, BattleScript_StartDebuffs
+	jumpifbyte EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_StartDebuffs
+	printfromtable gStatUpStringIds
+	waitmessage 64
+
+BattleScript_StartDebuffs:
+	setbyte sFIELD_1B, 0
+	playstatchangeanimation USER, 0x24, 1
+	
+BattleScript_ShellSmashTryDefense:
+	setstatchanger DEFENSE, 1, TRUE
+	statbuffchange AFFECTS_USER | 0x1, BattleScript_ShellSmashTrySpDef
+	jumpifbyte EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_ShellSmashTrySpDef
+	printfromtable gStatDownStringIds
+	waitmessage 64
+
+BattleScript_ShellSmashTrySpDef:
+	setstatchanger SP_DEFENSE, 1, TRUE
+	statbuffchange AFFECTS_USER | 0x1, BattleScript_ShellSmashEnd
+	jumpifbyte EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_ShellSmashEnd
+	printfromtable gStatDownStringIds
+	waitmessage 64
+	
+BattleScript_ShellSmashEnd:
+	goto BattleScript_MoveEnd
+	end
+
+BattleScript_IncinerateDestroyBerry::
+	removeitem TARGET
+	printstring BATTLE_TEXT_IncinerateRemoveBerry
+	waitmessage 64
+	tryfaintmon TARGET, FALSE, NULL
+	setbyte sMOVEEND_STATE, 0
+	moveend 0, 0
+	end
+
+
+
+
+
 

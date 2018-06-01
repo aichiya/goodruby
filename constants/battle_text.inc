@@ -381,3 +381,5 @@
 	enum BATTLE_TEXT_Entrainment
 	enum BATTLE_TEXT_InfestationTrapped
 	enum BATTLE_TEXT_CantBelch
+	enum BATTLE_TEXT_IncinerateRemoveBerry
+	enum BATTLE_TEXT_ClearSmogClearBuffs

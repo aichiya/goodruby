@@ -471,6 +471,9 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_VENOM_DRENCH
 	.4byte Move_BELCH
 	.4byte Move_LAVA_PLUME
+	.4byte Move_INCINERATE
+	.4byte Move_CLEAR_SMOG
+	.4byte Move_SHELL_SMASH
 	.4byte PoundCopy
 
 	.align 2
@@ -13899,6 +13902,110 @@ Move_LAVA_PLUME:
 	createvisualtask AnimTask_ShakeMon2, 5, 3, 2, 0, 10, 1
 	waitforvisualfinish
 	clearmonbg ANIM_BANK_DEF_PARTNER
+	blendoff
+	waitforvisualfinish
+	end
+
+Move_INCINERATE:
+	loadspritegfx 10029
+	panse_1B SE_W053, 192, 63, 2, 0
+	call _Incinsubcall
+	createvisualtask AnimTask_ShakeMon, 5, ANIM_BANK_TARGET, 3, 0, 43, 1
+	createvisualtask AnimTask_ShakeMon, 5, ANIM_BANK_DEF_PARTNER, 3, 0, 43, 1
+	call _Incinsubcall
+	call _Incinsubcall
+	call _Incinsubcall
+	waitforvisualfinish
+	end
+	
+	
+_Incinsubcall:
+	createsprite gBattleAnimSpriteTemplate_83DB044, 130, 0, 0, 8, -44, 20
+	createsprite gBattleAnimSpriteTemplate_83DB044, 130, 0, 0, -8, 44, 20
+	createsprite gBattleAnimSpriteTemplate_83DB044, 130, 0, 0, 44, 8, 20
+	createsprite gBattleAnimSpriteTemplate_83DB044, 130, 0, 0, -44, -8, 20
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83DB044, 130, 0, 0, 16, -42, 20
+	createsprite gBattleAnimSpriteTemplate_83DB044, 130, 0, 0, -16, 42, 20
+	createsprite gBattleAnimSpriteTemplate_83DB044, 130, 0, 0, 42, 16, 20
+	createsprite gBattleAnimSpriteTemplate_83DB044, 130, 0, 0, -42, -16, 20
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83DB044, 130, 0, 0, 24, -38, 20
+	createsprite gBattleAnimSpriteTemplate_83DB044, 130, 0, 0, -24, 38, 20
+	createsprite gBattleAnimSpriteTemplate_83DB044, 130, 0, 0, 38, 24, 20
+	createsprite gBattleAnimSpriteTemplate_83DB044, 130, 0, 0, -38, -24, 20
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83DB044, 130, 0, 0, 32, -32, 20
+	createsprite gBattleAnimSpriteTemplate_83DB044, 130, 0, 0, -32, 32, 20
+	createsprite gBattleAnimSpriteTemplate_83DB044, 130, 0, 0, 32, 32, 20
+	createsprite gBattleAnimSpriteTemplate_83DB044, 130, 0, 0, -32, -32, 20
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83DB044, 130, 0, 0, 38, -24, 20
+	createsprite gBattleAnimSpriteTemplate_83DB044, 130, 0, 0, -38, 24, 20
+	createsprite gBattleAnimSpriteTemplate_83DB044, 130, 0, 0, 24, 38, 20
+	createsprite gBattleAnimSpriteTemplate_83DB044, 130, 0, 0, -24, -38, 20
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83DB044, 130, 0, 0, 42, -16, 20
+	createsprite gBattleAnimSpriteTemplate_83DB044, 130, 0, 0, -42, 16, 20
+	createsprite gBattleAnimSpriteTemplate_83DB044, 130, 0, 0, 16, 42, 20
+	createsprite gBattleAnimSpriteTemplate_83DB044, 130, 0, 0, -16, -42, 20
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83DB044, 130, 0, 0, 44, -8, 20
+	createsprite gBattleAnimSpriteTemplate_83DB044, 130, 0, 0, -44, 8, 20
+	createsprite gBattleAnimSpriteTemplate_83DB044, 130, 0, 0, 8, 44, 20
+	createsprite gBattleAnimSpriteTemplate_83DB044, 130, 0, 0, -8, -44, 20
+	delay 2
+	return
+
+Move_CLEAR_SMOG:
+	loadspritegfx 10144
+	monbg ANIM_BANK_DEF_PARTNER
+	monbgprio_29
+	setalpha 12, 8
+	loopsewithpan SE_W054, 63, 17, 10
+	call _ClearSmogSubcall
+	call _ClearSmogSubcall
+	call _ClearSmogSubcall
+	call _ClearSmogSubcall
+	call _ClearSmogSubcall
+	call _ClearSmogSubcall
+	call _ClearSmogSubcall
+	delay 120
+	loopsewithpan SE_W092, 63, 18, 2
+	createvisualtask sub_80E1F8C, 2, 4, 2, 2, 0, 12, 0x7FFF
+	delay 10
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BANK_TARGET, 2, 0, 15, 1
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_DEF_PARTNER
+	blendoff
+	end
+_ClearSmogSubcall:
+	createsprite gBattleAnimSpriteTemplate_83D9D3C, 2, 0, -24, 48, 240, 1, 0
+	delay 7
+	return
+	end
+
+Move_SHELL_SMASH:
+	loadspritegfx 10145
+	loadspritegfx 10198
+	monbg ANIM_BANK_TARGET
+	setalpha 12, 8
+	playsewithpan SE_W011, 63
+	createsprite gBattleAnimSpriteTemplate_83DB1E8, 2, -32, 0, 2, 819, 0, 10
+	createsprite gBattleAnimSpriteTemplate_83DB1E8, 2, 32, 0, 6, -819, 0, 10
+	delay 10
+	playsewithpan SE_W153, 63
+	createvisualtask AnimTask_ShakeMon, 5, 1, 3, 0, 5, 1
+	createsprite gBattleAnimSpriteTemplate_83D7828, 3, 3, -7, 0, 1
+	delay 6
+	playsewithpan SE_W153, 63
+	createsprite gBattleAnimSpriteTemplate_83D7828, 3, -1, 12, 0, 1
+	delay 6
+	playsewithpan SE_W153, 63
+	createsprite gBattleAnimSpriteTemplate_83D7828, 3, 1, 31, 0, 1
+	delay 6
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_TARGET
 	blendoff
 	waitforvisualfinish
 	end

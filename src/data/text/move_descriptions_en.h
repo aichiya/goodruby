@@ -1818,6 +1818,19 @@ static const u8 MoveDescription_LavaPlume[] = _(
     "An inferno that hurts all\n"
     "other battlers. May burn.");
 
+static const u8 MoveDescription_Incinerate[] = _(
+    "Attacks with fire that\n"
+    "destroys held berries.");
+
+static const u8 MoveDescription_ClearSmog[] = _(
+    "A special fog that clears\n"
+    "the target’s stat changes.");
+
+static const u8 MoveDescription_ShellSmash[] = _(
+    "Abandons defenses to\n"
+    "boost offensive stats.");
+
+
 
 
 
@@ -2278,4 +2291,7 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_VenomDrench,
 	MoveDescription_Belch,
 	MoveDescription_LavaPlume,
+	MoveDescription_Incinerate,
+	MoveDescription_ClearSmog,
+	MoveDescription_ShellSmash,
 };

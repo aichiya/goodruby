@@ -383,7 +383,9 @@ enum
 	BATTLE_TEXT_SpAtkRisen,
 	BATTLE_TEXT_Entrainment,
 	BATTLE_TEXT_InfestationTrapped,
-	BATTLE_TEXT_CantBelch
+	BATTLE_TEXT_CantBelch,
+	BATTLE_TEXT_IncinerateRemoveBerry,
+	BATTLE_TEXT_ClearSmogClearBuffs,
 };
 
 const u8 BattleText_UnknownString[] = _("{STRING 33}");
@@ -898,6 +900,8 @@ const u8 BattleText_SpAtkRisen[] = _("{DEFENDING_MON}’s {STRING 22}\nraised it
 const u8 BattleText_Entrainment[] = _("{DEFENDING_MON}’s {STRING 22}\nbecame {STRING 21}!");
 const u8 BattleText_InfestationTrapped[] = _("{DEFENDING_MON} was trapped\nin the Infestation!");
 const u8 BattleText_CantBelch[] = _("{STRING 15} can’t possibly Belch\nbefore eating a held berry!\p");
+const u8 BattleText_IncinerateRemoveBerry[] = _("{DEFENDING_MON}’s {STRING 19}\nwas incinerated!");
+const u8 BattleText_ClearSmogClearBuffs[] = _("{DEFENDING_MON}’s stat\nchanges were eliminated!");
 
 const u8 *const gUnknown_08400F58[] =
 {
@@ -1304,6 +1308,8 @@ const u8 *const gBattleStringsTable[] =
 	BattleText_Entrainment,
 	BattleText_InfestationTrapped,
 	BattleText_CantBelch,
+	BattleText_IncinerateRemoveBerry,
+	BattleText_ClearSmogClearBuffs,
 };
 
 // below are lists of battle string enums and NOT pointers to the strings.
