@@ -6983,7 +6983,7 @@ static void atk49_moveend(void)
             gBattleStruct->cmd49StateTracker++;
             break;
         case 8: //make sprite invisible
-            if (gStatuses3[gBankAttacker] & (STATUS3_ON_AIR | STATUS3_UNDERGROUND | STATUS3_UNDERWATER)
+            if (gStatuses3[gBankAttacker] & (STATUS3_SEMI_INVULNERABLE)
                 && !(gHitMarker & HITMARKER_NO_ANIMATIONS))
             {
                 gActiveBattler = gBankAttacker;
@@ -6993,7 +6993,7 @@ static void atk49_moveend(void)
             gBattleStruct->cmd49StateTracker++;
             break;
         case 9: //semi-invlurneable attacker make visible
-            if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT) || !(gStatuses3[gBankAttacker] & (STATUS3_ON_AIR | STATUS3_UNDERGROUND | STATUS3_UNDERWATER))
+            if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT) || !(gStatuses3[gBankAttacker] & (STATUS3_SEMI_INVULNERABLE))
                 || WasUnableToUseMove(gBankAttacker))
                 {
                     gActiveBattler = gBankAttacker;
@@ -7005,7 +7005,7 @@ static void atk49_moveend(void)
             gBattleStruct->cmd49StateTracker++;
             break;
         case 10: //semi-invlurneable target make visible
-            if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT) || !(gStatuses3[gBankTarget] & (STATUS3_ON_AIR | STATUS3_UNDERGROUND | STATUS3_UNDERWATER))
+            if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT) || !(gStatuses3[gBankTarget] & (STATUS3_SEMI_INVULNERABLE))
                 || WasUnableToUseMove(gBankTarget))
                 {
                     gActiveBattler = gBankTarget;

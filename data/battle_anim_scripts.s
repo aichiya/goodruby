@@ -11619,7 +11619,9 @@ Move_SHADOW_SNEAK:
 	end
 
 Move_PHANTOM_FORCE:
-	choosetwoturnanim _81D0480 _PhantomForceAttack
+	loadspritegfx 10156
+	loadspritegfx 10135
+	choosetwoturnanim _81D0480, _81D0498
 	
 _PhantomForceDive:
 	createvisualtask sub_80E2324, 2, 257, 257, 257
