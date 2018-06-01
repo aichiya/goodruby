@@ -3581,7 +3581,7 @@ u8 GetMoveTarget(u16 move, u8 useMoveTarget) //get move target
                 targetBank = Random() % gBattlersCount;
             } while (targetBank == gBankAttacker || side == GetBattlerSide(targetBank) || gAbsentBattlerFlags & gBitTable[targetBank]);
             if (gBattleMoves[move].type == TYPE_ELECTRIC
-                && AbilityBattleEffects(ABILITYEFFECT_COUNT_OTHER_SIZE, gBankAttacker, ABILITY_LIGHTNING_ROD, 0, 0)
+                && AbilityBattleEffects(ABILITYEFFECT_CHECK_FIELD_EXCEPT_BANK, gBankAttacker, ABILITY_LIGHTNING_ROD, 0, 0)
                 && gBattleMons[targetBank].ability != ABILITY_LIGHTNING_ROD)
             {
                 targetBank ^= 2;

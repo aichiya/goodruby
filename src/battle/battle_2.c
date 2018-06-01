@@ -6655,7 +6655,7 @@ void HandleAction_UseMove(void)
         side = GetBattlerSide(gBankAttacker);
         for (gActiveBattler = 0; gActiveBattler < gBattlersCount; gActiveBattler++)
         {
-            if (side != GetBattlerSide(gActiveBattler)
+            if (gBankAttacker != gActiveBattler
                 && ewram16010arr(gBankAttacker) != gActiveBattler
                 && gBattleMons[gActiveBattler].ability == ABILITY_LIGHTNING_ROD
                 && BankGetTurnOrder(gActiveBattler) < var)
