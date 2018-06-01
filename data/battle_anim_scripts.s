@@ -475,6 +475,8 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_CLEAR_SMOG
 	.4byte Move_SHELL_SMASH
 	.4byte Move_INFERNO
+	.4byte Move_GYRO_BALL
+	.4byte Move_DOUBLE_HIT
 	.4byte PoundCopy
 
 	.align 2
@@ -538,6 +540,7 @@ Move_POUND: @ 81C7794
 	end
 
 Move_DOUBLE_SLAP: @ 81C77C5
+Move_DOUBLE_HIT:
 	loadspritegfx 10135
 	monbg ANIM_BANK_TARGET
 	setalpha 12, 8
@@ -14075,4 +14078,57 @@ _InfernoSubcall:
 	createsprite gBattleAnimSpriteTemplate_83DACD0, 130, 0, 28, 528, 30, 13, 25, 1
 	delay 1
 	return
+
+Move_GYRO_BALL:
+	loadspritegfx 10135
+	loadspritegfx 10229
+	loopsewithpan SE_W231, 192, 28, 2
+	createvisualtask sub_80E0A4C, 5, 0, 0, 0
+	waitforvisualfinish
+	monbg ANIM_BANK_TARGET
+	setalpha 12, 8
+	
+	createsprite gSlideMonToOffsetSpriteTemplate, 130, 0, 15, 0, 0, 4
+	waitforvisualfinish
+	
+	playsewithpan SE_W004, 63
+	createsprite gBasicHitSplatSpriteTemplate, 2, 0, 0, 1, 2
+	createsprite gBattleAnimSpriteTemplate_GyroBall, 2, 1, 1,   0, -47, 10
+	delay 3
+	
+	playsewithpan SE_W004, 63
+	createsprite gBasicHitSplatSpriteTemplate, 2, 0, 0, 1, 2
+	createsprite gBattleAnimSpriteTemplate_GyroBall, 2, 1, 1,  40, -25, 10
+	delay 3
+	
+	playsewithpan SE_W004, 63
+	createsprite gBasicHitSplatSpriteTemplate, 2, 0, 0, 1, 2
+	createsprite gBattleAnimSpriteTemplate_GyroBall, 2, 1, 1,  40,  25, 10
+	delay 3
+	
+	playsewithpan SE_W004, 63
+	createsprite gBasicHitSplatSpriteTemplate, 2, 0, 0, 1, 2
+	createsprite gBattleAnimSpriteTemplate_GyroBall, 2, 1, 1,   0,  47, 10
+	delay 3
+	
+	playsewithpan SE_W004, 63
+	createsprite gBasicHitSplatSpriteTemplate, 2, 0, 0, 1, 2
+	createsprite gBattleAnimSpriteTemplate_GyroBall, 2, 1, 1, -40,  25, 10
+	delay 3
+	
+	playsewithpan SE_W004, 63
+	createsprite gBasicHitSplatSpriteTemplate, 2, 0, 0, 1, 2
+	createsprite gBattleAnimSpriteTemplate_GyroBall, 2, 1, 1, -40, -25, 10
+	delay 3
+	
+	waitforvisualfinish
+	createsprite gSlideMonToOriginalPosSpriteTemplate, 194, 0, 0, 4
+	waitforvisualfinish
+	
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_TARGET
+	blendoff
+	end
+
+
 

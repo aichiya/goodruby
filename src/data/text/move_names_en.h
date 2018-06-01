@@ -459,4 +459,6 @@ const u8 gMoveNames[][13] = {
 	[MOVE_CLEAR_SMOG] = _("Clear Smog"),
 	[MOVE_SHELL_SMASH] = _("Shell Smash"),
 	[MOVE_INFERNO] = _("Inferno"),
+	[MOVE_GYRO_BALL] = _("Gyro Ball"),
+	[MOVE_DOUBLE_HIT] = _("Double Hit"),
 };

@@ -120,7 +120,7 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectNightmare
 	.4byte BattleScript_EffectMinimize
 	.4byte BattleScript_EffectCurse
-	.4byte BattleScript_EffectUnused6E
+	.4byte BattleScript_EffectGyroBall
 	.4byte BattleScript_EffectProtect
 	.4byte BattleScript_EffectSpikes
 	.4byte BattleScript_EffectForesight
@@ -286,7 +286,6 @@ BattleScript_EffectSpecialDefenseDown: @ 81D6F14
 BattleScript_EffectSpecialDefenseUp: @ 81D6F14
 BattleScript_EffectSpeedUp: @ 81D6F14
 BattleScript_EffectUnused60: @ 81D6F14
-BattleScript_EffectUnused6E: @ 81D6F14
 BattleScript_EffectVitalThrow: @ 81D6F14
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
 	jumpifnostatus3 TARGET, STATUS3_UNDERWATER, BattleScript_HitFromAtkCanceler
@@ -5784,7 +5783,9 @@ BattleScript_IncinerateDestroyBerry::
 	moveend 0, 0
 	end
 
-
+BattleScript_EffectGyroBall:
+	special 0x31
+	goto BattleScript_EffectHit
 
 
 

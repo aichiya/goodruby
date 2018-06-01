@@ -1834,6 +1834,14 @@ static const u8 MoveDescription_Inferno[] = _(
     "Powerful and sure to cause\n"
     "a burn, but inaccurate.");
 
+static const u8 MoveDescription_GyroBall[] = _(
+    "Power rises the slower the\n"
+    "user is than the target.");
+
+static const u8 MoveDescription_DoubleHit[] = _(
+    "A simple strike attack\n"
+    "that strikes the foe twice.");
+
 
 
 
@@ -2299,4 +2307,6 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_ClearSmog,
 	MoveDescription_ShellSmash,
 	MoveDescription_Inferno,
+	MoveDescription_GyroBall,
+	MoveDescription_DoubleHit,
 };

@@ -691,6 +691,7 @@ static void sp2D_trumpcard(void);
 static void sp2E_entrainmentapply(void);
 static void sp2F_incinerate(void);
 static void sp30_clearsmog(void);
+static void sp31_gyroball(void);
 
 
 void (* const gBattleScriptingCommandsTable[])(void) =
@@ -15062,6 +15063,7 @@ void (* const gBattleScriptingSpecialTable[])(void) =
 	sp2E_entrainmentapply,
 	sp2F_incinerate,
 	sp30_clearsmog,
+	sp31_gyroball,
 };
 
 
@@ -16238,4 +16240,17 @@ static void sp30_clearsmog(void)
 	gBattleMons[gBankTarget].statStages[STAT_STAGE_SPDEF] = 6;
 	gBattleMons[gBankTarget].statStages[STAT_STAGE_ACC] = 6;
 	gBattleMons[gBankTarget].statStages[STAT_STAGE_EVASION] = 6;
+}
+
+static void sp31_gyroball(void)
+{
+	u16 attackerspeed = GetModifiedSpeed(gBankAttacker);
+	u16 targetspeed = GetModifiedSpeed(gBankTarget);
+	u32 power = targetspeed * 25 / attackerspeed;
+	if (power > 150)
+		power = 150;
+	if (power < 1)
+		power = 1;
+	
+	gDynamicBasePower = power;
 }

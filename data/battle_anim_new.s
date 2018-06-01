@@ -194,3 +194,7 @@ gBattleAnimSpriteTemplate_GunkShot::
 	.align 2
 gBattleAnimSpriteTemplate_Incinerate::
 	spr_template 10029, 10029, gOamData_837DF34, gSpriteAnimTable_83D9264, NULL, gDummySpriteAffineAnimTable, TranslateAnimSpriteToTargetMonLocation
+
+	.align 2
+gBattleAnimSpriteTemplate_GyroBall::
+	spr_template 10229, 10229, gOamData_837DF54, gSpriteAnimTable_84023E4, NULL, gDummySpriteAffineAnimTable, sub_80CC6CC
