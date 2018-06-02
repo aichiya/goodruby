@@ -1842,6 +1842,10 @@ static const u8 MoveDescription_DoubleHit[] = _(
     "A simple strike attack\n"
     "that strikes the foe twice.");
 
+static const u8 MoveDescription_Psyshock[] = _(
+    "An odd psychic wave attack\n"
+    "that does physical damage.");
+
 
 
 
@@ -2309,4 +2313,5 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_Inferno,
 	MoveDescription_GyroBall,
 	MoveDescription_DoubleHit,
+	MoveDescription_Psyshock,
 };

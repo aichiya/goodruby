@@ -6011,4 +6011,17 @@ const struct BattleMove gBattleMoves[] = {
 		.moveClass = CLASS_PHYSICAL,
     },
 
+    [MOVE_PSYSHOCK] = {
+        .effect = EFFECT_HIT,
+        .power = 80,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
+		.moveClass = CLASS_SPECIAL,
+    },
+
 };

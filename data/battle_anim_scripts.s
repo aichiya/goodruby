@@ -477,6 +477,7 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_INFERNO
 	.4byte Move_GYRO_BALL
 	.4byte Move_DOUBLE_HIT
+	.4byte Move_PSYSHOCK
 	.4byte PoundCopy
 
 	.align 2
@@ -14130,5 +14131,18 @@ Move_GYRO_BALL:
 	blendoff
 	end
 
+Move_PSYSHOCK:
+	monbg ANIM_BANK_DEF_PARTNER
+	setalpha 8, 8
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BANK_ATTACKER, 1, 0, 10, 1
+	createvisualtask sub_80E1F8C, 2, 2, 0, 2, 0, 8, 767
+	waitforvisualfinish
+	loopsewithpan SE_W048, 63, 10, 3
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_TARGET, 5, 0, 15, 1
+	createvisualtask AnimTask_ScaleMonAndRestore, 5, -6, -6, 15, ANIM_BANK_TARGET, 1
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_DEF_PARTNER
+	blendoff
+	end
 
 
