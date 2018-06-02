@@ -256,6 +256,9 @@ gAbilityDescription_TintedLens:
 gAbilityDescription_SolidRock:
 	.string "Buffers effective hits.$"
 
+gAbilityDescription_TangledFeet:
+	.string "Ups Evasion if confused.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -345,3 +348,4 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_NoGuard
 	.4byte gAbilityDescription_TintedLens
 	.4byte gAbilityDescription_SolidRock
+	.4byte gAbilityDescription_TangledFeet

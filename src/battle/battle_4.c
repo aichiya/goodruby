@@ -1447,6 +1447,8 @@ static void atk01_accuracycheck(void)
             calc = (calc * 80) / 100; // 1.2 sand veil loss;
         if (gBattleMons[gBankAttacker].ability == ABILITY_HUSTLE && type < 9)
             calc = (calc * 80) / 100; // 1.2 hustle loss;
+		if (gBattleMons[gBankTarget].ability == ABILITY_TANGLED_FEET && gBattleMons[gBankTarget].status2 & STATUS2_CONFUSION)
+			calc = (calc * 50) / 100; // 0.5 tangled feet loss
 
         if (gBattleMons[gBankTarget].item == ITEM_ENIGMA_BERRY)
         {

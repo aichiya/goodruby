@@ -85,3 +85,4 @@ gAbilityNames:: @ 81FA248
 	.string "NO GUARD$", 13
 	.string "TINTED LENS$", 13
 	.string "SOLID ROCK$", 13
+	.string "TANGLED FEET$", 13
