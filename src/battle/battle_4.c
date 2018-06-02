@@ -327,6 +327,7 @@ extern u8 BattleScript_CaptivateFailOblivious[];
 extern u8 BattleScript_TargetSLPHeal[];
 extern u8 BattleScript_AbsorbToxicSpikes[];
 extern u8 BattleScript_IncinerateDestroyBerry[];
+extern u8 BattleScript_LiftedProtect[];
 
 extern const u8 gStatusConditionString_PoisonJpn[];
 extern const u8 gStatusConditionString_SleepJpn[];
@@ -692,6 +693,7 @@ static void sp2E_entrainmentapply(void);
 static void sp2F_incinerate(void);
 static void sp30_clearsmog(void);
 static void sp31_gyroball(void);
+static void sp32_feint(void);
 
 
 void (* const gBattleScriptingCommandsTable[])(void) =
@@ -15066,6 +15068,7 @@ void (* const gBattleScriptingSpecialTable[])(void) =
 	sp2F_incinerate,
 	sp30_clearsmog,
 	sp31_gyroball,
+	sp32_feint,
 };
 
 
@@ -16255,4 +16258,14 @@ static void sp31_gyroball(void)
 		power = 1;
 	
 	gDynamicBasePower = power;
+}
+
+static void sp32_feint(void)
+{
+	if (gProtectStructs[gBankTarget].protected)
+    {
+		gProtectStructs[gBankTarget].protected = 0;
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = BattleScript_LiftedProtect;
+	}
 }

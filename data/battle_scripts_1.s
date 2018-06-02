@@ -279,7 +279,6 @@ BattleScript_EffectFalseSwipe: @ 81D6F14
 BattleScript_EffectHighCritical: @ 81D6F14
 BattleScript_EffectHit: @ 81D6F14
 BattleScript_EffectPursuit: @ 81D6F14
-BattleScript_EffectQuickAttack: @ 81D6F14
 BattleScript_EffectSpecialAttackDown2: @ 81D6F14
 BattleScript_EffectSpecialAttackDown: @ 81D6F14
 BattleScript_EffectSpecialDefenseDown: @ 81D6F14
@@ -5788,5 +5787,32 @@ BattleScript_EffectGyroBall:
 	goto BattleScript_EffectHit
 
 
+BattleScript_EffectQuickAttack:
+	jumpifnotmove MOVE_FEINT, BattleScript_HitFromAtkCanceler
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation TARGET
+	waitstate
+	healthbarupdate TARGET
+	datahpupdate TARGET
+	critmessage
+	waitmessage 64
+	resultmessage
+	waitmessage 64
+	special 0x32
+	tryfaintmon TARGET, FALSE, NULL
+	goto BattleScript_MoveEnd
 
-
+BattleScript_LiftedProtect::
+	printstring BATTLE_TEXT_ProtectLifted
+	waitmessage 64
+	return

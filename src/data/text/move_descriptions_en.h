@@ -1846,6 +1846,14 @@ static const u8 MoveDescription_Psyshock[] = _(
     "An odd psychic wave attack\n"
     "that does physical damage.");
 
+static const u8 MoveDescription_NightSlash[] = _(
+    "Slashes unexpectedly. Has\n"
+    "a high critical-hit ratio.");
+
+static const u8 MoveDescription_Feint[] = _(
+    "Bypasses and lifts the\n"
+    "effects of Protect, etc.");
+
 
 
 
@@ -2314,4 +2322,6 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_GyroBall,
 	MoveDescription_DoubleHit,
 	MoveDescription_Psyshock,
+	MoveDescription_NightSlash,
+	MoveDescription_Feint,
 };

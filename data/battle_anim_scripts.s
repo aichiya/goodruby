@@ -478,6 +478,8 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_GYRO_BALL
 	.4byte Move_DOUBLE_HIT
 	.4byte Move_PSYSHOCK
+	.4byte Move_NIGHT_SLASH
+	.4byte Move_FEINT
 	.4byte PoundCopy
 
 	.align 2
@@ -14145,4 +14147,42 @@ Move_PSYSHOCK:
 	blendoff
 	end
 
+Move_NIGHT_SLASH:
+	loadspritegfx 10183
+	fadetobg 1
+	waitbgfadein
+	createsprite gBattleAnimSpriteTemplate_83D6E38, 130, 1, -8, 0
+	playsewithpan SE_W013, 63
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_83D6E38, 130, 1, 8, 0
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BANK_TARGET, 4, 0, 18, 1
+	playsewithpan SE_W013, 63
+	waitforvisualfinish
+	restorebg
+	waitbgfadein
+	end
+
+Move_FEINT:
+	loadspritegfx 10143
+	loadspritegfx 10135
+	monbg ANIM_BANK_DEF_PARTNER
+	monbgprio_28 1
+	setalpha 12, 8
+	playsewithpan SE_W104, 63
+	createsprite gBattleAnimSpriteTemplate_Feint, 2, -24, -10, 48, -20, 20, 1
+	delay 10
+	playsewithpan SE_W104, 63
+	createsprite gBattleAnimSpriteTemplate_Feint, 2, 24, 10, -48, 20, 20, 1
+	waitforvisualfinish
+	createsprite gHorizontalLungeSpriteTemplate, 2, 4, 4
+	playsewithpan SE_W026, 192
+	delay 6
+	createsprite gFistFootSpriteTemplate, 3, 0, 0, 8, 1, 0
+	createsprite gBasicHitSplatSpriteTemplate, 2, 0, -8, 1, 2
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_TARGET, 3, 0, 6, 1
+	playsewithpan SE_W004, 63
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_DEF_PARTNER
+	blendoff
+	end
 

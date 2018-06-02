@@ -462,4 +462,6 @@ const u8 gMoveNames[][13] = {
 	[MOVE_GYRO_BALL] = _("Gyro Ball"),
 	[MOVE_DOUBLE_HIT] = _("Double Hit"),
 	[MOVE_PSYSHOCK] = _("Psyshock"),
+	[MOVE_NIGHT_SLASH] = _("Night Slash"),
+	[MOVE_FEINT] = _("Feint"),
 };

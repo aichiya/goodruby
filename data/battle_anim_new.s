@@ -164,8 +164,7 @@ gSpriteAnimTable_TrumpCard:
 gSpriteAnim_TrumpCard1:
 	obj_image_anim_frame 0, 1
 	obj_image_anim_end
-
-	.align 2
+.align 2
 gSpriteAnim_TrumpCard2:
 	obj_image_anim_frame 8, 1
 	obj_image_anim_end
@@ -198,3 +197,7 @@ gBattleAnimSpriteTemplate_Incinerate::
 	.align 2
 gBattleAnimSpriteTemplate_GyroBall::
 	spr_template 10229, 10229, gOamData_837DF54, gSpriteAnimTable_84023E4, NULL, gDummySpriteAffineAnimTable, sub_80CC6CC
+
+	.align 2
+gBattleAnimSpriteTemplate_Feint::
+	spr_template 10143, 10143, gOamData_837DF34, gSpriteAnimTable_83D9F64, NULL, gDummySpriteAffineAnimTable, AnimEmberFlare

@@ -383,3 +383,4 @@
 	enum BATTLE_TEXT_CantBelch
 	enum BATTLE_TEXT_IncinerateRemoveBerry
 	enum BATTLE_TEXT_ClearSmogClearBuffs
+	enum BATTLE_TEXT_ProtectLifted
