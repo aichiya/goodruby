@@ -106,7 +106,7 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectConversion2
 	.4byte BattleScript_EffectLockOn
 	.4byte BattleScript_EffectSketch
-	.4byte BattleScript_EffectUnused60//Thaw
+	.4byte BattleScript_EffectDragonTail
 	.4byte BattleScript_EffectSleepTalk
 	.4byte BattleScript_EffectDestinyBond
 	.4byte BattleScript_EffectFlail
@@ -284,7 +284,6 @@ BattleScript_EffectSpecialAttackDown: @ 81D6F14
 BattleScript_EffectSpecialDefenseDown: @ 81D6F14
 BattleScript_EffectSpecialDefenseUp: @ 81D6F14
 BattleScript_EffectSpeedUp: @ 81D6F14
-BattleScript_EffectUnused60: @ 81D6F14
 BattleScript_EffectVitalThrow: @ 81D6F14
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
 	jumpifnostatus3 TARGET, STATUS3_UNDERWATER, BattleScript_HitFromAtkCanceler
@@ -3387,16 +3386,6 @@ BattleScript_BideNoEnergyToAttack:: @ 81D90F1
 	waitmessage 64
 	goto BattleScript_ButItFailed
 
-BattleScript_SuccessForceOut:: @ 81D90FC
-	attackanimation
-	waitanimation
-	switchoutabilities TARGET
-	returntoball TARGET
-	waitstate
-	jumpifbattletype BATTLE_TYPE_TRAINER, BattleScript_TrainerBattleForceOut
-	setbyte gBattleOutcome, 5
-	finishaction
-
 BattleScript_TrainerBattleForceOut: @ 81D9116
 	getswitchedmondata TARGET
 	switchindataupdate TARGET
@@ -5816,3 +5805,57 @@ BattleScript_LiftedProtect::
 	printstring BATTLE_TEXT_ProtectLifted
 	waitmessage 64
 	return
+
+BattleScript_EffectDragonTail:
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation TARGET
+	waitstate
+	healthbarupdate TARGET
+	datahpupdate TARGET
+	critmessage
+	waitmessage 64
+	resultmessage
+	waitmessage 64
+	
+	seteffectwithchance
+	tryfaintmon TARGET, FALSE, NULL
+	
+	jumpifability TARGET, ABILITY_SUCTION_CUPS, BattleScript_AbilityPreventsPhasingOut
+	jumpifstatus3 TARGET, STATUS3_ROOTED, BattleScript_PrintMonIsRooted
+	jumpifstatus2 TARGET, STATUS2_SUBSTITUTE, BattleScript_DragonTailEnd
+	forcerandomswitch BattleScript_DragonTailEnd
+	
+BattleScript_DragonTailEnd:
+	setbyte sMOVEEND_STATE, 0
+	moveend 0, 0
+	end
+
+BattleScript_SuccessForceOut:: @ 81D90FC
+	jumpifmove MOVE_ROAR, BattleScript_RoarWWindForceOut
+	jumpifmove MOVE_WHIRLWIND, BattleScript_RoarWWindForceOut
+	playanimation TARGET, B_ANIM_KNOCKED_AWAY, NULL
+	goto BattleScript_ForceOutMerge
+
+BattleScript_RoarWWindForceOut:
+	attackanimation
+	waitanimation
+	goto BattleScript_ForceOutMerge
+
+BattleScript_ForceOutMerge:
+	switchoutabilities TARGET
+	returntoball TARGET
+	waitstate
+	jumpifbattletype BATTLE_TYPE_TRAINER, BattleScript_TrainerBattleForceOut
+	setbyte gBattleOutcome, 5
+	finishaction
+

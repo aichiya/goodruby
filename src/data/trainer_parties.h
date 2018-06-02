@@ -3855,13 +3855,13 @@ const struct TrainerPartyMember1 gTrainerParty_AnnaAndMeg1[] = {
 	.iv = 0,
 	.level = 16,
 	.species = SPECIES_ZIGZAGOON,
-        .moves = MOVE_PROTECT, MOVE_PROTECT, MOVE_PROTECT, MOVE_PROTECT
+        .moves = MOVE_GROWL, MOVE_TAIL_WHIP, MOVE_HEADBUTT, MOVE_ODOR_SLEUTH
     },
     {
 	.iv = 0,
 	.level = 18,
 	.species = SPECIES_MAKUHITA,
-        .moves = MOVE_PROTECT, MOVE_PROTECT, MOVE_PROTECT, MOVE_PROTECT
+        .moves = MOVE_TACKLE, MOVE_FOCUS_ENERGY, MOVE_ARM_THRUST, MOVE_NONE
     }
 };
 

@@ -1854,6 +1854,14 @@ static const u8 MoveDescription_Feint[] = _(
     "Bypasses and lifts the\n"
     "effects of Protect, etc.");
 
+static const u8 MoveDescription_DragonTail[] = _(
+    "Knocks the target away.\n"
+    "Ends wild battles.");
+
+static const u8 MoveDescription_DragonRush[] = _(
+    "An overwhelmingly menacing\n"
+    "tackle. May cause flinching.");
+
 
 
 
@@ -2324,4 +2332,6 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_Psyshock,
 	MoveDescription_NightSlash,
 	MoveDescription_Feint,
+	MoveDescription_DragonTail,
+	MoveDescription_DragonRush,
 };

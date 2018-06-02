@@ -480,6 +480,8 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_PSYSHOCK
 	.4byte Move_NIGHT_SLASH
 	.4byte Move_FEINT
+	.4byte Move_DRAGON_TAIL
+	.4byte Move_DRAGON_RUSH
 	.4byte PoundCopy
 
 	.align 2
@@ -519,6 +521,7 @@ gBattleAnims_General:: @ 81C771C
 	.4byte General_FocusPunchSetUp
 	.4byte General_IngrainHeal
 	.4byte General_WishHeal
+	.4byte General_KnockedAway
 
 	.align 2
 gBattleAnims_Special:: @ 81C7778
@@ -14186,3 +14189,85 @@ Move_FEINT:
 	blendoff
 	end
 
+Move_DRAGON_TAIL:
+	loadspritegfx 10135
+	monbg ANIM_BANK_TARGET
+	setalpha 12, 8
+	playsewithpan SE_W036, 192
+	createvisualtask AnimTask_WindUpLunge, 5, ANIM_BANK_ATTACKER, -24, 3, 12, 4, 40, 8
+	delay 24
+	createsprite gBasicHitSplatSpriteTemplate, 2, 0, 0, 1, 2
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_TARGET, 10, 0, 16, 1
+	playsewithpan SE_W025B, 63
+	waitforvisualfinish
+	createsprite gSlideMonToOriginalPosSpriteTemplate, 2, 0, 0, 5
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_TARGET
+	blendoff
+	end
+
+General_KnockedAway:
+	playsewithpan SE_W081, 63
+	createvisualtask sub_80A8A80, 5, 1, 8
+	waitforvisualfinish
+	end
+
+Move_DRAGON_RUSH:
+	loadspritegfx 10135
+	loadspritegfx 10029
+	loadspritegfx 10039
+	playsewithpan SE_W221B, 192
+	createvisualtask sub_80E2A38, 10, 2, 4, 0, 8, 639
+	createvisualtask AnimTask_ShakeMon, 5, 0, 0, 2, 15, 1
+	call _DragonRushSubcall
+	call _DragonRushSubcall
+	createsprite gHorizontalLungeSpriteTemplate, 2, 9, 4
+	createsprite gBasicHitSplatSpriteTemplate, 2, 0, 0, 1, 1
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_TARGET, 10, 0, 6, 1
+	playsewithpan SE_W025B, 63
+	createsprite gBattleAnimSpriteTemplate_83DACD0, 2, 0, 28, 528, 30, 13, 50, 0
+	delay 2
+	
+	createsprite gBattleAnimSpriteTemplate_83DACD0, 2, 0, 32, 480, 20, 16, -46, 0
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83DACD0, 2, 0, 33, 576, 20, 8, 42, 0
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83DACD0, 2, 0, 31, 400, 25, 11, -42, 0
+	delay 2
+	createsprite gHorizontalLungeSpriteTemplate, 2, 9, 4
+	createsprite gBasicHitSplatSpriteTemplate, 2, 0, 0, 1, 1
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_TARGET, 10, 0, 16, 1
+	playsewithpan SE_W025B, 63
+	createsprite gBattleAnimSpriteTemplate_83DACD0, 2, 0, 28, 512, 25, 16, 46, 0
+	delay 2
+	
+	createsprite gBattleAnimSpriteTemplate_83DACD0, 2, 0, 33, 464, 30, 15, -50, 0
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83DACD0, 2, 0, 28, 528, 30, 13, 50, 0
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83DACD0, 2, 0, 32, 480, 20, 16, -46, 0
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83DACD0, 2, 0, 33, 576, 20, 8, 42, 0
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83DACD0, 2, 0, 31, 400, 25, 11, -42, 0
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83DACD0, 2, 0, 28, 512, 25, 16, 46, 0
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83DACD0, 2, 0, 33, 464, 30, 15, -50, 0
+	createvisualtask sub_80E2A38, 10, 2, 4, 8, 0, 639
+	waitforvisualfinish
+	end
+_DragonRushSubcall:
+	createsprite gBattleAnimSpriteTemplate_83DACD0, 2, 0, 28, 528, 30, 13, 50, 0
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83DACD0, 2, 0, 32, 480, 20, 16, -46, 0
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83DACD0, 2, 0, 33, 576, 20, 8, 42, 0
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83DACD0, 2, 0, 31, 400, 25, 11, -42, 0
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83DACD0, 2, 0, 28, 512, 25, 16, 46, 0
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83DACD0, 2, 0, 33, 464, 30, 15, -50, 0
+	delay 2
+	return

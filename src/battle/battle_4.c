@@ -10656,8 +10656,7 @@ static bool8 sub_80264C0(void)
     }
     else
     {
-        u16 random = Random() & 0xFF;
-        if ((u32)((random * (gBattleMons[gBankAttacker].level + gBattleMons[gBankTarget].level) >> 8) + 1) <= (gBattleMons[gBankTarget].level / 4))
+        if (gBattleMons[gBankAttacker].level < gBattleMons[gBankTarget].level)
         {
             gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
             return 0;
@@ -10670,7 +10669,11 @@ static bool8 sub_80264C0(void)
 
 static void atk8F_forcerandomswitch(void)
 {
-    if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER))
+	if (gBattleMons[gBankTarget].hp == 0)
+	{
+		gBattlescriptCurrInstr += 5;
+	}
+    else if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER))
     {
         u8 i;
         struct Pokemon* party;
@@ -10712,8 +10715,10 @@ static void atk8F_forcerandomswitch(void)
         {
             gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
         }
-        else if (sub_80264C0())
+        else //if (sub_80264C0())
         {
+			ewram16064arr(gBankTarget) = gBattlerPartyIndexes[gBankTarget];
+			gBattlescriptCurrInstr = BattleScript_SuccessForceOut;
 #define MON_CAN_BATTLE(mon) (((GetMonData(mon, MON_DATA_SPECIES) && GetMonData(mon, MON_DATA_IS_EGG) != 1 && GetMonData(mon, MON_DATA_HP))))
             if (gBattleTypeFlags & BATTLE_TYPE_MULTI)
             {

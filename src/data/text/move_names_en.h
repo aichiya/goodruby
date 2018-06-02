@@ -464,4 +464,6 @@ const u8 gMoveNames[][13] = {
 	[MOVE_PSYSHOCK] = _("Psyshock"),
 	[MOVE_NIGHT_SLASH] = _("Night Slash"),
 	[MOVE_FEINT] = _("Feint"),
+	[MOVE_DRAGON_TAIL] = _("Dragon Tail"),
+	[MOVE_DRAGON_RUSH] = _("Dragon Rush"),
 };

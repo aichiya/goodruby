@@ -6050,4 +6050,30 @@ const struct BattleMove gBattleMoves[] = {
 		.moveClass = CLASS_PHYSICAL,
     },
 
+    [MOVE_DRAGON_TAIL] = {
+        .effect = EFFECT_DRAGON_TAIL,
+        .power = 60,
+        .type = TYPE_DRAGON,
+        .accuracy = 90,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = -6,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+		.moveClass = CLASS_PHYSICAL,
+    },
+
+    [MOVE_DRAGON_RUSH] = {
+        .effect = EFFECT_FLINCH_HIT_2,
+        .power = 100,
+        .type = TYPE_DRAGON,
+        .accuracy = 80,
+        .pp = 10,
+        .secondaryEffectChance = 20,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+		.moveClass = CLASS_PHYSICAL,
+    },
+
 };
