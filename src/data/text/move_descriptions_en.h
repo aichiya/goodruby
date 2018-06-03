@@ -1874,6 +1874,10 @@ static const u8 MoveDescription_DragonPulse[] = _(
     "Attacks with a shock wave\n"
     "of raw draconic energy.");
 
+static const u8 MoveDescription_HoneClaws[] = _(
+    "Sharpens claws to raise\n"
+    "Attack and accuracy.");
+
 
 
 
@@ -2349,4 +2353,5 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_SpikyShield,
 	MoveDescription_CottonGuard,
 	MoveDescription_DragonPulse,
+	MoveDescription_HoneClaws,
 };

@@ -544,10 +544,6 @@ BattleScript_EffectMirrorMove: @ 81D7173
 	waitmessage 64
 	goto BattleScript_MoveEnd
 
-BattleScript_EffectAttackUp: @ 81D718B
-	setstatchanger ATTACK, 1, FALSE
-	goto BattleScript_EffectStatUp
-
 BattleScript_EffectDefenseUp: @ 81D7196
 	setstatchanger DEFENSE, 1, FALSE
 	goto BattleScript_EffectStatUp
@@ -5876,3 +5872,37 @@ BattleScript_EffectDefenseUp2:
 BattleScript_EffectDefenseUp3:
 	setstatchanger DEFENSE, 3, FALSE
 	goto BattleScript_EffectStatUp
+
+BattleScript_EffectAttackUp:
+	jumpifmove MOVE_HONE_CLAWS, BattleScript_HoneClaws
+	setstatchanger ATTACK, 1, FALSE
+	goto BattleScript_EffectStatUp
+
+BattleScript_HoneClaws:
+	attackcanceler
+	attackstring
+	ppreduce
+	jumpifstat USER, LESS_THAN, ATTACK, 12, BattleScript_HoneClawsDoMoveAnim
+	jumpifstat USER, EQUAL, ACCURACY, 12, BattleScript_CantRaiseMultipleStats
+
+BattleScript_HoneClawsDoMoveAnim: @ 81D8BF4
+	attackanimation
+	waitanimation
+	setbyte sFIELD_1B, 0
+	playstatchangeanimation USER, 0x42, 0
+	setstatchanger ATTACK, 1, FALSE
+	statbuffchange AFFECTS_USER | 0x1, BattleScript_HoneClawsTryAccuracy
+	jumpifbyte EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_HoneClawsTryAccuracy
+	printfromtable gStatUpStringIds
+	waitmessage 64
+
+BattleScript_HoneClawsTryAccuracy: @ 81D8C1F
+	setstatchanger ACCURACY, 1, FALSE
+	statbuffchange AFFECTS_USER | 0x1, BattleScript_HoneClawsEnd
+	jumpifbyte EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_HoneClawsEnd
+	printfromtable gStatUpStringIds
+	waitmessage 64
+
+BattleScript_HoneClawsEnd: @ 81D8C3E
+	goto BattleScript_MoveEnd
+	

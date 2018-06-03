@@ -485,6 +485,7 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_SPIKY_SHIELD
 	.4byte Move_COTTON_GUARD
 	.4byte Move_DRAGON_PULSE
+	.4byte Move_HONE_CLAWS
 	.4byte PoundCopy
 
 	.align 2
@@ -14428,4 +14429,26 @@ _DragonPulseSubcall:
 	createsprite gBattleAnimSpriteTemplate_83DB044, 130, 0, 0, 0, 0, 13
 	delay 4
 	return
+
+Move_HONE_CLAWS:
+	loadspritegfx 10222
+	call _HoneClawsSub
+	call _HoneClawsSub
+	call _HoneClawsSub
+	end
+_HoneClawsSub:
+	createsprite gHorizontalLungeSpriteTemplate, 2, 2, 2
+	delay 4
+	playsewithpan SE_W010, 63
+	createsprite gBattleAnimSpriteTemplate_83D7C48, 130, 16, 0, 1
+	delay 10
+	
+	createsprite gHorizontalLungeSpriteTemplate, 130, 2, 2
+	delay 4
+	playsewithpan SE_W010, 63
+	createsprite gBattleAnimSpriteTemplate_83D7C48, 130, -16, 0, 0
+	delay 10
+	return
+
+
 
