@@ -6532,6 +6532,7 @@ static void atk47_setgraphicalstatchangevalues(void)
         to_add = 0xF;
         break;
     case 0x20: //+2
+	case 0x30: //+3
         to_add = 0x27;
         break;
     case 0x90: //-1

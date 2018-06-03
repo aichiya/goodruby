@@ -1916,7 +1916,6 @@ const u16 gTaurosLevelUpLearnset[] = {
 
 const u16 gMagikarpLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_SPLASH),
-    LEVEL_UP_MOVE(11, MOVE_STEAMROLLER),
     LEVEL_UP_MOVE(15, MOVE_TACKLE),
     LEVEL_UP_MOVE(30, MOVE_FLAIL),
     LEVEL_UP_END
