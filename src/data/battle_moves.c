@@ -6127,4 +6127,17 @@ const struct BattleMove gBattleMoves[] = {
         .flags = F_AFFECTED_BY_SNATCH,
 		.moveClass = CLASS_STATUS,
     },
+
+    [MOVE_COIL] = {
+        .effect = EFFECT_BULK_UP,
+        .power = 0,
+        .type = TYPE_POISON,
+        .accuracy = 0,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = TARGET_USER,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_SNATCH,
+		.moveClass = CLASS_STATUS,
+    },
 };

@@ -1878,6 +1878,10 @@ static const u8 MoveDescription_HoneClaws[] = _(
     "Sharpens claws to raise\n"
     "Attack and accuracy.");
 
+static const u8 MoveDescription_Coil[] = _(
+    "Coils to raise Attack,\n"
+    "Defense, and accuracy.");
+
 
 
 
@@ -2354,4 +2358,5 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_CottonGuard,
 	MoveDescription_DragonPulse,
 	MoveDescription_HoneClaws,
+	MoveDescription_Coil,
 };

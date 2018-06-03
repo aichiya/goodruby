@@ -486,6 +486,7 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_COTTON_GUARD
 	.4byte Move_DRAGON_PULSE
 	.4byte Move_HONE_CLAWS
+	.4byte Move_COIL
 	.4byte PoundCopy
 
 	.align 2
@@ -14450,5 +14451,20 @@ _HoneClawsSub:
 	delay 10
 	return
 
-
-
+Move_COIL:
+	loadspritegfx 10186
+	loopsewithpan SE_W010, 63, 6, 4
+	createsprite gBattleAnimSpriteTemplate_83D65A0, 132, 0, 16, 0, 2
+	delay 7
+	createsprite gBattleAnimSpriteTemplate_83D65A0, 131, 0, 0, 0, 2
+	createsprite gBattleAnimSpriteTemplate_83D65A0, 130, 0, 8, 1, 2
+	delay 7
+	createsprite gBattleAnimSpriteTemplate_83D65A0, 131, 0, -8, 1, 2
+	delay 8
+	createvisualtask sub_80E1F8C, 2, 4, 2, 2, 0, 12, 0x7FFF
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BANK_TARGET, 3, 0, 6, 1
+	delay 20
+	playsewithpan SE_W020, 63
+	setarg 7, -1
+	waitforvisualfinish
+	end

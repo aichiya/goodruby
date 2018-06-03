@@ -2841,7 +2841,7 @@ BattleScript_EffectSkyUppercut: @ 81D8AF5
 	orword gHitMarker, HITMARKER_IGNORE_ON_AIR
 	goto BattleScript_EffectHit
 
-BattleScript_EffectBulkUp: @ 81D8B03
+BattleScript_EffectTrueBulkUp: @ 81D8B03
 	attackcanceler
 	attackstring
 	ppreduce
@@ -5885,7 +5885,7 @@ BattleScript_HoneClaws:
 	jumpifstat USER, LESS_THAN, ATTACK, 12, BattleScript_HoneClawsDoMoveAnim
 	jumpifstat USER, EQUAL, ACCURACY, 12, BattleScript_CantRaiseMultipleStats
 
-BattleScript_HoneClawsDoMoveAnim: @ 81D8BF4
+BattleScript_HoneClawsDoMoveAnim:
 	attackanimation
 	waitanimation
 	setbyte sFIELD_1B, 0
@@ -5896,13 +5896,50 @@ BattleScript_HoneClawsDoMoveAnim: @ 81D8BF4
 	printfromtable gStatUpStringIds
 	waitmessage 64
 
-BattleScript_HoneClawsTryAccuracy: @ 81D8C1F
+BattleScript_HoneClawsTryAccuracy:
 	setstatchanger ACCURACY, 1, FALSE
 	statbuffchange AFFECTS_USER | 0x1, BattleScript_HoneClawsEnd
 	jumpifbyte EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_HoneClawsEnd
 	printfromtable gStatUpStringIds
 	waitmessage 64
 
-BattleScript_HoneClawsEnd: @ 81D8C3E
+BattleScript_HoneClawsEnd:
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectBulkUp::
+	jumpifmove MOVE_BULK_UP, BattleScript_EffectTrueBulkUp
+	attackcanceler
+	attackstring
+	ppreduce
+	jumpifstat USER, LESS_THAN, ATTACK, 12, BattleScript_CoilDoMoveAnim
+	jumpifstat USER, LESS_THAN, DEFENSE, 12, BattleScript_CoilDoMoveAnim
+	jumpifstat USER, EQUAL, ACCURACY, 12, BattleScript_CantRaiseMultipleStats
+
+BattleScript_CoilDoMoveAnim:
+	attackanimation
+	waitanimation
+	setbyte sFIELD_1B, 0
+	playstatchangeanimation USER, 0x46, 0
+	setstatchanger ATTACK, 1, FALSE
+	statbuffchange AFFECTS_USER | 0x1, BattleScript_CoilTryDefense
+	jumpifbyte EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_CoilTryDefense
+	printfromtable gStatUpStringIds
+	waitmessage 64
+
+BattleScript_CoilTryDefense:
+	setstatchanger DEFENSE, 1, FALSE
+	statbuffchange AFFECTS_USER | 0x1, BattleScript_CoilTryAccuracy
+	jumpifbyte EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_CoilTryAccuracy
+	printfromtable gStatUpStringIds
+	waitmessage 64
+
+BattleScript_CoilTryAccuracy:
+	setstatchanger ACCURACY, 1, FALSE
+	statbuffchange AFFECTS_USER | 0x1, BattleScript_CoilEnd
+	jumpifbyte EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_CoilEnd
+	printfromtable gStatUpStringIds
+	waitmessage 64
+
+BattleScript_CoilEnd:
 	goto BattleScript_MoveEnd
 	
