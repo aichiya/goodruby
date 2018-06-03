@@ -86,3 +86,4 @@ gAbilityNames:: @ 81FA248
 	.string "TINTED LENS$", 13
 	.string "SOLID ROCK$", 13
 	.string "TANGLED FEET$", 13
+	.string "ANTICIPATION$", 13

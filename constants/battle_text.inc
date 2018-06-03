@@ -386,3 +386,4 @@
 	enum BATTLE_TEXT_ProtectLifted
 	enum BATTLE_TEXT_SpikyShieldRecoil
 	enum BATTLE_TEXT_Drastically
+	enum BATTLE_TEXT_Shuddered

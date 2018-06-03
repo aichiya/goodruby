@@ -203,6 +203,7 @@ extern u8 BattleScript_BerryCureConfusionRet[];
 extern u8 BattleScript_BerryCureChosenStatusRet[]; //berry cure any status return
 
 extern u8 BattleScript_ItemHealHP_Ret[];
+extern u8 BattleScript_AnticipationShudder[];
 
 extern u8 gUnknown_081D995F[]; //disobedient while asleep
 extern u8 BattleScript_IgnoresAndUsesRandomMove[]; //disobedient, uses a random move
@@ -1938,6 +1939,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
                     gBattleStruct->castformToChangeInto = effect - 1;
                 }
                 break;
+			case ABILITY_ANTICIPATION:
             case ABILITY_TRACE:
                 if (!(gSpecialStatuses[bank].traced))
                 {
@@ -2587,6 +2589,52 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
                         break;
                     }
                 }
+				else if (gBattleMons[i].ability == ABILITY_ANTICIPATION && (gStatuses3[i] & STATUS3_TRACE))
+				{
+                    u8 target2;
+					u16 move;
+					u8 j;
+                    side = (GetBattlerPosition(i) ^ 1) & 1;
+                    target1 = GetBattlerAtPosition(side);
+                    target2 = GetBattlerAtPosition(side + 2);
+					
+					if (gBattleMons[target1].hp != 0)
+					{
+						for (j = 0; j < 4 && !effect; j++)
+						{
+							move = gBattleMons[target1].moves[j];
+							if (move != 0 && gBattleMoves[move].power > 0)
+							{
+								if (TypeCalc(move, target1, i) & MOVE_RESULT_SUPER_EFFECTIVE)
+									effect++;
+								else if (gBattleMoves[move].effect == EFFECT_OHKO || gBattleMoves[move].effect == EFFECT_EXPLOSION)
+									effect++;
+							}
+						}
+					}
+					if (gBattleMons[target2].hp != 0 && !effect)
+					{
+						for (j = 0; j < 4 && !effect; j++)
+						{
+							move = gBattleMons[target2].moves[j];
+							if (move != 0 && gBattleMoves[move].power > 0)
+							{
+								if (TypeCalc(move, target2, i) & MOVE_RESULT_SUPER_EFFECTIVE)
+									effect++;
+								else if (gBattleMoves[move].effect == EFFECT_OHKO || gBattleMoves[move].effect == EFFECT_EXPLOSION)
+									effect++;
+							}
+						}
+					}
+					
+					if (effect)
+					{
+                        BattleScriptPushCursorAndCallback(BattleScript_AnticipationShudder);
+                        gStatuses3[i] &= ~(STATUS3_TRACE);
+                        gBattleStruct->scriptingActive = i;
+						break;
+					}
+				}
             }
             break;
         case ABILITYEFFECT_INTIMIDATE2: // 10

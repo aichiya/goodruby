@@ -389,6 +389,7 @@ enum
 	BATTLE_TEXT_ProtectLifted,
 	BATTLE_TEXT_SpikyShieldRecoil,
 	BATTLE_TEXT_Drastically,
+	BATTLE_TEXT_Shuddered,
 };
 
 const u8 BattleText_UnknownString[] = _("{STRING 33}");
@@ -908,6 +909,7 @@ const u8 BattleText_ClearSmogClearBuffs[] = _("{DEFENDING_MON}’s stat\nchanges
 const u8 BattleText_ProtectLifted[] = _("{DEFENDING_MON} fell\nfor the Feint!");
 const u8 BattleText_SpikyShieldRecoil[] = _("{ATTACKING_MON} is hurt\nby the Spiky Shield!");
 const u8 BattleText_Drastically[] = _("drastically ");
+const u8 BattleText_Shuddered[] = _("{STRING 16} shuddered\nbecause of its Anticipation!");
 
 const u8 *const gUnknown_08400F58[] =
 {
@@ -1319,6 +1321,7 @@ const u8 *const gBattleStringsTable[] =
 	BattleText_ProtectLifted,
 	BattleText_SpikyShieldRecoil,
 	BattleText_Drastically,
+	BattleText_Shuddered,
 };
 
 // below are lists of battle string enums and NOT pointers to the strings.

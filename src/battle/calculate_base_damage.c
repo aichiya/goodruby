@@ -262,6 +262,12 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         defense = spDefense;
         attackMod = attacker->statStages[STAT_STAGE_SPATK];
         defenseMod = defender->statStages[STAT_STAGE_SPDEF];
+		
+		if (move == MOVE_PSYSHOCK)
+		{
+			defense = defense;
+			defenseMod = defender->statStages[STAT_STAGE_DEF];
+		}
         
         if ((sideStatus & SIDE_STATUS_LIGHTSCREEN) && gCritMultiplier == 1)
         {

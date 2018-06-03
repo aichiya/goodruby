@@ -259,6 +259,9 @@ gAbilityDescription_SolidRock:
 gAbilityDescription_TangledFeet:
 	.string "Ups Evasion if confused.$"
 
+gAbilityDescription_Anticipation:
+	.string "Senses dangerous moves.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -349,3 +352,4 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_TintedLens
 	.4byte gAbilityDescription_SolidRock
 	.4byte gAbilityDescription_TangledFeet
+	.4byte gAbilityDescription_Anticipation
