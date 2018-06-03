@@ -482,6 +482,7 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_FEINT
 	.4byte Move_DRAGON_TAIL
 	.4byte Move_DRAGON_RUSH
+	.4byte Move_SPIKY_SHIELD
 	.4byte PoundCopy
 
 	.align 2
@@ -14271,3 +14272,32 @@ _DragonRushSubcall:
 	createsprite gBattleAnimSpriteTemplate_83DACD0, 2, 0, 33, 464, 30, 15, -50, 0
 	delay 2
 	return
+
+Move_SPIKY_SHIELD:
+	loadspritegfx 10266
+	call _SpikyShieldSubcall
+	call _SpikyShieldSubcall
+	call _SpikyShieldSubcall
+	call _SpikyShieldSubcall
+	call _SpikyShieldSubcall
+	waitforvisualfinish
+	end
+_SpikyShieldSubcall:
+	playsewithpan SE_W030, 63
+	createsprite gBattleAnimSpriteTemplate_83D6994, 130, 1, 1, 0, -48, 10
+	createsprite gBattleAnimSpriteTemplate_83D6994, 130, 1, 1, 13, -46, 10
+	createsprite gBattleAnimSpriteTemplate_83D6994, 130, 1, 1, 24, -41, 10
+	createsprite gBattleAnimSpriteTemplate_83D6994, 130, 1, 1, 34, -34, 10
+	createsprite gBattleAnimSpriteTemplate_83D6994, 130, 1, 1, 41, -24, 10
+	createsprite gBattleAnimSpriteTemplate_83D6994, 130, 1, 1, 46, -13, 10
+	createsprite gBattleAnimSpriteTemplate_83D6994, 130, 1, 1, 48, 0, 10
+	createsprite gBattleAnimSpriteTemplate_83D6994, 130, 1, 1, 46, 13, 10
+	createsprite gBattleAnimSpriteTemplate_83D6994, 130, 1, 1, 41, 24, 10
+	createsprite gBattleAnimSpriteTemplate_83D6994, 130, 1, 1, 34, 34, 10
+	createsprite gBattleAnimSpriteTemplate_83D6994, 130, 1, 1, 24, 41, 10
+	createsprite gBattleAnimSpriteTemplate_83D6994, 130, 1, 1, 13, 46, 10
+	createsprite gBattleAnimSpriteTemplate_83D6994, 130, 1, 1, 0, 48, 10
+	delay 6
+	return
+
+

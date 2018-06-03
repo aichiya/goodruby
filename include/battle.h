@@ -468,7 +468,7 @@ struct ProtectStruct
     u8 physicalBank;
     u8 specialBank;
     u8 classLastHit;
-    u8 fieldF;
+    u8 spikyShield;
 };
 
 struct SpecialStatus

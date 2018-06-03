@@ -328,6 +328,7 @@ extern u8 BattleScript_TargetSLPHeal[];
 extern u8 BattleScript_AbsorbToxicSpikes[];
 extern u8 BattleScript_IncinerateDestroyBerry[];
 extern u8 BattleScript_LiftedProtect[];
+extern u8 BattleScript_SpikyShieldRecoil[];
 
 extern const u8 gStatusConditionString_PoisonJpn[];
 extern const u8 gStatusConditionString_SleepJpn[];
@@ -1090,7 +1091,7 @@ const u8 gLevelUpStatBoxStats[] =
     MON_DATA_SPDEF, MON_DATA_DEF, MON_DATA_SPEED
 };
 
-static const u16 sProtectSuccessRates[] = {0xFFFF, 0x7FFF, 0x3FFF, 0x1FFF};
+static const u16 sProtectSuccessRates[] = {0xFFFF, 0x5555, 0x1C71, 0x097B, 0x0329, 0x10D, 0x0059};
 
 #define MIMIC_FORBIDDEN_END             0xFFFE
 #define METRONOME_FORBIDDEN_END         0xFFFF
@@ -2326,6 +2327,18 @@ static void atk0F_resultmessage(void)
     {
         stringId = gMissStringIds[gBattleCommunication[6]];
         gBattleCommunication[MSG_DISPLAY] = 1;
+		
+		if (gProtectStructs[gBankTarget].spikyShield && gBattleMoves[gCurrentMove].flags & F_MAKES_CONTACT && gBattleCommunication[6] == 1)
+		{
+			//mess 'em up
+			gBattleMoveDamage = gBattleMons[gBankAttacker].hp / 8;
+			if (gBattleMoveDamage < 1)
+				gBattleMoveDamage = 1;
+			gBattlescriptCurrInstr++;
+            BattleScriptPushCursor();
+            gBattlescriptCurrInstr = BattleScript_SpikyShieldRecoil;
+			return;
+		}
     }
     else
     {
@@ -10013,20 +10026,31 @@ static void atk77_setprotectlike(void) //protect and endure
 {
     bool8 not_last_turn = 1;
     u16 last_move = gUnknown_02024C4C[gBankAttacker];
+	u16 protectRate;
 
-    if (last_move != MOVE_PROTECT && last_move != MOVE_DETECT && last_move != MOVE_ENDURE)
+    if (last_move != MOVE_PROTECT && last_move != MOVE_DETECT && last_move != MOVE_ENDURE && last_move != MOVE_SPIKY_SHIELD)
         gDisableStructs[gBankAttacker].protectUses = 0;
     if (gCurrentTurnActionNumber == (gBattlersCount - 1))
         not_last_turn = 0;
+	
+	if (gDisableStructs[gBankAttacker].protectUses > 6)
+		protectRate = sProtectSuccessRates[6];
+	else
+		protectRate = sProtectSuccessRates[gDisableStructs[gBankAttacker].protectUses];
 
-    if (sProtectSuccessRates[gDisableStructs[gBankAttacker].protectUses] > Random() && not_last_turn)
+    if (protectRate >= Random() && not_last_turn)
     {
         if (gBattleMoves[gCurrentMove].effect == EFFECT_PROTECT)
         {
             gProtectStructs[gBankAttacker].protected = 1;
+			gProtectStructs[gBankAttacker].spikyShield = 0;
             gBattleCommunication[MULTISTRING_CHOOSER] = 0;
+			if (gCurrentMove == MOVE_SPIKY_SHIELD)
+			{
+				gProtectStructs[gBankAttacker].spikyShield = 1;
+			}
         }
-        if (gBattleMoves[gCurrentMove].effect == EFFECT_ENDURE) //what is else if
+        else if (gBattleMoves[gCurrentMove].effect == EFFECT_ENDURE)
         {
             gProtectStructs[gBankAttacker].endured = 1;
             gBattleCommunication[MULTISTRING_CHOOSER] = 1;

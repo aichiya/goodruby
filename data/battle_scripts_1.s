@@ -5859,3 +5859,15 @@ BattleScript_ForceOutMerge:
 	setbyte gBattleOutcome, 5
 	finishaction
 
+BattleScript_SpikyShieldRecoil::
+	printstring BATTLE_TEXT_ProtectedItself
+	waitmessage 64
+	bicbyte gMoveResultFlags, MOVE_RESULT_MISSED
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_x100000
+	healthbarupdate USER
+	datahpupdate USER
+	printstring BATTLE_TEXT_SpikyShieldRecoil
+	waitmessage 64
+	orbyte gMoveResultFlags, MOVE_RESULT_MISSED
+	tryfaintmon USER, FALSE, NULL
+	return

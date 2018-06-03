@@ -6076,4 +6076,17 @@ const struct BattleMove gBattleMoves[] = {
 		.moveClass = CLASS_PHYSICAL,
     },
 
+    [MOVE_SPIKY_SHIELD] = {
+        .effect = EFFECT_PROTECT,
+        .power = 0,
+        .type = TYPE_GRASS,
+        .accuracy = 0,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_USER,
+        .priority = 4,
+        .flags = 0,
+		.moveClass = CLASS_STATUS,
+    },
+
 };

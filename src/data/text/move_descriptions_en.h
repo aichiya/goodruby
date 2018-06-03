@@ -1862,6 +1862,10 @@ static const u8 MoveDescription_DragonRush[] = _(
     "An overwhelmingly menacing\n"
     "tackle. May cause flinching.");
 
+static const u8 MoveDescription_SpikyShield[] = _(
+    "Evades attack, and hurts\n"
+    "contact attackers.");
+
 
 
 
@@ -2334,4 +2338,5 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_Feint,
 	MoveDescription_DragonTail,
 	MoveDescription_DragonRush,
+	MoveDescription_SpikyShield,
 };

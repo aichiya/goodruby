@@ -384,3 +384,4 @@
 	enum BATTLE_TEXT_IncinerateRemoveBerry
 	enum BATTLE_TEXT_ClearSmogClearBuffs
 	enum BATTLE_TEXT_ProtectLifted
+	enum BATTLE_TEXT_SpikyShieldRecoil
