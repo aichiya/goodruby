@@ -1866,6 +1866,14 @@ static const u8 MoveDescription_SpikyShield[] = _(
     "Evades attack, and hurts\n"
     "contact attackers.");
 
+static const u8 MoveDescription_CottonGuard[] = _(
+    "Wraps the body in cotton to\n"
+    "drastically raise Defense.");
+
+static const u8 MoveDescription_DragonPulse[] = _(
+    "Attacks with a shock wave\n"
+    "of raw draconic energy.");
+
 
 
 
@@ -2339,4 +2347,6 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_DragonTail,
 	MoveDescription_DragonRush,
 	MoveDescription_SpikyShield,
+	MoveDescription_CottonGuard,
+	MoveDescription_DragonPulse,
 };

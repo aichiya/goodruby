@@ -16,7 +16,7 @@
 #include "ewram.h"
 
 #define BATTLESTRING_TO_SUB 12
-#define BATTLESTRINGS_NO    386
+#define BATTLESTRINGS_NO    387
 #define BATTLESTRINGS_MAX   BATTLESTRINGS_NO + BATTLESTRING_TO_SUB
 
 #ifdef GERMAN
@@ -639,16 +639,10 @@ u32 StrCpyDecodeBattle(const u8* src, u8* dst)
                 HANDLE_NICKNAME_STRING_CASE(gBattleStruct->scriptingActive, gBattlerPartyIndexes[gBattleStruct->scriptingActive])
                 break;
             case 17: // current move name
-                if (gStringInfo->currentMove > 0x162)
-                    toCpy = (void*) &gUnknown_08401674[gBattleStruct->stringMoveType];
-                else
-                    toCpy = gMoveNames[gStringInfo->currentMove];
+                toCpy = gMoveNames[gStringInfo->currentMove];
                 break;
             case 18: // last used move name
-                if (gStringInfo->lastMove > 0x162)
-                    toCpy = (void*) &gUnknown_08401674[gBattleStruct->stringMoveType];
-                else
-                    toCpy = gMoveNames[gStringInfo->lastMove];
+                toCpy = gMoveNames[gStringInfo->lastMove];
                 break;
             case 19: // last used item
                 if (gBattleTypeFlags & BATTLE_TYPE_LINK)

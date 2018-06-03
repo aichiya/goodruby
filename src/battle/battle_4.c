@@ -10581,6 +10581,13 @@ static u8 ChangeStatBuffs(s8 statValue, u8 statId, u8 flags, const u8 *BS_ptr)
             gBattleTextBuff2[3] = STRINGID_STATSHARPLY >> 8;
             index = 4;
         }
+		else if (statValue == 3)
+		{
+            gBattleTextBuff2[1] = B_BUFF_STRING;
+            gBattleTextBuff2[2] = (u8)398; // STRINGID_DRASTICALLY
+            gBattleTextBuff2[3] = 398 >> 8;
+            index = 4;
+		}
         gBattleTextBuff2[index] = B_BUFF_STRING;
         index++;
         gBattleTextBuff2[index] = STRINGID_STATROSE;

@@ -467,4 +467,6 @@ const u8 gMoveNames[][13] = {
 	[MOVE_DRAGON_TAIL] = _("Dragon Tail"),
 	[MOVE_DRAGON_RUSH] = _("Dragon Rush"),
 	[MOVE_SPIKY_SHIELD] = _("Spiky Shield"),
+	[MOVE_COTTON_GUARD] = _("Cotton Guard"),
+	[MOVE_DRAGON_PULSE] = _("Dragon Pulse"),
 };

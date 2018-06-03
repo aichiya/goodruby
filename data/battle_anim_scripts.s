@@ -483,6 +483,8 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_DRAGON_TAIL
 	.4byte Move_DRAGON_RUSH
 	.4byte Move_SPIKY_SHIELD
+	.4byte Move_COTTON_GUARD
+	.4byte Move_DRAGON_PULSE
 	.4byte PoundCopy
 
 	.align 2
@@ -14300,4 +14302,130 @@ _SpikyShieldSubcall:
 	delay 6
 	return
 
+Move_COTTON_GUARD:
+	loadspritegfx 10158	
+	createsprite gBattleAnimSpriteTemplate_CottonGuard, 130, 1, 0, -18, -18, 16
+	delay 2
+	call _81CA1C0
+	createsprite gBattleAnimSpriteTemplate_CottonGuard, 130, 1, 0, -19, 19, 16
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_CottonGuard, 130, 1, 0, 0, -25, 16
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_CottonGuard, 130, 1, 0, 30, 0, 16
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_CottonGuard, 130, 1, 0, 22, -22, 16
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_CottonGuard, 130, 1, 0, 17, -17, 16
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_CottonGuard, 130, 1, 0, -27, 0, 16
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_CottonGuard, 130, 1, 0, 23, 0, 16
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_CottonGuard, 130, 1, 0, 16, 16, 16
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_CottonGuard, 130, 1, 0, 0, -32, 16
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_CottonGuard, 130, 1, 0, 20, 20, 16
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_CottonGuard, 130, 1, 0, 0, 28, 16
+	delay 2
+	
+	createsprite gBattleAnimSpriteTemplate_CottonGuard, 130, 1, 0, -18, -18, 16
+	delay 2
+	call _81CA1C0
+	createsprite gBattleAnimSpriteTemplate_CottonGuard, 130, 1, 0, -19, 19, 16
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_CottonGuard, 130, 1, 0, 0, -25, 16
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_CottonGuard, 130, 1, 0, 30, 0, 16
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_CottonGuard, 130, 1, 0, 22, -22, 16
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_CottonGuard, 130, 1, 0, 17, -17, 16
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_CottonGuard, 130, 1, 0, -27, 0, 16
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_CottonGuard, 130, 1, 0, 23, 0, 16
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_CottonGuard, 130, 1, 0, 16, 16, 16
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_CottonGuard, 130, 1, 0, 0, -32, 16
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_CottonGuard, 130, 1, 0, 20, 20, 16
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_CottonGuard, 130, 1, 0, 0, 28, 16
+	delay 2
+	
+	
+	waitforvisualfinish
+	end
+
+Move_CHARGE_BEAM:
+	loadspritegfx 10001
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	waitforvisualfinish
+	end
+_ChargeBeamSubcall:
+	createsprite gBattleAnimSpriteTemplate_ChargeBeam, 130, 10, -4, 0, -4, 20
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_ChargeBeam, 130, 10, -4, -4, -8, 20
+	createsprite gBattleAnimSpriteTemplate_ChargeBeam, 130, 10, -4, 4, 0, 20
+	delay 2
+	return
+	
+Move_DRAGON_PULSE:
+	loadspritegfx 10163
+	loadspritegfx 10298
+	loadspritegfx 10029
+	jumpargeq 7, 1, _DragonPulseBG
+	fadetobg 9
+_DragonPulseRejoin:
+	waitbgfadeout
+	createvisualtask sub_80E3A58, 5, -2304, 0, 1, -1
+	waitbgfadein
+	
+	loopsewithpan SE_W172, 192, 4, 13
+	call _DragonPulseSubcall
+	call _DragonPulseSubcall
+	
+	createvisualtask sub_80E1F8C, 2, 4, 2, 2, 0, 12, 0x0010
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_TARGET, 0, 2, 35, 1
+	call _DragonPulseSubcall
+	call _DragonPulseSubcall
+	call _DragonPulseSubcall
+	call _DragonPulseSubcall
+	call _DragonPulseSubcall
+	call _DragonPulseSubcall
+	call _DragonPulseSubcall
+	call _DragonPulseSubcall
+	call _DragonPulseSubcall
+	
+	waitforvisualfinish
+	restorebg
+	waitbgfadeout
+	setarg 7, -1
+	waitbgfadein
+	clearmonbg ANIM_BANK_TARGET
+	blendoff
+	delay 1
+	setarg 7, 4096
+	delay 1
+	end
+_DragonPulseBG:
+	fadetobg 10
+	goto _DragonPulseRejoin
+
+_DragonPulseSubcall:
+	createsprite gBattleAnimSpriteTemplate_DragonPulse, 130, 0, 0, 0, 0, 13, 0
+	createsprite gBattleAnimSpriteTemplate_83DB044, 130, 0, 0, 0, 0, 13
+	delay 4
+	return
 

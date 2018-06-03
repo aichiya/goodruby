@@ -201,3 +201,17 @@ gBattleAnimSpriteTemplate_GyroBall::
 	.align 2
 gBattleAnimSpriteTemplate_Feint::
 	spr_template 10143, 10143, gOamData_837DF34, gSpriteAnimTable_83D9F64, NULL, gDummySpriteAffineAnimTable, AnimEmberFlare
+
+	.align 2
+gBattleAnimSpriteTemplate_CottonGuard::
+	spr_template 10158, 10158, gOamData_837DF2C, gSpriteAnimTable_83D63F0, NULL, gDummySpriteAffineAnimTable, sub_80CC6CC
+
+	.align 2
+gBattleAnimSpriteTemplate_ChargeBeam::
+	spr_template 10001, 10001, gOamData_837DF8C, gDummySpriteAnimTable, NULL, gDummySpriteAffineAnimTable, AnimTranslateStinger
+
+	.align 2
+gBattleAnimSpriteTemplate_DragonPulse::
+	spr_template 10163, 10298, gOamData_837DF74, gDummySpriteAnimTable, NULL, gDummySpriteAffineAnimTable, TranslateAnimSpriteToTargetMonLocation
+
+

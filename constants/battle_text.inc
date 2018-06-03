@@ -385,3 +385,4 @@
 	enum BATTLE_TEXT_ClearSmogClearBuffs
 	enum BATTLE_TEXT_ProtectLifted
 	enum BATTLE_TEXT_SpikyShieldRecoil
+	enum BATTLE_TEXT_Drastically

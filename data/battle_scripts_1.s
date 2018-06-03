@@ -999,10 +999,6 @@ BattleScript_EffectAttackUp2: @ 81D770C
 	setstatchanger ATTACK, 2, FALSE
 	goto BattleScript_EffectStatUp
 
-BattleScript_EffectDefenseUp2: @ 81D7717
-	setstatchanger DEFENSE, 2, FALSE
-	goto BattleScript_EffectStatUp
-
 BattleScript_EffectSpeedUp2: @ 81D7722
 	setstatchanger SPEED, 2, FALSE
 	goto BattleScript_EffectStatUp
@@ -5871,3 +5867,12 @@ BattleScript_SpikyShieldRecoil::
 	orbyte gMoveResultFlags, MOVE_RESULT_MISSED
 	tryfaintmon USER, FALSE, NULL
 	return
+
+BattleScript_EffectDefenseUp2:
+	jumpifmove MOVE_COTTON_GUARD, BattleScript_EffectDefenseUp3
+	setstatchanger DEFENSE, 2, FALSE
+	goto BattleScript_EffectStatUp
+
+BattleScript_EffectDefenseUp3:
+	setstatchanger DEFENSE, 3, FALSE
+	goto BattleScript_EffectStatUp
