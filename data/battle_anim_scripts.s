@@ -487,6 +487,8 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_DRAGON_PULSE
 	.4byte Move_HONE_CLAWS
 	.4byte Move_COIL
+	.4byte Move_EERIE_IMPULSE
+	.4byte Move_CHARGE_BEAM
 	.4byte PoundCopy
 
 	.align 2
@@ -14361,27 +14363,6 @@ Move_COTTON_GUARD:
 	
 	waitforvisualfinish
 	end
-
-Move_CHARGE_BEAM:
-	loadspritegfx 10001
-	call _ChargeBeamSubcall
-	call _ChargeBeamSubcall
-	call _ChargeBeamSubcall
-	call _ChargeBeamSubcall
-	call _ChargeBeamSubcall
-	call _ChargeBeamSubcall
-	call _ChargeBeamSubcall
-	call _ChargeBeamSubcall
-	call _ChargeBeamSubcall
-	waitforvisualfinish
-	end
-_ChargeBeamSubcall:
-	createsprite gBattleAnimSpriteTemplate_ChargeBeam, 130, 10, -4, 0, -4, 20
-	delay 2
-	createsprite gBattleAnimSpriteTemplate_ChargeBeam, 130, 10, -4, -4, -8, 20
-	createsprite gBattleAnimSpriteTemplate_ChargeBeam, 130, 10, -4, 4, 0, 20
-	delay 2
-	return
 	
 Move_DRAGON_PULSE:
 	loadspritegfx 10163
@@ -14468,3 +14449,66 @@ Move_COIL:
 	setarg 7, -1
 	waitforvisualfinish
 	end
+
+Move_EERIE_IMPULSE:
+	loadspritegfx 10163
+	panse_1B SE_W103, 192, 63, 2, 0
+	createsprite gBattleAnimSpriteTemplate_83DA784, 130, 0, -8, 0, -24, 27, 0
+	delay 3
+	createsprite gBattleAnimSpriteTemplate_83DA784, 130, 0, -8, 0, -16, 27, 0
+	delay 3
+	createsprite gBattleAnimSpriteTemplate_83DA784, 130, 0, -8, 0, -8, 27, 0
+	delay 3
+	createsprite gBattleAnimSpriteTemplate_83DA784, 130, 0, -8, 0,  0, 27, 0
+	delay 3
+	createsprite gBattleAnimSpriteTemplate_83DA784, 130, 0, -8, 0,  8, 27, 0
+	delay 16
+	playsewithpan SE_W060, 192
+	monbg ANIM_BANK_DEF_PARTNER
+	createvisualtask sub_80DE3AC, 2
+	loopsewithpan SE_W060, 63, 20, 3
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_TARGET
+	end
+
+Move_CHARGE_BEAM:
+	loadspritegfx 10211
+	loadspritegfx 10212
+	loadspritegfx 10001
+	loadspritegfx 10037
+	loadspritegfx 10001
+	createvisualtask sub_80D6B3C, 2, 0, 20, 0, 2
+	playsewithpan SE_W268, 192
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BANK_TARGET, 3, 0, 96, 1
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	createvisualtask sub_80D6B3C, 2, 0, 20, 0, 2
+	playsewithpan SE_W268, 192
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	createvisualtask sub_80D6B3C, 2, 0, 20, 0, 2
+	playsewithpan SE_W268, 192
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	waitforvisualfinish
+	end
+_ChargeBeamSubcall:
+	createsprite gBattleAnimSpriteTemplate_ChargeBeam, 130, 10, -4, 0, -4, 20
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_ChargeBeam, 130, 10, -4, -4, -8, 20
+	createsprite gBattleAnimSpriteTemplate_ChargeBeam, 130, 10, -4, 4, 0, 20
+	delay 2
+	return

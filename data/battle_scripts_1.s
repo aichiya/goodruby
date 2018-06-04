@@ -279,7 +279,6 @@ BattleScript_EffectFalseSwipe: @ 81D6F14
 BattleScript_EffectHighCritical: @ 81D6F14
 BattleScript_EffectHit: @ 81D6F14
 BattleScript_EffectPursuit: @ 81D6F14
-BattleScript_EffectSpecialAttackDown2: @ 81D6F14
 BattleScript_EffectSpecialAttackDown: @ 81D6F14
 BattleScript_EffectSpecialDefenseDown: @ 81D6F14
 BattleScript_EffectSpecialDefenseUp: @ 81D6F14
@@ -1028,6 +1027,10 @@ BattleScript_EffectDefenseDown2: @ 81D7761
 
 BattleScript_EffectSpeedDown2: @ 81D776C
 	setstatchanger SPEED, 2, TRUE
+	goto BattleScript_EffectStatDown
+
+BattleScript_EffectSpecialAttackDown2:
+	setstatchanger SP_ATTACK, 2, TRUE
 	goto BattleScript_EffectStatDown
 
 BattleScript_EffectSpecialDefenseDown2: @ 81D7777
@@ -4512,7 +4515,12 @@ gUnknown_081D9B2D:: @ 81D9B2D
 	return
 
 BattleScript_EffectSpeedUpHit:
+	jumpifmove MOVE_CHARGE_BEAM, BattleScript_EffectSpAtkUpHit
 	setbyte cEFFECT_CHOOSER, 81
+	goto BattleScript_EffectHit
+
+BattleScript_EffectSpAtkUpHit:
+	setbyte cEFFECT_CHOOSER, 82
 	goto BattleScript_EffectHit
 
 BattleScript_EffectFlareBlitz:

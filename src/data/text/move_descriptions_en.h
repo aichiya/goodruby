@@ -1882,6 +1882,18 @@ static const u8 MoveDescription_Coil[] = _(
     "Coils to raise Attack,\n"
     "Defense, and accuracy.");
 
+static const u8 MoveDescription_EerieImpulse[] = _(
+    "Releases odd waves that\n"
+    "harshly lower Sp. Atk.");
+
+static const u8 MoveDescription_ChargeBeam[] = _(
+    "Attacks with a focused\n"
+    "charge. May raise Sp. Atk.");
+
+static const u8 MoveDescription_MagnetRise[] = _(
+    "Levitates on electromagnetism\n"
+    "for five turns.");
+
 
 
 
@@ -2359,4 +2371,6 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_DragonPulse,
 	MoveDescription_HoneClaws,
 	MoveDescription_Coil,
+	MoveDescription_EerieImpulse,
+	MoveDescription_ChargeBeam,
 };
