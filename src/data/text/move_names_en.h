@@ -478,4 +478,7 @@ const u8 gMoveNames[][13] = {
 	[MOVE_FLASH_CANNON] = _("Flash Cannon"),
 	[MOVE_NOBLE_ROAR] = _("Noble Roar"),
 	[MOVE_RAZOR_SHELL] = _("Razor Shell"),
+	[MOVE_POWER_TRICK] = _("Power Trick"),
+	[MOVE_POWER_SPLIT] = _("Power Split"),
+	[MOVE_GUARD_SPLIT] = _("Guard Split"),
 };

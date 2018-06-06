@@ -494,6 +494,9 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_FLASH_CANNON
 	.4byte Move_NOBLE_ROAR
 	.4byte Move_RAZOR_SHELL
+	.4byte Move_POWER_TRICK
+	.4byte Move_POWER_SPLIT
+	.4byte Move_GUARD_SPLIT
 	.4byte PoundCopy
 
 	.align 2
@@ -3942,11 +3945,11 @@ Move_ERUPTION: @ 81CC74F
 Move_SKILL_SWAP: @ 81CC81C
 	loadspritegfx 10251
 	call Unknown_81D61E7
-	createvisualtask sub_80DC0B0, 3, 1
+	createvisualtask sub_80DC0B0, 3, 1, 0
 	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_BANK_TARGET, 32767, 12, 3, 1
 	loopsewithpan SE_W179, 192, 24, 3
 	delay 16
-	createvisualtask sub_80DC0B0, 3, 0
+	createvisualtask sub_80DC0B0, 3, 0, 0
 	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_BANK_ATTACKER, 32767, 12, 3, 1
 	waitforvisualfinish
 	call Unknown_81D61F3
@@ -14644,4 +14647,43 @@ Move_RAZOR_SHELL:
 	clearmonbg ANIM_BANK_TARGET
 	blendoff
 	end
+
+Move_POWER_TRICK:
+	loadspritegfx 10251
+	loadspritegfx 10299
+	loadspritegfx 10300
+	createsprite gSpriteAnimSpriteTemplate_PowerTrickA, 130, 0, -16
+	createvisualtask sub_80DBC94, 2
+	playsewithpan SE_W029, 192
+	delay 8
+	createsprite gSpriteAnimSpriteTemplate_PowerTrickB, 130, 0, -16
+	delay 8
+	playsewithpan SE_W036, 192
+	waitforvisualfinish
+	end
+
+Move_POWER_SPLIT:
+	loadspritegfx 10251
+	loadspritegfx 10299
+	createvisualtask sub_80DC0B0, 3, 1, 1
+	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_BANK_TARGET, 0x3DFF, 12, 3, 1
+	loopsewithpan SE_W179, 192, 24, 3
+	delay 16
+	createvisualtask sub_80DC0B0, 3, 0, 1
+	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_BANK_ATTACKER, 0x3DFF, 12, 3, 1
+	waitforvisualfinish
+	end
+
+Move_GUARD_SPLIT:
+	loadspritegfx 10251
+	loadspritegfx 10300
+	createvisualtask sub_80DC0B0, 3, 1, 2
+	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_BANK_TARGET, 0x7DEF, 12, 3, 1
+	loopsewithpan SE_W179, 192, 24, 3
+	delay 16
+	createvisualtask sub_80DC0B0, 3, 0, 2
+	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_BANK_ATTACKER, 0x7DEF, 12, 3, 1
+	waitforvisualfinish
+	end
+
 

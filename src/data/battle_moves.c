@@ -5557,7 +5557,7 @@ const struct BattleMove gBattleMoves[] = {
     },
 
     [MOVE_DISCHARGE] = {
-        .effect = EFFECT_PARALYZE_HIT,
+        .effect = EFFECT_ALL_HIT,
         .power = 80,
         .type = TYPE_ELECTRIC,
         .accuracy = 100,
@@ -5921,7 +5921,7 @@ const struct BattleMove gBattleMoves[] = {
     },
 
     [MOVE_LAVA_PLUME] = {
-        .effect = EFFECT_ALL_HIT_BURN,
+        .effect = EFFECT_ALL_HIT,
         .power = 80,
         .type = TYPE_FIRE,
         .accuracy = 100,
@@ -6230,5 +6230,44 @@ const struct BattleMove gBattleMoves[] = {
         .priority = 0,
         .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
 		.moveClass = CLASS_PHYSICAL,
+    },
+
+    [MOVE_POWER_TRICK] = {
+        .effect = EFFECT_STAT_MUCKERY,
+        .power = 0,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 0,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_USER,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_SNATCH,
+		.moveClass = CLASS_STATUS,
+    },
+
+    [MOVE_POWER_SPLIT] = {
+        .effect = EFFECT_STAT_MUCKERY,
+        .power = 0,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 0,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_PROTECT,
+		.moveClass = CLASS_STATUS,
+    },
+
+    [MOVE_GUARD_SPLIT] = {
+        .effect = EFFECT_STAT_MUCKERY,
+        .power = 0,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 0,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_PROTECT,
+		.moveClass = CLASS_STATUS,
     },
 };

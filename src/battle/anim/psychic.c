@@ -354,10 +354,32 @@ const union AffineAnimCmd *const gSpriteAffineAnimTable_83DA99C[] =
     gSpriteAffineAnim_83DA974,
 };
 
-const struct SpriteTemplate gSpriteTemplate_83DA9AC =
+const struct SpriteTemplate gSpriteTemplate_SkillSwap =
 {
     .tileTag = 10251,
     .paletteTag = 10251,
+    .oam = &gOamData_837DF8C,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gSpriteAffineAnimTable_83DA99C,
+    .callback = sub_80DC2B0,
+};
+
+const struct SpriteTemplate gSpriteTemplate_PowerSplit =
+{
+    .tileTag = 10251,
+    .paletteTag = 10299,
+    .oam = &gOamData_837DF8C,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gSpriteAffineAnimTable_83DA99C,
+    .callback = sub_80DC2B0,
+};
+
+const struct SpriteTemplate gSpriteTemplate_GuardSplit =
+{
+    .tileTag = 10251,
+    .paletteTag = 10300,
     .oam = &gOamData_837DF8C,
     .anims = gDummySpriteAnimTable,
     .images = NULL,
@@ -846,6 +868,7 @@ void sub_80DC068(struct Sprite *sprite)
     sprite->callback = sub_80DC020;
 }
 
+// Skill Swap
 void sub_80DC0B0(u8 taskId)
 {
     struct Task *task = &gTasks[taskId];
@@ -890,6 +913,7 @@ void sub_80DC0B0(u8 taskId)
     }
 
     task->data[1] = 6;
+	task->data[3] = gBattleAnimArgs[1];
     task->func = sub_80DC1FC;
 }
 
@@ -904,7 +928,13 @@ static void sub_80DC1FC(u8 taskId)
         if (++task->data[1] > 6)
         {
             task->data[1] = 0;
-            spriteId = CreateSprite(&gSpriteTemplate_83DA9AC, task->data[11], task->data[12], 0);
+			switch (task->data[3])
+			{
+				default:
+				case 0: spriteId = CreateSprite(&gSpriteTemplate_SkillSwap, task->data[11], task->data[12], 0); break;
+				case 1: spriteId = CreateSprite(&gSpriteTemplate_PowerSplit, task->data[11], task->data[12], 0); break;
+				case 2: spriteId = CreateSprite(&gSpriteTemplate_GuardSplit, task->data[11], task->data[12], 0); break;
+			}
             if (spriteId != 64)
             {
                 gSprites[spriteId].data[0] = 16;

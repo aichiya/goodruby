@@ -1910,6 +1910,18 @@ static const u8 MoveDescription_RazorShell[] = _(
     "A sharp shell attack that\n"
     "often lowers Defense.");
 
+static const u8 MoveDescription_PowerTrick[] = _(
+    "Switches the user’s\n"
+    "Attack and Defense stats.");
+
+static const u8 MoveDescription_PowerSplit[] = _(
+    "Averages user’s and foe’s\n"
+    "Attack and Sp. Atk stats.");
+
+static const u8 MoveDescription_GuardSplit[] = _(
+    "Averages user’s and foe’s\n"
+    "Defense and Sp. Def stats.");
+
 
 
 const u8 * const gMoveDescriptions[] = {
@@ -2391,4 +2403,7 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_FlashCannon,
 	MoveDescription_NobleRoar,
 	MoveDescription_RazorShell,
+	MoveDescription_PowerTrick,
+	MoveDescription_PowerSplit,
+	MoveDescription_GuardSplit,
 };

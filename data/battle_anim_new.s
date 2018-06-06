@@ -256,3 +256,12 @@ gSpriteAnim_RazorShell:
 gSpriteAnimSpriteTemplate_RazorShell::
 	spr_template 10108, 10108, gOamData_837DF34, gSpriteAnimTable_RazorShell, NULL, gDummySpriteAffineAnimTable, TranslateAnimSpriteToTargetMonLocation
 
+	.align 2
+gSpriteAnimSpriteTemplate_PowerTrickA::
+	spr_template 10251, 10299, gOamData_837DF8C, gDummySpriteAnimTable, NULL, gSpriteAffineAnimTable_83DA99C, sub_80DDD58
+
+	.align 2
+gSpriteAnimSpriteTemplate_PowerTrickB::
+	spr_template 10251, 10300, gOamData_837DF8C, gDummySpriteAnimTable, NULL, gSpriteAffineAnimTable_83DA99C, sub_80DDD58
+
+

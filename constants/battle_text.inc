@@ -387,3 +387,6 @@
 	enum BATTLE_TEXT_SpikyShieldRecoil
 	enum BATTLE_TEXT_Drastically
 	enum BATTLE_TEXT_Shuddered
+	enum BATTLE_TEXT_PowerTrick
+	enum BATTLE_TEXT_PowerSplit
+	enum BATTLE_TEXT_GuardSplit

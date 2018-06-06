@@ -265,7 +265,7 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectTrumpCard
 	.4byte BattleScript_EffectVenomDrench
 	.4byte BattleScript_EffectAllHit
-	.4byte BattleScript_EffectAllHitBurn
+	.4byte BattleScript_EffectStatMuckery
 
 BattleScript_EffectHit: @ 81D6F14
 BattleScript_EffectAccuracyDown2: @ 81D6F14
@@ -1800,6 +1800,7 @@ BattleScript_EffectBatonPass: @ 81D7F7C
 	printstring 3
 	switchinanim USER, 1
 	waitstate
+	special 0x36
 	switchineffects USER
 	goto BattleScript_MoveEnd
 
@@ -5608,7 +5609,20 @@ BattleScriptVenomDrenchEnd:
 BattleScript_EffectBelch:
 	end
 
-BattleScript_EffectAllHit:: @ 81D708A
+BattleScript_EffectAllHit::
+	jumpifmove MOVE_LAVA_PLUME, BattleScript_EffectAllHitBurn
+	jumpifmove MOVE_DISCHARGE, BattleScript_EffectAllHitPara
+	goto BattleScript_EffectAllHitStart
+
+BattleScript_EffectAllHitBurn::
+	setmoveeffect EFFECT_BURN
+	goto BattleScript_EffectAllHitStart
+
+BattleScript_EffectAllHitPara::
+	setmoveeffect EFFECT_PARALYSIS
+	goto BattleScript_EffectAllHitStart
+
+BattleScript_EffectAllHitStart:
 	attackcanceler
 	attackstring
 	ppreduce
@@ -5616,7 +5630,7 @@ BattleScript_EffectAllHit:: @ 81D708A
 	attackanimation
 	waitanimation
 
-_AllHitDoStuff: @ 81D70A7
+_AllHitDoStuff:
 	movevaluescleanup
 	critcalc
 	damagecalc
@@ -5640,7 +5654,7 @@ _AllHitDoStuff: @ 81D70A7
 	tryfaintmon USER, FALSE, NULL
 	end
 
-_AllHitMissed: @ 81D70E0
+_AllHitMissed:
 	effectivenesssound
 	resultmessage
 	waitmessage 64
@@ -5649,10 +5663,6 @@ _AllHitMissed: @ 81D70E0
 	jumpifnexttargetvalid BattleScript_1D70A7
 	tryfaintmon USER, FALSE, NULL
 	end
-
-BattleScript_EffectAllHitBurn::
-	setmoveeffect EFFECT_BURN
-	goto BattleScript_EffectAllHit
 
 BattleScript_EffectIncinerate::
 	attackcanceler
@@ -5987,3 +5997,48 @@ BattleScript_NobleRoarTryLowerSAtk:
 
 BattleScript_NobleRoarEnd:
 	goto BattleScript_MoveEnd
+
+BattleScript_EffectStatMuckery:
+	jumpifmove MOVE_POWER_TRICK, BattleScriptPowerTrick
+	jumpifmove MOVE_POWER_SPLIT, BattleScriptPowerSplit
+	jumpifmove MOVE_GUARD_SPLIT, BattleScriptGuardSplit
+	goto BattleScript_EffectSplash
+
+BattleScriptPowerTrick:
+	attackcanceler
+	attackstring
+	ppreduce
+	attackanimation
+	waitanimation
+	special 0x33
+	printstring BATTLE_TEXT_PowerTrick
+	waitmessage 64
+	goto BattleScript_MoveEnd
+
+BattleScriptPowerSplit:
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	jumpifstatus2 TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	special 0x34
+	printstring BATTLE_TEXT_PowerSplit
+	waitmessage 64
+	goto BattleScript_MoveEnd
+	end
+
+BattleScriptGuardSplit:
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	jumpifstatus2 TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	special 0x35
+	printstring BATTLE_TEXT_GuardSplit
+	waitmessage 64
+	goto BattleScript_MoveEnd
+	end

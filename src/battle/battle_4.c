@@ -695,6 +695,10 @@ static void sp2F_incinerate(void);
 static void sp30_clearsmog(void);
 static void sp31_gyroball(void);
 static void sp32_feint(void);
+static void sp33_powertrick(void);
+static void sp34_powersplit(void);
+static void sp35_guardsplit(void);
+static void sp36_bpasspowertrick(void);
 
 
 void (* const gBattleScriptingCommandsTable[])(void) =
@@ -15106,6 +15110,10 @@ void (* const gBattleScriptingSpecialTable[])(void) =
 	sp30_clearsmog,
 	sp31_gyroball,
 	sp32_feint,
+	sp33_powertrick,
+	sp34_powersplit,
+	sp35_guardsplit,
+	sp36_bpasspowertrick,
 };
 
 
@@ -16304,5 +16312,44 @@ static void sp32_feint(void)
 		gProtectStructs[gBankTarget].protected = 0;
         BattleScriptPushCursor();
         gBattlescriptCurrInstr = BattleScript_LiftedProtect;
+	}
+}
+
+static void sp33_powertrick(void)
+{
+	u16 buffer = gBattleMons[gBankAttacker].attack;
+	gBattleMons[gBankAttacker].attack = gBattleMons[gBankAttacker].defense;
+	gBattleMons[gBankAttacker].defense = buffer;
+	gStatuses3[gBankAttacker] ^= STATUS3_POWER_TRICK;
+}
+
+static void sp34_powersplit(void)
+{
+	u16 value = (gBattleMons[gBankAttacker].attack + gBattleMons[gBankTarget].attack) / 2;
+	gBattleMons[gBankAttacker].attack = value;
+	gBattleMons[gBankTarget].attack = value;
+	value = (gBattleMons[gBankAttacker].spAttack + gBattleMons[gBankTarget].spAttack) / 2;
+	gBattleMons[gBankAttacker].spAttack = value;
+	gBattleMons[gBankTarget].spAttack = value;
+}
+
+static void sp35_guardsplit(void)
+{
+	u16 value = (gBattleMons[gBankAttacker].defense + gBattleMons[gBankTarget].defense) / 2;
+	gBattleMons[gBankAttacker].defense = value;
+	gBattleMons[gBankTarget].defense = value;
+	value = (gBattleMons[gBankAttacker].spDefense + gBattleMons[gBankTarget].spDefense) / 2;
+	gBattleMons[gBankAttacker].spDefense = value;
+	gBattleMons[gBankTarget].spDefense = value;
+}
+
+static void sp36_bpasspowertrick(void)
+{
+	// For some reason, Power Trick can be baton passed...
+	if (gStatuses3[gBankAttacker] & STATUS3_POWER_TRICK)
+	{
+		u16 buffer = gBattleMons[gBankAttacker].attack;
+		gBattleMons[gBankAttacker].attack = gBattleMons[gBankAttacker].defense;
+		gBattleMons[gBankAttacker].defense = buffer;
 	}
 }
