@@ -5548,6 +5548,7 @@ BattleScript_EffectTrumpCard:
 	goto BattleScript_HitFromCritCalc
 
 BattleScript_EffectAttackDown: @ 81D71F5
+	jumpifmove MOVE_NOBLE_ROAR, BattleScript_NobleRoar
 	jumpifmove MOVE_PLAY_NICE, BattleScript_PlayNice
 	setstatchanger ATTACK, 1, TRUE
 	goto BattleScript_EffectStatDown
@@ -5957,4 +5958,32 @@ BattleScript_CoilTryAccuracy:
 
 BattleScript_CoilEnd:
 	goto BattleScript_MoveEnd
-	
+
+BattleScript_NobleRoar:
+	attackcanceler
+	attackstring
+	ppreduce
+	jumpifstat TARGET, GREATER_THAN, ATTACK, 0, BattleScript_NobleRoarDoMoveAnim
+	jumpifstat TARGET, EQUAL, SP_ATTACK, 0, BattleScript_CantLowerMultipleStats
+
+BattleScript_NobleRoarDoMoveAnim:
+	accuracycheck BattleScript_ButItFailed, ACC_CURR_MOVE
+	attackanimation
+	waitanimation
+	setbyte sFIELD_1B, 0
+	playstatchangeanimation TARGET, 0x12, 1
+	setstatchanger ATTACK, 1, TRUE
+	statbuffchange 1, BattleScript_NobleRoarTryLowerSAtk
+	jumpifbyte EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_NobleRoarTryLowerSAtk
+	printfromtable gStatDownStringIds
+	waitmessage 64
+
+BattleScript_NobleRoarTryLowerSAtk:
+	setstatchanger SP_ATTACK, 1, TRUE
+	statbuffchange 1, BattleScript_NobleRoarEnd
+	jumpifbyte EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_NobleRoarEnd
+	printfromtable gStatDownStringIds
+	waitmessage 64
+
+BattleScript_NobleRoarEnd:
+	goto BattleScript_MoveEnd

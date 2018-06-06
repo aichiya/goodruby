@@ -492,6 +492,7 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_MAGNET_BOMB
 	.4byte Move_MIRROR_SHOT
 	.4byte Move_FLASH_CANNON
+	.4byte Move_NOBLE_ROAR
 	.4byte PoundCopy
 
 	.align 2
@@ -14599,4 +14600,25 @@ Move_FLASH_CANNON:
 	createsprite gBattleAnimSpriteTemplate_83DB3C4, 2, 1, 1, 15, 0, 0x7FFF
 	end
 
+Move_NOBLE_ROAR:
+	loadspritegfx 10053
+	monbg ANIM_BANK_ATTACKER
+	monbgprio_28 0
+	setalpha 8, 8
+	createsprite gBattleAnimSpriteTemplate_83DB3C4, 2, 1, 1, 0, 8, 0x0010
+	waitforvisualfinish
+	createvisualtask sub_812B18C, 2, 0, 2
+	createvisualtask AnimTask_ScaleMonAndRestore, 5, -5, -5, 10, ANIM_BANK_ATTACKER, 1
+	call _81CE35E
+	delay 10
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BANK_TARGET, 1, 0, 9, 1
+	delay 10
+	
+	createsprite gBattleAnimSpriteTemplate_83DB3C4, 2, 1, 1, 8, 0, 0x0010
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_ATTACKER
+	blendoff
+	waitforvisualfinish
+	delay 20
+	end
 

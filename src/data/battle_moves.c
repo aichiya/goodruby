@@ -6205,4 +6205,17 @@ const struct BattleMove gBattleMoves[] = {
         .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
 		.moveClass = CLASS_SPECIAL,
     },
+
+    [MOVE_NOBLE_ROAR] = {
+        .effect = EFFECT_ATTACK_DOWN,
+        .power = 0,
+        .type = TYPE_NORMAL,
+        .accuracy = 100,
+        .pp = 30,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
+		.moveClass = CLASS_STATUS,
+    },
 };

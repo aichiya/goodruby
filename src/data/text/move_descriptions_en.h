@@ -1902,6 +1902,9 @@ static const u8 MoveDescription_FlashCannon[] = _(
     "A powerful light burst\n"
     "that may lower Sp. Def.");
 
+static const u8 MoveDescription_NobleRoar[] = _(
+    "Roars to reduce the foe’s\n"
+    "Attack and Sp. Atk.");
 
 
 
@@ -2385,4 +2388,5 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_MagnetBomb,
 	MoveDescription_MirrorShot,
 	MoveDescription_FlashCannon,
+	MoveDescription_NobleRoar,
 };
