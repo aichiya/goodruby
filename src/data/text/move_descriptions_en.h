@@ -1890,9 +1890,18 @@ static const u8 MoveDescription_ChargeBeam[] = _(
     "Attacks with a focused\n"
     "charge. May raise Sp. Atk.");
 
-static const u8 MoveDescription_MagnetRise[] = _(
-    "Levitates on electromagnetism\n"
-    "for five turns.");
+static const u8 MoveDescription_MagnetBomb[] = _(
+    "Bombards the foe with steel\n"
+    "bombs that never miss.");
+
+static const u8 MoveDescription_MirrorShot[] = _(
+    "Looses a flash of light\n"
+    "that may lower accuracy.");
+
+static const u8 MoveDescription_FlashCannon[] = _(
+    "A powerful light burst\n"
+    "that may lower Sp. Def.");
+
 
 
 
@@ -2373,4 +2382,7 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_Coil,
 	MoveDescription_EerieImpulse,
 	MoveDescription_ChargeBeam,
+	MoveDescription_MagnetBomb,
+	MoveDescription_MirrorShot,
+	MoveDescription_FlashCannon,
 };

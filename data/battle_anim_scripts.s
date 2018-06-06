@@ -489,6 +489,9 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_COIL
 	.4byte Move_EERIE_IMPULSE
 	.4byte Move_CHARGE_BEAM
+	.4byte Move_MAGNET_BOMB
+	.4byte Move_MIRROR_SHOT
+	.4byte Move_FLASH_CANNON
 	.4byte PoundCopy
 
 	.align 2
@@ -14512,3 +14515,88 @@ _ChargeBeamSubcall:
 	createsprite gBattleAnimSpriteTemplate_ChargeBeam, 130, 10, -4, 4, 0, 20
 	delay 2
 	return
+
+Move_MAGNET_BOMB:
+    loadspritegfx 10171
+	loadspritegfx 10135
+	playsewithpan SE_W327, 192
+	createsprite gBattleAnimSpriteTemplate_MagnetBombA, 130, 1, 0, 0, -160, 32
+	createsprite gBattleAnimSpriteTemplate_MagnetBombA, 130, 1, 0, 110, -110, 32
+	createsprite gBattleAnimSpriteTemplate_MagnetBombA, 130, 1, 0, 150, 0, 32
+	createsprite gBattleAnimSpriteTemplate_MagnetBombA, 130, 1, 0, 100, 100, 32
+	createsprite gBattleAnimSpriteTemplate_MagnetBombA, 130, 1, 0, 0, 140, 32
+	createsprite gBattleAnimSpriteTemplate_MagnetBombA, 130, 1, 0, -95, 85, 32
+	createsprite gBattleAnimSpriteTemplate_MagnetBombA, 130, 1, 0, -135, 0, 32
+	createsprite gBattleAnimSpriteTemplate_MagnetBombA, 130, 1, 0, -90, -90, 32
+	waitforvisualfinish
+    createsprite gBasicHitSplatSpriteTemplate, 2, 0, 0, 1, 2
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_TARGET, 3, 0, 6, 1
+	playsewithpan SE_W070, 63
+	waitforvisualfinish
+	end
+
+Move_MIRROR_SHOT:
+    loadspritegfx 10071
+	loopsewithpan SE_W231, 192, 28, 2
+	createvisualtask sub_80E0A4C, 5, 0, 0, 0
+	waitforvisualfinish
+	createsprite gBattleAnimSpriteTemplate_83DB3C4, 2, 1, 1, 0, 15, 0x7FFF
+	loopsewithpan SE_W043, 192, 7, 4
+	createsprite gBattleAnimSpriteTemplate_MirrorShot, 2, 15, -12, 1, 0
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_MirrorShot, 2, 13, 10, 1, 0
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_MirrorShot, 2, 3, 18, 1, 0
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_MirrorShot, 2, -6, 17, 1, 0
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_MirrorShot, 2, -12, 7, 1, 0
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_MirrorShot, 2, -14, -6, 1, 0
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_MirrorShot, 2, -5, -11, 1, 0
+	waitforvisualfinish
+	createsprite gBattleAnimSpriteTemplate_83DB3C4, 2, 1, 1, 15, 0, 0x7FFF
+	end
+
+Move_FLASH_CANNON:
+	loadspritegfx 10171
+    loadspritegfx 10131
+	loopsewithpan SE_W231, 192, 28, 2
+	createvisualtask sub_80E0A4C, 5, 0, 0, 0
+	waitforvisualfinish
+	
+	playsewithpan SE_W086, 192
+	createsprite gBattleAnimSpriteTemplate_83D9874, 131, 10, 0, 0, 0, 30, 0
+	waitforvisualfinish
+	
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BANK_TARGET, 4, 0, 5, 1
+	createsprite gBattleAnimSpriteTemplate_83DB3C4, 2, 1, 1, 0, 15, 0x7FFF
+	createsprite gBattleAnimSpriteTemplate_FlashCannon, 2, 1, 1, 1, 0
+	playsewithpan SE_W120, 192
+	delay 3
+	createsprite gBattleAnimSpriteTemplate_FlashCannon, 2, 6,-7, 1, 0
+	createsprite gBattleAnimSpriteTemplate_FlashCannon, 2,-6,-7, 1, 0
+	createsprite gBattleAnimSpriteTemplate_FlashCannon, 2, 10, 1, 1, 0
+	createsprite gBattleAnimSpriteTemplate_FlashCannon, 2, -10, 1, 1, 0
+	createsprite gBattleAnimSpriteTemplate_FlashCannon, 2, 1, 8, 1, 0
+	playsewithpan SE_W120, 192
+	delay 3
+	createsprite gBattleAnimSpriteTemplate_FlashCannon, 2, 12,-12, 1, 0
+	createsprite gBattleAnimSpriteTemplate_FlashCannon, 2,-12,-12, 1, 0
+	createsprite gBattleAnimSpriteTemplate_FlashCannon, 2, 14,-2, 1, 0
+	createsprite gBattleAnimSpriteTemplate_FlashCannon, 2,-14,-2, 1, 0
+	createsprite gBattleAnimSpriteTemplate_FlashCannon, 2, 8, 5, 1, 0
+	createsprite gBattleAnimSpriteTemplate_FlashCannon, 2, -8, 5, 1, 0
+	createsprite gBattleAnimSpriteTemplate_FlashCannon, 2, 15, 10, 1, 0
+	createsprite gBattleAnimSpriteTemplate_FlashCannon, 2, -15, 10, 1, 0
+	createsprite gBattleAnimSpriteTemplate_FlashCannon, 2, 1, 14, 1, 0
+	createsprite gBattleAnimSpriteTemplate_FlashCannon, 2, 1, -14, 1, 0
+	createsprite gBattleAnimSpriteTemplate_FlashCannon, 2, 1, -14, 1, 0
+	playsewithpan SE_W120, 192
+	
+	waitforvisualfinish
+	createsprite gBattleAnimSpriteTemplate_83DB3C4, 2, 1, 1, 15, 0, 0x7FFF
+	end
+
+

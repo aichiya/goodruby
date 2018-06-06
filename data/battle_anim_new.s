@@ -213,5 +213,27 @@ gBattleAnimSpriteTemplate_ChargeBeam::
 	.align 2
 gBattleAnimSpriteTemplate_DragonPulse::
 	spr_template 10163, 10298, gOamData_837DF74, gDummySpriteAnimTable, NULL, gDummySpriteAffineAnimTable, TranslateAnimSpriteToTargetMonLocation
+    
+	.align 2
+gBattleAnimSpriteTemplate_MagnetBombA::
+	spr_template 10171, 10171, gOamData_837DF2C, gSpriteAnimTable_83DAD48, NULL, gDummySpriteAffineAnimTable, sub_80CC6CC
 
+gBattleAnimSpriteTemplate_MirrorShot::
+	spr_template 10071, 10071, gOamData_837DF34, gSpriteAnimTable_83930F0, NULL, gDummySpriteAffineAnimTable, sub_80793C4
+
+	.align 2
+gSpriteAnimTable_FlashCannon:
+	.4byte gSpriteAnim_FlashCannon
+
+gSpriteAnim_FlashCannon:
+	obj_image_anim_frame 0, 1
+	obj_image_anim_frame 4, 1
+	obj_image_anim_frame 8, 1
+	obj_image_anim_frame 12, 1
+	obj_image_anim_frame 16, 1
+	obj_image_anim_end
+	
+
+gBattleAnimSpriteTemplate_FlashCannon::
+	spr_template 10131, 10131, gOamData_837DF2C, gSpriteAnimTable_FlashCannon, NULL, gDummySpriteAffineAnimTable, sub_80793C4
 

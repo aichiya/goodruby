@@ -54,3 +54,4 @@ Distant future:
 --Hidden abilities?
 --Misc. past and future gen mons available?
 --Expand TMs?
+--Pokeradar ; see https://github.com/huderlem/pokeruby/commits/pokeradar
