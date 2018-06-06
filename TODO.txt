@@ -44,11 +44,7 @@
 --Infestation
 
 --Meditite
---Voltorb
---Magnemite
 --Doduo
---Carvanha
---Wailmer
 
 Distant future:
 --Hidden abilities?
