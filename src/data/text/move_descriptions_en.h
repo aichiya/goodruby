@@ -1906,8 +1906,9 @@ static const u8 MoveDescription_NobleRoar[] = _(
     "Roars to reduce the foe’s\n"
     "Attack and Sp. Atk.");
 
-
-
+static const u8 MoveDescription_RazorShell[] = _(
+    "A sharp shell attack that\n"
+    "often lowers Defense.");
 
 
 
@@ -2389,4 +2390,5 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_MirrorShot,
 	MoveDescription_FlashCannon,
 	MoveDescription_NobleRoar,
+	MoveDescription_RazorShell,
 };

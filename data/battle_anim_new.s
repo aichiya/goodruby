@@ -225,6 +225,7 @@ gBattleAnimSpriteTemplate_MirrorShot::
 gSpriteAnimTable_FlashCannon:
 	.4byte gSpriteAnim_FlashCannon
 
+	.align 2
 gSpriteAnim_FlashCannon:
 	obj_image_anim_frame 0, 1
 	obj_image_anim_frame 4, 1
@@ -234,6 +235,24 @@ gSpriteAnim_FlashCannon:
 	obj_image_anim_end
 	
 
+	.align 2
 gBattleAnimSpriteTemplate_FlashCannon::
 	spr_template 10131, 10131, gOamData_837DF2C, gSpriteAnimTable_FlashCannon, NULL, gDummySpriteAffineAnimTable, sub_80793C4
+
+	.align 2
+gSpriteAnimTable_RazorShell:
+	.4byte gSpriteAnim_RazorShell
+
+	.align 2
+gSpriteAnim_RazorShell:
+	obj_image_anim_frame 0, 16
+	obj_image_anim_frame 16, 2
+	obj_image_anim_frame 32, 2
+	obj_image_anim_frame 48, 2
+	obj_image_anim_frame 64, 2
+	obj_image_anim_end
+
+	.align 2
+gSpriteAnimSpriteTemplate_RazorShell::
+	spr_template 10108, 10108, gOamData_837DF34, gSpriteAnimTable_RazorShell, NULL, gDummySpriteAffineAnimTable, TranslateAnimSpriteToTargetMonLocation
 

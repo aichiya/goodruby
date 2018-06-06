@@ -493,6 +493,7 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_MIRROR_SHOT
 	.4byte Move_FLASH_CANNON
 	.4byte Move_NOBLE_ROAR
+	.4byte Move_RAZOR_SHELL
 	.4byte PoundCopy
 
 	.align 2
@@ -14620,5 +14621,27 @@ Move_NOBLE_ROAR:
 	blendoff
 	waitforvisualfinish
 	delay 20
+	end
+
+Move_RAZOR_SHELL:
+	loadspritegfx 10108
+	monbg ANIM_BANK_TARGET
+	setalpha 12, 8
+	playsewithpan SE_W013B, 192
+	playsewithpan SE_W202, 192
+	createsprite gSpriteAnimSpriteTemplate_RazorShell, 2, 0, 0, 0, 0, 22, 0
+	delay 5
+	playsewithpan SE_W202, 192
+	createsprite gSpriteAnimSpriteTemplate_RazorShell, 2, 0, 0, -24, -15, 22, 0
+	delay 5
+	playsewithpan SE_W202, 192
+	createsprite gSpriteAnimSpriteTemplate_RazorShell, 2, 0, 0, 24, 15, 22, 0
+	delay 8
+
+	loopsewithpan SE_W013, 63, 5, 3
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BANK_TARGET, 2, 0, 10, 1
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_TARGET
+	blendoff
 	end
 
