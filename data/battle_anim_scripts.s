@@ -14667,11 +14667,11 @@ Move_POWER_TRICK:
 Move_POWER_SPLIT:
 	loadspritegfx 10251
 	loadspritegfx 10299
-	createvisualtask sub_80DC0B0, 3, 1, 1
+	createvisualtask sub_80DC0B0, 3, 1, 2
 	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_BANK_TARGET, 0x3DFF, 12, 3, 1
 	loopsewithpan SE_W179, 192, 24, 3
 	delay 16
-	createvisualtask sub_80DC0B0, 3, 0, 1
+	createvisualtask sub_80DC0B0, 3, 0, 2
 	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_BANK_ATTACKER, 0x3DFF, 12, 3, 1
 	waitforvisualfinish
 	end
@@ -14679,11 +14679,11 @@ Move_POWER_SPLIT:
 Move_GUARD_SPLIT:
 	loadspritegfx 10251
 	loadspritegfx 10300
-	createvisualtask sub_80DC0B0, 3, 1, 2
+	createvisualtask sub_80DC0B0, 3, 1, 1
 	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_BANK_TARGET, 0x7DEF, 12, 3, 1
 	loopsewithpan SE_W179, 192, 24, 3
 	delay 16
-	createvisualtask sub_80DC0B0, 3, 0, 2
+	createvisualtask sub_80DC0B0, 3, 0, 1
 	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_BANK_ATTACKER, 0x7DEF, 12, 3, 1
 	waitforvisualfinish
 	end
