@@ -43,9 +43,6 @@
 --Autotomize doesn't touch weight
 --Infestation
 
---Meditite
---Doduo
-
 Distant future:
 --Hidden abilities?
 --Misc. past and future gen mons available?
