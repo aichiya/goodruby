@@ -1384,6 +1384,7 @@ static bool8 AccuracyCalcHelper(u16 move)
 	}
 
     if ((WEATHER_HAS_EFFECT && (gBattleWeather & WEATHER_RAIN_ANY) && (gBattleMoves[move].effect == EFFECT_THUNDER || gBattleMoves[move].effect == EFFECT_HURRICANE))
+	 || (WEATHER_HAS_EFFECT && (gBattleWeather & WEATHER_HAIL) && (move == MOVE_BLIZZARD))
      || (gBattleMoves[move].accuracy == 0))
     {
         JumpIfMoveFailed(7, move);
