@@ -1922,6 +1922,10 @@ static const u8 MoveDescription_GuardSplit[] = _(
     "Averages user’s and foe’s\n"
     "Defense and Sp. Def stats.");
 
+static const u8 MoveDescription_Spotlight[] = _(
+    "Draws attention onto the\n"
+    "target to redirect moves.");
+
 
 
 const u8 * const gMoveDescriptions[] = {
@@ -2406,4 +2410,5 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_PowerTrick,
 	MoveDescription_PowerSplit,
 	MoveDescription_GuardSplit,
+	MoveDescription_Spotlight,
 };

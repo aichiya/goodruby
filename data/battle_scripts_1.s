@@ -228,9 +228,9 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectFlareBlitz
 	.4byte BattleScript_EffectHammerArm
 	.4byte BattleScript_EffectSuckerPunch
-	.4byte BattleScript_EffectFireFang
-	.4byte BattleScript_EffectThunderFang
-	.4byte BattleScript_EffectIceFang
+	.4byte BattleScript_EffectElementalFang
+	.4byte BattleScript_EffectSpotlight
+	.4byte BattleScript_EffectUnused
 	.4byte BattleScript_EffectFling
 	.4byte BattleScript_EffectQuiverDance
 	.4byte BattleScript_EffectBugBite
@@ -4597,6 +4597,12 @@ BattleScript_EffectSuckerPunch:
 	accuracycheck BattleScript_MoveMissedPause, ACC_CURR_MOVE
 	goto BattleScript_HitFromCritCalc
 
+BattleScript_EffectElementalFang:
+	jumpifmove MOVE_FIRE_FANG, BattleScript_EffectFireFang
+	jumpifmove MOVE_THUNDER_FANG, BattleScript_EffectThunderFang
+	jumpifmove MOVE_ICE_FANG, BattleScript_EffectIceFang
+	goto BattleScript_EffectSplash
+
 BattleScript_EffectFireFang:
 	attackcanceler
 	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
@@ -6042,3 +6048,21 @@ BattleScriptGuardSplit:
 	waitmessage 64
 	goto BattleScript_MoveEnd
 	end
+
+BattleScript_EffectSpotlight:
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	attackanimation
+	waitanimation
+	special 0x37
+	printstring BATTLE_TEXT_CenterAttention2
+	waitmessage 64
+	goto BattleScript_MoveEnd
+	end
+
+BattleScript_EffectUnused:
+	end
+
+

@@ -497,6 +497,7 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_POWER_TRICK
 	.4byte Move_POWER_SPLIT
 	.4byte Move_GUARD_SPLIT
+	.4byte Move_SPOTLIGHT
 	.4byte PoundCopy
 
 	.align 2
@@ -14686,4 +14687,26 @@ Move_GUARD_SPLIT:
 	waitforvisualfinish
 	end
 
+Move_SPOTLIGHT:
+	loadspritegfx 10227
+	loadspritegfx 10240
+	createvisualtask sub_812B340, 5, 223, 63
+	createvisualtask sub_812CC44, 2
+	createvisualtask sub_80E2D78, 2, 248, 3, 0, 10, 0
+	waitforvisualfinish
+	createsprite gBattleAnimSpriteTemplate_8402720, 130, 0, -8, 80
+	delay 0
+	createsprite gVerticalDipSpriteTemplate, 2, 5, 2, ANIM_BANK_TARGET
+	delay 10
+	createsprite gVerticalDipSpriteTemplate, 2, 5, 2, ANIM_BANK_TARGET
+	delay 0
+	createvisualtask sub_812B30C, 5, 229, -64
+	
+	delay 5
+	createvisualtask sub_812B30C, 5, 229, 63
+	waitforvisualfinish
+	createvisualtask sub_80E2D78, 2, 248, 3, 10, 0, 1
+	waitforvisualfinish
+	createvisualtask sub_812CCA8, 2
+	end
 

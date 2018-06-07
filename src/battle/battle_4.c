@@ -699,6 +699,7 @@ static void sp33_powertrick(void);
 static void sp34_powersplit(void);
 static void sp35_guardsplit(void);
 static void sp36_bpasspowertrick(void);
+static void sp37_spotlight(void);
 
 
 void (* const gBattleScriptingCommandsTable[])(void) =
@@ -15115,6 +15116,7 @@ void (* const gBattleScriptingSpecialTable[])(void) =
 	sp34_powersplit,
 	sp35_guardsplit,
 	sp36_bpasspowertrick,
+	sp37_spotlight,
 };
 
 
@@ -16353,4 +16355,10 @@ static void sp36_bpasspowertrick(void)
 		gBattleMons[gBankAttacker].attack = gBattleMons[gBankAttacker].defense;
 		gBattleMons[gBankAttacker].defense = buffer;
 	}
+}
+
+static void sp37_spotlight(void)
+{
+    gSideTimers[GetBattlerSide(gBankTarget)].followmeTimer = 1;
+    gSideTimers[GetBattlerSide(gBankTarget)].followmeTarget = gBankTarget;
 }

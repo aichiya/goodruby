@@ -481,4 +481,5 @@ const u8 gMoveNames[][13] = {
 	[MOVE_POWER_TRICK] = _("Power Trick"),
 	[MOVE_POWER_SPLIT] = _("Power Split"),
 	[MOVE_GUARD_SPLIT] = _("Guard Split"),
+	[MOVE_SPOTLIGHT] = _("Spotlight"),
 };

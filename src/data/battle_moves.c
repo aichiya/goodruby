@@ -4790,7 +4790,7 @@ const struct BattleMove gBattleMoves[] = {
     },
 
     [MOVE_FIRE_FANG] = {
-        .effect = EFFECT_FIRE_FANG,
+        .effect = EFFECT_ELEMENTAL_FANG,
         .power = 65,
         .type = TYPE_FIRE,
         .accuracy = 95,
@@ -4803,7 +4803,7 @@ const struct BattleMove gBattleMoves[] = {
     },
 
     [MOVE_THUNDER_FANG] = {
-        .effect = EFFECT_THUNDER_FANG,
+        .effect = EFFECT_ELEMENTAL_FANG,
         .power = 65,
         .type = TYPE_ELECTRIC,
         .accuracy = 95,
@@ -4816,7 +4816,7 @@ const struct BattleMove gBattleMoves[] = {
     },
 
     [MOVE_ICE_FANG] = {
-        .effect = EFFECT_ICE_FANG,
+        .effect = EFFECT_ELEMENTAL_FANG,
         .power = 65,
         .type = TYPE_ICE,
         .accuracy = 95,
@@ -6268,6 +6268,19 @@ const struct BattleMove gBattleMoves[] = {
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
         .flags = F_AFFECTED_BY_PROTECT,
+		.moveClass = CLASS_STATUS,
+    },
+
+    [MOVE_SPOTLIGHT] = {
+        .effect = EFFECT_SPOTLIGHT,
+        .power = 0,
+        .type = TYPE_NORMAL,
+        .accuracy = 0,
+        .pp = 15,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 3,
+        .flags = 0,
 		.moveClass = CLASS_STATUS,
     },
 };
