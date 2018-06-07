@@ -6283,4 +6283,17 @@ const struct BattleMove gBattleMoves[] = {
         .flags = 0,
 		.moveClass = CLASS_STATUS,
     },
+
+    [MOVE_ACUPRESSURE] = {
+        .effect = EFFECT_ACUPRESSURE,
+        .power = 0,
+        .type = TYPE_NORMAL,
+        .accuracy = 0,
+        .pp = 30,
+        .secondaryEffectChance = 0,
+        .target = TARGET_USER,
+        .priority = 0,
+        .flags = 0,
+		.moveClass = CLASS_STATUS,
+    },
 };

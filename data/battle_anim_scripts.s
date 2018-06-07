@@ -498,6 +498,7 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_POWER_SPLIT
 	.4byte Move_GUARD_SPLIT
 	.4byte Move_SPOTLIGHT
+	.4byte Move_ACUPRESSURE
 	.4byte PoundCopy
 
 	.align 2
@@ -14709,4 +14710,33 @@ Move_SPOTLIGHT:
 	waitforvisualfinish
 	createvisualtask sub_812CCA8, 2
 	end
+
+Move_ACUPRESSURE:
+	loadspritegfx 10011
+	loadspritegfx 10301
+	createsprite gBattleAnimSpriteTemplate_Acupressure, 130, 1, 0, -42, -42, 20
+	waitforvisualfinish
+	playsewithpan SE_W030, 63
+	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_BANK_TARGET, 0x039F, 12, 3, 1
+	delay 5
+	createsprite gElectricitySpriteTemplate, 130, 5, 0, 5, 0
+	delay 2
+	createsprite gElectricitySpriteTemplate, 130, -20, 15, 5, 1
+	playsewithpan SE_W085B, 63
+	delay 2
+	createsprite gElectricitySpriteTemplate, 130, 15, 20, 5, 2
+	delay 2
+	createsprite gElectricitySpriteTemplate, 130, 2, -8, 5, 0
+	playsewithpan SE_W085B, 63
+	delay 2
+	createsprite gElectricitySpriteTemplate, 130, -8, 8, 5, 2
+	delay 2
+	createsprite gElectricitySpriteTemplate, 130, 25, 0, 5, 1
+	playsewithpan SE_W085B, 63
+	delay 2
+	createsprite gElectricitySpriteTemplate, 130, -5, 10, 5, 1
+	delay 2
+	createsprite gElectricitySpriteTemplate, 130, -15, -10, 5, 0
+	end
+
 

@@ -3022,6 +3022,7 @@ extern struct CompressedSpriteSheet gBattleAnimSpriteSheet_284;
 extern struct CompressedSpriteSheet gBattleAnimSpriteSheet_285;
 extern struct CompressedSpriteSheet gBattleAnimSpriteSheet_292;
 extern struct CompressedSpriteSheet gBattleAnimSpriteSheet_297;
+extern struct CompressedSpriteSheet gBattleAnimSpriteSheet_301;
 
 extern struct CompressedSpritePalette gBattleAnimSpritePalette_000;
 extern struct CompressedSpritePalette gBattleAnimSpritePalette_001;

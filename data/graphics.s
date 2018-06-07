@@ -2503,6 +2503,10 @@ gBattleAnimSpriteSheet_297:: @ 8D2EFF0
 	.incbin "graphics/battle_anims/sprites/297.4bpp.lz"
 
 	.align 2
+gBattleAnimSpriteSheet_301:: @ 8D2EFF0
+	.incbin "graphics/battle_anims/sprites/301.4bpp.lz"
+
+	.align 2
 gBattleAnimSpriteSheet_251:: @ 8D2F1E4
 	.incbin "graphics/battle_anims/sprites/251.4bpp.lz"
 

@@ -230,7 +230,7 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectSuckerPunch
 	.4byte BattleScript_EffectElementalFang
 	.4byte BattleScript_EffectSpotlight
-	.4byte BattleScript_EffectUnused
+	.4byte BattleScript_EffectAcupressure
 	.4byte BattleScript_EffectFling
 	.4byte BattleScript_EffectQuiverDance
 	.4byte BattleScript_EffectBugBite
@@ -6062,7 +6062,24 @@ BattleScript_EffectSpotlight:
 	goto BattleScript_MoveEnd
 	end
 
-BattleScript_EffectUnused:
-	end
+BattleScript_EffectAcupressure:
+	jumpifstat USER, LESS_THAN, ATTACK, 12, BattleScript_AcupressureStart
+	jumpifstat USER, LESS_THAN, DEFENSE, 12, BattleScript_AcupressureStart
+	jumpifstat USER, LESS_THAN, SPEED, 12, BattleScript_AcupressureStart
+	jumpifstat USER, LESS_THAN, SP_ATTACK, 12, BattleScript_AcupressureStart
+	jumpifstat USER, LESS_THAN, SP_DEFENSE, 12, BattleScript_AcupressureStart
+	jumpifstat USER, LESS_THAN, ACCURACY, 12, BattleScript_AcupressureStart
+	jumpifstat USER, EQUAL, EVASION, 12, BattleScript_AcupressureCantRaiseMultipleStats
+
+BattleScript_AcupressureStart:
+	special 0x38
+	goto BattleScript_EffectStatUp
+
+BattleScript_AcupressureCantRaiseMultipleStats:
+	attackcanceler
+	attackstring
+	ppreduce
+	goto BattleScript_CantRaiseMultipleStats
+
 
 

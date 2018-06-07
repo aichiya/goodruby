@@ -700,6 +700,7 @@ static void sp34_powersplit(void);
 static void sp35_guardsplit(void);
 static void sp36_bpasspowertrick(void);
 static void sp37_spotlight(void);
+static void sp38_acupressure(void);
 
 
 void (* const gBattleScriptingCommandsTable[])(void) =
@@ -15117,6 +15118,7 @@ void (* const gBattleScriptingSpecialTable[])(void) =
 	sp35_guardsplit,
 	sp36_bpasspowertrick,
 	sp37_spotlight,
+	sp38_acupressure,
 };
 
 
@@ -16361,4 +16363,64 @@ static void sp37_spotlight(void)
 {
     gSideTimers[GetBattlerSide(gBankTarget)].followmeTimer = 1;
     gSideTimers[GetBattlerSide(gBankTarget)].followmeTarget = gBankTarget;
+}
+
+static void sp38_acupressure(void)
+{
+	while (1)
+	{
+		u8 value = Random() % 7;
+		switch (value)
+		{
+			case 0: 
+				if (gBattleMons[gBankAttacker].statStages[STAT_STAGE_ATK] < 12)
+				{
+					gBattleStruct->statChanger = 33;
+					return;
+				}
+				break;
+			case 1: 
+				if (gBattleMons[gBankAttacker].statStages[STAT_STAGE_DEF] < 12)
+				{
+					gBattleStruct->statChanger = 34;
+					return;
+				}
+				break;
+			case 2: 
+				if (gBattleMons[gBankAttacker].statStages[STAT_STAGE_SPEED] < 12)
+				{
+					gBattleStruct->statChanger = 35;
+					return;
+				}
+				break;
+			case 3: 
+				if (gBattleMons[gBankAttacker].statStages[STAT_STAGE_SPATK] < 12)
+				{
+					gBattleStruct->statChanger = 36;
+					return;
+				}
+				break;
+			case 4: 
+				if (gBattleMons[gBankAttacker].statStages[STAT_STAGE_SPDEF] < 12)
+				{
+					gBattleStruct->statChanger = 37;
+					return;
+				}
+				break;
+			case 5: 
+				if (gBattleMons[gBankAttacker].statStages[STAT_STAGE_ACC] < 12)
+				{
+					gBattleStruct->statChanger = 38;
+					return;
+				}
+				break;
+			case 6: 
+				if (gBattleMons[gBankAttacker].statStages[STAT_STAGE_EVASION] < 12)
+				{
+					gBattleStruct->statChanger = 39;
+					return;
+				}
+				break;
+		}
+	}
 }

@@ -1926,6 +1926,10 @@ static const u8 MoveDescription_Spotlight[] = _(
     "Draws attention onto the\n"
     "target to redirect moves.");
 
+static const u8 MoveDescription_Acupressure[] = _(
+    "Stimulates the body to\n"
+    "sharply boost one stat.");
+
 
 
 const u8 * const gMoveDescriptions[] = {
@@ -2411,4 +2415,5 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_PowerSplit,
 	MoveDescription_GuardSplit,
 	MoveDescription_Spotlight,
+	MoveDescription_Acupressure,
 };
