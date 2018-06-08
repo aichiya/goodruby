@@ -11318,6 +11318,7 @@ static void atk95_setsandstorm(void)
 
 static void atk96_weatherdamage(void)
 {
+    gBattleMoveDamage = 0;
     if (WEATHER_HAS_EFFECT)
     {
         if (gBattleWeather & WEATHER_SANDSTORM_ANY)
@@ -11348,6 +11349,15 @@ static void atk96_weatherdamage(void)
                 gBattleMoveDamage = 0;
             }
         }
+		if (gBattleWeather & WEATHER_SUN_ANY)
+		{
+			if (gBattleMons[gBankAttacker].ability == ABILITY_SOLAR_POWER)
+			{
+				gBattleMoveDamage = gBattleMons[gBankAttacker].maxHP / 8;
+				if (gBattleMoveDamage == 0)
+					gBattleMoveDamage = 1;
+			}
+		}
     }
     else
         gBattleMoveDamage = 0;

@@ -876,8 +876,10 @@ u8 UpdateTurnCounters(void)
                     gBattlescriptCurrInstr = BattleScript_SunlightFaded;
                 }
                 else
-                    gBattlescriptCurrInstr = BattleScript_SunlightContinues;
+                    gBattlescriptCurrInstr = BattleScript_DamagingWeatherContinues;
 
+                gBattleStruct->animArg1 = B_ANIM_SUN_CONTINUES;
+                gBattleCommunication[MULTISTRING_CHOOSER] = 2;
                 BattleScriptExecute(gBattlescriptCurrInstr);
                 effect++;
             }

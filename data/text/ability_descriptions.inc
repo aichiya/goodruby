@@ -265,6 +265,9 @@ gAbilityDescription_Anticipation:
 gAbilityDescription_Frisk:
 	.string "Scouts foe’s held items.$"
 
+gAbilityDescription_SolarPower:
+	.string "Goes all-out in sunshine.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -357,3 +360,4 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_TangledFeet
 	.4byte gAbilityDescription_Anticipation
 	.4byte gAbilityDescription_Frisk
+	.4byte gAbilityDescription_SolarPower

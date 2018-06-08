@@ -340,6 +340,9 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
                 damage /= 2;
                 break;
             }
+			
+			if (attacker->ability == ABILITY_SOLAR_POWER && moveClass == 1)
+				damage = (15 * damage) / 10;
         }
         
         // sand
