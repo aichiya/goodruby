@@ -6081,5 +6081,26 @@ BattleScript_AcupressureCantRaiseMultipleStats:
 	ppreduce
 	goto BattleScript_CantRaiseMultipleStats
 
+BattleScript_Frisk1::
+	call BattleScript_FriskStart
+	end3
 
+BattleScript_FriskStart:
+	pause 32
+
+BattleScript_Frisk2::
+	setbyte gBankTarget, 0
+
+BattleScript_FriskMeat:
+	trygetintimidatetarget BattleScript_FriskEnd
+	special 0x39
+	printstring BATTLE_TEXT_Frisk
+	waitmessage 64
+
+BattleScript_FriskTail:
+	addbyte gBankTarget, 1
+	goto BattleScript_FriskMeat
+
+BattleScript_FriskEnd:
+	return
 

@@ -177,6 +177,8 @@ extern u8 BattleScript_AbilityCuredStatus[]; //ability status clear
 extern u8 BattleScript_SynchronizeActivates[];
 extern u8 gUnknown_081D978C[]; //intimidate1
 extern u8 gUnknown_081D9795[]; //intimidate2
+extern u8 BattleScript_Frisk1[];
+extern u8 BattleScript_Frisk2[];
 extern u8 BattleScript_TraceActivates[];
 
 extern u8 BattleScript_WhiteHerbEnd2[];
@@ -1924,6 +1926,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
                 }
                 break;
             case ABILITY_INTIMIDATE:
+			case ABILITY_FRISK:
                 if (!(gSpecialStatuses[bank].intimidatedPoke))
                 {
                     gStatuses3[bank] |= STATUS3_INTIMIDATE_POKES;
@@ -2524,6 +2527,15 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
                     effect++;
                     break;
                 }
+				else if (gBattleMons[i].ability == ABILITY_FRISK && gStatuses3[i] & STATUS3_INTIMIDATE_POKES)
+				{
+                    gLastUsedAbility = ABILITY_INTIMIDATE;
+                    gStatuses3[i] &= ~(STATUS3_INTIMIDATE_POKES);
+                    BattleScriptPushCursorAndCallback(BattleScript_Frisk1);
+                    gBattleStruct->intimidateBank = i;
+                    effect++;
+                    break;
+				}
             }
             break;
         case ABILITYEFFECT_TRACE: // 11
@@ -2650,6 +2662,15 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
                     effect++;
                     break;
                 }
+				else if (gBattleMons[i].ability == ABILITY_FRISK && gStatuses3[i] & STATUS3_INTIMIDATE_POKES)
+				{
+                    gLastUsedAbility = ABILITY_INTIMIDATE;
+                    gStatuses3[i] &= ~(STATUS3_INTIMIDATE_POKES);
+                    BattleScriptPushCursorAndCallback(BattleScript_Frisk2);
+                    gBattleStruct->intimidateBank = i;
+                    effect++;
+                    break;
+				}
             }
             break;
         case ABILITYEFFECT_CHECK_OTHER_SIDE: // 12

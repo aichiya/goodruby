@@ -87,3 +87,4 @@ gAbilityNames:: @ 81FA248
 	.string "SOLID ROCK$", 13
 	.string "TANGLED FEET$", 13
 	.string "ANTICIPATION$", 13
+	.string "FRISK$", 13

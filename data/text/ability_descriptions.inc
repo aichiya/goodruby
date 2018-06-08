@@ -262,6 +262,9 @@ gAbilityDescription_TangledFeet:
 gAbilityDescription_Anticipation:
 	.string "Senses dangerous moves.$"
 
+gAbilityDescription_Frisk:
+	.string "Scouts foe’s held items.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -353,3 +356,4 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_SolidRock
 	.4byte gAbilityDescription_TangledFeet
 	.4byte gAbilityDescription_Anticipation
+	.4byte gAbilityDescription_Frisk

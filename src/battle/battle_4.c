@@ -701,6 +701,7 @@ static void sp35_guardsplit(void);
 static void sp36_bpasspowertrick(void);
 static void sp37_spotlight(void);
 static void sp38_acupressure(void);
+static void sp39_frisk(void);
 
 
 void (* const gBattleScriptingCommandsTable[])(void) =
@@ -15119,6 +15120,7 @@ void (* const gBattleScriptingSpecialTable[])(void) =
 	sp36_bpasspowertrick,
 	sp37_spotlight,
 	sp38_acupressure,
+	sp39_frisk,
 };
 
 
@@ -16422,5 +16424,14 @@ static void sp38_acupressure(void)
 				}
 				break;
 		}
+	}
+}
+
+static void sp39_frisk(void)
+{
+	gLastUsedItem = gBattleMons[gBankTarget].item;
+	if (gLastUsedItem == 0)
+	{
+		gBattlescriptCurrInstr += 6;
 	}
 }

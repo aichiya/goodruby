@@ -391,3 +391,4 @@
 	enum BATTLE_TEXT_PowerSplit
 	enum BATTLE_TEXT_GuardSplit
 	enum BATTLE_TEXT_CenterAttention2
+	enum BATTLE_TEXT_Frisk
