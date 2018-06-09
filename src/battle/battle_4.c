@@ -702,6 +702,7 @@ static void sp36_bpasspowertrick(void);
 static void sp37_spotlight(void);
 static void sp38_acupressure(void);
 static void sp39_frisk(void);
+static void sp3A_mefirst(void);
 
 
 void (* const gBattleScriptingCommandsTable[])(void) =
@@ -981,7 +982,7 @@ static const struct StatFractions gAccuracyStageRatios[] =
 };
 
 // The chance is 1/N for each stage.
-static const u16 sCriticalHitChance[] = {16, 8, 4, 3, 2};
+static const u16 sCriticalHitChance[] = {24, 8, 2, 1, 1};
 
 static const u32 sStatusFlagsForMoveEffects[] =
 {
@@ -1573,6 +1574,7 @@ static void atk04_critcalc(void)
                 + (gBattleMoves[gCurrentMove].effect == EFFECT_SKY_ATTACK)
                 + (gBattleMoves[gCurrentMove].effect == EFFECT_BLAZE_KICK)
                 + (gBattleMoves[gCurrentMove].effect == EFFECT_POISON_TAIL)
+				+ (gBattleMons[gBankAttacker].ability == ABILITY_SUPER_LUCK)
                 + (holdEffect == HOLD_EFFECT_SCOPE_LENS)
                 + 2 * (holdEffect == HOLD_EFFECT_LUCKY_PUNCH && gBattleMons[gBankAttacker].species == SPECIES_CHANSEY)
                 + 2 * (holdEffect == HOLD_EFFECT_STICK && gBattleMons[gBankAttacker].species == SPECIES_FARFETCHD);
@@ -6399,6 +6401,7 @@ static void atk3C_return(void)
 
 static void atk3D_end(void)
 {
+	gBattleStruct->meFirstTracker = 0;
     gMoveResultFlags = 0;
     gActiveBattler = 0;
     gCurrentActionFuncId = 0xB;
@@ -15131,6 +15134,7 @@ void (* const gBattleScriptingSpecialTable[])(void) =
 	sp37_spotlight,
 	sp38_acupressure,
 	sp39_frisk,
+	sp3A_mefirst,
 };
 
 
@@ -16020,13 +16024,13 @@ static const u16 sMovesForbiddenToCopycat[] =
 	 MOVE_COVET,
 	 MOVE_DESTINY_BOND,
 	 MOVE_DETECT,
-	 // dragon tail
+	 MOVE_DRAGON_TAIL,
 	 MOVE_ENDURE,
-	 // feint
+	 MOVE_FEINT,
 	 MOVE_FOCUS_PUNCH,
 	 MOVE_FOLLOW_ME,
 	 MOVE_HELPING_HAND,
-	 // me first
+	 MOVE_ME_FIRST,
 	 MOVE_METRONOME,
 	 MOVE_MIMIC,
 	 MOVE_MIRROR_COAT,
@@ -16443,5 +16447,83 @@ static void sp39_frisk(void)
 	if (gLastUsedItem == 0)
 	{
 		gBattlescriptCurrInstr += 6;
+	}
+}
+
+
+static const u16 sMovesForbiddenToMeFirst[] =
+{
+	// beak blast
+	// chatter
+	MOVE_COUNTER,
+	MOVE_COVET,
+	MOVE_FOCUS_PUNCH,
+	MOVE_METAL_BURST,
+	MOVE_MIRROR_COAT,
+	// shell trap
+	MOVE_STRUGGLE,
+	MOVE_THIEF,
+	0,
+};
+
+static void sp3A_mefirst(void)
+{
+	// If target has moved, fail
+	// If target is trying to use a status move, fail
+	// If target is trying to use a non-copiable move, fail
+	// Mimic target's move
+	u8 failure = 0;
+	u8 i = 0;
+	u16 move = 0;
+	
+	if (gActionsByTurnOrder[gBankTarget] != ACTION_USE_MOVE)
+		failure = 1;
+	if (gProtectStructs[gBankTarget].onlyStruggle)
+	{
+		move = MOVE_STRUGGLE;
+		failure = 1;
+	}
+	else
+	{
+		move = gBattleMons[gBankTarget].moves[ewram1608Carr(gBankTarget)];
+	}
+	
+	if (gBattleMoves[move].moveClass == 2)
+		failure = 1;
+	else
+	{
+		while (sMovesForbiddenToMeFirst[i] && !failure)
+		{
+			if (sMovesForbiddenToMeFirst[i] == move)
+			{
+				failure = 1;
+			}
+			i++;
+		}
+	}
+	
+	for (i = 0; i < 4 && !failure; i++)
+	{
+		if (gBanksByTurnOrder[i] == gBankAttacker)
+			break;
+		if (gBanksByTurnOrder[i] == gBankTarget)
+		{
+			failure = 1;
+			break;
+		}
+	}
+	
+	if (failure)
+	{
+		// failure to execute means we fall through in the battle script
+		// so, do nothing here
+	}
+	else
+	{
+		gHitMarker &= ~(HITMARKER_ATTACKSTRING_PRINTED);
+        gCurrentMove = move;
+        gBankTarget = GetMoveTarget(gCurrentMove, 0);
+        gBattlescriptCurrInstr = gBattleScriptsForMoveEffects[gBattleMoves[gCurrentMove].effect];
+		gBattleStruct->meFirstTracker = 1;
 	}
 }

@@ -6584,6 +6584,7 @@ void HandleAction_UseMove(void)
     }
 
     gCritMultiplier = 1;
+	gBattleStruct->meFirstTracker = 0;
     eDmgMultiplier = 1;
     ewram160E7 = 0;
     gMoveResultFlags = 0;

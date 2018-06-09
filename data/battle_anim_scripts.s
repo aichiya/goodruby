@@ -499,6 +499,7 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_GUARD_SPLIT
 	.4byte Move_SPOTLIGHT
 	.4byte Move_ACUPRESSURE
+	.4byte Move_ME_FIRST
 	.4byte PoundCopy
 
 	.align 2
@@ -14739,4 +14740,5 @@ Move_ACUPRESSURE:
 	createsprite gElectricitySpriteTemplate, 130, -15, -10, 5, 0
 	end
 
-
+Move_ME_FIRST:
+	end

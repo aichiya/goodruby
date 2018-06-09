@@ -268,6 +268,9 @@ gAbilityDescription_Frisk:
 gAbilityDescription_SolarPower:
 	.string "Goes all-out in sunshine.$"
 
+gAbilityDescription_SuperLuck:
+	.string "Boosts critical hit ratio.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -361,3 +364,4 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Anticipation
 	.4byte gAbilityDescription_Frisk
 	.4byte gAbilityDescription_SolarPower
+	.4byte gAbilityDescription_SuperLuck

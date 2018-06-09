@@ -89,3 +89,4 @@ gAbilityNames:: @ 81FA248
 	.string "ANTICIPATION$", 13
 	.string "FRISK$", 13
 	.string "SOLAR POWER$", 13
+	.string "SUPER LUCK$", 13

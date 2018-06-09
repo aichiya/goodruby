@@ -355,6 +355,10 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     // flash fire triggered
     if ((eFlashFireArr.arr[bankAtk] & 1) && type == TYPE_FIRE)
         damage = (15 * damage) / 10;
+	
+	// me first bonus
+	if (gBattleStruct->meFirstTracker)
+		damage = (15 * damage) / 10;
 
     // spread move penalty
     if ((gBattleTypeFlags & BATTLE_TYPE_DOUBLE) && (gBattleMoves[move].target == 8 || gBattleMoves[move].target == 32) && CountAliveMons(2) == 2)

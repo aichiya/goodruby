@@ -4699,7 +4699,7 @@ const struct BattleMove gBattleMoves[] = {
     },
 
     [MOVE_FLARE_BLITZ] = {
-        .effect = EFFECT_FLARE_BLITZ,
+        .effect = EFFECT_DOUBLE_EDGE,
         .power = 120,
         .type = TYPE_FIRE,
         .accuracy = 100,
@@ -6280,7 +6280,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 3,
-        .flags = 0,
+        .flags = F_AFFECTED_BY_PROTECT,
 		.moveClass = CLASS_STATUS,
     },
 
@@ -6294,6 +6294,19 @@ const struct BattleMove gBattleMoves[] = {
         .target = TARGET_USER,
         .priority = 0,
         .flags = 0,
+		.moveClass = CLASS_STATUS,
+    },
+
+    [MOVE_ME_FIRST] = {
+        .effect = EFFECT_ME_FIRST,
+        .power = 0,
+        .type = TYPE_NORMAL,
+        .accuracy = 0,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_PROTECT,
 		.moveClass = CLASS_STATUS,
     },
 };

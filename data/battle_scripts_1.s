@@ -225,7 +225,7 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectDragonDance
 	.4byte BattleScript_EffectCamouflage
 	.4byte BattleScript_EffectSpeedUpHit
-	.4byte BattleScript_EffectFlareBlitz
+	.4byte BattleScript_EffectMeFirst
 	.4byte BattleScript_EffectHammerArm
 	.4byte BattleScript_EffectSuckerPunch
 	.4byte BattleScript_EffectElementalFang
@@ -2691,6 +2691,7 @@ BattleScript_EffectSecretPower: @ 81D8918
 	goto BattleScript_EffectHit
 
 BattleScript_EffectDoubleEdge: @ 81D891E
+	jumpifmove MOVE_FLARE_BLITZ, BattleScript_EffectFlareBlitz
 	setmoveeffect EFFECT_RECOIL_33_PARALYSIS | AFFECTS_USER | CERTAIN
 	goto BattleScript_EffectHit
 
@@ -6103,4 +6104,14 @@ BattleScript_FriskTail:
 
 BattleScript_FriskEnd:
 	return
+
+BattleScript_EffectMeFirst:
+	attackcanceler
+	attackstring
+	pause 64
+	special 0x3A
+	ppreduce
+	goto BattleScript_ButItFailed
+	end
+
 

@@ -1930,6 +1930,10 @@ static const u8 MoveDescription_Acupressure[] = _(
     "Stimulates the body to\n"
     "sharply boost one stat.");
 
+static const u8 MoveDescription_MeFirst[] = _(
+    "Pre-emptively copies the\n"
+    "foes move with more power.");
+
 
 
 const u8 * const gMoveDescriptions[] = {
@@ -2416,4 +2420,5 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_GuardSplit,
 	MoveDescription_Spotlight,
 	MoveDescription_Acupressure,
+	MoveDescription_MeFirst,
 };
