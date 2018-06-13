@@ -1934,6 +1934,18 @@ static const u8 MoveDescription_MeFirst[] = _(
     "Pre-emptively copies the\n"
     "foes move with more power.");
 
+static const u8 MoveDescription_PsychoShift[] = _(
+    "Transfers a status\n"
+    "problem to the target.");
+
+static const u8 MoveDescription_PowerSwap[] = _(
+    "Switch changes to Attack\n"
+    "and Sp. Atk with the foe.");
+
+static const u8 MoveDescription_GuardSwap[] = _(
+    "Switch changes to Defense\n"
+    "and Sp. Def with the foe.");
+
 
 
 const u8 * const gMoveDescriptions[] = {
@@ -2421,4 +2433,7 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_Spotlight,
 	MoveDescription_Acupressure,
 	MoveDescription_MeFirst,
+	MoveDescription_PsychoShift,
+	MoveDescription_PowerSwap,
+	MoveDescription_GuardSwap,
 };

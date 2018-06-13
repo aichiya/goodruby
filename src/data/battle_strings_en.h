@@ -396,6 +396,8 @@ enum
 	BATTLE_TEXT_CenteredAttention2,
 	BATTLE_TEXT_Frisk,
 	BATTLE_TEXT_SolarPowerHurts,
+	BATTLE_TEXT_PowerSwap,
+	BATTLE_TEXT_GuardSwap,
 };
 
 const u8 BattleText_UnknownString[] = _("{STRING 33}");
@@ -922,6 +924,8 @@ const u8 BattleText_GuardSplit[] = _("{ATTACKING_MON} shared its\nguard with {DE
 const u8 BattleText_CenterAttention2[] = _("{DEFENDING_MON} became the\ncenter of attention!");
 const u8 BattleText_Frisk[] = _("{STRING 16} Frisked {DEFENDING_MON}\nand found its {STRING 19}!");
 const u8 BattleText_SolarPowerHurts[] = _("{ATTACKING_MON} is hurt\nby its Solar Power!");
+const u8 BattleText_PowerSwap[] = _("{ATTACKING_MON} switched all\nchanges to its Attack and Sp. Atk\lwith {DEFENDING_MON}!");
+const u8 BattleText_GuardSwap[] = _("{ATTACKING_MON} switched all\nchanges to its Defense and Sp. Def\lwith {DEFENDING_MON}!");
 
 const u8 *const gUnknown_08400F58[] =
 {
@@ -1340,6 +1344,8 @@ const u8 *const gBattleStringsTable[] =
 	BattleText_CenterAttention2,
 	BattleText_Frisk,
 	BattleText_SolarPowerHurts,
+	BattleText_PowerSwap,
+	BattleText_GuardSwap,
 };
 
 // below are lists of battle string enums and NOT pointers to the strings.

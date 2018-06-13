@@ -267,5 +267,7 @@ gSpriteAnimSpriteTemplate_PowerTrickB::
 	.align 2
 gBattleAnimSpriteTemplate_Acupressure::
 	spr_template 10301, 10301, gOamData_837DFF4, gDummySpriteAnimTable, NULL, gDummySpriteAffineAnimTable, sub_80CC6CC
-	
+
+
+
 

@@ -393,3 +393,5 @@
 	enum BATTLE_TEXT_CenterAttention2
 	enum BATTLE_TEXT_Frisk
 	enum BATTLE_TEXT_SolarPowerHurts
+	enum BATTLE_TEXT_PowerSwap
+	enum BATTLE_TEXT_GuardSwap

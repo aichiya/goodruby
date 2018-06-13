@@ -206,7 +206,7 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectRefresh
 	.4byte BattleScript_EffectGrudge
 	.4byte BattleScript_EffectSnatch
-	.4byte BattleScript_EffectLowKick
+	.4byte BattleScript_EffectWeightBased
 	.4byte BattleScript_EffectSecretPower
 	.4byte BattleScript_EffectDoubleEdge
 	.4byte BattleScript_EffectTeeterDance
@@ -250,7 +250,7 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectEchoedVoice
 	.4byte BattleScript_EffectWakeUpSlap
 	.4byte BattleScript_EffectCloseCombat
-	.4byte BattleScript_EffectHeavySlam
+	.4byte BattleScript_EffectPsychoShift
 	.4byte BattleScript_EffectAquaRing
 	.4byte BattleScript_EffectSoak
 	.4byte BattleScript_EffectStealthRock
@@ -2678,7 +2678,8 @@ BattleScript_EffectSnatch: @ 81D88F0
 	waitmessage 64
 	goto BattleScript_MoveEnd
 
-BattleScript_EffectLowKick: @ 81D8908
+BattleScript_EffectWeightBased:
+	jumpifmove MOVE_HEAVY_SLAM, BattleScript_EffectHeavySlam
 	attackcanceler
 	attackstring
 	ppreduce
@@ -6006,12 +6007,14 @@ BattleScript_NobleRoarEnd:
 	goto BattleScript_MoveEnd
 
 BattleScript_EffectStatMuckery:
-	jumpifmove MOVE_POWER_TRICK, BattleScriptPowerTrick
-	jumpifmove MOVE_POWER_SPLIT, BattleScriptPowerSplit
-	jumpifmove MOVE_GUARD_SPLIT, BattleScriptGuardSplit
+	jumpifmove MOVE_POWER_TRICK, BattleScript_PowerTrick
+	jumpifmove MOVE_POWER_SPLIT, BattleScript_PowerSplit
+	jumpifmove MOVE_GUARD_SPLIT, BattleScript_GuardSplit
+	jumpifmove MOVE_POWER_SWAP, BattleScript_PowerSwap
+	jumpifmove MOVE_GUARD_SWAP, BattleScript_GuardSwap
 	goto BattleScript_EffectSplash
 
-BattleScriptPowerTrick:
+BattleScript_PowerTrick:
 	attackcanceler
 	attackstring
 	ppreduce
@@ -6022,7 +6025,7 @@ BattleScriptPowerTrick:
 	waitmessage 64
 	goto BattleScript_MoveEnd
 
-BattleScriptPowerSplit:
+BattleScript_PowerSplit:
 	attackcanceler
 	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
 	attackstring
@@ -6036,7 +6039,7 @@ BattleScriptPowerSplit:
 	goto BattleScript_MoveEnd
 	end
 
-BattleScriptGuardSplit:
+BattleScript_GuardSplit:
 	attackcanceler
 	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
 	attackstring
@@ -6114,4 +6117,120 @@ BattleScript_EffectMeFirst:
 	goto BattleScript_ButItFailed
 	end
 
+BattleScript_PowerSwap:
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	attackanimation
+	waitanimation
+	special 0x3B
+	printstring BATTLE_TEXT_PowerSwap
+	waitmessage 64
+	goto BattleScript_MoveEnd
 
+BattleScript_GuardSwap:
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	attackanimation
+	waitanimation
+	special 0x3C
+	printstring BATTLE_TEXT_GuardSwap
+	waitmessage 64
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectPsychoShift:
+	attackcanceler
+	attackstring
+	ppreduce
+	jumpifsideaffecting TARGET, SIDE_STATUS_SAFEGUARD, BattleScript_SafeguardProtected
+	jumpifstatus2 TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
+	accuracycheck BattleScript_ButItFailed, ACC_CURR_MOVE
+	jumpifstatus USER, PSN, BattleScript_PsychoShiftPoison
+	jumpifstatus USER, TOX, BattleScript_PsychoShiftToxic
+	jumpifstatus USER, BRN, BattleScript_PsychoShiftBurn
+	jumpifstatus USER, SLP, BattleScript_PsychoShiftSleep
+	jumpifstatus USER, PAR, BattleScript_PsychoShiftPara
+	goto BattleScript_ButItFailed
+
+BattleScript_PsychoShiftPoison:
+	jumpifability TARGET, ABILITY_IMMUNITY, BattleScript_ImmunityProtected
+	jumpifstatus TARGET, PSN, BattleScript_AlreadyPoisoned
+	jumpifstatus TARGET, TOX, BattleScript_AlreadyPoisoned
+	jumpiftype TARGET, TYPE_POISON, BattleScript_NotAffected
+	jumpiftype TARGET, TYPE_STEEL, BattleScript_NotAffected
+	jumpifstatus TARGET, SLP | PSN | BRN | FRZ | PAR | TOX, BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	setmoveeffect EFFECT_POISON
+	seteffectprimary
+	cureifburnedparalysedorpoisoned BattleScript_ButItFailed
+	printstring BATTLE_TEXT_StatusNormal
+	waitmessage 64
+	updatestatusicon USER
+	goto BattleScript_MoveEnd
+
+BattleScript_PsychoShiftToxic:
+	jumpifability TARGET, ABILITY_IMMUNITY, BattleScript_ImmunityProtected
+	jumpifstatus TARGET, PSN, BattleScript_AlreadyPoisoned
+	jumpifstatus TARGET, TOX, BattleScript_AlreadyPoisoned
+	jumpiftype TARGET, TYPE_POISON, BattleScript_NotAffected
+	jumpiftype TARGET, TYPE_STEEL, BattleScript_NotAffected
+	jumpifstatus TARGET, SLP | PSN | BRN | FRZ | PAR | TOX, BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	setmoveeffect EFFECT_TOXIC
+	seteffectprimary
+	cureifburnedparalysedorpoisoned BattleScript_ButItFailed
+	printstring BATTLE_TEXT_StatusNormal
+	waitmessage 64
+	updatestatusicon USER
+	goto BattleScript_MoveEnd
+
+BattleScript_PsychoShiftBurn:
+	jumpifstatus TARGET, BRN, BattleScript_AlreadyBurned
+	jumpiftype TARGET, TYPE_FIRE, BattleScript_NotAffected
+	jumpifability TARGET, ABILITY_WATER_VEIL, BattleScript_WaterVeilPrevents
+	jumpifstatus TARGET, SLP | PSN | BRN | FRZ | PAR | TOX, BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	setmoveeffect EFFECT_BURN
+	seteffectprimary
+	cureifburnedparalysedorpoisoned BattleScript_ButItFailed
+	printstring BATTLE_TEXT_StatusNormal
+	waitmessage 64
+	updatestatusicon USER
+	goto BattleScript_MoveEnd
+
+BattleScript_PsychoShiftSleep:
+	jumpifstatus TARGET, SLP, BattleScript_AlreadyAsleep
+	jumpifcantmakeasleep BattleScript_CantMakeAsleep
+	jumpifstatus TARGET, SLP | PSN | BRN | FRZ | PAR | TOX, BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	setmoveeffect EFFECT_SLEEP
+	seteffectprimary
+	special 0x3D
+	printstring BATTLE_TEXT_StatusNormal
+	waitmessage 64
+	updatestatusicon USER
+	goto BattleScript_MoveEnd
+
+BattleScript_PsychoShiftPara:
+	jumpifability TARGET, ABILITY_LIMBER, BattleScript_LimberProtected
+	jumpifstatus TARGET, PAR, BattleScript_AlreadyParalyzed
+	jumpifstatus TARGET, SLP | PSN | BRN | FRZ | PAR | TOX, BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	setmoveeffect EFFECT_PARALYSIS
+	seteffectprimary
+	cureifburnedparalysedorpoisoned BattleScript_ButItFailed
+	printstring BATTLE_TEXT_StatusNormal
+	waitmessage 64
+	updatestatusicon USER
+	goto BattleScript_MoveEnd
+	
+	
+	end

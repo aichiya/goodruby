@@ -194,7 +194,7 @@ AI_CheckBadMove_CheckEffect: @ 81DA14F
 	if_effect EFFECT_ENDEAVOR, AI_CBM_HighRiskForDamage
 	if_effect EFFECT_IMPRISON, AI_CBM_Imprison
 	if_effect EFFECT_REFRESH, AI_CBM_Refresh
-	if_effect EFFECT_LOW_KICK, AI_CBM_HighRiskForDamage
+	if_effect EFFECT_WEIGHT_BASED, AI_CBM_HighRiskForDamage
 	if_effect EFFECT_MUD_SPORT, AI_CBM_MudSport
 	if_effect EFFECT_TICKLE, AI_CBM_Tickle
 	if_effect EFFECT_COSMIC_POWER, AI_CBM_CosmicPower

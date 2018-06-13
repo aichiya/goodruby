@@ -703,6 +703,9 @@ static void sp37_spotlight(void);
 static void sp38_acupressure(void);
 static void sp39_frisk(void);
 static void sp3A_mefirst(void);
+static void sp3B_powerswap(void);
+static void sp3C_guardswap(void);
+static void sp3D_psychoshiftsleep(void);
 
 
 void (* const gBattleScriptingCommandsTable[])(void) =
@@ -15135,6 +15138,9 @@ void (* const gBattleScriptingSpecialTable[])(void) =
 	sp38_acupressure,
 	sp39_frisk,
 	sp3A_mefirst,
+	sp3B_powerswap,
+	sp3C_guardswap,
+	sp3D_psychoshiftsleep,
 };
 
 
@@ -16526,4 +16532,34 @@ static void sp3A_mefirst(void)
         gBattlescriptCurrInstr = gBattleScriptsForMoveEffects[gBattleMoves[gCurrentMove].effect];
 		gBattleStruct->meFirstTracker = 1;
 	}
+}
+
+static void sp3B_powerswap(void)
+{
+	u16 buffer = gBattleMons[gBankAttacker].statStages[STAT_STAGE_ATK];
+	gBattleMons[gBankAttacker].statStages[STAT_STAGE_ATK] = gBattleMons[gBankTarget].statStages[STAT_STAGE_ATK];
+	gBattleMons[gBankTarget].statStages[STAT_STAGE_ATK] = buffer;
+	
+	buffer = gBattleMons[gBankAttacker].statStages[STAT_STAGE_SPATK];
+	gBattleMons[gBankAttacker].statStages[STAT_STAGE_SPATK] = gBattleMons[gBankTarget].statStages[STAT_STAGE_SPATK];
+	gBattleMons[gBankTarget].statStages[STAT_STAGE_SPATK] = buffer;
+}
+
+static void sp3C_guardswap(void)
+{
+	u16 buffer = gBattleMons[gBankAttacker].statStages[STAT_STAGE_DEF];
+	gBattleMons[gBankAttacker].statStages[STAT_STAGE_DEF] = gBattleMons[gBankTarget].statStages[STAT_STAGE_DEF];
+	gBattleMons[gBankTarget].statStages[STAT_STAGE_DEF] = buffer;
+	
+	buffer = gBattleMons[gBankAttacker].statStages[STAT_STAGE_SPDEF];
+	gBattleMons[gBankAttacker].statStages[STAT_STAGE_SPDEF] = gBattleMons[gBankTarget].statStages[STAT_STAGE_SPDEF];
+	gBattleMons[gBankTarget].statStages[STAT_STAGE_SPDEF] = buffer;
+}
+
+static void sp3D_psychoshiftsleep(void)
+{
+    gBattleMons[gBankAttacker].status1 &= ~(STATUS_SLEEP);
+    gActiveBattler = gBankAttacker;
+    EmitSetMonData(0, REQUEST_STATUS_BATTLE, 0, 4, &gBattleMons[gBankAttacker].status1);
+    MarkBufferBankForExecution(gBankAttacker);
 }

@@ -484,4 +484,7 @@ const u8 gMoveNames[][13] = {
 	[MOVE_SPOTLIGHT] = _("Spotlight"),
 	[MOVE_ACUPRESSURE] = _("Acupressure"),
 	[MOVE_ME_FIRST] = _("Me First"),
+	[MOVE_PSYCHO_SHIFT] = _("Psycho Shift"),
+	[MOVE_POWER_SWAP] = _("Power Swap"),
+	[MOVE_GUARD_SWAP] = _("Guard Swap"),
 };

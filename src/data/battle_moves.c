@@ -877,7 +877,7 @@ const struct BattleMove gBattleMoves[] = {
     },
 
     [MOVE_LOW_KICK] = {
-        .effect = EFFECT_LOW_KICK,
+        .effect = EFFECT_WEIGHT_BASED,
         .power = 1,
         .type = TYPE_FIGHTING,
         .accuracy = 100,
@@ -5427,7 +5427,7 @@ const struct BattleMove gBattleMoves[] = {
     },
 
     [MOVE_HEAVY_SLAM] = {
-        .effect = EFFECT_HEAVY_SLAM,
+        .effect = EFFECT_WEIGHT_BASED,
         .power = 1,
         .type = TYPE_STEEL,
         .accuracy = 100,
@@ -6307,6 +6307,45 @@ const struct BattleMove gBattleMoves[] = {
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
         .flags = F_AFFECTED_BY_PROTECT,
+		.moveClass = CLASS_STATUS,
+    },
+
+    [MOVE_PSYCHO_SHIFT] = {
+        .effect = EFFECT_PSYCHO_SHIFT,
+        .power = 0,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
+		.moveClass = CLASS_STATUS,
+    },
+
+    [MOVE_POWER_SWAP] = {
+        .effect = EFFECT_STAT_MUCKERY,
+        .power = 0,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 0,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
+		.moveClass = CLASS_STATUS,
+    },
+
+    [MOVE_GUARD_SWAP] = {
+        .effect = EFFECT_STAT_MUCKERY,
+        .power = 0,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 0,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
 		.moveClass = CLASS_STATUS,
     },
 };

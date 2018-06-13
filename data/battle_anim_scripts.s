@@ -499,7 +499,10 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_GUARD_SPLIT
 	.4byte Move_SPOTLIGHT
 	.4byte Move_ACUPRESSURE
-	.4byte Move_ME_FIRST
+	.4byte Move_DRAGON_CLAW
+	.4byte Move_PSYCHO_SHIFT
+	.4byte Move_POWER_SWAP
+	.4byte Move_GUARD_SWAP
 	.4byte PoundCopy
 
 	.align 2
@@ -14665,19 +14668,7 @@ Move_POWER_TRICK:
 	waitforvisualfinish
 	end
 
-Move_POWER_SPLIT:
-	loadspritegfx 10251
-	loadspritegfx 10300
-	createvisualtask sub_80DC0B0, 3, 1, 2
-	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_BANK_TARGET, 0x7DEF, 12, 3, 1
-	loopsewithpan SE_W179, 192, 24, 3
-	delay 16
-	createvisualtask sub_80DC0B0, 3, 0, 2
-	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_BANK_ATTACKER, 0x7DEF, 12, 3, 1
-	waitforvisualfinish
-	end
-
-Move_GUARD_SPLIT:
+Move_POWER_SWAP:
 	loadspritegfx 10251
 	loadspritegfx 10299
 	createvisualtask sub_80DC0B0, 3, 1, 1
@@ -14686,6 +14677,18 @@ Move_GUARD_SPLIT:
 	delay 16
 	createvisualtask sub_80DC0B0, 3, 0, 1
 	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_BANK_ATTACKER, 0x3DFF, 12, 3, 1
+	waitforvisualfinish
+	end
+
+Move_GUARD_SWAP:
+	loadspritegfx 10251
+	loadspritegfx 10300
+	createvisualtask sub_80DC0B0, 3, 1, 2
+	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_BANK_TARGET, 0x7DEF, 12, 3, 1
+	loopsewithpan SE_W179, 192, 24, 3
+	delay 16
+	createvisualtask sub_80DC0B0, 3, 0, 2
+	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_BANK_ATTACKER, 0x7DEF, 12, 3, 1
 	waitforvisualfinish
 	end
 
@@ -14740,5 +14743,34 @@ Move_ACUPRESSURE:
 	createsprite gElectricitySpriteTemplate, 130, -15, -10, 5, 0
 	end
 
-Move_ME_FIRST:
+Move_PSYCHO_SHIFT:
+	loadspritegfx 10203
+	call Unknown_81D61E7
+	
+	panse_27 SE_W115, 63, 192, 253, 0
+	createsprite gBattleAnimSpriteTemplate_83D79A4, 3, 0, 0, 0, 0, 0x5A94, 4
+	createsprite gBattleAnimSpriteTemplate_83D795C, 40, 0, 0, 1, 0
+	delay 14
+	
+	panse_27 SE_W115, 63, 192, 253, 0
+	createsprite gBattleAnimSpriteTemplate_83D79A4, 3, 0, 0, 0, 0, 0x5A94, 4
+	createsprite gBattleAnimSpriteTemplate_83D795C, 40, 0, 0, 1, 0
+	delay 14
+	
+	panse_27 SE_W115, 63, 192, 253, 0
+	createsprite gBattleAnimSpriteTemplate_83D79A4, 3, 0, 0, 0, 0, 0x5A94, 4
+	createsprite gBattleAnimSpriteTemplate_83D795C, 40, 0, 0, 1, 0
+	delay 14
+	
+	waitforvisualfinish
+	call Unknown_81D61F3
+	waitforvisualfinish
+	end
+
+Move_POWER_SPLIT:
+    goto Move_POWER_SWAP
+	end
+
+Move_GUARD_SPLIT:
+    goto Move_GUARD_SWAP
 	end
