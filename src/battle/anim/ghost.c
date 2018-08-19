@@ -20,11 +20,11 @@ static void sub_80DDB6C(struct Sprite *sprite);
 static void sub_80DDBD8(struct Sprite *);
 static void sub_80DDC4C(struct Sprite *);
 static void sub_80DDCC8(struct Sprite *);
-static void sub_80DDD58(struct Sprite *sprite);
+void sub_80DDD58(struct Sprite *sprite);
 static void sub_80DDD78(struct Sprite *);
 static void sub_80DDE7C(u8 taskId);
 static void sub_80DDED0(u8 taskId);
-static void sub_80DDF40(struct Sprite *sprite);
+void sub_80DDF40(struct Sprite *sprite);
 static void sub_80DDFE8(struct Sprite *);
 static void sub_80DE0FC(struct Sprite *sprite);
 static void sub_80DE114(struct Sprite *);
@@ -318,7 +318,7 @@ static void sub_80DDCC8(struct Sprite *sprite)
     }
 }
 
-static void sub_80DDD58(struct Sprite *sprite)
+void sub_80DDD58(struct Sprite *sprite)
 {
     sub_8078764(sprite, 1);
     sprite->callback = sub_80DDD78;
@@ -399,7 +399,7 @@ static void sub_80DDED0(u8 taskId)
     }
 }
 
-static void sub_80DDF40(struct Sprite *sprite)
+void sub_80DDF40(struct Sprite *sprite)
 {
     u16 r5, r6;
     r5 = sprite->pos1.x;
