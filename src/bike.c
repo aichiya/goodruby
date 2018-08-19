@@ -7,8 +7,9 @@
 #include "global.fieldmap.h"
 #include "metatile_behavior.h"
 #include "overworld.h"
-#include "constants/songs.h"
 #include "sound.h"
+#include "constants/map_types.h"
+#include "constants/songs.h"
 
 extern bool8 gBikeCyclingChallenge;
 extern u8 gBikeCollisions;
@@ -675,7 +676,7 @@ static void AcroBikeTransition_SideJump(u8 direction)
     playerEventObj = &gEventObjects[gPlayerAvatar.eventObjectId];
     PlaySE(SE_JITE_PYOKO);
     playerEventObj->facingDirectionLocked = 1;
-    PlayerSetAnimId(sub_80608A4(direction), 2);
+    PlayerSetAnimId(GetJumpMovementAction(direction), 2);
 }
 
 static void AcroBikeTransition_TurnJump(u8 direction)
@@ -1001,8 +1002,8 @@ void GetOnOffBike(u8 var)
     else
     {
         SetPlayerAvatarTransitionFlags(var);
-        Overworld_SetSavedMusic(BGM_CYCLING);
-        Overworld_ChangeMusicTo(BGM_CYCLING);
+        Overworld_SetSavedMusic(MUS_CYCLING);
+        Overworld_ChangeMusicTo(MUS_CYCLING);
     }
 }
 
