@@ -29,7 +29,7 @@ gTypeEffectiveness:: @ 81F9720
 @ Flying
 	.byte 10, 20, 10, 10, 10
 	.byte  5, 20, 10,  5, 10
-	.byte 10, 10, 10,  5, 10
+	.byte 10, 10, 20,  5, 10
 	.byte 10, 10, 10, 10, 10
 
 @ Poison

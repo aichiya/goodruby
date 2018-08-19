@@ -1946,6 +1946,14 @@ static const u8 MoveDescription_GuardSwap[] = _(
     "Switch changes to Defense\n"
     "and Sp. Def with the foe.");
 
+static const u8 MoveDescription_BrutalSwing[] = _(
+    "A violent swing that\n"
+    "hits everyone nearby.");
+
+static const u8 MoveDescription_GigaImpact[] = _(
+    "Powerful, but leaves the\n"
+    "user immobile the next turn.");
+
 
 
 const u8 * const gMoveDescriptions[] = {
@@ -2436,4 +2444,6 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_PsychoShift,
 	MoveDescription_PowerSwap,
 	MoveDescription_GuardSwap,
+	MoveDescription_BrutalSwing,
+	MoveDescription_GigaImpact,
 };

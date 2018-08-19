@@ -503,6 +503,8 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_PSYCHO_SHIFT
 	.4byte Move_POWER_SWAP
 	.4byte Move_GUARD_SWAP
+	.4byte Move_BRUTAL_SWING
+	.4byte Move_GIGA_IMPACT
 	.4byte PoundCopy
 
 	.align 2
@@ -14774,3 +14776,68 @@ Move_POWER_SPLIT:
 Move_GUARD_SPLIT:
     goto Move_GUARD_SWAP
 	end
+
+Move_BRUTAL_SWING:
+	loadspritegfx 10135
+	monbg ANIM_BANK_TARGET
+	fadetobg 1
+	waitbgfadein
+	delay 0
+	setalpha 12, 8
+
+
+	playsewithpan SE_W104, 192
+	createvisualtask AnimTask_TranslateMonEllipticalRespectSide, 2, ANIM_BANK_ATTACKER, 15, 3, 1, 4
+	waitforvisualfinish
+	playsewithpan SE_W104, 192
+	createvisualtask AnimTask_TranslateMonEllipticalRespectSide, 2, ANIM_BANK_ATTACKER, 15, 3, 1, 4
+	waitforvisualfinish
+	createvisualtask AnimTask_TranslateMonEllipticalRespectSide, 2, ANIM_BANK_ATTACKER, 25, 5, 1, 4
+	delay 8
+	loopsewithpan SE_W025B, 63, 6, 3
+	createvisualtask AnimTask_ShakeMon2, 5, 1, 2, 0, 10, 1
+	createvisualtask AnimTask_ShakeMon2, 5, 2, 2, 0, 10, 1
+	createvisualtask AnimTask_ShakeMon2, 5, 3, 2, 0, 10, 1
+	waitforvisualfinish
+
+
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_TARGET
+	blendoff
+	delay 0
+	restorebg
+	waitbgfadein	
+	end
+
+Move_GIGA_IMPACT:
+	loadspritegfx 10147
+	createsprite gBattleAnimSpriteTemplate_83DB3C4, 2, 1, 4, 0, 16, 0
+	waitforvisualfinish
+	delay 10
+	playsewithpan SE_W063, 192
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BANK_ATTACKER, 1, 0, 4, 1
+	waitforvisualfinish
+	delay 30
+
+	createsprite gSlideMonToOffsetSpriteTemplate, 2, 0, 28, 0, 0, 4
+	delay 2
+	call _81C85E9
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_TARGET, 5, 0, 12, 3
+	createvisualtask AnimTask_ShakeMonInPlace, 2, ANIM_BANK_ATTACKER, 5, 0, 12, 1
+	createvisualtask AnimTask_BlendMonInAndOut, 3, ANIM_BANK_TARGET, 31, 12, 1, 2
+	createsprite gBattleAnimSpriteTemplate_83DB3DC, 2, 31, 3, 1, 0, 8, 0, 0
+	loopsewithpan SE_W025B, 63, 8, 3
+	waitforvisualfinish
+	createsprite gSlideMonToOriginalPosSpriteTemplate, 2, 0, 0, 9
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_DEF_PARTNER
+	clearmonbg ANIM_BANK_TARGET
+	blendoff
+	restorebg
+	waitbgfadein
+	end
+    
+
+
+	end
+
