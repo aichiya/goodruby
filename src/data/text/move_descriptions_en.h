@@ -1958,6 +1958,9 @@ static const u8 MoveDescription_StormThrow[] = _(
     "A fierce blow that always\n"
     "deals a critical hit.");
 
+static const u8 MoveDescription_DrillRun[] = _(
+    "Charges in while spinning.\n"
+    "High critical-hit ratio.");
 
 
 const u8 * const gMoveDescriptions[] = {
@@ -2451,4 +2454,5 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_BrutalSwing,
 	MoveDescription_GigaImpact,
 	MoveDescription_StormThrow,
+	MoveDescription_DrillRun,
 };

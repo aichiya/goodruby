@@ -509,6 +509,7 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_BRUTAL_SWING
 	.4byte Move_GIGA_IMPACT
 	.4byte Move_STORM_THROW
+	.4byte Move_DRILL_RUN
 	.4byte PoundCopy
 
 	.align 2
@@ -14874,3 +14875,52 @@ Move_STORM_THROW:
 	waitforvisualfinish
 	end
 
+Move_DRILL_RUN:
+	loadspritegfx 10135
+	loadspritegfx 10020
+	createsprite gBattleAnimSpriteTemplate_83D6DE4, 2, 0
+	playsewithpan SE_W029, 192
+	waitforvisualfinish
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83D6DE4, 2, 1
+	createsprite gBattleAnimSpriteTemplate_83D7050, 132, 0, 0, 12
+	waitforvisualfinish
+	playse SE_BAN
+	createvisualtask AnimTask_ShakeMonInPlace, 2, ANIM_BANK_ATTACKER, 2, 0, 40, 1
+	createvisualtask AnimTask_ShakeMonInPlace, 2, ANIM_BANK_TARGET, 10, 0, 40, 1
+	createsprite gBattleAnimSpriteTemplate_83DB538, 131, 0, 0, 1, 3
+	playsewithpan SE_W030, 63
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_83DB538, 131, 0, 2, 1, 3
+	playsewithpan SE_W030, 63
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_83DB538, 131, -4, 3, 1, 3
+	playsewithpan SE_W030, 63
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_83DB538, 131, -8, -5, 1, 3
+	playsewithpan SE_W030, 63
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_83DB538, 131, 4, -12, 1, 3
+	playsewithpan SE_W030, 63
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_83DB538, 131, 16, 0, 1, 3
+	playsewithpan SE_W030, 63
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_83DB538, 131, 5, 18, 1, 3
+	playsewithpan SE_W030, 63
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_83DB538, 131, -17, 12, 1, 2
+	playsewithpan SE_W030, 63
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_83DB538, 131, -21, -15, 1, 2
+	playsewithpan SE_W030, 63
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_83DB538, 131, 8, -27, 1, 2
+	playsewithpan SE_W030, 63
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_83DB538, 131, 32, 0, 1, 2
+	playsewithpan SE_W030, 63
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_83D6DE4, 2, 2
+	waitforvisualfinish
+	end
