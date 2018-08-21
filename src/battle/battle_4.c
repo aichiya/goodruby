@@ -1612,7 +1612,7 @@ static void atk04_critcalc(void)
     if (critChance > 4)
         critChance = 4;
 
-    if ((gBattleMons[gBankTarget].ability != ABILITY_BATTLE_ARMOR && gBattleMons[gBankTarget].ability != ABILITY_SHELL_ARMOR)
+    if ((targetAbility != ABILITY_BATTLE_ARMOR && targetAbility != ABILITY_SHELL_ARMOR)
      && !(gStatuses3[gBankAttacker] & STATUS3_CANT_SCORE_A_CRIT)
      && !(gBattleTypeFlags & (BATTLE_TYPE_WALLY_TUTORIAL | BATTLE_TYPE_FIRST_BATTLE))
 	 && !(gSideTimers[GetBattlerSide(gBankTarget)].luckyChantTimer)
@@ -16594,7 +16594,6 @@ static void sp3A_mefirst(void)
 	{
 		gHitMarker &= ~(HITMARKER_ATTACKSTRING_PRINTED);
         gCurrentMove = move;
-        gBankTarget = GetMoveTarget(gCurrentMove, 0);
         gBattlescriptCurrInstr = gBattleScriptsForMoveEffects[gBattleMoves[gCurrentMove].effect];
 		gBattleStruct->meFirstTracker = 1;
 	}

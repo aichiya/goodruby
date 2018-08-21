@@ -1,0 +1,62 @@
+[X] Battle Armor
+[ ] Clear Body
+[X] Damp
+[X] Flash Fire
+[ ] Hyper Cutter
+[ ] Immunity
+[ ] Inner Focus
+[ ] Insomnia
+[ ] Keen Eye
+[X] Levitate
+[X] Lightning Rod (absorb)
+[ ] Lightning Rod (redirect)
+[ ] Limber
+[ ] Magma Armor
+[X] Marvel Scale
+[ ] Oblivious
+[ ] Own Tempo
+[X] Sand Veil
+[X] Shell Armor
+[ ] Shield Dust
+[X] Solid Rock
+[X] Soundproof (damaging moves)
+[ ] Soundproof (other cases)
+[ ] Sticky Hold
+[X] Sturdy (endure)
+[ ] Sturdy (OHKOs)
+[ ] Suction Cups
+[X] Tangled Feet
+[X] Thick Fat
+[ ] Vital Spirit
+[X] Volt Absorb
+[X] Water Absorb
+[ ] Water Veil
+[ ] White Smoke
+[X] Wonder Guard
+
+
+TODO IF ADDED:
+[ ] Big Pecks
+[ ] Contrary
+[ ] Dry Skin
+[ ] Filter
+[ ] Flower Gift
+[ ] Friend Guard
+[ ] Heatproof
+[ ] Heavy Metal
+[ ] Leaf Guard
+[ ] Light Metal
+[ ] Magic Bounce
+[ ] Motor Drive
+[ ] Multiscale
+[ ] Overcoat
+[ ] Sap Sipper
+[ ] Simple
+[ ] Snow Cloak
+[X] Storm Drain (absorb)
+[ ] Storm Drain (redirect)
+[ ] Telepathy
+[ ] Unaware
+[ ] Wonder Skin
+
+

@@ -14799,9 +14799,11 @@ Move_BRUTAL_SWING:
 	createvisualtask AnimTask_TranslateMonEllipticalRespectSide, 2, ANIM_BANK_ATTACKER, 25, 5, 1, 4
 	delay 8
 	loopsewithpan SE_W025B, 63, 6, 3
-	createvisualtask AnimTask_ShakeMon2, 5, 1, 2, 0, 10, 1
-	createvisualtask AnimTask_ShakeMon2, 5, 2, 2, 0, 10, 1
-	createvisualtask AnimTask_ShakeMon2, 5, 3, 2, 0, 10, 1
+	createvisualtask AnimTask_ShakeMon2, 5, 4, 4, 0, 10, 1
+	createvisualtask AnimTask_ShakeMon2, 5, 5, 4, 0, 10, 1
+	createvisualtask AnimTask_ShakeMon2, 5, 6, 4, 0, 10, 1
+	createvisualtask AnimTask_ShakeMon2, 5, 7, 4, 0, 10, 1
+	createvisualtask AnimTask_ShakeMon2, 5, 8, 4, 0, 10, 1
 	waitforvisualfinish
 
 
