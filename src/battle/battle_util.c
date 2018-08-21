@@ -154,6 +154,7 @@ extern u8 BattleScript_BideNoEnergyToAttack[];
 
 extern u8 BattleScript_OverworldWeatherStarts[]; //load weather from overworld
 extern u8 BattleScript_DrizzleActivates[];
+extern u8 BattleScript_MoldBreakerAnnouncement[];
 extern u8 BattleScript_SandstreamActivates[];
 extern u8 BattleScript_DroughtActivates[];
 extern u8 BattleScript_CastformChange[];
@@ -1969,6 +1970,15 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
                     }
                 }
                 break;
+			case ABILITY_MOLD_BREAKER:
+				if (!(gSpecialStatuses[bank].traced))
+                {
+					BattleScriptPushCursorAndCallback(BattleScript_MoldBreakerAnnouncement);
+					gBattleStruct->scriptingActive = bank;
+                    gSpecialStatuses[bank].traced = 1;
+					effect++;
+				}
+				break;
             }
             break;
         case ABILITYEFFECT_ENDTURN: // 1

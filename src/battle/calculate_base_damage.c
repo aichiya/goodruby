@@ -92,6 +92,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     u8 defenderHoldEffectParam;
     u8 attackerHoldEffect;
     u8 attackerHoldEffectParam;
+	u8 defenderAbility;
 
     if (!powerOverride)
         gBattleMovePower = gBattleMoves[move].power;
@@ -134,6 +135,10 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         defenderHoldEffect = ItemId_GetHoldEffect(defender->item);
         defenderHoldEffectParam = ItemId_GetHoldEffectParam(defender->item);
     }
+	
+	defenderAbility = defender->ability;
+	if (attacker->ability == ABILITY_MOLD_BREAKER)
+		defenderAbility = 0;
 
     if (attacker->ability == ABILITY_HUGE_POWER || attacker->ability == ABILITY_PURE_POWER)
         attack *= 2;
@@ -198,7 +203,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         defense *= 2;
     if (attackerHoldEffect == HOLD_EFFECT_THICK_CLUB && (attacker->species == SPECIES_CUBONE || attacker->species == SPECIES_MAROWAK))
         attack *= 2;
-    if (defender->ability == ABILITY_THICK_FAT && (type == TYPE_FIRE || type == TYPE_ICE))
+    if (defenderAbility == ABILITY_THICK_FAT && (type == TYPE_FIRE || type == TYPE_ICE))
     {
         attack /= 2;
         spAttack /= 2;
@@ -211,7 +216,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         spAttack = (150 * spAttack) / 100;
     if (attacker->ability == ABILITY_GUTS && attacker->status1)
         attack = (150 * attack) / 100;
-    if (defender->ability == ABILITY_MARVEL_SCALE && defender->status1)
+    if (defenderAbility == ABILITY_MARVEL_SCALE && defender->status1)
         defense = (150 * defense) / 100;
     if (type == TYPE_ELECTRIC && AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, 0, 0xFD, 0))
         gBattleMovePower /= 2;

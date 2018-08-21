@@ -508,6 +508,7 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_GUARD_SWAP
 	.4byte Move_BRUTAL_SWING
 	.4byte Move_GIGA_IMPACT
+	.4byte Move_STORM_THROW
 	.4byte PoundCopy
 
 	.align 2
@@ -14839,3 +14840,35 @@ Move_GIGA_IMPACT:
 	restorebg
 	waitbgfadein
 	end
+
+Move_STORM_THROW:	
+	createsprite gSlideMonToOffsetSpriteTemplate, 2, 0, 20, 0, 0, 4
+	playsewithpan SE_W207, 63
+	delay 6
+	createsprite gSlideMonToOriginalPosSpriteTemplate, 2, 0, 0, 7
+	delay 8
+	
+	createsprite gSlideMonToOffsetSpriteTemplate, 2, 0, 20, 0, 0, 4
+	playsewithpan SE_W207, 63
+	delay 6
+	createsprite gSlideMonToOriginalPosSpriteTemplate, 2, 0, 0, 7
+	delay 8
+	
+	createsprite gSlideMonToOffsetSpriteTemplate, 2, 0, 20, 0, 0, 4
+	playsewithpan SE_W207, 63
+	delay 6
+	createsprite gSlideMonToOriginalPosSpriteTemplate, 2, 0, 0, 7
+	delay 8
+	
+	createsprite gSlideMonToOffsetSpriteTemplate, 2, 0, 20, 0, 0, 4
+	playsewithpan SE_W207, 63
+	delay 1
+	createvisualtask sub_80A8E04, 2, 10, 0xC00, 1, 2
+	playsewithpan SE_W233B, 63
+	delay 3
+	createsprite gSlideMonToOriginalPosSpriteTemplate, 2, 0, 0, 7
+	waitforvisualfinish
+	createsprite gSlideMonToOriginalPosSpriteTemplate, 2, 0, 1, 4
+	waitforvisualfinish
+	end
+

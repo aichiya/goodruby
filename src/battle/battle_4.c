@@ -1200,6 +1200,22 @@ static const u8 sBallCatchBonuses[] =
     20, 15, 10, 15 // Ultra, Great, Poke, Safari
 };
 
+// Note: only contains abilities bypassed by jumpifability
+static const u8 sMoldBreakerAbilities[] =
+{
+	ABILITY_IMMUNITY,
+	ABILITY_INSOMNIA,
+	ABILITY_LIMBER,
+	ABILITY_MAGMA_ARMOR, // redundant but may become relevant?
+	ABILITY_OBLIVIOUS,
+	ABILITY_OWN_TEMPO,
+	ABILITY_SOUNDPROOF,
+	ABILITY_SUCTION_CUPS,
+	ABILITY_VITAL_SPIRIT,
+	ABILITY_WATER_VEIL,
+	0,
+};
+
 static void atk00_attackcanceler(void)
 {
     s32 i;
@@ -1217,7 +1233,7 @@ static void atk00_attackcanceler(void)
     }
     if (AtkCanceller_UnableToUseMove())
         return;
-    if (AbilityBattleEffects(ABILITYEFFECT_MOVES_BLOCK, gBankTarget, 0, 0, 0))
+    if (gBattleMons[gBankAttacker].ability != ABILITY_MOLD_BREAKER && AbilityBattleEffects(ABILITYEFFECT_MOVES_BLOCK, gBankTarget, 0, 0, 0))
         return;
     if (!gBattleMons[gBankAttacker].pp[gCurrMovePos] && gCurrentMove != MOVE_STRUGGLE && !(gHitMarker & 0x800200)
      && !(gBattleMons[gBankAttacker].status2 & STATUS2_MULTIPLETURNS))
@@ -1306,8 +1322,9 @@ static void JumpIfMoveFailed(u8 adder, u16 move)
     else
     {
         TrySetDestinyBondToHappen();
-        if (AbilityBattleEffects(ABILITYEFFECT_ABSORBING, gBankTarget, 0, 0, move))
-            return;
+		if (gBattleMons[gBankAttacker].ability != ABILITY_MOLD_BREAKER)
+			if (AbilityBattleEffects(ABILITYEFFECT_ABSORBING, gBankTarget, 0, 0, move))
+				return;
     }
     gBattlescriptCurrInstr = BS_ptr;
 }
@@ -1415,7 +1432,7 @@ static void atk01_accuracycheck(void)
     }
     else
     {
-        u8 type, moveAcc, holdEffect, quality;
+        u8 type, moveAcc, holdEffect, quality, targetAbility;
         s8 buff;
         u16 calc;
 
@@ -1454,14 +1471,18 @@ static void atk01_accuracycheck(void)
 
         calc = gAccuracyStageRatios[buff].dividend * moveAcc;
         calc /= gAccuracyStageRatios[buff].divisor;
+		
+		targetAbility = gBattleMons[gBankTarget].ability;
+		if (gBattleMons[gBankAttacker].ability == ABILITY_MOLD_BREAKER)
+			targetAbility = 0;
 
         if (gBattleMons[gBankAttacker].ability == ABILITY_COMPOUND_EYES)
             calc = (calc * 130) / 100; // 1.3 compound eyes boost
-        if (WEATHER_HAS_EFFECT && gBattleMons[gBankTarget].ability == ABILITY_SAND_VEIL && gBattleWeather & WEATHER_SANDSTORM_ANY)
+        if (WEATHER_HAS_EFFECT && targetAbility == ABILITY_SAND_VEIL && gBattleWeather & WEATHER_SANDSTORM_ANY)
             calc = (calc * 80) / 100; // 1.2 sand veil loss;
         if (gBattleMons[gBankAttacker].ability == ABILITY_HUSTLE && type < 9)
             calc = (calc * 80) / 100; // 1.2 hustle loss;
-		if (gBattleMons[gBankTarget].ability == ABILITY_TANGLED_FEET && gBattleMons[gBankTarget].status2 & STATUS2_CONFUSION)
+		if (targetAbility == ABILITY_TANGLED_FEET && gBattleMons[gBankTarget].status2 & STATUS2_CONFUSION)
 			calc = (calc * 50) / 100; // 0.5 tangled feet loss
 
         if (gBattleMons[gBankTarget].item == ITEM_ENIGMA_BERRY)
@@ -1559,10 +1580,14 @@ static void atk03_ppreduce(void)
 
 static void atk04_critcalc(void)
 {
-    u8 holdEffect;
+    u8 holdEffect, targetAbility;
     u16 item, critChance;
 
     item = gBattleMons[gBankAttacker].item;
+	
+	targetAbility = gBattleMons[gBankTarget].ability;
+	if (gBattleMons[gBankAttacker].ability == ABILITY_MOLD_BREAKER)
+		targetAbility = 0;
 
     if (item == ITEM_ENIGMA_BERRY)
         holdEffect = gEnigmaBerries[gBankAttacker].holdEffect;
@@ -1580,6 +1605,9 @@ static void atk04_critcalc(void)
                 + (holdEffect == HOLD_EFFECT_SCOPE_LENS)
                 + 2 * (holdEffect == HOLD_EFFECT_LUCKY_PUNCH && gBattleMons[gBankAttacker].species == SPECIES_CHANSEY)
                 + 2 * (holdEffect == HOLD_EFFECT_STICK && gBattleMons[gBankAttacker].species == SPECIES_FARFETCHD);
+	
+	if (gCurrentMove == MOVE_STORM_THROW)
+		critChance = 4;
 
     if (critChance > 4)
         critChance = 4;
@@ -1686,7 +1714,12 @@ static void ModulateDmgByType(u8 multiplier)
 
 static void atk06_typecalc(void)
 {
-    u8 move_type;
+    u8 move_type, defenderAbility;
+	
+	defenderAbility = gBattleMons[gBankTarget].ability;
+	if (gBattleMons[gBankAttacker].ability == ABILITY_MOLD_BREAKER)
+		defenderAbility = 0;
+	
 	if (gCurrentMove == MOVE_SYNCHRONOISE)
 	{
 		if (!(gBattleMons[gBankAttacker].type1 == gBattleMons[gBankTarget].type1
@@ -1714,7 +1747,7 @@ static void atk06_typecalc(void)
             gBattleMoveDamage = gBattleMoveDamage / 10;
         }
 
-        if (gBattleMons[gBankTarget].ability == ABILITY_LEVITATE && move_type == TYPE_GROUND)
+        if (defenderAbility == ABILITY_LEVITATE && move_type == TYPE_GROUND)
         {
             gLastUsedAbility = gBattleMons[gBankTarget].ability;
             gMoveResultFlags |= (MOVE_RESULT_MISSED | MOVE_RESULT_DOESNT_AFFECT_FOE);
@@ -1730,7 +1763,7 @@ static void atk06_typecalc(void)
 				ModulateDmgByType(gTypeEffectiveness[move_type * 20 + gBattleMons[gBankTarget].type2]);
         }
 
-        if (gBattleMons[gBankTarget].ability == ABILITY_WONDER_GUARD && AttacksThisTurn(gBankAttacker, gCurrentMove) == 2
+        if (defenderAbility == ABILITY_WONDER_GUARD && AttacksThisTurn(gBankAttacker, gCurrentMove) == 2
          && (!(gMoveResultFlags & MOVE_RESULT_SUPER_EFFECTIVE) || ((gMoveResultFlags & (MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE)) == (MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE)))
          && gBattleMoves[gCurrentMove].power)
         {
@@ -1760,6 +1793,8 @@ static void CheckWonderGuardAndLevitate(void)
 
     if (gCurrentMove == MOVE_STRUGGLE || !gBattleMoves[gCurrentMove].power)
         return;
+	if (gBattleMons[gBankAttacker].ability == ABILITY_MOLD_BREAKER)
+		return;
 
     if (gBattleStruct->dynamicMoveType)
         move_type = gBattleStruct->dynamicMoveType & 0x3F;
@@ -1871,6 +1906,7 @@ u8 TypeCalc(u16 move, u8 bank_atk, u8 bank_def)
 {
     u8 flags = 0;
     u8 move_type;
+	u8 defenderAbility;
 
     if (move == MOVE_STRUGGLE)
         return 0;
@@ -1883,8 +1919,12 @@ u8 TypeCalc(u16 move, u8 bank_atk, u8 bank_def)
         gBattleMoveDamage = gBattleMoveDamage * 15;
         gBattleMoveDamage = gBattleMoveDamage / 10;
     }
+	
+	defenderAbility = gBattleMons[bank_def].ability;
+	if (gBattleMons[bank_atk].ability == ABILITY_MOLD_BREAKER)
+		defenderAbility = 0;
 
-    if (gBattleMons[bank_def].ability == ABILITY_LEVITATE && move_type == TYPE_GROUND)
+    if (defenderAbility == ABILITY_LEVITATE && move_type == TYPE_GROUND)
     {
         flags |= (MOVE_RESULT_MISSED | MOVE_RESULT_DOESNT_AFFECT_FOE);
     }
@@ -1895,7 +1935,7 @@ u8 TypeCalc(u16 move, u8 bank_atk, u8 bank_def)
 			ModulateDmgByType2(gTypeEffectiveness[move_type * 20 + gBattleMons[bank_def].type2], move, &flags);
     }
 
-    if (gBattleMons[bank_def].ability == ABILITY_WONDER_GUARD && !(flags & MOVE_RESULT_MISSED) &&
+    if (defenderAbility == ABILITY_WONDER_GUARD && !(flags & MOVE_RESULT_MISSED) &&
         AttacksThisTurn(bank_atk, move) == 2 &&
         (!(flags & MOVE_RESULT_SUPER_EFFECTIVE) || ((flags & (MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE)) == (MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE))) &&
         gBattleMoves[move].power)
@@ -1906,7 +1946,7 @@ u8 TypeCalc(u16 move, u8 bank_atk, u8 bank_def)
 	if (flags & MOVE_RESULT_NOT_VERY_EFFECTIVE && gBattleMons[bank_atk].ability == ABILITY_TINTED_LENS)
 		gBattleMoveDamage *= 2;
 	
-	if (flags & MOVE_RESULT_SUPER_EFFECTIVE && gBattleMons[bank_def].ability == ABILITY_SOLID_ROCK)
+	if (flags & MOVE_RESULT_SUPER_EFFECTIVE && defenderAbility == ABILITY_SOLID_ROCK)
 		gBattleMoveDamage = gBattleMoveDamage * 3 / 4;
 	
     return flags;
@@ -1989,7 +2029,8 @@ static void atk07_adjustnormaldamage(void)
 			gBattleMoveDamage = gBattleMons[gBankTarget].hp - 1;
 			gMoveResultFlags |= MOVE_RESULT_FOE_ENDURED;
 		}
-		else if (gBattleMons[gBankTarget].ability == ABILITY_STURDY && gBattleMons[gBankTarget].hp == gBattleMons[gBankTarget].maxHP)
+		else if (gBattleMons[gBankTarget].ability == ABILITY_STURDY && gBattleMons[gBankTarget].hp == gBattleMons[gBankTarget].maxHP &&
+		         gBattleMons[gBankAttacker].ability != ABILITY_MOLD_BREAKER)
 		{
 			gBattleMoveDamage = gBattleMons[gBankTarget].hp - 1;
 			gMoveResultFlags |= MOVE_RESULT_STURDY;
@@ -5389,6 +5430,21 @@ static void atk1E_jumpifability(void)
     u8 bank;
     u8 ability = T2_READ_8(gBattlescriptCurrInstr + 2);
     void* jump_loc = T2_READ_PTR(gBattlescriptCurrInstr + 3);
+	
+	if (gBattleMons[gBankAttacker].ability == ABILITY_MOLD_BREAKER)
+	{
+		u8 i = 0;
+		while (sMoldBreakerAbilities[i])
+		{
+			if (sMoldBreakerAbilities[i] == ability)
+			{
+				gBattlescriptCurrInstr += 7;
+				return;
+			}
+			i++;
+		}
+	}
+	
     if (T2_READ_8(gBattlescriptCurrInstr + 1) == 8)
     {
         bank = AbilityBattleEffects(ABILITYEFFECT_CHECK_BANK_SIDE, gBankAttacker, ability, 0, 0);
@@ -7179,8 +7235,13 @@ static void atk4A_typecalc2(void)
     u8 flags = 0;
     u8 typemu = 0;
     u8 move_type = gBattleMoves[gCurrentMove].type;
+	u8 defenderAbility;
+	
+	defenderAbility = gBattleMons[gBankTarget].ability;
+	if (gBattleMons[gBankAttacker].ability == ABILITY_MOLD_BREAKER)
+		defenderAbility = 0;
 
-    if (gBattleMons[gBankTarget].ability == ABILITY_LEVITATE && move_type == TYPE_GROUND)
+    if (defenderAbility == ABILITY_LEVITATE && move_type == TYPE_GROUND)
     {
         gLastUsedAbility = gBattleMons[gBankTarget].ability;
         gMoveResultFlags |= (MOVE_RESULT_MISSED | MOVE_RESULT_DOESNT_AFFECT_FOE);
@@ -7215,7 +7276,7 @@ static void atk4A_typecalc2(void)
 			gMoveResultFlags |= MOVE_RESULT_SUPER_EFFECTIVE;
     }
 
-    if (gBattleMons[gBankTarget].ability == ABILITY_WONDER_GUARD && !(flags & MOVE_RESULT_NO_EFFECT) && AttacksThisTurn(gBankAttacker, gCurrentMove) == 2 &&
+    if (defenderAbility == ABILITY_WONDER_GUARD && !(flags & MOVE_RESULT_NO_EFFECT) && AttacksThisTurn(gBankAttacker, gCurrentMove) == 2 &&
         (!(flags & MOVE_RESULT_SUPER_EFFECTIVE) || ((flags & (MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE)) == (MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE))) &&
         gBattleMoves[gCurrentMove].power)
     {
@@ -10087,11 +10148,16 @@ static void atk78_faintifabilitynotdamp(void)
     if (gBattleExecBuffer)
         return;
 
-    for (gBankTarget = 0; gBankTarget < gBattlersCount; gBankTarget++)
-    {
-        if (gBattleMons[gBankTarget].ability == ABILITY_DAMP)
-            break;
-    }
+	if (gBattleMons[gBankAttacker].ability == ABILITY_MOLD_BREAKER)
+		gBankTarget = gBattlersCount;
+	else
+	{
+		for (gBankTarget = 0; gBankTarget < gBattlersCount; gBankTarget++)
+		{
+			if (gBattleMons[gBankTarget].ability == ABILITY_DAMP)
+				break;
+		}
+	}
 
     if (gBankTarget == gBattlersCount)
     {

@@ -4040,6 +4040,12 @@ BattleScript_DrizzleActivates:: @ 81D9704
 	call BattleScript_WeatherFormChanges
 	end3
 
+BattleScript_MoldBreakerAnnouncement::
+	pause 32
+	printstring BATTLE_TEXT_MoldBreaker
+	waitmessage 64
+	end3
+
 BattleScript_SpeedBoostActivates:: @ 81D9718
 	playanimation USER, B_ANIM_STATS_CHANGE, sANIM_ARG1
 	printstring BATTLE_TEXT_SpeedRisen
@@ -5225,7 +5231,6 @@ BattleScript_EffectWorrySeed:
     ppreduce
 	jumpifstatus2 TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
 	jumpifability TARGET, ABILITY_INSOMNIA, BattleScript_ButItFailed
-	jumpifability TARGET, ABILITY_VITAL_SPIRIT, BattleScript_ButItFailed
 	attackanimation
 	waitanimation
 	printstring BATTLE_TEXT_WorrySeed

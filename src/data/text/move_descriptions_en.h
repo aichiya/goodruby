@@ -1954,6 +1954,10 @@ static const u8 MoveDescription_GigaImpact[] = _(
     "Powerful, but leaves the\n"
     "user immobile the next turn.");
 
+static const u8 MoveDescription_StormThrow[] = _(
+    "A fierce blow that always\n"
+    "deals a critical hit.");
+
 
 
 const u8 * const gMoveDescriptions[] = {
@@ -2446,4 +2450,5 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_GuardSwap,
 	MoveDescription_BrutalSwing,
 	MoveDescription_GigaImpact,
+	MoveDescription_StormThrow,
 };

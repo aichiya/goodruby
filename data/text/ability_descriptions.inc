@@ -271,6 +271,9 @@ gAbilityDescription_SolarPower:
 gAbilityDescription_SuperLuck:
 	.string "Boosts critical hit ratio.$"
 
+gAbilityDescription_MoldBreaker:
+	.string "Bypasses target’s ability.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -365,3 +368,4 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Frisk
 	.4byte gAbilityDescription_SolarPower
 	.4byte gAbilityDescription_SuperLuck
+	.4byte gAbilityDescription_MoldBreaker
