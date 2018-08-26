@@ -1404,7 +1404,7 @@ static const u8 MoveDescription_ShockWave[] = _(
 
 static const u8 MoveDescription_WaterPulse[] = _(
     "Attacks with ultrasonic\n"
-    "waves. May confuse the foe");
+    "waves. May confuse the foe.");
 
 static const u8 MoveDescription_DoomDesire[] = _(
     "Summons strong sunlight to\n"
@@ -1978,6 +1978,9 @@ static const u8 MoveDescription_HeadSmash[] = _(
     "A life-endangering attack.\n"
     "Hurts the user terribly.");
 
+static const u8 MoveDescription_HeartStamp[] = _(
+    "Acts cute, then strikes.\n"
+    "May cause flinching.");
 
 
 const u8 * const gMoveDescriptions[] = {
@@ -2476,4 +2479,5 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_FrostBreath,
 	MoveDescription_FreezeDry,
 	MoveDescription_HeadSmash,
+	MoveDescription_HeartStamp,
 };

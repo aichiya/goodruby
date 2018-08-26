@@ -514,6 +514,7 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_FROST_BREATH
 	.4byte Move_FREEZE_DRY
 	.4byte Move_HEAD_SMASH
+	.4byte Move_HEART_STAMP
 	.4byte PoundCopy
 
 	.align 2
@@ -15082,5 +15083,31 @@ Move_HEAD_SMASH:
 	waitbgfadein
 	end
 
+Move_HEART_STAMP:
+	loadspritegfx 10135
+	loadspritegfx 10219
+	monbg ANIM_BANK_TARGET
+	setalpha 12, 8
+	createvisualtask sub_812E568, 5, 0, 2, 0
+	playsewithpan SE_W204, 192
+	delay 15
+	playsewithpan SE_W204, 192
+	delay 15
+	playsewithpan SE_W204, 192
+	waitforvisualfinish
+	
+	createsprite gHorizontalLungeSpriteTemplate, 2, 4, 4
+	delay 6
+	createsprite gBasicHitSplatSpriteTemplate, 2, 0, 0, 1, 2
+	createsprite gBattleAnimSpriteTemplate_83D7BD0, 131, -256, -42
+	createsprite gBattleAnimSpriteTemplate_83D7BD0, 131, 128, -14
+	createsprite gBattleAnimSpriteTemplate_83D7BD0, 131, 416, -38
+	createsprite gBattleAnimSpriteTemplate_83D7BD0, 131, -128, -22
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_TARGET, 3, 0, 6, 1
+	playsewithpan SE_W004, 63
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_TARGET
+	blendoff
+	end
 
 
