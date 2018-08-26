@@ -510,6 +510,9 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_GIGA_IMPACT
 	.4byte Move_STORM_THROW
 	.4byte Move_DRILL_RUN
+	.4byte Move_ICE_SHARD
+	.4byte Move_FROST_BREATH
+	.4byte Move_FREEZE_DRY
 	.4byte PoundCopy
 
 	.align 2
@@ -14924,3 +14927,142 @@ Move_DRILL_RUN:
 	createsprite gBattleAnimSpriteTemplate_83D6DE4, 2, 2
 	waitforvisualfinish
 	end
+
+Move_ICE_SHARD:
+	loadspritegfx 10262
+	playsewithpan SE_W196, 192
+	createsprite gIcicleSpearSpriteTemplate, 2, 20, -8, 0, 0, 16, 0
+	delay 5
+	playsewithpan SE_W196, 192
+	createsprite gIcicleSpearSpriteTemplate, 2, 20, -8, -1, 3, 16, 0
+	delay 5
+	playsewithpan SE_W196, 192
+	createsprite gIcicleSpearSpriteTemplate, 2, 20, -8, 1, -2, 16, 0
+	delay 5
+	end
+
+Move_FROST_BREATH:
+	loadspritegfx 10141
+	loadspritegfx 10142
+	monbg ANIM_BANK_DEF_PARTNER
+	createvisualtask sub_80E2A38, 10, 11, 4, 0, 4, 0
+	fadetobg 15
+	waitbgfadeout
+	playsewithpan SE_W196, 0
+	waitbgfadein
+	waitforvisualfinish
+	panse_1B SE_W016, 192, 63, 2, 0
+	call _FrostBreathSub
+	delay 5
+	call _FrostBreathSub
+	playsewithpan SE_W016B, 63
+	delay 55
+	call Unknown_81D5CBA
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_DEF_PARTNER
+	restorebg
+	waitbgfadeout
+	createvisualtask sub_80E2A38, 10, 11, 4, 4, 0, 0
+	waitbgfadein
+	end
+_FrostBreathSub:
+	createsprite gBattleAnimSpriteTemplate_83D9CA8, 168, 0, 0, 0, 0, 72, 1
+	delay 5
+	createsprite gBattleAnimSpriteTemplate_83D9CA8, 168, 0, 10, 0, 10, 72, 1
+	delay 5
+	createsprite gBattleAnimSpriteTemplate_83D9CA8, 168, 0, -10, 0, -10, 72, 1
+	delay 5
+	createsprite gBattleAnimSpriteTemplate_83D9CA8, 168, 0, 15, 0, 15, 72, 1
+	delay 5
+	createsprite gBattleAnimSpriteTemplate_83D9CA8, 168, 0, -5, 0, -5, 72, 1
+	return
+
+Move_FREEZE_DRY:
+	loadspritegfx 10141
+	createsprite gSimplePaletteBlendSpriteTemplate, 2, 1, 1, 0, 6, 65535
+	waitforvisualfinish
+
+	createsprite gBattleAnimSpriteTemplate_83D9C78, 130, 0, -20, 1
+	playsewithpan SE_W196, 63
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_83D9C78, 130, 16, -13, 1
+	playsewithpan SE_W196, 63
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_83D9C78, 130, 20, -1, 1
+	playsewithpan SE_W196, 63
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_83D9C78, 130, 17, 11, 1
+	playsewithpan SE_W196, 63
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_83D9C90, 130, 8, 18, 1
+	playsewithpan SE_W196, 63
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_83D9C78, 130, -6, 18, 1
+	playsewithpan SE_W196, 63
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_83D9C90, 130, -14, 13, 1
+	playsewithpan SE_W196, 63
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_83D9C90, 130, -19, 0, 1
+	playsewithpan SE_W196, 63
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_83D9C90, 130, -12, -14, 1
+	playsewithpan SE_W196, 63
+	delay 4
+	
+	createsprite gBattleAnimSpriteTemplate_83D9C90, 130, -1, -18, 1
+	playsewithpan SE_W196, 63
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_83D9C90, 130, 11, -14, 1
+	playsewithpan SE_W196, 63
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_83D9C78, 130, 16, -4, 1
+	playsewithpan SE_W196, 63
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_83D9C78, 130, 11, 10, 1
+	playsewithpan SE_W196, 63
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_83D9C78, 130, 0, 16, 1
+	playsewithpan SE_W196, 63
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_83D9C90, 130, -11, 13, 1
+	playsewithpan SE_W196, 63
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_83D9C90, 130, -14, -5, 1
+	playsewithpan SE_W196, 63
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_83D9C90, 130, -7, -13, 1
+	playsewithpan SE_W196, 63
+	delay 4
+	
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_TARGET, 3, 0, 20, 1
+	createvisualtask AnimTask_BlendMonInAndOut, 3, ANIM_BANK_TARGET, 0x7FFF, 12, 1, 2
+	
+	
+	createsprite gBattleAnimSpriteTemplate_83D9C78, 130, 2, -13, 1
+	playsewithpan SE_W196, 63
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_83D9C78, 130, 11, -7, 1
+	playsewithpan SE_W196, 63
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_83D9C78, 130, 11, 7, 1
+	playsewithpan SE_W196, 63
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_83D9C78, 130, 0, 11, 1
+	playsewithpan SE_W196, 63
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_83D9C90, 130, -8, 5, 1
+	playsewithpan SE_W196, 63
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_83D9C78, 130, -7, -7, 1
+	playsewithpan SE_W196, 63
+	waitforvisualfinish
+	
+	
+	createsprite gSimplePaletteBlendSpriteTemplate, 2, 1, 1, 6, 0, 65535
+	waitforvisualfinish
+	end
+
+
+
+

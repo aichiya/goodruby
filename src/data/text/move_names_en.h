@@ -491,4 +491,7 @@ const u8 gMoveNames[][13] = {
 	[MOVE_GIGA_IMPACT] = _("Giga Impact"),
 	[MOVE_STORM_THROW] = _("Storm Throw"),
 	[MOVE_DRILL_RUN] = _("Drill Run"),
+	[MOVE_ICE_SHARD] = _("Ice Shard"),
+	[MOVE_FROST_BREATH] = _("Frost Breath"),
+	[MOVE_FREEZE_DRY] = _("Freeze-Dry"),
 };

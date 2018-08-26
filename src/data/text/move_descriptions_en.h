@@ -1962,6 +1962,18 @@ static const u8 MoveDescription_DrillRun[] = _(
     "Charges in while spinning.\n"
     "High critical-hit ratio.");
 
+static const u8 MoveDescription_IceShard[] = _(
+    "Throws chunks of ice.\n"
+    "Always strikes first.");
+
+static const u8 MoveDescription_FrostBreath[] = _(
+    "A cold breath attack that\n"
+    "always deals a critical hit.");
+
+static const u8 MoveDescription_FreezeDry[] = _(
+    "Rapid cooling that may\n"
+    "freeze. Hurts Water-types.");
+
 
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
@@ -2455,4 +2467,7 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_GigaImpact,
 	MoveDescription_StormThrow,
 	MoveDescription_DrillRun,
+	MoveDescription_IceShard,
+	MoveDescription_FrostBreath,
+	MoveDescription_FreezeDry,
 };

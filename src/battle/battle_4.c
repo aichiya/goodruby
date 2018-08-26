@@ -1606,7 +1606,7 @@ static void atk04_critcalc(void)
                 + 2 * (holdEffect == HOLD_EFFECT_LUCKY_PUNCH && gBattleMons[gBankAttacker].species == SPECIES_CHANSEY)
                 + 2 * (holdEffect == HOLD_EFFECT_STICK && gBattleMons[gBankAttacker].species == SPECIES_FARFETCHD);
 	
-	if (gCurrentMove == MOVE_STORM_THROW)
+	if (gCurrentMove == MOVE_STORM_THROW || gCurrentMove == MOVE_FROST_BREATH)
 		critChance = 4;
 
     if (critChance > 4)
@@ -1756,6 +1756,20 @@ static void atk06_typecalc(void)
             gBattleCommunication[6] = move_type;
             RecordAbilityBattle(gBankTarget, gLastUsedAbility);
         }
+		else if (gCurrentMove == MOVE_FREEZE_DRY)
+		{
+			if (gBattleMons[gBankTarget].type1 == TYPE_WATER)
+				ModulateDmgByType(20);
+			else
+				ModulateDmgByType(gTypeEffectiveness[move_type * 20 + gBattleMons[gBankTarget].type1]);
+			if (gBattleMons[gBankTarget].type1 != gBattleMons[gBankTarget].type2)
+			{
+				if (gBattleMons[gBankTarget].type2 == TYPE_WATER)
+					ModulateDmgByType(20);
+				else
+					ModulateDmgByType(gTypeEffectiveness[move_type * 20 + gBattleMons[gBankTarget].type2]);
+			}
+		}
         else
         {
 			ModulateDmgByType(gTypeEffectiveness[move_type * 20 + gBattleMons[gBankTarget].type1]);
@@ -1812,6 +1826,8 @@ static void CheckWonderGuardAndLevitate(void)
 		typemu = 0;
 	else if (typemu == 2 && !(gStatuses3[gBankTarget] & STATUS3_MIRACLE_EYE))
 		typemu = 0;
+	if (gCurrentMove == MOVE_FREEZE_DRY && gBattleMons[gBankTarget].type1 == TYPE_WATER)
+		typemu = 20;
 	if (typemu == 0)
 	{
 		gMoveResultFlags |= MOVE_RESULT_DOESNT_AFFECT_FOE;
@@ -1827,6 +1843,8 @@ static void CheckWonderGuardAndLevitate(void)
 		typemu = 0;
 	else if (typemu == 2 && !(gStatuses3[gBankTarget] & STATUS3_MIRACLE_EYE))
 		typemu = 0;
+	if (gCurrentMove == MOVE_FREEZE_DRY && gBattleMons[gBankTarget].type2 == TYPE_WATER)
+		typemu = 20;
 	if (typemu == 0)
 	{
 		gMoveResultFlags |= MOVE_RESULT_DOESNT_AFFECT_FOE;
@@ -1930,9 +1948,17 @@ u8 TypeCalc(u16 move, u8 bank_atk, u8 bank_def)
     }
     else
     {
-		ModulateDmgByType2(gTypeEffectiveness[move_type * 20 + gBattleMons[bank_def].type1], move, &flags);
+		if (move == MOVE_FREEZE_DRY && gBattleMons[bank_def].type1 == TYPE_WATER)
+			ModulateDmgByType2(20, move, &flags);
+		else
+			ModulateDmgByType2(gTypeEffectiveness[move_type * 20 + gBattleMons[bank_def].type1], move, &flags);
 		if (gBattleMons[bank_def].type1 != gBattleMons[bank_def].type2)
-			ModulateDmgByType2(gTypeEffectiveness[move_type * 20 + gBattleMons[bank_def].type2], move, &flags);
+		{
+			if (move == MOVE_FREEZE_DRY && gBattleMons[bank_def].type2 == TYPE_WATER)
+				ModulateDmgByType2(20, move, &flags);
+			else
+				ModulateDmgByType2(gTypeEffectiveness[move_type * 20 + gBattleMons[bank_def].type2], move, &flags);
+		}
     }
 
     if (defenderAbility == ABILITY_WONDER_GUARD && !(flags & MOVE_RESULT_MISSED) &&
@@ -1966,9 +1992,17 @@ u8 AI_TypeCalc(u16 move, u16 species, u8 ability)
         flags = MOVE_RESULT_MISSED | MOVE_RESULT_DOESNT_AFFECT_FOE;
     else
     {
-		ModulateDmgByType2(gTypeEffectiveness[move_type * 20 + type1], move, &flags);
+		if (move == MOVE_FREEZE_DRY && type1 == TYPE_WATER)
+			ModulateDmgByType2(20, move, &flags);
+		else
+			ModulateDmgByType2(gTypeEffectiveness[move_type * 20 + type1], move, &flags);
 		if (type1 != type2)
+		{
+		if (move == MOVE_FREEZE_DRY && type2 == TYPE_WATER)
+			ModulateDmgByType2(20, move, &flags);
+		else
 			ModulateDmgByType2(gTypeEffectiveness[move_type * 20 + type2], move, &flags);
+		}
     }
     if (ability == ABILITY_WONDER_GUARD
      && (!(flags & MOVE_RESULT_SUPER_EFFECTIVE) || ((flags & (MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE)) == (MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE)))
@@ -7256,6 +7290,9 @@ static void atk4A_typecalc2(void)
 			typemu = 0;
 		else if (typemu == 2 && !(gStatuses3[gBankTarget] & STATUS3_MIRACLE_EYE))
 			typemu = 0;
+		if (gCurrentMove == MOVE_FREEZE_DRY && gBattleMons[gBankTarget].type1 == TYPE_WATER)
+			typemu = 20;
+		
 		if (typemu == 0)
             gMoveResultFlags |= MOVE_RESULT_DOESNT_AFFECT_FOE;
 		else if (typemu == 5)
@@ -7268,6 +7305,9 @@ static void atk4A_typecalc2(void)
 			typemu = 0;
 		else if (typemu == 2 && !(gStatuses3[gBankTarget] & STATUS3_MIRACLE_EYE))
 			typemu = 0;
+		if (gCurrentMove == MOVE_FREEZE_DRY && gBattleMons[gBankTarget].type2 == TYPE_WATER)
+			typemu = 20;
+		
 		if (typemu == 0)
             gMoveResultFlags |= MOVE_RESULT_DOESNT_AFFECT_FOE;
 		else if (typemu == 5)
@@ -11410,7 +11450,8 @@ static void atk96_weatherdamage(void)
         }
         if (gBattleWeather & WEATHER_HAIL)
         {
-            if (gBattleMons[gBankAttacker].type1 != TYPE_ICE && gBattleMons[gBankAttacker].type2 != TYPE_ICE && !(gStatuses3[gBankAttacker] & STATUS3_UNDERGROUND) && !(gStatuses3[gBankAttacker] & STATUS3_UNDERWATER))
+            if (gBattleMons[gBankAttacker].type1 != TYPE_ICE && gBattleMons[gBankAttacker].type2 != TYPE_ICE && gBattleMons[gBankAttacker].ability != ABILITY_ICE_BODY &&
+			    !(gStatuses3[gBankAttacker] & STATUS3_UNDERGROUND) && !(gStatuses3[gBankAttacker] & STATUS3_UNDERWATER))
             {
                 gBattleMoveDamage = gBattleMons[gBankAttacker].maxHP / 16;
                 if (gBattleMoveDamage == 0)

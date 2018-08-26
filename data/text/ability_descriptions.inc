@@ -274,6 +274,9 @@ gAbilityDescription_SuperLuck:
 gAbilityDescription_MoldBreaker:
 	.string "Bypasses target’s ability.$"
 
+gAbilityDescription_IceBody: @ 81F9DD1
+	.string "Slight HP recovery in hail.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -369,3 +372,4 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_SolarPower
 	.4byte gAbilityDescription_SuperLuck
 	.4byte gAbilityDescription_MoldBreaker
+	.4byte gAbilityDescription_IceBody

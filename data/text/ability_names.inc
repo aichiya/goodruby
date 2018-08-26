@@ -91,3 +91,4 @@ gAbilityNames:: @ 81FA248
 	.string "SOLAR POWER$", 13
 	.string "SUPER LUCK$", 13
 	.string "MOLD BREAKER$", 13
+	.string "ICE BODY$", 13
