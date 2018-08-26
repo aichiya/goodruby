@@ -515,6 +515,7 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_FREEZE_DRY
 	.4byte Move_HEAD_SMASH
 	.4byte Move_HEART_STAMP
+	.4byte Move_BULLET_PUNCH
 	.4byte PoundCopy
 
 	.align 2
@@ -15110,4 +15111,41 @@ Move_HEART_STAMP:
 	blendoff
 	end
 
+Move_BULLET_PUNCH:
+	loadspritegfx 10135
+	loadspritegfx 10143
+	
+	loopsewithpan SE_W231, 192, 28, 2
+	createvisualtask sub_80E0A4C, 5, 0, 0, 0
+	waitforvisualfinish
+	
+	monbg ANIM_BANK_ATK_PARTNER
+	createvisualtask sub_80E3B4C, 2
+	jumpargeq 7, 1, _BulletPunchSubcall
+	fadetobg 9
+_BulletPunchReturn:
+	waitbgfadeout
+	createvisualtask sub_80E3A58, 5, -2304, 0, 1, -1
+	waitbgfadein
+	delay 0
+	setalpha 9, 8
+	createvisualtask sub_807A69C, 2, 28968, 10
+	playsewithpan SE_W026, 192
+	delay 6
+	createsprite gBasicHitSplatSpriteTemplate, 131, 0, 0, 1, 1
+	createsprite gFistFootSpriteTemplate, 132, 0, 0, 8, 1, 0
+	playsewithpan SE_W004, 63
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_TARGET, 3, 0, 6, 1
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_ATK_PARTNER
+	blendoff
+	restorebg
+	waitbgfadeout
+	setarg 7, -1
+	waitbgfadein
+	end
+_BulletPunchSubcall:
+	fadetobg 10
+	goto _BulletPunchReturn
+	end
 

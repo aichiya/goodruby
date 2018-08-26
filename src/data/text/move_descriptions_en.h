@@ -1982,6 +1982,10 @@ static const u8 MoveDescription_HeartStamp[] = _(
     "Acts cute, then strikes.\n"
     "May cause flinching.");
 
+static const u8 MoveDescription_BulletPunch[] = _(
+    "A punch is thrown at wicked\n"
+    "speed to strike first.");
+
 
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
@@ -2480,4 +2484,5 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_FreezeDry,
 	MoveDescription_HeadSmash,
 	MoveDescription_HeartStamp,
+	MoveDescription_BulletPunch,
 };

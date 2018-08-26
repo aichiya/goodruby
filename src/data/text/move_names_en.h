@@ -496,4 +496,5 @@ const u8 gMoveNames[][13] = {
 	[MOVE_FREEZE_DRY] = _("Freeze-Dry"),
 	[MOVE_HEAD_SMASH] = _("Head Smash"),
 	[MOVE_HEART_STAMP] = _("Heart Stamp"),
+	[MOVE_BULLET_PUNCH] = _("Bullet Punch"),
 };
