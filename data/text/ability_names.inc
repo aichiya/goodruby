@@ -92,3 +92,4 @@ gAbilityNames:: @ 81FA248
 	.string "SUPER LUCK$", 13
 	.string "MOLD BREAKER$", 13
 	.string "ICE BODY$", 13
+	.string "SNIPER$", 13

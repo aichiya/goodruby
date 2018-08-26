@@ -1630,7 +1630,14 @@ static void atk05_damagecalc(void)
     gBattleMoveDamage = CalculateBaseDamage(&gBattleMons[gBankAttacker], &gBattleMons[gBankTarget], gCurrentMove,
                                             side_hword, gDynamicBasePower,
                                             gBattleStruct->dynamicMoveType, gBankAttacker, gBankTarget);
-    gBattleMoveDamage = gBattleMoveDamage * gCritMultiplier * gBattleStruct->dmgMultiplier;
+    gBattleMoveDamage = gBattleMoveDamage * gBattleStruct->dmgMultiplier;
+	
+	if (gCritMultiplier > 1)
+	{
+		gBattleMoveDamage += (gBattleMoveDamage / 2);
+		if (gBattleMons[gBankAttacker].ability == ABILITY_SNIPER)
+			gBattleMoveDamage += (gBattleMoveDamage / 2);
+	}
 
     if (gStatuses3[gBankAttacker] & STATUS3_CHARGED_UP && gBattleMoves[gCurrentMove].type == TYPE_ELECTRIC)
         gBattleMoveDamage *= 2;
@@ -1647,8 +1654,14 @@ void AI_CalcDmg(u8 BankAtk, u8 BankDef)
                                             side_hword, gDynamicBasePower,
                                             gBattleStruct->dynamicMoveType, BankAtk, BankDef);
     gDynamicBasePower = 0;
-    gBattleMoveDamage = gBattleMoveDamage * gCritMultiplier * gBattleStruct->dmgMultiplier;
+    gBattleMoveDamage = gBattleMoveDamage * gBattleStruct->dmgMultiplier;
 
+	if (gCritMultiplier > 1)
+	{
+		gBattleMoveDamage += (gBattleMoveDamage / 2);
+		if (gBattleMons[BankAtk].ability == ABILITY_SNIPER)
+			gBattleMoveDamage += (gBattleMoveDamage / 2);
+	}
     if (gStatuses3[BankAtk] & STATUS3_CHARGED_UP && gBattleMoves[gCurrentMove].type == TYPE_ELECTRIC)
         gBattleMoveDamage *= 2;
     if (gProtectStructs[BankAtk].helpingHand)

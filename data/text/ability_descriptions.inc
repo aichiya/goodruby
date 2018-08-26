@@ -274,8 +274,11 @@ gAbilityDescription_SuperLuck:
 gAbilityDescription_MoldBreaker:
 	.string "Bypasses target’s ability.$"
 
-gAbilityDescription_IceBody: @ 81F9DD1
+gAbilityDescription_IceBody:
 	.string "Slight HP recovery in hail.$"
+
+gAbilityDescription_Sniper:
+	.string "Powers up critical hits.$"
 
 
 	.align 2
@@ -373,3 +376,4 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_SuperLuck
 	.4byte gAbilityDescription_MoldBreaker
 	.4byte gAbilityDescription_IceBody
+	.4byte gAbilityDescription_Sniper
