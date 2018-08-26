@@ -42,6 +42,7 @@
 --Fix Conversion2
 --Autotomize doesn't touch weight
 --Infestation
+--make head smash do the right amount of recoil
 
 Distant future:
 --Hidden abilities?

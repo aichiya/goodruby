@@ -513,6 +513,7 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_ICE_SHARD
 	.4byte Move_FROST_BREATH
 	.4byte Move_FREEZE_DRY
+	.4byte Move_HEAD_SMASH
 	.4byte PoundCopy
 
 	.align 2
@@ -15063,6 +15064,23 @@ Move_FREEZE_DRY:
 	waitforvisualfinish
 	end
 
+Move_HEAD_SMASH:
+	loadspritegfx 10135
+	createvisualtask sub_80CDAC8, 2, 0
+	playsewithpan SE_W036, 192
+	waitforvisualfinish
+	playse SE_BAN
+	createsprite gBattleAnimSpriteTemplate_83DB3DC, 2, 1, 3, 1, 0, 14, 32767, 14
+	createvisualtask AnimTask_ShakeMonInPlace, 2, ANIM_BANK_ATTACKER, 2, 0, 40, 1
+	createvisualtask AnimTask_ShakeMonInPlace, 2, ANIM_BANK_TARGET, 10, 0, 40, 1
+	createsprite gBattleAnimSpriteTemplate_83DB538, 132, 0, 0, 1, 0
+	call _81C85E9
+	loopsewithpan SE_W025B, 63, 8, 3
+	waitforvisualfinish
+	createvisualtask sub_80CDAC8, 2, 1
+	restorebg
+	waitbgfadein
+	end
 
 
 

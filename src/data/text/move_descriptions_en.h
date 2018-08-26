@@ -1974,6 +1974,11 @@ static const u8 MoveDescription_FreezeDry[] = _(
     "Rapid cooling that may\n"
     "freeze. Hurts Water-types.");
 
+static const u8 MoveDescription_HeadSmash[] = _(
+    "A life-endangering attack.\n"
+    "Hurts the user terribly.");
+
+
 
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
@@ -2470,4 +2475,5 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_IceShard,
 	MoveDescription_FrostBreath,
 	MoveDescription_FreezeDry,
+	MoveDescription_HeadSmash,
 };

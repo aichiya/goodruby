@@ -6439,4 +6439,17 @@ const struct BattleMove gBattleMoves[] = {
         .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
 		.moveClass = CLASS_SPECIAL,
     },
+
+    [MOVE_HEAD_SMASH] = {
+        .effect = EFFECT_RECOIL,
+        .power = 150,
+        .type = TYPE_ROCK,
+        .accuracy = 80,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+		.moveClass = CLASS_PHYSICAL,
+    },
 };
