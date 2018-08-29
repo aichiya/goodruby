@@ -17,7 +17,6 @@
 --make twineedle roll on both hits
 --give volt tackle a paralyze chance
 --Things that alter abilities (Skill Swap) reveal abilities
---Weather abilities aren't permanent
 
 --update move targetting for surf, etc.
 

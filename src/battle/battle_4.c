@@ -1370,7 +1370,11 @@ static bool8 AccuracyCalcHelper(u16 move)
         return TRUE;
 	}
 	
-	// TODO: toxic used by poison-types goes here
+	if (move == MOVE_TOXIC && (gBattleMons[gBankAttacker].type1 == TYPE_POISON || gBattleMons[gBankAttacker].type2 == TYPE_POISON))
+	{
+        JumpIfMoveFailed(7, move);
+        return TRUE;
+	}
 
     if (!(gHitMarker & HITMARKER_IGNORE_ON_AIR) && gStatuses3[gBankTarget] & STATUS3_ON_AIR)
     {
