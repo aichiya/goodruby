@@ -516,6 +516,8 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_HEAD_SMASH
 	.4byte Move_HEART_STAMP
 	.4byte Move_BULLET_PUNCH
+	.4byte Move_ORIGIN_PULSE
+	.4byte Move_EARTH_BLADES
 	.4byte PoundCopy
 
 	.align 2
@@ -15148,4 +15150,95 @@ _BulletPunchSubcall:
 	fadetobg 10
 	goto _BulletPunchReturn
 	end
+
+Move_ORIGIN_PULSE:
+	loadspritegfx 10149
+	loadspritegfx 10148
+	monbg ANIM_BANK_DEF_PARTNER
+	setalpha 12, 8
+	
+	
+	createsprite gSimplePaletteBlendSpriteTemplate, 2, 1, 0, 0, 7, rgb(7, 9, 31)
+	delay 10
+	
+	playsewithpan SE_W057, 192
+	createsprite gBattleAnimSpriteTemplate_83D92D0, 130
+	delay 10
+	delay 30
+	panse_1B SE_W056, 192, 63, 2, 0
+	call _OriginPulseSubcall
+	createvisualtask AnimTask_ShakeMon, 5, 1, 10, 0, 40, 1
+	createsprite gBattleAnimSpriteTemplate_83DB4D8, 130, 0, 0, 1, 0
+	call _OriginPulseSubcall
+	createsprite gBattleAnimSpriteTemplate_83DB4D8, 130, 0, 0, 1, 0
+	call _OriginPulseSubcall
+	createsprite gBattleAnimSpriteTemplate_83DB4D8, 130, 0, 0, 1, 0
+	call _OriginPulseSubcall
+	createsprite gBattleAnimSpriteTemplate_83DB4D8, 130, 0, 0, 1, 0
+	call _OriginPulseSubcall
+	createsprite gBattleAnimSpriteTemplate_83DB4D8, 130, 0, 0, 1, 0
+	call _OriginPulseSubcall
+	createsprite gBattleAnimSpriteTemplate_83DB4D8, 130, 0, 0, 1, 0
+	waitforvisualfinish
+	
+	createsprite gSimplePaletteBlendSpriteTemplate, 2, 1, 1, 7, 0, rgb(7, 9, 31)
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_DEF_PARTNER
+	blendoff
+	end
+_OriginPulseSubcall:
+	createsprite gBattleAnimSpriteTemplate_83D92E8, 130, 10, -10, -30, -30, 15, 257
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83D92E8, 130, 10, -10, -15, -15, 15, 257
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83D92E8, 130, 10, -10, 0, 0, 15, 257
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83D92E8, 130, 10, -10, 15, 15, 15, 257
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83D92E8, 130, 10, -10, 30, 30, 15, 257
+	return
+	end
+
+Move_EARTH_BLADES:
+	loadspritegfx 10058
+	loadspritegfx 10135
+	monbg ANIM_BANK_DEF_PARTNER
+	setalpha 12, 8
+	createsprite gSimplePaletteBlendSpriteTemplate, 2, 1, 0, 0, 7, rgb(31, 7, 9)
+	delay 10
+	
+	createsprite gBattleAnimSpriteTemplate_83DB428, 2, 4, 1, 10, 1
+	createsprite gBattleAnimSpriteTemplate_83DAD60, 2, 20, 32, -48, 50, 2
+	createsprite gBattleAnimSpriteTemplate_83DAD60, 2, 0, 32, -38, 25, 5
+	createsprite gBattleAnimSpriteTemplate_83DAD60, 2, 32, 32, -28, 40, 3
+	createsprite gBattleAnimSpriteTemplate_83DAD60, 2, -20, 32, -48, 50, 2
+	createsprite gBattleAnimSpriteTemplate_83DAD60, 2, 20, 32, -28, 60, 1
+	createsprite gBattleAnimSpriteTemplate_83DAD60, 2, 0, 32, -28, 30, 4
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BANK_ATTACKER, 1, 0, 30, 1
+	playsewithpan SE_W082, 192
+	delay 10
+	createsprite gBattleAnimSpriteTemplate_83DAD60, 2, 15, 32, -48, 25, 5
+	createsprite gBattleAnimSpriteTemplate_83DAD60, 2, -10, 32, -42, 30, 4
+	delay 10
+	createsprite gBattleAnimSpriteTemplate_83DAD60, 2, 0, 32, -42, 25, 5
+	createsprite gBattleAnimSpriteTemplate_83DAD60, 2, -25, 32, -48, 30, 4
+	waitforvisualfinish
+	createsprite gSlideMonToOffsetSpriteTemplate, 2, 0, 16, 0, 0, 4
+	delay 3
+	playsewithpan SE_W120, 63
+	
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BANK_TARGET, 3, 0, 8, 1
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BANK_DEF_PARTNER, 3, 0, 8, 1
+	waitforvisualfinish
+	createsprite gSlideMonToOriginalPosSpriteTemplate, 2, 0, 0, 7
+	waitforvisualfinish
+	
+	
+	
+	createsprite gSimplePaletteBlendSpriteTemplate, 2, 1, 0, 7, 0, rgb(31, 7, 9)
+	delay 10
+	clearmonbg ANIM_BANK_DEF_PARTNER
+	blendoff
+	end
+
 

@@ -497,4 +497,6 @@ const u8 gMoveNames[][13] = {
 	[MOVE_HEAD_SMASH] = _("Head Smash"),
 	[MOVE_HEART_STAMP] = _("Heart Stamp"),
 	[MOVE_BULLET_PUNCH] = _("Bullet Punch"),
+	[MOVE_ORIGIN_PULSE] = _("Origin Pulse"),
+	[MOVE_EARTH_BLADES] = _("Earth Blades"),
 };

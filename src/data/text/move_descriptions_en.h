@@ -1986,6 +1986,14 @@ static const u8 MoveDescription_BulletPunch[] = _(
     "A punch is thrown at wicked\n"
     "speed to strike first.");
 
+static const u8 MoveDescription_OriginPulse[] = _(
+    "Attacks with countless\n"
+    "blue beams of light.");
+
+static const u8 MoveDescription_EarthBlades[] = _(
+    "Attacks by forming the land\n"
+    "into blades of pure stone.");
+
 
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
@@ -2485,4 +2493,6 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_HeadSmash,
 	MoveDescription_HeartStamp,
 	MoveDescription_BulletPunch,
+	MoveDescription_OriginPulse,
+	MoveDescription_EarthBlades,
 };
