@@ -1,11 +1,9 @@
 --update Spit Up
 --update Beat Up
---update Hidden Power
 --update Knock off
 
 --update string shot, sweet scent, other effects?
 
---update Toxic acc for poison-types
 --make Electric-types immune to Paralysis
 --nerf paralysis
 --nerf confusion

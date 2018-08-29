@@ -943,8 +943,8 @@ static const u8 MoveDescription_Moonlight[] = _(
     "varies with the weather.");
 
 static const u8 MoveDescription_HiddenPower[] = _(
-    "The effectiveness varies\n"
-    "with the user.");
+    "The type varies with\n"
+    "the user.");
 
 static const u8 MoveDescription_CrossChop[] = _(
     "A double-chopping attack.\n"
