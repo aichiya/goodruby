@@ -1902,27 +1902,30 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
                 }
                 break;
             case ABILITY_DRIZZLE:
-                if (!(gBattleWeather & WEATHER_RAIN_PERMANENT))
+                if (!(gBattleWeather & WEATHER_RAIN_TEMPORARY))
                 {
-                    gBattleWeather = (WEATHER_RAIN_PERMANENT | WEATHER_RAIN_TEMPORARY);
+                    gBattleWeather = (WEATHER_RAIN_TEMPORARY);
+					gWishFutureKnock.weatherDuration = 5;
                     BattleScriptPushCursorAndCallback(BattleScript_DrizzleActivates);
                     gBattleStruct->scriptingActive = bank;
                     effect++;
                 }
                 break;
             case ABILITY_SAND_STREAM:
-                if (!(gBattleWeather & WEATHER_SANDSTORM_PERMANENT))
+                if (!(gBattleWeather & WEATHER_SANDSTORM_TEMPORARY))
                 {
-                    gBattleWeather = (WEATHER_SANDSTORM_PERMANENT | WEATHER_SANDSTORM_TEMPORARY);
+                    gBattleWeather = (WEATHER_SANDSTORM_TEMPORARY);
+					gWishFutureKnock.weatherDuration = 5;
                     BattleScriptPushCursorAndCallback(BattleScript_SandstreamActivates);
                     gBattleStruct->scriptingActive = bank;
                     effect++;
                 }
                 break;
             case ABILITY_DROUGHT:
-                if (!(gBattleWeather & WEATHER_SUN_PERMANENT))
+                if (!(gBattleWeather & WEATHER_SUN_TEMPORARY))
                 {
-                    gBattleWeather = (WEATHER_SUN_PERMANENT | WEATHER_SUN_TEMPORARY);
+                    gBattleWeather = (WEATHER_SUN_TEMPORARY);
+					gWishFutureKnock.weatherDuration = 5;
                     BattleScriptPushCursorAndCallback(BattleScript_DroughtActivates);
                     gBattleStruct->scriptingActive = bank;
                     effect++;
