@@ -7133,7 +7133,7 @@ static void atk49_moveend(void)
             gBattleStruct->cmd49StateTracker++;
             break;
         case 9: //semi-invlurneable attacker make visible
-            if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT) || !(gStatuses3[gBankAttacker] & (STATUS3_SEMI_INVULNERABLE))
+            if ((gMoveResultFlags & MOVE_RESULT_NO_EFFECT) || !(gStatuses3[gBankAttacker] & (STATUS3_SEMI_INVULNERABLE))
                 || WasUnableToUseMove(gBankAttacker))
                 {
                     gActiveBattler = gBankAttacker;
@@ -7144,7 +7144,7 @@ static void atk49_moveend(void)
                 }
             gBattleStruct->cmd49StateTracker++;
             break;
-        case 10: //semi-invlurneable target make visible
+        case 10: //semi-invulnerable target make visible
             if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT) || !(gStatuses3[gBankTarget] & (STATUS3_SEMI_INVULNERABLE))
                 || WasUnableToUseMove(gBankTarget))
                 {

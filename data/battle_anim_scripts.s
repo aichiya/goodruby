@@ -11667,22 +11667,46 @@ Move_SHADOW_SNEAK:
 Move_PHANTOM_FORCE:
 	loadspritegfx 10156
 	loadspritegfx 10135
-	choosetwoturnanim _81D0480, _81D0498
+	choosetwoturnanim _PhantomForceDive, _PhantomForceAttack
 	
 _PhantomForceDive:
 	createvisualtask sub_80E2324, 2, 257, 257, 257
-	delay 1
-	createvisualtask sub_80DBCFC, 2
 	playsewithpan SE_W100, 192
-	waitforvisualfinish
+	createsprite gBattleAnimSpriteTemplate_83DA568, 2, 0, 0
+	delay 30
 	createvisualtask sub_80E2324, 2, 257, 257, 257
-	blendoff
+	waitforvisualfinish
 	end
 
 _PhantomForceAttack:
-	visible 0
-	clearmonbg ANIM_BANK_DEF_PARTNER
+	loadspritegfx 10167
+	loadspritegfx 10039
+	loadspritegfx 10208
+	monbg ANIM_BANK_TARGET
+	setalpha 12, 8
+	createvisualtask sub_80E2324, 2, 257, 257, 257
+	
+	
+	createvisualtask sub_80E149C, 2, 0
+	waitforvisualfinish
+	createvisualtask sub_80E149C, 2, 1
+	delay 16
+	
+	createsprite gHorizontalLungeSpriteTemplate, 2, 6, 4
+	delay 4
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BANK_TARGET, 2, 0, 18, 1
+	createsprite gBattleAnimSpriteTemplate_83DB288, 130, -10, -10, 0
+	createsprite gBattleAnimSpriteTemplate_83DB288, 130, -10, 10, 0
+	playsewithpan SE_W013, 63
+	delay 12
+	createsprite gBattleAnimSpriteTemplate_83DB288, 130, 10, -10, 1
+	createsprite gBattleAnimSpriteTemplate_83DB288, 130, 10, 10, 1
+	playsewithpan SE_W013, 63
+	waitforvisualfinish
 	blendoff
+	clearmonbg ANIM_BANK_TARGET
+	createvisualtask sub_80E2324, 2, 257, 257, 257
+	waitforvisualfinish
 	end
 
 Move_DEFOG:

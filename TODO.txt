@@ -35,7 +35,6 @@
 
 --Fling currently does not activate most berries (except pinch stat-boosters).
 --Flame Burst is a standard multi-target attack
---Phantom Force's animation is broken, atk49 needs to be decompiled to make it work right
 --Fix Conversion2
 --Autotomize doesn't touch weight
 --Infestation
