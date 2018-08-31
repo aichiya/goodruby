@@ -239,6 +239,8 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
 		spAttack *= 2;
 	if (gCurrentMove == MOVE_HEX && defender->status1)
 		spAttack *= 2;
+	if (gCurrentMove == MOVE_KNOCK_OFF && defender->item && !gWishFutureKnock.knockedOffPokes[bankDef])
+		attack = (attack * 3) / 2;
     
     if (moveClass == 0)
     {

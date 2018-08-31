@@ -1,6 +1,5 @@
 --update Spit Up
 --update Beat Up
---update Knock off
 
 --update string shot, sweet scent, other effects?
 
@@ -25,7 +24,6 @@
 --Display nature stat mods.
 --Implement auto-run.
 --Allow running indoors.
---Destroy the low HP beep.
 --Update Exp Yields, move to gen 5 exp formula
 --Update base stats
 --Allow evolution of fainted mons, or on a wipe

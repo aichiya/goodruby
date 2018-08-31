@@ -69,5 +69,6 @@
 #define HOLD_EFFECT_THICK_CLUB     65
 #define HOLD_EFFECT_STICK          66
 #define HOLD_EFFECT_SITRUS         67
+#define HOLD_EFFECT_MAIL           68
 
 #endif // GUARD_CONSTANTS_HOLD_EFFECTS_H
