@@ -10,7 +10,6 @@
 
 --figure out what's going on with razor wind/sky attack crit
 --make twineedle roll on both hits
---give volt tackle a paralyze chance
 --Things that alter abilities (Skill Swap) reveal abilities
 
 --update move targetting for surf, etc.
