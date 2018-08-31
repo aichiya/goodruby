@@ -17,7 +17,6 @@
 --Decapitalize.
 --Implement cross-gen evos.
 --Implement cross-gen items and balls.
---Make eggs hatch at level 1.
 --Display nature stat mods.
 --Implement auto-run.
 --Allow running indoors.

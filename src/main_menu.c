@@ -865,7 +865,7 @@ static void Task_NewGameSpeech7(u8 taskId)
         gTasks[taskId].tFrameCounter++;
         //Play Azurill cry at frame 32
         if (gTasks[taskId].tFrameCounter == 32)
-            PlayCry1(SPECIES_AZURILL, 0);
+            PlayCry1(SPECIES_VIGOROTH, 0);
     }
 }
 
@@ -1429,14 +1429,14 @@ void ShrinkPlayerSprite(struct Sprite *sprite)
 u8 CreateAzurillSprite(u8 x, u8 y)
 {
     DecompressPicFromTable_2(
-        &gMonFrontPicTable[SPECIES_AZURILL],
-        gMonFrontPicCoords[SPECIES_AZURILL].coords,
-        gMonFrontPicCoords[SPECIES_AZURILL].y_offset,
+        &gMonFrontPicTable[SPECIES_VIGOROTH],
+        gMonFrontPicCoords[SPECIES_VIGOROTH].coords,
+        gMonFrontPicCoords[SPECIES_VIGOROTH].y_offset,
         gUnknown_081FAF4C[0],
         gUnknown_081FAF4C[1],
-        SPECIES_AZURILL);
-    LoadCompressedObjectPalette(&gMonPaletteTable[SPECIES_AZURILL]);
-    GetMonSpriteTemplate_803C56C(SPECIES_AZURILL, 1);
+        SPECIES_VIGOROTH);
+    LoadCompressedObjectPalette(&gMonPaletteTable[SPECIES_VIGOROTH]);
+    GetMonSpriteTemplate_803C56C(SPECIES_VIGOROTH, 1);
     return CreateSprite(&gUnknown_02024E8C, x, y, 0);
 }
 
