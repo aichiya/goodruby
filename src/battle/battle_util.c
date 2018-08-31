@@ -1596,7 +1596,7 @@ u8 AtkCanceller_UnableToUseMove(void)
                 gBattleMons[gBankAttacker].status2--;
                 if (gBattleMons[gBankAttacker].status2 & STATUS2_CONFUSION)
                 {
-                    if (Random() & 1)
+                    if (Random() % 3 != 0)
                     {
                         gBattleCommunication[MULTISTRING_CHOOSER] = 0;
                         BattleScriptPushCursor();
