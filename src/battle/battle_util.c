@@ -1046,7 +1046,7 @@ u8 TurnBasedEffects(void)
             case 7:  // burn
                 if ((gBattleMons[gActiveBattler].status1 & STATUS_BURN) && gBattleMons[gActiveBattler].hp != 0)
                 {
-                    gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 8;
+                    gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 16;
                     if (gBattleMoveDamage == 0)
                         gBattleMoveDamage = 1;
                     BattleScriptExecute(BattleScript_BurnTurnDmg);

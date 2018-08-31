@@ -6,7 +6,6 @@
 --make Electric-types immune to Paralysis
 --nerf paralysis
 --nerf confusion
---nerf burn
 --nerf sleep
 --make Ghosts immune to trapping
 
