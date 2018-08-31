@@ -1,5 +1,7 @@
 --update Spit Up
 --update Beat Up
+--update Encore
+--update Taunt, add Taunt messages
 
 --update string shot, sweet scent, other effects?
 
