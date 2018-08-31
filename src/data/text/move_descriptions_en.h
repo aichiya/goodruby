@@ -1371,8 +1371,8 @@ static const u8 MoveDescription_Covet[] = _(
     "item held by the foe.");
 
 static const u8 MoveDescription_VoltTackle[] = _(
-    "A life-risking tackle that\n"
-    "slightly hurts the user.");
+    "An attack that hurts the\n"
+    "user. May inflict paralysis.");
 
 static const u8 MoveDescription_MagicalLeaf[] = _(
     "Attacks with a strange leaf\n"

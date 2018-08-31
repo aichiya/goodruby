@@ -2693,6 +2693,7 @@ BattleScript_EffectSecretPower: @ 81D8918
 
 BattleScript_EffectDoubleEdge: @ 81D891E
 	jumpifmove MOVE_FLARE_BLITZ, BattleScript_EffectFlareBlitz
+	jumpifmove MOVE_VOLT_TACKLE, BattleScript_EffectVoltTackle
 	setmoveeffect EFFECT_RECOIL_33_PARALYSIS | AFFECTS_USER | CERTAIN
 	goto BattleScript_EffectHit
 
@@ -4553,6 +4554,35 @@ BattleScript_EffectFlareBlitz:
 	resultmessage
 	waitmessage 64
 	setmoveeffect EFFECT_BURN
+	seteffectwithchance
+	setmoveeffect EFFECT_RECOIL_33_PARALYSIS | AFFECTS_USER | CERTAIN
+	seteffectwithchance
+	tryfaintmon TARGET, FALSE, NULL
+	setbyte sMOVEEND_STATE, 0
+	moveend 0, 0
+	end
+
+BattleScript_EffectVoltTackle:
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation TARGET
+	waitstate
+	healthbarupdate TARGET
+	datahpupdate TARGET
+	critmessage
+	waitmessage 64
+	resultmessage
+	waitmessage 64
+	setmoveeffect EFFECT_PARALYSIS
 	seteffectwithchance
 	setmoveeffect EFFECT_RECOIL_33_PARALYSIS | AFFECTS_USER | CERTAIN
 	seteffectwithchance
