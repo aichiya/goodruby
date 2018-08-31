@@ -1059,7 +1059,7 @@ const struct BattleMove gBattleMoves[] = {
     },
 
     [MOVE_STRING_SHOT] = {
-        .effect = EFFECT_SPEED_DOWN,
+        .effect = EFFECT_SPEED_DOWN_2,
         .power = 0,
         .type = TYPE_BUG,
         .accuracy = 95,

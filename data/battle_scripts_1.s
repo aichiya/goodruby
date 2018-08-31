@@ -23,7 +23,7 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectAttackUp
 	.4byte BattleScript_EffectDefenseUp
 	.4byte BattleScript_EffectSpeedUp
-	.4byte BattleScript_EffectSpecialAttackUp
+	.4byte BattleScript_EffectGrowth
 	.4byte BattleScript_EffectSpecialDefenseUp
 	.4byte BattleScript_EffectAccuracyUp
 	.4byte BattleScript_EffectEvasionUp
@@ -547,10 +547,6 @@ BattleScript_EffectDefenseUp: @ 81D7196
 	setstatchanger DEFENSE, 1, FALSE
 	goto BattleScript_EffectStatUp
 
-BattleScript_EffectSpecialAttackUp: @ 81D71A1
-	setstatchanger SP_ATTACK, 1, FALSE
-	goto BattleScript_EffectStatUp
-
 BattleScript_EffectEvasionUp: @ 81D71AC
 	setstatchanger EVASION, 1, FALSE
 
@@ -599,7 +595,7 @@ BattleScript_EffectAccuracyDown: @ 81D7216
 	goto BattleScript_EffectStatDown
 
 BattleScript_EffectEvasionDown: @ 81D7221
-	setstatchanger EVASION, 1, TRUE
+	setstatchanger EVASION, 2, TRUE
 
 BattleScript_EffectStatDown: @ 81D7227
 	attackcanceler
@@ -6265,7 +6261,67 @@ BattleScript_PsychoShiftPara:
 	printstring BATTLE_TEXT_StatusNormal
 	waitmessage 64
 	updatestatusicon USER
+	goto BattleScript_MoveEnd	
+	end
+
+BattleScript_EffectGrowth: @ Growth
+	jumpifabilitypresent ABILITY_CLOUD_NINE, BattleScript_Growth1
+	jumpifabilitypresent ABILITY_AIR_LOCK, BattleScript_Growth1
+	jumpifhalfword COMMON_BITS, gBattleWeather, 96, BattleScript_Growth2
+	
+BattleScript_Growth1:
+	attackcanceler
+	attackstring
+	ppreduce
+	jumpifstat USER, LESS_THAN, ATTACK, 12, BattleScript_Growth1DoMoveAnim
+	jumpifstat USER, EQUAL, SP_ATTACK, 12, BattleScript_CantRaiseMultipleStats
+
+BattleScript_Growth1DoMoveAnim:
+	attackanimation
+	waitanimation
+	setbyte sFIELD_1B, 0
+	playstatchangeanimation USER, 18, 0
+	setstatchanger ATTACK, 1, FALSE
+	statbuffchange AFFECTS_USER | 0x1, BattleScript_Growth1TrySpAtk
+	jumpifbyte EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_Growth1TrySpAtk
+	printfromtable gStatUpStringIds
+	waitmessage 64
+
+BattleScript_Growth1TrySpAtk:
+	setstatchanger SP_ATTACK, 1, FALSE
+	statbuffchange AFFECTS_USER | 0x1, BattleScript_Growth1End
+	jumpifbyte EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_Growth1End
+	printfromtable gStatUpStringIds
+	waitmessage 64
+
+BattleScript_Growth1End:
 	goto BattleScript_MoveEnd
 	
-	
-	end
+BattleScript_Growth2:
+	attackcanceler
+	attackstring
+	ppreduce
+	jumpifstat USER, LESS_THAN, ATTACK, 12, BattleScript_Growth2DoMoveAnim
+	jumpifstat USER, EQUAL, SP_ATTACK, 12, BattleScript_CantRaiseMultipleStats
+
+BattleScript_Growth2DoMoveAnim:
+	attackanimation
+	waitanimation
+	setbyte sFIELD_1B, 0
+	playstatchangeanimation USER, 18, 2
+	setstatchanger ATTACK, 2, FALSE
+	statbuffchange AFFECTS_USER | 0x1, BattleScript_Growth2TrySpAtk
+	jumpifbyte EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_Growth2TrySpAtk
+	printfromtable gStatUpStringIds
+	waitmessage 64
+
+BattleScript_Growth2TrySpAtk:
+	setstatchanger SP_ATTACK, 2, FALSE
+	statbuffchange AFFECTS_USER | 0x1, BattleScript_Growth2End
+	jumpifbyte EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_Growth2End
+	printfromtable gStatUpStringIds
+	waitmessage 64
+
+BattleScript_Growth2End:
+	goto BattleScript_MoveEnd
+

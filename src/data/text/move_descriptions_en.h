@@ -291,8 +291,8 @@ static const u8 MoveDescription_LeechSeed[] = _(
     "steal HP on every turn.");
 
 static const u8 MoveDescription_Growth[] = _(
-    "Forces the body to grow\n"
-    "and heightens SP. ATK.");
+    "Forces the body to grow.\n"
+    "Raises ATTACK and SP. ATK.");
 
 static const u8 MoveDescription_RazorLeaf[] = _(
     "Cuts the enemy with leaves.\n"
@@ -320,7 +320,7 @@ static const u8 MoveDescription_PetalDance[] = _(
 
 static const u8 MoveDescription_StringShot[] = _(
     "Binds the foe with string\n"
-    "to reduce its SPEED.");
+    "to harshly lower its SPEED.");
 
 static const u8 MoveDescription_DragonRage[] = _(
     "Launches shock waves that\n"
@@ -916,7 +916,7 @@ static const u8 MoveDescription_RapidSpin[] = _(
 
 static const u8 MoveDescription_SweetScent[] = _(
     "Allures the foe to reduce\n"
-    "evasiveness.");
+    "evasiveness harshly.");
 
 static const u8 MoveDescription_IronTail[] = _(
     "Attacks with a rock-hard\n"

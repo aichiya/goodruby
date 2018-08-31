@@ -19,7 +19,6 @@
 --Implement cross-gen items and balls.
 --Display nature stat mods.
 --Implement auto-run.
---Allow running indoors.
 --Update Exp Yields, move to gen 5 exp formula
 --Update base stats
 --Allow evolution of fainted mons, or on a wipe
