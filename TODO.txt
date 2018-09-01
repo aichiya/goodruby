@@ -1,12 +1,10 @@
 --update Spit Up
 --update Beat Up
---update Encore
 --update Taunt, add Taunt messages
 
 --update string shot, sweet scent, other effects?
 
 --nerf paralysis
---nerf sleep
 --make Ghosts immune to trapping
 
 --figure out what's going on with razor wind/sky attack crit

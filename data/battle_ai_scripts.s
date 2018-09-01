@@ -538,9 +538,10 @@ AI_CBM_WillOWisp: @ 81DA781
 	get_ability TARGET
 	if_equal ABILITY_WATER_VEIL, Score_Minus10
 	if_status TARGET, SLP | PSN | BRN | FRZ | PAR | TOX, Score_Minus10
-	if_damage_bonus 0, Score_Minus10
-	if_damage_bonus 20, Score_Minus10
-	if_damage_bonus 10, Score_Minus10
+	get_type ENEMY_TYPE1
+	if_equal TYPE_FIRE, Score_Minus10
+	get_type PLAYER_TYPE1
+	if_equal TYPE_FIRE, Score_Minus10
 	end
 
 AI_CBM_HelpingHand: @ 81DA7A6
