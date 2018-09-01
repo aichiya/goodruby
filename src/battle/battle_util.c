@@ -2230,6 +2230,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 		    && gBattleMons[gBankAttacker].hp != 0
 		    && !gProtectStructs[gBankAttacker].confusionSelfDmg
 		    && (gSpecialStatuses[gBankTarget].moveturnLostHP_physical || gSpecialStatuses[gBankTarget].moveturnLostHP_special)
+			&& gBattleMons[gBankAttacker].type1 != TYPE_GRASS && gBattleMons[gBankAttacker].type2 != TYPE_GRASS
 		    && (gBattleMoves[move].flags & F_MAKES_CONTACT))
 		    {
 			do
@@ -2251,6 +2252,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 		    && gBattleMons[gBankAttacker].hp != 0
 		    && !gProtectStructs[gBankAttacker].confusionSelfDmg
 		    && (gSpecialStatuses[gBankTarget].moveturnLostHP_physical || gSpecialStatuses[gBankTarget].moveturnLostHP_special)
+			&& gBattleMons[gBankAttacker].type1 != TYPE_GRASS && gBattleMons[gBankAttacker].type2 != TYPE_GRASS
 		    && (gBattleMoves[move].flags & F_MAKES_CONTACT)
 		    && (Random() % 10) == 0)
 		    {
