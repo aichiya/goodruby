@@ -12603,7 +12603,7 @@ static void atkAD_tryspiteppreduce(void)
             if (gLastUsedMove[gBankTarget] == gBattleMons[gBankTarget].moves[i])
                 break;
         }
-        if (i != 4 && gBattleMons[gBankTarget].pp[i] > 1)
+        if (i != 4 && gBattleMons[gBankTarget].pp[i] > 0)
         {
             s32 lost_pp = 4;
             if (gBattleMons[gBankTarget].pp[i] < lost_pp)
