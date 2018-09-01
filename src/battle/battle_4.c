@@ -12605,7 +12605,7 @@ static void atkAD_tryspiteppreduce(void)
         }
         if (i != 4 && gBattleMons[gBankTarget].pp[i] > 1)
         {
-            s32 lost_pp = (Random() & 3) + 2;
+            s32 lost_pp = 4;
             if (gBattleMons[gBankTarget].pp[i] < lost_pp)
                 lost_pp = gBattleMons[gBankTarget].pp[i];
 
