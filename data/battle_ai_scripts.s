@@ -389,6 +389,8 @@ AI_CBM_Paralyze: @ 81DA628
 	get_ability TARGET
 	if_equal ABILITY_LIMBER, Score_Minus10
 	if_status TARGET, SLP | PSN | BRN | FRZ | PAR | TOX, Score_Minus10
+	get_type ENEMY_TYPE1
+	if_equal TYPE_ELECTRIC, Score_Minus10
 	end
 
 AI_CBM_Substitute: @ 81DA641

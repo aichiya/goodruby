@@ -5,7 +5,6 @@
 
 --update string shot, sweet scent, other effects?
 
---make Electric-types immune to Paralysis
 --nerf paralysis
 --nerf sleep
 --make Ghosts immune to trapping

@@ -283,14 +283,7 @@ struct BattleStruct /* 0x2000000 */
     /*0x160E5*/ u8 unk160E5;
     /*0x160E6*/ u8 unk160E6;
     /*0x160E7*/ u8 atkCancellerTracker;
-    /*0x160E8*/ u8 unk160E8;
-    /*0x160E9*/ u8 unk160E9;
-    /*0x160EA*/ u8 unk160EA;
-    /*0x160EB*/ u8 unk160EB;
-    /*0x160EC*/ u8 unk160EC;
-    /*0x160ED*/ u8 unk160ED;
-    /*0x160EE*/ u8 unk160EE;
-    /*0x160EF*/ u8 unk160EF;
+    /*0x160E8*/ u16 choicedMove[4];
     /*0x160F0*/ u16 changedItems[4];
     /*0x160F8*/ u8 unk160F8;
     /*0x160F9*/ u8 unk160F9;

@@ -1074,6 +1074,7 @@ BattleScript_EffectParalyze: @ 81D77F6
 	jumpifability TARGET, ABILITY_LIMBER, BattleScript_LimberProtected
 	jumpifstatus2 TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
 	typecalc
+	jumpiftype TARGET, TYPE_ELECTRIC, BattleScript_NotAffected
 	jumpifmovehadnoeffect BattleScript_ButItFailed
 	jumpifstatus TARGET, PAR, BattleScript_AlreadyParalyzed
 	jumpifstatus TARGET, SLP | PSN | BRN | FRZ | PAR | TOX, BattleScript_ButItFailed
@@ -6253,6 +6254,7 @@ BattleScript_PsychoShiftPara:
 	jumpifability TARGET, ABILITY_LIMBER, BattleScript_LimberProtected
 	jumpifstatus TARGET, PAR, BattleScript_AlreadyParalyzed
 	jumpifstatus TARGET, SLP | PSN | BRN | FRZ | PAR | TOX, BattleScript_ButItFailed
+	jumpiftype TARGET, TYPE_ELECTRIC, BattleScript_NotAffected
 	attackanimation
 	waitanimation
 	setmoveeffect EFFECT_PARALYSIS
