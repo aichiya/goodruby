@@ -12106,7 +12106,7 @@ static void atkA4_trysetencore(void)
     {
         gDisableStructs[gBankTarget].encoredMove = gBattleMons[gBankTarget].moves[i];
         gDisableStructs[gBankTarget].encoredMovePos = i;
-        gDisableStructs[gBankTarget].encoreTimer1 = (Random() & 3) + 3;
+        gDisableStructs[gBankTarget].encoreTimer1 = 3;
         gDisableStructs[gBankTarget].encoreTimer2 = gDisableStructs[gBankTarget].encoreTimer1;
         gBattlescriptCurrInstr += 5;
     }
