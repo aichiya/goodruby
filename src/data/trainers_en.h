@@ -7281,7 +7281,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_BRENDAN_1] =
     {
-        .partyFlags = 0,
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
         .trainerClass = TRAINER_CLASS_POKEMON_TRAINER_3,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_BRENDAN,
@@ -7290,7 +7290,7 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = 0x7,
         .partySize = 1,
-        .party = {.NoItemDefaultMoves = gTrainerParty_Brendan1 }
+        .party = {.NoItemCustomMoves = gTrainerParty_Brendan1 }
     },
 
     [TRAINER_BRENDAN_2] =
@@ -7323,7 +7323,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_BRENDAN_4] =
     {
-        .partyFlags = 0,
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
         .trainerClass = TRAINER_CLASS_POKEMON_TRAINER_3,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_BRENDAN,
@@ -7332,7 +7332,7 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = 0xb,
         .partySize = 1,
-        .party = {.NoItemDefaultMoves = gTrainerParty_Brendan4 }
+        .party = {.NoItemCustomMoves = gTrainerParty_Brendan4 }
     },
 
     [TRAINER_BRENDAN_5] =
@@ -7365,7 +7365,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_BRENDAN_7] =
     {
-        .partyFlags = 0,
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
         .trainerClass = TRAINER_CLASS_POKEMON_TRAINER_3,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_BRENDAN,
@@ -7374,7 +7374,7 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = 0x7,
         .partySize = 1,
-        .party = {.NoItemDefaultMoves = gTrainerParty_Brendan7 }
+        .party = {.NoItemCustomMoves = gTrainerParty_Brendan7 }
     },
 
     [TRAINER_BRENDAN_8] =
@@ -7407,7 +7407,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_MAY_1] =
     {
-        .partyFlags = 0,
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
         .trainerClass = TRAINER_CLASS_POKEMON_TRAINER_3,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
         .trainerPic = TRAINER_PIC_MAY,
@@ -7416,7 +7416,7 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = 0x7,
         .partySize = 1,
-        .party = {.NoItemDefaultMoves = gTrainerParty_May1 }
+        .party = {.NoItemCustomMoves = gTrainerParty_May1 }
     },
 
     [TRAINER_MAY_2] =
@@ -7449,7 +7449,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_MAY_4] =
     {
-        .partyFlags = 0,
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
         .trainerClass = TRAINER_CLASS_POKEMON_TRAINER_3,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
         .trainerPic = TRAINER_PIC_MAY,
@@ -7458,7 +7458,7 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = 0x7,
         .partySize = 1,
-        .party = {.NoItemDefaultMoves = gTrainerParty_May4 }
+        .party = {.NoItemCustomMoves = gTrainerParty_May4 }
     },
 
     [TRAINER_MAY_5] =
@@ -7491,7 +7491,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_MAY_7] =
     {
-        .partyFlags = 0,
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
         .trainerClass = TRAINER_CLASS_POKEMON_TRAINER_3,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
         .trainerPic = TRAINER_PIC_MAY,
@@ -7500,7 +7500,7 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = 0x7,
         .partySize = 1,
-        .party = {.NoItemDefaultMoves = gTrainerParty_May7 }
+        .party = {.NoItemCustomMoves = gTrainerParty_May7 }
     },
 
     [TRAINER_MAY_8] =

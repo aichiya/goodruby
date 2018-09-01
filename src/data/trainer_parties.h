@@ -7032,11 +7032,12 @@ const struct TrainerMonNoItemCustomMoves gTrainerParty_Wally1[] = {
     }
 };
 
-const struct TrainerMonNoItemDefaultMoves gTrainerParty_Brendan1[] = {
+const struct TrainerMonNoItemCustomMoves gTrainerParty_Brendan1[] = {
     {
 	.iv = 0,
 	.level = 5,
-	.species = SPECIES_TREECKO
+	.species = SPECIES_TREECKO,
+	.moves = MOVE_POUND, MOVE_LEER, 0, 0
     }
 };
 
@@ -7076,11 +7077,12 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Brendan3[] = {
     }
 };
 
-const struct TrainerMonNoItemDefaultMoves gTrainerParty_Brendan4[] = {
+const struct TrainerMonNoItemCustomMoves gTrainerParty_Brendan4[] = {
     {
 	.iv = 0,
 	.level = 5,
-	.species = SPECIES_TORCHIC
+	.species = SPECIES_TORCHIC,
+	.moves = MOVE_SCRATCH, MOVE_GROWL, 0, 0
     }
 };
 
@@ -7120,11 +7122,12 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Brendan6[] = {
     }
 };
 
-const struct TrainerMonNoItemDefaultMoves gTrainerParty_Brendan7[] = {
+const struct TrainerMonNoItemCustomMoves gTrainerParty_Brendan7[] = {
     {
 	.iv = 0,
 	.level = 5,
-	.species = SPECIES_MUDKIP
+	.species = SPECIES_MUDKIP,
+	.moves = MOVE_TACKLE, MOVE_GROWL, 0, 0
     }
 };
 
@@ -7164,11 +7167,12 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Brendan9[] = {
     }
 };
 
-const struct TrainerMonNoItemDefaultMoves gTrainerParty_May1[] = {
+const struct TrainerMonNoItemCustomMoves gTrainerParty_May1[] = {
     {
 	.iv = 0,
 	.level = 5,
-	.species = SPECIES_TREECKO
+	.species = SPECIES_TREECKO,
+	.moves = MOVE_POUND, MOVE_LEER, 0, 0
     }
 };
 
@@ -7208,11 +7212,12 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_May3[] = {
     }
 };
 
-const struct TrainerMonNoItemDefaultMoves gTrainerParty_May4[] = {
+const struct TrainerMonNoItemCustomMoves gTrainerParty_May4[] = {
     {
 	.iv = 0,
 	.level = 5,
-	.species = SPECIES_TORCHIC
+	.species = SPECIES_TORCHIC,
+	.moves = MOVE_SCRATCH, MOVE_GROWL, 0, 0
     }
 };
 
@@ -7252,11 +7257,12 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_May6[] = {
     }
 };
 
-const struct TrainerMonNoItemDefaultMoves gTrainerParty_May7[] = {
+const struct TrainerMonNoItemCustomMoves gTrainerParty_May7[] = {
     {
 	.iv = 0,
 	.level = 5,
-	.species = SPECIES_MUDKIP
+	.species = SPECIES_MUDKIP,
+	.moves = MOVE_TACKLE, MOVE_GROWL, 0, 0
     }
 };
 
