@@ -545,6 +545,7 @@ static void Shop_DisplayPriceInCheckoutWindow(u8 taskId)
 static void Shop_DisplayNormalPriceInList(u16 itemId, u8 var2, bool32 hasControlCode)
 {
     u8 *stringPtr = gStringVar1;
+	u8 width = 0x58;
 
     if (hasControlCode)
     {
@@ -553,17 +554,27 @@ static void Shop_DisplayNormalPriceInList(u16 itemId, u8 var2, bool32 hasControl
         stringPtr[2] = 0x2;
         stringPtr += 3;
     }
+	
+	// Don't display TM names if we have them already
+	if (ItemId_GetPocket(itemId) == 3 && (CheckBagHasItem(itemId, 1) || CheckPCHasItem(itemId, 1)))
+	{
+		itemId = 0;
+		width = 0x74;
+	}
 
     CopyItemName(itemId, stringPtr);
 
-    sub_8072A18(&gStringVar1[0], 0x70, var2 << 3, 0x58, 0x1);
+    sub_8072A18(&gStringVar1[0], 0x70, var2 << 3, width, 0x1);
     stringPtr = gStringVar1;
 
     if (hasControlCode)
         stringPtr = &gStringVar1[3];
 
-    GetMoneyAmountText(stringPtr, (ItemId_GetPrice(itemId) >> GetPriceReduction(1)), 0x4);
-    Menu_PrintTextPixelCoords(&gStringVar1[0], 0xCA, var2 << 3, 1);
+	if (itemId != 0)
+	{
+	    GetMoneyAmountText(stringPtr, (ItemId_GetPrice(itemId) >> GetPriceReduction(1)), 0x4);
+        Menu_PrintTextPixelCoords(&gStringVar1[0], 0xCA, var2 << 3, 1);
+    }
 }
 
 static void Shop_DisplayDecorationPriceInList(u16 itemId, u8 var2, bool32 hasControlCode)
@@ -624,8 +635,10 @@ static void Shop_PrintItemDescText(void)
     {
         if (gMartInfo.martType == MART_TYPE_0)
         {
-            sub_8072AB0(ItemId_GetDescription(gMartInfo.itemList[gMartInfo.choicesAbove + gMartInfo.cursor]),
-                0x4, 0x68, 0x68, 0x30, 0);
+			u16 itemId = gMartInfo.itemList[gMartInfo.choicesAbove + gMartInfo.cursor];
+		    if (ItemId_GetPocket(itemId) == 3 && (CheckBagHasItem(itemId, 1) || CheckPCHasItem(itemId, 1)))
+			    itemId = 0;
+            sub_8072AB0(ItemId_GetDescription(itemId), 0x4, 0x68, 0x68, 0x30, 0);
         }
         else
         {
@@ -755,16 +768,20 @@ static void Shop_PrintPrice(u8 taskId)
 static void Shop_UpdateCurItemCountToMax(u8 taskId)
 {
     u16 var;
+	u16 itemId = gMartInfo.itemList[gMartInfo.choicesAbove + gMartInfo.cursor];
 
     gTasks[taskId].tItemCount = 1;
     Menu_DrawStdWindowFrame(0, 0xA, 0xD, 0xD);
     Shop_DisplayPriceInCheckoutWindow(taskId);
+	
+	var = gSaveBlock1.money / (ItemId_GetPrice(itemId) >> GetPriceReduction(1));
 
-    var = gSaveBlock1.money / (ItemId_GetPrice(gMartInfo.itemList[gMartInfo.choicesAbove + gMartInfo.cursor]) >> GetPriceReduction(1));
-    if (var > 99)
-        gMartInfo.curItemCount = 99;
-    else
-        gMartInfo.curItemCount = var;
+	if (ItemId_GetPocket(itemId) == 3)
+		var = 1;
+	if (var > 99)
+		gMartInfo.curItemCount = 99;
+	else
+		gMartInfo.curItemCount = var;
 
     gTasks[taskId].func = Shop_PrintPrice;
 }
@@ -1105,14 +1122,19 @@ static void Shop_DoCursorAction(u8 taskId)
 
                 if (gMartInfo.martType == MART_TYPE_0)
                 {
-                    gMartTotalCost = (ItemId_GetPrice(gMartInfo.itemList[gMartInfo.choicesAbove + gMartInfo.cursor]) >> GetPriceReduction(1)); // set 1x price
-                    if (!IsEnoughMoney(gSaveBlock1.money, gMartTotalCost))
+					u16 itemId = gMartInfo.itemList[gMartInfo.choicesAbove + gMartInfo.cursor];
+                    gMartTotalCost = (ItemId_GetPrice(itemId) >> GetPriceReduction(1)); // set 1x price
+					if (ItemId_GetPocket(itemId) == 3 && (CheckBagHasItem(itemId, 1) || CheckPCHasItem(itemId, 1)))
+					{
+                        DisplayItemMessageOnField(taskId, gOtherText_ThatsSoldOut, Shop_DoPricePrintAndReturnToBuyMenu, 0xC3E1); // tail merge
+					}
+                    else if (!IsEnoughMoney(gSaveBlock1.money, gMartTotalCost))
                     {
                         DisplayItemMessageOnField(taskId, gOtherText_NotEnoughMoney, Shop_DoPricePrintAndReturnToBuyMenu, 0xC3E1); // tail merge
                     }
                     else // _080B42BA
                     {
-                        CopyItemName(gMartInfo.itemList[gMartInfo.choicesAbove + gMartInfo.cursor], gStringVar1);
+                        CopyItemName(itemId, gStringVar1);
                         StringExpandPlaceholders(gStringVar4, gOtherText_HowManyYouWant);
                         DisplayItemMessageOnField(taskId, gStringVar4, Shop_UpdateCurItemCountToMax, 0xC3E1);                    
                     }

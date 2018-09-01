@@ -275,6 +275,7 @@ extern const u8 gOtherText_HereYouGo[];
 extern const u8 gOtherText_HereYouGo2[];
 extern const u8 gOtherText_HereYouGo3[];
 extern const u8 gOtherText_NotEnoughMoney[];
+extern const u8 gOtherText_ThatsSoldOut[];
 extern const u8 gOtherText_NoRoomFor[];
 extern const u8 gOtherText_SpaceForIsFull[];
 extern const u8 gOtherText_AnythingElse[];

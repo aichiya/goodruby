@@ -26,7 +26,7 @@
 --Allow evolution of fainted mons, or on a wipe
 --Evolution moves
 
---Go through movepools of Hoenn mons and add needed moves.
+--Go through movepools of non-Hoenn mons and add needed moves.
 
 --Fling currently does not activate most berries (except pinch stat-boosters).
 --Flame Burst is a standard multi-target attack

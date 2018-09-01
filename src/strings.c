@@ -295,6 +295,7 @@ const u8 gOtherText_HereYouGo[] = _("Here you go!\nThank you very much.");
 const u8 gOtherText_HereYouGo2[] = _("Thank you!\nI’ll send it to your home PC.");
 const u8 gOtherText_HereYouGo3[] = _("Thanks!\nI’ll send it to your PC at home.");
 const u8 gOtherText_NotEnoughMoney[] = _("You don’t have enough money.{PAUSE_UNTIL_PRESS}");
+const u8 gOtherText_ThatsSoldOut[] = _("That’s sold out.{PAUSE_UNTIL_PRESS}");
 const u8 gOtherText_NoRoomFor[] = _("You have no more room for items.{PAUSE_UNTIL_PRESS}");
 const u8 gOtherText_SpaceForIsFull[] = _("The space for {STR_VAR_1} is full.{PAUSE_UNTIL_PRESS}");
 const u8 gOtherText_AnythingElse[] = _("Is there anything else I can help\nyou with?");
