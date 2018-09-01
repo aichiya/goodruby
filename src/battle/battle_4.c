@@ -2811,7 +2811,7 @@ void SetMoveEffect(bool8 primary, u8 certainArg)
         {
             BattleScriptPush(gBattlescriptCurrInstr + 1);
             if (sStatusFlagsForMoveEffects[gBattleCommunication[MOVE_EFFECT_BYTE]] == STATUS_SLEEP)
-                gBattleMons[gEffectBank].status1 |= ((Random() & 3) + 2);
+                gBattleMons[gEffectBank].status1 |= ((Random() % 3) + 2);
             else
                 gBattleMons[gEffectBank].status1 |= sStatusFlagsForMoveEffects[gBattleCommunication[MOVE_EFFECT_BYTE]];
             gBattlescriptCurrInstr = gMoveEffectBS_Ptrs[gBattleCommunication[MOVE_EFFECT_BYTE]];
