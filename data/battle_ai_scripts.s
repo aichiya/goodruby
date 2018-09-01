@@ -81,7 +81,7 @@ CheckIfLevitateCancelsGroundMove: @ 81DA100
 
 AI_CheckBadMove_CheckSoundproof: @ 81DA108
 	get_ability TARGET
-	if_not_equal ABILITY_SOUNDPROOF, AI_CheckBadMove_CheckEffect
+	if_not_equal ABILITY_SOUNDPROOF, AI_CheckBadMove_StartCheckPowder
 	if_move MOVE_GROWL, Score_Minus10
 	if_move MOVE_ROAR, Score_Minus10
 	if_move MOVE_SING, Score_Minus10
@@ -91,6 +91,20 @@ AI_CheckBadMove_CheckSoundproof: @ 81DA108
 	if_move MOVE_UPROAR, Score_Minus10
 	if_move MOVE_METAL_SOUND, Score_Minus10
 	if_move MOVE_GRASS_WHISTLE, Score_Minus10
+
+AI_CheckBadMove_StartCheckPowder:
+	get_type ENEMY_TYPE1
+	if_equal TYPE_GRASS, AI_CheckBadMove_CheckPowder
+	get_type PLAYER_TYPE1
+	if_equal TYPE_GRASS, AI_CheckBadMove_CheckPowder
+	jump AI_CheckBadMove_CheckEffect
+
+AI_CheckBadMove_CheckPowder:
+	if_move MOVE_POISON_POWDER, Score_Minus10
+	if_move MOVE_STUN_SPORE, Score_Minus10
+	if_move MOVE_SLEEP_POWDER, Score_Minus10
+	if_move MOVE_COTTON_SPORE, Score_Minus10
+	if_move MOVE_SPORE, Score_Minus10
 
 AI_CheckBadMove_CheckEffect: @ 81DA14F
 	if_effect EFFECT_SLEEP, AI_CBM_Sleep
@@ -390,6 +404,8 @@ AI_CBM_Paralyze: @ 81DA628
 	if_equal ABILITY_LIMBER, Score_Minus10
 	if_status TARGET, SLP | PSN | BRN | FRZ | PAR | TOX, Score_Minus10
 	get_type ENEMY_TYPE1
+	if_equal TYPE_ELECTRIC, Score_Minus10
+	get_type PLAYER_TYPE1
 	if_equal TYPE_ELECTRIC, Score_Minus10
 	end
 

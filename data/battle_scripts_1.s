@@ -345,6 +345,11 @@ BattleScript_EffectSleep: @ 81D6F81
 	attackcanceler
 	attackstring
 	ppreduce
+	jumpifmove MOVE_LOVELY_KISS, BattleScript_DoSleep
+	jumpifmove MOVE_HYPNOSIS, BattleScript_DoSleep
+	jumpiftype TARGET, TYPE_GRASS, BattleScript_NotAffected
+	
+BattleScript_DoSleep:
 	jumpifstatus2 TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
 	jumpifstatus TARGET, SLP, BattleScript_AlreadyAsleep
 	jumpifcantmakeasleep BattleScript_CantMakeAsleep
@@ -1022,8 +1027,19 @@ BattleScript_EffectDefenseDown2: @ 81D7761
 	goto BattleScript_EffectStatDown
 
 BattleScript_EffectSpeedDown2: @ 81D776C
+	jumpifmove MOVE_SCARY_FACE, BattleScript_DoSpeedDown2
+	jumpifmove MOVE_STRING_SHOT, BattleScript_DoSpeedDown2
+	jumpiftype TARGET, TYPE_GRASS, BattleScript_CottonSporeFail
+
+BattleScript_DoSpeedDown2:
 	setstatchanger SPEED, 2, TRUE
 	goto BattleScript_EffectStatDown
+
+BattleScript_CottonSporeFail:
+	attackcanceler
+	attackstring
+	ppreduce
+	goto BattleScript_NotAffected
 
 BattleScript_EffectSpecialAttackDown2:
 	setstatchanger SP_ATTACK, 2, TRUE
@@ -1050,6 +1066,10 @@ BattleScript_EffectPoison: @ 81D7795
 	attackcanceler
 	attackstring
 	ppreduce
+	jumpifmove MOVE_POISON_GAS, BattleScript_DoPoison
+	jumpiftype TARGET, TYPE_GRASS, BattleScript_NotAffected
+	
+BattleScript_DoPoison:
 	jumpifability TARGET, ABILITY_IMMUNITY, BattleScript_ImmunityProtected
 	jumpifstatus2 TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
 	jumpifstatus TARGET, PSN, BattleScript_AlreadyPoisoned
@@ -1071,6 +1091,11 @@ BattleScript_EffectParalyze: @ 81D77F6
 	attackcanceler
 	attackstring
 	ppreduce
+	jumpifmove MOVE_GLARE, BattleScript_DoParalyze
+	jumpifmove MOVE_THUNDER_WAVE, BattleScript_DoParalyze
+	jumpiftype TARGET, TYPE_GRASS, BattleScript_NotAffected
+
+BattleScript_DoParalyze:
 	jumpifability TARGET, ABILITY_LIMBER, BattleScript_LimberProtected
 	jumpifstatus2 TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
 	typecalc
