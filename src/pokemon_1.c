@@ -1320,6 +1320,8 @@ const s8 gNatureStatTable[][5] =
 #include "data/pokemon/level_up_learnsets.h"
 #include "data/pokemon/evolution.h"
 #include "data/pokemon/level_up_learnset_pointers.h"
+#include "data/pokemon/evo_learnsets.h"
+#include "data/pokemon/evo_learnsets_pointers.h"
 
 void ZeroBoxMonData(struct BoxPokemon *boxMon)
 {
@@ -1954,6 +1956,42 @@ u16 MonTryLearningNewMove(struct Pokemon *mon, bool8 firstMove)
         sLearningMoveTableID++;
         retVal = GiveMoveToMon(mon, gMoveToLearn);
     }
+
+    return retVal;
+}
+
+u16 MonTryLearningEvoMove(struct Pokemon *mon, bool8 firstMove)
+{
+    u32 retVal = 0;
+    u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
+	u8 index = 0;
+
+    // since you can learn more than one move per level
+    // the game needs to know whether you decided to
+    // learn it or keep the old set to avoid asking
+    // you to learn the same move over and over again
+    if (firstMove)
+    {
+        sLearningMoveTableID = 0x80;
+    }
+	else if (!(sLearningMoveTableID & 0x80))
+	{
+		return MonTryLearningNewMove(mon, firstMove);
+	}
+	
+	index = sLearningMoveTableID & 0x7F;
+
+    if (gEvoMoves[species][index])
+    {
+        gMoveToLearn = (gEvoMoves[species][index]);
+        sLearningMoveTableID++;
+        retVal = GiveMoveToMon(mon, gMoveToLearn);
+    }
+	else
+	{
+		sLearningMoveTableID = 0;
+		retVal = MonTryLearningNewMove(mon, firstMove);
+	}
 
     return retVal;
 }

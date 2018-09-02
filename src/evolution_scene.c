@@ -647,7 +647,7 @@ static void Task_EvolutionScene(u8 taskID)
     case 14: // check if it wants to learn a new move
         if (gUnknown_03004210.state == 0)
         {
-            var = MonTryLearningNewMove(mon, gTasks[taskID].tLearnsFirstMove);
+            var = MonTryLearningEvoMove(mon, gTasks[taskID].tLearnsFirstMove);
             if (var != 0 && !gTasks[taskID].tEvoWasStopped)
             {
                 u8 text[20];
@@ -989,7 +989,7 @@ static void Task_TradeEvolutionScene(u8 taskID)
     case 13:
         if (gUnknown_03004828->window.state == 0 && IsFanfareTaskInactive() == TRUE)
         {
-            var = MonTryLearningNewMove(mon, gTasks[taskID].tLearnsFirstMove);
+            var = MonTryLearningEvoMove(mon, gTasks[taskID].tLearnsFirstMove);
             if (var != 0 && !gTasks[taskID].tEvoWasStopped)
             {
                 u8 text[20];

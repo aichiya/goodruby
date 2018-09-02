@@ -521,6 +521,7 @@ extern const u8 *const gItemEffectTable[];
 extern const struct BaseStats gBaseStats[];
 extern const u32 gExperienceTables[][101];
 extern const u16 *gLevelUpLearnsets[];
+extern const u16 *gEvoMoves[];
 extern struct Evolution gEvolutionTable[][5];
 extern struct PokemonStorage gPokemonStorage;
 
@@ -551,6 +552,7 @@ void SetBattleMonMoveSlot(struct BattlePokemon *mon, u16 move, u8 slot);
 void GiveMonInitialMoveset(struct Pokemon *mon);
 void GiveBoxMonInitialMoveset(struct BoxPokemon *boxMon);
 u16 MonTryLearningNewMove(struct Pokemon *mon, bool8 firstMove);
+u16 MonTryLearningEvoMove(struct Pokemon *mon, bool8 firstMove);
 void DeleteFirstMoveAndGiveMoveToMon(struct Pokemon *mon, u16 move);
 void DeleteFirstMoveAndGiveMoveToBoxMon(struct BoxPokemon *boxMon, u16 move);
 
