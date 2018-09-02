@@ -1281,7 +1281,7 @@ static void sub_80A4548(u16 a, int b, int c, int d)
             text[1] = 0x13;
             text[2] = 0x11;
             text += 3;
-            text = ConvertIntToDecimalString(text, gCurrentBagPocketItemSlots[r4].itemId - 0x153);
+            text = ConvertIntToDecimalString(text, gCurrentBagPocketItemSlots[r4].itemId - 0x152);
             text[0] = EXT_CTRL_CODE_BEGIN;
             text[1] = 0x13;
             text[2] = 0x18;
