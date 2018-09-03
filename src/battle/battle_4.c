@@ -3029,7 +3029,7 @@ void SetMoveEffect(bool8 primary, u8 certainArg)
             gBattlescriptCurrInstr++;
             return;
         }
-        switch (sStatusFlagsForMoveEffects[gBattleCommunication[MOVE_EFFECT_BYTE]])
+        switch (gBattleCommunication[MOVE_EFFECT_BYTE])
         {
         case 7: //confusion
             if (gBattleMons[gEffectBank].ability == ABILITY_OWN_TEMPO)
