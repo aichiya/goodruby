@@ -9,6 +9,71 @@ const u16 gDummyEvoMoves[] = {
 	0,
 };
 
+const u16 gVenusaurEvoMoves[] = {
+	MOVE_PETAL_DANCE,
+	0,
+};
+
+const u16 gCharizardEvoMoves[] = {
+	MOVE_WING_ATTACK,
+	0,
+};
+
+const u16 gMetapodEvoMoves[] = {
+	MOVE_HARDEN,
+	0,
+};
+
+const u16 gButterfreeEvoMoves[] = {
+	MOVE_GUST,
+	0,
+};
+
+const u16 gKakunaEvoMoves[] = {
+	MOVE_HARDEN,
+	0,
+};
+
+const u16 gBeedrillEvoMoves[] = {
+	MOVE_TWINEEDLE,
+	0,
+};
+
+const u16 gRaticateEvoMoves[] = {
+	MOVE_SCARY_FACE,
+	0,
+};
+
+const u16 gArbokEvoMoves[] = {
+	MOVE_CRUNCH,
+	0,
+};
+
+const u16 gSandslashEvoMoves[] = {
+	MOVE_CRUSH_CLAW,
+	0,
+};
+
+const u16 gVenomothEvoMoves[] = {
+	MOVE_GUST,
+	0,
+};
+
+const u16 gDugtrioEvoMoves[] = {
+	MOVE_SAND_TOMB,
+	0,
+};
+
+const u16 gPersianEvoMoves[] = {
+	MOVE_SWIFT,
+	0,
+};
+
+const u16 gPoliwrathEvoMoves[] = {
+	MOVE_SUBMISSION,
+	0,
+};
+
 const u16 gKadabraEvoMoves[] = {
 	MOVE_KINESIS,
 	0,
@@ -24,6 +89,21 @@ const u16 gMachampEvoMoves[] = {
 	0,
 };
 
+const u16 gVictreebelEvoMoves[] = {
+	MOVE_LEAF_TORNADO,
+	0,
+};
+
+const u16 gRapidashEvoMoves[] = {
+	MOVE_FURY_ATTACK,
+	0,
+};
+
+const u16 gSlowbroEvoMoves[] = {
+	MOVE_WITHDRAW,
+	0,
+};
+
 const u16 gMagnetonEvoMoves[] = {
 	MOVE_TRI_ATTACK,
 	0,
@@ -34,8 +114,38 @@ const u16 gDodrioEvoMoves[] = {
 	0,
 };
 
+const u16 gDewgongEvoMoves[] = {
+	MOVE_SHEER_COLD,
+	0,
+};
+
 const u16 gMukEvoMoves[] = {
 	MOVE_VENOM_DRENCH,
+	0,
+};
+
+const u16 gHaunterEvoMoves[] = {
+	MOVE_SHADOW_PUNCH,
+	0,
+};
+
+const u16 gGengarEvoMoves[] = {
+	MOVE_SHADOW_PUNCH,
+	0,
+};
+
+const u16 gExeggutorEvoMoves[] = {
+	MOVE_STOMP,
+	0,
+};
+
+const u16 gHitmonleeEvoMoves[] = {
+	MOVE_DOUBLE_KICK,
+	0,
+};
+
+const u16 gHitmonchanEvoMoves[] = {
+	MOVE_COMET_PUNCH,
 	0,
 };
 
@@ -51,6 +161,51 @@ const u16 gRhydonEvoMoves[] = {
 
 const u16 gGyaradosEvoMoves[] = {
 	MOVE_BITE,
+	0,
+};
+
+const u16 gVaporeonEvoMoves[] = {
+	MOVE_WATER_GUN,
+	0,
+};
+
+const u16 gJolteonEvoMoves[] = {
+	MOVE_THUNDER_SHOCK,
+	0,
+};
+
+const u16 gFlareonEvoMoves[] = {
+	MOVE_EMBER,
+	0,
+};
+
+const u16 gOmastarEvoMoves[] = {
+	MOVE_SPIKE_CANNON,
+	0,
+};
+
+const u16 gKabutopsEvoMoves[] = {
+	MOVE_SLASH,
+	0,
+};
+
+const u16 gDragoniteEvoMoves[] = {
+	MOVE_WING_ATTACK,
+	0,
+};
+
+const u16 gMeganiumEvoMoves[] = {
+	MOVE_PETAL_DANCE,
+	0,
+};
+
+const u16 gFurretEvoMoves[] = {
+	MOVE_AGILITY,
+	0,
+};
+
+const u16 gAriadosEvoMoves[] = {
+	MOVE_SWORDS_DANCE,
 	0,
 };
 
@@ -71,8 +226,34 @@ const u16 gXatuEvoMoves[] = {
 	0,
 };
 
+const u16 gAmpharosEvoMoves[] = {
+	MOVE_THUNDER_PUNCH,
+	0,
+};
+
 const u16 gBellossomEvoMoves[] = {
 	MOVE_MAGICAL_LEAF,
+	0,
+};
+
+const u16 gSudowoodoEvoMoves[] = {
+	MOVE_SLAM,
+	0,
+};
+
+const u16 gEspeonEvoMoves[] = {
+	MOVE_CONFUSION,
+	0,
+};
+
+const u16 gUmbreonEvoMoves[] = {
+	MOVE_PURSUIT,
+	0,
+};
+
+const u16 gForretressEvoMoves[] = {
+	MOVE_MIRROR_SHOT,
+	MOVE_AUTOTOMIZE,
 	0,
 };
 
@@ -81,8 +262,23 @@ const u16 gMagcargoEvoMoves[] = {
 	0,
 };
 
+const u16 gPiloswineEvoMoves[] = {
+	MOVE_FURY_ATTACK,
+	0,
+};
+
+const u16 gOctilleryEvoMoves[] = {
+	MOVE_OCTAZOOKA,
+	0,
+};
+
 const u16 gDonphanEvoMoves[] = {
 	MOVE_FURY_ATTACK,
+	0,
+};
+
+const u16 gHitmontopEvoMoves[] = {
+	MOVE_ROLLING_KICK,
 	0,
 };
 
