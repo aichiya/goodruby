@@ -286,6 +286,9 @@ gAbilityDescription_Sniper:
 gAbilityDescription_BigPecks:
 	.string "Blocks Defense reduction.$"
 
+gAbilityDescription_Unnerve:
+	.string "Foes cannot use Berries.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -384,7 +387,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_IceBody
 	.4byte gAbilityDescription_Sniper
 	.4byte gAbilityDescription_BigPecks
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unnerve
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented

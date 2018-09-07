@@ -94,7 +94,7 @@ gAbilityNames:: @ 81FA248
 	.string "Ice Body$", 13
 	.string "Sniper$", 13
 	.string "Big Pecks$", 13
-	.string "UNNERVE$", 13
+	.string "Unnerve$", 13
 	.string "SAND RUSH$", 13
 	.string "RIVALRY$", 13
 	.string "SHEER FORCE$", 13

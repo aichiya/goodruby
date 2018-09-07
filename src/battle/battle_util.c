@@ -155,6 +155,7 @@ extern u8 BattleScript_BideNoEnergyToAttack[];
 extern u8 BattleScript_OverworldWeatherStarts[]; //load weather from overworld
 extern u8 BattleScript_DrizzleActivates[];
 extern u8 BattleScript_MoldBreakerAnnouncement[];
+extern u8 BattleScript_UnnerveAnnouncement[];
 extern u8 BattleScript_SandstreamActivates[];
 extern u8 BattleScript_DroughtActivates[];
 extern u8 BattleScript_CastformChange[];
@@ -1982,6 +1983,15 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 					effect++;
 				}
 				break;
+			case ABILITY_UNNERVE:
+				if (!(gSpecialStatuses[bank].traced))
+                {
+					BattleScriptPushCursorAndCallback(BattleScript_UnnerveAnnouncement);
+					gBattleStruct->scriptingActive = bank;
+                    gSpecialStatuses[bank].traced = 1;
+					effect++;
+				}
+				break;
             }
             break;
         case ABILITYEFFECT_ENDTURN: // 1
@@ -2894,6 +2904,13 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
         defHoldEffect = ItemId_GetHoldEffect(defItem);
         defQuality = ItemId_GetHoldEffectParam(defItem);
     }
+	
+	// If item is a berry, and an enemy of the bank has Unnerve, don't use it
+	if (ItemId_GetPocket(gLastUsedItem) == 4 && AbilityBattleEffects(ABILITYEFFECT_CHECK_OTHER_SIDE, bank, ABILITY_UNNERVE, 0, 0))
+	{
+		return ITEM_NO_EFFECT;
+	}
+	
 
     switch (caseID)
     {

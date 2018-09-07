@@ -4069,6 +4069,12 @@ BattleScript_MoldBreakerAnnouncement::
 	waitmessage 64
 	end3
 
+BattleScript_UnnerveAnnouncement::
+	pause 32
+	printstring BATTLE_TEXT_Unnerve
+	waitmessage 64
+	end3
+
 BattleScript_SpeedBoostActivates:: @ 81D9718
 	playanimation USER, B_ANIM_STATS_CHANGE, sANIM_ARG1
 	printstring BATTLE_TEXT_SpeedRisen
