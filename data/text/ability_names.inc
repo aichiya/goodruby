@@ -93,3 +93,60 @@ gAbilityNames:: @ 81FA248
 	.string "Mold Breaker$", 13
 	.string "Ice Body$", 13
 	.string "Sniper$", 13
+	
+	.string "BIG PECKS$", 13
+	.string "UNNERVE$", 13
+	.string "SAND RUSH$", 13
+	.string "RIVALRY$", 13
+	.string "SHEER FORCE$", 13
+	.string "MAGIC GUARD$", 13
+	.string "UNAWARE$", 13
+	.string "FRIEND GUARD$", 13
+	.string "COMPETITIVE$", 13
+	.string "INFILTRATOR$", 13
+	.string "DRY SKIN$", 13
+	.string "WONDER SKIN$", 13
+	.string "SAND FORCE$", 13
+	.string "TECHNICIAN$", 13
+	.string "ANGER POINT$", 13
+	.string "DEFIANT$", 13
+	.string "REGENERATOR$", 13
+	.string "JUSTIFIED$", 13
+	.string "STEADFAST$", 13
+	.string "ANALYTIC$", 13
+	.string "POISON TOUCH$", 13
+	.string "SKILL LINK$", 13
+	.string "OVERCOAT$", 13
+	.string "CURSED BODY$", 13
+	.string "FOREWARN$", 13
+	.string "WEAK ARMOR$", 13
+	.string "AFTERMATH$", 13
+	.string "HARVEST$", 13
+	.string "RECKLESS$", 13
+	.string "IRON FIST$", 13
+	.string "UNBURDEN$", 13
+	.string "HEALER$", 13
+	.string "LEAF GUARD$", 13
+	.string "SCRAPPY$", 13
+	.string "FILTER$", 13
+	.string "MOXIE$", 13
+	.string "IMPOSTER$", 13
+	.string "ADAPTABILITY$", 13
+	.string "DOWNLOAD$", 13
+	.string "RATTLED$", 13
+	.string "SNOW CLOAK$", 13
+	.string "MULTISCALE$", 13
+	.string "MAGIC BOUNCE$", 13
+	.string "SAP SIPPER$", 13
+	.string "PRANKSTER$", 13
+	.string "TELEPATHY$", 13
+	.string "CONTRARY$", 13
+	.string "PICKPOCKET$", 13
+	.string "HONEY GATHER$", 13
+	.string "MOODY$", 13
+	.string "LIGHT METAL$", 13
+	.string "PROTEAN$", 13
+	.string "TOXIC BOOST$", 13
+	.string "HEAVY METAL$", 13
+	.string "STORM DRAIN$", 13
+

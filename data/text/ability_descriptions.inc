@@ -1,3 +1,6 @@
+gAbilityDescription_Unimplemented:
+	.string "Unimplemented$"
+
 gAbilityDescription_None: @ 81F99CC
 	.string "No special ability.$"
 
@@ -377,3 +380,58 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_MoldBreaker
 	.4byte gAbilityDescription_IceBody
 	.4byte gAbilityDescription_Sniper
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented
