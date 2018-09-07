@@ -31,7 +31,7 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectAttackDown
 	.4byte BattleScript_EffectDefenseDown
 	.4byte BattleScript_EffectSpeedDown
-	.4byte BattleScript_EffectSpecialAttackDown
+	.4byte BattleScript_EffectUTurn
 	.4byte BattleScript_EffectSpecialDefenseDown
 	.4byte BattleScript_EffectAccuracyDown
 	.4byte BattleScript_EffectEvasionDown
@@ -6291,7 +6291,8 @@ BattleScript_PsychoShiftPara:
 	goto BattleScript_MoveEnd	
 	end
 
-BattleScript_EffectGrowth: @ Growth
+BattleScript_EffectGrowth: @ Growth and Work Up
+	jumpifmove MOVE_WORK_UP, BattleScript_Growth1
 	jumpifabilitypresent ABILITY_CLOUD_NINE, BattleScript_Growth1
 	jumpifabilitypresent ABILITY_AIR_LOCK, BattleScript_Growth1
 	jumpifhalfword COMMON_BITS, gBattleWeather, 96, BattleScript_Growth2
@@ -6352,3 +6353,45 @@ BattleScript_Growth2TrySpAtk:
 BattleScript_Growth2End:
 	goto BattleScript_MoveEnd
 
+BattleScript_EffectUTurn:
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	ppreduce
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation TARGET
+	waitstate
+	healthbarupdate TARGET
+	datahpupdate TARGET
+	critmessage
+	waitmessage 64
+	resultmessage
+	waitmessage 64
+	seteffectwithchance
+	tryfaintmon TARGET, FALSE, NULL
+	
+	jumpifmovehadnoeffect BattleScriptFinishUTurn
+	jumpifcantswitch ATK4F_DONT_CHECK_STATUSES | USER, BattleScriptFinishUTurn
+	openpartyscreen USER, BattleScript_ButItFailed
+	switchoutabilities USER
+	waitstate
+	switchhandleorder USER, 2
+	returntoball USER
+	getswitchedmondata USER
+	switchindataupdate USER
+	hpthresholds USER
+	printstring 3
+	switchinanim USER, 1
+	waitstate
+	special 0x36
+	switchineffects USER
+	
+BattleScriptFinishUTurn:
+	setbyte sMOVEEND_STATE, 0
+	moveend 0, 0
+	end

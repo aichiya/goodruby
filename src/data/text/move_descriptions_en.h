@@ -1994,6 +1994,50 @@ static const u8 MoveDescription_EarthBlades[] = _(
     "Attacks by forming the land\n"
     "into blades of pure stone.");
 
+static const u8 MoveDescription_IcicleCrash[] = _(
+    "Attacks by forming the land\n"
+    "into blades of pure stone.");
+
+static const u8 MoveDescription_DarkPulse[] = _(
+    "Attacks by forming the land\n"
+    "into blades of pure stone.");
+
+static const u8 MoveDescription_WoodHammer[] = _(
+    "Attacks by forming the land\n"
+    "into blades of pure stone.");
+
+static const u8 MoveDescription_VacuumWave[] = _(
+    "Attacks by forming the land\n"
+    "into blades of pure stone.");
+
+static const u8 MoveDescription_PowerWhip[] = _(
+    "Attacks by forming the land\n"
+    "into blades of pure stone.");
+
+static const u8 MoveDescription_Avalanche[] = _(
+    "Attacks by forming the land\n"
+    "into blades of pure stone.");
+
+static const u8 MoveDescription_WorkUp[] = _(
+    "Attacks by forming the land\n"
+    "into blades of pure stone.");
+
+static const u8 MoveDescription_AuraSphere[] = _(
+    "Attacks by forming the land\n"
+    "into blades of pure stone.");
+
+static const u8 MoveDescription_Psystrike[] = _(
+    "Attacks by forming the land\n"
+    "into blades of pure stone.");
+
+static const u8 MoveDescription_UTurn[] = _(
+    "Attacks by forming the land\n"
+    "into blades of pure stone.");
+
+static const u8 MoveDescription_Acrobatics[] = _(
+    "Attacks by forming the land\n"
+    "into blades of pure stone.");
+
 
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
@@ -2495,4 +2539,15 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_BulletPunch,
 	MoveDescription_OriginPulse,
 	MoveDescription_EarthBlades,
+	MoveDescription_IcicleCrash,
+	MoveDescription_DarkPulse,
+	MoveDescription_WoodHammer,
+	MoveDescription_VacuumWave,
+	MoveDescription_PowerWhip,
+	MoveDescription_Avalanche,
+	MoveDescription_WorkUp,
+	MoveDescription_AuraSphere,
+	MoveDescription_Psystrike,
+	MoveDescription_UTurn,
+	MoveDescription_Acrobatics,
 };

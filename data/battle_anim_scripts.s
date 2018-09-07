@@ -518,6 +518,17 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_BULLET_PUNCH
 	.4byte Move_ORIGIN_PULSE
 	.4byte Move_EARTH_BLADES
+	.4byte Move_ICICLE_CRASH
+	.4byte Move_DARK_PULSE
+	.4byte Move_WOOD_HAMMER
+	.4byte Move_VACUUM_WAVE
+	.4byte Move_POWER_WHIP
+	.4byte Move_AVALANCHE
+	.4byte Move_WORK_UP
+	.4byte Move_AURA_SPHERE
+	.4byte Move_PSYSTRIKE
+	.4byte Move_U_TURN
+	.4byte Move_ACROBATICS
 	.4byte PoundCopy
 
 	.align 2
@@ -15265,4 +15276,16 @@ Move_EARTH_BLADES:
 	blendoff
 	end
 
+Move_ICICLE_CRASH:
+Move_DARK_PULSE:
+Move_WOOD_HAMMER:
+Move_VACUUM_WAVE:
+Move_POWER_WHIP:
+Move_AVALANCHE:
+Move_WORK_UP:
+Move_AURA_SPHERE:
+Move_PSYSTRIKE:
+Move_U_TURN:
+Move_ACROBATICS:
+	end
 

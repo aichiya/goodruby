@@ -241,6 +241,8 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
 		spAttack *= 2;
 	if (gCurrentMove == MOVE_KNOCK_OFF && defender->item && !gWishFutureKnock.knockedOffPokes[bankDef])
 		attack = (attack * 3) / 2;
+	if (gCurrentMove == MOVE_ACROBATICS && !(attacker->item))
+		attack *= 2;
     
     if (moveClass == 0)
     {
@@ -270,7 +272,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         attackMod = attacker->statStages[STAT_STAGE_SPATK];
         defenseMod = defender->statStages[STAT_STAGE_SPDEF];
 		
-		if (move == MOVE_PSYSHOCK)
+		if (move == MOVE_PSYSHOCK || move == MOVE_PSYSTRIKE)
 		{
 			defense = defense;
 			defenseMod = defender->statStages[STAT_STAGE_DEF];

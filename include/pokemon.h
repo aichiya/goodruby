@@ -82,16 +82,17 @@
 #define MON_DATA_GIFT_RIBBON_5     76
 #define MON_DATA_GIFT_RIBBON_6     77
 #define MON_DATA_GIFT_RIBBON_7     78
-#define MON_DATA_FATEFUL_ENCOUNTER 79
-#define MON_DATA_KNOWN_MOVES       80
-#define MON_DATA_RIBBON_COUNT      81
-#define MON_DATA_RIBBONS           82
-#define MON_DATA_83                83
-#define MON_DATA_ATK2              84
-#define MON_DATA_DEF2              85
-#define MON_DATA_SPEED2            86
-#define MON_DATA_SPATK2            87
-#define MON_DATA_SPDEF2            88
+#define MON_DATA_HIDDEN_ABILITY    79
+#define MON_DATA_FATEFUL_ENCOUNTER 80
+#define MON_DATA_KNOWN_MOVES       81
+#define MON_DATA_RIBBON_COUNT      82
+#define MON_DATA_RIBBONS           83
+#define MON_DATA_83                84
+#define MON_DATA_ATK2              85
+#define MON_DATA_DEF2              86
+#define MON_DATA_SPEED2            87
+#define MON_DATA_SPATK2            88
+#define MON_DATA_SPDEF2            89
 
 #define MAX_LEVEL 100
 
@@ -256,7 +257,8 @@ struct PokemonSubstruct3
     /*0x0B*/ u32 giftRibbon5:1;
     /*0x0B*/ u32 giftRibbon6:1;
     /*0x0B*/ u32 giftRibbon7:1;
-    /*0x0B*/ u32 fatefulEncounter:5; // unused in Ruby/Sapphire, but the high bit must be set for Mew/Deoxys to obey in FR/LG/Emerald
+	/*0x0B*/ u32 hiddenAbility:1;
+    /*0x0C*/ u32 fatefulEncounter:4; // unused in Ruby/Sapphire, but the high bit must be set for Mew/Deoxys to obey in FR/LG/Emerald
 };
 
 union PokemonSubstruct
@@ -585,7 +587,7 @@ u8 SendMonToPC(struct Pokemon *mon);
 u8 CalculatePlayerPartyCount(void);
 u8 CalculateEnemyPartyCount(void);
 u8 sub_803DAA0(void);
-u8 GetAbilityBySpecies(u16 species, bool8 altAbility);
+u8 GetAbilityBySpecies(u16 species, u8 slot);
 u8 GetMonAbility(struct Pokemon *mon);
 void CreateSecretBaseEnemyParty(struct SecretBaseRecord *secretBaseRecord);
 u8 GetSecretBaseTrainerPicIndex(void);
