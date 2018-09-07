@@ -21,6 +21,7 @@ extern u16 gBattleWeather;
 extern struct BattleEnigmaBerry gEnigmaBerries[];
 extern u16 gBattleMovePower;
 extern u16 gTrainerBattleOpponent;
+extern u16 gBattlerPartyIndexes[MAX_BATTLERS_COUNT];
 
 // Masks for getting PP Up count, also PP Max values
 const u8 gPPUpReadMasks[] = {0x03, 0x0c, 0x30, 0xc0};
@@ -216,6 +217,29 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         spAttack = (150 * spAttack) / 100;
     if (attacker->ability == ABILITY_GUTS && attacker->status1)
         attack = (150 * attack) / 100;
+	if (attacker->ability == ABILITY_RIVALRY)
+	{
+		u8 atk_gender, def_gender;
+		if (!GetBattlerSide(bankAtk))
+			atk_gender = GetMonGender(&gPlayerParty[gBattlerPartyIndexes[bankAtk]]);
+		else
+			atk_gender = GetMonGender(&gEnemyParty[gBattlerPartyIndexes[bankAtk]]);
+		if (!GetBattlerSide(bankDef))
+			def_gender = GetMonGender(&gPlayerParty[gBattlerPartyIndexes[bankDef]]);
+		else
+			def_gender = GetMonGender(&gPlayerParty[gBattlerPartyIndexes[bankDef]]);
+		
+		if (atk_gender == def_gender && atk_gender != MON_GENDERLESS)
+		{
+			attack = (125 * attack) / 100;
+			spAttack = (125 * spAttack) / 100;
+		}
+		else if (atk_gender != def_gender && atk_gender != MON_GENDERLESS && def_gender != MON_GENDERLESS)
+		{
+			attack = (75 * attack) / 100;
+			spAttack = (75 * spAttack) / 100;
+		}
+	}
     if (defenderAbility == ABILITY_MARVEL_SCALE && defender->status1)
         defense = (150 * defense) / 100;
     if (type == TYPE_ELECTRIC && AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, 0, 0xFD, 0))

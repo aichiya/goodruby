@@ -96,7 +96,7 @@ gAbilityNames:: @ 81FA248
 	.string "Big Pecks$", 13
 	.string "Unnerve$", 13
 	.string "Sand Rush$", 13
-	.string "RIVALRY$", 13
+	.string "Rivalry$", 13
 	.string "SHEER FORCE$", 13
 	.string "MAGIC GUARD$", 13
 	.string "UNAWARE$", 13

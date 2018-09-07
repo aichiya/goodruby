@@ -292,6 +292,9 @@ gAbilityDescription_Unnerve:
 gAbilityDescription_SandRush:
 	.string "Doubles Speed in sandstorm.$"
 
+gAbilityDescription_Rivalry:
+	.string "Stronger vs. same gender.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -392,7 +395,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_BigPecks
 	.4byte gAbilityDescription_Unnerve
 	.4byte gAbilityDescription_SandRush
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Rivalry
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
