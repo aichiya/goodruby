@@ -289,6 +289,9 @@ gAbilityDescription_BigPecks:
 gAbilityDescription_Unnerve:
 	.string "Foes cannot use Berries.$"
 
+gAbilityDescription_SandRush:
+	.string "Doubles Speed in sandstorm.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -388,7 +391,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Sniper
 	.4byte gAbilityDescription_BigPecks
 	.4byte gAbilityDescription_Unnerve
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_SandRush
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented

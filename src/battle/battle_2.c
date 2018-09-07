@@ -5968,6 +5968,8 @@ u32 GetModifiedSpeed(u8 bank)
 			speed *= 2;
 		else if (gBattleMons[bank].ability == ABILITY_CHLOROPHYLL && (gBattleWeather & WEATHER_SUN_ANY))
 			speed *= 2;
+		else if (gBattleMons[bank].ability == ABILITY_SAND_RUSH && (gBattleWeather & WEATHER_SANDSTORM_ANY))
+			speed *= 2;
 	}
 	
 	if (gSideTimers[GetBattlerSide(bank)].tailwindTimer > 0)
