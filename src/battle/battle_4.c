@@ -8692,6 +8692,19 @@ static u8 ChangeStatBuffs(s8 statValue, u8 statId, u8 flags, const u8 *BS_ptr)
             }
             return STAT_CHANGE_DIDNT_WORK;
         }
+		else if (gBattleMons[gActiveBattler].ability == ABILITY_BIG_PECKS
+		          && !certain && statId == STAT_STAGE_DEF)
+		{
+            if (flags == STAT_CHANGE_BS_PTR)
+            {
+                BattleScriptPush(BS_ptr);
+                gBattleStruct->scriptingActive = gActiveBattler;
+                gBattlescriptCurrInstr = BattleScript_AbilityNoSpecificStatLoss;
+                gLastUsedAbility = gBattleMons[gActiveBattler].ability;
+                RecordAbilityBattle(gActiveBattler, gLastUsedAbility);
+            }
+            return STAT_CHANGE_DIDNT_WORK;
+		}
         else if (gBattleMons[gActiveBattler].ability == ABILITY_SHIELD_DUST && flags == 0)
         {
             return STAT_CHANGE_DIDNT_WORK;

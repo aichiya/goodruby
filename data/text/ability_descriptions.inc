@@ -283,6 +283,9 @@ gAbilityDescription_IceBody:
 gAbilityDescription_Sniper:
 	.string "Powers up critical hits.$"
 
+gAbilityDescription_BigPecks:
+	.string "Blocks Defense reduction.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -380,7 +383,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_MoldBreaker
 	.4byte gAbilityDescription_IceBody
 	.4byte gAbilityDescription_Sniper
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_BigPecks
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
