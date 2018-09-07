@@ -1469,7 +1469,7 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
         value = personality & 1;
         SetBoxMonData(boxMon, MON_DATA_ALT_ABILITY, &value);
     }
-	if (!(Random() % 4))
+	if (!fixedIV && !(Random() % 4))
 	{
 		value = 1;
 		SetBoxMonData(boxMon, MON_DATA_HIDDEN_ABILITY, &value);

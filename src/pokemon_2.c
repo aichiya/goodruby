@@ -1060,7 +1060,7 @@ u8 GetAbilityBySpecies(u16 species, u8 slot)
 {
 	if (slot == 2)
 		gLastUsedAbility = gBaseStats[species].hiddenAbility;
-    if (slot == 1)
+    else if (slot == 1)
         gLastUsedAbility = gBaseStats[species].ability2;
     else
         gLastUsedAbility = gBaseStats[species].ability1;
