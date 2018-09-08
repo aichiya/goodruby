@@ -97,7 +97,7 @@ gAbilityNames:: @ 81FA248
 	.string "Unnerve$", 13
 	.string "Sand Rush$", 13
 	.string "Rivalry$", 13
-	.string "SHEER FORCE$", 13
+	.string "Sheer Force$", 13
 	.string "MAGIC GUARD$", 13
 	.string "UNAWARE$", 13
 	.string "FRIEND GUARD$", 13

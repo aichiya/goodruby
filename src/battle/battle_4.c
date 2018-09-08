@@ -2825,6 +2825,11 @@ void SetMoveEffect(bool8 primary, u8 certainArg)
     if (gSideAffecting[GetBattlerPosition(gEffectBank) & 1] & SIDE_STATUS_SAFEGUARD && !(gHitMarker & HITMARKER_IGNORE_SAFEGUARD) &&
         !primary && gBattleCommunication[MOVE_EFFECT_BYTE] <= 7)
         {gBattlescriptCurrInstr++; return;}
+	
+	if (gBattleMons[gBankAttacker].ability == ABILITY_SHEER_FORCE && (gBattleMoves[gCurrentMove].flags & F_SHEER_FORCE) && gBattleCommunication[MOVE_EFFECT_BYTE] != 0x26)
+	{
+		gBattlescriptCurrInstr++; return;
+	}
 
     //make sure at least ONE HP except payday and thief
     if (gBattleMons[gEffectBank].hp == 0 && gBattleCommunication[MOVE_EFFECT_BYTE] != 0xB && gBattleCommunication[MOVE_EFFECT_BYTE] != 0x1F)

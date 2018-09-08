@@ -1422,14 +1422,14 @@ const struct WildPokemonInfo SkyPillar_5F_LandMonsInfo = {10, SkyPillar_5F_LandM
 
 const struct WildPokemon Route101_LandMons [] =
 {
-    {2, 2, SPECIES_NIDORINO},
-    {2, 2, SPECIES_NIDORINO},
-    {2, 2, SPECIES_NIDORINO},
-    {3, 3, SPECIES_NIDORINO},
-    {3, 3, SPECIES_NIDORINO},
-    {3, 3, SPECIES_NIDORINO},
-    {3, 3, SPECIES_NIDORINO},
-    {3, 3, SPECIES_NIDORINO},
+    {2, 2, SPECIES_NIDOKING},
+    {2, 2, SPECIES_NIDOKING},
+    {2, 2, SPECIES_NIDOKING},
+    {3, 3, SPECIES_NIDOKING},
+    {3, 3, SPECIES_NIDOKING},
+    {3, 3, SPECIES_NIDOKING},
+    {3, 3, SPECIES_NIDOKING},
+    {3, 3, SPECIES_NIDOKING},
     {2, 2, SPECIES_EKANS},
     {2, 2, SPECIES_EKANS},
     {3, 3, SPECIES_EKANS},

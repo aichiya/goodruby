@@ -240,6 +240,11 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
 			spAttack = (75 * spAttack) / 100;
 		}
 	}
+	if (attacker->ability == ABILITY_SHEER_FORCE && (gBattleMoves[move].flags & F_SHEER_FORCE))
+	{
+		attack = (130 * attack) / 100;
+		spAttack = (130 * spAttack) / 100;
+	}
     if (defenderAbility == ABILITY_MARVEL_SCALE && defender->status1)
         defense = (150 * defense) / 100;
     if (type == TYPE_ELECTRIC && AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, 0, 0xFD, 0))

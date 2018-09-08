@@ -295,6 +295,9 @@ gAbilityDescription_SandRush:
 gAbilityDescription_Rivalry:
 	.string "Stronger vs. same gender.$"
 
+gAbilityDescription_SheerForce:
+	.string "Added effects give power.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -396,7 +399,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Unnerve
 	.4byte gAbilityDescription_SandRush
 	.4byte gAbilityDescription_Rivalry
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_SheerForce
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
