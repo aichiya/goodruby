@@ -1623,7 +1623,7 @@ static void atk01_accuracycheck(void)
     }
     else
     {
-        u8 type, moveAcc, holdEffect, quality, targetAbility;
+        u8 type, moveAcc, holdEffect, quality, targetAbility, accMod, evaMod;
         s8 buff;
         u16 calc;
 
@@ -1636,19 +1636,27 @@ static void atk01_accuracycheck(void)
             return;
         if (AccuracyCalcHelper(move))
             return;
-
-        if (gBattleMons[gBankTarget].status2 & STATUS2_FORESIGHT
+		
+		accMod = gBattleMons[gBankAttacker].statStages[STAT_STAGE_ACC];
+		evaMod = gBattleMons[gBankTarget].statStages[STAT_STAGE_EVASION];
+		
+		// Chip Away and Unaware ignore all stat changes.
+		if (gCurrentMove == MOVE_CHIP_AWAY || gBattleMons[gBankAttacker].ability == ABILITY_UNAWARE)
+			evaMod = 6;
+		
+		// Foresight, Miracle Eye, and Keen Eye ignore positive evasion changes.
+		if (evaMod > 6 && (gBattleMons[gBankTarget].status2 & STATUS2_FORESIGHT
 		  || gStatuses3[gBankTarget] & STATUS3_MIRACLE_EYE
-		  || gCurrentMove == MOVE_CHIP_AWAY)
-        {
-            u8 acc = gBattleMons[gBankAttacker].statStages[STAT_STAGE_ACC];
-            buff = acc;
-        }
-        else
-        {
-            u8 acc = gBattleMons[gBankAttacker].statStages[STAT_STAGE_ACC];
-            buff = acc + 6 - gBattleMons[gBankTarget].statStages[STAT_STAGE_EVASION];
-        }
+		  || gBattleMons[gBankAttacker].ability == ABILITY_KEEN_EYE))
+		{
+			evaMod = 6;
+		}
+		
+		// Opposing Unaware makes us ignore all accuracy changes.
+		if (gBattleMons[gBankTarget].ability == ABILITY_UNAWARE)
+			accMod = 6;
+		
+		buff = accMod + 6 - evaMod;
 
         if (buff < 0)
             buff = 0;

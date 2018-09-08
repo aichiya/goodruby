@@ -346,6 +346,7 @@ BattleScript_EffectSleep: @ 81D6F81
 	attackstring
 	ppreduce
 	jumpifmove MOVE_LOVELY_KISS, BattleScript_DoSleep
+	jumpifmove MOVE_SING, BattleScript_DoSleep
 	jumpifmove MOVE_HYPNOSIS, BattleScript_DoSleep
 	jumpiftype TARGET, TYPE_GRASS, BattleScript_NotAffected
 	

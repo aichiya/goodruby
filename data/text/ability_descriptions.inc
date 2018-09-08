@@ -301,6 +301,9 @@ gAbilityDescription_SheerForce:
 gAbilityDescription_MagicGuard:
 	.string "Only hurt by attacks.$"
 
+gAbilityDescription_Unaware:
+	.string "Ignores foe’s stat changes.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -404,7 +407,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Rivalry
 	.4byte gAbilityDescription_SheerForce
 	.4byte gAbilityDescription_MagicGuard
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unaware
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
