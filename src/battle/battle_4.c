@@ -9488,7 +9488,7 @@ static void atk96_weatherdamage(void)
         {
             if (gBattleMons[gBankAttacker].type1 != TYPE_ROCK && gBattleMons[gBankAttacker].type1 != TYPE_STEEL && gBattleMons[gBankAttacker].type1 != TYPE_GROUND
              && gBattleMons[gBankAttacker].type2 != TYPE_ROCK && gBattleMons[gBankAttacker].type2 != TYPE_STEEL && gBattleMons[gBankAttacker].type2 != TYPE_GROUND
-			 && gBattleMons[gBankAttacker].ability != ABILITY_SAND_RUSH
+			 && gBattleMons[gBankAttacker].ability != ABILITY_SAND_RUSH && gBattleMons[gBankAttacker].ability != ABILITY_MAGIC_GUARD
              && gBattleMons[gBankAttacker].ability != ABILITY_SAND_VEIL && !(gStatuses3[gBankAttacker] & STATUS3_UNDERGROUND) && !(gStatuses3[gBankAttacker] & STATUS3_UNDERWATER))
             {
                 gBattleMoveDamage = gBattleMons[gBankAttacker].maxHP / 16;
@@ -9503,6 +9503,7 @@ static void atk96_weatherdamage(void)
         if (gBattleWeather & WEATHER_HAIL)
         {
             if (gBattleMons[gBankAttacker].type1 != TYPE_ICE && gBattleMons[gBankAttacker].type2 != TYPE_ICE && gBattleMons[gBankAttacker].ability != ABILITY_ICE_BODY &&
+			    gBattleMons[gBankAttacker].ability != ABILITY_MAGIC_GUARD &&
 			    !(gStatuses3[gBankAttacker] & STATUS3_UNDERGROUND) && !(gStatuses3[gBankAttacker] & STATUS3_UNDERWATER))
             {
                 gBattleMoveDamage = gBattleMons[gBankAttacker].maxHP / 16;
@@ -13784,7 +13785,8 @@ static void sp12_spikesaffect(void)
 	u8 spikes;
 	gActiveBattler = gBattleStruct->scriptingActive;
 	spikes = gSideTimers[GetBattlerSide(gActiveBattler)].spikesAmount & HAZARD_SPIKES; // 0x3
-	if (spikes == 0 || gBattleMons[gActiveBattler].type1 == TYPE_FLYING || gBattleMons[gActiveBattler].type2 == TYPE_FLYING || gBattleMons[gActiveBattler].ability == ABILITY_LEVITATE)
+	if (spikes == 0 || gBattleMons[gActiveBattler].type1 == TYPE_FLYING || gBattleMons[gActiveBattler].type2 == TYPE_FLYING
+        || gBattleMons[gActiveBattler].ability == ABILITY_LEVITATE || gBattleMons[gActiveBattler].ability == ABILITY_MAGIC_GUARD)
 	{
 		gBattlescriptCurrInstr += 5;
 	}
@@ -13997,7 +13999,7 @@ static void sp20_rocksaffect(void)
 	u8 damagerate;
 	gActiveBattler = gBattleStruct->scriptingActive;
 	spikes = gSideTimers[GetBattlerSide(gActiveBattler)].spikesAmount & HAZARD_STEALTH_ROCK;
-	if (spikes == 0)
+	if (spikes == 0 || gBattleMons[gActiveBattler].ability == ABILITY_MAGIC_GUARD)
 	{
 		gBattlescriptCurrInstr += 5;
 	}

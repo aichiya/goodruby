@@ -987,7 +987,8 @@ u8 TurnBasedEffects(void)
                 gBattleStruct->turnEffectsTracker++;
                 break;
             case 4:  // leech seed
-                if (gStatuses3[gActiveBattler] & STATUS3_LEECHSEED && gBattleMons[gStatuses3[gActiveBattler] & STATUS3_LEECHSEED_BANK].hp != 0 && gBattleMons[gActiveBattler].hp != 0)
+                if (gStatuses3[gActiveBattler] & STATUS3_LEECHSEED && gBattleMons[gStatuses3[gActiveBattler] & STATUS3_LEECHSEED_BANK].hp != 0 && gBattleMons[gActiveBattler].hp != 0
+				     && gBattleMons[gActiveBattler].ability != ABILITY_MAGIC_GUARD)
                 {
                     gBankTarget = gStatuses3[gActiveBattler] & STATUS3_LEECHSEED_BANK; //funny how the 'target' is actually the bank that receives HP
                     gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 8;
@@ -1001,7 +1002,7 @@ u8 TurnBasedEffects(void)
                 gBattleStruct->turnEffectsTracker++;
                 break;
             case 5:  // poison
-                if ((gBattleMons[gActiveBattler].status1 & STATUS_POISON) && gBattleMons[gActiveBattler].hp != 0)
+                if ((gBattleMons[gActiveBattler].status1 & STATUS_POISON) && gBattleMons[gActiveBattler].hp != 0 && gBattleMons[gActiveBattler].ability != ABILITY_MAGIC_GUARD)
                 {
                     gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 8;
                     if (gBattleMoveDamage == 0)
@@ -1032,7 +1033,7 @@ u8 TurnBasedEffects(void)
 						gBattleMoveDamage *= -1;
 						BattleScriptExecute(BattleScript_PoisonHealDmg);
 					}
-					else
+					else if (gBattleMons[gActiveBattler].ability != ABILITY_MAGIC_GUARD)
 					{
 						gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 16;
 						if (gBattleMoveDamage == 0)
@@ -1045,7 +1046,7 @@ u8 TurnBasedEffects(void)
                 gBattleStruct->turnEffectsTracker++;
                 break;
             case 7:  // burn
-                if ((gBattleMons[gActiveBattler].status1 & STATUS_BURN) && gBattleMons[gActiveBattler].hp != 0)
+                if ((gBattleMons[gActiveBattler].status1 & STATUS_BURN) && gBattleMons[gActiveBattler].hp != 0 && gBattleMons[gActiveBattler].ability != ABILITY_MAGIC_GUARD)
                 {
                     gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 16;
                     if (gBattleMoveDamage == 0)
@@ -1056,7 +1057,7 @@ u8 TurnBasedEffects(void)
                 gBattleStruct->turnEffectsTracker++;
                 break;
             case 8:  // spooky nightmares
-                if ((gBattleMons[gActiveBattler].status2 & STATUS2_NIGHTMARE) && gBattleMons[gActiveBattler].hp != 0)
+                if ((gBattleMons[gActiveBattler].status2 & STATUS2_NIGHTMARE) && gBattleMons[gActiveBattler].hp != 0 && gBattleMons[gActiveBattler].ability != ABILITY_MAGIC_GUARD)
                 {
                     // missing sleep check
                     gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 4;
@@ -1068,7 +1069,7 @@ u8 TurnBasedEffects(void)
                 gBattleStruct->turnEffectsTracker++;
                 break;
             case 9:  // curse
-                if ((gBattleMons[gActiveBattler].status2 & STATUS2_CURSED) && gBattleMons[gActiveBattler].hp != 0)
+                if ((gBattleMons[gActiveBattler].status2 & STATUS2_CURSED) && gBattleMons[gActiveBattler].hp != 0 && gBattleMons[gActiveBattler].ability != ABILITY_MAGIC_GUARD)
                 {
                     gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 4;
                     if (gBattleMoveDamage == 0)
@@ -1082,7 +1083,7 @@ u8 TurnBasedEffects(void)
                 if ((gBattleMons[gActiveBattler].status2 & STATUS2_WRAPPED) && gBattleMons[gActiveBattler].hp != 0)
                 {
                     gBattleMons[gActiveBattler].status2 -= 0x2000;
-                    if (gBattleMons[gActiveBattler].status2 & STATUS2_WRAPPED)  // damaged by wrap
+                    if (gBattleMons[gActiveBattler].status2 & STATUS2_WRAPPED && gBattleMons[gActiveBattler].ability != ABILITY_MAGIC_GUARD)  // damaged by wrap
                     {
                         gBattleStruct->animArg1 = ewram16004arr(0, gActiveBattler);
                         gBattleStruct->animArg2 = ewram16004arr(1, gActiveBattler);

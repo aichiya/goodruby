@@ -298,6 +298,9 @@ gAbilityDescription_Rivalry:
 gAbilityDescription_SheerForce:
 	.string "Added effects give power.$"
 
+gAbilityDescription_MagicGuard:
+	.string "Only hurt by attacks.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -400,7 +403,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_SandRush
 	.4byte gAbilityDescription_Rivalry
 	.4byte gAbilityDescription_SheerForce
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_MagicGuard
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
