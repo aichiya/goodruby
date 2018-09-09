@@ -23,6 +23,7 @@ extern u16 gBattleMovePower;
 extern u16 gTrainerBattleOpponent;
 extern u16 gBattlerPartyIndexes[MAX_BATTLERS_COUNT];
 extern u8 gBattlersCount;
+extern u8 gBanksByTurnOrder[MAX_BATTLERS_COUNT];
 
 // Masks for getting PP Up count, also PP Max values
 const u8 gPPUpReadMasks[] = {0x03, 0x0c, 0x30, 0xc0};
@@ -261,6 +262,20 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
 	{
 		attack = (130 * attack) / 100;
 		spAttack = (130 * spAttack) / 100;
+	}
+	if (attacker->ability == ABILITY_ANALYTIC)
+	{
+		for (i = 0; i < 4; i++)
+		{
+			if (gBanksByTurnOrder[i] == bankAtk)
+				break;
+			else if (gBanksByTurnOrder[i] == bankDef)
+			{
+				attack = (130 * attack) / 100;
+				spAttack = (130 * spAttack) / 100;
+				break;
+			}
+		}
 	}
 	
     if (defenderAbility == ABILITY_MARVEL_SCALE && defender->status1)

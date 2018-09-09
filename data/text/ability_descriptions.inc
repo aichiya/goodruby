@@ -331,6 +331,9 @@ gAbilityDescription_Justified:
 gAbilityDescription_Steadfast:
 	.string "Gains Speed when flinching.$"
 
+gAbilityDescription_Analytic:
+	.string "Stronger when moving later.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -447,7 +450,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Regenerator
 	.4byte gAbilityDescription_Justified
 	.4byte gAbilityDescription_Steadfast
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Analytic
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
