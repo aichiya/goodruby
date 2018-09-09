@@ -110,7 +110,7 @@ gAbilityNames:: @ 81FA248
 	.string "Anger Point$", 13
 	.string "DEFIANT$", 13
 	.string "Regenerator$", 13
-	.string "JUSTIFIED$", 13
+	.string "Justified$", 13
 	.string "STEADFAST$", 13
 	.string "ANALYTIC$", 13
 	.string "POISON TOUCH$", 13

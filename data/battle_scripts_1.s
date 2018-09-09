@@ -4333,6 +4333,12 @@ BattleScript_AngerPointActivates::
 	waitmessage 64
 	return
 
+BattleScript_JustifiedActivates::
+	playanimation TARGET, B_ANIM_STATS_CHANGE, sANIM_ARG1
+	printstring BATTLE_TEXT_Justified
+	waitmessage 64
+	return
+
 BattleScript_ApplySecondaryEffect:: @ 81D9950
 	waitstate
 	seteffectsecondary

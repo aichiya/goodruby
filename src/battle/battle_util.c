@@ -177,6 +177,7 @@ extern u8 BattleScript_RoughSkinActivates[];
 extern u8 BattleScript_ApplySecondaryEffect[];
 extern u8 BattleScript_CuteCharmActivates[];
 extern u8 BattleScript_AngerPointActivates[];
+extern u8 BattleScript_JustifiedActivates[];
 extern u8 BattleScript_AbilityCuredStatus[]; //ability status clear
 extern u8 BattleScript_SynchronizeActivates[];
 extern u8 gUnknown_081D978C[]; //intimidate1
@@ -2440,17 +2441,34 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 		}
                 break;
 			case ABILITY_ANGER_POINT:
-		if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
-		 && gCritMultiplier > 1
-		 && !gProtectStructs[gBankAttacker].confusionSelfDmg
-		 && gBattleMons[gBankAttacker].hp != 0
-		 && (gSpecialStatuses[gBankTarget].moveturnLostHP_physical || gSpecialStatuses[gBankTarget].moveturnLostHP_special))
-		{
-		gBattleMons[gBankTarget].statStages[STAT_STAGE_ATK] = 12;
-		BattleScriptPushCursor();
-		gBattlescriptCurrInstr = BattleScript_AngerPointActivates;
-		effect++;
-		}
+				if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+				 && gCritMultiplier > 1
+				 && !gProtectStructs[gBankAttacker].confusionSelfDmg
+				 && gBattleMons[gBankTarget].hp != 0
+				 && (gSpecialStatuses[gBankTarget].moveturnLostHP_physical || gSpecialStatuses[gBankTarget].moveturnLostHP_special))
+				{
+					gBattleMons[gBankTarget].statStages[STAT_STAGE_ATK] = 12;
+					BattleScriptPushCursor();
+					gBattlescriptCurrInstr = BattleScript_AngerPointActivates;
+					effect++;
+				}
+				break;
+			case ABILITY_JUSTIFIED:
+				if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+				 && (gBattleMoves[move].type == TYPE_DARK || gBattleStruct->dynamicMoveType == TYPE_DARK)
+				 && !gProtectStructs[gBankAttacker].confusionSelfDmg
+				 && gBattleMons[gBankTarget].statStages[STAT_STAGE_ATK] < 12
+				 && gBattleMons[gBankTarget].hp != 0
+				 && (gSpecialStatuses[gBankTarget].moveturnLostHP_physical || gSpecialStatuses[gBankTarget].moveturnLostHP_special))
+				{
+					gBattleMons[gBankTarget].statStages[STAT_STAGE_ATK]++;
+					gBattleStruct->animArg1 = 0xF;
+					gBattleStruct->animArg2 = 0;
+					BattleScriptPushCursor();
+					gBattlescriptCurrInstr = BattleScript_JustifiedActivates;
+					effect++;
+				}
+				break;
 		}
             break;
         case ABILITYEFFECT_IMMUNITY: // 5

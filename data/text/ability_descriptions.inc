@@ -325,6 +325,9 @@ gAbilityDescription_AngerPoint:
 gAbilityDescription_Regenerator:
 	.string "Heals upon switching out.$"
 
+gAbilityDescription_Justified:
+	.string "Dark hits raise Attack.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -439,7 +442,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_AngerPoint
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Regenerator
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Justified
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
