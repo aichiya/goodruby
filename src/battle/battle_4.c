@@ -12510,6 +12510,11 @@ static void atkE2_switchoutabilities(void)
         EmitSetMonData(0, REQUEST_STATUS_BATTLE, gBitTable[ewram16064arr(gActiveBattler)], 4, &gBattleMons[gActiveBattler].status1);
         MarkBufferBankForExecution(gActiveBattler);
         break;
+	case ABILITY_REGENERATOR:
+        gBattleMons[gActiveBattler].hp += gBattleMons[gActiveBattler].maxHP / 3;
+        EmitSetMonData(0, REQUEST_HP_BATTLE, 0, 2, &gBattleMons[gActiveBattler].hp);
+        MarkBufferBankForExecution(gActiveBattler);
+        break;
     }
     gBattlescriptCurrInstr += 2;
 }

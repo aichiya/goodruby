@@ -109,7 +109,7 @@ gAbilityNames:: @ 81FA248
 	.string "Technician$", 13
 	.string "Anger Point$", 13
 	.string "DEFIANT$", 13
-	.string "REGENERATOR$", 13
+	.string "Regenerator$", 13
 	.string "JUSTIFIED$", 13
 	.string "STEADFAST$", 13
 	.string "ANALYTIC$", 13

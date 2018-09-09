@@ -322,6 +322,9 @@ gAbilityDescription_Technician:
 gAbilityDescription_AngerPoint:
 	.string "Maxes Attack on a crit.$"
 
+gAbilityDescription_Regenerator:
+	.string "Heals upon switching out.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -435,7 +438,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Technician
 	.4byte gAbilityDescription_AngerPoint
 	.4byte gAbilityDescription_Unimplemented
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Regenerator
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
