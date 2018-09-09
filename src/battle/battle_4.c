@@ -1629,6 +1629,10 @@ static void atk01_accuracycheck(void)
 
         if (move == 0)
             move = gCurrentMove;
+		
+		targetAbility = gBattleMons[gBankTarget].ability;
+		if (gBattleMons[gBankAttacker].ability == ABILITY_MOLD_BREAKER)
+			targetAbility = 0;
 
         GET_MOVE_TYPE(move, type);
 
@@ -1640,7 +1644,7 @@ static void atk01_accuracycheck(void)
 		accMod = gBattleMons[gBankAttacker].statStages[STAT_STAGE_ACC];
 		evaMod = gBattleMons[gBankTarget].statStages[STAT_STAGE_EVASION];
 		
-		// Chip Away and Unaware ignore all stat changes.
+		// Chip Away and attacker Unaware ignore all evasion changes.
 		if (gCurrentMove == MOVE_CHIP_AWAY || gBattleMons[gBankAttacker].ability == ABILITY_UNAWARE)
 			evaMod = 6;
 		
@@ -1653,7 +1657,7 @@ static void atk01_accuracycheck(void)
 		}
 		
 		// Opposing Unaware makes us ignore all accuracy changes.
-		if (gBattleMons[gBankTarget].ability == ABILITY_UNAWARE)
+		if (targetAbility == ABILITY_UNAWARE)
 			accMod = 6;
 		
 		buff = accMod + 6 - evaMod;
@@ -1667,13 +1671,13 @@ static void atk01_accuracycheck(void)
         // check Thunder on sunny weather
         if (WEATHER_HAS_EFFECT && gBattleWeather & WEATHER_SUN_ANY && (gBattleMoves[move].effect == EFFECT_THUNDER || gBattleMoves[move].effect == EFFECT_HURRICANE))
             moveAcc = 50;
+		
+		if (gBattleMoves[move].moveClass == CLASS_STATUS && targetAbility == ABILITY_WONDER_SKIN)
+			moveAcc = 50;
 
         calc = gAccuracyStageRatios[buff].dividend * moveAcc;
         calc /= gAccuracyStageRatios[buff].divisor;
 		
-		targetAbility = gBattleMons[gBankTarget].ability;
-		if (gBattleMons[gBankAttacker].ability == ABILITY_MOLD_BREAKER)
-			targetAbility = 0;
 
         if (gBattleMons[gBankAttacker].ability == ABILITY_COMPOUND_EYES)
             calc = (calc * 130) / 100; // 1.3 compound eyes boost

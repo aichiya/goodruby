@@ -310,6 +310,9 @@ gAbilityDescription_FriendGuard:
 gAbilityDescription_DrySkin:
 	.string "Heals with water.$"
 
+gAbilityDescription_WonderSkin:
+	.string "Often dodges status moves.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -418,7 +421,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_DrySkin
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_WonderSkin
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
