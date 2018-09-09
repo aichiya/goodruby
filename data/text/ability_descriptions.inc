@@ -304,6 +304,12 @@ gAbilityDescription_MagicGuard:
 gAbilityDescription_Unaware:
 	.string "Ignores foe’s stat changes.$"
 
+gAbilityDescription_FriendGuard:
+	.string "Ally takes less damage.$"
+
+gAbilityDescription_DrySkin:
+	.string "Heals with water.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -408,10 +414,10 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_SheerForce
 	.4byte gAbilityDescription_MagicGuard
 	.4byte gAbilityDescription_Unaware
+	.4byte gAbilityDescription_FriendGuard
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
-	.4byte gAbilityDescription_Unimplemented
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_DrySkin
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented

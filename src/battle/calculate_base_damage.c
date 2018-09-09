@@ -22,6 +22,7 @@ extern struct BattleEnigmaBerry gEnigmaBerries[];
 extern u16 gBattleMovePower;
 extern u16 gTrainerBattleOpponent;
 extern u16 gBattlerPartyIndexes[MAX_BATTLERS_COUNT];
+extern u8 gBattlersCount;
 
 // Masks for getting PP Up count, also PP Max values
 const u8 gPPUpReadMasks[] = {0x03, 0x0c, 0x30, 0xc0};
@@ -245,8 +246,12 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
 		attack = (130 * attack) / 100;
 		spAttack = (130 * spAttack) / 100;
 	}
+	
     if (defenderAbility == ABILITY_MARVEL_SCALE && defender->status1)
         defense = (150 * defense) / 100;
+	if (type == TYPE_FIRE && defenderAbility == ABILITY_DRY_SKIN)
+		gBattleMovePower = (125 * gBattleMovePower) / 100;
+	
     if (type == TYPE_ELECTRIC && AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, 0, 0xFD, 0))
         gBattleMovePower /= 2;
     if (type == TYPE_FIRE && AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, 0, 0xFE, 0))
@@ -259,8 +264,18 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         gBattleMovePower = (150 * gBattleMovePower) / 100;
     if (type == TYPE_BUG && attacker->ability == ABILITY_SWARM && attacker->hp <= (attacker->maxHP / 3))
         gBattleMovePower = (150 * gBattleMovePower) / 100;
-    if (gBattleMoves[gCurrentMove].effect == EFFECT_EXPLOSION)
-        defense /= 2;
+	
+	for (i = 0; i < gBattlersCount; i++)
+	{
+		if (i != bankDef && gBattleMons[i].ability == ABILITY_FRIEND_GUARD && GetBattlerSide(i) == GetBattlerSide(bankDef))
+		{
+			gBattleMovePower = (75 * gBattleMovePower) / 100;
+		}
+	}
+	
+	// Don't do this in modern gens
+//    if (gBattleMoves[gCurrentMove].effect == EFFECT_EXPLOSION)
+//        defense /= 2;
 
 	if (gCurrentMove == MOVE_VENOSHOCK && defender->status1 & (STATUS_POISON | STATUS_TOXIC_POISON))
 		spAttack *= 2;

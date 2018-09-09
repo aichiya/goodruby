@@ -100,10 +100,10 @@ gAbilityNames:: @ 81FA248
 	.string "Sheer Force$", 13
 	.string "Magic Guard$", 13
 	.string "Unaware$", 13
-	.string "FRIEND GUARD$", 13
+	.string "Friend Guard$", 13
 	.string "COMPETITIVE$", 13
 	.string "INFILTRATOR$", 13
-	.string "DRY SKIN$", 13
+	.string "Dry Skin$", 13
 	.string "WONDER SKIN$", 13
 	.string "SAND FORCE$", 13
 	.string "TECHNICIAN$", 13

@@ -9525,7 +9525,7 @@ static void atk96_weatherdamage(void)
         }
 		if (gBattleWeather & WEATHER_SUN_ANY)
 		{
-			if (gBattleMons[gBankAttacker].ability == ABILITY_SOLAR_POWER)
+			if (gBattleMons[gBankAttacker].ability == ABILITY_SOLAR_POWER || gBattleMons[gBankAttacker].ability == ABILITY_DRY_SKIN)
 			{
 				gBattleMoveDamage = gBattleMons[gBankAttacker].maxHP / 8;
 				if (gBattleMoveDamage == 0)
