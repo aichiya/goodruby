@@ -400,8 +400,15 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
 			if (attacker->ability == ABILITY_SOLAR_POWER && moveClass == 1)
 				damage = (15 * damage) / 10;
         }
+		
+		// sand force
+		if (gBattleWeather & WEATHER_SANDSTORM_ANY && attacker->ability == ABILITY_SAND_FORCE &&
+		    (type == TYPE_ROCK || type == TYPE_GROUND || type == TYPE_STEEL))
+		{
+			damage = (damage * 13) / 10;
+		}
         
-        // sand
+        // sand special attack penalty
         if (gBattleWeather & WEATHER_SANDSTORM_ANY && moveClass == 1 && (defender->type1 == TYPE_ROCK || defender->type2 == TYPE_ROCK))
         {
             damage = (10 * damage) / 15;

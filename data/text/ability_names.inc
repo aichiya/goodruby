@@ -105,7 +105,7 @@ gAbilityNames:: @ 81FA248
 	.string "INFILTRATOR$", 13
 	.string "Dry Skin$", 13
 	.string "Wonder Skin$", 13
-	.string "SAND FORCE$", 13
+	.string "Sand Force$", 13
 	.string "TECHNICIAN$", 13
 	.string "ANGER POINT$", 13
 	.string "DEFIANT$", 13

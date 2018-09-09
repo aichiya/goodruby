@@ -313,6 +313,9 @@ gAbilityDescription_DrySkin:
 gAbilityDescription_WonderSkin:
 	.string "Often dodges status moves.$"
 
+gAbilityDescription_SandForce:
+	.string "Boosts power in sandstorm.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -422,7 +425,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_DrySkin
 	.4byte gAbilityDescription_WonderSkin
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_SandForce
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
