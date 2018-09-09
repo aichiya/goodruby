@@ -402,6 +402,7 @@ enum
 	BATTLE_TEXT_Unnerve,
 	BATTLE_TEXT_AngerPoint,
 	BATTLE_TEXT_Justified,
+	BATTLE_TEXT_CursedBody
 };
 
 const u8 BattleText_UnknownString[] = _("{STRING 33}");
@@ -934,6 +935,7 @@ const u8 BattleText_MoldBreaker[] = _("{STRING 16} breaks\nthe mold!");
 const u8 BattleText_Unnerve[] = _("{STRING 16}’s Unnerve prevents\nthe use of held Berries!");
 const u8 BattleText_AngerPoint[] = _("{DEFENDING_MON}’s Anger Point\nmaximized its Attack!");
 const u8 BattleText_Justified[] = _("{DEFENDING_MON}’s Justified\nraised its Attack!");
+const u8 BattleText_CursedBody[] = _("{STRING 0} was disabled\nby {DEFENDING_MON}’s Cursed Body!");
 
 const u8 *const gUnknown_08400F58[] =
 {
@@ -1358,6 +1360,7 @@ const u8 *const gBattleStringsTable[] =
 	BattleText_Unnerve,
 	BattleText_AngerPoint,
 	BattleText_Justified,
+	BattleText_CursedBody,
 };
 
 // below are lists of battle string enums and NOT pointers to the strings.

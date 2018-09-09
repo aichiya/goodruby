@@ -10136,7 +10136,7 @@ static void atkA3_disablelastusedattack(void)
         gBattleTextBuff1[4] = 0xFF;
 
         gDisableStructs[gBankTarget].disabledMove = gBattleMons[gBankTarget].moves[i];
-        gDisableStructs[gBankTarget].disableTimer1 = (Random() & 3) + 2;
+        gDisableStructs[gBankTarget].disableTimer1 = 4;
         gDisableStructs[gBankTarget].disableTimer2 = gDisableStructs[gBankTarget].disableTimer1; //that's interesting
         gBattlescriptCurrInstr += 5;
     }

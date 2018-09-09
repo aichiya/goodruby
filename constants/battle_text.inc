@@ -399,3 +399,4 @@
 	enum BATTLE_TEXT_Unnerve
 	enum BATTLE_TEXT_AngerPoint
 	enum BATTLE_TEXT_Justified
+	enum BATTLE_TEXT_CursedBody

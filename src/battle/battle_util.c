@@ -179,6 +179,7 @@ extern u8 BattleScript_ApplySecondaryEffect[];
 extern u8 BattleScript_CuteCharmActivates[];
 extern u8 BattleScript_AngerPointActivates[];
 extern u8 BattleScript_JustifiedActivates[];
+extern u8 BattleScript_CursedBodyActivates[];
 extern u8 BattleScript_AbilityCuredStatus[]; //ability status clear
 extern u8 BattleScript_SynchronizeActivates[];
 extern u8 gUnknown_081D978C[]; //intimidate1
@@ -2482,6 +2483,37 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 					BattleScriptPushCursor();
 					gBattlescriptCurrInstr = BattleScript_JustifiedActivates;
 					effect++;
+				}
+				break;
+			case ABILITY_CURSED_BODY:
+				if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+				 && gBattleMons[gBankAttacker].hp != 0
+				 && !gProtectStructs[gBankAttacker].confusionSelfDmg
+				 && gDisableStructs[gBankAttacker].disabledMove == 0
+				 && (gSpecialStatuses[gBankTarget].moveturnLostHP_physical || gSpecialStatuses[gBankTarget].moveturnLostHP_special)
+				 && Random() % 10 < 3)
+				{
+					for (i = 0; i < 4; i++)
+					{
+						if (gBattleMons[gBankAttacker].moves[i] == gCurrentMove)
+							break;
+					}
+					if (i != 4 && gBattleMons[gBankAttacker].pp[i] != 0)
+					{
+						gBattleTextBuff1[0] = 0xFD;
+						gBattleTextBuff1[1] = 2;
+						gBattleTextBuff1[2] = gCurrentMove;
+						gBattleTextBuff1[3] = gCurrentMove >> 8; 
+						gBattleTextBuff1[4] = 0xFF;
+
+						gDisableStructs[gBankAttacker].disabledMove = gCurrentMove;
+						gDisableStructs[gBankAttacker].disableTimer1 = 4;
+						gDisableStructs[gBankAttacker].disableTimer2 = gDisableStructs[gBankTarget].disableTimer1;
+						
+						BattleScriptPushCursor();
+						gBattlescriptCurrInstr = BattleScript_CursedBodyActivates;
+						effect++;
+					}
 				}
 				break;
 		}

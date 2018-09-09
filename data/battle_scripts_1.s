@@ -4359,6 +4359,11 @@ BattleScript_JustifiedActivates::
 	waitmessage 64
 	return
 
+BattleScript_CursedBodyActivates::
+	printstring BATTLE_TEXT_CursedBody
+	waitmessage 64
+	return
+
 BattleScript_ApplySecondaryEffect:: @ 81D9950
 	waitstate
 	seteffectsecondary
