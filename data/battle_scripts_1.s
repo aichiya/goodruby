@@ -3876,6 +3876,14 @@ BattleScript_MoveUsedFlinched:: @ 81D9573
 	waitmessage 64
 	goto BattleScript_MoveEnd
 
+BattleScript_MoveUsedFlinchedSteadfast::
+	printstring BATTLE_TEXT_Flinched
+	waitmessage 64
+	playanimation USER, B_ANIM_STATS_CHANGE, sANIM_ARG1
+	printstring BATTLE_TEXT_SpeedRisen
+	waitmessage 64
+	goto BattleScript_MoveEnd
+
 BattleScript_PrintUproarOverTurns:: @ 81D957E
 	printfromtable gUproarOverTurnStringIds
 	waitmessage 64

@@ -141,6 +141,7 @@ extern u8 BattleScript_MoveUsedUnfroze[];
 extern u8 BattleScript_MoveUsedLoafingAround[];
 extern u8 BattleScript_MoveUsedMustRecharge[];
 extern u8 BattleScript_MoveUsedFlinched[];
+extern u8 BattleScript_MoveUsedFlinchedSteadfast[];
 extern u8 BattleScript_MoveUsedIsDisabled[];
 extern u8 BattleScript_MoveUsedIsTaunted[];
 extern u8 BattleScript_MoveUsedIsImprisoned[];
@@ -1552,12 +1553,25 @@ u8 AtkCanceller_UnableToUseMove(void)
         case 5: // flinch
             if (gBattleMons[gBankAttacker].status2 & STATUS2_FLINCHED)
             {
-                gBattleMons[gBankAttacker].status2 &= ~(STATUS2_FLINCHED);
-                gProtectStructs[gBankAttacker].flinchImmobility = 1;
-                CancelMultiTurnMoves(gBankAttacker);
-                gBattlescriptCurrInstr = BattleScript_MoveUsedFlinched;
-                gHitMarker |= HITMARKER_UNABLE_TO_USE_MOVE;
-                effect = 1;
+				gBattleMons[gBankAttacker].status2 &= ~(STATUS2_FLINCHED);
+				gProtectStructs[gBankAttacker].flinchImmobility = 1;
+				CancelMultiTurnMoves(gBankAttacker);
+				gHitMarker |= HITMARKER_UNABLE_TO_USE_MOVE;
+				effect = 1;
+				if (gBattleMons[gBankAttacker].ability == ABILITY_STEADFAST && gBattleMons[gBankAttacker].statStages[STAT_STAGE_SPEED] < 12)
+				{
+					gBattleMons[gBankAttacker].statStages[STAT_STAGE_SPEED]++;
+					gBattlescriptCurrInstr = BattleScript_MoveUsedFlinchedSteadfast;
+					gBattleStruct->scriptingActive = gBankAttacker;
+					gLastUsedAbility = gBattleMons[gBankAttacker].ability;
+					gBattleStruct->animArg1 = 0x11;
+					gBattleStruct->animArg2 = 0;
+				}
+				else
+				{
+					gBattlescriptCurrInstr = BattleScript_MoveUsedFlinched;
+				}
+				
             }
             gBattleStruct->atkCancellerTracker++;
             break;

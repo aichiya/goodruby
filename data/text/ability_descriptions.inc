@@ -328,6 +328,9 @@ gAbilityDescription_Regenerator:
 gAbilityDescription_Justified:
 	.string "Dark hits raise Attack.$"
 
+gAbilityDescription_Steadfast:
+	.string "Gains Speed when flinching.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -443,7 +446,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Regenerator
 	.4byte gAbilityDescription_Justified
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Steadfast
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
