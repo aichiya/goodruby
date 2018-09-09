@@ -319,6 +319,9 @@ gAbilityDescription_SandForce:
 gAbilityDescription_Technician:
 	.string "Boosts weaker moves.$"
 
+gAbilityDescription_AngerPoint:
+	.string "Maxes Attack on a crit.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -430,7 +433,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_WonderSkin
 	.4byte gAbilityDescription_SandForce
 	.4byte gAbilityDescription_Technician
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_AngerPoint
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented

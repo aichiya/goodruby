@@ -400,6 +400,7 @@ enum
 	BATTLE_TEXT_GuardSwap,
 	BATTLE_TEXT_MoldBreaker,
 	BATTLE_TEXT_Unnerve,
+	BATTLE_TEXT_AngerPoint,
 };
 
 const u8 BattleText_UnknownString[] = _("{STRING 33}");
@@ -930,6 +931,7 @@ const u8 BattleText_PowerSwap[] = _("{ATTACKING_MON} switched all\nchanges to it
 const u8 BattleText_GuardSwap[] = _("{ATTACKING_MON} switched all\nchanges to its Defense and Sp. Def\lwith {DEFENDING_MON}!");
 const u8 BattleText_MoldBreaker[] = _("{STRING 16} breaks\nthe mold!");
 const u8 BattleText_Unnerve[] = _("{STRING 16}’s Unnerve prevents\nthe use of held Berries!");
+const u8 BattleText_AngerPoint[] = _("{DEFENDING_MON}’s Anger Point\nmaximized its Attack!");
 
 const u8 *const gUnknown_08400F58[] =
 {
@@ -1352,6 +1354,7 @@ const u8 *const gBattleStringsTable[] =
 	BattleText_GuardSwap,
 	BattleText_MoldBreaker,
 	BattleText_Unnerve,
+	BattleText_AngerPoint,
 };
 
 // below are lists of battle string enums and NOT pointers to the strings.

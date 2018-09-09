@@ -397,3 +397,4 @@
 	enum BATTLE_TEXT_GuardSwap
 	enum BATTLE_TEXT_MoldBreaker
 	enum BATTLE_TEXT_Unnerve
+	enum BATTLE_TEXT_AngerPoint

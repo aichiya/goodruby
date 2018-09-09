@@ -107,7 +107,7 @@ gAbilityNames:: @ 81FA248
 	.string "Wonder Skin$", 13
 	.string "Sand Force$", 13
 	.string "Technician$", 13
-	.string "ANGER POINT$", 13
+	.string "Anger Point$", 13
 	.string "DEFIANT$", 13
 	.string "REGENERATOR$", 13
 	.string "JUSTIFIED$", 13
