@@ -189,6 +189,22 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         }
     }
 
+	// Move-related power boosts
+	if (gCurrentMove == MOVE_VENOSHOCK && defender->status1 & (STATUS_POISON | STATUS_TOXIC_POISON))
+		gBattleMovePower *= 2;
+	if (gCurrentMove == MOVE_BRINE && defender->hp *2 <= defender->maxHP)
+		gBattleMovePower *= 2;
+	if (gCurrentMove == MOVE_HEX && defender->status1)
+		gBattleMovePower *= 2;
+	if (gCurrentMove == MOVE_KNOCK_OFF && defender->item && !gWishFutureKnock.knockedOffPokes[bankDef])
+		gBattleMovePower = (gBattleMovePower * 3) / 2;
+	if (gCurrentMove == MOVE_ACROBATICS && !(attacker->item))
+		gBattleMovePower *= 2;
+	
+	// This must come before any abilities touch power
+	if (attacker->ability == ABILITY_TECHNICIAN && (gBattleMovePower <= 60))
+		gBattleMovePower = (gBattleMovePower * 15) / 10;
+
     if (attackerHoldEffect == HOLD_EFFECT_CHOICE_BAND)
         attack = (150 * attack) / 100;
     if (attackerHoldEffect == HOLD_EFFECT_SOUL_DEW && !(gBattleTypeFlags & BATTLE_TYPE_BATTLE_TOWER) && (attacker->species == SPECIES_LATIAS || attacker->species == SPECIES_LATIOS))
@@ -276,17 +292,6 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
 	// Don't do this in modern gens
 //    if (gBattleMoves[gCurrentMove].effect == EFFECT_EXPLOSION)
 //        defense /= 2;
-
-	if (gCurrentMove == MOVE_VENOSHOCK && defender->status1 & (STATUS_POISON | STATUS_TOXIC_POISON))
-		spAttack *= 2;
-	if (gCurrentMove == MOVE_BRINE && defender->hp *2 <= defender->maxHP)
-		spAttack *= 2;
-	if (gCurrentMove == MOVE_HEX && defender->status1)
-		spAttack *= 2;
-	if (gCurrentMove == MOVE_KNOCK_OFF && defender->item && !gWishFutureKnock.knockedOffPokes[bankDef])
-		attack = (attack * 3) / 2;
-	if (gCurrentMove == MOVE_ACROBATICS && !(attacker->item))
-		attack *= 2;
     
     if (moveClass == 0)
     {

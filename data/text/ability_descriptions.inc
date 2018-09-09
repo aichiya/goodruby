@@ -316,6 +316,9 @@ gAbilityDescription_WonderSkin:
 gAbilityDescription_SandForce:
 	.string "Boosts power in sandstorm.$"
 
+gAbilityDescription_Technician:
+	.string "Boosts weaker moves.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -426,7 +429,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_DrySkin
 	.4byte gAbilityDescription_WonderSkin
 	.4byte gAbilityDescription_SandForce
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Technician
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
