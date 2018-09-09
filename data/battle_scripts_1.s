@@ -681,9 +681,17 @@ BattleScript_EffectMultiHit: @ 81D72ED
 	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
 	attackstring
 	ppreduce
+	jumpifability USER, ABILITY_SKILL_LINK, BattleScript_MultiHitSkillLink
 	setmultihitcounter 0
 	initmultihitstring
 	setbyte sMULTIHIT_EFFECT, 0
+	goto BattleScript_MultiHitLoop
+
+BattleScript_MultiHitSkillLink:
+	setmultihitcounter 5
+	initmultihitstring
+	setbyte sMULTIHIT_EFFECT, 0
+	goto BattleScript_MultiHitLoop
 
 BattleScript_MultiHitLoop: @ 81D7300
 	jumpifhasnohp USER, BattleScript_MultiHitEnd

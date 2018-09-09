@@ -114,7 +114,7 @@ gAbilityNames:: @ 81FA248
 	.string "Steadfast$", 13
 	.string "Analytic$", 13
 	.string "Poison Touch$", 13
-	.string "SKILL LINK$", 13
+	.string "Skill Link$", 13
 	.string "OVERCOAT$", 13
 	.string "CURSED BODY$", 13
 	.string "FOREWARN$", 13

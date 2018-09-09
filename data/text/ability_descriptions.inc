@@ -337,6 +337,9 @@ gAbilityDescription_Analytic:
 gAbilityDescription_PoisonTouch:
 	.string "Poisons foe when striking.$"
 
+gAbilityDescription_SkillLink:
+	.string "Maximizes multi-hit moves.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -455,7 +458,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Steadfast
 	.4byte gAbilityDescription_Analytic
 	.4byte gAbilityDescription_PoisonTouch
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_SkillLink
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
