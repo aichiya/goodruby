@@ -349,6 +349,7 @@ BattleScript_EffectSleep: @ 81D6F81
 	jumpifmove MOVE_SING, BattleScript_DoSleep
 	jumpifmove MOVE_HYPNOSIS, BattleScript_DoSleep
 	jumpiftype TARGET, TYPE_GRASS, BattleScript_NotAffected
+	jumpifability TARGET, ABILITY_OVERCOAT, BattleScript_NotAffected
 	
 BattleScript_DoSleep:
 	jumpifstatus2 TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
@@ -1040,6 +1041,7 @@ BattleScript_EffectSpeedDown2: @ 81D776C
 	jumpifmove MOVE_SCARY_FACE, BattleScript_DoSpeedDown2
 	jumpifmove MOVE_STRING_SHOT, BattleScript_DoSpeedDown2
 	jumpiftype TARGET, TYPE_GRASS, BattleScript_CottonSporeFail
+	jumpifability TARGET, ABILITY_OVERCOAT, BattleScript_CottonSporeFail
 
 BattleScript_DoSpeedDown2:
 	setstatchanger SPEED, 2, TRUE
@@ -1078,6 +1080,7 @@ BattleScript_EffectPoison: @ 81D7795
 	ppreduce
 	jumpifmove MOVE_POISON_GAS, BattleScript_DoPoison
 	jumpiftype TARGET, TYPE_GRASS, BattleScript_NotAffected
+	jumpifability TARGET, ABILITY_OVERCOAT, BattleScript_NotAffected
 	
 BattleScript_DoPoison:
 	jumpifability TARGET, ABILITY_IMMUNITY, BattleScript_ImmunityProtected
@@ -1104,6 +1107,7 @@ BattleScript_EffectParalyze: @ 81D77F6
 	jumpifmove MOVE_GLARE, BattleScript_DoParalyze
 	jumpifmove MOVE_THUNDER_WAVE, BattleScript_DoParalyze
 	jumpiftype TARGET, TYPE_GRASS, BattleScript_NotAffected
+	jumpifability TARGET, ABILITY_OVERCOAT, BattleScript_NotAffected
 
 BattleScript_DoParalyze:
 	jumpifability TARGET, ABILITY_LIMBER, BattleScript_LimberProtected

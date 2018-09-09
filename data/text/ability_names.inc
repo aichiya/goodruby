@@ -115,7 +115,7 @@ gAbilityNames:: @ 81FA248
 	.string "Analytic$", 13
 	.string "Poison Touch$", 13
 	.string "Skill Link$", 13
-	.string "OVERCOAT$", 13
+	.string "Overcoat$", 13
 	.string "CURSED BODY$", 13
 	.string "FOREWARN$", 13
 	.string "WEAK ARMOR$", 13

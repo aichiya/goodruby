@@ -9506,7 +9506,7 @@ static void atk96_weatherdamage(void)
             if (gBattleMons[gBankAttacker].type1 != TYPE_ROCK && gBattleMons[gBankAttacker].type1 != TYPE_STEEL && gBattleMons[gBankAttacker].type1 != TYPE_GROUND
              && gBattleMons[gBankAttacker].type2 != TYPE_ROCK && gBattleMons[gBankAttacker].type2 != TYPE_STEEL && gBattleMons[gBankAttacker].type2 != TYPE_GROUND
 			 && gBattleMons[gBankAttacker].ability != ABILITY_SAND_RUSH && gBattleMons[gBankAttacker].ability != ABILITY_MAGIC_GUARD
-			 && gBattleMons[gBankAttacker].ability != ABILITY_SAND_FORCE
+			 && gBattleMons[gBankAttacker].ability != ABILITY_SAND_FORCE && gBattleMons[gBankAttacker].ability != ABILITY_OVERCOAT
              && gBattleMons[gBankAttacker].ability != ABILITY_SAND_VEIL && !(gStatuses3[gBankAttacker] & STATUS3_UNDERGROUND) && !(gStatuses3[gBankAttacker] & STATUS3_UNDERWATER))
             {
                 gBattleMoveDamage = gBattleMons[gBankAttacker].maxHP / 16;
@@ -9521,7 +9521,7 @@ static void atk96_weatherdamage(void)
         if (gBattleWeather & WEATHER_HAIL)
         {
             if (gBattleMons[gBankAttacker].type1 != TYPE_ICE && gBattleMons[gBankAttacker].type2 != TYPE_ICE && gBattleMons[gBankAttacker].ability != ABILITY_ICE_BODY &&
-			    gBattleMons[gBankAttacker].ability != ABILITY_MAGIC_GUARD &&
+			    gBattleMons[gBankAttacker].ability != ABILITY_MAGIC_GUARD && gBattleMons[gBankAttacker].ability != ABILITY_OVERCOAT &&
 			    !(gStatuses3[gBankAttacker] & STATUS3_UNDERGROUND) && !(gStatuses3[gBankAttacker] & STATUS3_UNDERWATER))
             {
                 gBattleMoveDamage = gBattleMons[gBankAttacker].maxHP / 16;

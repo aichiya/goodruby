@@ -2273,6 +2273,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 		    && !gProtectStructs[gBankAttacker].confusionSelfDmg
 		    && (gSpecialStatuses[gBankTarget].moveturnLostHP_physical || gSpecialStatuses[gBankTarget].moveturnLostHP_special)
 			&& gBattleMons[gBankAttacker].type1 != TYPE_GRASS && gBattleMons[gBankAttacker].type2 != TYPE_GRASS
+			&& gBattleMons[gBankAttacker].ability != ABILITY_OVERCOAT
 		    && (gBattleMoves[move].flags & F_MAKES_CONTACT))
 		    {
 			do

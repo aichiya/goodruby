@@ -340,6 +340,9 @@ gAbilityDescription_PoisonTouch:
 gAbilityDescription_SkillLink:
 	.string "Maximizes multi-hit moves.$"
 
+gAbilityDescription_Overcoat:
+	.string "Blocks sand, hail, powder.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -459,7 +462,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Analytic
 	.4byte gAbilityDescription_PoisonTouch
 	.4byte gAbilityDescription_SkillLink
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Overcoat
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
