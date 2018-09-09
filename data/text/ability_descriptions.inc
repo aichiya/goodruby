@@ -334,6 +334,9 @@ gAbilityDescription_Steadfast:
 gAbilityDescription_Analytic:
 	.string "Stronger when moving later.$"
 
+gAbilityDescription_PoisonTouch:
+	.string "Poisons foe when striking.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -451,7 +454,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Justified
 	.4byte gAbilityDescription_Steadfast
 	.4byte gAbilityDescription_Analytic
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_PoisonTouch
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented

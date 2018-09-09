@@ -2877,6 +2877,28 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
                 }
             }
             break;
+		case ABILITYEFFECT_RIDER: // 19
+			switch (gLastUsedAbility)
+			{
+				case ABILITY_POISON_TOUCH:
+				{
+					if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+					 && gBattleMons[gBankTarget].hp != 0
+					 && !gProtectStructs[gBankAttacker].confusionSelfDmg
+					 && (gSpecialStatuses[gBankTarget].moveturnLostHP_physical || gSpecialStatuses[gBankTarget].moveturnLostHP_special)
+					 && (gBattleMoves[move].flags & F_MAKES_CONTACT)
+					 && (Random() % 10) < 3)
+					{
+						gBattleCommunication[MOVE_EFFECT_BYTE] = 0x2;
+						BattleScriptPushCursor();
+						gBattlescriptCurrInstr = BattleScript_ApplySecondaryEffect;
+						gHitMarker |= HITMARKER_IGNORE_SAFEGUARD;
+						effect++;
+					}
+					break;
+				}
+			}
+			break;
         }
         if (effect && caseID < 0xC && gLastUsedAbility != 0xFF)
             RecordAbilityBattle(bank, gLastUsedAbility);

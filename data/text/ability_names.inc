@@ -113,7 +113,7 @@ gAbilityNames:: @ 81FA248
 	.string "Justified$", 13
 	.string "Steadfast$", 13
 	.string "Analytic$", 13
-	.string "POISON TOUCH$", 13
+	.string "Poison Touch$", 13
 	.string "SKILL LINK$", 13
 	.string "OVERCOAT$", 13
 	.string "CURSED BODY$", 13

@@ -5057,7 +5057,7 @@ _080217E6:\n\
 
 #endif // NONMATCHING
 
-#define ATK49_LAST_CASE 17
+#define ATK49_LAST_CASE 18
 
 static void atk49_moveend(void)
 {
@@ -5115,28 +5115,33 @@ static void atk49_moveend(void)
             }
             gBattleStruct->cmd49StateTracker++;
             break;
-        case 2: //target synchronize
+		case 2: //attack rider abilities
+            if (AbilityBattleEffects(ABILITYEFFECT_RIDER, gBankAttacker, 0, 0, 0))
+                effect = 1;
+            gBattleStruct->cmd49StateTracker++;
+            break;
+        case 3: //target synchronize
             if (AbilityBattleEffects(ABILITYEFFECT_SYNCHRONIZE, gBankTarget, 0, 0, 0))
                 effect = 1;
             gBattleStruct->cmd49StateTracker++;
             break;
-        case 3: //contact abilities
+        case 4: //defender contact abilities
             if (AbilityBattleEffects(ABILITYEFFECT_CONTACT, gBankTarget, 0, 0, 0))
                 effect = 1;
             gBattleStruct->cmd49StateTracker++;
             break;
-        case 4: //status immunities
+        case 5: //status immunities
             if (AbilityBattleEffects(ABILITYEFFECT_IMMUNITY, 0, 0, 0, 0))
                 effect = 1; //it loops through 4 banks, so we increment after its done with all banks
             else
                 gBattleStruct->cmd49StateTracker++;
             break;
-        case 5: //attacker synchronize
+        case 6: //attacker synchronize
             if (AbilityBattleEffects(ABILITYEFFECT_ATK_SYNCHRONIZE, gBankAttacker, 0, 0, 0))
                 effect = 1;
             gBattleStruct->cmd49StateTracker++;
             break;
-        case 6: //update choice band move
+        case 7: //update choice band move
             if (gHitMarker & HITMARKER_OBEYS && hold_effect_atk == HOLD_EFFECT_CHOICE_BAND
                 && gChosenMove != MOVE_STRUGGLE && (*choiced_move_atk == 0 || *choiced_move_atk == 0xFFFF)
                 && gChosenMove != MOVE_BATON_PASS && !(gMoveResultFlags & MOVE_RESULT_NO_EFFECT))
@@ -5148,7 +5153,7 @@ static void atk49_moveend(void)
             }
             gBattleStruct->cmd49StateTracker++;
             break;
-        case 7: //changed held items
+        case 8: //changed held items
             for (i = 0; i < gBattlersCount; i++)
             {
 				u16* changedItem = &gBattleStruct->changedItems[i];
@@ -5159,7 +5164,7 @@ static void atk49_moveend(void)
             }
             gBattleStruct->cmd49StateTracker++;
             break;
-        case 8: //make sprite invisible
+        case 9: //make sprite invisible
             if (gStatuses3[gBankAttacker] & (STATUS3_SEMI_INVULNERABLE)
                 && !(gHitMarker & HITMARKER_NO_ANIMATIONS))
             {
@@ -5169,7 +5174,7 @@ static void atk49_moveend(void)
             }
             gBattleStruct->cmd49StateTracker++;
             break;
-        case 9: //semi-invlurneable attacker make visible
+        case 10: //semi-invlurneable attacker make visible
             if ((gMoveResultFlags & MOVE_RESULT_NO_EFFECT) || !(gStatuses3[gBankAttacker] & (STATUS3_SEMI_INVULNERABLE))
                 || WasUnableToUseMove(gBankAttacker))
                 {
@@ -5181,7 +5186,7 @@ static void atk49_moveend(void)
                 }
             gBattleStruct->cmd49StateTracker++;
             break;
-        case 10: //semi-invulnerable target make visible
+        case 11: //semi-invulnerable target make visible
             if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT) || !(gStatuses3[gBankTarget] & (STATUS3_SEMI_INVULNERABLE))
                 || WasUnableToUseMove(gBankTarget))
                 {
@@ -5193,19 +5198,19 @@ static void atk49_moveend(void)
                 }
             gBattleStruct->cmd49StateTracker++;
             break;
-        case 11: // item effects for all battlers
+        case 12: // item effects for all battlers
 			if (ItemBattleEffects(3, 0, FALSE))
 				effect = TRUE;
 			else
 				gBattleStruct->cmd49StateTracker++;
 			break;
-		case 12: // king's rock, shell bell
+		case 13: // king's rock, shell bell
 			if (ItemBattleEffects(4, 0, FALSE))
 				effect = TRUE;
 			else
 				gBattleStruct->cmd49StateTracker++;
 			break;
-		case 13: // update substitute
+		case 14: // update substitute
 			for (i = 0; i < gBattlersCount; i++)
 			{
 				if (gDisableStructs[i].substituteHP == 0)
@@ -5213,7 +5218,7 @@ static void atk49_moveend(void)
 			}
 			gBattleStruct->cmd49StateTracker++;
 			break;
-		case 14: // weird
+		case 15: // weird
 			if (gHitMarker & HITMARKER_PURSUIT_TRAP)
 			{
 				gActiveBattler = gBankAttacker;
@@ -5262,7 +5267,7 @@ static void atk49_moveend(void)
 			}
 			gBattleStruct->cmd49StateTracker++;
 			break;
-		case 15: // mirror move
+		case 16: // mirror move
 			if (!(gAbsentBattlerFlags & gBitTable[gBankAttacker]) && !(gBattleStruct->unk160A6 & gBitTable[gBankAttacker])
 				&& gBattleMoves[last_move].flags & F_MIRROR_MOVE_COMPATIBLE && gHitMarker & HITMARKER_OBEYS
 				&& gBankAttacker != gBankTarget &&  !(gHitMarker & HITMARKER_FAINTED(gBankTarget))
@@ -5280,7 +5285,7 @@ static void atk49_moveend(void)
 			}
 			gBattleStruct->cmd49StateTracker++;
 			break;
-		case 16:
+		case 17:
 			if (!(gHitMarker & HITMARKER_UNABLE_TO_USE_MOVE) && gBattleTypeFlags & BATTLE_TYPE_DOUBLE
 			&& !gProtectStructs[gBankAttacker].chargingTurn && gBattleMoves[gCurrentMove].target == TARGET_BOTH_ENEMIES
 			&& !(gHitMarker & HITMARKER_NO_ATTACKSTRING))
