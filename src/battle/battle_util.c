@@ -2531,6 +2531,31 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 					effect++;
 				 }
 				break;
+			case ABILITY_AFTERMATH:
+                if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+                 && gBattleMons[gBankAttacker].hp != 0
+                 && gBattleMons[gBankTarget].hp == 0
+                 && !gProtectStructs[gBankAttacker].confusionSelfDmg
+                 && (gSpecialStatuses[gBankTarget].moveturnLostHP_physical || gSpecialStatuses[gBankTarget].moveturnLostHP_special)
+                 && (gBattleMoves[move].flags & F_MAKES_CONTACT))
+                {
+					u8 j;
+					for (j = 0; j < gBattlersCount; j++)
+					{
+						if (gBattleMons[j].ability == ABILITY_DAMP)
+							break;
+					}
+					if (j == gBattlersCount)
+					{
+						gBattleMoveDamage = gBattleMons[gBankAttacker].maxHP / 4;
+						if (gBattleMoveDamage == 0)
+							gBattleMoveDamage = 1;
+						BattleScriptPushCursor();
+						gBattlescriptCurrInstr = BattleScript_RoughSkinActivates;
+						effect++;
+					}
+                }
+                break;
 		}
             break;
         case ABILITYEFFECT_IMMUNITY: // 5

@@ -350,7 +350,10 @@ gAbilityDescription_Forewarn:
 	.string "Determine a foe’s move.$"
 
 gAbilityDescription_WeakArmor:
-	.string "Sheds Defense on physicals.$"
+	.string "Sheds Defense for Speed.$"
+
+gAbilityDescription_Aftermath:
+	.string "Explodes on fainting.$"
 
 
 	.align 2
@@ -475,7 +478,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_CursedBody
 	.4byte gAbilityDescription_Forewarn
 	.4byte gAbilityDescription_WeakArmor
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Aftermath
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented

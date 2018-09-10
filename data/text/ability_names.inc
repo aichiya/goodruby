@@ -119,7 +119,7 @@ gAbilityNames:: @ 81FA248
 	.string "Cursed Body$", 13
 	.string "Forewarn$", 13
 	.string "Weak Armor$", 13
-	.string "AFTERMATH$", 13
+	.string "Aftermath$", 13
 	.string "HARVEST$", 13
 	.string "RECKLESS$", 13
 	.string "IRON FIST$", 13
