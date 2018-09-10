@@ -213,6 +213,7 @@ extern u8 BattleScript_BerryCureChosenStatusRet[]; //berry cure any status retur
 
 extern u8 BattleScript_ItemHealHP_Ret[];
 extern u8 BattleScript_AnticipationShudder[];
+extern u8 BattleScript_Forewarn[];
 
 extern u8 gUnknown_081D995F[]; //disobedient while asleep
 extern u8 BattleScript_IgnoresAndUsesRandomMove[]; //disobedient, uses a random move
@@ -1970,6 +1971,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
                 break;
 			case ABILITY_ANTICIPATION:
             case ABILITY_TRACE:
+            case ABILITY_FOREWARN:
                 if (!(gSpecialStatuses[bank].traced))
                 {
                     gStatuses3[bank] |= STATUS3_TRACE;
@@ -2780,6 +2782,140 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
                         gBattleStruct->scriptingActive = i;
 						break;
 					}
+				}
+				else if (gBattleMons[i].ability == ABILITY_FOREWARN && (gStatuses3[i] & STATUS3_TRACE))
+				{
+                    u8 target2;
+					u8 power;
+					u8 j;
+					u8 whichMove;
+					u16 bestMove = 0;
+					u8 numBestMoves = 0;
+					u8 bestPower = 0;
+                    side = (GetBattlerPosition(i) ^ 1) & 1;
+                    target1 = GetBattlerAtPosition(side);
+                    target2 = GetBattlerAtPosition(side + 2);
+					// Here we go.
+					if (gBattleMons[target1].hp != 0)
+					{
+						for (j = 0; j < 4; j++)
+						{
+							move = gBattleMons[target1].moves[j];
+							power = gBattleMoves[move].power;
+							if (gBattleMoves[move].effect == EFFECT_OHKO)
+								power = 160;
+							if (move == MOVE_COUNTER || move == MOVE_MIRROR_COAT || move == MOVE_METAL_BURST)
+								power = 160;
+							if (power <= 1 && gBattleMoves[move].moveClass != CLASS_STATUS)
+								power = 80;
+							if (power <= 1)
+								power = 0;
+							if (move != 0 && power > bestPower)
+							{
+								numBestMoves = 1;
+								bestPower = power;
+							}
+							else if (move != 0 && power == bestPower)
+							{
+								numBestMoves++;
+							}
+						}
+					}
+					if (gBattleMons[target2].hp != 0)
+					{
+						for (j = 0; j < 4; j++)
+						{
+							move = gBattleMons[target2].moves[j];
+							power = gBattleMoves[move].power;
+							if (gBattleMoves[move].effect == EFFECT_OHKO)
+								power = 160;
+							if (move == MOVE_COUNTER || move == MOVE_MIRROR_COAT || move == MOVE_METAL_BURST)
+								power = 160;
+							if (power <= 1 && gBattleMoves[move].moveClass != CLASS_STATUS)
+								power = 80;
+							if (power <= 1)
+								power = 0;
+							if (move != 0 && power > bestPower)
+							{
+								numBestMoves = 1;
+								bestPower = power;
+							}
+							else if (move != 0 && power == bestPower)
+							{
+								numBestMoves++;
+							}
+						}
+					}
+					
+					// We know how many moves tie for highest power.
+					// Pick one randomly, then step through the moves again counting to it.
+					whichMove = Random() % numBestMoves;
+					if (gBattleMons[target1].hp != 0)
+					{
+						for (j = 0; j < 4 && !bestMove; j++)
+						{
+							move = gBattleMons[target1].moves[j];
+							power = gBattleMoves[move].power;
+							if (gBattleMoves[move].effect == EFFECT_OHKO)
+								power = 160;
+							if (move == MOVE_COUNTER || move == MOVE_MIRROR_COAT || move == MOVE_METAL_BURST)
+								power = 160;
+							if (power <= 1 && gBattleMoves[move].moveClass != CLASS_STATUS)
+								power = 80;
+							if (power <= 1)
+								power = 0;
+							if (move != 0 && power == bestPower)
+							{
+								if (whichMove > 0)
+									whichMove--;
+								else
+								{
+									whichMove = -1;
+									bestMove = move;
+								}
+							}
+						}
+					}
+					if (gBattleMons[target2].hp != 0 && !bestMove)
+					{
+						for (j = 0; j < 4 && !bestMove; j++)
+						{
+							move = gBattleMons[target2].moves[j];
+							power = gBattleMoves[move].power;
+							if (gBattleMoves[move].effect == EFFECT_OHKO)
+								power = 160;
+							if (move == MOVE_COUNTER || move == MOVE_MIRROR_COAT || move == MOVE_METAL_BURST)
+								power = 160;
+							if (power <= 1 && gBattleMoves[move].moveClass != CLASS_STATUS)
+								power = 80;
+							if (power <= 1)
+								power = 0;
+							if (move != 0 && power == bestPower)
+							{
+								if (whichMove > 0)
+									whichMove--;
+								else
+								{
+									whichMove = -1;
+									bestMove = move;
+									break;
+								}
+							}
+						}
+					}
+					
+					// Okay, we've picked a move.
+					gBattleTextBuff1[0] = 0xFD;
+					gBattleTextBuff1[1] = 2;
+					gBattleTextBuff1[2] = bestMove;
+					gBattleTextBuff1[3] = bestMove >> 8; 
+					gBattleTextBuff1[4] = 0xFF;
+					
+					BattleScriptPushCursorAndCallback(BattleScript_Forewarn);
+					gStatuses3[i] &= ~(STATUS3_TRACE);
+					gBattleStruct->scriptingActive = i;
+					effect++;
+					break;
 				}
             }
             break;

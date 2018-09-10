@@ -400,3 +400,4 @@
 	enum BATTLE_TEXT_AngerPoint
 	enum BATTLE_TEXT_Justified
 	enum BATTLE_TEXT_CursedBody
+	enum BATTLE_TEXT_Forewarn

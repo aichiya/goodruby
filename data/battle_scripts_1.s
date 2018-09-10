@@ -4115,7 +4115,12 @@ BattleScript_AnticipationShudder::
 	printstring BATTLE_TEXT_Shuddered
 	waitmessage 64
 	end3
-	
+
+BattleScript_Forewarn::
+	pause 32
+	printstring BATTLE_TEXT_Forewarn
+	waitmessage 64
+	end3
 
 BattleScript_RainDishActivates:: @ 81D9730
 	printstring BATTLE_TEXT_RestoredHPByItem
