@@ -401,3 +401,7 @@
 	enum BATTLE_TEXT_Justified
 	enum BATTLE_TEXT_CursedBody
 	enum BATTLE_TEXT_Forewarn
+	enum BATTLE_TEXT_WeakArmorDefDown
+	enum BATTLE_TEXT_WeakArmorMinDef
+	enum BATTLE_TEXT_WeakArmorSpeedUp
+	enum BATTLE_TEXT_WeakArmorMaxSpeed

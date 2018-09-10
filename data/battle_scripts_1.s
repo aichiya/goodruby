@@ -6445,3 +6445,35 @@ BattleScriptFinishUTurn:
 	setbyte sMOVEEND_STATE, 0
 	moveend 0, 0
 	end
+
+BattleScript_WeakArmorActivates::
+	jumpifstat TARGET, EQUAL, DEFENSE, 0, BattleScript_WeakArmorMinDefense
+	setbyte sANIM_ARG1, 0x17
+	playanimation TARGET, B_ANIM_STATS_CHANGE, sANIM_ARG1
+	setstatchanger DEFENSE, 1, TRUE
+	statbuffchange 0xA1, BattleScript_WeakArmorHandleSpeed
+	printstring BATTLE_TEXT_WeakArmorDefDown
+	waitmessage 64
+	goto BattleScript_WeakArmorHandleSpeed
+
+BattleScript_WeakArmorMinDefense:
+	printstring BATTLE_TEXT_WeakArmorMinDef
+	waitmessage 64
+
+BattleScript_WeakArmorHandleSpeed:
+	jumpifstat TARGET, EQUAL, SPEED, 12, BattleScript_WeakArmorMaxSpeed
+	setbyte sANIM_ARG1, 0x29
+	playanimation TARGET, B_ANIM_STATS_CHANGE, sANIM_ARG1
+	setstatchanger SPEED, 2, FALSE
+	statbuffchange 0xA1, BattleScript_WeakArmorEnd
+	printstring BATTLE_TEXT_WeakArmorSpeedUp
+	waitmessage 64
+	goto BattleScript_WeakArmorEnd
+
+BattleScript_WeakArmorMaxSpeed:
+	printstring BATTLE_TEXT_WeakArmorMaxSpeed
+	waitmessage 64
+
+BattleScript_WeakArmorEnd:
+	return
+

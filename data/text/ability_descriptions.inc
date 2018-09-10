@@ -349,6 +349,9 @@ gAbilityDescription_CursedBody:
 gAbilityDescription_Forewarn:
 	.string "Determine a foe’s move.$"
 
+gAbilityDescription_WeakArmor:
+	.string "Sheds Defense on physicals.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -471,7 +474,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Overcoat
 	.4byte gAbilityDescription_CursedBody
 	.4byte gAbilityDescription_Forewarn
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_WeakArmor
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented

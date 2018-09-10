@@ -180,6 +180,7 @@ extern u8 BattleScript_CuteCharmActivates[];
 extern u8 BattleScript_AngerPointActivates[];
 extern u8 BattleScript_JustifiedActivates[];
 extern u8 BattleScript_CursedBodyActivates[];
+extern u8 BattleScript_WeakArmorActivates[];
 extern u8 BattleScript_AbilityCuredStatus[]; //ability status clear
 extern u8 BattleScript_SynchronizeActivates[];
 extern u8 gUnknown_081D978C[]; //intimidate1
@@ -2517,6 +2518,18 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 						effect++;
 					}
 				}
+				break;
+			case ABILITY_WEAK_ARMOR:
+				if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+				 && (gBattleMoves[move].moveClass == CLASS_PHYSICAL)
+				 && !gProtectStructs[gBankAttacker].confusionSelfDmg
+				 && gBattleMons[gBankTarget].hp != 0
+				 && (gSpecialStatuses[gBankTarget].moveturnLostHP_physical))
+				 {
+					BattleScriptPushCursor();
+					gBattlescriptCurrInstr = BattleScript_WeakArmorActivates;
+					effect++;
+				 }
 				break;
 		}
             break;
