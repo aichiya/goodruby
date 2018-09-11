@@ -364,6 +364,9 @@ gAbilityDescription_Reckless:
 gAbilityDescription_IronFist:
 	.string "Powers up punching moves.$"
 
+gAbilityDescription_Unburden:
+	.string "Speeds up on item loss.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -491,7 +494,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Harvest
 	.4byte gAbilityDescription_Reckless
 	.4byte gAbilityDescription_IronFist
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unburden
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented

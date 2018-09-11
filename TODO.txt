@@ -10,6 +10,7 @@
 --figure out what's going on with razor wind/sky attack crit
 --make twineedle roll on both hits
 --Things that alter abilities (Skill Swap) reveal abilities
+--Unburden will not proc if Trick removes an item
 
 --update move targetting for surf, etc.
 

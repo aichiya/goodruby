@@ -7578,6 +7578,7 @@ void atk6A_removeitem(void)
     USED_HELD_ITEMS(gActiveBattler) = gBattleMons[gActiveBattler].item;
 
     gBattleMons[gActiveBattler].item = 0;
+	gBattleMons[gActiveBattler].itemRemoved = 1;
     EmitSetMonData(0, REQUEST_HELDITEM_BATTLE, 0, 2, &gBattleMons[gActiveBattler].item);
     MarkBufferBankForExecution(gActiveBattler);
     gBattlescriptCurrInstr += 2;

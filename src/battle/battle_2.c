@@ -3761,6 +3761,7 @@ void SwitchInClearSetData(void)
         gBattleMons[gActiveBattler].status2 = 0;
         gStatuses3[gActiveBattler] = 0;
     }
+	gBattleMons[gActiveBattler].itemRemoved = 0;
 
     for (i = 0; i < gBattlersCount; i++)
     {
@@ -5971,6 +5972,9 @@ u32 GetModifiedSpeed(u8 bank)
 		else if (gBattleMons[bank].ability == ABILITY_SAND_RUSH && (gBattleWeather & WEATHER_SANDSTORM_ANY))
 			speed *= 2;
 	}
+	
+	if (gBattleMons[bank].ability == ABILITY_UNBURDEN && gBattleMons[bank].item == 0 && gBattleMons[bank].itemRemoved)
+		speed *= 2;
 	
 	if (gSideTimers[GetBattlerSide(bank)].tailwindTimer > 0)
 		speed *= 2;
