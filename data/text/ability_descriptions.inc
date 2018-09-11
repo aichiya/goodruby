@@ -358,6 +358,9 @@ gAbilityDescription_Aftermath:
 gAbilityDescription_Harvest:
 	.string "May recycle berries.$"
 
+gAbilityDescription_Reckless:
+	.string "Powers up recoil moves.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -483,7 +486,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_WeakArmor
 	.4byte gAbilityDescription_Aftermath
 	.4byte gAbilityDescription_Harvest
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Reckless
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented

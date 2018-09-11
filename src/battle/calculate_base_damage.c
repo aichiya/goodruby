@@ -277,6 +277,14 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
 			}
 		}
 	}
+	if (attacker->ability == ABILITY_RECKLESS && move != MOVE_STRUGGLE &&
+		(gBattleMoves[move].effect == EFFECT_RECOIL_IF_MISS ||
+		 gBattleMoves[move].effect == EFFECT_RECOIL ||
+		 gBattleMoves[move].effect == EFFECT_DOUBLE_EDGE))
+	{
+		attack = (120 * attack) / 100;
+		spAttack = (120 * spAttack) / 100;
+	}
 	
     if (defenderAbility == ABILITY_MARVEL_SCALE && defender->status1)
         defense = (150 * defense) / 100;
