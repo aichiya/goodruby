@@ -1302,15 +1302,21 @@ bool8 HandleWishPerishSongOnTurnEnd(void)
                 gBattleStruct->sub80170DC_Bank++;
                 if (gWishFutureKnock.futureSightCounter[gActiveBattler] && --gWishFutureKnock.futureSightCounter[gActiveBattler] == 0 && gBattleMons[gActiveBattler].hp)
                 {
-                    if (gWishFutureKnock.futureSightMove[gActiveBattler] == MOVE_FUTURE_SIGHT)
-                        gBattleCommunication[MULTISTRING_CHOOSER] = 0;
-                    else //Doom Desire
-                        gBattleCommunication[MULTISTRING_CHOOSER] = 1;
+                    gBattleCommunication[MULTISTRING_CHOOSER] = gWishFutureKnock.futureSightMove[gActiveBattler];
                     gBattleTextBuff1[0] = 0xFD;
                     gBattleTextBuff1[1] = 2;
-                    gBattleTextBuff1[2] = gWishFutureKnock.futureSightMove[gActiveBattler];
-                    gBattleTextBuff1[3] = gWishFutureKnock.futureSightMove[gActiveBattler] >> 8;
                     gBattleTextBuff1[4] = 0xFF;
+					if (gWishFutureKnock.futureSightMove[gActiveBattler] == 0)
+					{
+						gBattleTextBuff1[2] = MOVE_FUTURE_SIGHT;
+						gBattleTextBuff1[3] = MOVE_FUTURE_SIGHT >> 8;
+					}
+					else
+					{
+						gBattleTextBuff1[2] = (u8)MOVE_DOOM_DESIRE;
+						gBattleTextBuff1[3] = MOVE_DOOM_DESIRE >> 8;
+					}
+					
                     gBankTarget = gActiveBattler;
                     gBankAttacker = gWishFutureKnock.futureSightAttacker[gActiveBattler];
                     gBattleMoveDamage = gWishFutureKnock.futureSightDmg[gActiveBattler];

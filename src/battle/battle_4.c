@@ -11218,7 +11218,10 @@ static void atkC3_trysetfutureattack(void)
     }
     else
     {
-        gWishFutureKnock.futureSightMove[gBankTarget] = gCurrentMove;
+		if (gCurrentMove == MOVE_FUTURE_SIGHT)
+			gWishFutureKnock.futureSightMove[gBankTarget] = 0;
+		else // Doom Desire
+			gWishFutureKnock.futureSightMove[gBankTarget] = 1;
         gWishFutureKnock.futureSightAttacker[gBankTarget] = gBankAttacker;
         gWishFutureKnock.futureSightCounter[gBankTarget] = 3;
         gWishFutureKnock.futureSightDmg[gBankTarget] = CalculateBaseDamage(&gBattleMons[gBankAttacker], &gBattleMons[gBankTarget], gCurrentMove,

@@ -516,12 +516,13 @@ struct WishFutureKnock
     u8 futureSightCounter[MAX_BATTLERS_COUNT];
     u8 futureSightAttacker[MAX_BATTLERS_COUNT];
     s32 futureSightDmg[MAX_BATTLERS_COUNT];
-    u16 futureSightMove[MAX_BATTLERS_COUNT];
+    u8 futureSightMove[MAX_BATTLERS_COUNT];
+    u8 berryEatenPokes[2];
+	u8 unused[2];
     u8 wishCounter[MAX_BATTLERS_COUNT];
     u8 wishUserID[MAX_BATTLERS_COUNT];
     u8 weatherDuration;
     u8 knockedOffPokes[2];
-    u8 berryEatenPokes[2];
 };
 
 extern struct BattleHistory unk_2016A00;
