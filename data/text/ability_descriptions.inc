@@ -355,6 +355,9 @@ gAbilityDescription_WeakArmor:
 gAbilityDescription_Aftermath:
 	.string "Explodes on fainting.$"
 
+gAbilityDescription_Harvest:
+	.string "May recycle berries.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -479,7 +482,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Forewarn
 	.4byte gAbilityDescription_WeakArmor
 	.4byte gAbilityDescription_Aftermath
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Harvest
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented

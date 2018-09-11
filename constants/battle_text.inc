@@ -405,3 +405,4 @@
 	enum BATTLE_TEXT_WeakArmorMinDef
 	enum BATTLE_TEXT_WeakArmorSpeedUp
 	enum BATTLE_TEXT_WeakArmorMaxSpeed
+	enum BATTLE_TEXT_Harvest

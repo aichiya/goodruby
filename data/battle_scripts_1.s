@@ -4104,6 +4104,11 @@ BattleScript_SpeedBoostActivates:: @ 81D9718
 	waitmessage 64
 	end3
 
+BattleScript_HarvestActivates::
+	printstring BATTLE_TEXT_Harvest
+	waitmessage 64
+	end3
+
 BattleScript_TraceActivates:: @ 81D9726
 	pause 32
 	printstring BATTLE_TEXT_Traced

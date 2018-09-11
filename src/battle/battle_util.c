@@ -164,6 +164,7 @@ extern u8 BattleScript_CastformChange[];
 extern u8 BattleScript_RainDishActivates[];
 extern u8 BattleScript_ShedSkinActivates[];
 extern u8 BattleScript_SpeedBoostActivates[];
+extern u8 BattleScript_HarvestActivates[];
 extern u8 BattleScript_SoundproofProtected[];
 extern u8 BattleScript_MoveHPDrain[];
 extern u8 BattleScript_MoveHPDrain_PPLoss[];
@@ -2119,6 +2120,25 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
                 case ABILITY_TRUANT:
                     gDisableStructs[gBankAttacker].truantCounter ^= 1;
                     break;
+				case ABILITY_HARVEST:
+					{
+						u8 sun = WEATHER_HAS_EFFECT && (gBattleWeather & WEATHER_SUN_ANY);
+						u16* used_item = USED_HELD_ITEM(bank);
+						gActiveBattler = bank;
+						if (*used_item && gBattleMons[gActiveBattler].item == 0 && ItemId_GetPocket(*used_item) == 0x4 && (sun || (Random() & 0x1)))
+						{
+							gLastUsedItem = *used_item;
+							*used_item = 0;
+							gBattleMons[gActiveBattler].item = gLastUsedItem;
+							EmitSetMonData(0, REQUEST_HELDITEM_BATTLE, 0, 2, &gBattleMons[gActiveBattler].item);
+							MarkBufferBankForExecution(gActiveBattler);
+							
+							BattleScriptPushCursorAndCallback(BattleScript_HarvestActivates);
+							gBattleStruct->scriptingActive = gActiveBattler;
+							effect++;
+						}
+					}
+					break;
                 }
             }
             break;
