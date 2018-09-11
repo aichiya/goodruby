@@ -361,6 +361,9 @@ gAbilityDescription_Harvest:
 gAbilityDescription_Reckless:
 	.string "Powers up recoil moves.$"
 
+gAbilityDescription_IronFist:
+	.string "Powers up punching moves.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -487,7 +490,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Aftermath
 	.4byte gAbilityDescription_Harvest
 	.4byte gAbilityDescription_Reckless
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_IronFist
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented

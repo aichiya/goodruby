@@ -285,6 +285,11 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
 		attack = (120 * attack) / 100;
 		spAttack = (120 * spAttack) / 100;
 	}
+	if (attacker->ability == ABILITY_IRON_FIST && (gBattleMoves[move].flags & F_PUNCH))
+	{
+		attack = (120 * attack) / 100;
+		spAttack = (120 * spAttack) / 100;
+	}
 	
     if (defenderAbility == ABILITY_MARVEL_SCALE && defender->status1)
         defense = (150 * defense) / 100;
