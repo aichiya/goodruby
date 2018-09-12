@@ -370,6 +370,9 @@ gAbilityDescription_Unburden:
 gAbilityDescription_Healer:
 	.string "Heals suffering allies.$"
 
+gAbilityDescription_Scrappy:
+	.string "Ignores Ghost immunities.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -500,7 +503,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Unburden
 	.4byte gAbilityDescription_Healer
 	.4byte gAbilityDescription_Unimplemented
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Scrappy
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented

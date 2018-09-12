@@ -126,7 +126,7 @@ gAbilityNames:: @ 81FA248
 	.string "Unburden$", 13
 	.string "Healer$", 13
 	.string "LEAF GUARD$", 13
-	.string "SCRAPPY$", 13
+	.string "Scrappy$", 13
 	.string "FILTER$", 13
 	.string "MOXIE$", 13
 	.string "IMPOSTER$", 13

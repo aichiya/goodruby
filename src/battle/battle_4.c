@@ -1881,7 +1881,7 @@ static void ModulateDmgByType(u8 multiplier)
         gMoveResultFlags &= ~MOVE_RESULT_SUPER_EFFECTIVE;
         break;
 	case 1: // no effect unless foresight
-		if (gBattleMons[gBankTarget].status2 & STATUS2_FORESIGHT)
+		if (gBattleMons[gBankTarget].status2 & STATUS2_FORESIGHT || gBattleMons[gBankAttacker].ability == ABILITY_SCRAPPY)
 		{
 			multiplier = 10;
 			break;
@@ -2038,7 +2038,7 @@ static void CheckWonderGuardAndLevitate(void)
     }
 	
 	typemu = gTypeEffectiveness[move_type * 20  + gBattleMons[gBankTarget].type1];
-	if (typemu == 1 && !(gBattleMons[gBankTarget].status2 & STATUS2_FORESIGHT))
+	if (typemu == 1 && !(gBattleMons[gBankTarget].status2 & STATUS2_FORESIGHT || gBattleMons[gBankAttacker].ability == ABILITY_SCRAPPY))
 		typemu = 0;
 	else if (typemu == 2 && !(gStatuses3[gBankTarget] & STATUS3_MIRACLE_EYE))
 		typemu = 0;
@@ -2055,7 +2055,7 @@ static void CheckWonderGuardAndLevitate(void)
 		flags |= 1;
 	
 	typemu = gTypeEffectiveness[move_type * 20  + gBattleMons[gBankTarget].type2];
-	if (typemu == 1 && !(gBattleMons[gBankTarget].status2 & STATUS2_FORESIGHT))
+	if (typemu == 1 && !(gBattleMons[gBankTarget].status2 & STATUS2_FORESIGHT || gBattleMons[gBankAttacker].ability == ABILITY_SCRAPPY))
 		typemu = 0;
 	else if (typemu == 2 && !(gStatuses3[gBankTarget] & STATUS3_MIRACLE_EYE))
 		typemu = 0;
@@ -2090,7 +2090,7 @@ static void ModulateDmgByType2(u8 multiplier, u16 move, u8* flags) //a literal c
         *flags &= ~MOVE_RESULT_SUPER_EFFECTIVE;
         break;
 	case 1: //no effect unless foresight on target
-		if (gBattleMons[gBankTarget].status2 & STATUS2_FORESIGHT)
+		if (gBattleMons[gBankTarget].status2 & STATUS2_FORESIGHT || gBattleMons[gBankAttacker].ability == ABILITY_SCRAPPY)
 		{
 			multiplier = 10;
 			break;
@@ -5345,7 +5345,7 @@ static void atk4A_typecalc2(void)
     else
     {
 		typemu = gTypeEffectiveness[move_type * 20 + gBattleMons[gBankTarget].type1];
-		if (typemu == 1 && !(gBattleMons[gBankTarget].status2 & STATUS2_FORESIGHT))
+		if (typemu == 1 && !(gBattleMons[gBankTarget].status2 & STATUS2_FORESIGHT || gBattleMons[gBankAttacker].ability == ABILITY_SCRAPPY))
 			typemu = 0;
 		else if (typemu == 2 && !(gStatuses3[gBankTarget] & STATUS3_MIRACLE_EYE))
 			typemu = 0;
@@ -5360,7 +5360,7 @@ static void atk4A_typecalc2(void)
 			gMoveResultFlags |= MOVE_RESULT_SUPER_EFFECTIVE;
 		typemu = gTypeEffectiveness[move_type * 20 + gBattleMons[gBankTarget].type2];
 		
-		if (typemu == 1 && !(gBattleMons[gBankTarget].status2 & STATUS2_FORESIGHT))
+		if (typemu == 1 && !(gBattleMons[gBankTarget].status2 & STATUS2_FORESIGHT || gBattleMons[gBankAttacker].ability == ABILITY_SCRAPPY))
 			typemu = 0;
 		else if (typemu == 2 && !(gStatuses3[gBankTarget] & STATUS3_MIRACLE_EYE))
 			typemu = 0;
