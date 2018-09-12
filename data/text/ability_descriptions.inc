@@ -373,6 +373,9 @@ gAbilityDescription_Healer:
 gAbilityDescription_Scrappy:
 	.string "Ignores Ghost immunities.$"
 
+gAbilityDescription_Filter:
+	.string "Buffers effective hits.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -504,7 +507,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Healer
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Scrappy
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Filter
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
