@@ -124,7 +124,7 @@ gAbilityNames:: @ 81FA248
 	.string "Reckless$", 13
 	.string "Iron Fist$", 13
 	.string "Unburden$", 13
-	.string "HEALER$", 13
+	.string "Healer$", 13
 	.string "LEAF GUARD$", 13
 	.string "SCRAPPY$", 13
 	.string "FILTER$", 13

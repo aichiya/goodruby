@@ -4149,6 +4149,13 @@ BattleScript_ShedSkinActivates:: @ 81D9758
 	updatestatusicon USER
 	end3
 
+BattleScript_HealerActivates::
+	printstring BATTLE_TEXT_CuredAllyProblem
+	waitmessage 64
+	updatestatusicon EFFECT_BANK
+	waitstate
+	end3
+
 BattleScript_WeatherFormChanges: @ 81D9761
 	setbyte sBANK, 0
 

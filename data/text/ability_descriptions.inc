@@ -367,6 +367,9 @@ gAbilityDescription_IronFist:
 gAbilityDescription_Unburden:
 	.string "Speeds up on item loss.$"
 
+gAbilityDescription_Healer:
+	.string "Heals suffering allies.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -495,7 +498,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Reckless
 	.4byte gAbilityDescription_IronFist
 	.4byte gAbilityDescription_Unburden
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Healer
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
