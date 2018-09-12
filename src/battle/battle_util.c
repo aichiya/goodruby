@@ -190,6 +190,7 @@ extern u8 gUnknown_081D9795[]; //intimidate2
 extern u8 BattleScript_Frisk1[];
 extern u8 BattleScript_Frisk2[];
 extern u8 BattleScript_TraceActivates[];
+extern u8 BattleScript_MoxieActivates[];
 
 extern u8 BattleScript_WhiteHerbEnd2[];
 extern u8 BattleScript_WhiteHerbRet[];
@@ -3152,6 +3153,25 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 						BattleScriptPushCursor();
 						gBattlescriptCurrInstr = BattleScript_ApplySecondaryEffect;
 						gHitMarker |= HITMARKER_IGNORE_SAFEGUARD;
+						effect++;
+					}
+					break;
+				}
+				case ABILITY_MOXIE:
+				{
+					if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+					 && gBattleMons[gBankAttacker].hp != 0
+					 && gBattleMons[gBankTarget].hp == 0
+					 && gBattleMons[gBankAttacker].statStages[STAT_STAGE_ATK] < 12
+					 && !gProtectStructs[gBankAttacker].confusionSelfDmg
+					 && (gSpecialStatuses[gBankTarget].moveturnLostHP_physical || gSpecialStatuses[gBankTarget].moveturnLostHP_special))
+					{
+						gBattleMons[gBankAttacker].statStages[STAT_STAGE_ATK]++;
+                        gBattleStruct->animArg1 = 0x0F;
+                        gBattleStruct->animArg2 = 0;
+                        gBattleStruct->scriptingActive = bank;
+						BattleScriptPushCursor();
+						gBattlescriptCurrInstr = BattleScript_MoxieActivates;
 						effect++;
 					}
 					break;

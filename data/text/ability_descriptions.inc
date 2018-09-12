@@ -376,6 +376,9 @@ gAbilityDescription_Scrappy:
 gAbilityDescription_Filter:
 	.string "Buffers effective hits.$"
 
+gAbilityDescription_Moxie:
+	.string "Attack rises on KOs.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -508,7 +511,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Scrappy
 	.4byte gAbilityDescription_Filter
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Moxie
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented

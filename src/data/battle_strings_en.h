@@ -410,6 +410,7 @@ enum
 	BATTLE_TEXT_WeakArmorMaxSpeed,
 	BATTLE_TEXT_Harvest,
 	BATTLE_TEXT_CuredAllyProblem,
+	BATTLE_TEXT_AttackRisen
 };
 
 const u8 BattleText_UnknownString[] = _("{STRING 33}");
@@ -950,6 +951,7 @@ const u8 BattleText_WeakArmorSpeedUp[] = _("{DEFENDING_MON}’s Weak Armor\nshar
 const u8 BattleText_WeakArmorMaxSpeed[] = _("{DEFENDING_MON}’s Weak Armor\ncan’t raise its Speed any higher!");
 const u8 BattleText_Harvest[] = _("{STRING 16} Harvested\na {STRING 19}!");
 const u8 BattleText_CuredAllyProblem[] = _("{ATTACKING_MON}’s Healer\ncured its ally’s {STRING 0} problem!");
+const u8 BattleText_AttackRisen[] = _("{STRING 16}’s {STRING 23}\nraised its Attack!");
 
 
 const u8 *const gUnknown_08400F58[] =
@@ -1383,6 +1385,7 @@ const u8 *const gBattleStringsTable[] =
 	BattleText_WeakArmorMaxSpeed,
 	BattleText_Harvest,
 	BattleText_CuredAllyProblem,
+	BattleText_AttackRisen,
 };
 
 // below are lists of battle string enums and NOT pointers to the strings.

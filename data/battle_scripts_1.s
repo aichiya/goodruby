@@ -4381,6 +4381,12 @@ BattleScript_CursedBodyActivates::
 	waitmessage 64
 	return
 
+BattleScript_MoxieActivates::
+	playanimation USER, B_ANIM_STATS_CHANGE, sANIM_ARG1
+	printstring BATTLE_TEXT_AttackRisen
+	waitmessage 64
+	return
+
 BattleScript_ApplySecondaryEffect:: @ 81D9950
 	waitstate
 	seteffectsecondary

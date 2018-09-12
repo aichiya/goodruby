@@ -407,3 +407,4 @@
 	enum BATTLE_TEXT_WeakArmorMaxSpeed
 	enum BATTLE_TEXT_Harvest
 	enum BATTLE_TEXT_CuredAllyProblem
+	enum BATTLE_TEXT_AttackRisen
