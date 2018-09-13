@@ -4127,6 +4127,14 @@ BattleScript_Forewarn::
 	waitmessage 64
 	end3
 
+BattleScript_Imposter::
+	playanimation USER, B_ANIM_IMPOSTER, sANIM_ARG1
+	pause 32
+	printstring BATTLE_TEXT_Imposter
+	waitmessage 64
+	end3
+
+
 BattleScript_RainDishActivates:: @ 81D9730
 	printstring BATTLE_TEXT_RestoredHPByItem
 	waitmessage 64

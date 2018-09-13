@@ -569,6 +569,7 @@ gBattleAnims_General:: @ 81C771C
 	.4byte General_IngrainHeal
 	.4byte General_WishHeal
 	.4byte General_KnockedAway
+	.4byte General_Imposter
 
 	.align 2
 gBattleAnims_Special:: @ 81C7778
@@ -15287,5 +15288,16 @@ Move_AURA_SPHERE:
 Move_PSYSTRIKE:
 Move_U_TURN:
 Move_ACROBATICS:
+	end
+
+General_Imposter:
+	createvisualtask sub_8141E10, 5
+	delay 0
+	monbg ANIM_BANK_ATTACKER
+	playsewithpan SE_W100, 192
+	waitplaysewithpan SE_W107, 192, 48
+	createvisualtask sub_812D7E8, 2, 0
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_ATTACKER
 	end
 

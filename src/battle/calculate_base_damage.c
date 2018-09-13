@@ -191,15 +191,15 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     }
 
 	// Move-related power boosts
-	if (gCurrentMove == MOVE_VENOSHOCK && defender->status1 & (STATUS_POISON | STATUS_TOXIC_POISON))
+	if (move == MOVE_VENOSHOCK && defender->status1 & (STATUS_POISON | STATUS_TOXIC_POISON))
 		gBattleMovePower *= 2;
-	if (gCurrentMove == MOVE_BRINE && defender->hp *2 <= defender->maxHP)
+	if (move == MOVE_BRINE && defender->hp *2 <= defender->maxHP)
 		gBattleMovePower *= 2;
-	if (gCurrentMove == MOVE_HEX && defender->status1)
+	if (move == MOVE_HEX && defender->status1)
 		gBattleMovePower *= 2;
-	if (gCurrentMove == MOVE_KNOCK_OFF && defender->item && !gWishFutureKnock.knockedOffPokes[bankDef])
+	if (move == MOVE_KNOCK_OFF && defender->item && !gWishFutureKnock.knockedOffPokes[bankDef])
 		gBattleMovePower = (gBattleMovePower * 3) / 2;
-	if (gCurrentMove == MOVE_ACROBATICS && !(attacker->item))
+	if (move == MOVE_ACROBATICS && !(attacker->item))
 		gBattleMovePower *= 2;
 	
 	// This must come before any abilities touch power
@@ -339,7 +339,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
                 defense *= 2;
         }
         
-        if ((attacker->status1 & STATUS_BURN) && attacker->ability != ABILITY_GUTS && gCurrentMove != MOVE_FACADE)
+        if ((attacker->status1 & STATUS_BURN) && attacker->ability != ABILITY_GUTS && move != MOVE_FACADE)
             attack /= 2;
     }
     else if (moveClass == 1)
@@ -367,7 +367,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
 	if (defender->ability == ABILITY_UNAWARE)
 		attackMod = 6;
 	
-	if (gCurrentMove == MOVE_CHIP_AWAY || attacker->ability == ABILITY_UNAWARE)
+	if (move == MOVE_CHIP_AWAY || attacker->ability == ABILITY_UNAWARE)
 		defenseMod = 6;
 
     if (gCritMultiplier == 2)
@@ -414,7 +414,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         }
 
         // any weather except sun weakens solar beam
-        if ((gBattleWeather & (WEATHER_RAIN_ANY | WEATHER_SANDSTORM_ANY | WEATHER_HAIL)) && gCurrentMove == MOVE_SOLAR_BEAM)
+        if ((gBattleWeather & (WEATHER_RAIN_ANY | WEATHER_SANDSTORM_ANY | WEATHER_HAIL)) && move == MOVE_SOLAR_BEAM)
             damage /= 2;
 
         // sunny

@@ -345,6 +345,7 @@
 #define B_ANIM_INGRAIN_HEAL             0x15
 #define B_ANIM_WISH_HEAL                0x16
 #define B_ANIM_KNOCKED_AWAY             0x17
+#define B_ANIM_IMPOSTER                 0x18
 
 // special animation table
 #define B_ANIM_LVL_UP                   0x0

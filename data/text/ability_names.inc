@@ -129,7 +129,7 @@ gAbilityNames:: @ 81FA248
 	.string "Scrappy$", 13
 	.string "Filter$", 13
 	.string "Moxie$", 13
-	.string "IMPOSTER$", 13
+	.string "Imposter$", 13
 	.string "ADAPTABILITY$", 13
 	.string "DOWNLOAD$", 13
 	.string "RATTLED$", 13

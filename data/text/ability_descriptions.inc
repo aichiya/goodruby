@@ -379,6 +379,9 @@ gAbilityDescription_Filter:
 gAbilityDescription_Moxie:
 	.string "Attack rises on KOs.$"
 
+gAbilityDescription_Imposter:
+	.string "Transforms on entry.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -512,7 +515,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Scrappy
 	.4byte gAbilityDescription_Filter
 	.4byte gAbilityDescription_Moxie
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Imposter
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented

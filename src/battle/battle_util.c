@@ -218,6 +218,7 @@ extern u8 BattleScript_BerryCureChosenStatusRet[]; //berry cure any status retur
 extern u8 BattleScript_ItemHealHP_Ret[];
 extern u8 BattleScript_AnticipationShudder[];
 extern u8 BattleScript_Forewarn[];
+extern u8 BattleScript_Imposter[];
 
 extern u8 gUnknown_081D995F[]; //disobedient while asleep
 extern u8 BattleScript_IgnoresAndUsesRandomMove[]; //disobedient, uses a random move
@@ -1982,6 +1983,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 			case ABILITY_ANTICIPATION:
             case ABILITY_TRACE:
             case ABILITY_FOREWARN:
+			case ABILITY_IMPOSTER:
                 if (!(gSpecialStatuses[bank].traced))
                 {
                     gStatuses3[bank] |= STATUS3_TRACE;
@@ -3007,6 +3009,44 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 					gBattleStruct->scriptingActive = i;
 					effect++;
 					break;
+				}
+				else if (gBattleMons[i].ability == ABILITY_IMPOSTER && (gStatuses3[i] & STATUS3_TRACE))
+				{
+                    target1 = GetBattlerPosition(i) ^ 1;
+					gStatuses3[i] &= ~(STATUS3_TRACE);
+					if (gBattleMons[target1].hp != 0 && !(gBattleMons[target1].status2 & STATUS2_SUBSTITUTE) && !(gBattleMons[target1].status2 & STATUS2_TRANSFORMED))
+					{
+						u8 j;
+						u8 *atk_data, *def_data;
+						atk_data = (u8*)(&gBattleMons[i]);
+						def_data = (u8*)(&gBattleMons[target1]);
+						for (j = 0; j < 0x24; j++)
+							atk_data[j] = def_data[j];
+
+						for (j = 0; j < 4; j++)
+						{
+							if (gBattleMoves[gBattleMons[i].moves[j]].pp < 5)
+								gBattleMons[i].pp[j] = gBattleMoves[gBattleMons[i].moves[j]].pp;
+							else
+								gBattleMons[i].pp[j] = 5;
+						}
+						
+
+						gBattleStruct->animArg1 = i;
+						gBattleStruct->animArg2 = target1;
+						gBattleTextBuff1[0] = 0xFD;
+						gBattleTextBuff1[1] = 6;
+						gBattleTextBuff1[2] = (gBattleMons[target1].species);
+						gBattleTextBuff1[3] = (gBattleMons[target1].species) >> 8;
+						gBattleTextBuff1[4] = 0xFF;
+						gBankTarget = target1;
+						
+						BattleScriptPushCursorAndCallback(BattleScript_Imposter);
+						gBattleStruct->scriptingActive = i;
+						effect++;
+						break;
+						
+					}
 				}
             }
             break;
