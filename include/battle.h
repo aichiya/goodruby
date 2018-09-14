@@ -518,7 +518,9 @@ struct WishFutureKnock
     s32 futureSightDmg[MAX_BATTLERS_COUNT];
     u8 futureSightMove[MAX_BATTLERS_COUNT];
     u8 berryEatenPokes[2];
-	u8 unused[2];
+	u8 reflected:1;
+	u8 unused1:7;
+	u8 unused2;
     u8 wishCounter[MAX_BATTLERS_COUNT];
     u8 wishUserID[MAX_BATTLERS_COUNT];
     u8 weatherDuration;

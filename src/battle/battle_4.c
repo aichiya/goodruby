@@ -260,6 +260,7 @@ s8 GetPokeFlavourRelation(u32 pid, u8 flavor);
 extern u8 BattleScript_MoveEnd[];
 extern u8 BattleScript_NoPPForMove[];
 extern u8 BattleScript_MagicCoatBounce[];
+extern u8 BattleScript_MagicBounceBounce[];
 extern u8 BattleScript_TookAttack[];
 extern u8 BattleScript_SnatchedMove[];
 extern u8 BattleScript_Pausex20[];
@@ -1450,14 +1451,22 @@ static void atk00_attackcanceler(void)
 
     gHitMarker |= HITMARKER_OBEYS;
 
-    if (gProtectStructs[gBankTarget].bounceMove && gBattleMoves[gCurrentMove].flags & F_AFFECTED_BY_MAGIC_COAT)
+    if (gProtectStructs[gBankTarget].bounceMove && !(gWishFutureKnock.reflected) && gBattleMoves[gCurrentMove].flags & F_AFFECTED_BY_MAGIC_COAT)
     {
         PressurePPLose(gBankAttacker, gBankTarget, MOVE_MAGIC_COAT);
         gProtectStructs[gBankTarget].bounceMove = 0;
+		gWishFutureKnock.reflected = 1;
         BattleScriptPushCursor();
         gBattlescriptCurrInstr = BattleScript_MagicCoatBounce;
         return;
     }
+	if (gBattleMons[gBankTarget].ability == ABILITY_MAGIC_BOUNCE && !(gWishFutureKnock.reflected) && gBattleMoves[gCurrentMove].flags & F_AFFECTED_BY_MAGIC_COAT)
+	{
+		gWishFutureKnock.reflected = 1;
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = BattleScript_MagicBounceBounce;
+        return;
+	}
 
     for (i = 0; i < gBattlersCount; i++)
     {
@@ -5065,7 +5074,7 @@ _080217E6:\n\
 
 #endif // NONMATCHING
 
-#define ATK49_LAST_CASE 18
+#define ATK49_LAST_CASE 19
 
 static void atk49_moveend(void)
 {
@@ -5314,6 +5323,10 @@ static void atk49_moveend(void)
 					gHitMarker |= HITMARKER_NO_ATTACKSTRING;
 				}
 			}
+			gBattleStruct->cmd49StateTracker++;
+			break;
+		case 18:
+			gWishFutureKnock.reflected = 0;
 			gBattleStruct->cmd49StateTracker++;
 			break;
 		case ATK49_LAST_CASE:

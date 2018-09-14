@@ -412,3 +412,4 @@
 	enum BATTLE_TEXT_DownloadAtkRisen
 	enum BATTLE_TEXT_DownloadSpAtkRisen
 	enum BATTLE_TEXT_Rattled
+	enum BATTLE_TEXT_MagicBounceBounce

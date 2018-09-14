@@ -397,6 +397,9 @@ gAbilityDescription_SnowCloak:
 gAbilityDescription_Multiscale:
 	.string "Resilient at full HP.$"
 
+gAbilityDescription_MagicBounce:
+	.string "Reflects status moves.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -536,7 +539,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Rattled
 	.4byte gAbilityDescription_SnowCloak
 	.4byte gAbilityDescription_Multiscale
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_MagicBounce
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented

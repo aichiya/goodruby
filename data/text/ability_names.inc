@@ -135,7 +135,7 @@ gAbilityNames:: @ 81FA248
 	.string "Rattled$", 13
 	.string "Snow Cloak$", 13
 	.string "Multiscale$", 13
-	.string "MAGIC BOUNCE$", 13
+	.string "Magic Bounce$", 13
 	.string "SAP SIPPER$", 13
 	.string "PRANKSTER$", 13
 	.string "TELEPATHY$", 13

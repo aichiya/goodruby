@@ -3767,6 +3767,16 @@ BattleScript_MagicCoatBounce:: @ 81D946F
 	setmagiccoattarget USER
 	return
 
+BattleScript_MagicBounceBounce::
+	attackstring
+	ppreduce
+	pause 32
+	printstring BATTLE_TEXT_MagicBounceBounce
+	waitmessage 64
+	orword gHitMarker, HITMARKER_ATTACKSTRING_PRINTED | HITMARKER_NO_PPDEDUCT | HITMARKER_x800000
+	setmagiccoattarget USER
+	return
+
 BattleScript_SnatchedMove:: @ 81D9487
 	attackstring
 	ppreduce

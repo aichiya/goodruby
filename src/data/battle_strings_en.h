@@ -414,7 +414,8 @@ enum
 	BATTLE_TEXT_Imposter,
 	BATTLE_TEXT_DownloadAtkRisen,
 	BATTLE_TEXT_DownloadSpAtkRisen,
-	BATTLE_TEXT_Rattled
+	BATTLE_TEXT_Rattled,
+	BATTLE_TEXT_MagicBounceBounce,
 };
 
 const u8 BattleText_UnknownString[] = _("{STRING 33}");
@@ -960,6 +961,7 @@ const u8 BattleText_Imposter[] = _("{STRING 16}’s Imposter\ntransformed it int
 const u8 BattleText_DownloadAtkRisen[] = _("{STRING 16}’s {STRING 23}\nraised its Attack!");
 const u8 BattleText_DownloadSpAtkRisen[] = _("{STRING 16}’s {STRING 23}\nraised its Sp. Atk!");
 const u8 BattleText_Rattled[] = _("{DEFENDING_MON}’s Rattled\nraised its Speed!");
+const u8 BattleText_MagicBounceBounce[] = _("{ATTACKING_MON}’s {STRING 17}\nwas bounced back by Magic Bounce!");
 
 
 const u8 *const gUnknown_08400F58[] =
@@ -1398,6 +1400,7 @@ const u8 *const gBattleStringsTable[] =
 	BattleText_DownloadAtkRisen,
 	BattleText_DownloadSpAtkRisen,
 	BattleText_Rattled,
+	BattleText_MagicBounceBounce,
 };
 
 // below are lists of battle string enums and NOT pointers to the strings.
