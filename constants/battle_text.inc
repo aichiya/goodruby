@@ -414,3 +414,5 @@
 	enum BATTLE_TEXT_Rattled
 	enum BATTLE_TEXT_MagicBounceBounce
 	enum BATTLE_TEXT_AttackRisen
+	enum BATTLE_TEXT_MoodyStatUp
+	enum BATTLE_TEXT_MoodyStatDown

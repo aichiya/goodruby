@@ -4114,6 +4114,22 @@ BattleScript_SpeedBoostActivates:: @ 81D9718
 	waitmessage 64
 	end3
 
+BattleScript_MoodyActivates:: @ 81D9718
+	jumpifbyte EQUAL, sANIM_ARG1, 0, BattleScript_MoodyStatDown
+	playanimation USER, B_ANIM_STATS_CHANGE, sANIM_ARG1
+	printstring BATTLE_TEXT_MoodyStatUp
+	waitmessage 64
+	
+BattleScript_MoodyStatDown:
+	copyhword sANIM_ARG1, gDynamicBasePower
+	jumpifbyte EQUAL, sANIM_ARG1, 0, BattleScript_MoodyEnd
+	playanimation USER, B_ANIM_STATS_CHANGE, sANIM_ARG1
+	printstring BATTLE_TEXT_MoodyStatDown
+	waitmessage 64
+
+BattleScript_MoodyEnd:
+	end3
+
 BattleScript_HarvestActivates::
 	printstring BATTLE_TEXT_Harvest
 	waitmessage 64

@@ -142,7 +142,7 @@ gAbilityNames:: @ 81FA248
 	.string "CONTRARY$", 13
 	.string "PICKPOCKET$", 13
 	.string "HONEY GATHER$", 13
-	.string "MOODY$", 13
+	.string "Moody$", 13
 	.string "LIGHT METAL$", 13
 	.string "PROTEAN$", 13
 	.string "TOXIC BOOST$", 13

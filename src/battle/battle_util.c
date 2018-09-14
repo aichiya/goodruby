@@ -167,6 +167,7 @@ extern u8 BattleScript_ShedSkinActivates[];
 extern u8 BattleScript_HealerActivates[];
 extern u8 BattleScript_SpeedBoostActivates[];
 extern u8 BattleScript_HarvestActivates[];
+extern u8 BattleScript_MoodyActivates[];
 extern u8 BattleScript_SoundproofProtected[];
 extern u8 BattleScript_MoveHPDrain[];
 extern u8 BattleScript_MoveHPDrain_PPLoss[];
@@ -230,6 +231,7 @@ extern u8 gUnknown_081D995F[]; //disobedient while asleep
 extern u8 BattleScript_IgnoresAndUsesRandomMove[]; //disobedient, uses a random move
 extern u8 BattleScript_IgnoresAndFallsAsleep[]; //disobedient, went to sleep
 extern u8 gUnknown_081D99A0[]; //disobedient, hits itself
+extern u8* gUnknown_08400F58[];
 
 //array entries for battle communication
 #define MOVE_EFFECT_BYTE    0x3
@@ -2181,6 +2183,59 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 						}
 					}
 					break;
+                case ABILITY_MOODY:
+                    if (gDisableStructs[bank].isFirstTurn != 2)
+                    {
+						//If all stats are at +6, only lower a stat
+						//If all stats are at -6, only raise a stat
+						//Otherwise, raise one stat and lower a different stat
+						u8 raise = 0, lower = 0;
+						
+						if (gBattleMons[bank].statStages[STAT_STAGE_ATK] != 12 ||
+						    gBattleMons[bank].statStages[STAT_STAGE_DEF] != 12 ||
+						    gBattleMons[bank].statStages[STAT_STAGE_SPEED] != 12 ||
+						    gBattleMons[bank].statStages[STAT_STAGE_SPATK] != 12 ||
+						    gBattleMons[bank].statStages[STAT_STAGE_SPDEF] != 12 ||
+						    gBattleMons[bank].statStages[STAT_STAGE_ACC] != 12 ||
+						    gBattleMons[bank].statStages[STAT_STAGE_EVASION] != 12)
+						{
+							while (raise == 0 || gBattleMons[bank].statStages[raise] == 12)
+							{
+								raise = (Random() % 7) + 1;
+							}
+							StringCopy(gBattleTextBuff1, gUnknown_08400F58[raise]);
+						}
+						if (gBattleMons[bank].statStages[STAT_STAGE_ATK] != 0 ||
+						    gBattleMons[bank].statStages[STAT_STAGE_DEF] != 0 ||
+						    gBattleMons[bank].statStages[STAT_STAGE_SPEED] != 0 ||
+						    gBattleMons[bank].statStages[STAT_STAGE_SPATK] != 0 ||
+						    gBattleMons[bank].statStages[STAT_STAGE_SPDEF] != 0 ||
+						    gBattleMons[bank].statStages[STAT_STAGE_ACC] != 0 ||
+						    gBattleMons[bank].statStages[STAT_STAGE_EVASION] != 0)
+						{
+							while (lower == 0 || raise == lower || gBattleMons[bank].statStages[lower] == 0)
+							{
+								lower = (Random() % 7) + 1;
+							}
+							StringCopy(gBattleTextBuff2, gUnknown_08400F58[lower]);
+						}
+						
+						if (raise && gBattleMons[bank].statStages[raise] == 11)
+							gBattleMons[bank].statStages[raise]++;
+						else if (raise)
+							gBattleMons[bank].statStages[raise] += 2;
+						if (lower)
+							gBattleMons[bank].statStages[lower]--;
+
+                        gBattleStruct->animArg1 = raise ? 0x26 + raise : 0;
+                        gBattleStruct->animArg2 = 0;
+						gDynamicBasePower = lower ? 0x15 + lower : 0; // hack alert
+						
+						BattleScriptPushCursorAndCallback(BattleScript_MoodyActivates);
+						gBattleStruct->scriptingActive = gActiveBattler;
+						effect++;
+                    }
+                    break;
                 }
             }
             break;
