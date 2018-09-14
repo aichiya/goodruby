@@ -143,9 +143,9 @@ gAbilityNames:: @ 81FA248
 	.string "PICKPOCKET$", 13
 	.string "HONEY GATHER$", 13
 	.string "Moody$", 13
-	.string "LIGHT METAL$", 13
+	.string "Light Metal$", 13
 	.string "PROTEAN$", 13
 	.string "TOXIC BOOST$", 13
-	.string "HEAVY METAL$", 13
+	.string "Heavy Metal$", 13
 	.string "STORM DRAIN$", 13
 

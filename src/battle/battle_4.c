@@ -12246,9 +12246,15 @@ static void atkDC_trysetgrudge(void)
 static void atkDD_weightdamagecalculation(void)
 {
     int i;
+	u16 weight = GetPokedexHeightWeight(SpeciesToNationalPokedexNum(gBattleMons[gBankTarget].species), 1);
+	if (gBattleMons[gBankTarget].ability == ABILITY_HEAVY_METAL)
+		weight *= 2;
+	else if (gBattleMons[gBankTarget].ability == ABILITY_LIGHT_METAL)
+		weight /= 2;
+	
     for (i = 0; sWeightToDamageTable[i] != 0xFFFF; i += 2)
     {
-        if (sWeightToDamageTable[i] > GetPokedexHeightWeight(SpeciesToNationalPokedexNum(gBattleMons[gBankTarget].species), 1))
+        if (sWeightToDamageTable[i] > weight)
             break;
     }
     if (sWeightToDamageTable[i] != 0xFFFF)
@@ -14005,6 +14011,16 @@ static void sp1C_heavyslam(void)
 {
 	u16 attackerwt = GetPokedexHeightWeight(SpeciesToNationalPokedexNum(gBattleMons[gBankAttacker].species), 1);
 	u16 targetwt = GetPokedexHeightWeight(SpeciesToNationalPokedexNum(gBattleMons[gBankTarget].species), 1);
+	
+	if (gBattleMons[gBankAttacker].ability == ABILITY_HEAVY_METAL)
+		attackerwt *= 2;
+	else if (gBattleMons[gBankAttacker].ability == ABILITY_LIGHT_METAL)
+		attackerwt /= 2;
+		
+	if (gBattleMons[gBankTarget].ability == ABILITY_HEAVY_METAL)
+		targetwt *= 2;
+	else if (gBattleMons[gBankTarget].ability == ABILITY_LIGHT_METAL)
+		targetwt /= 2;
 	
 	if (targetwt*2 >= attackerwt)
 	{

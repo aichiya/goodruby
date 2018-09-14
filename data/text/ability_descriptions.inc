@@ -412,6 +412,12 @@ gAbilityDescription_Telepathy:
 gAbilityDescription_Moody:
 	.string "Stats fluctuate.$"
 
+gAbilityDescription_LightMetal:
+	.string "Halves weight.$"
+
+gAbilityDescription_HeavyMetal:
+	.string "Doubles weight.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -559,8 +565,8 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Moody
+	.4byte gAbilityDescription_LightMetal
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
-	.4byte gAbilityDescription_Unimplemented
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_HeavyMetal
 	.4byte gAbilityDescription_Unimplemented
