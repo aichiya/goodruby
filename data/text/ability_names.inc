@@ -132,7 +132,7 @@ gAbilityNames:: @ 81FA248
 	.string "Imposter$", 13
 	.string "Adaptability$", 13
 	.string "Download$", 13
-	.string "RATTLED$", 13
+	.string "Rattled$", 13
 	.string "SNOW CLOAK$", 13
 	.string "MULTISCALE$", 13
 	.string "MAGIC BOUNCE$", 13

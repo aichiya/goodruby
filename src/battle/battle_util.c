@@ -184,6 +184,7 @@ extern u8 BattleScript_AngerPointActivates[];
 extern u8 BattleScript_JustifiedActivates[];
 extern u8 BattleScript_CursedBodyActivates[];
 extern u8 BattleScript_WeakArmorActivates[];
+extern u8 BattleScript_RattledActivates[];
 extern u8 BattleScript_AbilityCuredStatus[]; //ability status clear
 extern u8 BattleScript_SynchronizeActivates[];
 extern u8 gUnknown_081D978C[]; //intimidate1
@@ -2615,6 +2616,24 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 					}
                 }
                 break;
+			case ABILITY_RATTLED:
+				if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+				 && (gBattleMoves[move].type == TYPE_DARK || gBattleStruct->dynamicMoveType == TYPE_DARK
+				  || gBattleMoves[move].type == TYPE_GHOST || gBattleStruct->dynamicMoveType == TYPE_GHOST
+				  || gBattleMoves[move].type == TYPE_BUG || gBattleStruct->dynamicMoveType == TYPE_BUG)
+				 && !gProtectStructs[gBankAttacker].confusionSelfDmg
+				 && gBattleMons[gBankTarget].statStages[STAT_STAGE_SPEED] < 12
+				 && gBattleMons[gBankTarget].hp != 0
+				 && (gSpecialStatuses[gBankTarget].moveturnLostHP_physical || gSpecialStatuses[gBankTarget].moveturnLostHP_special))
+				{
+					gBattleMons[gBankTarget].statStages[STAT_STAGE_SPEED]++;
+					gBattleStruct->animArg1 = 0x11;
+					gBattleStruct->animArg2 = 0;
+					BattleScriptPushCursor();
+					gBattlescriptCurrInstr = BattleScript_RattledActivates;
+					effect++;
+				}
+				break;
 		}
             break;
         case ABILITYEFFECT_IMMUNITY: // 5

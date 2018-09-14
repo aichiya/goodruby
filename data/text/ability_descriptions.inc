@@ -388,6 +388,9 @@ gAbilityDescription_Adaptability:
 gAbilityDescription_Download:
 	.string "Adjusts to foe’s defenses.$"
 
+gAbilityDescription_Rattled:
+	.string "Fright raises Speed.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -524,7 +527,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Imposter
 	.4byte gAbilityDescription_Adaptability
 	.4byte gAbilityDescription_Download
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Rattled
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
