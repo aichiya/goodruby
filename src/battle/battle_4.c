@@ -1632,6 +1632,12 @@ static void atk01_accuracycheck(void)
 		gProtectStructs[gBankAttacker].notEffective = 1;
         JumpIfMoveFailed(7, move);
 	}
+	else if (gBattleMons[gBankTarget].ability == ABILITY_TELEPATHY && gBattleMoves[gCurrentMove].moveClass != CLASS_STATUS && GetBattlerSide(gBankAttacker) == GetBattlerSide(gBankTarget))
+	{
+		gMoveResultFlags |= MOVE_RESULT_MISSED;
+		gProtectStructs[gBankAttacker].notEffective = 1;
+        JumpIfMoveFailed(7, move);
+	}
     else if (move == 0xFFFE || move == 0xFFFF)
     {
         if (gStatuses3[gBankTarget] & STATUS3_ALWAYS_HITS && move == 0xFFFF && gDisableStructs[gBankTarget].bankWithSureHit == gBankAttacker)

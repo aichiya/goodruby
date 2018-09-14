@@ -406,6 +406,9 @@ gAbilityDescription_SapSipper:
 gAbilityDescription_Prankster:
 	.string "Status moves get priority.$"
 
+gAbilityDescription_Telepathy:
+	.string "Avoids ally moves.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -548,7 +551,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_MagicBounce
 	.4byte gAbilityDescription_SapSipper
 	.4byte gAbilityDescription_Prankster
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Telepathy
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
