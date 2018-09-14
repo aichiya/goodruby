@@ -409,3 +409,5 @@
 	enum BATTLE_TEXT_CuredAllyProblem
 	enum BATTLE_TEXT_AttackRisen
 	enum BATTLE_TEXT_Imposter
+	enum BATTLE_TEXT_DownloadAtkRisen
+	enum BATTLE_TEXT_DownloadSpAtkRisen

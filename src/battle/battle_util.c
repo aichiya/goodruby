@@ -76,6 +76,7 @@ extern const u8 gStatusConditionString_IceJpn[];
 extern const u8 gStatusConditionString_ConfusionJpn[];
 extern const u8 gStatusConditionString_LoveJpn[];
 extern const BattleCmdFunc gBattleScriptingCommandsTable[];
+extern u8 gStatStageRatios[][2];
 
 u8 IsImprisoned(u8 bank, u16 move);
 u8 GetBattlerAtPosition(u8 ID);
@@ -219,6 +220,8 @@ extern u8 BattleScript_ItemHealHP_Ret[];
 extern u8 BattleScript_AnticipationShudder[];
 extern u8 BattleScript_Forewarn[];
 extern u8 BattleScript_Imposter[];
+extern u8 BattleScript_DownloadAtk[];
+extern u8 BattleScript_DownloadSpAtk[];
 
 extern u8 gUnknown_081D995F[]; //disobedient while asleep
 extern u8 BattleScript_IgnoresAndUsesRandomMove[]; //disobedient, uses a random move
@@ -1984,6 +1987,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
             case ABILITY_TRACE:
             case ABILITY_FOREWARN:
 			case ABILITY_IMPOSTER:
+			case ABILITY_DOWNLOAD:
                 if (!(gSpecialStatuses[bank].traced))
                 {
                     gStatuses3[bank] |= STATUS3_TRACE;
@@ -3047,6 +3051,52 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 						break;
 						
 					}
+				}
+				else if (gBattleMons[i].ability == ABILITY_DOWNLOAD && (gStatuses3[i] & STATUS3_TRACE))
+				{
+					u8 target2;
+					u16 def = 0;
+					u16 spdef = 0;
+                    side = (GetBattlerPosition(i) ^ 1) & 1;
+                    target1 = GetBattlerAtPosition(side);
+                    target2 = GetBattlerAtPosition(side + 2);
+					
+					if (gBattleMons[target1].hp != 0)
+					{
+						def += ( gBattleMons[target1].defense * gStatStageRatios[gBattleMons[target1].statStages[STAT_STAGE_DEF]][0])
+								/ gStatStageRatios[gBattleMons[target1].statStages[STAT_STAGE_DEF]][1];
+						spdef += ( gBattleMons[target1].spDefense * gStatStageRatios[gBattleMons[target1].statStages[STAT_STAGE_SPDEF]][0])
+								/ gStatStageRatios[gBattleMons[target1].statStages[STAT_STAGE_SPDEF]][1];
+					}
+					
+					if (gBattleMons[target2].hp != 0)
+					{
+						def += ( gBattleMons[target2].defense * gStatStageRatios[gBattleMons[target2].statStages[STAT_STAGE_DEF]][0])
+								/ gStatStageRatios[gBattleMons[target2].statStages[STAT_STAGE_DEF]][1];
+						spdef += ( gBattleMons[target2].spDefense * gStatStageRatios[gBattleMons[target2].statStages[STAT_STAGE_SPDEF]][0])
+								/ gStatStageRatios[gBattleMons[target2].statStages[STAT_STAGE_SPDEF]][1];
+					}
+					
+					if (def < spdef && gBattleMons[i].statStages[STAT_STAGE_ATK] < 12)
+					{
+                        gBattleMons[i].statStages[STAT_STAGE_ATK]++;
+                        gBattleStruct->animArg1 = 0xF;
+                        gBattleStruct->animArg2 = 0;
+						BattleScriptPushCursorAndCallback(BattleScript_DownloadAtk);
+						gBattleStruct->scriptingActive = i;
+						effect++;
+					}
+					else if (def >= spdef && gBattleMons[i].statStages[STAT_STAGE_SPATK] < 12)
+					{
+                        gBattleMons[i].statStages[STAT_STAGE_SPATK]++;
+                        gBattleStruct->animArg1 = 0x12;
+                        gBattleStruct->animArg2 = 0;
+						BattleScriptPushCursorAndCallback(BattleScript_DownloadSpAtk);
+						gBattleStruct->scriptingActive = i;
+						effect++;
+					}
+					gStatuses3[i] &= ~(STATUS3_TRACE);
+					break;
 				}
             }
             break;

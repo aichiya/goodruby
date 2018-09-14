@@ -382,6 +382,12 @@ gAbilityDescription_Moxie:
 gAbilityDescription_Imposter:
 	.string "Transforms on entry.$"
 
+gAbilityDescription_Adaptability:
+	.string "Boosts same-type moves.$"
+
+gAbilityDescription_Download:
+	.string "Adjusts to foe’s defenses.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -516,8 +522,8 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Filter
 	.4byte gAbilityDescription_Moxie
 	.4byte gAbilityDescription_Imposter
-	.4byte gAbilityDescription_Unimplemented
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Adaptability
+	.4byte gAbilityDescription_Download
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented

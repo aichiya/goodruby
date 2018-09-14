@@ -1959,7 +1959,10 @@ static void atk06_typecalc(void)
         //check stab
         if (gBattleMons[gBankAttacker].type1 == move_type || gBattleMons[gBankAttacker].type2 == move_type)
         {
-            gBattleMoveDamage = gBattleMoveDamage * 15;
+			if (gBattleMons[gBankAttacker].ability == ABILITY_ADAPTABILITY)
+				gBattleMoveDamage = gBattleMoveDamage * 20;
+			else
+				gBattleMoveDamage = gBattleMoveDamage * 15;
             gBattleMoveDamage = gBattleMoveDamage / 10;
         }
 
@@ -2150,7 +2153,10 @@ u8 TypeCalc(u16 move, u8 bank_atk, u8 bank_def)
     //check stab
     if (gBattleMons[bank_atk].type1 == move_type || gBattleMons[bank_atk].type2 == move_type)
     {
-        gBattleMoveDamage = gBattleMoveDamage * 15;
+		if (gBattleMons[bank_atk].ability == ABILITY_ADAPTABILITY)
+			gBattleMoveDamage = gBattleMoveDamage * 20;
+		else
+			gBattleMoveDamage = gBattleMoveDamage * 15;
         gBattleMoveDamage = gBattleMoveDamage / 10;
     }
 	

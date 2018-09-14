@@ -412,6 +412,8 @@ enum
 	BATTLE_TEXT_CuredAllyProblem,
 	BATTLE_TEXT_AttackRisen,
 	BATTLE_TEXT_Imposter,
+	BATTLE_TEXT_DownloadAtkRisen,
+	BATTLE_TEXT_DownloadSpAtkRisen,
 };
 
 const u8 BattleText_UnknownString[] = _("{STRING 33}");
@@ -954,6 +956,8 @@ const u8 BattleText_Harvest[] = _("{STRING 16} Harvested\na {STRING 19}!");
 const u8 BattleText_CuredAllyProblem[] = _("{ATTACKING_MON}’s Healer\ncured its ally’s {STRING 0} problem!");
 const u8 BattleText_AttackRisen[] = _("{STRING 16}’s {STRING 23}\nraised its Attack!");
 const u8 BattleText_Imposter[] = _("{STRING 16}’s Imposter\ntransformed it into {STRING 0}!");
+const u8 BattleText_DownloadAtkRisen[] = _("{STRING 16}’s {STRING 23}\nraised its Attack!");
+const u8 BattleText_DownloadSpAtkRisen[] = _("{STRING 16}’s {STRING 23}\nraised its Sp. Atk!");
 
 
 const u8 *const gUnknown_08400F58[] =
@@ -1389,6 +1393,8 @@ const u8 *const gBattleStringsTable[] =
 	BattleText_CuredAllyProblem,
 	BattleText_AttackRisen,
 	BattleText_Imposter,
+	BattleText_DownloadAtkRisen,
+	BattleText_DownloadSpAtkRisen,
 };
 
 // below are lists of battle string enums and NOT pointers to the strings.
