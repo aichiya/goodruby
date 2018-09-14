@@ -403,6 +403,9 @@ gAbilityDescription_MagicBounce:
 gAbilityDescription_SapSipper:
 	.string "Turns Grass into Attack.$"
 
+gAbilityDescription_Prankster:
+	.string "Status moves get priority.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -544,7 +547,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Multiscale
 	.4byte gAbilityDescription_MagicBounce
 	.4byte gAbilityDescription_SapSipper
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Prankster
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented

@@ -1430,6 +1430,9 @@ static void atk00_attackcanceler(void)
         gMoveResultFlags |= MOVE_RESULT_MISSED;
         return;
     }
+	
+	if (gBattleMons[gBankAttacker].ability == ABILITY_PRANKSTER && gBattleMoves[gCurrentMove].moveClass == CLASS_STATUS)
+		gWishFutureKnock.pranksterBoosted = 1;
 
     gHitMarker &= ~(HITMARKER_x800000);
 
@@ -1456,6 +1459,7 @@ static void atk00_attackcanceler(void)
         PressurePPLose(gBankAttacker, gBankTarget, MOVE_MAGIC_COAT);
         gProtectStructs[gBankTarget].bounceMove = 0;
 		gWishFutureKnock.reflected = 1;
+		gWishFutureKnock.pranksterBoosted = 0;
         BattleScriptPushCursor();
         gBattlescriptCurrInstr = BattleScript_MagicCoatBounce;
         return;
@@ -1463,6 +1467,7 @@ static void atk00_attackcanceler(void)
 	if (gBattleMons[gBankTarget].ability == ABILITY_MAGIC_BOUNCE && !(gWishFutureKnock.reflected) && gBattleMoves[gCurrentMove].flags & F_AFFECTED_BY_MAGIC_COAT)
 	{
 		gWishFutureKnock.reflected = 1;
+		gWishFutureKnock.pranksterBoosted = 0;
         BattleScriptPushCursor();
         gBattlescriptCurrInstr = BattleScript_MagicBounceBounce;
         return;
@@ -1621,7 +1626,13 @@ static void atk01_accuracycheck(void)
 {
     u16 move = T2_READ_16(gBattlescriptCurrInstr + 5);
 
-    if (move == 0xFFFE || move == 0xFFFF)
+	if (gWishFutureKnock.pranksterBoosted && (gBattleMons[gBankTarget].type1 == TYPE_DARK || gBattleMons[gBankTarget].type2 == TYPE_DARK))
+	{
+		gMoveResultFlags |= MOVE_RESULT_DOESNT_AFFECT_FOE;
+		gProtectStructs[gBankAttacker].notEffective = 1;
+        JumpIfMoveFailed(7, move);
+	}
+    else if (move == 0xFFFE || move == 0xFFFF)
     {
         if (gStatuses3[gBankTarget] & STATUS3_ALWAYS_HITS && move == 0xFFFF && gDisableStructs[gBankTarget].bankWithSureHit == gBankAttacker)
             gBattlescriptCurrInstr += 7;
@@ -1958,6 +1969,7 @@ static void atk06_typecalc(void)
 			gMoveResultFlags |= MOVE_RESULT_DOESNT_AFFECT_FOE;
             gProtectStructs[gBankAttacker].notEffective = 1;
 			gBattlescriptCurrInstr++;
+			return;
 		}
 	}
     if (gCurrentMove != MOVE_STRUGGLE)
@@ -5327,6 +5339,7 @@ static void atk49_moveend(void)
 			break;
 		case 18:
 			gWishFutureKnock.reflected = 0;
+			gWishFutureKnock.pranksterBoosted = 0;
 			gBattleStruct->cmd49StateTracker++;
 			break;
 		case ATK49_LAST_CASE:

@@ -137,7 +137,7 @@ gAbilityNames:: @ 81FA248
 	.string "Multiscale$", 13
 	.string "Magic Bounce$", 13
 	.string "Sap Sipper$", 13
-	.string "PRANKSTER$", 13
+	.string "Prankster$", 13
 	.string "TELEPATHY$", 13
 	.string "CONTRARY$", 13
 	.string "PICKPOCKET$", 13
