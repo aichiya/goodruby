@@ -407,9 +407,10 @@
 	enum BATTLE_TEXT_WeakArmorMaxSpeed
 	enum BATTLE_TEXT_Harvest
 	enum BATTLE_TEXT_CuredAllyProblem
-	enum BATTLE_TEXT_AttackRisen
+	enum BATTLE_TEXT_Moxie
 	enum BATTLE_TEXT_Imposter
 	enum BATTLE_TEXT_DownloadAtkRisen
 	enum BATTLE_TEXT_DownloadSpAtkRisen
 	enum BATTLE_TEXT_Rattled
 	enum BATTLE_TEXT_MagicBounceBounce
+	enum BATTLE_TEXT_AttackRisen

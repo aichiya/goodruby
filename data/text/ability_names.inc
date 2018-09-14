@@ -136,7 +136,7 @@ gAbilityNames:: @ 81FA248
 	.string "Snow Cloak$", 13
 	.string "Multiscale$", 13
 	.string "Magic Bounce$", 13
-	.string "SAP SIPPER$", 13
+	.string "Sap Sipper$", 13
 	.string "PRANKSTER$", 13
 	.string "TELEPATHY$", 13
 	.string "CONTRARY$", 13

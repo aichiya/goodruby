@@ -400,6 +400,9 @@ gAbilityDescription_Multiscale:
 gAbilityDescription_MagicBounce:
 	.string "Reflects status moves.$"
 
+gAbilityDescription_SapSipper:
+	.string "Turns Grass into Attack.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -540,7 +543,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_SnowCloak
 	.4byte gAbilityDescription_Multiscale
 	.4byte gAbilityDescription_MagicBounce
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_SapSipper
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented

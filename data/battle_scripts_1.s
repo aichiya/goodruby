@@ -4418,7 +4418,7 @@ BattleScript_RattledActivates::
 
 BattleScript_MoxieActivates::
 	playanimation USER, B_ANIM_STATS_CHANGE, sANIM_ARG1
-	printstring BATTLE_TEXT_AttackRisen
+	printstring BATTLE_TEXT_Moxie
 	waitmessage 64
 	return
 
@@ -5680,13 +5680,27 @@ BattleScript_EffectMetalBurst:
 BattleScript_MoveSAtkDrain_PPLoss::
 	ppreduce
 
-BattleScript_MoveSAtkDrain:: @ 81D9843
+BattleScript_MoveSAtkDrain::
 	attackstring
 	pause 32
 	
 	playanimation TARGET, B_ANIM_STATS_CHANGE, sANIM_ARG1
 	
 	printstring BATTLE_TEXT_SpAtkRisen
+	waitmessage 64
+	orbyte gMoveResultFlags, MOVE_RESULT_DOESNT_AFFECT_FOE
+	goto BattleScript_MoveEnd
+
+BattleScript_MoveAtkDrain_PPLoss::
+	ppreduce
+
+BattleScript_MoveAtkDrain::
+	attackstring
+	pause 32
+	
+	playanimation TARGET, B_ANIM_STATS_CHANGE, sANIM_ARG1
+	
+	printstring BATTLE_TEXT_AttackRisen
 	waitmessage 64
 	orbyte gMoveResultFlags, MOVE_RESULT_DOESNT_AFFECT_FOE
 	goto BattleScript_MoveEnd

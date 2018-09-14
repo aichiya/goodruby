@@ -172,6 +172,8 @@ extern u8 BattleScript_MoveHPDrain[];
 extern u8 BattleScript_MoveHPDrain_PPLoss[];
 extern u8 BattleScript_MoveSAtkDrain[];
 extern u8 BattleScript_MoveSAtkDrain_PPLoss[];
+extern u8 BattleScript_MoveAtkDrain[];
+extern u8 BattleScript_MoveAtkDrain_PPLoss[];
 extern u8 BattleScript_FlashFireBoost[];
 extern u8 BattleScript_FlashFireBoost_PPLoss[];
 extern u8 BattleScript_MoveHPDrain_FullHP[];
@@ -2233,6 +2235,28 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 								gBattlescriptCurrInstr = BattleScript_MoveSAtkDrain;
 							else
 								gBattlescriptCurrInstr = BattleScript_MoveSAtkDrain_PPLoss;
+						}
+                        effect = 2;
+					}
+				case ABILITY_SAP_SIPPER:
+					if (moveType == TYPE_GRASS)
+					{
+						if (gBattleMons[bank].statStages[STAT_STAGE_ATK] == 12)
+						{
+							if ((gProtectStructs[gBankAttacker].notFirstStrike))
+								gBattlescriptCurrInstr = BattleScript_MoveHPDrain_FullHP;
+							else
+								gBattlescriptCurrInstr = BattleScript_MoveHPDrain_FullHP_PPLoss;
+						}
+						else
+						{
+							gBattleMons[bank].statStages[STAT_STAGE_ATK]++;
+							gBattleStruct->animArg1 = 0xE + STAT_STAGE_ATK;
+							gBattleStruct->animArg2 = 0;
+							if (gProtectStructs[gBankAttacker].notFirstStrike)
+								gBattlescriptCurrInstr = BattleScript_MoveAtkDrain;
+							else
+								gBattlescriptCurrInstr = BattleScript_MoveAtkDrain_PPLoss;
 						}
                         effect = 2;
 					}
