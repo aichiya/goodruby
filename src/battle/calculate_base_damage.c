@@ -295,6 +295,11 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         defense = (150 * defense) / 100;
 	if (type == TYPE_FIRE && defenderAbility == ABILITY_DRY_SKIN)
 		gBattleMovePower = (125 * gBattleMovePower) / 100;
+	if (defenderAbility == ABILITY_MULTISCALE && defender->hp == defender->maxHP)
+	{
+		defense *= 2;
+		spDefense *= 2;
+	}
 	
     if (type == TYPE_ELECTRIC && AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, 0, 0xFD, 0))
         gBattleMovePower /= 2;

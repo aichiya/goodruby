@@ -134,7 +134,7 @@ gAbilityNames:: @ 81FA248
 	.string "Download$", 13
 	.string "Rattled$", 13
 	.string "Snow Cloak$", 13
-	.string "MULTISCALE$", 13
+	.string "Multiscale$", 13
 	.string "MAGIC BOUNCE$", 13
 	.string "SAP SIPPER$", 13
 	.string "PRANKSTER$", 13

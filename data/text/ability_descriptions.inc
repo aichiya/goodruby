@@ -394,6 +394,9 @@ gAbilityDescription_Rattled:
 gAbilityDescription_SnowCloak:
 	.string "Ups evasion in a hailstorm.$"
 
+gAbilityDescription_Multiscale:
+	.string "Resilient at full HP.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -532,7 +535,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Download
 	.4byte gAbilityDescription_Rattled
 	.4byte gAbilityDescription_SnowCloak
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Multiscale
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
