@@ -524,7 +524,7 @@ extern struct Pokemon gEnemyParty[PARTY_SIZE];
 extern const u8 *const gItemEffectTable[];
 extern const struct BaseStats gBaseStats[];
 extern const u32 gExperienceTables[][101];
-extern const u16 *gLevelUpLearnsets[];
+extern const u32 *gLevelUpLearnsets[];
 extern const u16 *gEvoMoves[];
 extern struct Evolution gEvolutionTable[][5];
 extern struct PokemonStorage gPokemonStorage;
