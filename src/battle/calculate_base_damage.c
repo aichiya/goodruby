@@ -235,6 +235,8 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         spAttack = (150 * spAttack) / 100;
     if (attacker->ability == ABILITY_GUTS && attacker->status1)
         attack = (150 * attack) / 100;
+	if (attacker->ability == ABILITY_TOXIC_BOOST && (attacker->status1 & (STATUS_POISON | STATUS_TOXIC_POISON)))
+		attack = (150 * attack) / 100;
 	if (attacker->ability == ABILITY_RIVALRY)
 	{
 		u8 atk_gender, def_gender;
