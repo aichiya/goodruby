@@ -259,6 +259,7 @@ s8 GetPokeFlavourRelation(u32 pid, u8 flavor);
 //extern BattleScripts
 extern u8 BattleScript_MoveEnd[];
 extern u8 BattleScript_NoPPForMove[];
+extern u8 BattleScript_Protean[];
 extern u8 BattleScript_MagicCoatBounce[];
 extern u8 BattleScript_MagicBounceBounce[];
 extern u8 BattleScript_TookAttack[];
@@ -1453,6 +1454,28 @@ static void atk00_attackcanceler(void)
     }
 
     gHitMarker |= HITMARKER_OBEYS;
+	
+	if (gBattleMons[gBankAttacker].ability == ABILITY_PROTEAN)
+	{
+		u8 moveType = gBattleMoves[gCurrentMove].type;
+		if (gBattleStruct->dynamicMoveType & 0x3F)
+			moveType = gBattleStruct->dynamicMoveType & 0x3F;
+		
+		if (gBattleMons[gBankAttacker].type1 != moveType || gBattleMons[gBankAttacker].type2 != moveType)
+		{
+			gBattleMons[gBankAttacker].type1 = moveType;
+			gBattleMons[gBankAttacker].type2 = moveType;
+			
+			gBattleTextBuff1[0] = 0xFD;
+			gBattleTextBuff1[1] = 3;
+			gBattleTextBuff1[2] = moveType;
+			gBattleTextBuff1[3] = 0xFF;
+			
+			BattleScriptPushCursor();
+			gBattlescriptCurrInstr = BattleScript_Protean;
+			return;
+		}
+	}
 
     if (gProtectStructs[gBankTarget].bounceMove && !(gWishFutureKnock.reflected) && gBattleMoves[gCurrentMove].flags & F_AFFECTED_BY_MAGIC_COAT)
     {

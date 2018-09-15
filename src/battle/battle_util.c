@@ -1461,7 +1461,7 @@ void TryClearRageStatuses(void)
     }
 }
 
-#define ATKCANCELLER_MAX_CASE 14
+#define ATKCANCELLER_MAX_CASE 15
 
 u8 AtkCanceller_UnableToUseMove(void)
 {
@@ -1728,7 +1728,13 @@ u8 AtkCanceller_UnableToUseMove(void)
             }
             gBattleStruct->atkCancellerTracker++;
             break;
-        case 14: // last case
+		case 14: // protean
+			if (gBattleMons[gBankAttacker].ability == ABILITY_PROTEAN)
+			{
+			}
+            gBattleStruct->atkCancellerTracker++;
+			break;
+        case 15: // last case
             break;
         }
 

@@ -416,3 +416,4 @@
 	enum BATTLE_TEXT_AttackRisen
 	enum BATTLE_TEXT_MoodyStatUp
 	enum BATTLE_TEXT_MoodyStatDown
+	enum BATTLE_TEXT_Protean

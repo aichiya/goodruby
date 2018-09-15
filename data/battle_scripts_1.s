@@ -6560,3 +6560,8 @@ BattleScript_WeakArmorMaxSpeed:
 BattleScript_WeakArmorEnd:
 	return
 
+BattleScript_Protean::
+	printstring BATTLE_TEXT_Protean
+	waitmessage 64
+	return
+	
