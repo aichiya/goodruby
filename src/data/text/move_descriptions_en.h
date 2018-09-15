@@ -1999,8 +1999,8 @@ static const u8 MoveDescription_IcicleCrash[] = _(
     "that may cause flinching.");
 
 static const u8 MoveDescription_DarkPulse[] = _(
-    "Attacks by forming the land\n"
-    "into blades of pure stone.");
+    "Looses a horrible aura.\n"
+    "May cause flinching.");
 
 static const u8 MoveDescription_WoodHammer[] = _(
     "Attacks by forming the land\n"

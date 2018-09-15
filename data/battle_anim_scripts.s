@@ -15297,18 +15297,44 @@ Move_ICICLE_CRASH:
 	createsprite gBasicHitSplatSpriteTemplate, 3, -8, -8, 1, 2
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BANK_TARGET, 6, 0, 4, 1
 	waitforvisualfinish
-	
-	
 	clearmonbg ANIM_BANK_DEF_PARTNER
 	restorebg
 	waitbgfadeout
 	createvisualtask sub_80E2A38, 10, 11, 4, 4, 0, 0
 	waitbgfadein
 	end
-
-
-
+	
 Move_DARK_PULSE:
+	loadspritegfx 10203
+	monbg ANIM_BANK_DEF_PARTNER
+	fadetobg 1
+	waitbgfadein
+	delay 0
+	
+	createsprite gBattleAnimSpriteTemplate_83D79A4, 3, 0, 0, 0, 0, 0x1D09, 12
+	createvisualtask sub_80DE3AC, 2
+	loopsewithpan SE_W060, 63, 20, 3
+	delay 8
+	createsprite gBattleAnimSpriteTemplate_83D79A4, 3, 0, 0, 0, 0, 0x1D09, 12
+	delay 8
+	createsprite gBattleAnimSpriteTemplate_83D79A4, 3, 0, 0, 0, 0, 0x1D09, 12
+	delay 8
+	createsprite gBattleAnimSpriteTemplate_83D79A4, 3, 0, 0, 0, 0, 0x1D09, 12
+	delay 8
+	createsprite gBattleAnimSpriteTemplate_83D79A4, 3, 0, 0, 0, 0, 0x1D09, 12
+	delay 8
+	createsprite gBattleAnimSpriteTemplate_83D79A4, 3, 0, 0, 0, 0, 0x1D09, 12
+	delay 8
+	createsprite gBattleAnimSpriteTemplate_83D79A4, 3, 0, 0, 0, 0, 0x1D09, 12
+	waitforvisualfinish
+
+	clearmonbg ANIM_BANK_DEF_PARTNER
+	delay 1
+	restorebg
+	waitbgfadein
+	end
+
+
 Move_WOOD_HAMMER:
 Move_VACUUM_WAVE:
 Move_POWER_WHIP:
