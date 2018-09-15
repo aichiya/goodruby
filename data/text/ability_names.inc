@@ -147,5 +147,5 @@ gAbilityNames:: @ 81FA248
 	.string "Protean$", 13
 	.string "Toxic Boost$", 13
 	.string "Heavy Metal$", 13
-	.string "STORM DRAIN$", 13
+	.string "Storm Drain$", 13
 

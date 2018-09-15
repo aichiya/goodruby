@@ -424,6 +424,9 @@ gAbilityDescription_Protean:
 gAbilityDescription_ToxicBoost:
 	.string "Ups Attack if poisoned.$"
 
+gAbilityDescription_StormDrain:
+	.string "Turns water into Sp.Atk.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -575,4 +578,4 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Protean
 	.4byte gAbilityDescription_ToxicBoost
 	.4byte gAbilityDescription_HeavyMetal
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_StormDrain

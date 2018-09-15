@@ -2299,6 +2299,30 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 						}
                         effect = 2;
 					}
+					break;
+				case ABILITY_STORM_DRAIN:
+					if (moveType == TYPE_WATER)
+					{
+						if (gBattleMons[bank].statStages[STAT_STAGE_SPATK] == 12)
+						{
+							if ((gProtectStructs[gBankAttacker].notFirstStrike))
+								gBattlescriptCurrInstr = BattleScript_MoveHPDrain_FullHP;
+							else
+								gBattlescriptCurrInstr = BattleScript_MoveHPDrain_FullHP_PPLoss;
+						}
+						else
+						{
+							gBattleMons[bank].statStages[STAT_STAGE_SPATK]++;
+							gBattleStruct->animArg1 = 0xE + STAT_STAGE_SPATK;
+							gBattleStruct->animArg2 = 0;
+							if (gProtectStructs[gBankAttacker].notFirstStrike)
+								gBattlescriptCurrInstr = BattleScript_MoveSAtkDrain;
+							else
+								gBattlescriptCurrInstr = BattleScript_MoveSAtkDrain_PPLoss;
+						}
+                        effect = 2;
+					}
+					break;
 				case ABILITY_SAP_SIPPER:
 					if (moveType == TYPE_GRASS)
 					{
@@ -2321,6 +2345,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 						}
                         effect = 2;
 					}
+					break;
                 case ABILITY_WATER_ABSORB:
 				case ABILITY_DRY_SKIN:
                     if (moveType == TYPE_WATER && gBattleMoves[move].power != 0)

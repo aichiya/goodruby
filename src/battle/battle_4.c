@@ -1512,7 +1512,7 @@ static void atk00_attackcanceler(void)
     if (gSpecialStatuses[gBankTarget].lightningRodRedirected)
     {
         gSpecialStatuses[gBankTarget].lightningRodRedirected = 0;
-        gLastUsedAbility = ABILITY_LIGHTNING_ROD;
+        gLastUsedAbility = gBattleMons[gBankTarget].ability;
         BattleScriptPushCursor();
         gBattlescriptCurrInstr = BattleScript_TookAttack;
         RecordAbilityBattle(gBankTarget, gLastUsedAbility);
