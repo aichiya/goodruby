@@ -427,6 +427,9 @@ gAbilityDescription_ToxicBoost:
 gAbilityDescription_StormDrain:
 	.string "Turns water into Sp.Atk.$"
 
+gAbilityDescription_Infiltrator:
+	.string "Bypasses barriers.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -533,7 +536,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Unaware
 	.4byte gAbilityDescription_FriendGuard
 	.4byte gAbilityDescription_Unimplemented
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Infiltrator
 	.4byte gAbilityDescription_DrySkin
 	.4byte gAbilityDescription_WonderSkin
 	.4byte gAbilityDescription_SandForce

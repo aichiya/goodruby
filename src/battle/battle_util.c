@@ -3371,7 +3371,6 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 						gBattleCommunication[MOVE_EFFECT_BYTE] = 0x2;
 						BattleScriptPushCursor();
 						gBattlescriptCurrInstr = BattleScript_ApplySecondaryEffect;
-						gHitMarker |= HITMARKER_IGNORE_SAFEGUARD;
 						effect++;
 					}
 					break;

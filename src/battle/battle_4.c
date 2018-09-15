@@ -1508,6 +1508,11 @@ static void atk00_attackcanceler(void)
             return;
         }
     }
+	
+	if (gBattleMons[gBankAttacker].ability == ABILITY_INFILTRATOR)
+	{
+		gHitMarker |= HITMARKER_IGNORE_SUBSTITUTE;
+	}
 
     if (gSpecialStatuses[gBankTarget].lightningRodRedirected)
     {
@@ -2905,7 +2910,7 @@ void SetMoveEffect(bool8 primary, u8 certainArg)
     if (gBattleMons[gEffectBank].hp == 0 && gBattleCommunication[MOVE_EFFECT_BYTE] != 0xB && gBattleCommunication[MOVE_EFFECT_BYTE] != 0x1F)
         {gBattlescriptCurrInstr++; return;}
 
-    if (gBattleMons[gEffectBank].status2 & STATUS2_SUBSTITUTE && AffectsUser != EffectAffectsUser)
+    if (gBattleMons[gEffectBank].status2 & STATUS2_SUBSTITUTE && AffectsUser != EffectAffectsUser && gBattleMons[gBankAttacker].ability != ABILITY_INFILTRATOR)
         {gBattlescriptCurrInstr++; return;}
 
     if (gBattleCommunication[MOVE_EFFECT_BYTE] <= 6) //status change
@@ -3565,7 +3570,9 @@ static void atk1D_jumpifstatus2(void)
     u8 bank = GetBattleBank(T2_READ_8(gBattlescriptCurrInstr + 1));
     u32 flags = T2_READ_32(gBattlescriptCurrInstr + 2);
     void* jump_loc = T2_READ_PTR(gBattlescriptCurrInstr + 6);
-    if (gBattleMons[bank].status2 & flags && gBattleMons[bank].hp)
+	if (gBattleMons[gBankAttacker].ability == ABILITY_INFILTRATOR && (flags == STATUS2_SUBSTITUTE) && gBankAttacker != bank)
+		gBattlescriptCurrInstr += 10;
+    else if (gBattleMons[bank].status2 & flags && gBattleMons[bank].hp)
         gBattlescriptCurrInstr = jump_loc;
     else
         gBattlescriptCurrInstr += 10;
@@ -3644,8 +3651,10 @@ static void atk1F_jumpifsideaffecting(void)
 
     flags = T2_READ_16(gBattlescriptCurrInstr + 2);
     jump_loc = T2_READ_PTR(gBattlescriptCurrInstr + 4);
-
-    if (gSideAffecting[side] & flags)
+	
+	if (gBattleMons[gBankAttacker].ability == ABILITY_INFILTRATOR && flags == SIDE_STATUS_SAFEGUARD)
+		gBattlescriptCurrInstr += 8;
+    else if (gSideAffecting[side] & flags)
         gBattlescriptCurrInstr = jump_loc;
     else
         gBattlescriptCurrInstr += 8;
