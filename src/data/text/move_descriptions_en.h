@@ -1995,8 +1995,8 @@ static const u8 MoveDescription_EarthBlades[] = _(
     "into blades of pure stone.");
 
 static const u8 MoveDescription_IcicleCrash[] = _(
-    "Attacks by forming the land\n"
-    "into blades of pure stone.");
+    "Attacks by dropping icicles\n"
+    "that may cause flinching.");
 
 static const u8 MoveDescription_DarkPulse[] = _(
     "Attacks by forming the land\n"

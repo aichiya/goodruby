@@ -15278,6 +15278,36 @@ Move_EARTH_BLADES:
 	end
 
 Move_ICICLE_CRASH:
+	loadspritegfx 10262
+	loadspritegfx 10135
+	monbg ANIM_BANK_DEF_PARTNER
+	createvisualtask sub_80E2A38, 10, 11, 4, 0, 4, 0
+	fadetobg 15
+	waitbgfadeout
+	waitbgfadein
+	waitforvisualfinish
+	playsewithpan SE_W196, 192
+	createsprite gIcicleSpearSpriteTemplate, 2, 20, -8, -18, 0, 24, -80
+	createsprite gIcicleSpearSpriteTemplate, 2, 20, -8, -9, 0, 24, -80
+	createsprite gIcicleSpearSpriteTemplate, 2, 20, -8, 0, 0, 24, -80
+	createsprite gIcicleSpearSpriteTemplate, 2, 20, -8, 9, 0, 24, -80
+	createsprite gIcicleSpearSpriteTemplate, 2, 20, -8, 18, 0, 24, -80
+	waitforvisualfinish
+	loopsewithpan SE_W280, 63, 4, 3
+	createsprite gBasicHitSplatSpriteTemplate, 3, -8, -8, 1, 2
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BANK_TARGET, 6, 0, 4, 1
+	waitforvisualfinish
+	
+	
+	clearmonbg ANIM_BANK_DEF_PARTNER
+	restorebg
+	waitbgfadeout
+	createvisualtask sub_80E2A38, 10, 11, 4, 4, 0, 0
+	waitbgfadein
+	end
+
+
+
 Move_DARK_PULSE:
 Move_WOOD_HAMMER:
 Move_VACUUM_WAVE:
