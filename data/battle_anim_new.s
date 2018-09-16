@@ -268,3 +268,12 @@ gSpriteAnimSpriteTemplate_PowerTrickB::
 gBattleAnimSpriteTemplate_Acupressure::
 	spr_template 10301, 10301, gOamData_837DFF4, gDummySpriteAnimTable, NULL, gDummySpriteAffineAnimTable, sub_80CC6CC
 
+	.align 2
+gBattleAnimSpriteTemplate_Avalanche1::
+	spr_template 10058, 10302, gOamData_837DF34, gSpriteAnimTable_83DAC40, NULL, gDummySpriteAffineAnimTable, sub_80DCE9C
+
+	.align 2
+gBattleAnimSpriteTemplate_Avalanche2::
+	spr_template 10058, 10302, gOamData_837DF34, gSpriteAnimTable_83DAC40, NULL, gDummySpriteAffineAnimTable, sub_80DCE9C
+
+

@@ -15408,6 +15408,27 @@ Move_POWER_WHIP:
 	end
 	
 Move_AVALANCHE:
+	loadspritegfx 10058
+	loadspritegfx 10302
+	createsprite gBattleAnimSpriteTemplate_83DB428, 130, 6, 1, 15, 1
+	createsprite gBattleAnimSpriteTemplate_Avalanche1, 130, 0, 1, 0, 0
+	playsewithpan SE_W088, 63
+	delay 6
+	createsprite gBattleAnimSpriteTemplate_Avalanche1, 130, 19, 1, 10, 0
+	playsewithpan SE_W088, 63
+	delay 6
+	createsprite gBattleAnimSpriteTemplate_Avalanche1, 130, -23, 2, -10, 0
+	playsewithpan SE_W088, 63
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_TARGET, 0, 5, 20, 1
+	delay 6
+	createsprite gBattleAnimSpriteTemplate_Avalanche1, 130, -15, 1, -10, 0
+	playsewithpan SE_W088, 63
+	delay 6
+	createsprite gBattleAnimSpriteTemplate_Avalanche1, 130, 23, 2, 10, 0
+	playsewithpan SE_W088, 63
+	waitforvisualfinish
+	end
+
 Move_WORK_UP:
 Move_AURA_SPHERE:
 Move_PSYSTRIKE:

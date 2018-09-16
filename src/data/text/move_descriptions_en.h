@@ -2011,12 +2011,12 @@ static const u8 MoveDescription_VacuumWave[] = _(
     "that always strikes first.");
 
 static const u8 MoveDescription_PowerWhip[] = _(
-    "Attacks by forming the land\n"
-    "into blades of pure stone.");
+    "Violently lashes out with\n"
+    "vines, tentacles, etc.");
 
 static const u8 MoveDescription_Avalanche[] = _(
-    "Attacks by forming the land\n"
-    "into blades of pure stone.");
+    "An attack that gains power\n"
+    "if injured by the foe.");
 
 static const u8 MoveDescription_WorkUp[] = _(
     "Attacks by forming the land\n"

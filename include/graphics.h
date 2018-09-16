@@ -3309,6 +3309,7 @@ extern struct CompressedSpritePalette gBattleAnimSpritePalette_297;
 extern struct CompressedSpritePalette gBattleAnimSpritePalette_298;
 extern struct CompressedSpritePalette gBattleAnimSpritePalette_299;
 extern struct CompressedSpritePalette gBattleAnimSpritePalette_300;
+extern struct CompressedSpritePalette gBattleAnimSpritePalette_302;
 
 extern struct BattleAnimBackground gBattleAnimBackgroundImage_00;
 extern struct BattleAnimBackground gBattleAnimBackgroundImage_02;
