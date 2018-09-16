@@ -2023,12 +2023,12 @@ static const u8 MoveDescription_WorkUp[] = _(
     "Attack and Sp.Atk.");
 
 static const u8 MoveDescription_AuraSphere[] = _(
-    "Attacks by forming the land\n"
-    "into blades of pure stone.");
+    "A burst of spirit energy\n"
+    "that never misses.");
 
 static const u8 MoveDescription_Psystrike[] = _(
-    "Attacks by forming the land\n"
-    "into blades of pure stone.");
+    "An brutal psychic wave\n"
+    "that does physical damage.");
 
 static const u8 MoveDescription_UTurn[] = _(
     "Attacks by forming the land\n"

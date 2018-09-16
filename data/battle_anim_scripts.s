@@ -15495,6 +15495,23 @@ _AuraSphereBG10:
 	goto _AuraSphereRejoin
 
 Move_PSYSTRIKE:
+	monbg ANIM_BANK_DEF_PARTNER
+	setalpha 8, 8
+	waitforvisualfinish
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BANK_ATTACKER, 1, 0, 10, 1
+	createvisualtask sub_80E1F8C, 2, 2, 0, 2, 0, 8, rgb(31, 0, 0)
+	waitforvisualfinish
+	createvisualtask sub_80E2324, 2, 257, 257, 257
+	loopsewithpan SE_W048, 63, 10, 3
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_TARGET, 5, 0, 15, 1
+	createvisualtask AnimTask_ScaleMonAndRestore, 5, -9, -9, 15, ANIM_BANK_TARGET, 1
+	waitforvisualfinish
+	createvisualtask sub_80E2324, 2, 257, 257, 257
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_DEF_PARTNER
+	blendoff
+	end
+
 Move_U_TURN:
 Move_ACROBATICS:
 	end

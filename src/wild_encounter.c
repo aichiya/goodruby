@@ -1422,7 +1422,7 @@ const struct WildPokemonInfo SkyPillar_5F_LandMonsInfo = {10, SkyPillar_5F_LandM
 
 const struct WildPokemon Route101_LandMons [] =
 {
-    {50, 50, SPECIES_TAUROS},
+    {100, 100, SPECIES_MEWTWO},
     {50, 50, SPECIES_TAUROS},
     {50, 50, SPECIES_TAUROS},
     {50, 50, SPECIES_TAUROS},
