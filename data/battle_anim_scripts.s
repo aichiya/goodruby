@@ -15432,7 +15432,6 @@ Move_AVALANCHE:
 Move_WORK_UP:
 	loadspritegfx 10184
 	playsewithpan SE_W082, 192
-	
 	createsprite gBattleAnimSpriteTemplate_EndureFlame, 2, 0, -28, 26, 2
 	createsprite gBattleAnimSpriteTemplate_EndureFlame, 2, 0, 28, 26, 2
 	delay 5
@@ -15442,12 +15441,8 @@ Move_WORK_UP:
 	createsprite gBattleAnimSpriteTemplate_EndureFlame, 2, 0, -18, 26, 3
 	createsprite gBattleAnimSpriteTemplate_EndureFlame, 2, 0, 18, 26, 3
 	delay 14
-
 	createvisualtask sub_80E1F8C, 2, 2, 2, 2, 0, 11, 0x105F
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BANK_ATTACKER, 1, 0, 32, 1
-
-
-	
 	createsprite gBattleAnimSpriteTemplate_EndureFlame, 2, 0, -13, 26, 2
 	createsprite gBattleAnimSpriteTemplate_EndureFlame, 2, 0, 13, 26, 2
 	delay 5
@@ -15457,7 +15452,6 @@ Move_WORK_UP:
 	createsprite gBattleAnimSpriteTemplate_EndureFlame, 2, 0, -3, 26, 3
 	createsprite gBattleAnimSpriteTemplate_EndureFlame, 2, 0, 3, 26, 3
 	delay 14
-	
 	createsprite gBattleAnimSpriteTemplate_EndureFlame, 2, 0, -2, 26, 2
 	createsprite gBattleAnimSpriteTemplate_EndureFlame, 2, 0, 2, 26, 2
 	delay 5
@@ -15466,12 +15460,40 @@ Move_WORK_UP:
 	delay 5
 	createsprite gBattleAnimSpriteTemplate_EndureFlame, 2, 0, -12, 26, 3
 	createsprite gBattleAnimSpriteTemplate_EndureFlame, 2, 0, 12, 26, 3
-
 	waitforvisualfinish
 	end
 
-
 Move_AURA_SPHERE:
+	loadspritegfx 10303
+	monbg ANIM_BANK_DEF_PARTNER
+	createvisualtask sub_80E3B4C, 2
+	jumpargeq 7, 1, _AuraSphereBG10
+	fadetobg 9
+_AuraSphereRejoin:
+	waitbgfadeout
+	createvisualtask sub_80E3A58, 5, -2304, 0, 1, -1
+	waitbgfadein
+	waitforvisualfinish
+
+	playsewithpan SE_W081, 192
+	createsprite gBattleAnimSpriteTemplate_AuraSphere, 130, 4, 32, 8
+	waitforvisualfinish
+	loopsewithpan SE_W048, 63, 10, 3
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_TARGET, 5, 0, 15, 1
+	createvisualtask AnimTask_ScaleMonAndRestore, 5, -6, -6, 15, ANIM_BANK_TARGET, 1
+	waitforvisualfinish
+
+	clearmonbg ANIM_BANK_DEF_PARTNER
+	delay 20
+	restorebg
+	waitbgfadeout
+	setarg 7, -1
+	waitbgfadein
+	end
+_AuraSphereBG10:
+	fadetobg 10
+	goto _AuraSphereRejoin
+
 Move_PSYSTRIKE:
 Move_U_TURN:
 Move_ACROBATICS:

@@ -232,6 +232,10 @@ gBattleAnimSpritePalette_300::
 	.align 2
 gBattleAnimSpritePalette_302::
 	.incbin "graphics/battle_anims/sprites/302.gbapal.lz"
+	
+	.align 2
+gBattleAnimSpritePalette_303::
+	.incbin "graphics/battle_anims/sprites/303.gbapal.lz"
 
 	.align 2
 gBattleAnimSpriteSheet_161:: @ 8D0374C
@@ -2509,6 +2513,10 @@ gBattleAnimSpriteSheet_297:: @ 8D2EFF0
 	.align 2
 gBattleAnimSpriteSheet_301:: @ 8D2EFF0
 	.incbin "graphics/battle_anims/sprites/301.4bpp.lz"
+
+	.align 2
+gBattleAnimSpriteSheet_303:: @ 8D2EFF0
+	.incbin "graphics/battle_anims/sprites/303.4bpp.lz"
 
 	.align 2
 gBattleAnimSpriteSheet_251:: @ 8D2F1E4

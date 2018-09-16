@@ -3023,6 +3023,7 @@ extern struct CompressedSpriteSheet gBattleAnimSpriteSheet_285;
 extern struct CompressedSpriteSheet gBattleAnimSpriteSheet_292;
 extern struct CompressedSpriteSheet gBattleAnimSpriteSheet_297;
 extern struct CompressedSpriteSheet gBattleAnimSpriteSheet_301;
+extern struct CompressedSpriteSheet gBattleAnimSpriteSheet_303;
 
 extern struct CompressedSpritePalette gBattleAnimSpritePalette_000;
 extern struct CompressedSpritePalette gBattleAnimSpritePalette_001;
@@ -3310,6 +3311,7 @@ extern struct CompressedSpritePalette gBattleAnimSpritePalette_298;
 extern struct CompressedSpritePalette gBattleAnimSpritePalette_299;
 extern struct CompressedSpritePalette gBattleAnimSpritePalette_300;
 extern struct CompressedSpritePalette gBattleAnimSpritePalette_302;
+extern struct CompressedSpritePalette gBattleAnimSpritePalette_303;
 
 extern struct BattleAnimBackground gBattleAnimBackgroundImage_00;
 extern struct BattleAnimBackground gBattleAnimBackgroundImage_02;
