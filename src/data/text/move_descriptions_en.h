@@ -2003,12 +2003,12 @@ static const u8 MoveDescription_DarkPulse[] = _(
     "May cause flinching.");
 
 static const u8 MoveDescription_WoodHammer[] = _(
-    "Attacks by forming the land\n"
-    "into blades of pure stone.");
+    "A life-risking tackle that\n"
+    "also hurts the user.");
 
 static const u8 MoveDescription_VacuumWave[] = _(
-    "Attacks by forming the land\n"
-    "into blades of pure stone.");
+    "An extremely fast attack\n"
+    "that always strikes first.");
 
 static const u8 MoveDescription_PowerWhip[] = _(
     "Attacks by forming the land\n"

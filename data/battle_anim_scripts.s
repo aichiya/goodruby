@@ -15334,10 +15334,79 @@ Move_DARK_PULSE:
 	waitbgfadein
 	end
 
-
 Move_WOOD_HAMMER:
+	loadspritegfx 10135
+	monbg ANIM_BANK_DEF_PARTNER
+	setalpha 12, 8
+	playsewithpan SE_W207, 192
+	createvisualtask AnimTask_TranslateMonEllipticalRespectSide, 2, ANIM_BANK_ATTACKER, 18, 6, 2, 4
+	waitforvisualfinish
+	createsprite gSlideMonToOffsetSpriteTemplate, 2, 0, 20, 0, 0, 4
+	delay 3
+	createsprite gBattleAnimSpriteTemplate_83DB3DC, 2, 31, 3, 1, 0, 10, 0, 0
+	createsprite gBasicHitSplatSpriteTemplate, 4, -10, 0, 1, 0
+	playsewithpan SE_W025B, 63
+	delay 1
+	createsprite gSlideMonToOffsetSpriteTemplate, 2, 1, -16, 0, 0, 4
+	waitforvisualfinish
+	createvisualtask AnimTask_ShakeMonInPlace, 2, ANIM_BANK_TARGET, 4, 0, 12, 1
+	waitforvisualfinish
+	delay 2
+	createsprite gSlideMonToOriginalPosSpriteTemplate, 2, 0, 0, 5
+	delay 3
+	createsprite gSlideMonToOriginalPosSpriteTemplate, 2, 1, 0, 7
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_DEF_PARTNER
+	blendoff
+	end
+
 Move_VACUUM_WAVE:
+	loadspritegfx 10203
+	loadspritegfx 10135
+	loadspritegfx 10143
+	monbg ANIM_BANK_TARGET
+	setalpha 12, 8
+	createsprite gBasicHitSplatSpriteTemplate, 2, 8, -8, 1, 2
+	createsprite gFistFootSpriteTemplate, 3, 8, 0, 8, 1, 0
+	createsprite gBattleAnimSpriteTemplate_83D79A4, 3, 0, 0, 1, 0, 0x7FFF, 3
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_TARGET, 3, 0, 6, 1
+	playsewithpan SE_W004, 63
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_TARGET
+	blendoff
+	end
+
 Move_POWER_WHIP:
+	loadspritegfx 10056
+	loadspritegfx 10135
+	monbg ANIM_BANK_DEF_PARTNER
+	monbgprio_2A ANIM_BANK_TARGET
+	setalpha 12, 8
+	createsprite gSimplePaletteBlendSpriteTemplate, 2, 1, 1, 0, 12, rgb(13, 31, 12)
+	waitforvisualfinish
+	
+	playsewithpan SE_W004, 192
+	createsprite gSlideMonToOffsetSpriteTemplate, 2, 0, 20, 3, 0, 4
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83D69DC, 2, 0, 0
+	delay 3
+	playsewithpan SE_W025B, 63
+	createsprite gBasicHitSplatSpriteTemplate, 3, 0, 0, 1, 1
+	createsprite gSlideMonToOffsetSpriteTemplate, 2, 1, -12, 10, 0, 3
+	createsprite gSlideMonToOriginalPosSpriteTemplate, 2, 0, 0, 5
+	delay 3
+	createvisualtask AnimTask_ShakeMonInPlace, 2, ANIM_BANK_TARGET, 0, 3, 6, 1
+	waitforvisualfinish
+	delay 5
+	createsprite gSlideMonToOriginalPosSpriteTemplate, 2, 1, 0, 6
+	waitforvisualfinish
+
+	createsprite gSimplePaletteBlendSpriteTemplate, 2, 1, 1, 12, 0, rgb(13, 31, 12)
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_DEF_PARTNER
+	blendoff
+	end
+	
 Move_AVALANCHE:
 Move_WORK_UP:
 Move_AURA_SPHERE:
