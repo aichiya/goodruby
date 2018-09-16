@@ -2019,8 +2019,8 @@ static const u8 MoveDescription_Avalanche[] = _(
     "if injured by the foe.");
 
 static const u8 MoveDescription_WorkUp[] = _(
-    "Attacks by forming the land\n"
-    "into blades of pure stone.");
+    "Rouses emotion to raise\n"
+    "Attack and Sp.Atk.");
 
 static const u8 MoveDescription_AuraSphere[] = _(
     "Attacks by forming the land\n"

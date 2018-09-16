@@ -15430,6 +15430,47 @@ Move_AVALANCHE:
 	end
 
 Move_WORK_UP:
+	loadspritegfx 10184
+	playsewithpan SE_W082, 192
+	
+	createsprite gBattleAnimSpriteTemplate_EndureFlame, 2, 0, -28, 26, 2
+	createsprite gBattleAnimSpriteTemplate_EndureFlame, 2, 0, 28, 26, 2
+	delay 5
+	createsprite gBattleAnimSpriteTemplate_EndureFlame, 2, 0, -23, 10, 2
+	createsprite gBattleAnimSpriteTemplate_EndureFlame, 2, 0, 23, 10, 2
+	delay 5
+	createsprite gBattleAnimSpriteTemplate_EndureFlame, 2, 0, -18, 26, 3
+	createsprite gBattleAnimSpriteTemplate_EndureFlame, 2, 0, 18, 26, 3
+	delay 14
+
+	createvisualtask sub_80E1F8C, 2, 2, 2, 2, 0, 11, 0x105F
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BANK_ATTACKER, 1, 0, 32, 1
+
+
+	
+	createsprite gBattleAnimSpriteTemplate_EndureFlame, 2, 0, -13, 26, 2
+	createsprite gBattleAnimSpriteTemplate_EndureFlame, 2, 0, 13, 26, 2
+	delay 5
+	createsprite gBattleAnimSpriteTemplate_EndureFlame, 2, 0, -8, 10, 2
+	createsprite gBattleAnimSpriteTemplate_EndureFlame, 2, 0, 8, 10, 2
+	delay 5
+	createsprite gBattleAnimSpriteTemplate_EndureFlame, 2, 0, -3, 26, 3
+	createsprite gBattleAnimSpriteTemplate_EndureFlame, 2, 0, 3, 26, 3
+	delay 14
+	
+	createsprite gBattleAnimSpriteTemplate_EndureFlame, 2, 0, -2, 26, 2
+	createsprite gBattleAnimSpriteTemplate_EndureFlame, 2, 0, 2, 26, 2
+	delay 5
+	createsprite gBattleAnimSpriteTemplate_EndureFlame, 2, 0, -7, 10, 2
+	createsprite gBattleAnimSpriteTemplate_EndureFlame, 2, 0, 7, 10, 2
+	delay 5
+	createsprite gBattleAnimSpriteTemplate_EndureFlame, 2, 0, -12, 26, 3
+	createsprite gBattleAnimSpriteTemplate_EndureFlame, 2, 0, 12, 26, 3
+
+	waitforvisualfinish
+	end
+
+
 Move_AURA_SPHERE:
 Move_PSYSTRIKE:
 Move_U_TURN:
