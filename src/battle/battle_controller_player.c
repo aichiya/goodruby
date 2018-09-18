@@ -1327,7 +1327,7 @@ void sub_802D924(u8 taskId)
 {
     u32 pkmnIndex = (u8)gTasks[taskId].data[0];
     u8 bank = gTasks[taskId].data[2];
-    s16 gainedExp = gTasks[taskId].data[1];
+    u32 gainedExp = (u16)gTasks[taskId].data[1] | ((u16)gTasks[taskId].data[3] << 16);
 
     if (IsDoubleBattle() == TRUE || pkmnIndex != gBattlerPartyIndexes[bank])
     {
@@ -1346,7 +1346,7 @@ void sub_802D924(u8 taskId)
             gainedExp -= nextLvlExp - currExp;
             savedActiveBank = gActiveBattler;
             gActiveBattler = bank;
-            Emitcmd33(1, 11, gainedExp);
+            Emitcmd33long(1, 11, gainedExp);
             gActiveBattler = savedActiveBank;
 
             if (IsDoubleBattle() == TRUE
@@ -2889,16 +2889,19 @@ void PlayerHandleExpBarUpdate(void)
     }
     else
     {
-        u16 r4;
+        u16 exp1, exp2;
         u8 taskId;
 
         load_gfxc_health_bar(1);
         GetMonData(&gPlayerParty[r7], MON_DATA_SPECIES);  // unused return value
-        r4 = gBattleBufferA[gActiveBattler][2] | (gBattleBufferA[gActiveBattler][3] << 8);
+        exp1 = gBattleBufferA[gActiveBattler][2] | (gBattleBufferA[gActiveBattler][3] << 8);
+		exp2 = gBattleBufferA[gActiveBattler][4] | (gBattleBufferA[gActiveBattler][5] << 8);
         taskId = CreateTask(sub_802D924, 10);
         gTasks[taskId].data[0] = r7;
-        gTasks[taskId].data[1] = r4;
+        gTasks[taskId].data[1] = exp1;
         gTasks[taskId].data[2] = gActiveBattler;
+		gTasks[taskId].data[3] = exp2;
+		
         gBattleBankFunc[gActiveBattler] = nullsub_91;
     }
 }

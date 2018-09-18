@@ -4262,12 +4262,14 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Shelby5[] = {
     }
 };
 
-const struct TrainerMonNoItemDefaultMoves gTrainerParty_Calvin1[] = {
+const struct TrainerMonItemCustomMoves gTrainerParty_Calvin1[] = {
     {
-	.iv = 0,
-	.level = 5,
-	.species = SPECIES_ZIGZAGOON
-    }
+	.iv = 255,
+	.level = 100,
+	.species = SPECIES_BLISSEY,
+        .heldItem = ITEM_NONE,
+        .moves = MOVE_EXPLOSION, MOVE_EXPLOSION, MOVE_EXPLOSION, MOVE_EXPLOSION
+    },
 };
 
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Billy[] = {

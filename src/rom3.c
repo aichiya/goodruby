@@ -883,13 +883,15 @@ void EmitHealthBarUpdate(u8 a, u16 b)
 
 // FIXME: I think this function is supposed to take s16 as its third argument,
 // but battle_4.c expects u16
-void EmitExpBarUpdate(u8 a, u8 b, u16 c)
+void EmitExpBarUpdate(u8 a, u8 b, u32 c)
 {
     gBattleBuffersTransferData[0] = 25;
     gBattleBuffersTransferData[1] = b;
-    gBattleBuffersTransferData[2] = (s16)c;
-    gBattleBuffersTransferData[3] = ((s16)c & 0xFF00) >> 8;
-    PrepareBufferDataTransfer(a, gBattleBuffersTransferData, 4);
+    gBattleBuffersTransferData[2] = (c & 0x000000FF);
+    gBattleBuffersTransferData[3] = (c & 0x0000FF00) >> 8;
+    gBattleBuffersTransferData[4] = (c & 0x00FF0000) >> 16;
+    gBattleBuffersTransferData[5] = (c & 0xFF000000) >> 24;
+    PrepareBufferDataTransfer(a, gBattleBuffersTransferData, 6);
 }
 
 void EmitStatusIconUpdate(u8 a, u32 b, u32 c)
@@ -981,9 +983,22 @@ void Emitcmd33(u8 a, u8 b, u16 c)
 {
     gBattleBuffersTransferData[0] = 33;
     gBattleBuffersTransferData[1] = b;
-    gBattleBuffersTransferData[2] = c;
-    gBattleBuffersTransferData[3] = (c & 0xFF00) >> 8;
-    PrepareBufferDataTransfer(a, gBattleBuffersTransferData, 4);
+    gBattleBuffersTransferData[2] = (c & 0x000000FF);
+    gBattleBuffersTransferData[3] = (c & 0x0000FF00) >> 8;
+    gBattleBuffersTransferData[4] = 0;
+    gBattleBuffersTransferData[5] = 0;
+    PrepareBufferDataTransfer(a, gBattleBuffersTransferData, 6);
+}
+
+void Emitcmd33long(u8 a, u8 b, u32 c)
+{
+    gBattleBuffersTransferData[0] = 33;
+    gBattleBuffersTransferData[1] = b;
+    gBattleBuffersTransferData[2] = (c & 0x000000FF);
+    gBattleBuffersTransferData[3] = (c & 0x0000FF00) >> 8;
+    gBattleBuffersTransferData[4] = (c & 0x00FF0000) >> 16;
+    gBattleBuffersTransferData[5] = (c & 0xFF000000) >> 24;
+    PrepareBufferDataTransfer(a, gBattleBuffersTransferData, 6);
 }
 
 void Emitcmd34(u8 a, u8 b, u8 *c)
