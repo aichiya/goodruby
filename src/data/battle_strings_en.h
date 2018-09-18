@@ -420,6 +420,7 @@ enum
 	BATTLE_TEXT_MoodyStatUp,
 	BATTLE_TEXT_MoodyStatDown,
 	BATTLE_TEXT_Protean,
+	BATTLE_TEXT_ReturnToTrainer,
 };
 
 const u8 BattleText_UnknownString[] = _("{STRING 33}");
@@ -970,6 +971,7 @@ const u8 BattleText_AttackRisen[] = _("{DEFENDING_MON}’s {STRING 22}\nraised i
 const u8 BattleText_MoodyStatUp[] = _("{STRING 16}’s Moody\nsharply raised its {STRING 0}!");
 const u8 BattleText_MoodyStatDown[] = _("{STRING 16}’s Moody\nlowered its {STRING 1}!");
 const u8 BattleText_Protean[] = _("{ATTACKING_MON}’s Protean\nmade it the {STRING 0} type!");
+const u8 BattleText_ReturnToTrainer[] = _("{ATTACKING_MON} went back\nto its Trainer!");
 
 
 const u8 *const gUnknown_08400F58[] =
@@ -1413,6 +1415,7 @@ const u8 *const gBattleStringsTable[] =
 	BattleText_MoodyStatUp,
 	BattleText_MoodyStatDown,
 	BattleText_Protean,
+	BattleText_ReturnToTrainer,
 };
 
 // below are lists of battle string enums and NOT pointers to the strings.

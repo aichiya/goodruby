@@ -6489,6 +6489,7 @@ BattleScript_Growth2End:
 BattleScript_EffectUTurn:
 	attackcanceler
 	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
 	ppreduce
 	critcalc
 	damagecalc
@@ -6507,10 +6508,17 @@ BattleScript_EffectUTurn:
 	waitmessage 64
 	seteffectwithchance
 	tryfaintmon TARGET, FALSE, NULL
+	setbyte sMOVEEND_STATE, 0
+	moveend 0, 0
 	
-	jumpifmovehadnoeffect BattleScriptFinishUTurn
-	jumpifcantswitch ATK4F_DONT_CHECK_STATUSES | USER, BattleScriptFinishUTurn
-	openpartyscreen USER, BattleScript_ButItFailed
+	jumpifmovehadnoeffect BattleScript_FinishUTurn
+	jumpifcantswitch ATK4F_DONT_CHECK_STATUSES | USER, BattleScript_FinishUTurn
+	special 0x3E
+	printstring BATTLE_TEXT_ReturnToTrainer
+	waitmessage 64
+	playanimation USER, B_ANIM_RETURN_TO_TRAINER, NULL
+	
+	openpartyscreen USER, BattleScript_FinishUTurn
 	switchoutabilities USER
 	waitstate
 	switchhandleorder USER, 2
@@ -6524,9 +6532,7 @@ BattleScript_EffectUTurn:
 	special 0x36
 	switchineffects USER
 	
-BattleScriptFinishUTurn:
-	setbyte sMOVEEND_STATE, 0
-	moveend 0, 0
+BattleScript_FinishUTurn::
 	end
 
 BattleScript_WeakArmorActivates::

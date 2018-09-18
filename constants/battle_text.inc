@@ -417,3 +417,4 @@
 	enum BATTLE_TEXT_MoodyStatUp
 	enum BATTLE_TEXT_MoodyStatDown
 	enum BATTLE_TEXT_Protean
+	enum BATTLE_TEXT_ReturnToTrainer

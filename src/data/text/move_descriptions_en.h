@@ -2031,12 +2031,12 @@ static const u8 MoveDescription_Psystrike[] = _(
     "that does physical damage.");
 
 static const u8 MoveDescription_UTurn[] = _(
-    "Attacks by forming the land\n"
-    "into blades of pure stone.");
+    "After attacking, switches\n"
+    "to another Pokémon.");
 
 static const u8 MoveDescription_Acrobatics[] = _(
-    "Attacks by forming the land\n"
-    "into blades of pure stone.");
+    "A nimble strike. Stronger\n"
+    "if not holding an item.");
 
 
 const u8 * const gMoveDescriptions[] = {

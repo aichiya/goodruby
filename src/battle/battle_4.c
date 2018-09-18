@@ -330,6 +330,7 @@ extern u8 BattleScript_AbsorbToxicSpikes[];
 extern u8 BattleScript_IncinerateDestroyBerry[];
 extern u8 BattleScript_LiftedProtect[];
 extern u8 BattleScript_SpikyShieldRecoil[];
+extern u8 BattleScript_FinishUTurn[];
 
 extern const u8 gStatusConditionString_PoisonJpn[];
 extern const u8 gStatusConditionString_SleepJpn[];
@@ -707,6 +708,7 @@ static void sp3A_mefirst(void);
 static void sp3B_powerswap(void);
 static void sp3C_guardswap(void);
 static void sp3D_psychoshiftsleep(void);
+static void sp3E_uturncheck(void);
 
 
 void (* const gBattleScriptingCommandsTable[])(void) =
@@ -13276,6 +13278,7 @@ void (* const gBattleScriptingSpecialTable[])(void) =
 	sp3B_powerswap,
 	sp3C_guardswap,
 	sp3D_psychoshiftsleep,
+	sp3E_uturncheck,
 };
 
 
@@ -14707,4 +14710,34 @@ static void sp3D_psychoshiftsleep(void)
     gActiveBattler = gBankAttacker;
     EmitSetMonData(0, REQUEST_STATUS_BATTLE, 0, 4, &gBattleMons[gBankAttacker].status1);
     MarkBufferBankForExecution(gBankAttacker);
+}
+
+static void sp3E_uturncheck(void)
+{
+    u16 HP_count = 0;
+	u8 i;
+	
+	if (gBattleMons[gBankAttacker].hp == 0)
+	{
+		gBattlescriptCurrInstr = BattleScript_FinishUTurn;
+		return;
+	}
+	
+    for (i = 0; i < 6; i++)
+    {
+        if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) && !GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG))
+            HP_count += GetMonData(&gPlayerParty[i], MON_DATA_HP);
+    }
+    if (HP_count == 0)
+	{
+		gBattlescriptCurrInstr = BattleScript_FinishUTurn;
+		return;
+	}
+	for (HP_count = 0, i = 0; i < 6; i++)
+	{
+		if (GetMonData(&gEnemyParty[i], MON_DATA_SPECIES) && !GetMonData(&gEnemyParty[i], MON_DATA_IS_EGG))
+			HP_count += GetMonData(&gEnemyParty[i], MON_DATA_HP);
+	}
+	if (!HP_count)
+		gBattlescriptCurrInstr = BattleScript_FinishUTurn;
 }

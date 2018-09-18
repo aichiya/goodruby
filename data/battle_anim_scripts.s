@@ -570,6 +570,7 @@ gBattleAnims_General:: @ 81C771C
 	.4byte General_WishHeal
 	.4byte General_KnockedAway
 	.4byte General_Imposter
+	.4byte General_ReturnToTrainer
 
 	.align 2
 gBattleAnims_Special:: @ 81C7778
@@ -15513,8 +15514,59 @@ Move_PSYSTRIKE:
 	end
 
 Move_U_TURN:
-Move_ACROBATICS:
+	loadspritegfx 10135
+	monbg ANIM_BANK_DEF_PARTNER
+	monbgprio_28 1
+	setalpha 12, 8
+	createsprite gSlideMonToOffsetSpriteTemplate, 2, 0, 28, 0, 0, 5
+	delay 4
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BANK_TARGET, 4, 0, 6, 1
+	playsewithpan SE_W233B, 63
+	createsprite gBasicHitSplatSpriteTemplate, 131, -28, 28, 1, 1
+	delay 1
+	playsewithpan SE_W233B, 63
+	createsprite gBasicHitSplatSpriteTemplate, 131, -15, 8, 1, 1
+	playsewithpan SE_W233B, 63
+	delay 1
+	playsewithpan SE_W233B, 63
+	createsprite gBasicHitSplatSpriteTemplate, 131, -5, -12, 1, 1
+	delay 1
+	playsewithpan SE_W233B, 63
+	createsprite gBasicHitSplatSpriteTemplate, 131, 0, -32, 1, 1
+	delay 1
+	playsewithpan SE_W233B, 63
+	createsprite gBasicHitSplatSpriteTemplate, 131, 5, -52, 1, 1
+	createsprite gSlideMonToOffsetSpriteTemplate, 2, 1, -26, 16, 1, 4
+	delay 4
+	createvisualtask AnimTask_ShakeMonInPlace, 2, ANIM_BANK_TARGET, 0, 3, 6, 1
+	delay 30
+	createsprite gSlideMonToOriginalPosSpriteTemplate, 2, 0, 0, 6
+	delay 4
+	createsprite gSlideMonToOriginalPosSpriteTemplate, 2, 1, 0, 6
+	clearmonbg ANIM_BANK_DEF_PARTNER
+	blendoff
 	end
+
+Move_ACROBATICS:
+	loadspritegfx 10156
+	loadspritegfx 10135
+	monbg ANIM_BANK_DEF_PARTNER
+	setalpha 12, 8
+	playsewithpan SE_W019, 192
+	createsprite gBattleAnimSpriteTemplate_83DA450, 2, 0, 0, 13, 336
+	waitforvisualfinish
+	
+	playsewithpan SE_W207, 63
+	createsprite gBattleAnimSpriteTemplate_83DA594, 131
+	delay 7
+	playsewithpan SE_W025B, 63
+	createsprite gBasicHitSplatSpriteTemplate, 130, 0, 0, 1, 0
+	createvisualtask AnimTask_ShakeMon, 5, 1, 0, 5, 11, 1
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_DEF_PARTNER
+	blendoff
+	end
+	
 
 General_Imposter:
 	createvisualtask sub_8141E10, 5
@@ -15527,3 +15579,10 @@ General_Imposter:
 	clearmonbg ANIM_BANK_ATTACKER
 	end
 
+General_ReturnToTrainer:
+	playsewithpan SE_W104, 63
+	createvisualtask sub_80A8A80, 5, 0, 8
+	waitforvisualfinish
+	createsprite gBattleAnimSpriteTemplate_84024D0, 2
+	waitforvisualfinish
+	end

@@ -275,5 +275,3 @@ gBattleAnimSpriteTemplate_Avalanche1::
 	.align 2
 gBattleAnimSpriteTemplate_AuraSphere::
 	spr_template 10303, 10303, gOamData_837DF94, gDummySpriteAnimTable, NULL, gSpriteAffineAnimTable_83DAEA4, sub_80DDF40
-
-

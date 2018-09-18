@@ -6623,7 +6623,7 @@ const struct BattleMove gBattleMoves[] = {
     },
 
     [MOVE_U_TURN] = {
-        .effect = EFFECT_HIT,
+        .effect = EFFECT_U_TURN,
         .power = 70,
         .type = TYPE_BUG,
         .accuracy = 100,
