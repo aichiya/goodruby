@@ -463,18 +463,18 @@ const struct WildPokemonInfo GraniteCave_StevensRoom_LandMonsInfo = {10, Granite
 
 const struct WildPokemon PetalburgWoods_LandMons [] =
 {
-    {5, 5, SPECIES_ZIGZAGOON},
-    {5, 5, SPECIES_WURMPLE},
-    {5, 5, SPECIES_SHROOMISH},
-    {6, 6, SPECIES_ZIGZAGOON},
-    {5, 5, SPECIES_SILCOON},
-    {5, 5, SPECIES_CASCOON},
-    {6, 6, SPECIES_WURMPLE},
-    {6, 6, SPECIES_SHROOMISH},
-    {5, 5, SPECIES_TAILLOW},
-    {5, 5, SPECIES_SLAKOTH},
-    {6, 6, SPECIES_TAILLOW},
-    {6, 6, SPECIES_SLAKOTH},
+    {6, 8, SPECIES_HOOTHOOT},
+    {6, 8, SPECIES_BELLSPROUT},
+    {6, 8, SPECIES_SHROOMISH},
+    {6, 8, SPECIES_PARAS},
+    {6, 7, SPECIES_CATERPIE},
+    {6, 7, SPECIES_WEEDLE},
+    {6, 8, SPECIES_SPINARAK},
+    {6, 8, SPECIES_ZIGZAGOON},
+    {6, 8, SPECIES_SLAKOTH},
+    {6, 8, SPECIES_TAILLOW},
+    {6, 8, SPECIES_SLAKOTH},
+    {6, 8, SPECIES_TAILLOW},
 };
 const struct WildPokemonInfo PetalburgWoods_LandMonsInfo = {20, PetalburgWoods_LandMons};
 
@@ -1422,35 +1422,35 @@ const struct WildPokemonInfo SkyPillar_5F_LandMonsInfo = {10, SkyPillar_5F_LandM
 
 const struct WildPokemon Route101_LandMons [] =
 {
-    {50, 50, SPECIES_JUMPLUFF},
-    {50, 50, SPECIES_JUMPLUFF},
-    {50, 50, SPECIES_JUMPLUFF},
-    {50, 50, SPECIES_JUMPLUFF},
-    {50, 50, SPECIES_JUMPLUFF},
-    {50, 50, SPECIES_JUMPLUFF},
-    {3, 3, SPECIES_CLEFABLE},
-    {3, 3, SPECIES_CLEFABLE},
-    {2, 2, SPECIES_EKANS},
-    {2, 2, SPECIES_EKANS},
-    {3, 3, SPECIES_EKANS},
-    {3, 3, SPECIES_EKANS},
+    {2, 3, SPECIES_ZIGZAGOON},
+    {2, 3, SPECIES_WURMPLE},
+    {2, 3, SPECIES_ZIGZAGOON},
+    {2, 3, SPECIES_WURMPLE},
+    {2, 3, SPECIES_LEDYBA},
+    {2, 3, SPECIES_LEDYBA},
+    {2, 3, SPECIES_LEDYBA},
+    {2, 3, SPECIES_LEDYBA},
+    {2, 3, SPECIES_POOCHYENA},
+    {2, 3, SPECIES_POOCHYENA},
+    {2, 3, SPECIES_POOCHYENA},
+    {2, 3, SPECIES_POOCHYENA},
 };
 const struct WildPokemonInfo Route101_LandMonsInfo = {20, Route101_LandMons};
 
 const struct WildPokemon Route102_LandMons [] =
 {
-    {3, 3, SPECIES_ZIGZAGOON},
-    {3, 3, SPECIES_WURMPLE},
-    {4, 4, SPECIES_ZIGZAGOON},
-    {4, 4, SPECIES_WURMPLE},
-    {3, 4, SPECIES_LOTAD},
-    {3, 4, SPECIES_SEEDOT},
-    {3, 3, SPECIES_POOCHYENA},
-    {3, 3, SPECIES_POOCHYENA},
-    {4, 4, SPECIES_POOCHYENA},
-    {4, 4, SPECIES_RALTS},
-    {4, 4, SPECIES_POOCHYENA},
-    {3, 3, SPECIES_SURSKIT},
+    {3, 5, SPECIES_ZIGZAGOON},
+    {3, 5, SPECIES_POOCHYENA},
+    {3, 5, SPECIES_WURMPLE},
+    {3, 5, SPECIES_WURMPLE},
+    {3, 5, SPECIES_LOTAD},
+    {3, 5, SPECIES_SEEDOT},
+    {3, 5, SPECIES_PSYDUCK},
+    {3, 5, SPECIES_PSYDUCK},
+    {3, 5, SPECIES_TAILLOW},
+    {3, 5, SPECIES_RALTS},
+    {3, 5, SPECIES_SURSKIT},
+    {3, 5, SPECIES_SURSKIT},
 };
 const struct WildPokemonInfo Route102_LandMonsInfo = {20, Route102_LandMons};
 
@@ -1481,18 +1481,18 @@ const struct WildPokemonInfo Route102_FishingMonsInfo = {30, Route102_FishingMon
 
 const struct WildPokemon Route103_LandMons [] =
 {
-    {2, 2, SPECIES_ZIGZAGOON},
-    {3, 3, SPECIES_ZIGZAGOON},
-    {3, 3, SPECIES_ZIGZAGOON},
-    {4, 4, SPECIES_ZIGZAGOON},
-    {2, 2, SPECIES_POOCHYENA},
-    {3, 3, SPECIES_POOCHYENA},
-    {3, 3, SPECIES_POOCHYENA},
-    {4, 4, SPECIES_POOCHYENA},
-    {3, 3, SPECIES_WINGULL},
-    {3, 3, SPECIES_WINGULL},
-    {2, 2, SPECIES_WINGULL},
-    {4, 4, SPECIES_WINGULL},
+    {2, 4, SPECIES_ZIGZAGOON},
+    {2, 4, SPECIES_POOCHYENA},
+    {2, 4, SPECIES_ZIGZAGOON},
+    {2, 4, SPECIES_POOCHYENA},
+    {2, 4, SPECIES_LEDYBA},
+    {2, 4, SPECIES_LEDYBA},
+    {2, 4, SPECIES_HOPPIP},
+    {2, 4, SPECIES_HOPPIP},
+    {2, 4, SPECIES_WINGULL},
+    {2, 4, SPECIES_WINGULL},
+    {2, 4, SPECIES_WINGULL},
+    {2, 4, SPECIES_WINGULL},
 };
 const struct WildPokemonInfo Route103_LandMonsInfo = {20, Route103_LandMons};
 
@@ -1523,18 +1523,18 @@ const struct WildPokemonInfo Route103_FishingMonsInfo = {30, Route103_FishingMon
 
 const struct WildPokemon Route104_LandMons [] =
 {
-    {4, 4, SPECIES_ZIGZAGOON},
-    {4, 4, SPECIES_WURMPLE},
-    {5, 5, SPECIES_ZIGZAGOON},
-    {5, 5, SPECIES_WURMPLE},
-    {4, 4, SPECIES_ZIGZAGOON},
-    {5, 5, SPECIES_ZIGZAGOON},
-    {4, 4, SPECIES_TAILLOW},
-    {5, 5, SPECIES_TAILLOW},
-    {4, 4, SPECIES_WINGULL},
-    {4, 4, SPECIES_WINGULL},
-    {3, 3, SPECIES_WINGULL},
-    {5, 5, SPECIES_WINGULL},
+    {4, 6, SPECIES_ZIGZAGOON},
+    {4, 6, SPECIES_POOCHYENA},
+    {4, 6, SPECIES_WURMPLE},
+    {4, 6, SPECIES_WURMPLE},
+    {4, 6, SPECIES_HOPPIP},
+    {4, 6, SPECIES_TAILLOW},
+    {4, 6, SPECIES_AZURILL},
+    {4, 6, SPECIES_AZURILL},
+    {4, 6, SPECIES_WINGULL},
+    {4, 6, SPECIES_WINGULL},
+    {4, 6, SPECIES_WINGULL},
+    {4, 6, SPECIES_WINGULL},
 };
 const struct WildPokemonInfo Route104_LandMonsInfo = {20, Route104_LandMons};
 
