@@ -10483,11 +10483,11 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_WATER_1,
         .eggGroup2 = EGG_GROUP_FLYING,
         .ability1 = ABILITY_KEEN_EYE,
-        .ability2 = ABILITY_HYDRATION,
+        .ability2 = ABILITY_RAIN_DISH,
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_WHITE,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_RAIN_DISH,
+		.hiddenAbility = ABILITY_HYDRATION,
     },
 
     [SPECIES_PELIPPER] =
@@ -10517,11 +10517,11 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_WATER_1,
         .eggGroup2 = EGG_GROUP_FLYING,
         .ability1 = ABILITY_KEEN_EYE,
-        .ability2 = ABILITY_DRIZZLE,
+        .ability2 = ABILITY_RAIN_DISH,
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_YELLOW,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_RAIN_DISH,
+		.hiddenAbility = ABILITY_DRIZZLE,
     },
 
     [SPECIES_SURSKIT] =
@@ -10891,11 +10891,11 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FIELD,
         .ability1 = ABILITY_WHITE_SMOKE,
-        .ability2 = ABILITY_DROUGHT,
+        .ability2 = ABILITY_SHELL_ARMOR,
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_SHELL_ARMOR,
+		.hiddenAbility = ABILITY_DROUGHT,
     },
 
     [SPECIES_SABLEYE] =
