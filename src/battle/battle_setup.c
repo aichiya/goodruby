@@ -868,10 +868,12 @@ void ScrSpecial_ChooseStarter(void)
 static void CB2_GiveStarter(void)
 {
     u16 starterPoke;
+	u8 zero = 0;
 
     *GetVarPointer(VAR_STARTER_MON) = gSpecialVar_Result;
     starterPoke = GetStarterPokemon(gSpecialVar_Result);
     ScriptGiveMon(starterPoke, 5, 0, 0, 0, 0);
+	SetMonData(&gPlayerParty[0], MON_DATA_HIDDEN_ABILITY, &zero);
     ResetTasks();
     sub_80408BC();
     SetMainCallback2(CB2_StartFirstBattle);

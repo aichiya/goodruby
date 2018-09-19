@@ -4267,7 +4267,12 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Calvin1[] = {
 	.iv = 0,
 	.level = 5,
 	.species = SPECIES_ZIGZAGOON
-    }
+    },
+    {
+	.iv = 0,
+	.level = 5,
+	.species = SPECIES_POOCHYENA
+    },
 };
 
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Billy[] = {
@@ -4454,8 +4459,8 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Allen[] = {
     },
     {
 	.iv = 0,
-	.level = 3,
-	.species = SPECIES_TAILLOW
+	.level = 5,
+	.species = SPECIES_SEEDOT
     }
 };
 
@@ -8340,13 +8345,13 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Maxie3[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Tiana[] = {
     {
 	.iv = 0,
-	.level = 4,
+	.level = 5,
 	.species = SPECIES_ZIGZAGOON
     },
     {
 	.iv = 0,
-	.level = 4,
-	.species = SPECIES_ZIGZAGOON
+	.level = 6,
+	.species = SPECIES_SENTRET
     }
 };
 
@@ -8497,13 +8502,18 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Rick[] = {
     {
 	.iv = 0,
 	.level = 4,
-	.species = SPECIES_WURMPLE
+	.species = SPECIES_CATERPIE
     },
     {
 	.iv = 0,
 	.level = 4,
 	.species = SPECIES_WURMPLE
-    }
+    },
+    {
+	.iv = 0,
+	.level = 5,
+	.species = SPECIES_LEDYBA
+    },
 };
 
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Lyle[] = {
