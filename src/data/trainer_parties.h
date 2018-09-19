@@ -1495,9 +1495,9 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Valerie5[] = {
 const struct TrainerMonItemDefaultMoves gTrainerParty_Cindy1[] = {
     {
 	.iv = 0,
-	.level = 7,
-	.species = SPECIES_ZIGZAGOON,
-        .heldItem = ITEM_NUGGET
+	.level = 10,
+	.species = SPECIES_SKITTY,
+        .heldItem = ITEM_SITRUS_BERRY
     }
 };
 
@@ -1738,9 +1738,9 @@ const struct TrainerMonNoItemCustomMoves gTrainerParty_Jessica5[] = {
 const struct TrainerMonItemDefaultMoves gTrainerParty_Winston1[] = {
     {
 	.iv = 0,
-	.level = 7,
-	.species = SPECIES_ZIGZAGOON,
-        .heldItem = ITEM_NUGGET
+	.level = 9,
+	.species = SPECIES_EEVEE,
+        .heldItem = ITEM_SITRUS_BERRY
     }
 };
 
@@ -4266,25 +4266,25 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Calvin1[] = {
     {
 	.iv = 0,
 	.level = 5,
-	.species = SPECIES_ZIGZAGOON
+	.species = SPECIES_POOCHYENA
     },
     {
 	.iv = 0,
 	.level = 5,
-	.species = SPECIES_POOCHYENA
+	.species = SPECIES_ZIGZAGOON
     },
 };
 
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Billy[] = {
     {
 	.iv = 0,
-	.level = 6,
-	.species = SPECIES_SEEDOT
+	.level = 8,
+	.species = SPECIES_ZIGZAGOON
     },
     {
 	.iv = 0,
 	.level = 8,
-	.species = SPECIES_TAILLOW
+	.species = SPECIES_NIDORAN_M
     }
 };
 
@@ -4548,19 +4548,14 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Andrew[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Ivan[] = {
     {
 	.iv = 0,
-	.level = 6,
+	.level = 10,
 	.species = SPECIES_MAGIKARP
     },
     {
 	.iv = 0,
-	.level = 6,
-	.species = SPECIES_MAGIKARP
+	.level = 9,
+	.species = SPECIES_GOLDEEN
     },
-    {
-	.iv = 0,
-	.level = 6,
-	.species = SPECIES_MAGIKARP
-    }
 };
 
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Claude[] = {
@@ -6513,13 +6508,13 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_AmyAndLiv2[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_GinaAndMia1[] = {
     {
 	.iv = 0,
-	.level = 8,
-	.species = SPECIES_LOTAD
+	.level = 9,
+	.species = SPECIES_IGGLYBUFF
     },
     {
 	.iv = 0,
-	.level = 8,
-	.species = SPECIES_SEEDOT
+	.level = 9,
+	.species = SPECIES_CLEFFA
     }
 };
 
@@ -7973,11 +7968,12 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Grunt35[] = {
     }
 };
 
-const struct TrainerMonNoItemDefaultMoves gTrainerParty_Grunt36[] = {
+const struct TrainerMonNoItemCustomMoves gTrainerParty_Grunt36[] = {
     {
 	.iv = 0,
 	.level = 9,
-	.species = SPECIES_POOCHYENA
+	.species = SPECIES_HOUNDOUR,
+		.moves = MOVE_BITE, 0, 0, 0
     }
 };
 
@@ -8358,13 +8354,13 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Tiana[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Haley1[] = {
     {
 	.iv = 0,
-	.level = 7,
-	.species = SPECIES_LOTAD
+	.level = 8,
+	.species = SPECIES_SHROOMISH
     },
     {
 	.iv = 0,
-	.level = 7,
-	.species = SPECIES_SHROOMISH
+	.level = 9,
+	.species = SPECIES_NIDORAN_F
     }
 };
 
@@ -8519,34 +8515,29 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Rick[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Lyle[] = {
     {
 	.iv = 0,
-	.level = 3,
+	.level = 7,
 	.species = SPECIES_WURMPLE
     },
     {
 	.iv = 0,
-	.level = 3,
-	.species = SPECIES_WURMPLE
+	.level = 7,
+	.species = SPECIES_CATERPIE
     },
     {
 	.iv = 0,
-	.level = 3,
-	.species = SPECIES_WURMPLE
+	.level = 7,
+	.species = SPECIES_WEEDLE
     },
     {
 	.iv = 0,
-	.level = 3,
-	.species = SPECIES_WURMPLE
+	.level = 7,
+	.species = SPECIES_LEDYBA
     },
     {
 	.iv = 0,
-	.level = 3,
-	.species = SPECIES_WURMPLE
+	.level = 7,
+	.species = SPECIES_SPINARAK
     },
-    {
-	.iv = 0,
-	.level = 3,
-	.species = SPECIES_WURMPLE
-    }
 };
 
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Jose[] = {
@@ -8604,8 +8595,13 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Kent[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_James1[] = {
     {
 	.iv = 0,
-	.level = 8,
+	.level = 9,
 	.species = SPECIES_NINCADA
+    },
+    {
+	.iv = 0,
+	.level = 9,
+	.species = SPECIES_VENONAT
     }
 };
 
