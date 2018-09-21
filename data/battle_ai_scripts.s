@@ -169,6 +169,9 @@ AI_CheckBadMove_CheckEffect: @ 81DA14F
 	if_effect EFFECT_MINIMIZE, AI_CBM_EvasionUp
 	if_effect EFFECT_CURSE, AI_CBM_Curse
 	if_effect EFFECT_SPIKES, AI_CBM_Spikes
+	if_effect EFFECT_STEALTH_ROCK, AI_CBM_Spikes
+	if_effect EFFECT_STICKY_WEB, AI_CBM_Spikes
+	if_effect EFFECT_TOXIC_SPIKES, AI_CBM_Spikes
 	if_effect EFFECT_FORESIGHT, AI_CBM_Foresight
 	if_effect EFFECT_PERISH_SONG, AI_CBM_PerishSong
 	if_effect EFFECT_SANDSTORM, AI_CBM_Sandstorm

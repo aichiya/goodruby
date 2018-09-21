@@ -368,18 +368,18 @@ const struct WildPokemonInfo MeteorFalls_B1F_2R_FishingMonsInfo = {30, MeteorFal
 
 const struct WildPokemon RusturfTunnel_LandMons [] =
 {
-    {6, 6, SPECIES_WHISMUR},
-    {7, 7, SPECIES_WHISMUR},
-    {6, 6, SPECIES_WHISMUR},
-    {6, 6, SPECIES_WHISMUR},
-    {7, 7, SPECIES_WHISMUR},
-    {7, 7, SPECIES_WHISMUR},
-    {5, 5, SPECIES_WHISMUR},
-    {8, 8, SPECIES_WHISMUR},
-    {5, 5, SPECIES_WHISMUR},
-    {8, 8, SPECIES_WHISMUR},
-    {5, 5, SPECIES_WHISMUR},
-    {8, 8, SPECIES_WHISMUR},
+    {9, 10, SPECIES_WHISMUR},
+    {9, 10, SPECIES_WHISMUR},
+    {9, 10, SPECIES_WHISMUR},
+    {9, 10, SPECIES_WHISMUR},
+    {9, 10, SPECIES_DROWZEE},
+    {9, 10, SPECIES_DROWZEE},
+    {9, 10, SPECIES_DROWZEE},
+    {9, 10, SPECIES_DROWZEE},
+    {9, 10, SPECIES_DUNSPARCE},
+    {9, 10, SPECIES_DROWZEE},
+    {9, 10, SPECIES_DUNSPARCE},
+    {9, 10, SPECIES_DROWZEE},
 };
 const struct WildPokemonInfo RusturfTunnel_LandMonsInfo = {10, RusturfTunnel_LandMons};
 
@@ -1935,18 +1935,18 @@ const struct WildPokemonInfo Route115_FishingMonsInfo = {30, Route115_FishingMon
 
 const struct WildPokemon Route116_LandMons [] =
 {
-    {6, 6, SPECIES_ZIGZAGOON},
-    {6, 6, SPECIES_WHISMUR},
-    {6, 6, SPECIES_NINCADA},
-    {7, 7, SPECIES_WHISMUR},
-    {7, 7, SPECIES_NINCADA},
-    {6, 6, SPECIES_TAILLOW},
-    {7, 7, SPECIES_TAILLOW},
-    {8, 8, SPECIES_TAILLOW},
-    {7, 7, SPECIES_ZIGZAGOON},
-    {8, 8, SPECIES_ZIGZAGOON},
-    {7, 7, SPECIES_SKITTY},
-    {8, 8, SPECIES_SKITTY},
+    {7, 10, SPECIES_SENTRET},
+    {7, 10, SPECIES_TAILLOW},
+    {7, 10, SPECIES_WHISMUR},
+    {7, 10, SPECIES_NINCADA},
+    {7, 10, SPECIES_MANKEY},
+    {7, 10, SPECIES_ABRA},
+    {7, 10, SPECIES_WHISMUR},
+    {7, 10, SPECIES_NINCADA},
+    {7, 10, SPECIES_SENTRET},
+    {7, 10, SPECIES_SKITTY},
+    {7, 10, SPECIES_SENTRET},
+    {7, 10, SPECIES_SKITTY},
 };
 const struct WildPokemonInfo Route116_LandMonsInfo = {20, Route116_LandMons};
 
