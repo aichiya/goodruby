@@ -1135,13 +1135,13 @@ static void writeTMString(u8 *a, u16 b, const u8 *c, u16 d, u8 e)
     //AlignInt1InMenuWindow(a, d, 0x78, 1);
 }
 
-static u8 *sub_80A425C(u8 taskId, u8 *text, u8 c)
+static u8 *sub_80A425C(u8 taskId, u8 *text, u8 itemSlot)
 {
-    if (gTasks[taskId].data[10] - gBagPocketScrollStates[sCurrentBagPocket].scrollTop - 1 == c)
+    if (gTasks[taskId].data[10] - gBagPocketScrollStates[sCurrentBagPocket].scrollTop - 1 == itemSlot)
     {
         text[0] = EXT_CTRL_CODE_BEGIN;
         text[1] = 1;
-        text[2] = 2;
+        text[2] = TEXT_COLOR_RED;
         text += 3;
     }
     return text;
@@ -1240,61 +1240,63 @@ static void sub_80A444C(u16 a, int b, int c, int d)
 
 // more gBGTilemapBuffers shenanigans
 // Draw menu for TM/HMs pocket
-static void sub_80A4548(u16 a, int b, int c, int d)
+static void sub_80A4548(u16 taskId, int topItemOffset, int bottomItemOffset, int d)
 {
     u8 i;
 
-    for (i = b; i <= c; i++)
+    for (i = topItemOffset; i <= bottomItemOffset; i++)
     {
-        u8 r4;
-        u8 sp10;
-        u32 r5;
+        u8 slot;
+        u8 y;
+        u16 tilemapOffset;
         u8 *text;
 
         if (sub_80A42B0(i, d) == TRUE)
             break;
-        r4 = gBagPocketScrollStates[sCurrentBagPocket].scrollTop + i;
-        sp10 = i * 2 + 2;
-        r5 = sp10 * 32 + 14;
+
+        slot = gBagPocketScrollStates[sCurrentBagPocket].scrollTop + i;
+        y = i * 2 + 2;
+        tilemapOffset = y * 32 + 14;
         text = gStringVar1;
-        text = sub_80A425C(a, text, i);
-        if (gCurrentBagPocketItemSlots[r4].itemId < 0x153)
+        text = sub_80A425C(taskId, text, i);
+
+        if (gCurrentBagPocketItemSlots[slot].itemId < ITEM_HM01_CUT)
         {
             const u8 *r2;
 
-            gBGTilemapBuffers[2][r5 + 0] = 0x59;
-            gBGTilemapBuffers[2][r5 + 1] = 0x4F;
-            gBGTilemapBuffers[2][r5 + 32] = 0x69;
-            gBGTilemapBuffers[2][r5 + 33] = 0x4F;
-            r2 = gMoveNames[ItemIdToBattleMoveId(gCurrentBagPocketItemSlots[r4].itemId)];
-            writeTMString(text, gCurrentBagPocketItemSlots[r4].itemId - 288, r2, gCurrentBagPocketItemSlots[r4].quantity, 2);
+            gBGTilemapBuffers[2][tilemapOffset + 0] = 0x59;
+            gBGTilemapBuffers[2][tilemapOffset + 1] = 0x4F;
+            gBGTilemapBuffers[2][tilemapOffset + 32] = 0x69;
+            gBGTilemapBuffers[2][tilemapOffset + 33] = 0x4F;
+            r2 = gMoveNames[ItemIdToBattleMoveId(gCurrentBagPocketItemSlots[slot].itemId)];
+            writeTMString(text, gCurrentBagPocketItemSlots[slot].itemId - (ITEM_TM01_FOCUS_PUNCH - 1), r2, gCurrentBagPocketItemSlots[slot].quantity, 2);
         }
         else
         {
             const u8 *moveName;
-
-            gBGTilemapBuffers[2][r5 + 0] = 0x105D;
-            gBGTilemapBuffers[2][r5 + 1] = 0x105E;
-            gBGTilemapBuffers[2][r5 + 32] = 0x106D;
-            gBGTilemapBuffers[2][r5 + 33] = 0x106E;
+            gBGTilemapBuffers[2][tilemapOffset + 0] = 0x105D;
+            gBGTilemapBuffers[2][tilemapOffset + 1] = 0x105E;
+            gBGTilemapBuffers[2][tilemapOffset + 32] = 0x106D;
+            gBGTilemapBuffers[2][tilemapOffset + 33] = 0x106E;
             text[0] = EXT_CTRL_CODE_BEGIN;
             text[1] = 0x13;
             text[2] = 0x11;
             text += 3;
-            text = ConvertIntToDecimalString(text, gCurrentBagPocketItemSlots[r4].itemId - 0x152);
+            text = ConvertIntToDecimalString(text, gCurrentBagPocketItemSlots[slot].itemId - (ITEM_HM01_CUT - 1));
             text[0] = EXT_CTRL_CODE_BEGIN;
             text[1] = 0x13;
             text[2] = 0x18;
             text += 3;
-            moveName = gMoveNames[ItemIdToBattleMoveId(gCurrentBagPocketItemSlots[r4].itemId)];
+            moveName = gMoveNames[ItemIdToBattleMoveId(gCurrentBagPocketItemSlots[slot].itemId)];
             AlignStringInMenuWindow(text, moveName, 0x78, 0);
         }
-        Menu_PrintText(gStringVar1, 14, sp10);
+
+        Menu_PrintText(gStringVar1, 14, y);
     }
 }
 
 // Draw menu for berries pocket
-static void sub_80A46FC(u16 a, int b, int c, int d)
+static void sub_80A46FC(u16 taskId, int b, int c, int d)
 {
     u8 i;
 
@@ -1316,29 +1318,29 @@ static void sub_80A46FC(u16 a, int b, int c, int d)
         gBGTilemapBuffers[2][var] = 0x69;
 
         text = gStringVar1;
-        text = sub_80A425C(a, text, i);
+        text = sub_80A425C(taskId, text, i);
         CopyItemName(gCurrentBagPocketItemSlots[r4].itemId, gStringVar2);
         sub_80A41E0(text, gCurrentBagPocketItemSlots[r4].itemId - 0x84, gStringVar2, gCurrentBagPocketItemSlots[r4].quantity, 3);
         Menu_PrintText(gStringVar1, 14, r5);
     }
 }
 
-static void sub_80A47E8(u16 a, int b, int c, int d)
+static void sub_80A47E8(u16 taskId, int topItemOffset, int bottomItemOffset, int d)
 {
     switch (sCurrentBagPocket)
     {
     case BAG_POCKET_ITEMS:
     case BAG_POCKET_POKE_BALLS:
-        sub_80A4380(a, b, c, d);
+        sub_80A4380(taskId, topItemOffset, bottomItemOffset, d);
         break;
     case BAG_POCKET_KEY_ITEMS:
-        sub_80A444C(a, b, c, d);
+        sub_80A444C(taskId, topItemOffset, bottomItemOffset, d);
         break;
     case BAG_POCKET_TMs_HMs:
-        sub_80A4548(a, b, c, d);
+        sub_80A4548(taskId, topItemOffset, bottomItemOffset, d);
         break;
     case BAG_POCKET_BERRIES:
-        sub_80A46FC(a, b, c, d);
+        sub_80A46FC(taskId, topItemOffset, bottomItemOffset, d);
         break;
     }
     if (gBagPocketScrollStates[sCurrentBagPocket].scrollTop != 0)
@@ -1352,9 +1354,9 @@ static void sub_80A47E8(u16 a, int b, int c, int d)
         SetVerticalScrollIndicators(BOTTOM_ARROW, INVISIBLE);
 }
 
-static void sub_80A48E8(u16 taskId, int b, int c)
+static void sub_80A48E8(u16 taskId, int topItemOffset, int bottomItemOffset)
 {
-    sub_80A47E8(taskId, b, c, 0);
+    sub_80A47E8(taskId, topItemOffset, bottomItemOffset, 0);
 }
 
 static void sub_80A48F8(u16 taskId)
