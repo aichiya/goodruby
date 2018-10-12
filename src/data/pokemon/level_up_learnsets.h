@@ -209,7 +209,7 @@ const u32 gButterfreeLevelUpLearnset[] = {
 const u32 gWeedleLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_POISON_STING),
     LEVEL_UP_MOVE( 1, MOVE_STRING_SHOT),
-    LEVEL_UP_MOVE( 1, MOVE_BUG_BITE),
+    LEVEL_UP_MOVE( 9, MOVE_BUG_BITE),
     LEVEL_UP_END
 };
 
