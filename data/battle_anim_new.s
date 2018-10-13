@@ -5,7 +5,7 @@
 
 	.align 2
 gBattleAnimSpriteTemplate_EnergyBall1::
-	spr_template 10176, 10289, gOamData_837DF94, gDummySpriteAnimTable, NULL, gSpriteAffineAnimTable_83DAEA4, sub_80DDF40
+	spr_template 10176, 10289, gOamData_837DF94, gDummySpriteAnimTable, NULL, gSpriteAffineAnimTable_83DAEA4, InitAnimShadowBall
 
 	.align 2
 gBattleAnimSpriteTemplate_EnergyBall2::
@@ -85,11 +85,11 @@ gBattleAnimSpriteTemplate_Captivate::
 	
 	.align 2
 gBattleAnimSpriteTemplate_LuckyChant::
-	spr_template 10072, 10072, gOamData_837DFEC, gSpriteAnimTable_83D70D8, NULL, gSpriteAffineAnimTable_83D7110, sub_80D7F10
+	spr_template 10072, 10072, gOamData_837DFEC, gSpriteAnimTable_83D70D8, NULL, gSpriteAffineAnimTable_83D7110, InitSwirlingFogAnim
 
 	.align 2
 gBattleAnimSpriteTemplate_OminousWind::
-	spr_template 10261, 10294, gOamData_837DF54, gDummySpriteAnimTable, NULL, gDummySpriteAffineAnimTable, sub_80DD3AC
+	spr_template 10261, 10294, gOamData_837DF54, gDummySpriteAnimTable, NULL, gDummySpriteAffineAnimTable, AnimDirtParticleAcrossScreen
 
 	.align 2
 gBattleAnimSpriteTemplate_StickyWeb::
@@ -274,4 +274,4 @@ gBattleAnimSpriteTemplate_Avalanche1::
 
 	.align 2
 gBattleAnimSpriteTemplate_AuraSphere::
-	spr_template 10303, 10303, gOamData_837DF94, gDummySpriteAnimTable, NULL, gSpriteAffineAnimTable_83DAEA4, sub_80DDF40
+	spr_template 10303, 10303, gOamData_837DF94, gDummySpriteAnimTable, NULL, gSpriteAffineAnimTable_83DAEA4, InitAnimShadowBall

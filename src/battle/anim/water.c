@@ -20,9 +20,9 @@ extern const u8 gUnknown_08E70968[];
 extern const u8 gUnknown_08E70C38[];
 extern const u8 gUnknown_08E70F0C[];
 extern const u8 gBattleAnimBackgroundImage_Surf[];
-extern const u16 gBattleAnimBackgroundPalette_Surf[];
-extern const u16 gBattleAnimBackgroundImageMuddyWater_Pal[];
-extern const u16 gBattleAnimBackgroundImageSludgeWave_Pal[];
+extern const u8 gBattleAnimBackgroundPalette_Surf[];
+extern const u8 gBattleAnimBackgroundImageMuddyWater_Pal[];
+extern const u8 gBattleAnimBackgroundImageSludgeWave_Pal[];
 
 extern const union AffineAnimCmd *const gSpriteAffineAnimTable_83DA318[];
 extern const union AnimCmd *const gSpriteAnimTable_83D9BC8[];
@@ -211,7 +211,7 @@ const struct SpriteTemplate gBattleAnimSpriteTemplate_83D9438 =
 
 void sub_80D37FC(struct Sprite *sprite)
 {
-    sub_8078764(sprite, 1);
+    sub_8078764(sprite, TRUE);
 
     sprite->data[0] = gBattleAnimArgs[4];
     sprite->data[2] = sprite->pos1.x + gBattleAnimArgs[2];
@@ -225,7 +225,7 @@ void sub_80D3838(struct Sprite *sprite)
 {
     if (gBattleAnimArgs[3] != 0)
     {
-        sub_8078764(sprite, 1);
+        sub_8078764(sprite, TRUE);
     }
     else
     {
