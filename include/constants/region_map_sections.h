@@ -88,7 +88,8 @@
 #define MAPSEC_INSIDE_OF_TRUCK       0x54
 #define MAPSEC_SKY_PILLAR            0x55
 #define MAPSEC_SECRET_BASE           0x56
-#define MAPSEC_DYNAMIC               0x57
-#define MAPSEC_NOTHING               0x58
+#define MAPSEC_GNARLED_RIDGE         0x57
+#define MAPSEC_DYNAMIC               0x58
+#define MAPSEC_NOTHING               0x59
 
 #endif // GUARD_REGIONMAPSEC_H

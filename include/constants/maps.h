@@ -56,6 +56,7 @@
 #define MAP_UNDERWATER2      (51 | (0 << 8))
 #define MAP_UNDERWATER3      (52 | (0 << 8))
 #define MAP_UNDERWATER4      (53 | (0 << 8))
+#define MAP_GNARLED_RIDGE    (54 | (0 << 8))
 
 // Map Group 1
 #define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F    (0 | (1 << 8))

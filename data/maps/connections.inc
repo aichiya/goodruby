@@ -56,3 +56,4 @@
 	.include "data/maps/SafariZone_Northeast/connections.inc"
 	.include "data/maps/SafariZone_Southwest/connections.inc"
 	.include "data/maps/SafariZone_Southeast/connections.inc"
+    .include "data/maps/GnarledRidge/connections.inc"

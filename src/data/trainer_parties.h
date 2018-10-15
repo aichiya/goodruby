@@ -1,49 +1,64 @@
-const struct TrainerMonNoItemDefaultMoves gTrainerParty_Archie1[] = {
+const struct TrainerMonNoItemDefaultMoves gTrainerParty_Jimmy[] = {
     {
 	.iv = 0,
-	.level = 17,
-	.species = SPECIES_HUNTAIL
+	.level = 14,
+	.species = SPECIES_PIDGEY
     },
     {
 	.iv = 0,
-	.level = 17,
-	.species = SPECIES_SHARPEDO
+	.level = 13,
+	.species = SPECIES_PIKACHU
+    },
+    {
+	.iv = 0,
+	.level = 13,
+	.species = SPECIES_GROWLITHE
+    },
+};
+
+const struct TrainerMonNoItemDefaultMoves gTrainerParty_Oliver[] = {
+    {
+	.iv = 0,
+	.level = 13,
+	.species = SPECIES_ONIX
+    },
+    {
+	.iv = 0,
+	.level = 13,
+	.species = SPECIES_TEDDIURSA
     }
 };
 
-const struct TrainerMonNoItemDefaultMoves gTrainerParty_Grunt1[] = {
+const struct TrainerMonNoItemDefaultMoves gTrainerParty_Brady[] = {
     {
 	.iv = 0,
-	.level = 32,
-	.species = SPECIES_POOCHYENA
+	.level = 13,
+	.species = SPECIES_SENTRET
     },
     {
 	.iv = 0,
-	.level = 32,
-	.species = SPECIES_POOCHYENA
-    }
-};
-
-const struct TrainerMonNoItemDefaultMoves gTrainerParty_Grunt2[] = {
-    {
-	.iv = 0,
-	.level = 30,
-	.species = SPECIES_ZUBAT
+	.level = 13,
+	.species = SPECIES_SENTRET
     },
     {
 	.iv = 0,
-	.level = 30,
-	.species = SPECIES_POOCHYENA
+	.level = 13,
+	.species = SPECIES_SENTRET
     },
     {
 	.iv = 0,
-	.level = 30,
-	.species = SPECIES_CARVANHA
+	.level = 13,
+	.species = SPECIES_SENTRET
     },
     {
 	.iv = 0,
-	.level = 30,
-	.species = SPECIES_POOCHYENA
+	.level = 13,
+	.species = SPECIES_SENTRET
+    },
+    {
+	.iv = 0,
+	.level = 13,
+	.species = SPECIES_SENTRET
     }
 };
 

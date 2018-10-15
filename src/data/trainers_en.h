@@ -13,46 +13,46 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = NULL }
     },
 
-    [TRAINER_ARCHIE_1] =
+    [TRAINER_JIMMY] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_AQUA_LEADER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_ARCHIE,
-        .trainerName = _("Archie"),
+        .trainerClass = TRAINER_CLASS_YOUNGSTER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_YOUNGSTER,
+        .trainerName = _("Jimmy"),
         .items = {0, 0, 0, 0}, //{ITEM_SUPER_POTION, ITEM_SUPER_POTION, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = 0x7,
-        .partySize = 2,
-        .party = {.NoItemDefaultMoves = gTrainerParty_Archie1 }
+        .partySize = 3,
+        .party = {.NoItemDefaultMoves = gTrainerParty_Jimmy }
     },
 
-    [TRAINER_GRUNT_1] =
+    [TRAINER_OLIVER] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_M,
-        .trainerName = _("Grunt"),
+        .trainerClass = TRAINER_CLASS_HIKER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_HIKER,
+        .trainerName = _("Oliver"),
         .items = {0, 0, 0, 0}, //{ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = 0x1,
         .partySize = 2,
-        .party = {.NoItemDefaultMoves = gTrainerParty_Grunt1 }
+        .party = {.NoItemDefaultMoves = gTrainerParty_Oliver }
     },
 
-    [TRAINER_GRUNT_2] =
+    [TRAINER_BRADY] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_M,
-        .trainerName = _("Grunt"),
+        .trainerClass = TRAINER_CLASS_COLLECTOR,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+        .trainerPic = TRAINER_PIC_COLLECTOR,
+        .trainerName = _("Brady"),
         .items = {0, 0, 0, 0}, //{ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = 0x1,
-        .partySize = 4,
-        .party = {.NoItemDefaultMoves = gTrainerParty_Grunt2 }
+        .partySize = 6,
+        .party = {.NoItemDefaultMoves = gTrainerParty_Brady }
     },
 
     [TRAINER_GRUNT_3] =

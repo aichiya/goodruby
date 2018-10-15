@@ -537,3 +537,7 @@ VictoryRoad_B2F_EventScript_1B1AFA:: @ 81B1AFA
 @ 81B1B07
 	giveitem_std ITEM_HM08_DIVE, 1, 1
 	end
+
+GnarledRidge_EventScript_Item1::
+	giveitem_std ITEM_RARE_CANDY, 1, 1
+	end

@@ -2741,6 +2741,24 @@ const struct WildPokemon Underwater2_WaterMons [] =
 };
 const struct WildPokemonInfo Underwater2_WaterMonsInfo = {4, Underwater2_WaterMons};
 
+const struct WildPokemon GnarledRidge_LandMons [] =
+{
+    {10, 11, SPECIES_SPEAROW},
+    {10, 11, SPECIES_SENTRET},
+    {10, 11, SPECIES_MANKEY},
+    {10, 11, SPECIES_NINCADA},
+    {10, 11, SPECIES_CUBONE},
+    {10, 11, SPECIES_TEDDIURSA},
+    {10, 11, SPECIES_MANKEY},
+    {10, 11, SPECIES_NINCADA},
+    {10, 11, SPECIES_SLUGMA},
+    {10, 11, SPECIES_PHANPY},
+    {10, 11, SPECIES_SLUGMA},
+    {10, 11, SPECIES_PHANPY},
+};
+const struct WildPokemonInfo GnarledRidge_LandMonsInfo = {20, GnarledRidge_LandMons};
+
+
 const struct WildPokemonHeader gWildMonHeaders[] =
 {
     {
@@ -3516,6 +3534,14 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapNum = MAP_NUM(UNDERWATER2),
         .landMonsInfo = NULL,
         .waterMonsInfo = &Underwater2_WaterMonsInfo,
+        .rockSmashMonsInfo = NULL,
+        .fishingMonsInfo = NULL,
+    },
+    {
+        .mapGroup = MAP_GROUP(GNARLED_RIDGE),
+        .mapNum = MAP_NUM(GNARLED_RIDGE),
+        .landMonsInfo = &GnarledRidge_LandMonsInfo,
+        .waterMonsInfo = NULL,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = NULL,
     },

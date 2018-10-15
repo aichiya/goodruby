@@ -330,3 +330,4 @@
 	.include "data/layouts/SafariZone_RestHouse/layout.inc"
 	.include "data/layouts/SkyPillar_5F/layout.inc"
 	.include "data/layouts/SkyPillar_Top/layout.inc"
+    .include "data/layouts/GnarledRidge/layout.inc"

@@ -396,6 +396,7 @@ gStdScripts_End::
 	.include "data/maps/SecretBase_YellowCave2/scripts.inc"
 	.include "data/maps/SecretBase_YellowCave3/scripts.inc"
 	.include "data/maps/SecretBase_YellowCave4/scripts.inc"
+    .include "data/maps/GnarledRidge/scripts.inc"
 
 gUnknown_0815F36C:: @ 815F36C
 	lockall
@@ -896,6 +897,7 @@ UnknownString_819C21F: @ 819C21F
 	.include "data/maps/Route119_WeatherInstitute_2F/text.inc"
 	.include "data/maps/Route119_House/text.inc"
 	.include "data/maps/Route124_DivingTreasureHuntersHouse/text.inc"
+    .include "data/maps/GnarledRidge/text.inc"
 
 
 Std_2:
