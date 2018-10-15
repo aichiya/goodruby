@@ -4317,12 +4317,12 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Calvin1[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Billy[] = {
     {
 	.iv = 0,
-	.level = 8,
+	.level = 7,
 	.species = SPECIES_ZIGZAGOON
     },
     {
 	.iv = 0,
-	.level = 8,
+	.level = 7,
 	.species = SPECIES_NIDORAN_M
     }
 };
@@ -8077,9 +8077,14 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Grunt41[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Grunt42[] = {
     {
 	.iv = 0,
-	.level = 11,
-	.species = SPECIES_POOCHYENA
-    }
+	.level = 13,
+	.species = SPECIES_KOFFING
+    },
+    {
+	.iv = 0,
+	.level = 14,
+	.species = SPECIES_HOUNDOUR
+    },
 };
 
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Grunt43[] = {
@@ -8386,7 +8391,7 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Tiana[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Haley1[] = {
     {
 	.iv = 0,
-	.level = 8,
+	.level = 9,
 	.species = SPECIES_SHROOMISH
     },
     {
