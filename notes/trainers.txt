@@ -1,0 +1,48 @@
+ROUTE 102
+CALVIN: Zigzagoon Lv5, Poochyena Lv5
+RICK: Caterpie Lv4, Wurmple Lv4, Ledyba Lv5
+ALLEN: Poochyena Lv5, Seedot Lv5
+TIANA: Zigzagoon Lv6, Sentret Lv6
+
+ROUTE 104 SOUTH
+BILLY: Poochyena Lv7, NidoranM Lv7
+WINSTON: Eevee@Sitrus Lv9
+
+PETALBURG WOODS
+LYLE: Wurmple Lv7, Caterpie Lv7, Weedle Lv7, Ledyba Lv7, Spinarak Lv7
+GRUNT: Houndour Lv10 [Bite]
+JAMES: Nincada Lv9, Venonat Lv9
+
+ROUTE 105 NORTH
+HALEY: Shroomish Lv9, NidoranF Lv9
+CINDY: Skitty@Sitrus Lv10
+GINA & MIA: Cleffa Lv9, Igglybuff Lv9
+IVAN: Magikarp Lv10, Goldeen Lv9
+
+ROUTE 116
+JOEY: Ratatta Lv10, Mankey, Lv10
+JOSE: Silcoon Lv8, Kakuna Lv8, Surskit Lv12
+JANICE: Marill Lv10, Hoppip Lv10
+CLARK: Geodude Lv9, Machop Lv10, Sandshrew Lv11
+
+RUSTBORO GYM
+
+Aron Lv12
+Geodude Lv11, Anorith Lv11
+
+ROXANNE:
+Nosepass Lv14 Tackle, Rock Throw, Thunder Wave, Stealth Rock
+Baltoy Lv15 Confusion, Rock Tomb, Mud-Slap, Stealth Rock
+Lileep@Sitrus Lv15 Acid, Rock Tomb, Mega Drain, Ingrain
+
+RUSTURF TUNNEL
+GRUNT: Koffing Lv13, Houndour Lv14
+
+ROUTE 116 HIGH
+JERRY: Drowzee Lv13, Zigzagoon Lv13, Paras Lv13
+KAREN: Shroomish Lv13, Ponyta Lv13
+
+GNARLED RIDGE
+JIMMY: Pidgey, Electrike, Growlithe
+OLIVER: Onix, Teddiursa
+BRADY: Sentret, Sentret, Sentret, Sentret, Sentret, Sentret

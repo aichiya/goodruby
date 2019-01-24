@@ -1,0 +1,97 @@
+WEIRDOS:
+Venonat
+Meowth
+Farfetch'd
+Exeggcute
+Lickitung
+Mime Jr.
+Lapras
+Aerodactyl
+Mareep
+Bonsly
+Sunkern
+Wooper
+Murkrow
+Girafarig
+Pineco
+Snubbull
+Shuckle
+Swinub
+Mantyke
+Houndour
+Stantler
+Smeargle
+Miltank
+
+EVENT:
+Bulbasaur
+Charmander
+Squirtle
+Chikorita
+Cyndaquil
+Totodile
+
+LEGENDARIES:
+Articuno, Zapdos, Moltres
+Mewtwo
+Mew
+Raikou, Entei, Suicune
+Lugia, Ho-oh
+Celebi
+Jirachi
+Deoxys
+
+FISH:
+Poliwag
+Slowpoke
+Shellder
+Krabby
+Dratini
+Qwilfish
+Remoraid
+
+
+ROUTE 101: Zigzagoon (30%), Wurmple (30%), Ledyba (30%), Poochyena (10%)
+ROUTE 103: Zigzagoon (30%), Poochyena (30%), Ledyba (20%), Wingull (10%), Hoppip (10%)
+ROUTE 102: Zigzagoon (20%), Poochyena (20%), Wurmple (20%), Seedot (10%), Lotad (10%), Psyduck (10%), Taillow (4%), Ralts (4%), Surskit (2%)
+ROUTE 104: Zigzagoon (20%), Poochyena (20%), Wurmple (20%), Wingull (10%), Hoppip (10%), Taillow (10%), Azurill (5%), Bellsprout (5%)
+WOODS: Hoothoot (20%), Bellsprout (20%), Shroomish (10%), Paras (10%), Caterpie (10%), Weedle (10%), Spinarak (5%), Zigzagoon (5%), Taillow (5%), Slakoth (5%)
+ROUTE 116: Sentret (25%), Whismur (25%), Taillow (20%), Nincada (15%), Mankey (10%), Skitty (5%)
+TUNNEL: Whismur (60%), Drowzee (35%), Chingling (***), Dunsparce (5%)
+RIDGE: Sentret (20%), Spearow (20%), Mankey (15%), Nincada (10%), Teddiursa (10%), Cubone (10%), Slugma (5%), NidoranF (5%), NidoranM (5%)
+ROUTE 107: Pidgey (25%), Wingull (20%), Ekans (15%), Slowpoke (10%), Krabby (10%), Makuhita (10%), Hoppip (10%)
+CAVE  1F: Zubat (25%), Geodude (25%), Ekans (15%), Makuhita (15%), Abra (10%), Krabby (10%)
+CAVE B1F: Zubat (25%), Aron (20%), Ekans (10%), Makuhita (10%), Onix (10%), Abra (10%), Sableye (5%), Mawile (5%), Geodude (5%)
+CAVE B2F: Zubat (25%), Aron (20%), Ekans (10%), Onix (10%), Abra (10%), Sableye (10%), Mawile (10%), Geodude (5%) (smash: nosepass)
+ROUTE 110: Rattata, Wingull, Electrike, Plusle, Minun, Gulpin, Oddish (e: Voltorb)
+ROUTE 117: Rattata, Oddish, Marill, Roselia, Volbeat, Illumise
+GAME CORNER: Eevee, Porygon
+ROUTE 112: Machop, Numel, Ponyta, Tyrogue
+PATH: Machop, Numel, Diglett, Tyrogue, Grimer, Koffing, Slugma, Torkoal, Magby
+ROUTE 113: Spinda, Slugma,  Sandshrew, Skarmory
+ROUTE 114: Lombre, Nuzleaf, Furret, Swablu, Zangoose, Seviper, Misdreavus
+FALLS 1F: Zubat, Lunatone, Solrock, Clefairy, Misdreavus
+JAGGED PASS: Machop, Numel, Tyrogue, Spoink, Ponyta
+FALLARBOR: Togepi egg
+DESERT: Sandshrew, Trapinch, Cacnea, Baltoy, Gligar, Larvitar
+ROUTE 115: Swellow, Wingull, Swablu, Jigglypuff, Clefairy
+NEW MAUVILLE: Voltorb, Magnemite, Elekid
+ROUTE 118: Raticate, Aipom, Wingull, Manectric, Kecleon
+ROUTE 119: Gloom, Aipom, Kecleon, Tropius, Yanma (e: Castform)
+ROUTE 120: Gloom, Aipom, Kecleon, Absol, Yanma
+SCORCHED SLAB:
+ROUTE 121: Gloom, Shuppet, Aipom, Kecleon, Scyther
+SAFARI: Chansey, Tauros, Ditto
+MT. PYRE TOWER: Shuppet, Duskull, Haunter
+MT. PYRE GRASS: Shuppet, Vulpix, Growlithe, Meditite
+MT. PYRE PEAK:  Shuppet, Duskull, Chimecho
+ROUTE 122: Gloom, Shuppet, Aipom, Kecleon
+SHOAL CAVE: Golbat, Spheal, Seel, Snorunt, Smoochum, Delibird
+SHOAL DEPTHS: Golbat, Snorunt, Smoochum, Sneasel
+UNDERWATER: Chinchou, Clamperl, Relicanth
+SEAFLOOR: Kabuto, Omanyte, Lileep, Anorith
+MIRAGE ISLAND: Wynaut, Tangela, Venomoth, Munchlax
+CAVE OF ORIGIN: Unown
+SEALED CHAMBER:
+
+GNARLED DEN: Kangaskhan

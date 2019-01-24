@@ -3831,7 +3831,7 @@ const struct Trainer gTrainers[] = {
         .items = {0, 0, 0, 0}, //{ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = 0x1,
-        .partySize = 1,
+        .partySize = 3,
         .party = {.NoItemDefaultMoves = gTrainerParty_Jerry1 }
     },
 
@@ -8135,7 +8135,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_GRUNT_42] =
     {
-        .partyFlags = 0,
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
         .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_MAGMA_GRUNT_M,
@@ -8143,8 +8143,8 @@ const struct Trainer gTrainers[] = {
         .items = {0, 0, 0, 0}, //{ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = 0x1,
-        .partySize = 1,
-        .party = {.NoItemDefaultMoves = gTrainerParty_Grunt42 }
+        .partySize = 2,
+        .party = {.NoItemCustomMoves = gTrainerParty_Grunt42 }
     },
 
     [TRAINER_GRUNT_43] =
