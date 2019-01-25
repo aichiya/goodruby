@@ -3552,7 +3552,7 @@ const struct Item gItems[] =
 		.natGiftPower = 0,
     },
     {
-        .name = _("King’s Rock"),
+        .name = _("King's Rock"),
         .itemId = ITEM_KINGS_ROCK,
         .price = 100,
         .holdEffect = HOLD_EFFECT_FLINCH,

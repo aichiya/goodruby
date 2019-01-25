@@ -15,12 +15,7 @@
 #include "ewram.h"
 #include "graphics.h"
 #include "constants/battle_anim.h"
-
-// sprites start at 10000 and thus must be subtracted of 10000 to account for the true index.
-#define GET_TRUE_SPRITE_INDEX(i) (i - 10000)
-
-#define ANIM_SPRITE_INDEX_COUNT 8
-#define ANIM_ARGS_COUNT 8
+#include "constants/songs.h"
 
 const struct OamData gOamData_837DF24 =
 {
@@ -1321,6 +1316,8 @@ extern u16 gBattlerPartyIndexes[4];
 extern u8 gBankSpriteIds[];
 extern u8 gBankAttacker;
 extern u8 gBankTarget;
+
+// sBattleAnimScriptPtr is a pointer to the next set of battle script commands.
 EWRAM_DATA const u8 *sBattleAnimScriptPtr = NULL;
 EWRAM_DATA const u8 *gBattleAnimScriptRetAddr = NULL;
 EWRAM_DATA void (*gAnimScriptCallback)(void) = NULL;
@@ -1337,8 +1334,8 @@ EWRAM_DATA u8 gMonAnimTaskIdArray[2] = {0};
 EWRAM_DATA u8 gAnimMoveTurn = 0;
 EWRAM_DATA u8 sAnimBackgroundFadeState = 0;
 EWRAM_DATA u16 sAnimMoveIndex = 0; // set but unused.
-EWRAM_DATA u8 gAnimBankAttacker = 0;
-EWRAM_DATA u8 gAnimBankTarget = 0;
+EWRAM_DATA u8 gBattleAnimAttacker = 0;
+EWRAM_DATA u8 gBattleAnimTarget = 0;
 EWRAM_DATA u16 gAnimSpeciesByBanks[4] = {0};
 EWRAM_DATA u8 gUnknown_0202F7D2 = 0; // some global pan variable
 
@@ -1490,15 +1487,15 @@ void ClearBattleAnimationVars(void)
     gAnimMoveTurn = 0;
     sAnimBackgroundFadeState = 0;
     sAnimMoveIndex = 0;
-    gAnimBankAttacker = 0;
-    gAnimBankTarget = 0;
+    gBattleAnimAttacker = 0;
+    gBattleAnimTarget = 0;
     gUnknown_0202F7D2 = 0;
 }
 
 void DoMoveAnim(u16 move)
 {
-    gAnimBankAttacker = gBankAttacker;
-    gAnimBankTarget = gBankTarget;
+    gBattleAnimAttacker = gBankAttacker;
+    gBattleAnimTarget = gBankTarget;
     LaunchBattleAnimation(gBattleAnims_Moves, move, TRUE);
 }
 
@@ -1508,7 +1505,7 @@ void LaunchBattleAnimation(const u8 *const moveAnims[], u16 move, u8 isMoveAnim)
 
     if (!IsContest())
     {
-        sub_8079E24();
+        UpdateBattlerSpritePriorities();
         UpdateOamPriorityInAllHealthboxes(0);
         for (i = 0; i < 4; i++)
         {
@@ -1629,6 +1626,8 @@ static void RunAnimScriptCommand(void)
     } while (gAnimFramesToWait == 0 && gAnimScriptActive);
 }
 
+// Loads sprite graphics used in a move into memory.
+// arg 0: gfx ANIM_TAG
 static void ScriptCmd_loadspritegfx(void)
 {
     u16 tag;
@@ -1643,6 +1642,8 @@ static void ScriptCmd_loadspritegfx(void)
     gAnimScriptCallback = WaitAnimFrameCount;
 }
 
+// Frees sprite graphics from memory when move animation no longer needs them.
+// arg0: gfx ANIM_TAG
 static void ScriptCmd_unloadspritegfx(void)
 {
     u16 tag;
@@ -1655,6 +1656,9 @@ static void ScriptCmd_unloadspritegfx(void)
     ClearSpriteIndex(GET_TRUE_SPRITE_INDEX(tag));
 }
 
+// Creates a sprite from the given sprite template.
+// arg0: SpriteTemplate
+// arg1: s16[] gBattleAnimArgs
 static void ScriptCmd_createsprite(void)
 {
     s32 i;
@@ -1686,7 +1690,7 @@ static void ScriptCmd_createsprite(void)
         else
             argVar *= -1;
 
-        subpriority = sub_8079E90(gAnimBankTarget) + (s8)(argVar);
+        subpriority = GetBattlerSubpriority(gBattleAnimTarget) + (s8)(argVar);
     }
     else
     {
@@ -1695,16 +1699,19 @@ static void ScriptCmd_createsprite(void)
         else
             argVar *= -1;
 
-        subpriority = sub_8079E90(gAnimBankAttacker) + (s8)(argVar);
+        subpriority = GetBattlerSubpriority(gBattleAnimAttacker) + (s8)(argVar);
     }
 
     if (subpriority < 3)
         subpriority = 3;
 
-    CreateSpriteAndAnimate(template, GetBattlerSpriteCoord(gAnimBankTarget, 2), GetBattlerSpriteCoord(gAnimBankTarget, 3), subpriority);
+    CreateSpriteAndAnimate(template, GetBattlerSpriteCoord(gBattleAnimTarget, 2), GetBattlerSpriteCoord(gBattleAnimTarget, 3), subpriority);
     gAnimVisualTaskCount++;
 }
 
+// Initializes an animation task.
+// arg0: AnimTask function
+// arg1: s16[] arguments
 static void ScriptCmd_createvisualtask(void)
 {
     TaskFunc taskFunc;
@@ -1735,6 +1742,8 @@ static void ScriptCmd_createvisualtask(void)
     gAnimVisualTaskCount++;
 }
 
+// Creates a visual delay.
+// arg0: number of frames to wait.
 static void ScriptCmd_delay(void)
 {
     sBattleAnimScriptPtr++;
@@ -1745,7 +1754,7 @@ static void ScriptCmd_delay(void)
     gAnimScriptCallback = WaitAnimFrameCount;
 }
 
-// wait for visual tasks to finish.
+// Wait for visual tasks to finish.
 static void ScriptCmd_waitforvisualfinish(void)
 {
     if (gAnimVisualTaskCount == 0)
@@ -1767,6 +1776,8 @@ static void ScriptCmd_hang2(void)
 {
 }
 
+// Marks the end of an animation. Finishes the anims, tasks, and sound effects.
+// started during an animaiton.
 static void ScriptCmd_end(void)
 {
     s32 i;
@@ -1814,13 +1825,15 @@ static void ScriptCmd_end(void)
         m4aMPlayVolumeControl(&gMPlay_BGM, 0xFFFF, 256);
         if (IsContest() == 0)
         {
-            sub_8079E24();
+            UpdateBattlerSpritePriorities();
             UpdateOamPriorityInAllHealthboxes(1);
         }
         gAnimScriptActive = FALSE;
     }
 }
 
+// Plays a sound effect.
+// arg0: sound effect ID
 static void ScriptCmd_playse(void)
 {
     sBattleAnimScriptPtr++;
@@ -1828,6 +1841,8 @@ static void ScriptCmd_playse(void)
     sBattleAnimScriptPtr += 2;
 }
 
+// 
+// arg0: battler
 static void ScriptCmd_monbg(void)
 {
     u8 animBank;
@@ -1839,15 +1854,15 @@ static void ScriptCmd_monbg(void)
 
     sBattleAnimScriptPtr++;
     animBank = T1_READ_8(sBattleAnimScriptPtr);
-    if (animBank == ANIM_BANK_ATTACKER)
-        animBank = ANIM_BANK_ATK_PARTNER;
-    else if (animBank == ANIM_BANK_TARGET)
-        animBank = ANIM_BANK_DEF_PARTNER;
+    if (animBank == ANIM_BATTLER_ATTACKER)
+        animBank = ANIM_BATTLER_ATK_PARTNER;
+    else if (animBank == ANIM_BATTLER_TARGET)
+        animBank = ANIM_BATTLER_DEF_PARTNER;
 
-    if (animBank == ANIM_BANK_ATTACKER || animBank == ANIM_BANK_ATK_PARTNER)
-        bank = gAnimBankAttacker;
+    if (animBank == ANIM_BATTLER_ATTACKER || animBank == ANIM_BATTLER_ATK_PARTNER)
+        bank = gBattleAnimAttacker;
     else
-        bank = gAnimBankTarget;
+        bank = gBattleAnimTarget;
 
     if (IsAnimBankSpriteVisible(bank))
     {
@@ -1881,7 +1896,7 @@ static void ScriptCmd_monbg(void)
     }
 
     bank ^= 2;
-    if (animBank >= ANIM_BANK_ATK_PARTNER && IsAnimBankSpriteVisible(bank))
+    if (animBank >= ANIM_BATTLER_ATK_PARTNER && IsAnimBankSpriteVisible(bank))
     {
         identity = GetBattlerPosition(bank);
         identity += 0xFF;
@@ -1918,7 +1933,7 @@ bool8 IsAnimBankSpriteVisible(u8 bank)
 {
     if (IsContest())
     {
-        if (bank == gAnimBankAttacker)
+        if (bank == gBattleAnimAttacker)
             return TRUE;
         else
             return FALSE;
@@ -2110,15 +2125,15 @@ static void ScriptCmd_clearmonbg(void)
     sBattleAnimScriptPtr++;
     animBankId = T1_READ_8(sBattleAnimScriptPtr);
 
-    if (animBankId == ANIM_BANK_ATTACKER)
-        animBankId = ANIM_BANK_ATK_PARTNER;
-    else if (animBankId == ANIM_BANK_TARGET)
-        animBankId = ANIM_BANK_DEF_PARTNER;
+    if (animBankId == ANIM_BATTLER_ATTACKER)
+        animBankId = ANIM_BATTLER_ATK_PARTNER;
+    else if (animBankId == ANIM_BATTLER_TARGET)
+        animBankId = ANIM_BATTLER_DEF_PARTNER;
 
-    if (animBankId == ANIM_BANK_ATTACKER || animBankId == ANIM_BANK_ATK_PARTNER)
-        bank = gAnimBankAttacker;
+    if (animBankId == ANIM_BATTLER_ATTACKER || animBankId == ANIM_BATTLER_ATK_PARTNER)
+        bank = gBattleAnimAttacker;
     else
-        bank = gAnimBankTarget;
+        bank = gBattleAnimTarget;
 
     if (gMonAnimTaskIdArray[0] != 0xFF)
         gSprites[gBankSpriteIds[bank]].invisible = FALSE;
@@ -2173,15 +2188,15 @@ static void ScriptCmd_monbg_22(void)
     sBattleAnimScriptPtr++;
     animBankId = T1_READ_8(sBattleAnimScriptPtr);
 
-    if (animBankId == ANIM_BANK_ATTACKER)
-        animBankId = ANIM_BANK_ATK_PARTNER;
-    else if (animBankId == ANIM_BANK_TARGET)
-        animBankId = ANIM_BANK_DEF_PARTNER;
+    if (animBankId == ANIM_BATTLER_ATTACKER)
+        animBankId = ANIM_BATTLER_ATK_PARTNER;
+    else if (animBankId == ANIM_BATTLER_TARGET)
+        animBankId = ANIM_BATTLER_DEF_PARTNER;
 
-    if (animBankId == ANIM_BANK_ATTACKER || animBankId == ANIM_BANK_ATK_PARTNER)
-        bank = gAnimBankAttacker;
+    if (animBankId == ANIM_BATTLER_ATTACKER || animBankId == ANIM_BATTLER_ATK_PARTNER)
+        bank = gBattleAnimAttacker;
     else
-        bank = gAnimBankTarget;
+        bank = gBattleAnimTarget;
 
     if (IsAnimBankSpriteVisible(bank))
     {
@@ -2196,7 +2211,7 @@ static void ScriptCmd_monbg_22(void)
     }
 
     bank ^= 2;
-    if (animBankId > ANIM_BANK_TARGET && IsAnimBankSpriteVisible(bank))
+    if (animBankId > ANIM_BATTLER_TARGET && IsAnimBankSpriteVisible(bank))
     {
         identity = GetBattlerPosition(bank);
         identity += 0xFF;
@@ -2219,15 +2234,15 @@ static void ScriptCmd_clearmonbg_23(void)
     sBattleAnimScriptPtr++;
     animBankId = T1_READ_8(sBattleAnimScriptPtr);
 
-    if (animBankId == ANIM_BANK_ATTACKER)
-        animBankId = ANIM_BANK_ATK_PARTNER;
-    else if (animBankId == ANIM_BANK_TARGET)
-        animBankId = ANIM_BANK_DEF_PARTNER;
+    if (animBankId == ANIM_BATTLER_ATTACKER)
+        animBankId = ANIM_BATTLER_ATK_PARTNER;
+    else if (animBankId == ANIM_BATTLER_TARGET)
+        animBankId = ANIM_BATTLER_DEF_PARTNER;
 
-    if (animBankId == ANIM_BANK_ATTACKER || animBankId == ANIM_BANK_ATK_PARTNER)
-        bank = gAnimBankAttacker;
+    if (animBankId == ANIM_BATTLER_ATTACKER || animBankId == ANIM_BATTLER_ATK_PARTNER)
+        bank = gBattleAnimAttacker;
     else
-        bank = gAnimBankTarget;
+        bank = gBattleAnimTarget;
 
     if (IsAnimBankSpriteVisible(bank))
         gSprites[gBankSpriteIds[bank]].invisible = FALSE;
@@ -2267,6 +2282,9 @@ static void sub_80769A4(u8 taskId)
     }
 }
 
+// Sets transparency of sprite.
+// arg0: sprite alpha value
+// arg1: background alpha value
 static void ScriptCmd_setalpha(void)
 {
     u16 spriteAlpha, bgAlpha;
@@ -2288,6 +2306,7 @@ static void ScriptCmd_setbldcnt(void)
     REG_BLDCNT = half1 | half2;
 }
 
+// Turns off alpha blending / semi transparency.
 static void ScriptCmd_blendoff(void)
 {
     sBattleAnimScriptPtr++;
@@ -2295,6 +2314,8 @@ static void ScriptCmd_blendoff(void)
     REG_BLDALPHA = 0;
 }
 
+// Calls another animation by resetting sBattleAnimScriptPtr.
+// arg0: Function
 static void ScriptCmd_call(void)
 {
     sBattleAnimScriptPtr++;
@@ -2302,11 +2323,15 @@ static void ScriptCmd_call(void)
     sBattleAnimScriptPtr = T2_READ_PTR(sBattleAnimScriptPtr);
 }
 
+// Returns to the function that called this.
 static void ScriptCmd_return(void)
 {
     sBattleAnimScriptPtr = gBattleAnimScriptRetAddr;
 }
 
+// Sets a value into gBattleAnimArgs[8]
+// arg0: index / arg number
+// arg1: value to set
 static void ScriptCmd_setarg(void)
 {
     const u8 *addr = sBattleAnimScriptPtr;
@@ -2321,6 +2346,9 @@ static void ScriptCmd_setarg(void)
     gBattleAnimArgs[argId] = value;
 }
 
+// Flips between the first and second step of a move with two turns.
+// arg0: first turn animation
+// arg1: second turn animation
 static void ScriptCmd_choosetwoturnanim(void)
 {
     sBattleAnimScriptPtr++;
@@ -2329,6 +2357,9 @@ static void ScriptCmd_choosetwoturnanim(void)
     sBattleAnimScriptPtr = T2_READ_PTR(sBattleAnimScriptPtr);
 }
 
+// Jump to specified step of multi turn moves.
+// arg0: move turn
+// arg1: turn animation
 static void ScriptCmd_jumpifmoveturn(void)
 {
     u8 toCheck;
@@ -2347,6 +2378,8 @@ static void ScriptCmd_jumpifmoveturn(void)
     }
 }
 
+// Jump to another animation.
+// arg0: new animation
 static void ScriptCmd_jump(void)
 {
     sBattleAnimScriptPtr++;
@@ -2364,6 +2397,8 @@ bool8 IsContest(void)
 #define tBackgroundId   data[0]
 #define tState          data[10]
 
+// Fades the screen and sets new background image.
+// arg0: background ID
 static void ScriptCmd_fadetobg(void)
 {
     u8 backgroundId;
@@ -2377,6 +2412,10 @@ static void ScriptCmd_fadetobg(void)
     sAnimBackgroundFadeState = 1;
 }
 
+// Fades to background image based on context of move (contest, battle)
+// arg0: opponent background image ID
+// arg1: player background image ID
+// arg2: contest background image ID
 static void ScriptCmd_fadetobgfromset(void)
 {
     u8 bg1, bg2, bg3;
@@ -2391,7 +2430,7 @@ static void ScriptCmd_fadetobgfromset(void)
 
     if (IsContest())
         gTasks[taskId].tBackgroundId = bg3;
-    else if (GetBattlerSide(gAnimBankTarget) == 0)
+    else if (GetBattlerSide(gBattleAnimTarget) == 0)
         gTasks[taskId].tBackgroundId = bg2;
     else
         gTasks[taskId].tBackgroundId = bg1;
@@ -2464,6 +2503,7 @@ static void LoadDefaultBg(void)
         DrawMainBattleBackground();
 }
 
+// Restores default background image.
 static void ScriptCmd_restorebg(void)
 {
     u8 taskId;
@@ -2477,6 +2517,7 @@ static void ScriptCmd_restorebg(void)
 #undef tBackgroundId
 #undef tState
 
+// Wait for background image fade out to compete.
 static void ScriptCmd_waitbgfadeout(void)
 {
     if (sAnimBackgroundFadeState == 2)
@@ -2490,6 +2531,7 @@ static void ScriptCmd_waitbgfadeout(void)
     }
 }
 
+// Wait for background image fade in to compete.
 static void ScriptCmd_waitbgfadein(void)
 {
     if (sAnimBackgroundFadeState == 0)
@@ -2503,6 +2545,8 @@ static void ScriptCmd_waitbgfadein(void)
     }
 }
 
+// Change background.
+// arg0: background image ID
 static void ScriptCmd_changebg(void)
 {
     sBattleAnimScriptPtr++;
@@ -2514,30 +2558,30 @@ static void ScriptCmd_changebg(void)
 /*
 s8 BattleAnimAdjustPanning(s8 a)
 {
-    if (!IsContest() && (EWRAM_17810[gAnimBankAttacker].unk0 & 0x10))
+    if (!IsContest() && (EWRAM_17810[gBattleAnimAttacker].unk0 & 0x10))
     {
-        a = GetBattlerSide(gAnimBankAttacker) ? 0xC0 : 0x3F;
+        a = GetBattlerSide(gBattleAnimAttacker) ? SOUND_PAN_ATTACKER : SOUND_PAN_TARGET;
     }
     //_08076FDC
     else
     {
         if (IsContest())
         {
-            if (gAnimBankAttacker == gAnimBankTarget && gAnimBankAttacker == 2
-             && a == 0x3F)
+            if (gBattleAnimAttacker == gBattleAnimTarget && gBattleAnimAttacker == 2
+             && a == SOUND_PAN_TARGET)
             {
                 //jump to _0807707A
-                if (a < -0x40)
-                    a = 0xC0;
+                if (a < SOUND_PAN_ATTACKER_NEG)
+                    a = SOUND_PAN_ATTACKER;
                 return a;
             }
         }
         //_08077004
         else
         {
-            if (GetBattlerSide(gAnimBankAttacker) == 0)
+            if (GetBattlerSide(gBattleAnimAttacker) == 0)
             {
-                if (GetBattlerSide(gAnimBankTarget) == 0)
+                if (GetBattlerSide(gBattleAnimTarget) == 0)
             }
             //_08077042
             else
@@ -2561,7 +2605,7 @@ s8 BattleAnimAdjustPanning(s8 a)
     lsls r0, 24\n\
     cmp r0, 0\n\
     bne _08076FDC\n\
-    ldr r0, _08076FD4 @ =gAnimBankAttacker\n\
+    ldr r0, _08076FD4 @ =gBattleAnimAttacker\n\
     ldrb r2, [r0]\n\
     lsls r0, r2, 1\n\
     adds r0, r2\n\
@@ -2582,15 +2626,15 @@ s8 BattleAnimAdjustPanning(s8 a)
     movs r4, 0x3F\n\
     b _0807706E\n\
     .align 2, 0\n\
-_08076FD4: .4byte gAnimBankAttacker\n\
+_08076FD4: .4byte gBattleAnimAttacker\n\
 _08076FD8: .4byte gSharedMem + 0x17810\n\
 _08076FDC:\n\
     bl IsContest\n\
     lsls r0, 24\n\
     cmp r0, 0\n\
     beq _08077004\n\
-    ldr r0, _08076FFC @ =gAnimBankAttacker\n\
-    ldr r1, _08077000 @ =gAnimBankTarget\n\
+    ldr r0, _08076FFC @ =gBattleAnimAttacker\n\
+    ldr r1, _08077000 @ =gBattleAnimTarget\n\
     ldrb r0, [r0]\n\
     ldrb r1, [r1]\n\
     cmp r0, r1\n\
@@ -2601,16 +2645,16 @@ _08076FDC:\n\
     beq _0807707A\n\
     b _08077068\n\
     .align 2, 0\n\
-_08076FFC: .4byte gAnimBankAttacker\n\
-_08077000: .4byte gAnimBankTarget\n\
+_08076FFC: .4byte gBattleAnimAttacker\n\
+_08077000: .4byte gBattleAnimTarget\n\
 _08077004:\n\
-    ldr r0, _0807702C @ =gAnimBankAttacker\n\
+    ldr r0, _0807702C @ =gBattleAnimAttacker\n\
     ldrb r0, [r0]\n\
     bl GetBattlerSide\n\
     lsls r0, 24\n\
     cmp r0, 0\n\
     bne _08077042\n\
-    ldr r0, _08077030 @ =gAnimBankTarget\n\
+    ldr r0, _08077030 @ =gBattleAnimTarget\n\
     ldrb r0, [r0]\n\
     bl GetBattlerSide\n\
     lsls r0, 24\n\
@@ -2623,8 +2667,8 @@ _08077004:\n\
     movs r4, 0xC0\n\
     b _0807706E\n\
     .align 2, 0\n\
-_0807702C: .4byte gAnimBankAttacker\n\
-_08077030: .4byte gAnimBankTarget\n\
+_0807702C: .4byte gBattleAnimAttacker\n\
+_08077030: .4byte gBattleAnimTarget\n\
 _08077034:\n\
     movs r0, 0x40\n\
     negs r0, r0\n\
@@ -2634,7 +2678,7 @@ _08077034:\n\
     lsls r0, 24\n\
     b _0807706C\n\
 _08077042:\n\
-    ldr r0, _08077064 @ =gAnimBankTarget\n\
+    ldr r0, _08077064 @ =gBattleAnimTarget\n\
     ldrb r0, [r0]\n\
     bl GetBattlerSide\n\
     lsls r0, 24\n\
@@ -2650,7 +2694,7 @@ _08077042:\n\
     movs r4, 0x3F\n\
     b _0807706E\n\
     .align 2, 0\n\
-_08077064: .4byte gAnimBankTarget\n\
+_08077064: .4byte gBattleAnimTarget\n\
 _08077068:\n\
     lsls r0, r4, 24\n\
     negs r0, r0\n\
@@ -2682,16 +2726,16 @@ _08077088:\n\
 
 s8 BattleAnimAdjustPanning2(s8 pan)
 {
-    if (!IsContest() && (EWRAM_17810[gAnimBankAttacker].unk0 & 0x10))
+    if (!IsContest() && (EWRAM_17810[gBattleAnimAttacker].unk0 & 0x10))
     {
-        if (GetBattlerSide(gAnimBankAttacker) != 0)
-            pan = 0x3F;
+        if (GetBattlerSide(gBattleAnimAttacker) != 0)
+            pan = SOUND_PAN_TARGET;
         else
-            pan = 0xC0;
+            pan = SOUND_PAN_ATTACKER;
     }
     else
     {
-        if (GetBattlerSide(gAnimBankAttacker) != 0 || IsContest() != 0)
+        if (GetBattlerSide(gBattleAnimAttacker) != 0 || IsContest() != 0)
             pan = -pan;
     }
     return pan;
@@ -2701,10 +2745,10 @@ s16 sub_8077104(s16 newPan, int oldPan)
 {
     s16 var = newPan;
 
-    if (var > 63)
-        var = 63;
-    else if (var < -64)
-        var = -64;
+    if (var > SOUND_PAN_TARGET)
+        var = SOUND_PAN_TARGET;
+    else if (var < SOUND_PAN_ATTACKER_NEG)
+        var = SOUND_PAN_ATTACKER_NEG;
     return var;
 }
 
@@ -2987,6 +3031,9 @@ static void Task_WaitAndPlaySE(u8 taskId)
 #undef tPanning
 #undef tFramesToWait
 
+// Creates a sound task.
+// arg0: sound task function
+// arg1: s16[] gBattleAnimArgs
 static void ScriptCmd_createsoundtask(void)
 {
     TaskFunc func;
@@ -3008,6 +3055,7 @@ static void ScriptCmd_createsoundtask(void)
     gAnimSoundTaskCount++;
 }
 
+// Wait for sound effect to end.
 static void ScriptCmd_waitsound(void)
 {
     if (gAnimSoundTaskCount != 0)
@@ -3036,6 +3084,10 @@ static void ScriptCmd_waitsound(void)
     }
 }
 
+// Jump to animation based on gBattleAnimArgs[index] value.
+// arg0: gBattleAnimArgs[] argument index
+// arg1: value
+// arg2: animation script
 static void ScriptCmd_jumpargeq(void)
 {
     u8 argId;
@@ -3051,6 +3103,8 @@ static void ScriptCmd_jumpargeq(void)
         sBattleAnimScriptPtr += 7;
 }
 
+// If using move in contest, go to specific animation script.
+// arg0: animation script
 static void ScriptCmd_jumpifcontest(void)
 {
     sBattleAnimScriptPtr++;
@@ -3070,9 +3124,9 @@ static void ScriptCmd_monbgprio_28(void)
     sBattleAnimScriptPtr += 2;
 
     if (wantedBank != 0)
-        bank = gAnimBankTarget;
+        bank = gBattleAnimTarget;
     else
-        bank = gAnimBankAttacker;
+        bank = gBattleAnimAttacker;
 
     bankIdentity = GetBattlerPosition(bank);
     if (!IsContest() && (bankIdentity == 0 || bankIdentity == 3))
@@ -3100,12 +3154,12 @@ static void ScriptCmd_monbgprio_2A(void)
 
     wantedBank = T1_READ_8(sBattleAnimScriptPtr + 1);
     sBattleAnimScriptPtr += 2;
-    if (GetBattlerSide(gAnimBankAttacker) != GetBattlerSide(gAnimBankTarget))
+    if (GetBattlerSide(gBattleAnimAttacker) != GetBattlerSide(gBattleAnimTarget))
     {
         if (wantedBank != 0)
-            bank = gAnimBankTarget;
+            bank = gBattleAnimTarget;
         else
-            bank = gAnimBankAttacker;
+            bank = gBattleAnimAttacker;
         bankIdentity = GetBattlerPosition(bank);
         if (!IsContest() && (bankIdentity == 0 || bankIdentity == 3))
         {
@@ -3115,6 +3169,8 @@ static void ScriptCmd_monbgprio_2A(void)
     }
 }
 
+// Sets sprite to be invisible.
+// arg0: battler sprite ID
 static void ScriptCmd_invisible(void)
 {
     u8 spriteId;
@@ -3126,6 +3182,8 @@ static void ScriptCmd_invisible(void)
     sBattleAnimScriptPtr += 2;
 }
 
+// Sets aprite to be visible.
+// arg0: battler sprite ID
 static void ScriptCmd_visible(void)
 {
     u8 spriteId;
@@ -3146,16 +3204,16 @@ static void ScriptCmd_doublebattle_2D(void)
     wantedBank = T1_READ_8(sBattleAnimScriptPtr + 1);
     sBattleAnimScriptPtr += 2;
     if (!IsContest() && IsDoubleBattle()
-     && GetBattlerSide(gAnimBankAttacker) == GetBattlerSide(gAnimBankTarget))
+     && GetBattlerSide(gBattleAnimAttacker) == GetBattlerSide(gBattleAnimTarget))
     {
         if (wantedBank == 0)
         {
-            r4 = GetBattlerPosition_permutated(gAnimBankAttacker);
+            r4 = GetBattlerPosition_permutated(gBattleAnimAttacker);
             spriteId = GetAnimBattlerSpriteId(0);
         }
         else
         {
-            r4 = GetBattlerPosition_permutated(gAnimBankTarget);
+            r4 = GetBattlerPosition_permutated(gBattleAnimTarget);
             spriteId = GetAnimBattlerSpriteId(1);
         }
         if (spriteId != 0xFF)
@@ -3180,16 +3238,16 @@ static void ScriptCmd_doublebattle_2E(void)
     wantedBank = T1_READ_8(sBattleAnimScriptPtr  + 1);
     sBattleAnimScriptPtr += 2;
     if (!IsContest() && IsDoubleBattle()
-     && GetBattlerSide(gAnimBankAttacker) == GetBattlerSide(gAnimBankTarget))
+     && GetBattlerSide(gBattleAnimAttacker) == GetBattlerSide(gBattleAnimTarget))
     {
         if (wantedBank == 0)
         {
-            r4 = GetBattlerPosition_permutated(gAnimBankAttacker);
+            r4 = GetBattlerPosition_permutated(gBattleAnimAttacker);
             spriteId = GetAnimBattlerSpriteId(0);
         }
         else
         {
-            r4 = GetBattlerPosition_permutated(gAnimBankTarget);
+            r4 = GetBattlerPosition_permutated(gBattleAnimTarget);
             spriteId = GetAnimBattlerSpriteId(1);
         }
         if (spriteId != 0xFF && r4 == 2)
@@ -3199,6 +3257,7 @@ static void ScriptCmd_doublebattle_2E(void)
     }
 }
 
+// Cease playing sounds.
 static void ScriptCmd_stopsound(void)
 {
     m4aMPlayStop(&gMPlay_SE1);

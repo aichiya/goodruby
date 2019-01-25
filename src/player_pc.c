@@ -1221,7 +1221,7 @@ static void Mailbox_DoRedrawMailboxMenuAfterReturn(void)
 static void Mailbox_ReturnToFieldFromReadMail(void)
 {
     gFieldCallback = Mailbox_DoRedrawMailboxMenuAfterReturn;
-    SetMainCallback2(c2_exit_to_overworld_2_switch);
+    SetMainCallback2(CB2_ReturnToField);
 }
 
 static const u8 gHighlightedMoveToBagFormatText[] = _("{COLOR RED}{STR_VAR_1}");
@@ -1311,7 +1311,7 @@ static void Mailbox_UpdateMailListAfterDeposit(void)
 void Mailbox_ReturnToMailListAfterDeposit(void)
 {
     gFieldCallback = Mailbox_UpdateMailListAfterDeposit;
-    SetMainCallback2(c2_exit_to_overworld_2_switch);
+    SetMainCallback2(CB2_ReturnToField);
 }
 
 // you always have at least 1 POKeMON and you cannot receive mail before you leave Littleroot: therefore this function cannot be reached normally.

@@ -11,8 +11,8 @@ asm(".equ REG_BLDCNT, 0x4000050\n"
 	"\t.equ REG_BG1HOFS, 0x4000014");
 
 extern s16 gBattleAnimArgs[];
-extern u8 gAnimBankAttacker;
-extern u8 gAnimBankTarget;
+extern u8 gBattleAnimAttacker;
+extern u8 gBattleAnimTarget;
 extern u16 gBattle_BG1_X;
 extern u16 gBattle_BG1_Y;
 
@@ -62,8 +62,8 @@ const union AnimCmd *const gSpriteAnimTable_83D9314[] =
 
 const struct SpriteTemplate gBattleAnimSpriteTemplate_83D9318 =
 {
-    .tileTag = 10155,
-    .paletteTag = 10155,
+    .tileTag = ANIM_TAG_SMALL_BUBBLES,
+    .paletteTag = ANIM_TAG_SMALL_BUBBLES,
     .oam = &gOamData_837E04C,
     .anims = gSpriteAnimTable_83D9310,
     .images = NULL,
@@ -73,8 +73,8 @@ const struct SpriteTemplate gBattleAnimSpriteTemplate_83D9318 =
 
 const struct SpriteTemplate gBattleAnimSpriteTemplate_83D9330 =
 {
-    .tileTag = 10155,
-    .paletteTag = 10155,
+    .tileTag = ANIM_TAG_SMALL_BUBBLES,
+    .paletteTag = ANIM_TAG_SMALL_BUBBLES,
     .oam = &gOamData_837E10C,
     .anims = gSpriteAnimTable_83D9314,
     .images = NULL,
@@ -84,8 +84,8 @@ const struct SpriteTemplate gBattleAnimSpriteTemplate_83D9330 =
 
 const struct SpriteTemplate gBattleAnimSpriteTemplate_83D9348 =
 {
-    .tileTag = 10141,
-    .paletteTag = 10141,
+    .tileTag = ANIM_TAG_ICE_CRYSTALS,
+    .paletteTag = ANIM_TAG_ICE_CRYSTALS,
     .oam = &gOamData_837DF24,
     .anims = gSpriteAnimTable_83D9BC8,
     .images = NULL,
@@ -95,8 +95,8 @@ const struct SpriteTemplate gBattleAnimSpriteTemplate_83D9348 =
 
 const struct SpriteTemplate gBattleAnimSpriteTemplate_83D9360 =
 {
-    .tileTag = 10155,
-    .paletteTag = 10155,
+    .tileTag = ANIM_TAG_SMALL_BUBBLES,
+    .paletteTag = ANIM_TAG_SMALL_BUBBLES,
     .oam = &gOamData_837DF24,
     .anims = gDummySpriteAnimTable,
     .images = NULL,
@@ -106,8 +106,8 @@ const struct SpriteTemplate gBattleAnimSpriteTemplate_83D9360 =
 
 const struct SpriteTemplate gSpriteTemplate_83D9378 =
 {
-    .tileTag = 10268,
-    .paletteTag = 10268,
+    .tileTag = ANIM_TAG_GLOWY_BLUE_ORB,
+    .paletteTag = ANIM_TAG_GLOWY_BLUE_ORB,
     .oam = &gOamData_837DF24,
     .anims = gDummySpriteAnimTable,
     .images = NULL,
@@ -178,8 +178,8 @@ const union AffineAnimCmd *const gSpriteAffineAnimTable_83D9404[] =
 
 const struct SpriteTemplate gBattleAnimSpriteTemplate_83D9408 =
 {
-    .tileTag = 10155,
-    .paletteTag = 10155,
+    .tileTag = ANIM_TAG_SMALL_BUBBLES,
+    .paletteTag = ANIM_TAG_SMALL_BUBBLES,
     .oam = &gOamData_837DF24,
     .anims = gSpriteAnimTable_83D93A8,
     .images = NULL,
@@ -189,8 +189,8 @@ const struct SpriteTemplate gBattleAnimSpriteTemplate_83D9408 =
 
 const struct SpriteTemplate gSpriteTemplate_83D9420 =
 {
-    .tileTag = 10155,
-    .paletteTag = 10155,
+    .tileTag = ANIM_TAG_SMALL_BUBBLES,
+    .paletteTag = ANIM_TAG_SMALL_BUBBLES,
     .oam = &gOamData_837DF84,
     .anims = gSpriteAnimTable_83D93A8,
     .images = NULL,
@@ -200,8 +200,8 @@ const struct SpriteTemplate gSpriteTemplate_83D9420 =
 
 const struct SpriteTemplate gBattleAnimSpriteTemplate_83D9438 =
 {
-    .tileTag = 10155,
-    .paletteTag = 10155,
+    .tileTag = ANIM_TAG_SMALL_BUBBLES,
+    .paletteTag = ANIM_TAG_SMALL_BUBBLES,
     .oam = &gOamData_837DF8C,
     .anims = gSpriteAnimTable_83D93B0,
     .images = NULL,
@@ -268,7 +268,7 @@ void sub_80D38BC(u8 taskId)
     if (!IsContest())
     {
         ((volatile struct BgCnt *)&REG_BG1CNT)->charBaseBlock = 1;
-        if (GetBattlerSide(gAnimBankAttacker) == 1)
+        if (GetBattlerSide(gBattleAnimAttacker) == 1)
             LZDecompressVram(gUnknown_08E70968, sp00.unk4);
         else
             LZDecompressVram(gUnknown_08E70C38, sp00.unk4);
@@ -298,7 +298,7 @@ void sub_80D38BC(u8 taskId)
         gTasks[taskId].data[1] = 1;
         gTasks[taskId2].data[3] = 0;
     }
-    else if (GetBattlerSide(gAnimBankAttacker) == 1)
+    else if (GetBattlerSide(gBattleAnimAttacker) == 1)
     {
         gBattle_BG1_X = -0xe0;
         gBattle_BG1_Y = 0x100;

@@ -119,6 +119,7 @@
 #define TYPE_DRAGON   0x10
 #define TYPE_DARK     0x11
 #define TYPE_ROOSTING 0x12
+#define NUMBER_OF_MON_TYPES     0x12
 
 #define FRIENDSHIP_EVENT_GROW_LEVEL           0x0
 #define FRIENDSHIP_EVENT_VITAMIN              0x1 // unused

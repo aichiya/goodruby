@@ -107,7 +107,7 @@ static const u8 MoveDescription_RollingKick[] = _(
     "a rapid spin.");
 
 static const u8 MoveDescription_SandAttack[] = _(
-    "Reduces the foe’s accuracy\n"
+    "Reduces the foe's accuracy\n"
     "by hurling sand in its face.");
 
 static const u8 MoveDescription_Headbutt[] = _(
@@ -152,7 +152,7 @@ static const u8 MoveDescription_DoubleEdge[] = _(
 
 static const u8 MoveDescription_TailWhip[] = _(
     "Wags the tail to lower the\n"
-    "foe’s Defense.");
+    "foe's Defense.");
 
 static const u8 MoveDescription_PoisonSting[] = _(
     "A toxic attack with barbs,\n"
@@ -176,7 +176,7 @@ static const u8 MoveDescription_Bite[] = _(
 
 static const u8 MoveDescription_Growl[] = _(
     "Growls cutely to reduce the\n"
-    "foe’s Attack.");
+    "foe's Attack.");
 
 static const u8 MoveDescription_Roar[] = _(
     "Makes the foe flee to end\n"
@@ -196,7 +196,7 @@ static const u8 MoveDescription_SonicBoom[] = _(
 
 static const u8 MoveDescription_Disable[] = _(
     "Psychically disables one of\n"
-    "the foe’s moves.");
+    "the foe's moves.");
 
 static const u8 MoveDescription_Acid[] = _(
     "Sprays a hide-melting acid.\n"
@@ -272,7 +272,7 @@ static const u8 MoveDescription_Counter[] = _(
 
 static const u8 MoveDescription_SeismicToss[] = _(
     "Inflicts damage identical\n"
-    "to the user’s level.");
+    "to the user's level.");
 
 static const u8 MoveDescription_Strength[] = _(
     "Builds enormous power,\n"
@@ -391,7 +391,7 @@ static const u8 MoveDescription_QuickAttack[] = _(
     "that always strikes first.");
 
 static const u8 MoveDescription_Rage[] = _(
-    "Raises the user’s Attack\n"
+    "Raises the user's Attack\n"
     "every time it is hit.");
 
 static const u8 MoveDescription_Teleport[] = _(
@@ -400,7 +400,7 @@ static const u8 MoveDescription_Teleport[] = _(
 
 static const u8 MoveDescription_NightShade[] = _(
     "Inflicts damage identical\n"
-    "to the user’s level.");
+    "to the user's level.");
 
 static const u8 MoveDescription_Mimic[] = _(
     "Copies a move used by the\n"
@@ -408,7 +408,7 @@ static const u8 MoveDescription_Mimic[] = _(
 
 static const u8 MoveDescription_Screech[] = _(
     "Emits a screech to sharply\n"
-    "reduce the foe’s Defense.");
+    "reduce the foe's Defense.");
 
 static const u8 MoveDescription_DoubleTeam[] = _(
     "Creates illusory copies to\n"
@@ -416,18 +416,18 @@ static const u8 MoveDescription_DoubleTeam[] = _(
 
 static const u8 MoveDescription_Recover[] = _(
     "Recovers up to half the\n"
-    "user’s maximum HP.");
+    "user's maximum HP.");
 
 static const u8 MoveDescription_Harden[] = _(
-    "Stiffens the body’s \n"
+    "Stiffens the body's \n"
     "muscles to raise Defense.");
 
 static const u8 MoveDescription_Minimize[] = _(
-    "Minimizes the user’s size\n"
+    "Minimizes the user's size\n"
     "to raise evasiveness.");
 
 static const u8 MoveDescription_Smokescreen[] = _(
-    "Lowers the foe’s accuracy\n"
+    "Lowers the foe's accuracy\n"
     "using smoke, ink, etc.");
 
 static const u8 MoveDescription_ConfuseRay[] = _(
@@ -471,7 +471,7 @@ static const u8 MoveDescription_Metronome[] = _(
     "Pokémon move at random.");
 
 static const u8 MoveDescription_MirrorMove[] = _(
-    "Counters the foe’s attack\n"
+    "Counters the foe's attack\n"
     "with the same move.");
 
 static const u8 MoveDescription_SelfDestruct[] = _(
@@ -536,7 +536,7 @@ static const u8 MoveDescription_Kinesis[] = _(
 
 static const u8 MoveDescription_SoftBoiled[] = _(
     "Recovers up to half the\n"
-    "user’s maximum HP.");
+    "user's maximum HP.");
 
 static const u8 MoveDescription_HiJumpKick[] = _(
     "A jumping knee kick. If it\n"
@@ -571,12 +571,12 @@ static const u8 MoveDescription_SkyAttack[] = _(
     "then strikes the next turn.");
 
 static const u8 MoveDescription_Transform[] = _(
-    "Alters the user’s cells to\n"
+    "Alters the user's cells to\n"
     "become a copy of the foe.");
 
 static const u8 MoveDescription_Bubble[] = _(
     "An attack using bubbles.\n"
-    "May lower the foe’s Speed.");
+    "May lower the foe's Speed.");
 
 static const u8 MoveDescription_DizzyPunch[] = _(
     "A rhythmic punch that may\n"
@@ -595,11 +595,11 @@ static const u8 MoveDescription_Psywave[] = _(
     "wave of varying intensity.");
 
 static const u8 MoveDescription_Splash[] = _(
-    "It’s just a splash...\n"
+    "It's just a splash...\n"
     "Has no effect whatsoever.");
 
 static const u8 MoveDescription_AcidArmor[] = _(
-    "Liquifies the user’s body\n"
+    "Liquifies the user's body\n"
     "to sharply raise Defense.");
 
 static const u8 MoveDescription_Crabhammer[] = _(
@@ -635,8 +635,8 @@ static const u8 MoveDescription_Sharpen[] = _(
     "and raises Attack.");
 
 static const u8 MoveDescription_Conversion[] = _(
-    "Changes the user’s type\n"
-    "into an own move’s type.");
+    "Changes the user's type\n"
+    "into an own move's type.");
 
 static const u8 MoveDescription_TriAttack[] = _(
     "Fires three types of beams\n"
@@ -644,7 +644,7 @@ static const u8 MoveDescription_TriAttack[] = _(
 
 static const u8 MoveDescription_SuperFang[] = _(
     "Attacks with sharp fangs\n"
-    "and cuts half the foe’s HP.");
+    "and cuts half the foe's HP.");
 
 static const u8 MoveDescription_Slash[] = _(
     "Slashes with claws, etc. Has\n"
@@ -652,14 +652,14 @@ static const u8 MoveDescription_Slash[] = _(
 
 static const u8 MoveDescription_Substitute[] = _(
     "Creates a decoy using 1/4\n"
-    "of the user’s maximum HP.");
+    "of the user's maximum HP.");
 
 static const u8 MoveDescription_Struggle[] = _(
     "Used only if all PP are gone.\n"
     "Also hurts the user a little.");
 
 static const u8 MoveDescription_Sketch[] = _(
-    "Copies the foe’s last move\n"
+    "Copies the foe's last move\n"
     "permanently.");
 
 static const u8 MoveDescription_TripleKick[] = _(
@@ -668,15 +668,15 @@ static const u8 MoveDescription_TripleKick[] = _(
 
 static const u8 MoveDescription_Thief[] = _(
     "While attacking, it may\n"
-    "steal the foe’s held item.");
+    "steal the foe's held item.");
 
 static const u8 MoveDescription_SpiderWeb[] = _(
     "Ensnares the foe to stop it\n"
     "from fleeing or switching.");
 
 static const u8 MoveDescription_MindReader[] = _(
-    "Senses the foe’s action to\n"
-    "ensure the next move’s hit.");
+    "Senses the foe's action to\n"
+    "ensure the next move's hit.");
 
 static const u8 MoveDescription_Nightmare[] = _(
     "Inflicts 1/4 damage on a\n"
@@ -696,11 +696,11 @@ static const u8 MoveDescription_Curse[] = _(
 
 static const u8 MoveDescription_Flail[] = _(
     "Inflicts more damage when\n"
-    "the user’s HP is down.");
+    "the user's HP is down.");
 
 static const u8 MoveDescription_Conversion2[] = _(
     "Makes the user resistant\n"
-    "to the last attack’s type.");
+    "to the last attack's type.");
 
 static const u8 MoveDescription_Aeroblast[] = _(
     "Launches a vacuumed blast.\n"
@@ -712,11 +712,11 @@ static const u8 MoveDescription_CottonSpore[] = _(
 
 static const u8 MoveDescription_Reversal[] = _(
     "Inflicts more damage when\n"
-    "the user’s HP is down.");
+    "the user's HP is down.");
 
 static const u8 MoveDescription_Spite[] = _(
     "Spitefully cuts the PP\n"
-    "of the foe’s last move.");
+    "of the foe's last move.");
 
 static const u8 MoveDescription_PowderSnow[] = _(
     "Blasts the foe with a snowy\n"
@@ -751,7 +751,7 @@ static const u8 MoveDescription_SludgeBomb[] = _(
     "damage. May also poison.");
 
 static const u8 MoveDescription_MudSlap[] = _(
-    "Hurls mud in the foe’s face\n"
+    "Hurls mud in the foe's face\n"
     "to reduce its accuracy.");
 
 static const u8 MoveDescription_Octazooka[] = _(
@@ -767,7 +767,7 @@ static const u8 MoveDescription_ZapCannon[] = _(
     "paralysis, but inaccurate.");
 
 static const u8 MoveDescription_Foresight[] = _(
-    "Negates the foe’s efforts\n"
+    "Negates the foe's efforts\n"
     "to heighten evasiveness.");
 
 static const u8 MoveDescription_DestinyBond[] = _(
@@ -780,7 +780,7 @@ static const u8 MoveDescription_PerishSong[] = _(
 
 static const u8 MoveDescription_IcyWind[] = _(
     "A chilling attack that\n"
-    "lowers the foe’s Speed.");
+    "lowers the foe's Speed.");
 
 static const u8 MoveDescription_Detect[] = _(
     "Evades attack, but may fail\n"
@@ -828,7 +828,7 @@ static const u8 MoveDescription_Swagger[] = _(
 
 static const u8 MoveDescription_MilkDrink[] = _(
     "Recovers up to half the\n"
-    "user’s maximum HP.");
+    "user's maximum HP.");
 
 static const u8 MoveDescription_Spark[] = _(
     "An electrified tackle that\n"
@@ -875,7 +875,7 @@ static const u8 MoveDescription_Safeguard[] = _(
     "all status problems.");
 
 static const u8 MoveDescription_PainSplit[] = _(
-    "Adds the user and foe’s HP,\n"
+    "Adds the user and foe's HP,\n"
     "then shares them equally.");
 
 static const u8 MoveDescription_SacredFire[] = _(
@@ -924,10 +924,10 @@ static const u8 MoveDescription_IronTail[] = _(
 
 static const u8 MoveDescription_MetalClaw[] = _(
     "A claw attack that may\n"
-    "raise the user’s Attack.");
+    "raise the user's Attack.");
 
 static const u8 MoveDescription_VitalThrow[] = _(
-    "Makes the user’s move last,\n"
+    "Makes the user's move last,\n"
     "but it never misses.");
 
 static const u8 MoveDescription_MorningSun[] = _(
@@ -967,11 +967,11 @@ static const u8 MoveDescription_Crunch[] = _(
     "May lower Defense.");
 
 static const u8 MoveDescription_MirrorCoat[] = _(
-    "Counters the foe’s special\n"
+    "Counters the foe's special\n"
     "attack at double the power.");
 
 static const u8 MoveDescription_PsychUp[] = _(
-    "Copies the foe’s effect(s)\n"
+    "Copies the foe's effect(s)\n"
     "and gives to the user.");
 
 static const u8 MoveDescription_ExtremeSpeed[] = _(
@@ -984,7 +984,7 @@ static const u8 MoveDescription_AncientPower[] = _(
 
 static const u8 MoveDescription_ShadowBall[] = _(
     "Hurls a black blob that may\n"
-    "lower the foe’s Sp.Def.");
+    "lower the foe's Sp.Def.");
 
 static const u8 MoveDescription_FutureSight[] = _(
     "Heightens inner power to\n"
@@ -1044,7 +1044,7 @@ static const u8 MoveDescription_WillOWisp[] = _(
 
 static const u8 MoveDescription_Memento[] = _(
     "The user faints and lowers\n"
-    "the foe’s abilities.");
+    "the foe's abilities.");
 
 static const u8 MoveDescription_Facade[] = _(
     "Boosts Attack when burned,\n"
@@ -1076,7 +1076,7 @@ static const u8 MoveDescription_Taunt[] = _(
 
 static const u8 MoveDescription_HelpingHand[] = _(
     "Boosts the power of the\n"
-    "recipient’s moves.");
+    "recipient's moves.");
 
 static const u8 MoveDescription_Trick[] = _(
     "Tricks the foe into trading\n"
@@ -1092,11 +1092,11 @@ static const u8 MoveDescription_Wish[] = _(
 
 static const u8 MoveDescription_Assist[] = _(
     "Attacks randomly with one\n"
-    "of the partner’s moves.");
+    "of the partner's moves.");
 
 static const u8 MoveDescription_Ingrain[] = _(
     "Lays roots that restore HP.\n"
-    "The user can’t switch out.");
+    "The user can't switch out.");
 
 static const u8 MoveDescription_Superpower[] = _(
     "Boosts strength sharply,\n"
@@ -1123,15 +1123,15 @@ static const u8 MoveDescription_Yawn[] = _(
     "then sleeping next turn.");
 
 static const u8 MoveDescription_KnockOff[] = _(
-    "Knocks down the foe’s held\n"
+    "Knocks down the foe's held\n"
     "item to prevent its use.");
 
 static const u8 MoveDescription_Endeavor[] = _(
-    "Gains power if the user’s HP\n"
-    "is lower than the foe’s HP.");
+    "Gains power if the user's HP\n"
+    "is lower than the foe's HP.");
 
 static const u8 MoveDescription_Eruption[] = _(
-    "The higher the user’s HP,\n"
+    "The higher the user's HP,\n"
     "the more damage caused.");
 
 static const u8 MoveDescription_SkillSwap[] = _(
@@ -1167,7 +1167,7 @@ static const u8 MoveDescription_ArmThrust[] = _(
     "strike the foe 2 to 5 times.");
 
 static const u8 MoveDescription_Camouflage[] = _(
-    "Alters the Pokémon’s type\n"
+    "Alters the Pokémon's type\n"
     "depending on the location.");
 
 static const u8 MoveDescription_TailGlow[] = _(
@@ -1239,7 +1239,7 @@ static const u8 MoveDescription_Astonish[] = _(
     "the foe into flinching.");
 
 static const u8 MoveDescription_WeatherBall[] = _(
-    "The move’s type and power\n"
+    "The move's type and power\n"
     "change with the weather.");
 
 static const u8 MoveDescription_Aromatherapy[] = _(
@@ -1248,7 +1248,7 @@ static const u8 MoveDescription_Aromatherapy[] = _(
 
 static const u8 MoveDescription_FakeTears[] = _(
     "Feigns crying to sharply\n"
-    "lower the foe’s Sp.Def.");
+    "lower the foe's Sp.Def.");
 
 static const u8 MoveDescription_AirCutter[] = _(
     "Hacks with razorlike wind.\n"
@@ -1259,7 +1259,7 @@ static const u8 MoveDescription_Overheat[] = _(
     "but sharply lowers Sp.Atk.");
 
 static const u8 MoveDescription_OdorSleuth[] = _(
-    "Negates the foe’s efforts\n"
+    "Negates the foe's efforts\n"
     "to heighten evasiveness.");
 
 static const u8 MoveDescription_RockTomb[] = _(
@@ -1288,7 +1288,7 @@ static const u8 MoveDescription_CosmicPower[] = _(
 
 static const u8 MoveDescription_WaterSpout[] = _(
     "Inflicts more damage if the\n"
-    "user’s HP is high.");
+    "user's HP is high.");
 
 static const u8 MoveDescription_SignalBeam[] = _(
     "A strange beam attack that\n"
@@ -1331,11 +1331,11 @@ static const u8 MoveDescription_IcicleSpear[] = _(
     "2 to 5 icicles in a row.");
 
 static const u8 MoveDescription_IronDefense[] = _(
-    "Hardens the body’s surface\n"
+    "Hardens the body's surface\n"
     "to sharply raise Defense.");
 
 static const u8 MoveDescription_Block[] = _(
-    "Blocks the foe’s way to\n"
+    "Blocks the foe's way to\n"
     "prevent escape.");
 
 static const u8 MoveDescription_Howl[] = _(
@@ -1436,7 +1436,7 @@ static const u8 MoveDescription_FlameBurst[] = _(
 
 static const u8 MoveDescription_FlameCharge[] = _(
     "A flame-cloaked rush that\n"
-    "raises the user’s Speed.");
+    "raises the user's Speed.");
 
 static const u8 MoveDescription_FlareBlitz[] = _(
     "An attack that hurts the\n"
@@ -1452,7 +1452,7 @@ static const u8 MoveDescription_MudBomb[] = _(
 
 static const u8 MoveDescription_HammerArm[] = _(
     "A heavy attack that\n"
-    "reduces the user’s Speed.");
+    "reduces the user's Speed.");
 
 static const u8 MoveDescription_SuckerPunch[] = _(
     "Goes first, but only works\n"
@@ -1556,18 +1556,18 @@ static const u8 MoveDescription_Pluck[] = _(
 
 static const u8 MoveDescription_Roost[] = _(
     "Perches to recover up to\n"
-    "half the user’s maximum HP.");
+    "half the user's maximum HP.");
 
 static const u8 MoveDescription_Payback[] = _(
 	"Doubles in power if the\n"
 	"target uses a move first.");
 
 static const u8 MoveDescription_Brine[] = _(
-	"Doubles in power if foe’s HP\n"
+	"Doubles in power if foe's HP\n"
 	"is down to under half.");
 
 static const u8 MoveDescription_Tailwind[] = _(
-	"Doubles the team’s Speed\n"
+	"Doubles the team's Speed\n"
 	"for four turns.");
 
 static const u8 MoveDescription_DisarmVoice[] = _(
@@ -1588,7 +1588,7 @@ static const u8 MoveDescription_LuckyChant[] = _(
 
 static const u8 MoveDescription_StoredPower[] = _(
 	"Power rises the more the\n"
-	"user’s stats are raised.");
+	"user's stats are raised.");
 
 static const u8 MoveDescription_Captivate[] = _(
     "Charms opposite gender foe\n"
@@ -1596,7 +1596,7 @@ static const u8 MoveDescription_Captivate[] = _(
 
 static const u8 MoveDescription_HealPulse[] = _(
     "Recovers up to half the\n"
-    "target’s maximum HP.");
+    "target's maximum HP.");
 
 static const u8 MoveDescription_HealingWish[] = _(
     "The user faints to fully\n"
@@ -1608,14 +1608,14 @@ static const u8 MoveDescription_AquaJet[] = _(
 
 static const u8 MoveDescription_StickyWeb[] = _(
     "Sets a trap that lowers\n"
-    "incoming Pokémon’s Speed.");
+    "incoming Pokémon's Speed.");
 
 static const u8 MoveDescription_OminousWind[] = _(
     "An repulsive attack that\n"
     "may raise all stats.");
 
 static const u8 MoveDescription_WorrySeed[] = _(
-    "Changes the target’s\n"
+    "Changes the target's\n"
     "Ability to Insomnia.");
 
 static const u8 MoveDescription_SeedBomb[] = _(
@@ -1628,14 +1628,14 @@ static const u8 MoveDescription_ForcePalm[] = _(
 
 static const u8 MoveDescription_ChipAway[] = _(
     "An attack that ignores\n"
-    "the foe’s stat changes.");
+    "the foe's stat changes.");
 
 static const u8 MoveDescription_Punishment[] = _(
     "Power rises the more the\n"
-    "target’s stats are raised.");
+    "target's stats are raised.");
 
 static const u8 MoveDescription_MiracleEye[] = _(
-    "Negates the foe’s efforts\n"
+    "Negates the foe's efforts\n"
     "to heighten evasiveness.");
 
 static const u8 MoveDescription_PsychoCut[] = _(
@@ -1648,7 +1648,7 @@ static const u8 MoveDescription_EchoedVoice[] = _(
 
 static const u8 MoveDescription_Synchronoise[] = _(
     "Only works on Pokémon that\n"
-    "share the user’s type.");
+    "share the user's type.");
 
 static const u8 MoveDescription_Boomburst[] = _(
     "A terrible, explosive sound\n"
@@ -1672,7 +1672,7 @@ static const u8 MoveDescription_AquaRing[] = _(
 
 static const u8 MoveDescription_Soak[] = _(
     "A torrent of water changes\n"
-    "the target’s type to Water.");
+    "the target's type to Water.");
 
 static const u8 MoveDescription_PoisonJab[] = _(
     "A basic stabbing attack.\n"
@@ -1735,8 +1735,8 @@ static const u8 MoveDescription_WringOut[] = _(
     "the greater the power.");
 
 static const u8 MoveDescription_ReflectType[] = _(
-    "The user’s type becomes\n"
-    "the same as the target’s.");
+    "The user's type becomes\n"
+    "the same as the target's.");
 
 static const u8 MoveDescription_ShadowClaw[] = _(
     "Slashes with sharp claws.\n"
@@ -1764,7 +1764,7 @@ static const u8 MoveDescription_MetalBurst[] = _(
 
 static const u8 MoveDescription_LowSweep[] = _(
     "A tripping attack that\n"
-    "lowers the foe’s Speed.");
+    "lowers the foe's Speed.");
 
 static const u8 MoveDescription_WildCharge[] = _(
     "A reckless charge attack\n"
@@ -1783,8 +1783,8 @@ static const u8 MoveDescription_ElectroBall[] = _(
     "user is than the target.");
 
 static const u8 MoveDescription_Entrainment[] = _(
-    "Changes the target’s\n"
-    "Ability to the user’s.");
+    "Changes the target's\n"
+    "Ability to the user's.");
 
 static const u8 MoveDescription_TrumpCard[] = _(
     "Power rises as this move\n"
@@ -1792,7 +1792,7 @@ static const u8 MoveDescription_TrumpCard[] = _(
 
 static const u8 MoveDescription_StruggleBug[] = _(
     "A firm opposition that\n"
-    "lowers the target’s Sp.Atk.");
+    "lowers the target's Sp.Atk.");
 
 static const u8 MoveDescription_Infestation[] = _(
     "Traps the foe in a swarm of\n"
@@ -1824,7 +1824,7 @@ static const u8 MoveDescription_Incinerate[] = _(
 
 static const u8 MoveDescription_ClearSmog[] = _(
     "A special fog that clears\n"
-    "the target’s stat changes.");
+    "the target's stat changes.");
 
 static const u8 MoveDescription_ShellSmash[] = _(
     "Abandons defenses to\n"
@@ -1903,7 +1903,7 @@ static const u8 MoveDescription_FlashCannon[] = _(
     "that may lower Sp.Def.");
 
 static const u8 MoveDescription_NobleRoar[] = _(
-    "Roars to reduce the foe’s\n"
+    "Roars to reduce the foe's\n"
     "Attack and Sp.Atk.");
 
 static const u8 MoveDescription_RazorShell[] = _(
@@ -1911,15 +1911,15 @@ static const u8 MoveDescription_RazorShell[] = _(
     "often lowers Defense.");
 
 static const u8 MoveDescription_PowerTrick[] = _(
-    "Switches the user’s\n"
+    "Switches the user's\n"
     "Attack and Defense stats.");
 
 static const u8 MoveDescription_PowerSplit[] = _(
-    "Averages user’s and foe’s\n"
+    "Averages user's and foe's\n"
     "Attack and Sp.Atk stats.");
 
 static const u8 MoveDescription_GuardSplit[] = _(
-    "Averages user’s and foe’s\n"
+    "Averages user's and foe's\n"
     "Defense and Sp.Def stats.");
 
 static const u8 MoveDescription_Spotlight[] = _(
