@@ -46,3 +46,18 @@ GNARLED RIDGE
 JIMMY: Pidgey, Electrike, Growlithe
 OLIVER: Onix, Teddiursa
 BRADY: Sentret, Sentret, Sentret, Sentret, Sentret, Sentret
+
+DEWFORD REGION
+BETH: Vulpix Lv15, Snorunt Lv14
+NED: Magikarp Lv19
+ELLIOT: Goldeen Lv14, Tentacool Lv14
+
+DEWFORD GYM
+LAURA: Tyrogue Lv16 (Mach+Bullet Punch), Meditite Lv16
+HIDEKI: Tyrogue Lv16 (Jump Kick), Mankey Lv16
+TESSA: Tyrogue Lv16 (Counter), Machop Lv16
+
+BRAWLY:
+Makuhita
+Wartortle
+Machoke
