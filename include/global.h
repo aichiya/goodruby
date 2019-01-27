@@ -95,7 +95,7 @@ enum LanguageId
 
 // capacities of various saveblock objects
 #define DAYCARE_MON_COUNT   2
-#define POKEBLOCKS_COUNT    40
+#define POKEBLOCKS_COUNT    38
 #define PARTY_SIZE          6
 #define EVENT_OBJECTS_COUNT 16
 #define BERRY_TREES_COUNT   128
@@ -108,9 +108,9 @@ enum LanguageId
 #define PC_ITEMS_COUNT      50
 #define BAG_ITEMS_COUNT     20
 #define BAG_KEYITEMS_COUNT  20
-#define BAG_POKEBALLS_COUNT 16
-#define BAG_TMHM_COUNT      64
-#define BAG_BERRIES_COUNT   46
+#define BAG_POKEBALLS_COUNT 13
+#define BAG_TMHM_COUNT      100
+#define BAG_BERRIES_COUNT   43
 
 enum
 {
@@ -663,14 +663,12 @@ struct SaveBlock1 /* 0x02025734 */
     /*0x560*/ struct ItemSlot bagPocket_Items[BAG_ITEMS_COUNT];
     /*0x5B0*/ struct ItemSlot bagPocket_KeyItems[BAG_KEYITEMS_COUNT];
     /*0x600*/ struct ItemSlot bagPocket_PokeBalls[BAG_POKEBALLS_COUNT];
-    /*0x640*/ struct ItemSlot bagPocket_TMHM[BAG_TMHM_COUNT];
-    /*0x740*/ struct ItemSlot bagPocket_Berries[BAG_BERRIES_COUNT];
-    /*0x7F8*/ struct Pokeblock pokeblocks[POKEBLOCKS_COUNT];
-    /*0x938*/ u8 dexSeen2[DEX_FLAGS_NO];
-    /*0x96C*/ u16 berryBlenderRecords[3];
-    /*0x972*/ u8 filler_972[0x6];
-    /*0x978*/ u16 trainerRematchStepCounter;
-    /*0x97A*/ u8 trainerRematches[100];
+    /*0x634*/ struct ItemSlot bagPocket_TMHM[BAG_TMHM_COUNT];
+    /*0x7C4*/ struct ItemSlot bagPocket_Berries[BAG_BERRIES_COUNT];
+    /*0x870*/ struct Pokeblock pokeblocks[POKEBLOCKS_COUNT];
+    /*0x9A0*/ u8 dexSeen2[6]; //can be repurposed
+    /*0x9A6*/ u16 trainerRematchStepCounter;
+    /*0x9A8*/ u8 trainerRematches[56];
     /*0x9E0*/ struct EventObject eventObjects[EVENT_OBJECTS_COUNT];
     /*0xC20*/ struct EventObjectTemplate eventObjectTemplates[64];
     /*0x1220*/ u8 flags[FLAGS_COUNT];
@@ -731,7 +729,8 @@ struct SaveBlock1 /* 0x02025734 */
     /*0x3160*/ struct EnigmaBerry enigmaBerry;
     /*0x3690*/ struct RamScript ramScript;
     /*0x3A7C*/ struct RecordMixingGift recordMixingGift;
-    /*0x3A8C*/ u8 dexSeen3[DEX_FLAGS_NO];
+    /*0x3A8C*/ u16 berryBlenderRecords[3];
+    /*0x3A92*/ u8 dexSeen3[46]; // being repurposed
 };
 
 extern struct SaveBlock1 gSaveBlock1;

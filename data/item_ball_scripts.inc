@@ -43,7 +43,7 @@ Route110_EventScript_1B14BB:: @ 81B14BB
 	end
 
 Route111_EventScript_1B14C8:: @ 81B14C8
-	giveitem_std ITEM_TM37_SANDSTORM, 1, 1
+	giveitem_std ITEM_TM37_HEAT_WAVE, 1, 1
 	end
 
 Route111_EventScript_1B14D5:: @ 81B14D5
@@ -415,7 +415,7 @@ MtPyre_Exterior_EventScript_1B1974:: @ 81B1974
 	end
 
 MtPyre_Exterior_EventScript_1B1981:: @ 81B1981
-	giveitem_std ITEM_TM48_SKILL_SWAP, 1, 1
+	giveitem_std ITEM_TM48_ICY_WIND, 1, 1
 	end
 
 AquaHideout_B1F_EventScript_1B198E:: @ 81B198E
@@ -463,7 +463,7 @@ ShoalCave_LowTideStairsRoom_EventScript_1B1A10:: @ 81B1A10
 	end
 
 ShoalCave_LowTideIceRoom_EventScript_1B1A1D:: @ 81B1A1D
-	giveitem_std ITEM_TM07_HAIL, 1, 1
+	giveitem_std ITEM_TM07_HEAL_BELL, 1, 1
 	end
 
 ShoalCave_LowTideIceRoom_EventScript_1B1A2A:: @ 81B1A2A

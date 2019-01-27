@@ -1348,6 +1348,216 @@ static const u8 gItemDescription_TM50[] = _(
     "Enables full-power\n"
     "attack, but sharply\n"
     "lowers SP. ATK.");
+ 
+static const u8 gItemDescription_TM51[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM52[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM53[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM54[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM55[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM56[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM57[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM58[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM59[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM60[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM61[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM62[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM63[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM64[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM65[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM66[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM67[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM68[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM69[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM70[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM71[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM72[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM73[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM74[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM75[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM76[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM77[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM78[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM79[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM80[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM81[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM82[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM83[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM84[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM85[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM86[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM87[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM88[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM89[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM90[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM91[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
+ 
+static const u8 gItemDescription_TM92[] = _(
+    "placeholder text\n"
+    "stuff\n"
+    ".");
 
 static const u8 gItemDescription_HM01[] = _(
     "Attacks the foe\n"

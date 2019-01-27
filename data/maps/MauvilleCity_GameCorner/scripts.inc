@@ -252,7 +252,7 @@ MauvilleCity_GameCorner_EventScript_156D54:: @ 8156D54
 
 MauvilleCity_GameCorner_EventScript_156DA6:: @ 8156DA6
 	setvar VAR_TEMP_1, 1
-	bufferitemname 0, ITEM_TM32_DOUBLE_TEAM
+	bufferitemname 0, ITEM_TM32_DRAIN_PUNCH
 	goto MauvilleCity_GameCorner_EventScript_156DEC
 
 MauvilleCity_GameCorner_EventScript_156DB4:: @ 8156DB4
@@ -291,11 +291,11 @@ MauvilleCity_GameCorner_EventScript_156E3C:: @ 8156E3C
 	checkcoins VAR_TEMP_2
 	compare VAR_TEMP_2, 1500
 	goto_if_lt MauvilleCity_GameCorner_EventScript_156F5E
-	checkitemspace ITEM_TM32_DOUBLE_TEAM, 1
+	checkitemspace ITEM_TM32_DRAIN_PUNCH, 1
 	compare RESULT, 0
 	goto_if_eq MauvilleCity_GameCorner_EventScript_156F6C
 	takecoins 1500
-	giveitem ITEM_TM32_DOUBLE_TEAM, 1
+	giveitem ITEM_TM32_DRAIN_PUNCH, 1
 	updatecoinsbox 0, 0
 	playse SE_REGI
 	msgbox MauvilleCity_GameCorner_Text_181F08, 4
