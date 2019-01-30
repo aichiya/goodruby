@@ -6538,7 +6538,7 @@ const struct Item gItems[] =
     },
     {
         .name = _("TM70"),
-        .itemId = ITEM_TM70_AURORA_VEIL,
+        .itemId = ITEM_TM70_FOUL_PLAY,
         .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
