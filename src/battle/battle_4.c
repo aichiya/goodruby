@@ -709,6 +709,8 @@ static void sp3B_powerswap(void);
 static void sp3C_guardswap(void);
 static void sp3D_psychoshiftsleep(void);
 static void sp3E_uturncheck(void);
+static void sp3F_setauroraveil(void);
+static void sp40_settrickroom(void);
 
 
 void (* const gBattleScriptingCommandsTable[])(void) =
@@ -1132,6 +1134,7 @@ static const u16 sMovesForbiddenToCopy[] =
      MOVE_COVET,
      MOVE_TRICK,
      MOVE_FOCUS_PUNCH,
+     MOVE_AURORA_VEIL,
      METRONOME_FORBIDDEN_END
 };
 
@@ -1151,12 +1154,12 @@ static const u16 sNaturePowerMoves[] =
     MOVE_LEAF_STORM, // long grass
     MOVE_EARTH_POWER, // sand
     MOVE_HYDRO_PUMP, // underwater
-    MOVE_HYDRO_PUMP, // sea water
-    MOVE_HYDRO_PUMP, // pond
+    MOVE_BRINE, // sea water
+    MOVE_MUD_BOMB, // pond
     MOVE_POWER_GEM, // rock
     MOVE_POWER_GEM, // cave
-    MOVE_SWIFT, // plain, etc.
-    MOVE_SWIFT
+    MOVE_TRI_ATTACK, // plain, etc.
+    MOVE_TRI_ATTACK,
 };
 
 // weight-based damage table for Low Kick
@@ -13305,6 +13308,8 @@ void (* const gBattleScriptingSpecialTable[])(void) =
 	sp3C_guardswap,
 	sp3D_psychoshiftsleep,
 	sp3E_uturncheck,
+    sp3F_setauroraveil,
+    sp40_settrickroom,
 };
 
 
@@ -14767,4 +14772,37 @@ static void sp3E_uturncheck(void)
 	}
 	if (!HP_count)
 		gBattlescriptCurrInstr = BattleScript_FinishUTurn;
+}
+
+static void sp3F_setauroraveil(void)
+{
+    if (gSideAffecting[GetBattlerPosition(gBankAttacker) & 1] & SIDE_STATUS_AURORA_VEIL)
+    {
+        gMoveResultFlags |= MOVE_RESULT_MISSED;
+        gBattleCommunication[MULTISTRING_CHOOSER] = 0;
+    }
+    else
+    {
+        gSideAffecting[GetBattlerPosition(gBankAttacker) & 1] |= SIDE_STATUS_AURORA_VEIL;
+        //gSideTimers[GetBattlerPosition(gBankAttacker) & 1].auroraVeilTimer = 5;
+        if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE && CountAliveMons(1) == 2)
+            gBattleCommunication[MULTISTRING_CHOOSER] = 9;
+        else
+            gBattleCommunication[MULTISTRING_CHOOSER] = 8;
+    }
+    gBattlescriptCurrInstr++;
+}
+
+static void sp40_settrickroom(void)
+{
+    if (gWishFutureKnock.trickRoomDuration == 0)
+    {
+        gWishFutureKnock.trickRoomDuration = 5;
+        gBattleCommunication[MULTISTRING_CHOOSER] = 6;
+    }
+    else
+    {
+        gWishFutureKnock.trickRoomDuration = 0;
+        gBattleCommunication[MULTISTRING_CHOOSER] = 7;
+    }
 }

@@ -338,7 +338,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
 		if (move == MOVE_FOUL_PLAY)
 			attackMod = defender->statStages[STAT_STAGE_ATK];
         
-        if ((sideStatus & SIDE_STATUS_REFLECT) && gCritMultiplier == 1 && attacker->ability != ABILITY_INFILTRATOR)
+        if ((sideStatus & (SIDE_STATUS_REFLECT | SIDE_STATUS_AURORA_VEIL)) && gCritMultiplier == 1 && attacker->ability != ABILITY_INFILTRATOR)
         {
             if ((gBattleTypeFlags & BATTLE_TYPE_DOUBLE) && CountAliveMons(2) == 2)
                 defense = (defense * 3) / 2;
@@ -362,7 +362,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
 			defenseMod = defender->statStages[STAT_STAGE_DEF];
 		}
         
-        if ((sideStatus & SIDE_STATUS_LIGHTSCREEN) && gCritMultiplier == 1 && attacker->ability != ABILITY_INFILTRATOR)
+        if ((sideStatus & (SIDE_STATUS_LIGHTSCREEN | SIDE_STATUS_AURORA_VEIL)) && gCritMultiplier == 1 && attacker->ability != ABILITY_INFILTRATOR)
         {
             if ((gBattleTypeFlags & BATTLE_TYPE_DOUBLE) && CountAliveMons(2) == 2)
                 defense = (defense * 3) / 2;

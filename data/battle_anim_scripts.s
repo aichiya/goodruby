@@ -285,7 +285,7 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_FOCUS_PUNCH
 	.4byte Move_SMELLING_SALT
 	.4byte Move_FOLLOW_ME
-	.4byte Move_ANCIENT_POWER
+	.4byte Move_ENCORE
 	.4byte Move_CHARGE
 	.4byte Move_TAUNT
 	.4byte Move_HELPING_HAND
@@ -529,6 +529,13 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_PSYSTRIKE
 	.4byte Move_U_TURN
 	.4byte Move_ACROBATICS
+	.4byte Move_DRAIN_PUNCH
+	.4byte Move_FOCUS_BLAST
+	.4byte Move_AURORA_VEIL
+	.4byte Move_VOLT_SWITCH
+	.4byte Move_MAGIC_GLEAM
+	.4byte Move_GRASS_KNOT
+	.4byte Move_TRICK_ROOM
 	.4byte PoundCopy
 
 	.align 2
@@ -15588,3 +15595,70 @@ General_ReturnToTrainer:
 	createsprite gBattleAnimSpriteTemplate_84024D0, ANIM_BATTLER_ATTACKER, 2
 	waitforvisualfinish
 	end
+
+Move_AURORA_VEIL:
+	loadspritegfx ANIM_TAG_SPARKLE_4
+	loadspritegfx ANIM_TAG_BLUE_LIGHT_WALL
+    loadspritegfx 10304
+	fadetobg BG_AURORABEAM
+	waitbgfadein
+
+	setalpha 0, 16
+	waitplaysewithpan SE_W115, SOUND_PAN_ATTACKER, 15
+	createsprite gBattleAnimSpriteTemplate_83DA6C0, ANIM_BATTLER_ATTACKER, 1, 40, 0, 10167
+	delay 20
+	createsprite gBattleAnimSpriteTemplate_83DA73C, ANIM_BATTLER_ATTACKER, 2, 30, 0, 0, 1
+	delay 7
+	createsprite gBattleAnimSpriteTemplate_83DA73C, ANIM_BATTLER_ATTACKER, 2, 19, -12, 0, 1
+	delay 7
+	createsprite gBattleAnimSpriteTemplate_83DA73C, ANIM_BATTLER_ATTACKER, 2, 10, 20, 0, 1
+	waitforvisualfinish
+	delay 1
+	blendoff
+
+	restorebg
+	waitbgfadein
+	end
+
+Move_DRAIN_PUNCH:
+	loadspritegfx ANIM_TAG_ORBS
+	loadspritegfx ANIM_TAG_BLUE_STAR
+	loadspritegfx ANIM_TAG_IMPACT
+	loadspritegfx ANIM_TAG_HANDS_AND_FEET
+	monbg ANIM_BATTLER_DEF_PARTNER
+	monbgprio_2A ANIM_BATTLER_TARGET
+	setalpha 12, 8
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_BATTLER_ATTACKER, 2, 1, 1, 0, 12, rgb(31, 12, 0)
+	waitforvisualfinish
+	playsewithpan SE_W004, SOUND_PAN_TARGET
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_BATTLER_ATTACKER, 2, 0, 0, 1, 0
+	createsprite gFistFootSpriteTemplate, ANIM_BATTLER_ATTACKER, 2, 0, 0, 8, 1, 0
+	delay 2
+	createvisualtask AnimTask_ShakeMon, 5, 1, 0, 5, 5, 1
+	waitforvisualfinish
+	delay 3
+	call _81CF73E
+	waitforvisualfinish
+	delay 15
+	call Unknown_81D5EF5
+	waitforvisualfinish
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_BATTLER_ATTACKER, 2, 1, 1, 12, 0, rgb(31, 12, 0)
+	waitforvisualfinish
+	clearmonbg ANIM_BATTLER_DEF_PARTNER
+	blendoff
+	end
+
+Move_FOCUS_BLAST:
+    end
+
+Move_VOLT_SWITCH:
+    end
+
+Move_MAGIC_GLEAM:
+    end
+
+Move_GRASS_KNOT:
+    end
+
+Move_TRICK_ROOM:
+    end

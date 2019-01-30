@@ -3312,6 +3312,7 @@ extern const u8 gBattleAnimSpritePalette_299[];
 extern const u8 gBattleAnimSpritePalette_300[];
 extern const u8 gBattleAnimSpritePalette_302[];
 extern const u8 gBattleAnimSpritePalette_303[];
+extern const u8 gBattleAnimSpritePalette_304[];
 
 extern struct BattleAnimBackground gBattleAnimBackgroundImage_00[];
 extern struct BattleAnimBackground gBattleAnimBackgroundImage_02[];

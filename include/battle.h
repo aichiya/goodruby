@@ -502,7 +502,7 @@ struct sideTimer
     u8 reflectTimer;        //0x0
     u8 lightscreenTimer;    //0x1
     u8 mistTimer;           //0x2
-    u8 field3;              //0x3
+    u8 field3;              //0x3 (not unused!)
     u16 field4;             //0x4
     u8 spikesAmount;        //0x6
     u8 safeguardTimer;      //0x7
@@ -522,7 +522,7 @@ struct WishFutureKnock
 	u8 reflected:1;
 	u8 pranksterBoosted:1;
 	u8 unused1:6;
-	u8 unused2;
+	u8 trickRoomDuration;
     u8 wishCounter[MAX_BATTLERS_COUNT];
     u8 wishUserID[MAX_BATTLERS_COUNT];
     u8 weatherDuration;

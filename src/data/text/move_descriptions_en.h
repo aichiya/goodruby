@@ -2038,6 +2038,34 @@ static const u8 MoveDescription_Acrobatics[] = _(
     "A nimble strike. Stronger\n"
     "if not holding an item.");
 
+static const u8 MoveDescription_DrainPunch[] = _(
+    "An attack that steals half\n"
+    "the damage inflicted.");
+
+static const u8 MoveDescription_FocusBlast[] = _(
+    "Attacks with a burst of\n"
+    "power. May lower Sp.Def.");
+
+static const u8 MoveDescription_AuroraVeil[] = _(
+    "In hail, creates a wall\n"
+    "that lowers damage taken.");
+
+static const u8 MoveDescription_VoltSwitch[] = _(
+    "After attacking, switches\n"
+    "to another Pokémon.");
+
+static const u8 MoveDescription_MagicGleam[] = _(
+    "Attacks all foes with\n"
+    "a burst of light.");
+
+static const u8 MoveDescription_GrassKnot[] = _(
+    "A trip that inflicts more\n"
+    "damage on heavier foes.");
+
+static const u8 MoveDescription_TrickRoom[] = _(
+    "Slow Pokémon move before\n"
+    "fast Pokémon for 4 turns.");
+
 
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
@@ -2550,4 +2578,11 @@ const u8 * const gMoveDescriptions[] = {
 	MoveDescription_Psystrike,
 	MoveDescription_UTurn,
 	MoveDescription_Acrobatics,
+    MoveDescription_DrainPunch,
+    MoveDescription_FocusBlast,
+    MoveDescription_AuroraVeil,
+    MoveDescription_VoltSwitch,
+    MoveDescription_MagicGleam,
+    MoveDescription_GrassKnot,
+    MoveDescription_TrickRoom,
 };

@@ -421,6 +421,10 @@ enum
 	BATTLE_TEXT_MoodyStatDown,
 	BATTLE_TEXT_Protean,
 	BATTLE_TEXT_ReturnToTrainer,
+	BATTLE_TEXT_AuroraVeil,
+	BATTLE_TEXT_AuroraVeilLittle,
+    BATTLE_TEXT_TrickRoom,
+    BATTLE_TEXT_TrickRoomEnd,
 };
 
 const u8 BattleText_UnknownString[] = _("{STRING 33}");
@@ -972,6 +976,10 @@ const u8 BattleText_MoodyStatUp[] = _("{STRING 16}'s Moody\nsharply raised its {
 const u8 BattleText_MoodyStatDown[] = _("{STRING 16}'s Moody\nlowered its {STRING 1}!");
 const u8 BattleText_Protean[] = _("{ATTACKING_MON}'s Protean\nmade it the {STRING 0} type!");
 const u8 BattleText_ReturnToTrainer[] = _("{ATTACKING_MON} went back\nto its Trainer!");
+const u8 BattleText_AuroraVeil[] = _("{STRING 38}'s {STRING 17}\nlowers damage taken!");
+const u8 BattleText_AuroraVeilLittle[] = _("{STRING 38}'s {STRING 17}\nlowers damage a little!");
+const u8 BattleText_TrickRoom[] = _("{ATTACKING_MON} twisted\nthe dimensions!");
+const u8 BattleText_TrickRoomEnd[] = _("The twisted dimensions\nreturned to normal!");
 
 
 const u8 *const gUnknown_08400F58[] =
@@ -1416,6 +1424,10 @@ const u8 *const gBattleStringsTable[] =
 	BattleText_MoodyStatDown,
 	BattleText_Protean,
 	BattleText_ReturnToTrainer,
+	BattleText_AuroraVeil,
+	BattleText_AuroraVeilLittle,
+    BattleText_TrickRoom,
+    BattleText_TrickRoomEnd,
 };
 
 // below are lists of battle string enums and NOT pointers to the strings.
@@ -1445,6 +1457,8 @@ const u16 gMoveWeatherChangeStringIds[] =
     BATTLE_TEXT_SandBrewed,
     BATTLE_TEXT_SunBright,
     BATTLE_TEXT_HailStart,
+    BATTLE_TEXT_TrickRoom,
+    BATTLE_TEXT_TrickRoomEnd,
 };
 
 const u16 gSandStormHailContinuesStringIds[] =
@@ -1491,6 +1505,8 @@ const u16 gReflectLightScreenSafeguardStringIds[] =
     BATTLE_TEXT_CoveredVeil,
 	BATTLE_TEXT_LuckyChantSet,
     BATTLE_TEXT_TailwindSet,
+    BATTLE_TEXT_AuroraVeil,
+    BATTLE_TEXT_AuroraVeilLittle,
 };
 
 const u16 gLeechSeedStringIds[] =

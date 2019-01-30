@@ -73,6 +73,17 @@ const struct SpriteTemplate gBattleAnimSpriteTemplate_83DA6A8 =
 const struct SpriteTemplate gBattleAnimSpriteTemplate_83DA6C0 =
 {
     .tileTag = ANIM_TAG_BLUE_LIGHT_WALL,
+    .paletteTag = 10304,
+    .oam = &gOamData_837E05C,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = sub_80DB74C,
+};
+
+const struct SpriteTemplate gBattleAnimSpriteTemplate_AuroraVeil =
+{
+    .tileTag = ANIM_TAG_BLUE_LIGHT_WALL,
     .paletteTag = ANIM_TAG_BLUE_LIGHT_WALL,
     .oam = &gOamData_837E05C,
     .anims = gDummySpriteAnimTable,

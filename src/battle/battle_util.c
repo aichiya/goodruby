@@ -119,6 +119,7 @@ extern u8 BattleScript_EncoredNoMore[];
 extern u8 BattleScript_SideStatusWoreOff[];
 extern u8 BattleScript_RainContinuesOrEnds[];
 extern u8 BattleScript_SandStormHailEnds[];
+extern u8 BattleScript_TrickRoomEnds[];
 extern u8 BattleScript_DamagingWeatherContinues[];
 extern u8 BattleScript_SunlightFaded[];
 extern u8 BattleScript_SunlightContinues[];
@@ -925,6 +926,18 @@ u8 UpdateTurnCounters(void)
             gBattleStruct->turncountersTracker++;
             break;
         case 12:
+            if (gWishFutureKnock.trickRoomDuration)
+            {
+                if (--gWishFutureKnock.trickRoomDuration == 0)
+                {
+                    gBattlescriptCurrInstr = BattleScript_TrickRoomEnds;
+                    BattleScriptExecute(gBattlescriptCurrInstr);
+                }
+                effect++;
+            }
+            gBattleStruct->turncountersTracker++;
+            break;
+        case 13:
 			// Echoed Voice
 			if (gBattleStruct->echoedVoiceMarker)
 			{
@@ -936,7 +949,7 @@ u8 UpdateTurnCounters(void)
 			gBattleStruct->echoedVoiceMarker = 0;
             gBattleStruct->turncountersTracker++;
             break;
-		case 13:
+		case 14:
             effect++;
             break;
         }

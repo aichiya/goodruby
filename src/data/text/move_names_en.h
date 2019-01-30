@@ -510,4 +510,11 @@ const u8 gMoveNames[][13] = {
 	[MOVE_PSYSTRIKE] = _("Psystrike"),
 	[MOVE_U_TURN] = _("U-Turn"),
 	[MOVE_ACROBATICS] = _("Acrobatics"),
+    [MOVE_DRAIN_PUNCH] = _("Drain Punch"),
+    [MOVE_FOCUS_BLAST] = _("Focus Blast"),
+    [MOVE_AURORA_VEIL] = _("Aurora Veil"),
+    [MOVE_VOLT_SWITCH] = _("Volt Switch"),
+    [MOVE_MAGIC_GLEAM] = _("Magic Gleam"),
+    [MOVE_GRASS_KNOT] = _("Grass Knot"),
+    [MOVE_TRICK_ROOM] = _("Trick Room"),
 };

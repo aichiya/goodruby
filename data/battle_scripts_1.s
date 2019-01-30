@@ -98,7 +98,7 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectSplash
 	.4byte BattleScript_EffectDisable
 	.4byte BattleScript_EffectLevelDamage
-	.4byte BattleScript_EffectPsywave
+	.4byte BattleScript_EffectTrickRoom
 	.4byte BattleScript_EffectCounter
 	.4byte BattleScript_EffectEncore
 	.4byte BattleScript_EffectPainSplit
@@ -1061,12 +1061,6 @@ BattleScript_EffectSpecialDefenseDown2: @ 81D7777
 	setstatchanger SP_DEFENSE, 2, TRUE
 	goto BattleScript_EffectStatDown
 
-BattleScript_EffectReflect: @ 81D7782
-	attackcanceler
-	attackstring
-	ppreduce
-	setreflect
-
 BattleScript_PrintReflectLightScreenSafeguardString: @ 81D7786
 	attackanimation
 	waitanimation
@@ -1299,6 +1293,7 @@ BattleScript_EffectDisable: @ 81D79FB
 	goto BattleScript_MoveEnd
 
 BattleScript_EffectLevelDamage: @ 81D7A17
+    jumpifmove MOVE_PSYWAVE, BattleScript_EffectPsywave
 	attackcanceler
 	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
 	attackstring
@@ -6570,4 +6565,34 @@ BattleScript_Protean::
 	printstring BATTLE_TEXT_Protean
 	waitmessage 64
 	return
-	
+
+BattleScript_EffectReflect: @ 81D7782
+    jumpifmove MOVE_AURORA_VEIL, BattleScript_EffectAuroraVeil
+	attackcanceler
+	attackstring
+	ppreduce
+	setreflect
+    goto BattleScript_PrintReflectLightScreenSafeguardString
+
+BattleScript_EffectAuroraVeil:
+	attackcanceler
+	attackstring
+	ppreduce
+	special 0x3F
+    goto BattleScript_PrintReflectLightScreenSafeguardString
+
+BattleScript_EffectTrickRoom:
+	attackcanceler
+	attackstring
+	ppreduce
+	special 0x40
+	attackanimation
+	waitanimation
+	printfromtable gMoveWeatherChangeStringIds
+	waitmessage 64
+	goto BattleScript_MoveEnd
+
+BattleScript_TrickRoomEnds::
+	printstring BATTLE_TEXT_TrickRoomEnd
+	waitmessage 64
+	end2

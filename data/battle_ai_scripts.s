@@ -158,7 +158,7 @@ AI_CheckBadMove_CheckEffect: @ 81DA14F
 	if_effect EFFECT_LEECH_SEED, AI_CBM_LeechSeed
 	if_effect EFFECT_DISABLE, AI_CBM_Disable
 	if_effect EFFECT_LEVEL_DAMAGE, AI_CBM_HighRiskForDamage
-	if_effect EFFECT_PSYWAVE, AI_CBM_HighRiskForDamage
+    
 	if_effect EFFECT_COUNTER, AI_CBM_HighRiskForDamage
 	if_effect EFFECT_ENCORE, AI_CBM_Encore
 	if_effect EFFECT_SNORE, AI_CBM_DamageDuringSleep
@@ -2826,7 +2826,6 @@ AI_Risky_EffectsToEncourage: @ 81DBF2A
 	.byte EFFECT_HIGH_CRITICAL
 	.byte EFFECT_CONFUSE
 	.byte EFFECT_METRONOME
-	.byte EFFECT_PSYWAVE
 	.byte EFFECT_COUNTER
 	.byte EFFECT_DESTINY_BOND
 	.byte EFFECT_SWAGGER

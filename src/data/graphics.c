@@ -1446,3 +1446,4 @@ const u8 gBattleAnimSpritePalette_299[] = INCBIN_U8("graphics/battle_anims/sprit
 const u8 gBattleAnimSpritePalette_300[] = INCBIN_U8("graphics/battle_anims/sprites/300.gbapal.lz");
 const u8 gBattleAnimSpritePalette_302[] = INCBIN_U8("graphics/battle_anims/sprites/302.gbapal.lz");
 const u8 gBattleAnimSpritePalette_303[] = INCBIN_U8("graphics/battle_anims/sprites/303.gbapal.lz");
+const u8 gBattleAnimSpritePalette_304[] = INCBIN_U8("graphics/battle_anims/sprites/304.gbapal.lz");

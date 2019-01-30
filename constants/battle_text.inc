@@ -418,3 +418,7 @@
 	enum BATTLE_TEXT_MoodyStatDown
 	enum BATTLE_TEXT_Protean
 	enum BATTLE_TEXT_ReturnToTrainer
+	enum BATTLE_TEXT_AuroraVeil
+	enum BATTLE_TEXT_AuroraVeilLittle
+    enum BATTLE_TEXT_TrickRoom
+    enum BATTLE_TEXT_TrickRoomEnd
