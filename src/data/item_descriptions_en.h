@@ -1350,9 +1350,9 @@ static const u8 gItemDescription_TM50[] = _(
     "lowers SP. ATK.");
  
 static const u8 gItemDescription_TM51[] = _(
-    "placeholder text\n"
-    "stuff\n"
-    ".");
+    "Perches to recover\n"
+    "half the user's\n"
+    "maximum HP.");
  
 static const u8 gItemDescription_TM52[] = _(
     "placeholder text\n"
@@ -1525,9 +1525,9 @@ static const u8 gItemDescription_TM85[] = _(
     ".");
  
 static const u8 gItemDescription_TM86[] = _(
-    "placeholder text\n"
-    "stuff\n"
-    ".");
+    "A trip that does\n"
+    "more damage to\n"
+    "heavier foes.");
  
 static const u8 gItemDescription_TM87[] = _(
     "placeholder text\n"

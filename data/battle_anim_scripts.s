@@ -10926,7 +10926,7 @@ Move_LEAF_STORM:
 	createsprite gBattleAnimSpriteTemplate_LeafStorm, ANIM_BANK_ATTACKER, 2, 26, 8, 12, 20, 27, 0, 0
 	delay 3
 	waitforvisualfinish
-	createsprite gBasicHitSplatSpriteTemplate, 2, 0, 0, 1, 0
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_BATTLER_TARGET, 2, 0, 0, 1, 0
 	createsprite gBattleAnimSpriteTemplate_LeafStorm2, ANIM_BANK_TARGET, 2, 1, 1, 0, -36, 10
 	createsprite gBattleAnimSpriteTemplate_LeafStorm2, ANIM_BANK_TARGET, 2, 1, 1, 24, -12, 10
 	createsprite gBattleAnimSpriteTemplate_LeafStorm2, ANIM_BANK_TARGET, 2, 1, 1, 24, 12, 10
@@ -15658,7 +15658,22 @@ Move_MAGIC_GLEAM:
     end
 
 Move_GRASS_KNOT:
-    end
+	loadspritegfx 10160
+	loadspritegfx 10135
+	loadspritegfx 10063
+	playsewithpan SE_W026, SOUND_PAN_ATTACKER
+	createsprite gHorizontalLungeSpriteTemplate, ANIM_BATTLER_ATTACKER, 2, 4, 6
+	delay 6
+	playsewithpan SE_W010, SOUND_PAN_TARGET
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_BATTLER_TARGET, 2, 0, 0, 1, 0
+	createsprite gBattleAnimSpriteTemplate_LeafStorm2, ANIM_BANK_TARGET, 2, 1, 1, 0, 36, 10
+	createsprite gBattleAnimSpriteTemplate_LeafStorm2, ANIM_BANK_TARGET, 2, 1, 1, 18, 18, 10
+	createsprite gBattleAnimSpriteTemplate_LeafStorm2, ANIM_BANK_TARGET, 2, 1, 1, -18, 18, 10
+	createsprite gBattleAnimSpriteTemplate_LeafStorm2, ANIM_BANK_TARGET, 2, 1, 1, 24, 12, 10
+	createsprite gBattleAnimSpriteTemplate_LeafStorm2, ANIM_BANK_TARGET, 2, 1, 1, -24, 12, 10
+	delay 6
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BATTLER_TARGET, 2, 0, 6, 1
+	end
 
 Move_TRICK_ROOM:
     end

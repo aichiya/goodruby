@@ -29,18 +29,16 @@ Route104_Text_16DBC9:: @ 816DBC9
 	.string "of their sight.$"
 
 Route104_Text_16DC5F:: @ 816DC5F
-	.string "I like filling my mouth with seeds,\n"
-	.string "then spitting them out fast!\p"
+	.string "I like tripping people with sticks,\n"
+	.string "and then laughing when they fall down!\p"
 	.string "You can have this, so you try it out!\p"
-	.string "Use it on a POKéMON, and it will learn\n"
-	.string "a move for firing seeds rapidly.$"
+	.string "Use it on a Pokémon, and it will learn\n"
+	.string "a move for tripping other Pokémon.$"
 
 Route104_Text_16DD0E:: @ 816DD0E
 	.string "A word of advice!\p"
-	.string "A TM, TECHNICAL MACHINE, is good only\n"
-	.string "for one-time use.\p"
-	.string "Once you use it, it's gone.\n"
-	.string "Think twice before using it!$"
+	.string "A TM, TECHNICAL MACHINE, is good for\n"
+	.string "any number of uses.$"
 
 Route104_Text_16DD91:: @ 816DD91
 	.string "This FLOWER SHOP started selling\n"
