@@ -1,3 +1,9 @@
+Liberty:
+PIDGEY: adjust movepool so mud-slap, air cutter, air slash come earlier
+BEAUTIFY: HA CompoundEyes becomes Intimidate, absorb/mega/giga -> mega/giga/leech
+DUSTOX: HA CompoundEyes becomes Filter
+
+Classic:
 SKITTY, DELCATTY: Does not have secondary ability Normalize
 WINGULL, PELIPPER: Secondary abilities Hydration/Drizzle are switched with hidden ability Rain Dish
 TORKOAL: Secondary ability Drought is switched with hidden ability Shell Armor

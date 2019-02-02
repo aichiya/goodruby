@@ -88,13 +88,11 @@ RustboroCity_Gym_Text_1840D5:: @ 81840D5
 	.string "Please take this with you, too.$"
 
 RustboroCity_Gym_Text_184170:: @ 8184170
-	.string "That TM39 contains ROCK TOMB.\p"
-	.string "It not only inflicts damage by dropping\n"
-	.string "rocks, it also lowers SPEED.\p"
-	.string "If you use a TM, it instantly teaches\n"
-	.string "the move to a POKéMON.\p"
-	.string "Remember, a TM can be used only once,\n"
-	.string "so think before you use it.$"
+	.string "That TM76 contains Stealth Rock.\p"
+	.string "It inflicts damage over the rourse of\n"
+	.string "a long battle to the entire team.\p"
+	.string "It's potent in long battles, but\n"
+	.string "do think before using it.$"
 
 RustboroCity_Gym_Text_184252:: @ 8184252
 	.string "Since you are so strong, you should\n"

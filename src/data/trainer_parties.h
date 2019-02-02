@@ -3578,9 +3578,9 @@ const struct TrainerMonFullControl gTrainerParty_Brawly[] = {
 	.species = SPECIES_WARTORTLE,
     .heldItem = ITEM_RAWST_BERRY,
     .ability = 0, // Torrent
-    .moves = { MOVE_BITE, MOVE_BRICK_BREAK, MOVE_AQUA_JET, MOVE_ICE_PUNCH},
+    .moves = { MOVE_BITE, MOVE_BRICK_BREAK, MOVE_AQUA_JET, MOVE_WATER_GUN},
         .evs = {0, 0, 0, 0, 0, 0},
-        .nature = NATURE_ADAMANT,
+        .nature = NATURE_BRAVE,
         .gender = MON_MALE,
         .ball = ITEM_POKE_BALL,
     },

@@ -1475,9 +1475,9 @@ static const u8 gItemDescription_TM75[] = _(
     ".");
  
 static const u8 gItemDescription_TM76[] = _(
-    "placeholder text\n"
-    "stuff\n"
-    ".");
+    "Floating stones\n"
+    "hurt foes as they\n"
+    "switch into battle.");
  
 static const u8 gItemDescription_TM77[] = _(
     "placeholder text\n"
