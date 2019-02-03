@@ -61,3 +61,24 @@ BRAWLY:
 Makuhita
 Wartortle
 Machoke
+
+ROUTE 109 BEACH
+HUEY: Wingull Lv15, Machop Lv15, Tentacool Lv15
+EDMOND: Psyduck Lv16, Mankey Lv16
+RICKY: Zigzagoon Lv18
+LOLA: Azurill Lv16, Horsea Lv15, Marill Lv16
+
+SEASHORE HOUSE
+SIMON: Mudkip Lv16, Squirtle Lv16
+JOHANNA: Numel Lv16, Dratini Lv17
+DWAYNE: Wingull Lv16, Remoraid Lv17
+
+SLATEPORT MUSEUM
+GRUNT 46: Poochyena Lv17, Slugma Lv17
+GRUNT 47: Zubat Lv17, Sandshrew Lv17
+MAXIE: 
+Mightyena Lv18 Bite, Snarl, Fire Fang, Sand Attack
+Onix Lv18 Sunny Day, Stealth Rock, Rock Tomb, Tackle
+Magmar Lv20 Sunny Day, Ember, Smog, Feint Attack
+
+

@@ -63,7 +63,7 @@ ROUTE 107: Pidgey (25%), Wingull (20%), Ekans (15%), Slowpoke (10%), Krabby (10%
 CAVE  1F: Zubat (25%), Geodude (25%), Ekans (15%), Makuhita (15%), Abra (10%), Krabby (10%)
 CAVE B1F: Zubat (25%), Aron (20%), Ekans (10%), Makuhita (10%), Onix (10%), Abra (10%), Sableye (5%), Mawile (5%), Geodude (5%)
 CAVE B2F: Zubat (25%), Aron (20%), Ekans (10%), Onix (10%), Abra (10%), Sableye (10%), Mawile (10%), Geodude (5%) (smash: nosepass)
-ROUTE 110: Rattata, Wingull, Electrike, Plusle, Minun, Gulpin, Oddish (e: Voltorb)
+ROUTE 110: Rattata (20%), Electrike (20%), Oddish (15%), Gulpin (15%), Plusle (10%), Minun (10%), Wingull (10%) (e: Voltorb)
 ROUTE 117: Rattata, Oddish, Marill, Roselia, Volbeat, Illumise
 GAME CORNER: Eevee, Porygon
 ROUTE 112: Machop, Numel, Ponyta, Tyrogue

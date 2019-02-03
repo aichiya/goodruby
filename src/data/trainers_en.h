@@ -407,16 +407,16 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_ANONYMOUS_1] =
     {
-        .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_AQUA_ADMIN,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_ADMIN_M,
-        .trainerName = _(""),
-        .items = {0, 0, 0, 0}, //{ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
+        .partyFlags = F_TRAINER_PARTY_FULL_CONTROL,
+        .trainerClass = TRAINER_CLASS_MAGMA_LEADER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
+        .trainerPic = TRAINER_PIC_MAXIE,
+        .trainerName = _("Maxie"),
+        .items = {0, 0, 0, 0}, //{ITEM_SUPER_POTION, ITEM_SUPER_POTION, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = 0x7,
-        .partySize = 2,
-        .party = {.NoItemDefaultMoves = gTrainerParty_Anonymous1 }
+        .partySize = 3,
+        .party = {.FullControl = gTrainerParty_MaxieMuseum }
     },
 
     [TRAINER_MATT_1] =
@@ -807,7 +807,7 @@ const struct Trainer gTrainers[] = {
         .items = {0, 0, 0, 0}, //{ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = 0x1,
-        .partySize = 2,
+        .partySize = 3,
         .party = {.NoItemDefaultMoves = gTrainerParty_Lola1 }
     },
 
@@ -6869,7 +6869,7 @@ const struct Trainer gTrainers[] = {
         .items = {0, 0, 0, 0}, //{ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = 0x1,
-        .partySize = 1,
+        .partySize = 3,
         .party = {.NoItemDefaultMoves = gTrainerParty_Huey }
     },
 
@@ -6883,7 +6883,7 @@ const struct Trainer gTrainers[] = {
         .items = {0, 0, 0, 0}, //{ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = 0x1,
-        .partySize = 3,
+        .partySize = 2,
         .party = {.NoItemDefaultMoves = gTrainerParty_Edmond }
     },
 
@@ -6911,7 +6911,7 @@ const struct Trainer gTrainers[] = {
         .items = {0, 0, 0, 0}, //{ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = 0x1,
-        .partySize = 3,
+        .partySize = 2,
         .party = {.NoItemDefaultMoves = gTrainerParty_Dwayne }
     },
 
@@ -8199,7 +8199,7 @@ const struct Trainer gTrainers[] = {
         .items = {0, 0, 0, 0}, //{ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = 0x1,
-        .partySize = 1,
+        .partySize = 2,
         .party = {.NoItemDefaultMoves = gTrainerParty_Grunt46 }
     },
 
@@ -9067,7 +9067,7 @@ const struct Trainer gTrainers[] = {
         .items = {0, 0, 0, 0}, //{ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = 0x1,
-        .partySize = 1,
+        .partySize = 2,
         .party = {.NoItemDefaultMoves = gTrainerParty_Johanna }
     },
 

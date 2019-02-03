@@ -74,7 +74,11 @@ SlateportCity_OceanicMuseum_2F_Text_17F17E:: @ 817F17E
 	.string "expand the world's landmass.\p"
 	.string "Don't you agree? What we are doing\n"
 	.string "is a magnificent undertaking.\p"
-	.string "Well, no matter...\n"
+	.string "Well, no matter...\p"
+    .string "Those Goods leave with Team\n"
+    .string "Magma, one way or the other!$"
+
+SlateportCity_OceanicMuseum_2F_Text_MaxieLeave::
 	.string "You're young.\p"
 	.string "Your inability to understand our\n"
 	.string "noble cause can't be helped...\p"

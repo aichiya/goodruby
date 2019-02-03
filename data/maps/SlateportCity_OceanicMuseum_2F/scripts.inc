@@ -62,11 +62,9 @@ SlateportCity_OceanicMuseum_2F_EventScript_155CE6:: @ 8155CE6
 	msgbox SlateportCity_OceanicMuseum_2F_Text_17EF62, 4
 	applymovement 2, SlateportCity_OceanicMuseum_2F_Movement_155EA6
 	waitmovement 0
-	.ifdef SAPPHIRE
-	msgbox SlateportCity_OceanicMuseum_2F_Text_17EFC9, 4
-	.else
 	msgbox SlateportCity_OceanicMuseum_2F_Text_17F17E, 4
-	.endif
+	trainerbattle 3, TRAINER_ANONYMOUS_1, 0, SlateportCity_OceanicMuseum_2F_Text_17EED6
+	msgbox SlateportCity_OceanicMuseum_2F_Text_MaxieLeave, 4
 	closemessage
 	fadescreen 1
 	removeobject 2
