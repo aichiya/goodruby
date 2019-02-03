@@ -78,6 +78,10 @@ SlateportCity_OceanicMuseum_2F_Text_17F17E:: @ 817F17E
     .string "Those Goods leave with Team\n"
     .string "Magma, one way or the other!$"
 
+SlateportCity_OceanicMuseum_2F_Text_MaxieLose::
+    .string "What?!\n"
+    .string "I, Maxie, have met resistance?$"
+
 SlateportCity_OceanicMuseum_2F_Text_MaxieLeave::
 	.string "You're young.\p"
 	.string "Your inability to understand our\n"

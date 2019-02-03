@@ -58,9 +58,9 @@ HIDEKI: Tyrogue Lv16 (Jump Kick), Mankey Lv16
 TESSA: Tyrogue Lv16 (Counter), Machop Lv16
 
 BRAWLY:
-Makuhita
-Wartortle
-Machoke
+Makuhita Lv18 Fake Out, Force Palm, Knock Off, Bulk Up
+Wartortle Lv18 Bite, Water Gun, Brick Break, Aqua Jet
+Machoke@Sitrus Lv19 Low Sweep, Rock Tomb, Bullet Punch, Bulk Up
 
 ROUTE 109 BEACH
 HUEY: Wingull Lv15, Machop Lv15, Tentacool Lv15
@@ -77,8 +77,8 @@ SLATEPORT MUSEUM
 GRUNT 46: Poochyena Lv17, Slugma Lv17
 GRUNT 47: Zubat Lv17, Sandshrew Lv17
 MAXIE: 
-Mightyena Lv18 Bite, Snarl, Fire Fang, Sand Attack
 Onix Lv18 Sunny Day, Stealth Rock, Rock Tomb, Tackle
+Mightyena Lv18 Bite, Snarl, Fire Fang, Sand Attack
 Magmar Lv20 Sunny Day, Ember, Smog, Feint Attack
 
 

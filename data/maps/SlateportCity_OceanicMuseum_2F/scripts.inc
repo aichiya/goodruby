@@ -63,7 +63,7 @@ SlateportCity_OceanicMuseum_2F_EventScript_155CE6:: @ 8155CE6
 	applymovement 2, SlateportCity_OceanicMuseum_2F_Movement_155EA6
 	waitmovement 0
 	msgbox SlateportCity_OceanicMuseum_2F_Text_17F17E, 4
-	trainerbattle 3, TRAINER_ANONYMOUS_1, 0, SlateportCity_OceanicMuseum_2F_Text_17EED6
+	trainerbattle 3, TRAINER_ANONYMOUS_1, 0, SlateportCity_OceanicMuseum_2F_Text_MaxieLose
 	msgbox SlateportCity_OceanicMuseum_2F_Text_MaxieLeave, 4
 	closemessage
 	fadescreen 1
