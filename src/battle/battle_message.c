@@ -16,7 +16,7 @@
 #include "ewram.h"
 
 #define BATTLESTRING_TO_SUB 12
-#define BATTLESTRINGS_NO    423
+#define BATTLESTRINGS_NO    424
 #define BATTLESTRINGS_MAX   BATTLESTRINGS_NO + BATTLESTRING_TO_SUB
 
 #ifdef GERMAN
@@ -260,6 +260,8 @@ void BufferStringBattle(u16 stringID)
                 stringPtr = BattleText_WildDoubleAppeared;
             else if (gBattleTypeFlags & BATTLE_TYPE_WALLY_TUTORIAL)
                 stringPtr = BattleText_WildAppeared3;
+            else if (gBattleTypeFlags & BATTLE_TYPE_FISH)
+                stringPtr = BattleText_WildAppeared4;
             else
                 stringPtr = BattleText_WildAppeared1;
         }

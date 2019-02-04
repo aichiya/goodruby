@@ -12861,9 +12861,32 @@ static void atkEE_removelightscreenreflect(void) //brick break
     gBattlescriptCurrInstr++;
 }
 
+static const u16 sMoonBallMons[] = 
+{
+    SPECIES_NIDORAN_F,
+    SPECIES_NIDORINA,
+    SPECIES_NIDOQUEEN,
+    SPECIES_NIDORAN_M,
+    SPECIES_NIDORINO,
+    SPECIES_NIDOKING,
+    SPECIES_CLEFFA,
+    SPECIES_CLEFAIRY,
+    SPECIES_CLEFABLE,
+    SPECIES_IGGLYBUFF,
+    SPECIES_JIGGLYPUFF,
+    SPECIES_WIGGLYTUFF,
+    SPECIES_SKITTY,
+    SPECIES_DELCATTY,
+    0,
+};
+
 void atkEF_handleballthrow(void)
 {
     u8 ball_multiplier = 0;
+    u8 index = 0;
+    struct Pokemon *attacker, *target;
+    u16 atk_species, def_species, target_wt;
+    u32 atk_pid, def_pid;
     if (gBattleExecBuffer)
         return;
 
@@ -12928,7 +12951,108 @@ void atkEF_handleballthrow(void)
                 break;
             case ITEM_LUXURY_BALL:
             case ITEM_PREMIER_BALL:
+            case ITEM_FRIEND_BALL:
+            case ITEM_HEAL_BALL:
+            case ITEM_CHERISH_BALL:
                 ball_multiplier = 10;
+                break;
+            case ITEM_LEVEL_BALL:
+                if (gBattleMons[gBankTarget].level >= gBattleMons[gActiveBattler].level)
+                    ball_multiplier = 10;
+                else if (gBattleMons[gBankTarget].level * 2 > gBattleMons[gActiveBattler].level)
+                    ball_multiplier = 20;
+                else if (gBattleMons[gBankTarget].level * 4 > gBattleMons[gActiveBattler].level)
+                    ball_multiplier = 40;
+                else
+                    ball_multiplier = 80;
+                break;
+            case ITEM_LURE_BALL:
+                if (gBattleTypeFlags & BATTLE_TYPE_FISH)
+                    ball_multiplier = 30;
+                else
+                    ball_multiplier = 10;
+                break;
+            case ITEM_MOON_BALL:
+                ball_multiplier = 10;
+                while (sMoonBallMons[index])
+                {
+                    if (sMoonBallMons[index] == gBattleMons[gBankTarget].species)
+                    {
+                        ball_multiplier = 40;
+                        break;
+                    }
+                    index++;
+                }
+                break;
+            case ITEM_LOVE_BALL:
+                if (!GetBattlerSide(gBankAttacker))
+                    attacker = &gPlayerParty[gBattlerPartyIndexes[gBankAttacker]];
+                else
+                    attacker = &gEnemyParty[gBattlerPartyIndexes[gBankAttacker]];
+
+                if (!GetBattlerSide(gBankTarget))
+                    target = &gPlayerParty[gBattlerPartyIndexes[gBankTarget]];
+                else
+                    target = &gEnemyParty[gBattlerPartyIndexes[gBankTarget]];
+
+                atk_species = GetMonData(attacker, MON_DATA_SPECIES);
+                atk_pid = GetMonData(attacker, MON_DATA_PERSONALITY);
+
+                def_species = GetMonData(target, MON_DATA_SPECIES);
+                def_pid = GetMonData(target, MON_DATA_PERSONALITY);
+
+                if (gBattleMons[gBankTarget].species == gBattleMons[gActiveBattler].species &&
+                    GetGenderFromSpeciesAndPersonality(atk_species, atk_pid) != GetGenderFromSpeciesAndPersonality(def_species, def_pid) &&
+                    GetGenderFromSpeciesAndPersonality(atk_species, atk_pid) == 0xFF &&
+                    GetGenderFromSpeciesAndPersonality(def_species, def_pid) == 0xFF)
+                    ball_multiplier = 80;
+                else
+                    ball_multiplier = 10;
+                break;
+            case ITEM_HEAVY_BALL:
+                target_wt = GetPokedexHeightWeight(SpeciesToNationalPokedexNum(gBattleMons[gBankTarget].species), 1);
+                if (target_wt < 1000)
+                {
+                    if (catch_rate <= 20)
+                        catch_rate = 1;
+                    else
+                        catch_rate -= 20;
+                }
+                else if (target_wt < 2000)
+                    ; // do nothing
+                else if (target_wt < 3000)
+                {
+                    if (catch_rate > 235)
+                        catch_rate = 255;
+                    else
+                        catch_rate += 20;
+                }
+                else
+                {
+                    if (catch_rate > 225)
+                        catch_rate = 255;
+                    else
+                        catch_rate += 30;
+                }
+                ball_multiplier = 10;
+                break;
+            case ITEM_FAST_BALL:
+                if (gBaseStats[gBattleMons[gBankTarget].species].baseSpeed >= 100)
+                    ball_multiplier = 40;
+                else
+                    ball_multiplier = 10;
+                break;
+            case ITEM_QUICK_BALL:
+                if (gBattleResults.battleTurnCounter)
+                    ball_multiplier = 10;
+                else
+                    ball_multiplier = 50;
+                break;
+            case ITEM_DUSK_BALL:
+                if (Overworld_GetMapTypeOfSaveblockLocation() == 4)
+                    ball_multiplier = 35;
+                else
+                    ball_multiplier = 10;
                 break;
             }
         }
@@ -12938,7 +13062,7 @@ void atkEF_handleballthrow(void)
         odds = (catch_rate * ball_multiplier / 10) * (gBattleMons[gBankTarget].maxHP * 3 - gBattleMons[gBankTarget].hp * 2) / (3 * gBattleMons[gBankTarget].maxHP);
         if (gBattleMons[gBankTarget].status1 & (STATUS_SLEEP | STATUS_FREEZE))
             odds *= 2;
-        if (gBattleMons[gBankTarget].status1 & (STATUS_POISON | STATUS_BURN | STATUS_PARALYSIS /*| STATUS_TOXIC_POISON */)) //nice one gf
+        if (gBattleMons[gBankTarget].status1 & (STATUS_POISON | STATUS_BURN | STATUS_PARALYSIS | STATUS_TOXIC_POISON )) //nice one gf
             odds = (odds * 15) / 10;
 
         if (gLastUsedItem != ITEM_SAFARI_BALL)
@@ -12994,6 +13118,40 @@ void atkEF_handleballthrow(void)
 
 static void atkF0_givecaughtmon(void)
 {
+    u8 i;
+    u16 maxHP;
+    u8 ppBonuses;
+    u8 arg[4];
+    struct Pokemon* mon;
+
+    mon = &gEnemyParty[gBattlerPartyIndexes[gBankAttacker ^ 1]];
+    if (GetMonData(mon, MON_DATA_POKEBALL) == ITEM_HEAL_BALL)
+    {
+        // should really make a heal-one-mon function instead of cribbing like this, o well
+        maxHP = GetMonData(mon, MON_DATA_MAX_HP);
+        arg[0] = maxHP;
+        arg[1] = maxHP >> 8;
+        SetMonData(mon, MON_DATA_HP, arg);
+        ppBonuses = GetMonData(mon, MON_DATA_PP_BONUSES);
+
+        // restore PP.
+        for(i = 0; i < 4; i++)
+        {
+            arg[0] = CalculatePPWithBonus(GetMonData(mon, MON_DATA_MOVE1 + i), ppBonuses, i);
+            SetMonData(mon, MON_DATA_PP1 + i, arg);
+        }
+
+        arg[0] = 0;
+        arg[1] = 0;
+        arg[2] = 0;
+        arg[3] = 0;
+        SetMonData(mon, MON_DATA_STATUS, arg);
+    }
+    else if (GetMonData(mon, MON_DATA_POKEBALL) == ITEM_FRIEND_BALL)
+    {
+        arg[0] = 200;
+        SetMonData(mon, MON_DATA_FRIENDSHIP, arg);
+    }
     GiveMonToPlayer(&gEnemyParty[gBattlerPartyIndexes[gBankAttacker ^ 1]]);
     gBattleResults.caughtPoke = gBattleMons[gBankAttacker ^ 1].species;
     GetMonData(&gEnemyParty[gBattlerPartyIndexes[gBankAttacker ^ 1]], MON_DATA_NICKNAME, gBattleResults.caughtNick);
@@ -13903,7 +14061,7 @@ static void sp10_captivate(void)
     else
     {
         if (GetGenderFromSpeciesAndPersonality(atk_species, atk_pid) == GetGenderFromSpeciesAndPersonality(def_species, def_pid)
-            || gStatuses3[gBankTarget] & STATUS3_SEMI_INVULNERABLE || gBattleMons[gBankTarget].status2 & STATUS2_INFATUATION || GetGenderFromSpeciesAndPersonality(atk_species, atk_pid) == 0xFF
+            || gStatuses3[gBankTarget] & STATUS3_SEMI_INVULNERABLE || GetGenderFromSpeciesAndPersonality(atk_species, atk_pid) == 0xFF
             || GetGenderFromSpeciesAndPersonality(def_species, def_pid) == 0xFF)
             {
                 gBattlescriptCurrInstr = BattleScript_CaptivateFail;

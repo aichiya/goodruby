@@ -84,35 +84,63 @@ static void sub_8141D20(struct Sprite *sprite);
 extern const u8 gBattleAnimSpriteSheet_Particles[];
 const struct CompressedSpriteSheet gBallOpenParticleSpritesheets[] =
 {
-    {gBattleAnimSpriteSheet_Particles, 0x100, 0xD6EC},
-    {gBattleAnimSpriteSheet_Particles, 0x100, 0xD6ED},
-    {gBattleAnimSpriteSheet_Particles, 0x100, 0xD6EE},
-    {gBattleAnimSpriteSheet_Particles, 0x100, 0xD6EF},
-    {gBattleAnimSpriteSheet_Particles, 0x100, 0xD6F0},
-    {gBattleAnimSpriteSheet_Particles, 0x100, 0xD6F1},
-    {gBattleAnimSpriteSheet_Particles, 0x100, 0xD6F2},
-    {gBattleAnimSpriteSheet_Particles, 0x100, 0xD6F3},
-    {gBattleAnimSpriteSheet_Particles, 0x100, 0xD6F4},
-    {gBattleAnimSpriteSheet_Particles, 0x100, 0xD6F5},
-    {gBattleAnimSpriteSheet_Particles, 0x100, 0xD6F6},
-    {gBattleAnimSpriteSheet_Particles, 0x100, 0xD6F7},
+    {gBattleAnimSpriteSheet_Particles, 0x100, 56000},
+    {gBattleAnimSpriteSheet_Particles, 0x100, 56001},
+    {gBattleAnimSpriteSheet_Particles, 0x100, 56002},
+    {gBattleAnimSpriteSheet_Particles, 0x100, 56003},
+    {gBattleAnimSpriteSheet_Particles, 0x100, 56004},
+    {gBattleAnimSpriteSheet_Particles, 0x100, 56005},
+    {gBattleAnimSpriteSheet_Particles, 0x100, 56006},
+    {gBattleAnimSpriteSheet_Particles, 0x100, 56007},
+    {gBattleAnimSpriteSheet_Particles, 0x100, 56008},
+    {gBattleAnimSpriteSheet_Particles, 0x100, 56009},
+    {gBattleAnimSpriteSheet_Particles, 0x100, 56010},
+    {gBattleAnimSpriteSheet_Particles, 0x100, 56011},
+    
+    {gBattleAnimSpriteSheet_Particles, 0x100, 56012},
+    {gBattleAnimSpriteSheet_Particles, 0x100, 56013},
+    {gBattleAnimSpriteSheet_Particles, 0x100, 56014},
+    {gBattleAnimSpriteSheet_Particles, 0x100, 56015},
+    {gBattleAnimSpriteSheet_Particles, 0x100, 56016},
+    {gBattleAnimSpriteSheet_Particles, 0x100, 56017},
+    {gBattleAnimSpriteSheet_Particles, 0x100, 56018},
+    {gBattleAnimSpriteSheet_Particles, 0x100, 56019},
+    {gBattleAnimSpriteSheet_Particles, 0x100, 56020},
+    {gBattleAnimSpriteSheet_Particles, 0x100, 56021},
+    {gBattleAnimSpriteSheet_Particles, 0x100, 56022},
+    {gBattleAnimSpriteSheet_Particles, 0x100, 56023},
+    {gBattleAnimSpriteSheet_Particles, 0x100, 56024},
 };
 
 extern const u8 gBattleAnimSpritePalette_136[];
 const struct CompressedSpritePalette gBallOpenParticlePalettes[] =
 {
-    {gBattleAnimSpritePalette_136, 0xD6EC},
-    {gBattleAnimSpritePalette_136, 0xD6ED},
-    {gBattleAnimSpritePalette_136, 0xD6EE},
-    {gBattleAnimSpritePalette_136, 0xD6EF},
-    {gBattleAnimSpritePalette_136, 0xD6F0},
-    {gBattleAnimSpritePalette_136, 0xD6F1},
-    {gBattleAnimSpritePalette_136, 0xD6F2},
-    {gBattleAnimSpritePalette_136, 0xD6F3},
-    {gBattleAnimSpritePalette_136, 0xD6F4},
-    {gBattleAnimSpritePalette_136, 0xD6F5},
-    {gBattleAnimSpritePalette_136, 0xD6F6},
-    {gBattleAnimSpritePalette_136, 0xD6F7},
+    {gBattleAnimSpritePalette_136, 56000},
+    {gBattleAnimSpritePalette_136, 56001},
+    {gBattleAnimSpritePalette_136, 56002},
+    {gBattleAnimSpritePalette_136, 56003},
+    {gBattleAnimSpritePalette_136, 56004},
+    {gBattleAnimSpritePalette_136, 56005},
+    {gBattleAnimSpritePalette_136, 56006},
+    {gBattleAnimSpritePalette_136, 56007},
+    {gBattleAnimSpritePalette_136, 56008},
+    {gBattleAnimSpritePalette_136, 56009},
+    {gBattleAnimSpritePalette_136, 56010},
+    {gBattleAnimSpritePalette_136, 56011},
+    
+    {gBattleAnimSpritePalette_136, 56012},
+    {gBattleAnimSpritePalette_136, 56013},
+    {gBattleAnimSpritePalette_136, 56014},
+    {gBattleAnimSpritePalette_136, 56015},
+    {gBattleAnimSpritePalette_136, 56016},
+    {gBattleAnimSpritePalette_136, 56017},
+    {gBattleAnimSpritePalette_136, 56018},
+    {gBattleAnimSpritePalette_136, 56019},
+    {gBattleAnimSpritePalette_136, 56020},
+    {gBattleAnimSpritePalette_136, 56021},
+    {gBattleAnimSpritePalette_136, 56022},
+    {gBattleAnimSpritePalette_136, 56023},
+    {gBattleAnimSpritePalette_136, 56024},
 };
 
 const union AnimCmd gSpriteAnim_840B318[] =
@@ -181,6 +209,19 @@ const u8 gBallOpenParticleAnimNums[] =
     5,
     4,
     4,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
 };
 
 void PokeBallOpenParticleAnimation(u8);
@@ -210,13 +251,26 @@ const TaskFunc gBallOpenParticleAnimationFuncs[] =
     TimerBallOpenParticleAnimation,
     GreatBallOpenParticleAnimation,
     PremierBallOpenParticleAnimation,
+    PokeBallOpenParticleAnimation,
+    PokeBallOpenParticleAnimation,
+    PokeBallOpenParticleAnimation,
+    PokeBallOpenParticleAnimation,
+    PokeBallOpenParticleAnimation,
+    PokeBallOpenParticleAnimation,
+    PokeBallOpenParticleAnimation,
+    PokeBallOpenParticleAnimation,
+    PokeBallOpenParticleAnimation,
+    PokeBallOpenParticleAnimation,
+    PokeBallOpenParticleAnimation,
+    PokeBallOpenParticleAnimation,
+    PokeBallOpenParticleAnimation,
 };
 
 const struct SpriteTemplate gSpriteTemplates_840B3B4[] =
 {
     {
-        .tileTag = 55020,
-        .paletteTag = 55020,
+        .tileTag = 56000,
+        .paletteTag = 56000,
         .oam = &gOamData_837DF24,
         .anims = gSpriteAnimTable_840B360,
         .images = NULL,
@@ -224,8 +278,8 @@ const struct SpriteTemplate gSpriteTemplates_840B3B4[] =
         .callback = SpriteCallbackDummy,
     },
     {
-        .tileTag = 55021,
-        .paletteTag = 55021,
+        .tileTag = 56001,
+        .paletteTag = 56001,
         .oam = &gOamData_837DF24,
         .anims = gSpriteAnimTable_840B360,
         .images = NULL,
@@ -233,8 +287,8 @@ const struct SpriteTemplate gSpriteTemplates_840B3B4[] =
         .callback = SpriteCallbackDummy,
     },
     {
-        .tileTag = 55022,
-        .paletteTag = 55022,
+        .tileTag = 56002,
+        .paletteTag = 56002,
         .oam = &gOamData_837DF24,
         .anims = gSpriteAnimTable_840B360,
         .images = NULL,
@@ -242,8 +296,8 @@ const struct SpriteTemplate gSpriteTemplates_840B3B4[] =
         .callback = SpriteCallbackDummy,
     },
     {
-        .tileTag = 55023,
-        .paletteTag = 55023,
+        .tileTag = 56003,
+        .paletteTag = 56003,
         .oam = &gOamData_837DF24,
         .anims = gSpriteAnimTable_840B360,
         .images = NULL,
@@ -251,8 +305,8 @@ const struct SpriteTemplate gSpriteTemplates_840B3B4[] =
         .callback = SpriteCallbackDummy,
     },
     {
-        .tileTag = 55024,
-        .paletteTag = 55024,
+        .tileTag = 56004,
+        .paletteTag = 56004,
         .oam = &gOamData_837DF24,
         .anims = gSpriteAnimTable_840B360,
         .images = NULL,
@@ -260,8 +314,8 @@ const struct SpriteTemplate gSpriteTemplates_840B3B4[] =
         .callback = SpriteCallbackDummy,
     },
     {
-        .tileTag = 55025,
-        .paletteTag = 55025,
+        .tileTag = 56005,
+        .paletteTag = 56005,
         .oam = &gOamData_837DF24,
         .anims = gSpriteAnimTable_840B360,
         .images = NULL,
@@ -269,8 +323,8 @@ const struct SpriteTemplate gSpriteTemplates_840B3B4[] =
         .callback = SpriteCallbackDummy,
     },
     {
-        .tileTag = 55026,
-        .paletteTag = 55026,
+        .tileTag = 56006,
+        .paletteTag = 56006,
         .oam = &gOamData_837DF24,
         .anims = gSpriteAnimTable_840B360,
         .images = NULL,
@@ -278,8 +332,8 @@ const struct SpriteTemplate gSpriteTemplates_840B3B4[] =
         .callback = SpriteCallbackDummy,
     },
     {
-        .tileTag = 55027,
-        .paletteTag = 55027,
+        .tileTag = 56007,
+        .paletteTag = 56007,
         .oam = &gOamData_837DF24,
         .anims = gSpriteAnimTable_840B360,
         .images = NULL,
@@ -287,8 +341,8 @@ const struct SpriteTemplate gSpriteTemplates_840B3B4[] =
         .callback = SpriteCallbackDummy,
     },
     {
-        .tileTag = 55028,
-        .paletteTag = 55028,
+        .tileTag = 56008,
+        .paletteTag = 56008,
         .oam = &gOamData_837DF24,
         .anims = gSpriteAnimTable_840B360,
         .images = NULL,
@@ -296,8 +350,8 @@ const struct SpriteTemplate gSpriteTemplates_840B3B4[] =
         .callback = SpriteCallbackDummy,
     },
     {
-        .tileTag = 55029,
-        .paletteTag = 55029,
+        .tileTag = 56009,
+        .paletteTag = 56009,
         .oam = &gOamData_837DF24,
         .anims = gSpriteAnimTable_840B360,
         .images = NULL,
@@ -305,8 +359,8 @@ const struct SpriteTemplate gSpriteTemplates_840B3B4[] =
         .callback = SpriteCallbackDummy,
     },
     {
-        .tileTag = 55030,
-        .paletteTag = 55030,
+        .tileTag = 56010,
+        .paletteTag = 56010,
         .oam = &gOamData_837DF24,
         .anims = gSpriteAnimTable_840B360,
         .images = NULL,
@@ -314,8 +368,125 @@ const struct SpriteTemplate gSpriteTemplates_840B3B4[] =
         .callback = SpriteCallbackDummy,
     },
     {
-        .tileTag = 55031,
-        .paletteTag = 55031,
+        .tileTag = 56011,
+        .paletteTag = 56011,
+        .oam = &gOamData_837DF24,
+        .anims = gSpriteAnimTable_840B360,
+        .images = NULL,
+        .affineAnims = gDummySpriteAffineAnimTable,
+        .callback = SpriteCallbackDummy,
+    },
+    {
+        .tileTag = 56012,
+        .paletteTag = 56012,
+        .oam = &gOamData_837DF24,
+        .anims = gSpriteAnimTable_840B360,
+        .images = NULL,
+        .affineAnims = gDummySpriteAffineAnimTable,
+        .callback = SpriteCallbackDummy,
+    },
+    {
+        .tileTag = 56013,
+        .paletteTag = 56013,
+        .oam = &gOamData_837DF24,
+        .anims = gSpriteAnimTable_840B360,
+        .images = NULL,
+        .affineAnims = gDummySpriteAffineAnimTable,
+        .callback = SpriteCallbackDummy,
+    },
+    {
+        .tileTag = 56014,
+        .paletteTag = 56014,
+        .oam = &gOamData_837DF24,
+        .anims = gSpriteAnimTable_840B360,
+        .images = NULL,
+        .affineAnims = gDummySpriteAffineAnimTable,
+        .callback = SpriteCallbackDummy,
+    },
+    {
+        .tileTag = 56015,
+        .paletteTag = 56015,
+        .oam = &gOamData_837DF24,
+        .anims = gSpriteAnimTable_840B360,
+        .images = NULL,
+        .affineAnims = gDummySpriteAffineAnimTable,
+        .callback = SpriteCallbackDummy,
+    },
+    {
+        .tileTag = 56016,
+        .paletteTag = 56016,
+        .oam = &gOamData_837DF24,
+        .anims = gSpriteAnimTable_840B360,
+        .images = NULL,
+        .affineAnims = gDummySpriteAffineAnimTable,
+        .callback = SpriteCallbackDummy,
+    },
+    {
+        .tileTag = 56017,
+        .paletteTag = 56017,
+        .oam = &gOamData_837DF24,
+        .anims = gSpriteAnimTable_840B360,
+        .images = NULL,
+        .affineAnims = gDummySpriteAffineAnimTable,
+        .callback = SpriteCallbackDummy,
+    },
+    {
+        .tileTag = 56018,
+        .paletteTag = 56018,
+        .oam = &gOamData_837DF24,
+        .anims = gSpriteAnimTable_840B360,
+        .images = NULL,
+        .affineAnims = gDummySpriteAffineAnimTable,
+        .callback = SpriteCallbackDummy,
+    },
+    {
+        .tileTag = 56019,
+        .paletteTag = 56019,
+        .oam = &gOamData_837DF24,
+        .anims = gSpriteAnimTable_840B360,
+        .images = NULL,
+        .affineAnims = gDummySpriteAffineAnimTable,
+        .callback = SpriteCallbackDummy,
+    },
+    {
+        .tileTag = 56020,
+        .paletteTag = 56020,
+        .oam = &gOamData_837DF24,
+        .anims = gSpriteAnimTable_840B360,
+        .images = NULL,
+        .affineAnims = gDummySpriteAffineAnimTable,
+        .callback = SpriteCallbackDummy,
+    },
+    {
+        .tileTag = 56021,
+        .paletteTag = 56021,
+        .oam = &gOamData_837DF24,
+        .anims = gSpriteAnimTable_840B360,
+        .images = NULL,
+        .affineAnims = gDummySpriteAffineAnimTable,
+        .callback = SpriteCallbackDummy,
+    },
+    {
+        .tileTag = 56022,
+        .paletteTag = 56022,
+        .oam = &gOamData_837DF24,
+        .anims = gSpriteAnimTable_840B360,
+        .images = NULL,
+        .affineAnims = gDummySpriteAffineAnimTable,
+        .callback = SpriteCallbackDummy,
+    },
+    {
+        .tileTag = 56023,
+        .paletteTag = 56023,
+        .oam = &gOamData_837DF24,
+        .anims = gSpriteAnimTable_840B360,
+        .images = NULL,
+        .affineAnims = gDummySpriteAffineAnimTable,
+        .callback = SpriteCallbackDummy,
+    },
+    {
+        .tileTag = 56024,
+        .paletteTag = 56024,
         .oam = &gOamData_837DF24,
         .anims = gSpriteAnimTable_840B360,
         .images = NULL,
@@ -324,6 +495,7 @@ const struct SpriteTemplate gSpriteTemplates_840B3B4[] =
     },
 };
 
+// color blended with mon when released
 const u16 gUnknown_0840B4D4[] =
 {
     0x7ADF,
@@ -338,6 +510,21 @@ const u16 gUnknown_0840B4D4[] =
     0x7BDD,
     0x2A3F,
     0x293F,
+    0x7ADF,
+    0x7ADF,
+    0x7ADF,
+    0x7ADF,
+    0x7ADF,
+    0x7ADF,
+    0x7ADF,
+    0x7ADF,
+    0x7ADF,
+    0x7ADF,
+    0x7ADF,
+    0x7ADF,
+    0x7ADF,
+    
+    
     0x0000,
     0x0201,
     0x0403,
@@ -674,8 +861,9 @@ u8 ball_number_to_ball_processing_index(u16 ballItem)
     case ITEM_PREMIER_BALL:
         return 11;
     case ITEM_POKE_BALL:
-    default:
         return 0;
+    default:
+        return (u8)ballItem - 1;
     }
 }
 
@@ -794,10 +982,7 @@ static void sub_813FDC0(struct Sprite *sprite)
             sprite->callback = sub_813FE70;
             ballIndex = ball_number_to_ball_processing_index(gLastUsedItem);
             ballIndex2 = ballIndex;
-            if (ballIndex2 > 11)
-                return;
-            if (ballIndex2 < 0)
-                return;
+
 
             AnimateBallOpenParticles(sprite->pos1.x, sprite->pos1.y - 5, 1, 28, ballIndex);
             sub_8141314(0, gBattleAnimTarget, 14, ballIndex);
@@ -1214,15 +1399,11 @@ static void sub_81405F4(struct Sprite *sprite)
 
     ballIndex = ball_number_to_ball_processing_index(gLastUsedItem);
     ballIndex2 = ballIndex;
-    if (ballIndex2 > 11)
-        goto LABEL;
-    if (ballIndex2 < 0)
-        goto LABEL;
+
 
     AnimateBallOpenParticles(sprite->pos1.x, sprite->pos1.y - 5, 1, 28, ballIndex);
     sub_8141314(1, gBattleAnimTarget, 14, ballIndex);
 
-    LABEL:
     gSprites[gBankSpriteIds[gBattleAnimTarget]].invisible = 0;
     StartSpriteAffineAnim(&gSprites[gBankSpriteIds[gBattleAnimTarget]], 1);
     AnimateSprite(&gSprites[gBankSpriteIds[gBattleAnimTarget]]);

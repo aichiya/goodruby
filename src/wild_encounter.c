@@ -13,6 +13,7 @@
 #include "overworld.h"
 #include "safari_zone.h"
 #include "script.h"
+#include "constants/battle_constants.h"
 #include "constants/species.h"
 #include "tv.h"
 
@@ -3570,6 +3571,7 @@ const u16 gRoute119WaterTileData[] =
 
 extern u16 gSpecialVar_Result;
 extern u8 S_RepelWoreOff[];
+extern u16 gBattleTypeFlags;
 
 EWRAM_DATA u8 gWildEncountersDisabled = 0;
 EWRAM_DATA static u32 sFeebasRngValue = 0;
@@ -4161,6 +4163,7 @@ void FishingWildEncounter(u8 rod)
     IncrementGameStat(GAME_STAT_FISHING_CAPTURES);
     sub_80BEA50(species);
     BattleSetup_StartWildBattle();
+    gBattleTypeFlags |= BATTLE_TYPE_FISH;
 }
 
 u16 GetLocalWildMon(bool8 *isWaterMon)

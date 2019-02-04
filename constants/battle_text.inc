@@ -422,3 +422,4 @@
 	enum BATTLE_TEXT_AuroraVeilLittle
     enum BATTLE_TEXT_TrickRoom
     enum BATTLE_TEXT_TrickRoomEnd
+    enum BATTLE_TEXT_WildAppeared4
