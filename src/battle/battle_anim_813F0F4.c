@@ -70,6 +70,7 @@ static void DestroyBallOpenAnimationParticle(struct Sprite *sprite);
 static void FanOutBallOpenParticles_Step1(struct Sprite *sprite);
 static void RepeatBallOpenParticleAnimation_Step1(struct Sprite *sprite);
 static void PremierBallOpenParticleAnimation_Step1(struct Sprite *sprite);
+static void MoonBallOpenParticleAnimation_Step1(struct Sprite *sprite);
 static void sub_81413DC(u8 taskId);
 static void sub_814146C(u8 taskId);
 static void sub_81414BC(u8 taskId);
@@ -82,6 +83,7 @@ static void sub_8141CF4(struct Sprite *sprite);
 static void sub_8141D20(struct Sprite *sprite);
 
 extern const u8 gBattleAnimSpriteSheet_Particles[];
+extern const u8 gBattleAnimSpriteSheet_Particles2[];
 const struct CompressedSpriteSheet gBallOpenParticleSpritesheets[] =
 {
     {gBattleAnimSpriteSheet_Particles, 0x100, 56000},
@@ -97,22 +99,23 @@ const struct CompressedSpriteSheet gBallOpenParticleSpritesheets[] =
     {gBattleAnimSpriteSheet_Particles, 0x100, 56010},
     {gBattleAnimSpriteSheet_Particles, 0x100, 56011},
     
-    {gBattleAnimSpriteSheet_Particles, 0x100, 56012},
-    {gBattleAnimSpriteSheet_Particles, 0x100, 56013},
-    {gBattleAnimSpriteSheet_Particles, 0x100, 56014},
-    {gBattleAnimSpriteSheet_Particles, 0x100, 56015},
-    {gBattleAnimSpriteSheet_Particles, 0x100, 56016},
-    {gBattleAnimSpriteSheet_Particles, 0x100, 56017},
-    {gBattleAnimSpriteSheet_Particles, 0x100, 56018},
-    {gBattleAnimSpriteSheet_Particles, 0x100, 56019},
-    {gBattleAnimSpriteSheet_Particles, 0x100, 56020},
-    {gBattleAnimSpriteSheet_Particles, 0x100, 56021},
-    {gBattleAnimSpriteSheet_Particles, 0x100, 56022},
-    {gBattleAnimSpriteSheet_Particles, 0x100, 56023},
-    {gBattleAnimSpriteSheet_Particles, 0x100, 56024},
+    {gBattleAnimSpriteSheet_Particles2, 0x100, 56012}, // level
+    {gBattleAnimSpriteSheet_Particles, 0x100, 56013}, // lure
+    {gBattleAnimSpriteSheet_Particles2, 0x100, 56014}, // moon
+    {gBattleAnimSpriteSheet_Particles, 0x100, 56015}, // friend
+    {gBattleAnimSpriteSheet_Particles, 0x100, 56016}, // love
+    {gBattleAnimSpriteSheet_Particles2, 0x100, 56017}, // heavy
+    {gBattleAnimSpriteSheet_Particles2, 0x100, 56018}, // fast
+    {gBattleAnimSpriteSheet_Particles2, 0x100, 56019}, // heal
+    {gBattleAnimSpriteSheet_Particles2, 0x100, 56020}, // quick
+    {gBattleAnimSpriteSheet_Particles2, 0x100, 56021}, // dusk
+    {gBattleAnimSpriteSheet_Particles2, 0x100, 56022}, // cherish
+    {gBattleAnimSpriteSheet_Particles2, 0x100, 56023}, // aqua
+    {gBattleAnimSpriteSheet_Particles2, 0x100, 56024}, // magma
 };
 
 extern const u8 gBattleAnimSpritePalette_136[];
+extern const u8 gBattleAnimSpritePalette_305[];
 const struct CompressedSpritePalette gBallOpenParticlePalettes[] =
 {
     {gBattleAnimSpritePalette_136, 56000},
@@ -128,19 +131,19 @@ const struct CompressedSpritePalette gBallOpenParticlePalettes[] =
     {gBattleAnimSpritePalette_136, 56010},
     {gBattleAnimSpritePalette_136, 56011},
     
-    {gBattleAnimSpritePalette_136, 56012},
-    {gBattleAnimSpritePalette_136, 56013},
-    {gBattleAnimSpritePalette_136, 56014},
-    {gBattleAnimSpritePalette_136, 56015},
-    {gBattleAnimSpritePalette_136, 56016},
-    {gBattleAnimSpritePalette_136, 56017},
-    {gBattleAnimSpritePalette_136, 56018},
-    {gBattleAnimSpritePalette_136, 56019},
-    {gBattleAnimSpritePalette_136, 56020},
-    {gBattleAnimSpritePalette_136, 56021},
-    {gBattleAnimSpritePalette_136, 56022},
-    {gBattleAnimSpritePalette_136, 56023},
-    {gBattleAnimSpritePalette_136, 56024},
+    {gBattleAnimSpritePalette_305, 56012}, // level
+    {gBattleAnimSpritePalette_136, 56013}, // lure
+    {gBattleAnimSpritePalette_305, 56014}, // moon
+    {gBattleAnimSpritePalette_136, 56015}, // friend
+    {gBattleAnimSpritePalette_136, 56016}, // love
+    {gBattleAnimSpritePalette_305, 56017}, // heavy
+    {gBattleAnimSpritePalette_305, 56018}, // fast
+    {gBattleAnimSpritePalette_305, 56019}, // heal
+    {gBattleAnimSpritePalette_305, 56020}, // quick
+    {gBattleAnimSpritePalette_305, 56021}, // dusk
+    {gBattleAnimSpritePalette_305, 56022}, // cherish
+    {gBattleAnimSpritePalette_305, 56023}, // aqua
+    {gBattleAnimSpritePalette_305, 56024}, // magma
 };
 
 const union AnimCmd gSpriteAnim_840B318[] =
@@ -209,19 +212,20 @@ const u8 gBallOpenParticleAnimNums[] =
     5,
     4,
     4,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
+    
+    5, // level
+    2, // lure
+    4, // moon
+    3, // friend
+    3, // love
+    0, // heavy
+    4, // fast
+    0, // heal
+    4, // quick
+    2, // dusk
+    0, // cherish
+    1, // aqua
+    3, // magma
 };
 
 void PokeBallOpenParticleAnimation(u8);
@@ -236,6 +240,7 @@ void RepeatBallOpenParticleAnimation(u8);
 void TimerBallOpenParticleAnimation(u8);
 void GreatBallOpenParticleAnimation(u8);
 void PremierBallOpenParticleAnimation(u8);
+void MoonBallOpenParticleAnimation(u8);
 
 const TaskFunc gBallOpenParticleAnimationFuncs[] =
 {
@@ -251,19 +256,20 @@ const TaskFunc gBallOpenParticleAnimationFuncs[] =
     TimerBallOpenParticleAnimation,
     GreatBallOpenParticleAnimation,
     PremierBallOpenParticleAnimation,
-    PokeBallOpenParticleAnimation,
-    PokeBallOpenParticleAnimation,
-    PokeBallOpenParticleAnimation,
-    PokeBallOpenParticleAnimation,
-    PokeBallOpenParticleAnimation,
-    PokeBallOpenParticleAnimation,
-    PokeBallOpenParticleAnimation,
-    PokeBallOpenParticleAnimation,
-    PokeBallOpenParticleAnimation,
-    PokeBallOpenParticleAnimation,
-    PokeBallOpenParticleAnimation,
-    PokeBallOpenParticleAnimation,
-    PokeBallOpenParticleAnimation,
+    
+    SafariBallOpenParticleAnimation, // level
+    GreatBallOpenParticleAnimation, // lure
+    MoonBallOpenParticleAnimation, // moon
+    UltraBallOpenParticleAnimation, // friend
+    GreatBallOpenParticleAnimation, // love
+    GreatBallOpenParticleAnimation, // heavy
+    GreatBallOpenParticleAnimation, // fast
+    PokeBallOpenParticleAnimation, // heal
+    UltraBallOpenParticleAnimation, // quick
+    UltraBallOpenParticleAnimation, // dusk
+    MasterBallOpenParticleAnimation, // cherish
+    TimerBallOpenParticleAnimation, // aqua
+    TimerBallOpenParticleAnimation, // magma
 };
 
 const struct SpriteTemplate gSpriteTemplates_840B3B4[] =
@@ -510,6 +516,7 @@ const u16 gUnknown_0840B4D4[] =
     0x7BDD,
     0x2A3F,
     0x293F,
+
     0x7ADF,
     0x7ADF,
     0x7ADF,
@@ -838,30 +845,16 @@ u8 ball_number_to_ball_processing_index(u16 ballItem)
 {
     switch (ballItem)
     {
-    case ITEM_MASTER_BALL:
-        return 4;
-    case ITEM_ULTRA_BALL:
-        return 3;
+    case ITEM_POKE_BALL:
+        return 0;
     case ITEM_GREAT_BALL:
         return 1;
     case ITEM_SAFARI_BALL:
         return 2;
-    case ITEM_NET_BALL:
-        return 5;
-    case ITEM_DIVE_BALL:
-        return 6;
-    case ITEM_NEST_BALL:
-        return 7;
-    case ITEM_REPEAT_BALL:
-        return 8;
-    case ITEM_TIMER_BALL:
-        return 9;
-    case ITEM_LUXURY_BALL:
-        return 10;
-    case ITEM_PREMIER_BALL:
-        return 11;
-    case ITEM_POKE_BALL:
-        return 0;
+    case ITEM_ULTRA_BALL:
+        return 3;
+    case ITEM_MASTER_BALL:
+        return 4;
     default:
         return (u8)ballItem - 1;
     }
@@ -1891,6 +1884,62 @@ static void PremierBallOpenParticleAnimation_Step1(struct Sprite *sprite)
     sprite->data[0] = (sprite->data[0] + 10) & 0xFF;
     sprite->data[1]++;
     sprite->data[2]++;
+    if (++sprite->data[3] == 51)
+        DestroyBallOpenAnimationParticle(sprite);
+}
+
+void MoonBallOpenParticleAnimation(u8 taskId)
+{
+    u8 i;
+    u8 x, y, priority, subpriority, ballIndex;
+    u8 spriteId;
+
+    if (gTasks[taskId].data[7])
+    {
+        gTasks[taskId].data[7]--;
+    }
+    else
+    {
+        ballIndex = gTasks[taskId].data[15];
+        x = gTasks[taskId].data[1];
+        y = gTasks[taskId].data[2];
+        priority = gTasks[taskId].data[3];
+        subpriority = gTasks[taskId].data[4];
+
+        for (i = 0; i < 8; i++)
+        {
+            spriteId = CreateSprite(&gSpriteTemplates_840B3B4[ballIndex], x, y, subpriority);
+            StartSpriteAnim(&gSprites[spriteId], gBallOpenParticleAnimNums[ballIndex]);
+            gSprites[spriteId].callback = MoonBallOpenParticleAnimation_Step1;
+            gSprites[spriteId].oam.priority = priority;
+            gSprites[spriteId].data[0] = i * 32;
+            gSprites[spriteId].data[4] = 8;
+            gSprites[spriteId].data[5] = 2;
+            gSprites[spriteId].data[6] = 2;
+        }
+
+        gTasks[taskId].data[7] = 8;
+        if (++gTasks[taskId].data[0] == 2)
+        {
+            gSprites[spriteId].data[7] = 1;
+            DestroyTask(taskId);
+        }
+    }
+}
+
+static void MoonBallOpenParticleAnimation_Step1(struct Sprite *sprite)
+{
+    sprite->pos2.x = Sin(sprite->data[0], sprite->data[1]);
+    sprite->pos2.y = Cos(sprite->data[0], sprite->data[2]);
+    sprite->data[0] = (sprite->data[0] + sprite->data[4]) & 0xFF;
+    sprite->data[1] += sprite->data[5];
+    sprite->data[2] += sprite->data[6];
+    
+    if (Sin(sprite->data[0], 256) > 100)
+        sprite->invisible = TRUE;
+    else
+        sprite->invisible = FALSE;
+    
     if (++sprite->data[3] == 51)
         DestroyBallOpenAnimationParticle(sprite);
 }

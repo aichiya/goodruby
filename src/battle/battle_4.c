@@ -13054,6 +13054,19 @@ void atkEF_handleballthrow(void)
                 else
                     ball_multiplier = 10;
                 break;
+            case ITEM_AQUA_BALL:
+                if (WEATHER_HAS_EFFECT && (gBattleWeather & WEATHER_RAIN_ANY))
+                    ball_multiplier = 30;
+                else
+                    ball_multiplier = 7;
+                break;
+            case ITEM_MAGMA_BALL:
+                if (WEATHER_HAS_EFFECT && (gBattleWeather & WEATHER_SUN_ANY))
+                    ball_multiplier = 30;
+                else
+                    ball_multiplier = 7;
+                break;
+                
             }
         }
         else
@@ -13062,7 +13075,7 @@ void atkEF_handleballthrow(void)
         odds = (catch_rate * ball_multiplier / 10) * (gBattleMons[gBankTarget].maxHP * 3 - gBattleMons[gBankTarget].hp * 2) / (3 * gBattleMons[gBankTarget].maxHP);
         if (gBattleMons[gBankTarget].status1 & (STATUS_SLEEP | STATUS_FREEZE))
             odds *= 2;
-        if (gBattleMons[gBankTarget].status1 & (STATUS_POISON | STATUS_BURN | STATUS_PARALYSIS | STATUS_TOXIC_POISON )) //nice one gf
+        if (gBattleMons[gBankTarget].status1 & (STATUS_POISON | STATUS_BURN | STATUS_PARALYSIS | STATUS_TOXIC_POISON ))
             odds = (odds * 15) / 10;
 
         if (gLastUsedItem != ITEM_SAFARI_BALL)
