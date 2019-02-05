@@ -1,9 +1,10 @@
 Liberty:
-PIDGEY: adjust movepool so mud-slap, air cutter, air slash come earlier
-BEAUTIFY: HA CompoundEyes becomes Intimidate, absorb/mega/giga -> mega/giga/leech
+BEAUTIFY: HA CompoundEyes becomes Intimidate
 DUSTOX: HA CompoundEyes becomes Filter
 
 Classic:
+PIDGEY: Learns all moves before Whirlwind earlier, learns Air Cutter at 13
+BEAUTIFLY: Learns Mega Drain and Giga Drain earlier, loses Absorb, now learns Leech Life
 SKITTY, DELCATTY: Does not have secondary ability Normalize
 WINGULL, PELIPPER: Secondary abilities Hydration/Drizzle are switched with hidden ability Rain Dish
 TORKOAL: Secondary ability Drought is switched with hidden ability Shell Armor
