@@ -6823,31 +6823,32 @@ void HandleAction_UseItem(void)
     }
     else
     {
+        gBattleStruct->scriptingActive = gBankAttacker;
 
-        switch (ewram160D8((ewram16003 = gBankAttacker)))
+        switch (*(gBattleStruct->AI_itemType + (gBankAttacker >> 1)))
         {
         case AI_ITEM_FULL_RESTORE:
         case AI_ITEM_HEAL_HP:
             break;
         case AI_ITEM_CURE_CONDITION:
             gBattleCommunication[MULTISTRING_CHOOSER] = 0;
-            if (ewram160DA(gBankAttacker) & 1)
+            if (*(gBattleStruct->AI_itemFlags + gBankAttacker / 2) & 1)
             {
-                if (ewram160DA(gBankAttacker) & 0x3E)
+                if (*(gBattleStruct->AI_itemFlags + gBankAttacker / 2) & 0x3E)
                     gBattleCommunication[MULTISTRING_CHOOSER] = 5;
             }
             else
             {
-                while (!(ewram160DA(gBankAttacker) & 1))
+                while (!(*(gBattleStruct->AI_itemFlags + gBankAttacker / 2) & 1))
                 {
-                    ewram160DA(gBankAttacker) /= 2;
+                    *(gBattleStruct->AI_itemFlags + gBankAttacker / 2) >>= 1;
                     gBattleCommunication[MULTISTRING_CHOOSER]++;
                 }
             }
             break;
         case AI_ITEM_X_STAT:
             gBattleCommunication[MULTISTRING_CHOOSER] = 4;
-            if (ewram160DA(gBankAttacker) & 0x80)
+            if (*(gBattleStruct->AI_itemFlags + (gBankAttacker >> 1)) & 0x80)
             {
                 gBattleCommunication[MULTISTRING_CHOOSER] = 5;
             }
@@ -6856,14 +6857,14 @@ void HandleAction_UseItem(void)
                 PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_ATK)
                 PREPARE_STRING_BUFFER(gBattleTextBuff2, 0xD2)
 
-                while (!(ewram160DA(gBankAttacker) & 1))
+                while (!((*(gBattleStruct->AI_itemFlags + (gBankAttacker >> 1))) & 1))
                 {
-                    ewram160DA(gBankAttacker) /= 2;
+                    *(gBattleStruct->AI_itemFlags + gBankAttacker / 2) >>= 1;
                     gBattleTextBuff1[2]++;
                 }
 
-                ewram160A4 = gBattleTextBuff1[2] + 14;
-                ewram160A5 = 0;
+                gBattleStruct->animArg1 = gBattleTextBuff1[2] + 14;
+                gBattleStruct->animArg2 = 0;
             }
             break;
         case AI_ITEM_GUARD_SPECS:
@@ -6874,9 +6875,9 @@ void HandleAction_UseItem(void)
             break;
         }
 
-        gBattlescriptCurrInstr = gBattlescriptsForUsingItem[ewram160D8(gBankAttacker)];
+        gBattlescriptCurrInstr = gBattlescriptsForUsingItem[*(gBattleStruct->AI_itemType + gBankAttacker / 2)];
     }
-    gCurrentActionFuncId = ACTION_RUN_BATTLESCRIPT;
+    gCurrentActionFuncId = B_ACTION_EXEC_SCRIPT;
 }
 
 bool8 TryRunFromBattle(u8 bank)

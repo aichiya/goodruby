@@ -270,8 +270,8 @@ struct BattleStruct /* 0x2000000 */
     /*0x160D5*/ u8 unk160D5;
     /*0x160D6*/ u8 unk160D6;
     /*0x160D7*/ u8 unk160D7;
-    /*0x160D8*/ u8 unk160D8[2];
-    /*0x160DA*/ u8 unk160DA[2];
+    /*0x160D8*/ u8 AI_itemType[2];
+    /*0x160DA*/ u8 AI_itemFlags[2];
     /*0x160DC*/ u8 unk160DC;
     /*0x160DD*/ u8 intimidateBank;
     /*0x160DE*/ u8 unk160DE;

@@ -442,7 +442,7 @@ void sub_802C098(void)
             if (gBattleBufferA[gActiveBattler][1] == 1)
             {
                 // Add item to bag if it is a ball
-                if (itemId <= ITEM_PREMIER_BALL)
+                if (itemId < ITEM_POTION)
                     AddBagItem(itemId, 1);
                 else
                     return;
