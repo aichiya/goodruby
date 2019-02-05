@@ -15,6 +15,7 @@ PetalburgCity_Mart_EventScript_1552B0:: @ 81552B0
 	.align 2
 PetalburgCity_Mart_Items1:: @ 81552D0
 	.2byte ITEM_POKE_BALL
+    .2byte ITEM_HEAL_BALL
 	.2byte ITEM_POTION
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_PARALYZE_HEAL
@@ -39,6 +40,7 @@ PetalburgCity_Mart_EventScript_1552EA:: @ 81552EA
 PetalburgCity_Mart_Items2:: @ 81552FC
 	.2byte ITEM_POKE_BALL
 	.2byte ITEM_GREAT_BALL
+    .2byte ITEM_HEAL_BALL
 	.2byte ITEM_POTION
 	.2byte ITEM_SUPER_POTION
 	.2byte ITEM_ANTIDOTE

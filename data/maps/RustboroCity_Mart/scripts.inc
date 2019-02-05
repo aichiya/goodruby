@@ -19,6 +19,7 @@ RustboroCity_Mart_EventScript_157BEF:: @ 8157BEF
 	.align 2
 RustboroCity_Mart_Items1:: @ 8157C00
 	.2byte ITEM_POKE_BALL
+    .2byte ITEM_HEAL_BALL
 	.2byte ITEM_POTION
 	.2byte ITEM_SUPER_POTION
 	.2byte ITEM_ANTIDOTE
@@ -41,6 +42,7 @@ RustboroCity_Mart_EventScript_157C18:: @ 8157C18
 	.align 2
 RustboroCity_Mart_Items2:: @ 8157C28
 	.2byte ITEM_POKE_BALL
+    .2byte ITEM_HEAL_BALL
 	.2byte ITEM_TIMER_BALL
 	.2byte ITEM_REPEAT_BALL
 	.2byte ITEM_POTION

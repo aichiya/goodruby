@@ -504,32 +504,32 @@ const struct SpriteTemplate gSpriteTemplates_840B3B4[] =
 // color blended with mon when released
 const u16 gUnknown_0840B4D4[] =
 {
-    0x7ADF,
-    0x7AF0,
-    0x53D7,
-    0x3FFF,
-    0x7297,
-    0x67F5,
-    0x7B2C,
-    0x2B7E,
-    0x431F,
-    0x7BDD,
-    0x2A3F,
-    0x293F,
+    0x7ADF, // poke
+    0x7AF0, // great
+    0x53D7, // safari
+    0x3FFF, // ultra
+    0x7297, // master
+    0x67F5, // net
+    0x7B2C, // dive
+    0x2B7E, // nest
+    0x431F, // repeat
+    0x7BDD, // timer
+    0x2A3F, // luxury
+    0x293F, // premier
 
-    0x7ADF,
-    0x7ADF,
-    0x7ADF,
-    0x7ADF,
-    0x7ADF,
-    0x7ADF,
-    0x7ADF,
-    0x7ADF,
-    0x7ADF,
-    0x7ADF,
-    0x7ADF,
-    0x7ADF,
-    0x7ADF,
+    0x1098, //level
+    0x6EC9, //lure
+    0x233E, //moon
+    0x1F11, //friend
+    0x6A7F, //love
+    0x5167, //heavy
+    0x223D, //fast
+    0x6EFF, //heal
+    0x7B30, //quick
+    0x3427, //dusk
+    0x0C99, //cherish
+    0x5560, //aqua
+    0x0017, //magma
     
     
     0x0000,

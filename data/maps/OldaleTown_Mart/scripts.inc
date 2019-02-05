@@ -31,6 +31,7 @@ OldaleTown_Mart_EventScript_152FA8:: @ 8152FA8
 	.align 2
 OldaleTown_Mart_Items2:: @ 8152FB8
 	.2byte ITEM_POKE_BALL
+    .2byte ITEM_HEAL_BALL
 	.2byte ITEM_POTION
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_PARALYZE_HEAL
