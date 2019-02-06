@@ -337,6 +337,11 @@ void BattleLoadOpponentMonSprite(struct Pokemon *pkmn, u8 b)
         BlendPalette(paletteOffset, 16, 6, RGB(31, 31, 31));
         CpuCopy32(gPlttBufferFaded + paletteOffset, gPlttBufferUnfaded + paletteOffset, 32);
     }
+    else
+    {
+        NudgePalette(paletteOffset, 16, GetColoration(otId, personalityValue));
+        CpuCopy32(gPlttBufferFaded + paletteOffset, gPlttBufferUnfaded + paletteOffset, 32);
+    }
 }
 
 void BattleLoadPlayerMonSprite(struct Pokemon *pkmn, u8 b)
@@ -387,6 +392,11 @@ void BattleLoadPlayerMonSprite(struct Pokemon *pkmn, u8 b)
     if (ewram17800[b].transformedSpecies != 0)
     {
         BlendPalette(paletteOffset, 16, 6, RGB(31, 31, 31));
+        CpuCopy32(gPlttBufferFaded + paletteOffset, gPlttBufferUnfaded + paletteOffset, 32);
+    }
+    else
+    {
+        NudgePalette(paletteOffset, 16, GetColoration(otId, personalityValue));
         CpuCopy32(gPlttBufferFaded + paletteOffset, gPlttBufferUnfaded + paletteOffset, 32);
     }
 }

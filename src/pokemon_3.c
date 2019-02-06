@@ -1367,6 +1367,17 @@ bool8 IsShinyOtIdPersonality(u32 otId, u32 personality)
     return retVal;
 }
 
+u32 GetColoration(u32 otId, u32 personality)
+{
+    u32 shinyValue = HIHALF(otId) ^ LOHALF(otId) ^ HIHALF(personality) ^ LOHALF(personality);
+    return shinyValue;
+}
+
+u32 GetColorationFromMon(struct Pokemon *mon)
+{
+    return GetColoration(GetMonData(mon, MON_DATA_OT_ID, 0), GetMonData(mon, MON_DATA_PERSONALITY, 0));
+}
+
 u8 *sub_8040D08(void)
 {
     u8 id = GetMultiplayerId();

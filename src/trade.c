@@ -1,4 +1,5 @@
 #include "global.h"
+#include "blend_palette.h"
 #include "name_string_util.h"
 #include "string_util.h"
 #include "text.h"
@@ -3603,6 +3604,7 @@ static void sub_804B2D0(u8 whichParty, u8 a1)
     struct Pokemon *pokemon;
     u16 species;
     u32 personality;
+    const struct CompressedSpritePalette *palette;
 
     v0 = 0;
     pokemon = NULL;
@@ -3622,7 +3624,9 @@ static void sub_804B2D0(u8 whichParty, u8 a1)
             species = GetMonData(pokemon, MON_DATA_SPECIES2);
             personality = GetMonData(pokemon, MON_DATA_PERSONALITY);
             HandleLoadSpecialPokePic(&gMonFrontPicTable[species], gMonFrontPicCoords[species].coords, gMonFrontPicCoords[species].y_offset, (u32)gSharedMem, gUnknown_081FAF4C[whichParty * 2 + 1], species, personality);
-            LoadCompressedObjectPalette(GetMonSpritePalStruct(pokemon));
+            palette = GetMonSpritePalStruct(pokemon);
+            LoadCompressedObjectPalette(palette);
+            NudgePalette(0x100 + IndexOfSpritePaletteTag(palette->tag)*16, 16, GetColorationFromMon(pokemon));
             gUnknown_03004828->tradeSpecies[whichParty] = species;
             break;
         case 1:

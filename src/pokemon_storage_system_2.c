@@ -1,6 +1,7 @@
 
 // Includes
 #include "global.h"
+#include "blend_palette.h"
 #include "decompress.h"
 #include "constants/songs.h"
 #include "constants/species.h"
@@ -1706,10 +1707,14 @@ void sub_80981F0(u16 species, u32 pid)
     {
         if (species != SPECIES_NONE)
         {
+            const u8* lzPaletteData;
             HandleLoadSpecialPokePic(gMonFrontPicTable + species, gMonFrontPicCoords[species].coords, 1, (intptr_t)gPokemonStorageSystemPtr->unk_4784, gPokemonStorageSystemPtr->unk_2784, species, pid);
-            LZ77UnCompWram(gPokemonStorageSystemPtr->unk_11e8, gPokemonStorageSystemPtr->unk_2704);
+            lzPaletteData = GetMonSpritePalFromOtIdPersonality(gPokemonStorageSystemPtr->unk_11f0, gPokemonStorageSystemPtr->unk_11e8, gPokemonStorageSystemPtr->unk_11ec);
+            LZ77UnCompWram(lzPaletteData, gPokemonStorageSystemPtr->unk_2704);
             CpuCopy32(gPokemonStorageSystemPtr->unk_2784, gPokemonStorageSystemPtr->unk_26fc, 0x800);
+            
             LoadPalette(gPokemonStorageSystemPtr->unk_2704, gPokemonStorageSystemPtr->unk_26fa, 0x20);
+            NudgePalette(gPokemonStorageSystemPtr->unk_26fa, 16, GetColoration(gPokemonStorageSystemPtr->unk_11e8, gPokemonStorageSystemPtr->unk_11ec));
             gPokemonStorageSystemPtr->unk_2700->invisible = FALSE;
         }
         else

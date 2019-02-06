@@ -1,4 +1,5 @@
 #include "global.h"
+#include "blend_palette.h"
 #include "task.h"
 #include "evolution_scene.h"
 #include "evolution_graphics.h"
@@ -227,6 +228,7 @@ void EvolutionScene(struct Pokemon* mon, u16 speciesToEvolve, bool8 canStopEvo, 
                              gUnknown_081FAF4C[1], currSpecies);
     pokePal = (void*) GetMonSpritePalStructFromOtIdPersonality(currSpecies, TiD, PiD);
     LoadCompressedPalette(*pokePal, 0x110, 0x20);
+    NudgePalette(0x110, 16, GetColorationFromMon(mon));
 
     GetMonSpriteTemplate_803C56C(currSpecies, 1);
     gUnknown_02024E8C.affineAnims = gDummySpriteAffineAnimTable;
@@ -244,6 +246,7 @@ void EvolutionScene(struct Pokemon* mon, u16 speciesToEvolve, bool8 canStopEvo, 
                              gUnknown_081FAF4C[3], speciesToEvolve);
     pokePal = (void*) GetMonSpritePalStructFromOtIdPersonality(speciesToEvolve, TiD, PiD);
     LoadCompressedPalette(*pokePal, 0x120, 0x20);
+    NudgePalette(0x120, 16, GetColorationFromMon(mon));
 
     GetMonSpriteTemplate_803C56C(speciesToEvolve, 3);
     gUnknown_02024E8C.affineAnims = gDummySpriteAffineAnimTable;
@@ -324,6 +327,7 @@ static void CB2_EvolutionSceneLoadGraphics(void)
                              gUnknown_081FAF4C[3], postEvoSpecies);
     pokePal = (void*) GetMonSpritePalStructFromOtIdPersonality(postEvoSpecies, TiD, PiD);
     LoadCompressedPalette(*pokePal, 0x120, 0x20);
+    NudgePalette(0x120, 16, GetColorationFromMon(Mon));
 
     GetMonSpriteTemplate_803C56C(postEvoSpecies, 3);
     gUnknown_02024E8C.affineAnims = gDummySpriteAffineAnimTable;
@@ -394,6 +398,7 @@ static void CB2_TradeEvolutionSceneLoadGraphics(void)
                                      gUnknown_081FAF4C[3], postEvoSpecies);
             pokePal = (void*) GetMonSpritePalStructFromOtIdPersonality(postEvoSpecies, TiD, PiD);
             LoadCompressedPalette(*pokePal, 0x120, 0x20);
+            NudgePalette(0x120, 16, GetColorationFromMon(Mon));
             gMain.state++;
         }
         break;
@@ -444,6 +449,7 @@ void TradeEvolutionScene(struct Pokemon* mon, u16 speciesToEvolve, u8 preEvoSpri
                              gUnknown_081FAF4C[1], speciesToEvolve);
     pokePal = (void*) GetMonSpritePalStructFromOtIdPersonality(speciesToEvolve, TiD, PiD);
     LoadCompressedPalette(*pokePal, 0x120, 0x20);
+    NudgePalette(0x120, 16, GetColorationFromMon(mon));
 
     GetMonSpriteTemplate_803C56C(speciesToEvolve, 1);
     gUnknown_02024E8C.affineAnims = gDummySpriteAffineAnimTable;

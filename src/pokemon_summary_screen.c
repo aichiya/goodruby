@@ -1,6 +1,7 @@
 #include "global.h"
 #include "battle.h"
 #include "battle_anim_813F0F4.h"
+#include "blend_palette.h"
 #include "contest.h"
 #include "data2.h"
 #include "daycare.h"
@@ -2163,6 +2164,7 @@ static u8 SummaryScreen_LoadPokemonSprite(struct Pokemon *mon, u8 *state)
 
         palette = GetMonSpritePalStructFromOtIdPersonality(species, otId, personality);
         LoadCompressedObjectPalette(palette);
+        NudgePalette(0x100 + IndexOfSpritePaletteTag(palette->tag)*16, 16, GetColorationFromMon(mon));
         GetMonSpriteTemplate_803C56C(palette->tag, 1);
         *state += 1;
         return 0xFF;
