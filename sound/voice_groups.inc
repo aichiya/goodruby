@@ -12522,6 +12522,36 @@ gCryTable:: @ 8452590
 	cry Cry_Jirachi
 	cry Cry_Deoxys
 	cry Cry_Chimecho
+    cry3 Cry_Budew
+    cry3 Cry_Roserade
+    cry3 Cry_Ambipom
+    cry3 Cry_Mismagius
+    cry3 Cry_Honchkrow
+    cry3 Cry_Chingling
+    cry3 Cry_Bonsly
+    cry3 Cry_Mime_Jr
+    cry3 Cry_Happiny
+    cry3 Cry_Munchlax
+    cry3 Cry_Mantyke
+    cry3 Cry_Weavile
+    cry3 Cry_Magnezone
+    cry3 Cry_Lickilicky
+    cry3 Cry_Rhyperior
+    cry3 Cry_Tangrowth
+    cry3 Cry_Electivire
+    cry3 Cry_Magmortar
+    cry3 Cry_Togekiss
+    cry3 Cry_Yanmega
+    cry3 Cry_Leafeon
+    cry3 Cry_Glaceon
+    cry3 Cry_Sylveon
+    cry3 Cry_Gliscor
+    cry3 Cry_Mamoswine
+    cry3 Cry_PorygonZ
+    cry3 Cry_Gallade
+    cry3 Cry_Probopass
+    cry3 Cry_Dusknoir
+    cry3 Cry_Froslass
 
 	.align 2
 gCryTable2:: @ 84537C0
@@ -12913,6 +12943,36 @@ gCryTable2:: @ 84537C0
 	cry2 Cry_Jirachi
 	cry2 Cry_Deoxys
 	cry2 Cry_Chimecho
+    cry3 Cry_Budew
+    cry3 Cry_Roserade
+    cry3 Cry_Ambipom
+    cry3 Cry_Mismagius
+    cry3 Cry_Honchkrow
+    cry3 Cry_Chingling
+    cry3 Cry_Bonsly
+    cry3 Cry_Mime_Jr
+    cry3 Cry_Happiny
+    cry3 Cry_Munchlax
+    cry3 Cry_Mantyke
+    cry3 Cry_Weavile
+    cry3 Cry_Magnezone
+    cry3 Cry_Lickilicky
+    cry3 Cry_Rhyperior
+    cry3 Cry_Tangrowth
+    cry3 Cry_Electivire
+    cry3 Cry_Magmortar
+    cry3 Cry_Togekiss
+    cry3 Cry_Yanmega
+    cry3 Cry_Leafeon
+    cry3 Cry_Glaceon
+    cry3 Cry_Sylveon
+    cry3 Cry_Gliscor
+    cry3 Cry_Mamoswine
+    cry3 Cry_PorygonZ
+    cry3 Cry_Gallade
+    cry3 Cry_Probopass
+    cry3 Cry_Dusknoir
+    cry3 Cry_Froslass
 
 	.align 2
 voicegroup112:: @ 84549F0

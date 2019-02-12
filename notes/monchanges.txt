@@ -9,3 +9,32 @@ SKITTY, DELCATTY: Does not have secondary ability Normalize
 WINGULL, PELIPPER: Secondary abilities Hydration/Drizzle are switched with hidden ability Rain Dish
 TORKOAL: Secondary ability Drought is switched with hidden ability Shell Armor
 NUMEL: Secondary ability Simple is replaced with Oblivious
+
+
+TODO:
+
+Trade evos:
+Machoke evolves into Machamp by leveling up while knowing Cross Chop
+Graveler evolves into Golem by using a Shiny Stone
+Kadabra evolves into Alakazam by leveling up while holding Twisted Spoon
+Haunter evolves into Gengar by using a Dusk Stone
+
+Eevee evolves into Espeon using a Sun Stone
+Eevee evolves into Umbreon using a Moon Stone
+Eevee evolves into Leafeon using a Leaf Stone
+Eevee evolves into Glaceon using a Shiny Stone
+Eevee evolves into Sylveon by when friendly and knowing a Fairy move
+
+Onix evolves into Steelix by leveling up while holding Metal Coat
+Scyther evolves into Scizor by leveling up while holding Metal Coat
+Poliwhirl evolves into Politoed by leveling up while holding King's Rock
+Slowpoke evolves into Slowking by leveling up while holding King's Rock
+Seadra evolves into Kingdra by leveling up while holding Dragon Scale
+Porygon evolves into Porygon2 by leveling up while holding Up-Grade
+
+Clamperl evolves into Gorebyss by using a Shiny Stone
+Clamperl evolves into Huntail by using a Dusk Stone
+
+Budew evolves into Roselia when happy
+Roselia evolves into Roserade using a Shiny Stone
+Happiny evolves into Chansey at level 15

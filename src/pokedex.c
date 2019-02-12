@@ -1299,7 +1299,7 @@ void ResetPokedex(void)
     gSaveBlock2.pokedex.spindaPersonality = 0;
     gSaveBlock2.pokedex.unknown3 = 0;
     DisableNationalPokedex();
-    for (i = 0; i <= 51; i++)
+    for (i = 0; i <= 55; i++)
     {
         gSaveBlock2.pokedex.owned[i] = 0;
         gSaveBlock2.pokedex.seen[i] = 0;

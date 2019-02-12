@@ -1814,6 +1814,126 @@ Cry_Deoxys:: @ 86379B4
 Cry_Chimecho:: @ 8638E88
 	.incbin "sound/direct_sound_samples/cries/cry_chimecho.bin"
 
+    .align 2
+Cry_Budew::
+    .incbin "sound/direct_sound_samples/newcries/cry_budew.bin"
+
+    .align 2
+Cry_Roserade::
+    .incbin "sound/direct_sound_samples/newcries/cry_roserade.bin"
+
+    .align 2
+Cry_Ambipom::
+    .incbin "sound/direct_sound_samples/newcries/cry_ambipom.bin"
+
+    .align 2
+Cry_Mismagius::
+    .incbin "sound/direct_sound_samples/newcries/cry_mismagius.bin"
+
+    .align 2
+Cry_Honchkrow::
+    .incbin "sound/direct_sound_samples/newcries/cry_honchkrow.bin"
+
+    .align 2
+Cry_Chingling::
+    .incbin "sound/direct_sound_samples/newcries/cry_chingling.bin"
+
+    .align 2
+Cry_Bonsly::
+    .incbin "sound/direct_sound_samples/newcries/cry_bonsly.bin"
+
+    .align 2
+Cry_Mime_Jr::
+    .incbin "sound/direct_sound_samples/newcries/cry_mime_jr.bin"
+
+    .align 2
+Cry_Happiny::
+    .incbin "sound/direct_sound_samples/newcries/cry_happiny.bin"
+
+    .align 2
+Cry_Munchlax::
+    .incbin "sound/direct_sound_samples/newcries/cry_munchlax.bin"
+
+    .align 2
+Cry_Mantyke::
+    .incbin "sound/direct_sound_samples/newcries/cry_mantyke.bin"
+
+    .align 2
+Cry_Weavile::
+    .incbin "sound/direct_sound_samples/newcries/cry_weavile.bin"
+
+    .align 2
+Cry_Magnezone::
+    .incbin "sound/direct_sound_samples/newcries/cry_magnezone.bin"
+
+    .align 2
+Cry_Lickilicky::
+    .incbin "sound/direct_sound_samples/newcries/cry_lickilicky.bin"
+
+    .align 2
+Cry_Rhyperior::
+    .incbin "sound/direct_sound_samples/newcries/cry_rhyperior.bin"
+
+    .align 2
+Cry_Tangrowth::
+    .incbin "sound/direct_sound_samples/newcries/cry_tangrowth.bin"
+
+    .align 2
+Cry_Electivire::
+    .incbin "sound/direct_sound_samples/newcries/cry_electivire.bin"
+
+    .align 2
+Cry_Magmortar::
+    .incbin "sound/direct_sound_samples/newcries/cry_magmortar.bin"
+
+    .align 2
+Cry_Togekiss::
+    .incbin "sound/direct_sound_samples/newcries/cry_togekiss.bin"
+
+    .align 2
+Cry_Yanmega::
+    .incbin "sound/direct_sound_samples/newcries/cry_yanmega.bin"
+
+    .align 2
+Cry_Leafeon::
+    .incbin "sound/direct_sound_samples/newcries/cry_leafeon.bin"
+
+    .align 2
+Cry_Glaceon::
+    .incbin "sound/direct_sound_samples/newcries/cry_glaceon.bin"
+
+    .align 2
+Cry_Sylveon::
+    .incbin "sound/direct_sound_samples/newcries/cry_sylveon.bin"
+
+    .align 2
+Cry_Gliscor::
+    .incbin "sound/direct_sound_samples/newcries/cry_gliscor.bin"
+
+    .align 2
+Cry_Mamoswine::
+    .incbin "sound/direct_sound_samples/newcries/cry_mamoswine.bin"
+
+    .align 2
+Cry_PorygonZ::
+    .incbin "sound/direct_sound_samples/newcries/cry_porygonz.bin"
+
+    .align 2
+Cry_Gallade::
+    .incbin "sound/direct_sound_samples/newcries/cry_gallade.bin"
+
+    .align 2
+Cry_Probopass::
+    .incbin "sound/direct_sound_samples/newcries/cry_probopass.bin"
+
+    .align 2
+Cry_Dusknoir::
+    .incbin "sound/direct_sound_samples/newcries/cry_dusknoir.bin"
+
+    .align 2
+Cry_Froslass::
+    .incbin "sound/direct_sound_samples/newcries/cry_froslass.bin"
+
 	.align 2
 DirectSoundWaveData_Phoneme_Vowel7:: @ 8639898
 	.incbin "sound/direct_sound_samples/phonemes/vowel_7.bin"

@@ -148,4 +148,6 @@ gAbilityNames:: @ 81FA248
 	.string "Toxic Boost$", 13
 	.string "Heavy Metal$", 13
 	.string "Storm Drain$", 13
+    .string "PIXILATE$", 13
+    .string "MOTOR DRIVE$", 13
 

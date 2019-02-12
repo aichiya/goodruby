@@ -140,7 +140,38 @@ const u16 gSpeciesIdToCryId[] = {
     384, // LATIOS
     385, // JIRACHI
     386, // DEOXYS
-    387  // CHIMECHO
+    387, // CHIMECHO
+    
+    388, // Budew
+    389, // Roserade
+    390, // Ambipom
+    391, // Mismagius
+    392, // Honchkrow
+    393, // Chingling
+    394, // Bonsly
+    395, // Mime Jr.
+    396, // Happiny
+    397, // Munchlax
+    398, // Mantyke
+    399, // Weavile
+    400, // Magnezone
+    401, // Lickilicky
+    402, // Rhyperior
+    403, // Tangrowth
+    404, // Electivire
+    405, // Magmortar
+    406, // Togekiss
+    407, // Yanmega
+    408, // Leafeon
+    409, // Glaceon
+    410, // Sylveon
+    411, // Gliscor
+    412, // Mamoswine
+    413, // Porygon-Z
+    414, // Gallade
+    415, // Probopass
+    416, // Dusknoir
+    417, // Froslass
 };
 
 #endif //POKERUBY_CRY_IDS_H

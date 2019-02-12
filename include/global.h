@@ -28,7 +28,7 @@
 
 #define ARRAY_COUNT(array) (sizeof(array) / sizeof((array)[0]))
 
-#define POKEMON_SLOTS_NUMBER 412
+#define POKEMON_SLOTS_NUMBER 442
 #define POKEMON_NAME_LENGTH 10
 #define OT_NAME_LENGTH 7
 
@@ -836,7 +836,7 @@ struct SaveBlock2 /* 0x02024EA4 */
              u16 optionsBattleSceneOff:1;  // whether battle animations are disabled
              u16 regionMapZoom:1;          // whether the map is zoomed in
     /*0x18*/ struct Pokedex pokedex;
-    /*0x90*/ u8 filler_90[0x8];
+    /*0x94*/ u8 filler_90[0x4];
     /*0x98*/ struct Time localTimeOffset;
     /*0xA0*/ struct Time lastBerryTreeUpdate;
     /*0xA8*/ struct BattleTowerData battleTower;

@@ -451,6 +451,18 @@ const u8 gEnemyMonElevation[] = {
     [SPECIES_JIRACHI] = 12,
     [SPECIES_DEOXYS] =  4,
     [SPECIES_CHIMECHO] = 12,
+    
+    [SPECIES_MISMAGIUS] = 8,
+    [SPECIES_CHINGLING] = 4,
+    [SPECIES_MANTYKE] = 12,
+    [SPECIES_MAGNEZONE] = 3,
+    [SPECIES_TOGEKISS] = 6,
+    [SPECIES_YANMEGA] = 8,
+    [SPECIES_GLISCOR] = 8,
+    [SPECIES_PORYGONZ] = 4,
+    [SPECIES_PROBOPASS] = 4,
+    [SPECIES_DUSKNOIR] = 4,
+    [SPECIES_FROSLASS] = 6,
 };
 
 #include "../data/trainer_parties.h"

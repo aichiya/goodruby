@@ -470,4 +470,34 @@ const u16 gMetagrossEvoMoves[] = {
 	0,
 };
 
+const u16 gLeafeonEvoMoves[] = {
+    MOVE_RAZOR_LEAF,
+    0,
+};
+
+const u16 gGlaceonEvoMoves[] = {
+    MOVE_ICY_WIND,
+    0,
+};
+
+const u16 gSylveonEvoMoves[] = {
+    MOVE_FAIRY_WIND,
+    0,
+};
+
+const u16 gGalladeEvoMoves[] = {
+    MOVE_SLASH,
+    0,
+};
+
+const u16 gProbopassEvoMoves[] = {
+    MOVE_TRI_ATTACK,
+    0,
+};
+
+const u16 gFroslassEvoMoves[] = {
+    MOVE_OMINOUS_WIND,
+    0,
+};
+
 #endif //POKERUBY_EVO_LEARNSETS_H

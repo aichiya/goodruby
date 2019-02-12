@@ -412,6 +412,36 @@ gMonPaletteTable:: @ 81EA5B4
 	obj_pal gMonPalette_Jirachi, SPECIES_JIRACHI
 	obj_pal gMonPalette_Deoxys, SPECIES_DEOXYS
 	obj_pal gMonPalette_Chimecho, SPECIES_CHIMECHO
+    obj_pal gMonPalette_Budew, SPECIES_BUDEW
+    obj_pal gMonPalette_Roserade, SPECIES_ROSERADE
+    obj_pal gMonPalette_Ambipom, SPECIES_AMBIPOM
+    obj_pal gMonPalette_Mismagius, SPECIES_MISMAGIUS
+    obj_pal gMonPalette_Honchkrow, SPECIES_HONCHKROW
+    obj_pal gMonPalette_Chingling, SPECIES_CHINGLING
+    obj_pal gMonPalette_Bonsly, SPECIES_BONSLY
+    obj_pal gMonPalette_Mime_Jr, SPECIES_MIME_JR
+    obj_pal gMonPalette_Happiny, SPECIES_HAPPINY
+    obj_pal gMonPalette_Munchlax, SPECIES_MUNCHLAX
+    obj_pal gMonPalette_Mantyke, SPECIES_MANTYKE
+    obj_pal gMonPalette_Weavile, SPECIES_WEAVILE
+    obj_pal gMonPalette_Magnezone, SPECIES_MAGNEZONE
+    obj_pal gMonPalette_Lickilicky, SPECIES_LICKILICKY
+    obj_pal gMonPalette_Rhyperior, SPECIES_RHYPERIOR
+    obj_pal gMonPalette_Tangrowth, SPECIES_TANGROWTH
+    obj_pal gMonPalette_Electivire, SPECIES_ELECTIVIRE
+    obj_pal gMonPalette_Magmortar, SPECIES_MAGMORTAR
+    obj_pal gMonPalette_Togekiss, SPECIES_TOGEKISS
+    obj_pal gMonPalette_Yanmega, SPECIES_YANMEGA
+    obj_pal gMonPalette_Leafeon, SPECIES_LEAFEON
+    obj_pal gMonPalette_Glaceon, SPECIES_GLACEON
+    obj_pal gMonPalette_Sylveon, SPECIES_SYLVEON
+    obj_pal gMonPalette_Gliscor, SPECIES_GLISCOR
+    obj_pal gMonPalette_Mamoswine, SPECIES_MAMOSWINE
+    obj_pal gMonPalette_PorygonZ, SPECIES_PORYGONZ
+    obj_pal gMonPalette_Gallade, SPECIES_GALLADE
+    obj_pal gMonPalette_Probopass, SPECIES_PROBOPASS
+    obj_pal gMonPalette_Dusknoir, SPECIES_DUSKNOIR
+    obj_pal gMonPalette_Froslass, SPECIES_FROSLASS
 	obj_pal gMonPalette_Egg, SPECIES_EGG
 	obj_pal gMonPalette_Unown, SPECIES_UNOWN_B
 	obj_pal gMonPalette_Unown, SPECIES_UNOWN_C

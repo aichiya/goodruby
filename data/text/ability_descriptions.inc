@@ -582,3 +582,5 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_ToxicBoost
 	.4byte gAbilityDescription_HeavyMetal
 	.4byte gAbilityDescription_StormDrain
+	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Unimplemented

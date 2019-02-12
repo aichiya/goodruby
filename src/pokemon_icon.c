@@ -430,6 +430,36 @@ const u8 * const gMonIconTable[] =
     gMonIcon_Jirachi,
     gMonIcon_Deoxys,
     gMonIcon_Chimecho,
+    gMonIcon_Budew,
+    gMonIcon_Roserade,
+    gMonIcon_Ambipom,
+    gMonIcon_Mismagius,
+    gMonIcon_Honchkrow,
+    gMonIcon_Chingling,
+    gMonIcon_Bonsly,
+    gMonIcon_Mime_Jr,
+    gMonIcon_Happiny,
+    gMonIcon_Munchlax,
+    gMonIcon_Mantyke,
+    gMonIcon_Weavile,
+    gMonIcon_Magnezone,
+    gMonIcon_Lickilicky,
+    gMonIcon_Rhyperior,
+    gMonIcon_Tangrowth,
+    gMonIcon_Electivire,
+    gMonIcon_Magmortar,
+    gMonIcon_Togekiss,
+    gMonIcon_Yanmega,
+    gMonIcon_Leafeon,
+    gMonIcon_Glaceon,
+    gMonIcon_Sylveon,
+    gMonIcon_Gliscor,
+    gMonIcon_Mamoswine,
+    gMonIcon_PorygonZ,
+    gMonIcon_Gallade,
+    gMonIcon_Probopass,
+    gMonIcon_Dusknoir,
+    gMonIcon_Froslass,
     gMonIcon_Egg,
     gMonIcon_UnownB,
     gMonIcon_UnownC,
@@ -874,7 +904,39 @@ const u8 gMonIconPaletteIndices[] =
     0, // Jirachi
     0, // Deoxys
     0, // Chimecho
+    
+    1, // Budew
+    0, // Roserade
+    2, // Ambipom
+    2, // Mismagius
+    2, // Honchkrow
+    1, // Chingling
+    1, // Bonsly
+    0, // Mime Jr.
+    0, // Happiny
+    0, // Munchlax
+    0, // Mantyke
+    0, // Weavile
+    0, // Magnezone
+    1, // Lickilicky
+    0, // Rhyperior
+    0, // Tangrowth
+    1, // Electivire
+    0, // Magmortar
+    2, // Togekiss
+    1, // Yanmega
+    1, // Leafeon
+    0, // Glaceon
+    0, // Sylveon
+    2, // Gliscor
+    2, // Mamoswine
+    0, // Porygon-Z
+    1, // Gallade
+    0, // Probopass
+    1, // Dusknoir
+    0, // Froslass
     1, // Egg
+    
     0, // Unown B
     0, // Unown C
     0, // Unown D

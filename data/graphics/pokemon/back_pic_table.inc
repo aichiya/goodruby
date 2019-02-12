@@ -412,6 +412,36 @@ gMonBackPicTable:: @ 81E97F4
 	obj_tiles gMonBackPic_Jirachi, 0x800, SPECIES_JIRACHI
 	obj_tiles gMonBackPic_Deoxys, 0x800, SPECIES_DEOXYS
 	obj_tiles gMonBackPic_Chimecho, 0x800, SPECIES_CHIMECHO
+    obj_tiles gMonBackPic_Budew, 0x800, SPECIES_BUDEW
+    obj_tiles gMonBackPic_Roserade, 0x800, SPECIES_ROSERADE
+    obj_tiles gMonBackPic_Ambipom, 0x800, SPECIES_AMBIPOM
+    obj_tiles gMonBackPic_Mismagius, 0x800, SPECIES_MISMAGIUS
+    obj_tiles gMonBackPic_Honchkrow, 0x800, SPECIES_HONCHKROW
+    obj_tiles gMonBackPic_Chingling, 0x800, SPECIES_CHINGLING
+    obj_tiles gMonBackPic_Bonsly, 0x800, SPECIES_BONSLY
+    obj_tiles gMonBackPic_Mime_Jr, 0x800, SPECIES_MIME_JR
+    obj_tiles gMonBackPic_Happiny, 0x800, SPECIES_HAPPINY
+    obj_tiles gMonBackPic_Munchlax, 0x800, SPECIES_MUNCHLAX
+    obj_tiles gMonBackPic_Mantyke, 0x800, SPECIES_MANTYKE
+    obj_tiles gMonBackPic_Weavile, 0x800, SPECIES_WEAVILE
+    obj_tiles gMonBackPic_Magnezone, 0x800, SPECIES_MAGNEZONE
+    obj_tiles gMonBackPic_Lickilicky, 0x800, SPECIES_LICKILICKY
+    obj_tiles gMonBackPic_Rhyperior, 0x800, SPECIES_RHYPERIOR
+    obj_tiles gMonBackPic_Tangrowth, 0x800, SPECIES_TANGROWTH
+    obj_tiles gMonBackPic_Electivire, 0x800, SPECIES_ELECTIVIRE
+    obj_tiles gMonBackPic_Magmortar, 0x800, SPECIES_MAGMORTAR
+    obj_tiles gMonBackPic_Togekiss, 0x800, SPECIES_TOGEKISS
+    obj_tiles gMonBackPic_Yanmega, 0x800, SPECIES_YANMEGA
+    obj_tiles gMonBackPic_Leafeon, 0x800, SPECIES_LEAFEON
+    obj_tiles gMonBackPic_Glaceon, 0x800, SPECIES_GLACEON
+    obj_tiles gMonBackPic_Sylveon, 0x800, SPECIES_SYLVEON
+    obj_tiles gMonBackPic_Gliscor, 0x800, SPECIES_GLISCOR
+    obj_tiles gMonBackPic_Mamoswine, 0x800, SPECIES_MAMOSWINE
+    obj_tiles gMonBackPic_PorygonZ, 0x800, SPECIES_PORYGONZ
+    obj_tiles gMonBackPic_Gallade, 0x800, SPECIES_GALLADE
+    obj_tiles gMonBackPic_Probopass, 0x800, SPECIES_PROBOPASS
+    obj_tiles gMonBackPic_Dusknoir, 0x800, SPECIES_DUSKNOIR
+    obj_tiles gMonBackPic_Froslass, 0x800, SPECIES_FROSLASS
 	obj_tiles gMonPic_Egg, 0x800, SPECIES_EGG
 	obj_tiles gMonBackPic_UnownB, 0x800, SPECIES_UNOWN_B
 	obj_tiles gMonBackPic_UnownC, 0x800, SPECIES_UNOWN_C

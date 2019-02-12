@@ -57,7 +57,7 @@ ROUTE 102: Zigzagoon (20%), Poochyena (20%), Wurmple (20%), Seedot (10%), Lotad 
 ROUTE 104: Zigzagoon (20%), Poochyena (20%), Wurmple (20%), Wingull (10%), Hoppip (10%), Taillow (10%), Azurill (5%), Bellsprout (5%)
 WOODS: Hoothoot (20%), Bellsprout (20%), Shroomish (10%), Paras (10%), Caterpie (10%), Weedle (10%), Spinarak (5%), Zigzagoon (5%), Taillow (5%), Slakoth (5%)
 ROUTE 116: Sentret (25%), Whismur (25%), Taillow (20%), Nincada (15%), Mankey (10%), Skitty (5%)
-TUNNEL: Whismur (60%), Drowzee (35%), Chingling (***), Dunsparce (5%)
+TUNNEL: Whismur (60%), Drowzee (25%), Chingling (20%), Dunsparce (5%)
 RIDGE: Sentret (20%), Spearow (20%), Mankey (15%), Nincada (10%), Teddiursa (10%), Cubone (10%), Slugma (5%), NidoranF (5%), NidoranM (5%)
 ROUTE 107: Pidgey (25%), Wingull (20%), Ekans (15%), Slowpoke (10%), Krabby (10%), Makuhita (10%), Hoppip (10%)
 CAVE  1F: Zubat (25%), Geodude (25%), Ekans (15%), Makuhita (15%), Abra (10%), Krabby (10%)

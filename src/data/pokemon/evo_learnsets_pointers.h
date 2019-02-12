@@ -418,6 +418,37 @@ const u16 *gEvoMoves[] = {
     gDummyEvoMoves, //gJirachiEvoMoves,
     gDummyEvoMoves, //gDeoxysEvoMoves,
     gDummyEvoMoves, //gChimechoEvoMoves
+    gDummyEvoMoves, //gBudewEvoMoves
+    gDummyEvoMoves, //gRoseradeEvoMoves
+    gDummyEvoMoves, //gAmbipomEvoMoves
+    gDummyEvoMoves, //gMismagiusEvoMoves
+    gDummyEvoMoves, //gHonchkrowEvoMoves
+    gDummyEvoMoves, //gChinglingEvoMoves
+    gDummyEvoMoves, //gBonslyEvoMoves
+    gDummyEvoMoves, //gMimeJrEvoMoves
+    gDummyEvoMoves, //gHappinyEvoMoves
+    gDummyEvoMoves, //gMunchlaxEvoMoves
+    gDummyEvoMoves, //gMantykeEvoMoves
+    gDummyEvoMoves, //gWeavileEvoMoves
+    gDummyEvoMoves, //gMagnezoneEvoMoves
+    gDummyEvoMoves, //gLickilickyEvoMoves
+    gDummyEvoMoves, //gRhyperiorEvoMoves
+    gDummyEvoMoves, //gTangrowthEvoMoves
+    gDummyEvoMoves, //gElectivirvoMoves
+    gDummyEvoMoves, //gMagmortarEvoMoves
+    gDummyEvoMoves, //gTogekissEvoMoves
+    gDummyEvoMoves, //gYanmegaEvoMoves
+    gLeafeonEvoMoves,
+    gGlaceonEvoMoves,
+    gSylveonEvoMoves,
+    gDummyEvoMoves, //gGliscorEvoMoves
+    gDummyEvoMoves, //gMamoswineEvoMoves
+    gDummyEvoMoves, //gPorygonZEvoMoves
+    gGalladeEvoMoves,
+    gProbopassEvoMoves,
+    gDummyEvoMoves, //gDusknoirEvoMoves
+    gFroslassEvoMoves,
+    
 };
 
 #endif //POKERUBY_EVO_LEARNSET_POINTERS_H

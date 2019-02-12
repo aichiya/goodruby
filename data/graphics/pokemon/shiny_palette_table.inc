@@ -414,6 +414,36 @@ gMonShinyPaletteTable:: @ 81EB374
 	obj_pal gMonShinyPalette_Jirachi, PAL_ID_SHINY + SPECIES_JIRACHI
 	obj_pal gMonShinyPalette_Deoxys, PAL_ID_SHINY + SPECIES_DEOXYS
 	obj_pal gMonShinyPalette_Chimecho, PAL_ID_SHINY + SPECIES_CHIMECHO
+    obj_pal gMonShinyPalette_Budew, PAL_ID_SHINY + SPECIES_BUDEW
+    obj_pal gMonShinyPalette_Roserade, PAL_ID_SHINY + SPECIES_ROSERADE
+    obj_pal gMonShinyPalette_Ambipom, PAL_ID_SHINY + SPECIES_AMBIPOM
+    obj_pal gMonShinyPalette_Mismagius, PAL_ID_SHINY + SPECIES_MISMAGIUS
+    obj_pal gMonShinyPalette_Honchkrow, PAL_ID_SHINY + SPECIES_HONCHKROW
+    obj_pal gMonShinyPalette_Chingling, PAL_ID_SHINY + SPECIES_CHINGLING
+    obj_pal gMonShinyPalette_Bonsly, PAL_ID_SHINY + SPECIES_BONSLY
+    obj_pal gMonShinyPalette_Mime_Jr, PAL_ID_SHINY + SPECIES_MIME_JR
+    obj_pal gMonShinyPalette_Happiny, PAL_ID_SHINY + SPECIES_HAPPINY
+    obj_pal gMonShinyPalette_Munchlax, PAL_ID_SHINY + SPECIES_MUNCHLAX
+    obj_pal gMonShinyPalette_Mantyke, PAL_ID_SHINY + SPECIES_MANTYKE
+    obj_pal gMonShinyPalette_Weavile, PAL_ID_SHINY + SPECIES_WEAVILE
+    obj_pal gMonShinyPalette_Magnezone, PAL_ID_SHINY + SPECIES_MAGNEZONE
+    obj_pal gMonShinyPalette_Lickilicky, PAL_ID_SHINY + SPECIES_LICKILICKY
+    obj_pal gMonShinyPalette_Rhyperior, PAL_ID_SHINY + SPECIES_RHYPERIOR
+    obj_pal gMonShinyPalette_Tangrowth, PAL_ID_SHINY + SPECIES_TANGROWTH
+    obj_pal gMonShinyPalette_Electivire, PAL_ID_SHINY + SPECIES_ELECTIVIRE
+    obj_pal gMonShinyPalette_Magmortar, PAL_ID_SHINY + SPECIES_MAGMORTAR
+    obj_pal gMonShinyPalette_Togekiss, PAL_ID_SHINY + SPECIES_TOGEKISS
+    obj_pal gMonShinyPalette_Yanmega, PAL_ID_SHINY + SPECIES_YANMEGA
+    obj_pal gMonShinyPalette_Leafeon, PAL_ID_SHINY + SPECIES_LEAFEON
+    obj_pal gMonShinyPalette_Glaceon, PAL_ID_SHINY + SPECIES_GLACEON
+    obj_pal gMonShinyPalette_Sylveon, PAL_ID_SHINY + SPECIES_SYLVEON
+    obj_pal gMonShinyPalette_Gliscor, PAL_ID_SHINY + SPECIES_GLISCOR
+    obj_pal gMonShinyPalette_Mamoswine, PAL_ID_SHINY + SPECIES_MAMOSWINE
+    obj_pal gMonShinyPalette_PorygonZ, PAL_ID_SHINY + SPECIES_PORYGONZ
+    obj_pal gMonShinyPalette_Gallade, PAL_ID_SHINY + SPECIES_GALLADE
+    obj_pal gMonShinyPalette_Probopass, PAL_ID_SHINY + SPECIES_PROBOPASS
+    obj_pal gMonShinyPalette_Dusknoir, PAL_ID_SHINY + SPECIES_DUSKNOIR
+    obj_pal gMonShinyPalette_Froslass, PAL_ID_SHINY + SPECIES_FROSLASS
 	obj_pal gMonPalette_Egg, PAL_ID_SHINY + SPECIES_EGG
 	obj_pal gMonShinyPalette_Unown, PAL_ID_SHINY + SPECIES_UNOWN_B
 	obj_pal gMonShinyPalette_Unown, PAL_ID_SHINY + SPECIES_UNOWN_C
