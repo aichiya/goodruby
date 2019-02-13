@@ -473,6 +473,7 @@ SECTIONS {
         src/main_menu.o(.rodata);
         data/mon_attrs.o(.rodata);
         src/battle/battle_1.o(.rodata);
+        src/battle/battle_2.o(.rodata);
         src/battle/battle_bg.o(.rodata);
         data/btl_attrs.o(.rodata);
         src/battle/battle_4.o(.rodata);

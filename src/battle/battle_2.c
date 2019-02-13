@@ -48,6 +48,9 @@
 #include "util.h"
 #include "ewram.h"
 
+
+#include "../data/noise.h"
+
 struct UnknownStruct7
 {
     u8 unk0;
@@ -176,6 +179,7 @@ extern u8 gNumSafariBalls;
 extern u8 gUnknown_081FA70C[][3];
 extern u8 gUnknown_081FA71B[];
 extern u8 gUnknown_081FA71F[];
+extern const u32 TrainerNatureNoise[];
 
 void sub_8010824(void);
 static void BattlePrepIntroSlide(void);
@@ -1026,7 +1030,7 @@ void sub_800F838(struct Sprite *sprite)
 
 u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
 {
-    u32 nameHash = 0;
+    u32 ball = 0;
     s32 i;
 
     if (trainerNum == 0x400)
@@ -1041,15 +1045,164 @@ u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
             s32 j;
             u8 fixedIV;
 
-            if (gTrainers[trainerNum].doubleBattle == TRUE)
-                personalityValue = 0x80;
-            else if (gTrainers[trainerNum].encounterMusic_gender & 0x80)
-                personalityValue = 0x78;
-            else
-                personalityValue = 0x88;
+            personalityValue = TrainerNatureNoise[(trainerNum*6) + i];
 
-            for (j = 0; gTrainers[trainerNum].trainerName[j] != 0xFF; j++)
-                nameHash += gTrainers[trainerNum].trainerName[j];
+            switch (gTrainers[trainerNum].trainerClass)
+            {
+                case TRAINER_CLASS_TEAM_AQUA:
+                    if (personalityValue & 0x1)
+                        ball = ITEM_AQUA_BALL;
+                    break;
+
+                case TRAINER_CLASS_AQUA_ADMIN:
+                case TRAINER_CLASS_AQUA_LEADER:
+                    ball = ITEM_AQUA_BALL;
+                    break;
+
+                case TRAINER_CLASS_TEAM_MAGMA:
+                    if (personalityValue & 0x1)
+                        ball = ITEM_MAGMA_BALL;
+                    break;
+
+                case TRAINER_CLASS_MAGMA_ADMIN:
+                case TRAINER_CLASS_MAGMA_LEADER:
+                    ball = ITEM_MAGMA_BALL;
+                    break;
+
+                case TRAINER_CLASS_RICH_BOY:
+                case TRAINER_CLASS_LADY:
+                case TRAINER_CLASS_GENTLEMAN:
+                case TRAINER_CLASS_BEAUTY:
+                case TRAINER_CLASS_PARASOL_LADY:
+                    ball = ITEM_LUXURY_BALL;
+                    break;
+
+                case TRAINER_CLASS_BUG_MANIAC:
+                    ball = ITEM_NET_BALL;
+                    break;
+
+                case TRAINER_CLASS_HEX_MANIAC:
+                case TRAINER_CLASS_NINJA_BOY:
+                    ball = ITEM_DUSK_BALL;
+                    break;
+
+                case TRAINER_CLASS_YOUNG_COUPLE:
+                    ball = ITEM_LOVE_BALL;
+                    break;
+
+                case TRAINER_CLASS_BUG_CATCHER:
+                    if (personalityValue & 0x7)
+                        ball = ITEM_POKE_BALL;
+                    else
+                        ball = ITEM_NET_BALL;
+                    break;
+
+                case TRAINER_CLASS_FISHERMAN:
+                    if (personalityValue & 0x1)
+                        ball = ITEM_LURE_BALL;
+                    else
+                        ball = ITEM_NET_BALL;
+                    break;
+
+                case TRAINER_CLASS_COOL_TRAINER:
+                case TRAINER_CLASS_WINSTRATE:
+                case TRAINER_CLASS_EXPERT:
+                    switch (personalityValue & 0x7)
+                    {
+                        case 0: case 1: ball = ITEM_POKE_BALL; break;
+                        case 2: case 3: ball = ITEM_GREAT_BALL; break;
+                        case 4: ball = ITEM_ULTRA_BALL; break;
+                        case 5: ball = ITEM_QUICK_BALL; break;
+                        case 6: ball = ITEM_DUSK_BALL; break;
+                        case 7: ball = ITEM_REPEAT_BALL; break;
+                    }
+                    break;
+
+                case TRAINER_CLASS_POKEMANIAC:
+                case TRAINER_CLASS_DRAGON_TAMER:
+                case TRAINER_CLASS_COLLECTOR:
+                    switch (personalityValue & 0x3)
+                    {
+                        case 0: ball = ITEM_ULTRA_BALL; break;
+                        case 1: ball = ITEM_NEST_BALL; break;
+                        case 2: ball = ITEM_TIMER_BALL; break;
+                        case 3: ball = ITEM_MOON_BALL; break;
+                    }
+                    break;
+
+                case TRAINER_CLASS_CAMPER:
+                case TRAINER_CLASS_PICNICKER:
+                    switch (personalityValue & 0x7)
+                    {
+                        case 0: ball = ITEM_GREAT_BALL; break;
+                        case 1: ball = ITEM_HEAL_BALL; break;
+                        default: ball = ITEM_POKE_BALL; break;
+                    }
+                    break;
+
+                case TRAINER_CLASS_POKEMON_RANGER:
+                    switch (personalityValue & 0x3)
+                    {
+                        case 0: ball = ITEM_HEAL_BALL; break;
+                        case 1: ball = ITEM_GREAT_BALL; break;
+                        case 2: ball = ITEM_ULTRA_BALL; break;
+                        case 3: ball = ITEM_POKE_BALL; break;
+                    }
+                    break;
+
+                case TRAINER_CLASS_PSYCHIC:
+                case TRAINER_CLASS_BLACK_BELT:
+                case TRAINER_CLASS_BATTLE_GIRL:
+                case TRAINER_CLASS_SAILOR:
+                case TRAINER_CLASS_AROMA_LADY:
+                    switch (personalityValue & 0x3)
+                    {
+                        case 0: ball = ITEM_GREAT_BALL; break;
+                        default: ball = ITEM_POKE_BALL; break;
+                    }
+                    break;
+
+                case TRAINER_CLASS_TRIATHLETE:
+                case TRAINER_CLASS_BIRD_KEEPER:
+                case TRAINER_CLASS_GUITARIST:
+                    switch (personalityValue & 0x7)
+                    {
+                        case 0: ball = ITEM_FAST_BALL; break;
+                        case 1: ball = ITEM_QUICK_BALL; break;
+                        case 2: ball = ITEM_GREAT_BALL; break;
+                        default: ball = ITEM_POKE_BALL; break;
+                    }
+                    break;
+
+                case TRAINER_CLASS_HIKER:
+                case TRAINER_CLASS_KINDLER:
+                    switch (personalityValue & 0x7)
+                    {
+                        case 0: ball = ITEM_GREAT_BALL; break;
+                        case 1: ball = ITEM_DUSK_BALL; break;
+                        default: ball = ITEM_POKE_BALL; break;
+                    }
+
+                case TRAINER_CLASS_POKEFAN: 
+                case TRAINER_CLASS_POKEMON_BREEDER:
+                    ball = personalityValue % 23; // incomprehensible taste
+                    if (ball == ITEM_MASTER_BALL)
+                        ball = ITEM_POKE_BALL;
+                    break;
+
+                default:
+                    ball = ITEM_POKE_BALL;
+                    break;
+            }
+            
+            personalityValue &= 0xFFFFFF00;
+
+            if (gTrainers[trainerNum].doubleBattle == TRUE)
+                personalityValue |= 0x80;
+            else if (gTrainers[trainerNum].encounterMusic_gender & 0x80)
+                personalityValue |= 0x78;
+            else
+                personalityValue |= 0x88;
 
             switch (gTrainers[trainerNum].partyFlags)
             {
@@ -1057,9 +1210,6 @@ u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
             {
                 const struct TrainerMonNoItemDefaultMoves *partyData = gTrainers[trainerNum].party.NoItemDefaultMoves;
 
-                for (j = 0; gSpeciesNames[partyData[i].species][j] != 0xFF; j++)
-                    nameHash += gSpeciesNames[partyData[i].species][j];
-                personalityValue += nameHash << 8;
                 fixedIV = partyData[i].iv * 31 / 255;
                 CreateMon(&party[i], partyData[i].species, partyData[i].level, fixedIV, TRUE, personalityValue, 2, 0);
                 break;
@@ -1068,9 +1218,6 @@ u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
             {
                 const struct TrainerMonNoItemCustomMoves *partyData = gTrainers[trainerNum].party.NoItemCustomMoves;
 
-                for (j = 0; gSpeciesNames[partyData[i].species][j] != 0xFF; j++)
-                    nameHash += gSpeciesNames[partyData[i].species][j];
-                personalityValue += nameHash << 8;
                 fixedIV = partyData[i].iv * 31 / 255;
                 CreateMon(&party[i], partyData[i].species, partyData[i].level, fixedIV, TRUE, personalityValue, 2, 0);
 
@@ -1085,9 +1232,6 @@ u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
             {
                 const struct TrainerMonItemDefaultMoves *partyData = gTrainers[trainerNum].party.ItemDefaultMoves;
 
-                for (j = 0; gSpeciesNames[partyData[i].species][j] != 0xFF; j++)
-                    nameHash += gSpeciesNames[partyData[i].species][j];
-                personalityValue += nameHash << 8;
                 fixedIV = partyData[i].iv * 31 / 255;
                 CreateMon(&party[i], partyData[i].species, partyData[i].level, fixedIV, TRUE, personalityValue, 2, 0);
 
@@ -1098,9 +1242,6 @@ u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
             {
                 const struct TrainerMonItemCustomMoves *partyData = gTrainers[trainerNum].party.ItemCustomMoves;
 
-                for (j = 0; gSpeciesNames[partyData[i].species][j] != 0xFF; j++)
-                    nameHash += gSpeciesNames[partyData[i].species][j];
-                personalityValue += nameHash << 8;
                 fixedIV = partyData[i].iv * 31 / 255;
                 CreateMon(&party[i], partyData[i].species, partyData[i].level, fixedIV, TRUE, personalityValue, 2, 0);
 
@@ -1128,7 +1269,7 @@ u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
 					ability = 1;
 					SetMonData(&party[i], MON_DATA_HIDDEN_ABILITY, &ability);
 				}
-				SetMonData(&party[i], MON_DATA_POKEBALL, &partyData[i].ball);
+				ball = partyData[i].ball;
                 SetMonData(&party[i], MON_DATA_HELD_ITEM, &partyData[i].heldItem);
                 for (j = 0; j < 4; j++)
                 {
@@ -1142,6 +1283,8 @@ u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
 				break;
 			}
             }
+            CalculateMonStats(&party[i]);
+            SetMonData(&party[i], MON_DATA_POKEBALL, &ball);
         }
         gBattleTypeFlags |= gTrainers[trainerNum].doubleBattle;
     }
