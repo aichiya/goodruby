@@ -473,8 +473,12 @@ SlateportCity_EventScript_14BE9A:: @ 814BE9A
 
 	.align 2
 SlateportCity_Items2:: @ 814BEB4
-	.2byte ITEM_TM10_HIDDEN_POWER
-	.2byte ITEM_TM43_SECRET_POWER
+	.2byte ITEM_TM07_HEAL_BELL
+	.2byte ITEM_TM58_ENDURE
+	.2byte ITEM_TM69_ROCK_POLISH
+	.2byte ITEM_TM39_ROCK_TOMB
+	.2byte ITEM_TM57_CHARGE_BEAM
+	.2byte ITEM_TM66_PAYBACK
 	.2byte ITEM_NONE
 	release
 	end
@@ -638,4 +642,27 @@ SlateportCity_EventScript_14C020:: @ 814C020
 
 SlateportCity_EventScript_14C029:: @ 814C029
 	msgbox SlateportCity_Text_1647A7, 2
+	end
+
+SlateportCity_EventScript_BallsVendor::
+	lock
+	faceplayer
+	message SlateportCity_Text_BallsVendor
+	waitmessage
+	pokemart SlateportCity_ItemsBalls
+	msgbox SlateportCity_Text_1A0C02, 4
+	release
+	end
+
+	.align 2
+SlateportCity_ItemsBalls::
+	.2byte ITEM_LEVEL_BALL
+	.2byte ITEM_LURE_BALL
+	.2byte ITEM_MOON_BALL
+	.2byte ITEM_FRIEND_BALL
+	.2byte ITEM_LOVE_BALL
+	.2byte ITEM_HEAVY_BALL
+	.2byte ITEM_FAST_BALL
+	.2byte ITEM_NONE
+	release
 	end

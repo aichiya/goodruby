@@ -33,6 +33,8 @@ extern bool8 SellMenu_QuantityRoller(u8, u8);
 extern u8 gBuyMenuFrame_Gfx[];
 extern u16 gBuyMenuFrame_Tilemap[];
 extern u16 gMenuMoneyPal[16];
+extern const u8 gMoveNames[][13];
+extern const u16 gTMHMMoves[];
 
 static void Shop_DisplayPriceInList(int firstItemId, int lastItemId, bool32 hasControlCode);
 static void Shop_PrintItemDescText(void);
@@ -555,14 +557,29 @@ static void Shop_DisplayNormalPriceInList(u16 itemId, u8 var2, bool32 hasControl
         stringPtr += 3;
     }
 	
-	// Don't display TM names if we have them already
-	if (ItemId_GetPocket(itemId) == 3 && (CheckBagHasItem(itemId, 1) || CheckPCHasItem(itemId, 1)))
+	if (ItemId_GetPocket(itemId) == 3)
 	{
-		itemId = 0;
-		width = 0x74;
+        if (CheckBagHasItem(itemId, 1) || CheckPCHasItem(itemId, 1))
+        {
+            // Don't display TM names if we have them already
+            itemId = 0;
+            width = 0x74;
+            CopyItemName(itemId, stringPtr);
+        }
+        else
+        {
+            // TM names are always 4 characters.
+            // Follow them with the relevant move name.
+            CopyItemName(itemId, stringPtr);
+            StringAppend(stringPtr, DexText_Terminator6);
+            StringAppend(stringPtr, gMoveNames[gTMHMMoves[itemId - ITEM_TM01_FOCUS_PUNCH]]);
+        }
 	}
+    else
+    {
+        CopyItemName(itemId, stringPtr);
+    }
 
-    CopyItemName(itemId, stringPtr);
 
     sub_8072A18(&gStringVar1[0], 0x70, var2 << 3, width, 0x1);
     stringPtr = gStringVar1;

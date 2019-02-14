@@ -250,7 +250,7 @@ const struct Item gItems[] =
     {
         .name = _("Level Ball"),
         .itemId = ITEM_LEVEL_BALL,
-        .price = 3000,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_LevelBall,
@@ -269,7 +269,7 @@ const struct Item gItems[] =
     {
         .name = _("Lure Ball"),
         .itemId = ITEM_LURE_BALL,
-        .price = 3000,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_LureBall,
@@ -288,7 +288,7 @@ const struct Item gItems[] =
     {
         .name = _("Moon Ball"),
         .itemId = ITEM_MOON_BALL,
-        .price = 3000,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_MoonBall,
@@ -307,7 +307,7 @@ const struct Item gItems[] =
     {
         .name = _("Friend Ball"),
         .itemId = ITEM_FRIEND_BALL,
-        .price = 3000,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_FriendBall,
@@ -326,7 +326,7 @@ const struct Item gItems[] =
     {
         .name = _("Love Ball"),
         .itemId = ITEM_LOVE_BALL,
-        .price = 3000,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_LoveBall,
@@ -345,7 +345,7 @@ const struct Item gItems[] =
     {
         .name = _("Heavy Ball"),
         .itemId = ITEM_HEAVY_BALL,
-        .price = 3000,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_HeavyBall,
@@ -364,7 +364,7 @@ const struct Item gItems[] =
     {
         .name = _("Fast Ball"),
         .itemId = ITEM_FAST_BALL,
-        .price = 3000,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_FastBall,
@@ -5848,7 +5848,7 @@ const struct Item gItems[] =
     {
         .name = _("TM07"),
         .itemId = ITEM_TM07_HEAL_BELL,
-        .price = 0,
+        .price = 6500,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM07,
@@ -6392,7 +6392,7 @@ const struct Item gItems[] =
     {
         .name = _("TM39"),
         .itemId = ITEM_TM39_ROCK_TOMB,
-        .price = 0,
+        .price = 9500,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM39,
@@ -6698,7 +6698,7 @@ const struct Item gItems[] =
     {
         .name = _("TM57"),
         .itemId = ITEM_TM57_CHARGE_BEAM,
-        .price = 0,
+        .price = 9500,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM57,
@@ -6715,7 +6715,7 @@ const struct Item gItems[] =
     {
         .name = _("TM58"),
         .itemId = ITEM_TM58_ENDURE,
-        .price = 0,
+        .price = 6500,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM58,
@@ -6851,7 +6851,7 @@ const struct Item gItems[] =
     {
         .name = _("TM66"),
         .itemId = ITEM_TM66_PAYBACK,
-        .price = 0,
+        .price = 9500,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM66,
@@ -6902,7 +6902,7 @@ const struct Item gItems[] =
     {
         .name = _("TM69"),
         .itemId = ITEM_TM69_ROCK_POLISH,
-        .price = 0,
+        .price = 6500,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM69,

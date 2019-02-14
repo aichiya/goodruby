@@ -23,13 +23,14 @@ SlateportCity_EventObjects:: @ 837F7AC
 	object_event 22, EVENT_OBJ_GFX_MART_EMPLOYEE, 0, 5, 51, 3, MOVEMENT_TYPE_FACE_DOWN, 0, 0, 0, 0, SlateportCity_EventScript_14BDF2, 0
 	object_event 23, EVENT_OBJ_GFX_MAN_6, 0, 34, 51, 3, MOVEMENT_TYPE_FACE_DOWN, 0, 0, 0, 0, SlateportCity_EventScript_14C029, 0
 	object_event 24, EVENT_OBJ_GFX_WOMAN_7, 0, 4, 47, 3, MOVEMENT_TYPE_FACE_DOWN, 0, 0, 0, 0, SlateportCity_EventScript_14BAE0, 0
-	object_event 25, EVENT_OBJ_GFX_MART_EMPLOYEE, 0, 11, 47, 3, MOVEMENT_TYPE_FACE_DOWN, 1, 1, 0, 0, SlateportCity_EventScript_14BE9A, FLAG_HIDE_TM_SALESMAN_SLATEPORT
+	object_event 25, EVENT_OBJ_GFX_MART_EMPLOYEE, 0, 11, 47, 3, MOVEMENT_TYPE_FACE_DOWN, 1, 1, 0, 0, SlateportCity_EventScript_14BE9A, 0
 	object_event 26, EVENT_OBJ_GFX_MAN_3, 0, 5, 47, 3, MOVEMENT_TYPE_FACE_DOWN, 1, 1, 0, 0, SlateportCity_EventScript_14BAB6, 0
 	object_event 27, EVENT_OBJ_GFX_VAR_1, 0, 22, 27, 3, MOVEMENT_TYPE_FACE_RIGHT, 1, 1, 0, 0, SlateportCity_EventScript_14BD7F, FLAG_HIDE_EVIL_TEAM_SLATEPORT
 	object_event 28, EVENT_OBJ_GFX_VAR_1, 0, 23, 27, 3, MOVEMENT_TYPE_FACE_UP, 1, 1, 0, 0, SlateportCity_EventScript_14BD96, FLAG_HIDE_EVIL_TEAM_SLATEPORT
 	object_event 29, EVENT_OBJ_GFX_VAR_1, 0, 24, 27, 3, MOVEMENT_TYPE_FACE_RIGHT, 1, 1, 0, 0, SlateportCity_EventScript_14BDAD, FLAG_HIDE_EVIL_TEAM_SLATEPORT
 	object_event 30, EVENT_OBJ_GFX_VAR_1, 0, 21, 26, 3, MOVEMENT_TYPE_FACE_RIGHT, 1, 1, 0, 0, SlateportCity_EventScript_14BDC4, FLAG_HIDE_EVIL_TEAM_SLATEPORT
 	object_event 31, EVENT_OBJ_GFX_VAR_1, 0, 20, 26, 3, MOVEMENT_TYPE_FACE_RIGHT, 1, 1, 0, 0, SlateportCity_EventScript_14BDDB, FLAG_HIDE_EVIL_TEAM_SLATEPORT
+	object_event 32, EVENT_OBJ_GFX_WOMAN_7, 0, 11, 51, 3, MOVEMENT_TYPE_FACE_DOWN, 0, 0, 0, 0, SlateportCity_EventScript_BallsVendor, 0
 
 SlateportCity_MapWarps:: @ 837FA94
 	warp_def 19, 19, 0, 0, MAP_SLATEPORT_CITY_POKEMON_CENTER_1F
