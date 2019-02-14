@@ -373,7 +373,7 @@ const struct TrainerMonFullControl gTrainerParty_MaxieMuseum[] = {
 		.evs = {0, 128, 0, 0, 0, 0},
 		.nature = NATURE_ADAMANT,
 		.gender = MON_MALE,
-		.ball = ITEM_GREAT_BALL,
+		.ball = ITEM_MAGMA_BALL,
     },
     {
 	.iv = 0,
@@ -385,7 +385,7 @@ const struct TrainerMonFullControl gTrainerParty_MaxieMuseum[] = {
 		.evs = {0, 64, 0, 0, 0, 64},
 		.nature = NATURE_JOLLY,
 		.gender = MON_MALE,
-		.ball = ITEM_POKE_BALL,
+		.ball = ITEM_GREAT_BALL,
     },
     {
 	.iv = 0,
@@ -397,7 +397,7 @@ const struct TrainerMonFullControl gTrainerParty_MaxieMuseum[] = {
 		.evs = {0, 64, 0, 0, 64, 0},
 		.nature = NATURE_NAIVE,
 		.gender = MON_MALE,
-		.ball = ITEM_GREAT_BALL,
+		.ball = ITEM_MAGMA_BALL,
     },
 };
 

@@ -3414,7 +3414,7 @@ void SetMoveEffect(bool8 primary, u8 certainArg)
             gBattlescriptCurrInstr = gMoveEffectBS_Ptrs[gBattleCommunication[MOVE_EFFECT_BYTE]];
             break;
         case 15 ... 21: //stat + 1
-            if (ChangeStatBuffs(0x10, gBattleCommunication[MOVE_EFFECT_BYTE] + 0xF2, certain, 0)) {gBattlescriptCurrInstr++;}
+            if (ChangeStatBuffs(0x10, gBattleCommunication[MOVE_EFFECT_BYTE] + 0xF2, AffectsUser, 0)) {gBattlescriptCurrInstr++;}
             else
             {
                 gBattleStruct->animArg1 = gBattleCommunication[MOVE_EFFECT_BYTE] & 0x3F; //TODO: the arg ptr is wrong by one
@@ -3424,7 +3424,7 @@ void SetMoveEffect(bool8 primary, u8 certainArg)
             }
             break;
         case 22 ... 28: //stat - 1
-            if (ChangeStatBuffs(~(0x6f), gBattleCommunication[MOVE_EFFECT_BYTE] + 0xEB, certain, 0)) {gBattlescriptCurrInstr++;} //TODO: negation doesnt work correctly
+            if (ChangeStatBuffs(~(0x6f), gBattleCommunication[MOVE_EFFECT_BYTE] + 0xEB, AffectsUser, 0)) {gBattlescriptCurrInstr++;} //TODO: negation doesnt work correctly
             else
             {
                 gBattleStruct->animArg1 = gBattleCommunication[MOVE_EFFECT_BYTE] & 0x3F;
@@ -3434,7 +3434,7 @@ void SetMoveEffect(bool8 primary, u8 certainArg)
             }
             break;
         case 39 ... 45: //stat + 2
-            if (ChangeStatBuffs(0x20, gBattleCommunication[MOVE_EFFECT_BYTE] + 0xDA, certain, 0)) {gBattlescriptCurrInstr++;}
+            if (ChangeStatBuffs(0x20, gBattleCommunication[MOVE_EFFECT_BYTE] + 0xDA, AffectsUser, 0)) {gBattlescriptCurrInstr++;}
             else
             {
                 gBattleStruct->animArg1 = gBattleCommunication[MOVE_EFFECT_BYTE] & 0x3F;
@@ -3444,7 +3444,7 @@ void SetMoveEffect(bool8 primary, u8 certainArg)
             }
             break;
         case 46 ... 52: //stat - 2
-            if (ChangeStatBuffs(~(0x5f), gBattleCommunication[MOVE_EFFECT_BYTE] + 0xD3, certain, 0)) {gBattlescriptCurrInstr++;}
+            if (ChangeStatBuffs(~(0x5f), gBattleCommunication[MOVE_EFFECT_BYTE] + 0xD3, AffectsUser, 0)) {gBattlescriptCurrInstr++;}
             else
             {
                 gBattleStruct->animArg1 = gBattleCommunication[MOVE_EFFECT_BYTE] & 0x3F;

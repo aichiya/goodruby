@@ -1052,6 +1052,8 @@ u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
                 case TRAINER_CLASS_TEAM_AQUA:
                     if (personalityValue & 0x1)
                         ball = ITEM_AQUA_BALL;
+                    else
+                        ball = ITEM_POKE_BALL;
                     break;
 
                 case TRAINER_CLASS_AQUA_ADMIN:
@@ -1062,6 +1064,8 @@ u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
                 case TRAINER_CLASS_TEAM_MAGMA:
                     if (personalityValue & 0x1)
                         ball = ITEM_MAGMA_BALL;
+                    else
+                        ball = ITEM_POKE_BALL;
                     break;
 
                 case TRAINER_CLASS_MAGMA_ADMIN:
