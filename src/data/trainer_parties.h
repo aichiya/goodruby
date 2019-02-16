@@ -3041,9 +3041,9 @@ const struct TrainerMonItemDefaultMoves gTrainerParty_Brandon5[] = {
 const struct TrainerMonNoItemCustomMoves gTrainerParty_Edward[] = {
     {
 	.iv = 0,
-	.level = 16,
-	.species = SPECIES_ABRA,
-        .moves = MOVE_HIDDEN_POWER, MOVE_NONE, MOVE_NONE, MOVE_NONE
+	.level = 20,
+	.species = SPECIES_KADABRA,
+        .moves = MOVE_CONFUSION, MOVE_KINESIS, MOVE_DISABLE, MOVE_NONE
     }
 };
 
@@ -4185,13 +4185,19 @@ const struct TrainerMonItemDefaultMoves gTrainerParty_Marissa[] = {
 const struct TrainerMonItemDefaultMoves gTrainerParty_Isabel1[] = {
     {
 	.iv = 0,
-	.level = 15,
+	.level = 17,
+	.species = SPECIES_PIKACHU,
+        .heldItem = ITEM_ORAN_BERRY
+    },
+    {
+	.iv = 0,
+	.level = 18,
 	.species = SPECIES_PLUSLE,
         .heldItem = ITEM_ORAN_BERRY
     },
     {
 	.iv = 0,
-	.level = 15,
+	.level = 18,
 	.species = SPECIES_MINUN,
         .heldItem = ITEM_ORAN_BERRY
     }
@@ -4547,13 +4553,13 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Calvin5[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Eddie[] = {
     {
 	.iv = 0,
-	.level = 14,
-	.species = SPECIES_ZIGZAGOON
+	.level = 18,
+	.species = SPECIES_RATTATA
     },
     {
 	.iv = 0,
-	.level = 16,
-	.species = SPECIES_ZIGZAGOON
+	.level = 19,
+	.species = SPECIES_SPINARAK
     }
 };
 
@@ -4573,17 +4579,17 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Allen[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Timmy[] = {
     {
 	.iv = 0,
-	.level = 12,
-	.species = SPECIES_POOCHYENA
-    },
-    {
-	.iv = 0,
-	.level = 16,
+	.level = 17,
 	.species = SPECIES_ARON
     },
     {
 	.iv = 0,
-	.level = 14,
+	.level = 18,
+	.species = SPECIES_QUILAVA
+    },
+    {
+	.iv = 0,
+	.level = 17,
 	.species = SPECIES_ELECTRIKE
     }
 };
@@ -4711,23 +4717,13 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Ned[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Dale[] = {
     {
 	.iv = 0,
-	.level = 12,
+	.level = 20,
 	.species = SPECIES_TENTACOOL
     },
     {
 	.iv = 0,
-	.level = 15,
+	.level = 19,
 	.species = SPECIES_WAILMER
-    },
-    {
-	.iv = 0,
-	.level = 9,
-	.species = SPECIES_TENTACOOL
-    },
-    {
-	.iv = 0,
-	.level = 12,
-	.species = SPECIES_TENTACOOL
     }
 };
 
@@ -7025,13 +7021,23 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Pablo[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Edwin1[] = {
     {
 	.iv = 0,
-	.level = 14,
-	.species = SPECIES_LOMBRE
+	.level = 17,
+	.species = SPECIES_MAWILE
     },
     {
 	.iv = 0,
-	.level = 14,
-	.species = SPECIES_NUZLEAF
+	.level = 19,
+	.species = SPECIES_MUNCHLAX
+    },
+    {
+	.iv = 0,
+	.level = 18,
+	.species = SPECIES_RALTS
+    },
+    {
+	.iv = 0,
+	.level = 18,
+	.species = SPECIES_IVYSAUR
     }
 };
 
@@ -8571,27 +8577,27 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Haley5[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Sally[] = {
     {
 	.iv = 0,
-	.level = 16,
-	.species = SPECIES_ODDISH
+	.level = 17,
+	.species = SPECIES_SKITTY
+    },
+    {
+	.iv = 0,
+	.level = 17,
+	.species = SPECIES_BELLSPROUT
     }
 };
 
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Robin[] = {
     {
 	.iv = 0,
-	.level = 14,
-	.species = SPECIES_SKITTY
+	.level = 18,
+	.species = SPECIES_CHINGLING
     },
     {
 	.iv = 0,
-	.level = 14,
-	.species = SPECIES_SHROOMISH
+	.level = 17,
+	.species = SPECIES_TAILLOW
     },
-    {
-	.iv = 0,
-	.level = 14,
-	.species = SPECIES_MARILL
-    }
 };
 
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Andrea[] = {
@@ -9129,16 +9135,18 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_LoisAndHal5[] = {
     }
 };
 
-const struct TrainerMonNoItemDefaultMoves gTrainerParty_Johanna[] = {
+const struct TrainerMonNoItemCustomMoves gTrainerParty_Johanna[] = {
     {
 	.iv = 0,
 	.level = 16,
-	.species = SPECIES_NUMEL
+	.species = SPECIES_NUMEL,
+        .moves = MOVE_FLAME_BURST, MOVE_MAGNITUDE, MOVE_FOCUS_ENERGY, MOVE_TACKLE
     },
     {
 	.iv = 0,
 	.level = 17,
-	.species = SPECIES_DRATINI
+	.species = SPECIES_DRATINI,
+        .moves = MOVE_WRAP, MOVE_LEER, MOVE_THUNDER_WAVE, MOVE_TWISTER
     },
 };
 
@@ -9951,3 +9959,156 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Eugene[] = {
     }
 };
 
+const struct TrainerMonFullControl gTrainerParty_Rival2Combusken[] = {
+    {
+	.iv = 0,
+	.level = 20,
+	.species = SPECIES_ROSELIA,
+	.heldItem = 0,
+	.ability = 1, // Poison Point
+	.moves = {MOVE_MAGICAL_LEAF, MOVE_LEECH_SEED, MOVE_STUN_SPORE, MOVE_GROWTH},
+		.evs = {128, 0, 0, 0, 0, 0},
+		.nature = NATURE_CALM,
+		.gender = MON_FEMALE,
+		.ball = ITEM_GREAT_BALL,
+    },
+    {
+	.iv = 0,
+	.level = 20,
+	.species = SPECIES_AZUMARILL,
+	.heldItem = 0,
+	.ability = 1, // Huge Power
+	.moves = {MOVE_BUBBLE_BEAM, MOVE_TACKLE, MOVE_TAIL_WHIP, MOVE_NONE},
+		.evs = {0, 0, 0, 0, 128, 0},
+		.nature = NATURE_SASSY,
+		.gender = MON_FEMALE,
+		.ball = ITEM_GREAT_BALL,
+    },
+    {
+	.iv = 0,
+	.level = 20,
+	.species = SPECIES_LINOONE,
+	.heldItem = 0,
+	.ability = 0, // Pickup
+	.moves = {MOVE_HEADBUTT, MOVE_DIG, MOVE_SAND_ATTACK, MOVE_TAIL_WHIP},
+		.evs = {0, 64, 0, 64, 0, 0},
+		.nature = NATURE_JOLLY,
+		.gender = MON_FEMALE,
+		.ball = ITEM_POKE_BALL,
+    },
+    {
+	.iv = 0,
+	.level = 21,
+	.species = SPECIES_COMBUSKEN,
+	.heldItem = 0,
+	.ability = 0, // Blaze
+	.moves = {MOVE_EMBER, MOVE_DOUBLE_KICK, MOVE_FLAME_CHARGE, MOVE_BULK_UP},
+		.evs = {0, 64, 0, 64, 0, 0},
+		.nature = NATURE_NAUGHTY,
+		.gender = MON_MALE,
+		.ball = ITEM_POKE_BALL,
+    },
+};
+
+const struct TrainerMonFullControl gTrainerParty_Rival2Marshtomp[] = {
+    {
+	.iv = 0,
+	.level = 20,
+	.species = SPECIES_PONYTA,
+	.heldItem = 0,
+	.ability = 1, // Flash Fire
+	.moves = {MOVE_FLAME_WHEEL, MOVE_STOMP, MOVE_TAIL_WHIP, MOVE_GROWL},
+		.evs = {0, 64, 0, 64, 0, 0},
+		.nature = NATURE_JOLLY,
+		.gender = MON_FEMALE,
+		.ball = ITEM_GREAT_BALL,
+    },
+    {
+	.iv = 0,
+	.level = 20,
+	.species = SPECIES_ROSELIA,
+	.heldItem = 0,
+	.ability = 1, // Poison Point
+	.moves = {MOVE_MAGICAL_LEAF, MOVE_LEECH_SEED, MOVE_STUN_SPORE, MOVE_GROWTH},
+		.evs = {128, 0, 0, 0, 0, 0},
+		.nature = NATURE_CALM,
+		.gender = MON_FEMALE,
+		.ball = ITEM_GREAT_BALL,
+    },
+    {
+	.iv = 0,
+	.level = 20,
+	.species = SPECIES_LINOONE,
+	.heldItem = 0,
+	.ability = 0, // Pickup
+	.moves = {MOVE_HEADBUTT, MOVE_DIG, MOVE_SAND_ATTACK, MOVE_TAIL_WHIP},
+		.evs = {0, 64, 0, 64, 0, 0},
+		.nature = NATURE_JOLLY,
+		.gender = MON_FEMALE,
+		.ball = ITEM_POKE_BALL,
+    },
+    {
+	.iv = 0,
+	.level = 21,
+	.species = SPECIES_MARSHTOMP,
+	.heldItem = 0,
+	.ability = 0, // Torrent
+	.moves = {MOVE_MUD_SHOT, MOVE_WATER_GUN, MOVE_TACKLE, MOVE_STEALTH_ROCK},
+		.evs = {128, 0, 0, 0, 0, 0},
+		.nature = NATURE_RELAXED,
+		.gender = MON_MALE,
+		.ball = ITEM_POKE_BALL,
+    },
+};
+
+const struct TrainerMonFullControl gTrainerParty_Rival2Grovyle[] = {
+    {
+	.iv = 0,
+	.level = 20,
+	.species = SPECIES_AZUMARILL,
+	.heldItem = 0,
+	.ability = 1, // Huge Power
+	.moves = {MOVE_BUBBLE_BEAM, MOVE_TACKLE, MOVE_TAIL_WHIP, MOVE_NONE},
+		.evs = {0, 0, 0, 0, 128, 0},
+		.nature = NATURE_SASSY,
+		.gender = MON_FEMALE,
+		.ball = ITEM_GREAT_BALL,
+    },
+    {
+	.iv = 0,
+	.level = 20,
+	.species = SPECIES_PONYTA,
+	.heldItem = 0,
+	.ability = 1, // Flash Fire
+	.moves = {MOVE_FLAME_WHEEL, MOVE_STOMP, MOVE_TAIL_WHIP, MOVE_GROWL},
+		.evs = {0, 64, 0, 64, 0, 0},
+		.nature = NATURE_JOLLY,
+		.gender = MON_FEMALE,
+		.ball = ITEM_GREAT_BALL,
+    },
+    {
+	.iv = 0,
+	.level = 20,
+	.species = SPECIES_LINOONE,
+	.heldItem = 0,
+	.ability = 0, // Pickup
+	.moves = {MOVE_HEADBUTT, MOVE_DIG, MOVE_SAND_ATTACK, MOVE_TAIL_WHIP},
+		.evs = {0, 64, 0, 64, 0, 0},
+		.nature = NATURE_JOLLY,
+		.gender = MON_FEMALE,
+		.ball = ITEM_POKE_BALL,
+    },
+    {
+	.iv = 0,
+	.level = 21,
+	.species = SPECIES_GROVYLE,
+	.heldItem = 0,
+	.ability = 0, // Overgrow
+	.moves = {MOVE_MEGA_DRAIN, MOVE_FURY_CUTTER, MOVE_PURSUIT, MOVE_CUT},
+		.evs = {0, 0, 0, 0, 128, 0},
+		.nature = NATURE_NAIVE,
+		.gender = MON_MALE,
+		.ball = ITEM_POKE_BALL,
+    },
+
+};

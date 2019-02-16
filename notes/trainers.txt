@@ -81,4 +81,24 @@ Onix Lv18 Sunny Day, Stealth Rock, Rock Tomb, Tackle
 Mightyena Lv18 Bite, Snarl, Fire Fang, Sand Attack
 Magmar Lv20 Sunny Day, Ember, Smog, Feint Attack
 
+ROUTE 110
+ISABEL: Pichu Lv17, Pikachu Lv18, Plusle Lv18
+TIMMY: Aron Lv18, Quilava Lv18, Electrike Lv18
+EDWIN: Mawile Lv17, Dunsparce Lv19, Phanpy Lv18, Ivysaur Lv18
+EDWARD: Kadabra Lv20
+DALE: Tentacool Lv20, Wailmer Lv19
+
+RIVAL
+Ponyta Lv20: Flame Wheel, Stomp, Tail Whip, Growl
+Azumarill Lv20: Bubblebeam, Tackle, Defense Curl
+Roselia Lv20: Magical Leaf, Leech Seed, Stun Spore, Growth
+Linoone Lv20: Headbutt, Dig, Tail Whip, Sand Attack
+Combusken Lv21: Double Kick, Flame Charge, Ember, Bulk Up
+Marshtomp Lv21: Mud Shot, Water Gun, Bulldoze, Stealth Rock
+Grovyle Lv21: Mega Drain, Fury Cutter, Pursuit, Cut
+
+TRICK HOUSE 1
+SALLY: Skitty Lv17, Bellsprout Lv17
+ROBIN: Chingling Lv18, Taillow Lv17
+EDDIE: Ratatta Lv18, Spinarak Lv19
 
