@@ -6,7 +6,12 @@ Route110_MapScripts:: @ 814F900
 
 Route110_MapScript1_14F910:: @ 814F910
 	special UpdateCyclingRoadState
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, Route110_MapScript1_ClearStuff
 	end
+
+Route110_MapScript1_ClearStuff:
+	removeobject LAST_TALKED
+	return
 
 Route110_MapScript1_14F914:: @ 814F914
 	call Route110_EventScript_1A0196
@@ -537,3 +542,18 @@ Route110_Movement_14FF89:: @ 814FF89
 	walk_fast_up
 	walk_fast_up
 	end_movement
+
+Route110_EventScript_Voltorb::
+	lock
+	faceplayer
+	setwildbattle SPECIES_VOLTORB, 15, ITEM_NONE
+	waitse
+	playmoncry SPECIES_VOLTORB, 2
+	delay 40
+	waitmoncry
+	setflag FLAG_HIDE_VOLTORB_ROUTE110
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	dowildbattle
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	release
+	end

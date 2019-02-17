@@ -30,6 +30,7 @@
 #include "player_pc.h"
 #include "ewram.h"
 #include "script.h"
+#include "constants/items.h"
 #include "constants/field_effects.h"
 #include "constants/moves.h"
 #include "constants/songs.h"
@@ -933,17 +934,13 @@ void debug_sub_80986AC(void)
 static void sub_808AE8C(void)
 {
     u8 i;
-    u8 arg = gSpecialVar_ItemId - 33;
+    u8 arg = gSpecialVar_ItemId - ITEM_TM01_FOCUS_PUNCH;
     for (i = 0; i < 6; i++)
     {
         if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES))
         {
             sub_806D668(i);
-            if (
-#if DEBUG
-             gUnknown_020297ED == 0 &&
-#endif
-             (GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG) || !CanMonLearnTMHM(&gPlayerParty[i], arg)))
+            if (GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG) || !CanMonLearnTMHM(&gPlayerParty[i], arg))
                 DrawMonDescriptorStatus(i, 0x9A);
             else if (pokemon_has_move(&gPlayerParty[i], ItemIdToBattleMoveId(gSpecialVar_ItemId)))
                 DrawMonDescriptorStatus(i, 0xA8);

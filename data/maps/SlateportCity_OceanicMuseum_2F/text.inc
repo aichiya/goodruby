@@ -66,16 +66,16 @@ SlateportCity_OceanicMuseum_2F_Text_17EFC9:: @ 817EFC9
 	.string "Farewell!$"
 
 SlateportCity_OceanicMuseum_2F_Text_17F17E:: @ 817F17E
-	.string "I am TEAM MAGMA's MAXIE.\p"
+	.string "I am Team Magma's Maxie.\p"
 	.string "Why on earth do you feel compelled\n"
-	.string "to mess up TEAM MAGMA's plans?\p"
-	.string "POKéMON, people, all life exists on land...\p"
-	.string "That's why TEAM MAGMA is trying to\n"
+	.string "to mess up Team Magma's plans?\p"
+	.string "Pokémon, people, all life exists on land...\p"
+	.string "That's why Team Magma is trying to\n"
 	.string "expand the world's landmass.\p"
 	.string "Don't you agree? What we are doing\n"
 	.string "is a magnificent undertaking.\p"
 	.string "Well, no matter...\p"
-    .string "Those Goods leave with Team\n"
+    .string "That package leaves with Team\n"
     .string "Magma, one way or the other!$"
 
 SlateportCity_OceanicMuseum_2F_Text_MaxieLose::

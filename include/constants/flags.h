@@ -610,6 +610,7 @@
 #define FLAG_HIDE_KECLEON_ROUTE119_1        0x3DD
 #define FLAG_HIDE_KECLEON_ROUTE119_2        0x3DE
 #define FLAG_HIDE_BOY_ROUTE101              0x3DF
+#define FLAG_HIDE_VOLTORB_ROUTE110          0x3E0
 
 #define FLAG_ITEM_ROUTE102_1                0x3E8
 #define FLAG_ITEM_ROUTE116_1                0x3E9

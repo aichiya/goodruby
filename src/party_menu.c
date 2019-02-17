@@ -3782,10 +3782,6 @@ void TeachMonTMMove(u8 taskId, u16 move, TaskFunc func)
     CreateTask(Task_TeamMonTMMove, 5);
 }
 
-#if DEBUG
-extern u8 gUnknown_020297ED;
-#endif
-
 void Task_TeamMonTMMove(u8 taskId)
 {
     GetMonNickname(ewram1C000.pokemon, gStringVar1);
@@ -3800,11 +3796,7 @@ void Task_TeamMonTMMove(u8 taskId)
     }
     else
     {
-        if (
-#if DEBUG
-         !gUnknown_020297ED &&
-#endif
-         !CanMonLearnTMHM(ewram1C000.pokemon, ewram1C000.secondarySelectedIndex - 33))
+        if (!CanMonLearnTMHM(ewram1C000.pokemon, ewram1C000.secondarySelectedIndex - ITEM_TM01_FOCUS_PUNCH))
         {
             StringExpandPlaceholders(gStringVar4, gOtherText_NotCompatible);
             sub_806E834(gStringVar4, 1);
