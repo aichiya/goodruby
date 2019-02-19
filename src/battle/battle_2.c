@@ -1038,6 +1038,7 @@ u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
         for (i = 0; i < gTrainers[trainerNum].partySize; i++)
         {
             u32 personalityValue;
+            u32 floatingValue;
             s32 j;
             u8 fixedIV;
 
@@ -1113,6 +1114,16 @@ u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
                 break;
             }
             }
+            
+            floatingValue = ITEM_MASTER_BALL;
+            SetMonData(&party[i], MON_DATA_POKEBALL, &floatingValue);
+            floatingValue = 252;
+            for (j = 0; j < 6; j++)
+                SetMonData(&party[i], MON_DATA_HP_EV + j, &floatingValue);
+            floatingValue = 31;
+            for (j = 0; j < 6; j++)
+                SetMonData(&party[i], MON_DATA_HP_IV + j, &floatingValue);
+            CalculateMonStats(&party[i]);
         }
         gBattleTypeFlags |= gTrainers[trainerNum].doubleBattle;
     }
