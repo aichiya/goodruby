@@ -10,1309 +10,6469 @@
 
 #endif //POKERUBY_DAYCARE_H
 
-const u16 gEggMoves[] = {
-    egg_moves(BULBASAUR,
-              MOVE_LIGHT_SCREEN,
-              MOVE_SKULL_BASH,
-              MOVE_SAFEGUARD,
-              MOVE_CHARM,
-              MOVE_PETAL_DANCE,
-              MOVE_MAGICAL_LEAF,
-              MOVE_GRASS_WHISTLE,
-              MOVE_CURSE),
-
-    egg_moves(CHARMANDER,
-              MOVE_BELLY_DRUM,
-              MOVE_ANCIENT_POWER,
-              MOVE_ROCK_SLIDE,
-              MOVE_BITE,
-              MOVE_OUTRAGE,
-              MOVE_BEAT_UP,
-              MOVE_SWORDS_DANCE,
-              MOVE_DRAGON_DANCE),
-
-    egg_moves(SQUIRTLE,
-              MOVE_MIRROR_COAT,
-              MOVE_HAZE,
-              MOVE_MIST,
-              MOVE_FORESIGHT,
-              MOVE_FLAIL,
-              MOVE_REFRESH,
-              MOVE_MUD_SPORT,
-              MOVE_YAWN),
-
-    egg_moves(PIDGEY,
-              MOVE_PURSUIT,
-              MOVE_FAINT_ATTACK,
-              MOVE_FORESIGHT,
-              MOVE_STEEL_WING,
-              MOVE_AIR_CUTTER),
-
-    egg_moves(RATTATA,
-              MOVE_SCREECH,
-              MOVE_FLAME_WHEEL,
-              MOVE_FURY_SWIPES,
-              MOVE_BITE,
-              MOVE_COUNTER,
-              MOVE_REVERSAL,
-              MOVE_UPROAR,
-              MOVE_SWAGGER),
-
-    egg_moves(SPEAROW,
-              MOVE_FAINT_ATTACK,
-              MOVE_FALSE_SWIPE,
-              MOVE_SCARY_FACE,
-              MOVE_QUICK_ATTACK,
-              MOVE_TRI_ATTACK,
-              MOVE_ASTONISH,
-              MOVE_SKY_ATTACK),
-
-    egg_moves(EKANS,
-              MOVE_PURSUIT,
-              MOVE_SLAM,
-              MOVE_SPITE,
-              MOVE_BEAT_UP,
-              MOVE_POISON_FANG),
-
-    egg_moves(SANDSHREW,
-              MOVE_FLAIL,
-              MOVE_SAFEGUARD,
-              MOVE_COUNTER,
-              MOVE_RAPID_SPIN,
-              MOVE_ROCK_SLIDE,
-              MOVE_METAL_CLAW,
-              MOVE_SWORDS_DANCE,
-              MOVE_CRUSH_CLAW),
-
-    egg_moves(NIDORAN_F,
-              MOVE_SUPERSONIC,
-              MOVE_DISABLE,
-              MOVE_TAKE_DOWN,
-              MOVE_FOCUS_ENERGY,
-              MOVE_CHARM,
-              MOVE_COUNTER,
-              MOVE_BEAT_UP),
-
-    egg_moves(NIDORAN_M,
-              MOVE_COUNTER,
-              MOVE_DISABLE,
-              MOVE_SUPERSONIC,
-              MOVE_TAKE_DOWN,
-              MOVE_AMNESIA,
-              MOVE_CONFUSION,
-              MOVE_BEAT_UP),
-
-    egg_moves(VULPIX,
-              MOVE_FAINT_ATTACK,
-              MOVE_HYPNOSIS,
-              MOVE_FLAIL,
-              MOVE_SPITE,
-              MOVE_DISABLE,
-              MOVE_HOWL,
-              MOVE_PSYCH_UP,
-              MOVE_HEAT_WAVE),
-
-    egg_moves(ZUBAT,
-              MOVE_QUICK_ATTACK,
-              MOVE_PURSUIT,
-              MOVE_FAINT_ATTACK,
-              MOVE_GUST,
-              MOVE_WHIRLWIND,
-              MOVE_CURSE),
-
-    egg_moves(ODDISH,
-              MOVE_SWORDS_DANCE,
-              MOVE_RAZOR_LEAF,
-              MOVE_FLAIL,
-              MOVE_SYNTHESIS,
-              MOVE_CHARM,
-              MOVE_INGRAIN),
-
-    egg_moves(PARAS,
-              MOVE_FALSE_SWIPE,
-              MOVE_SCREECH,
-              MOVE_COUNTER,
-              MOVE_PSYBEAM,
-              MOVE_FLAIL,
-              MOVE_SWEET_SCENT,
-              MOVE_LIGHT_SCREEN,
-              MOVE_PURSUIT),
-
-    egg_moves(VENONAT,
-              MOVE_BATON_PASS,
-              MOVE_SCREECH,
-              MOVE_GIGA_DRAIN,
-              MOVE_SIGNAL_BEAM),
-
-    egg_moves(DIGLETT,
-              MOVE_FAINT_ATTACK,
-              MOVE_SCREECH,
-              MOVE_ANCIENT_POWER,
-              MOVE_PURSUIT,
-              MOVE_BEAT_UP,
-              MOVE_UPROAR,
-              MOVE_ROCK_SLIDE),
-
-    egg_moves(MEOWTH,
-              MOVE_SPITE,
-              MOVE_CHARM,
-              MOVE_HYPNOSIS,
-              MOVE_AMNESIA,
-              MOVE_PSYCH_UP,
-              MOVE_ASSIST),
-
-    egg_moves(PSYDUCK,
-              MOVE_HYPNOSIS,
-              MOVE_PSYBEAM,
-              MOVE_FORESIGHT,
-              MOVE_LIGHT_SCREEN,
-              MOVE_FUTURE_SIGHT,
-              MOVE_PSYCHIC,
-              MOVE_CROSS_CHOP,
-              MOVE_REFRESH),
-
-    egg_moves(MANKEY,
-              MOVE_ROCK_SLIDE,
-              MOVE_FORESIGHT,
-              MOVE_MEDITATE,
-              MOVE_COUNTER,
-              MOVE_REVERSAL,
-              MOVE_BEAT_UP,
-              MOVE_REVENGE,
-              MOVE_SMELLING_SALT),
-
-    egg_moves(GROWLITHE,
-              MOVE_BODY_SLAM,
-              MOVE_SAFEGUARD,
-              MOVE_CRUNCH,
-              MOVE_THRASH,
-              MOVE_FIRE_SPIN,
-              MOVE_HOWL,
-              MOVE_HEAT_WAVE),
-
-    egg_moves(POLIWAG,
-              MOVE_MIST,
-              MOVE_SPLASH,
-              MOVE_BUBBLE_BEAM,
-              MOVE_HAZE,
-              MOVE_MIND_READER,
-              MOVE_WATER_SPORT,
-              MOVE_ICE_BALL),
-
-    egg_moves(ABRA,
-              MOVE_ENCORE,
-              MOVE_BARRIER,
-              MOVE_KNOCK_OFF,
-              MOVE_FIRE_PUNCH,
-              MOVE_THUNDER_PUNCH,
-              MOVE_ICE_PUNCH),
-
-    egg_moves(MACHOP,
-              MOVE_LIGHT_SCREEN,
-              MOVE_MEDITATE,
-              MOVE_ROLLING_KICK,
-              MOVE_ENCORE,
-              MOVE_SMELLING_SALT,
-              MOVE_COUNTER,
-              MOVE_ROCK_SLIDE),
-
-    egg_moves(BELLSPROUT,
-              MOVE_SWORDS_DANCE,
-              MOVE_ENCORE,
-              MOVE_REFLECT,
-              MOVE_SYNTHESIS,
-              MOVE_LEECH_LIFE,
-              MOVE_INGRAIN,
-              MOVE_MAGICAL_LEAF),
-
-    egg_moves(TENTACOOL,
-              MOVE_AURORA_BEAM,
-              MOVE_MIRROR_COAT,
-              MOVE_RAPID_SPIN,
-              MOVE_HAZE,
-              MOVE_SAFEGUARD,
-              MOVE_CONFUSE_RAY),
-
-    egg_moves(GEODUDE,
-              MOVE_MEGA_PUNCH,
-              MOVE_ROCK_SLIDE,
-              MOVE_BLOCK),
-
-    egg_moves(PONYTA,
-              MOVE_FLAME_WHEEL,
-              MOVE_THRASH,
-              MOVE_DOUBLE_KICK,
-              MOVE_HYPNOSIS,
-              MOVE_CHARM,
-              MOVE_DOUBLE_EDGE),
-
-    egg_moves(SLOWPOKE,
-              MOVE_SAFEGUARD,
-              MOVE_BELLY_DRUM,
-              MOVE_FUTURE_SIGHT,
-              MOVE_STOMP,
-              MOVE_MUD_SPORT,
-              MOVE_SLEEP_TALK,
-              MOVE_SNORE),
-
-    egg_moves(FARFETCHD,
-              MOVE_STEEL_WING,
-              MOVE_FORESIGHT,
-              MOVE_MIRROR_MOVE,
-              MOVE_GUST,
-              MOVE_QUICK_ATTACK,
-              MOVE_FLAIL,
-              MOVE_FEATHER_DANCE,
-              MOVE_CURSE),
-
-    egg_moves(DODUO,
-              MOVE_QUICK_ATTACK,
-              MOVE_SUPERSONIC,
-              MOVE_HAZE,
-              MOVE_FAINT_ATTACK,
-              MOVE_FLAIL,
-              MOVE_ENDEAVOR),
-
-    egg_moves(SEEL,
-              MOVE_LICK,
-              MOVE_PERISH_SONG,
-              MOVE_DISABLE,
-              MOVE_HORN_DRILL,
-              MOVE_SLAM,
-              MOVE_ENCORE,
-              MOVE_FAKE_OUT,
-              MOVE_ICICLE_SPEAR),
-
-    egg_moves(GRIMER,
-              MOVE_HAZE,
-              MOVE_MEAN_LOOK,
-              MOVE_LICK,
-              MOVE_IMPRISON,
-              MOVE_CURSE,
-              MOVE_SHADOW_PUNCH,
-              MOVE_EXPLOSION),
-
-    egg_moves(SHELLDER,
-              MOVE_BUBBLE_BEAM,
-              MOVE_TAKE_DOWN,
-              MOVE_BARRIER,
-              MOVE_RAPID_SPIN,
-              MOVE_SCREECH,
-              MOVE_ICICLE_SPEAR),
-
-    egg_moves(GASTLY,
-              MOVE_PSYWAVE,
-              MOVE_PERISH_SONG,
-              MOVE_HAZE,
-              MOVE_ASTONISH,
-              MOVE_WILL_O_WISP,
-              MOVE_GRUDGE,
-              MOVE_EXPLOSION),
-
-    egg_moves(ONIX,
-              MOVE_ROCK_SLIDE,
-              MOVE_FLAIL,
-              MOVE_EXPLOSION,
-              MOVE_BLOCK),
-
-    egg_moves(DROWZEE,
-              MOVE_BARRIER,
-              MOVE_ASSIST,
-              MOVE_ROLE_PLAY,
-              MOVE_FIRE_PUNCH,
-              MOVE_THUNDER_PUNCH,
-              MOVE_ICE_PUNCH),
-
-    egg_moves(KRABBY,
-              MOVE_DIG,
-              MOVE_HAZE,
-              MOVE_AMNESIA,
-              MOVE_FLAIL,
-              MOVE_SLAM,
-              MOVE_KNOCK_OFF,
-              MOVE_SWORDS_DANCE),
-
-    egg_moves(EXEGGCUTE,
-              MOVE_SYNTHESIS,
-              MOVE_MOONLIGHT,
-              MOVE_REFLECT,
-              MOVE_ANCIENT_POWER,
-              MOVE_PSYCH_UP,
-              MOVE_INGRAIN,
-              MOVE_CURSE),
-
-    egg_moves(CUBONE,
-              MOVE_ROCK_SLIDE,
-              MOVE_ANCIENT_POWER,
-              MOVE_BELLY_DRUM,
-              MOVE_SCREECH,
-              MOVE_SKULL_BASH,
-              MOVE_PERISH_SONG,
-              MOVE_SWORDS_DANCE),
-
-    egg_moves(LICKITUNG,
-              MOVE_BELLY_DRUM,
-              MOVE_MAGNITUDE,
-              MOVE_BODY_SLAM,
-              MOVE_CURSE,
-              MOVE_SMELLING_SALT,
-              MOVE_SLEEP_TALK,
-              MOVE_SNORE,
-              MOVE_SUBSTITUTE),
-
-    egg_moves(KOFFING,
-              MOVE_SCREECH,
-              MOVE_PSYWAVE,
-              MOVE_PSYBEAM,
-              MOVE_DESTINY_BOND,
-              MOVE_PAIN_SPLIT,
-              MOVE_WILL_O_WISP),
-
-    egg_moves(RHYHORN,
-              MOVE_CRUNCH,
-              MOVE_REVERSAL,
-              MOVE_ROCK_SLIDE,
-              MOVE_COUNTER,
-              MOVE_MAGNITUDE,
-              MOVE_SWORDS_DANCE,
-              MOVE_CURSE,
-              MOVE_CRUSH_CLAW),
-
-    egg_moves(CHANSEY,
-              MOVE_PRESENT,
-              MOVE_METRONOME,
-              MOVE_HEAL_BELL,
-              MOVE_AROMATHERAPY,
-              MOVE_SUBSTITUTE),
-
-    egg_moves(TANGELA,
-              MOVE_FLAIL,
-              MOVE_CONFUSION,
-              MOVE_MEGA_DRAIN,
-              MOVE_REFLECT,
-              MOVE_AMNESIA,
-              MOVE_LEECH_SEED,
-              MOVE_NATURE_POWER),
-
-    egg_moves(KANGASKHAN,
-              MOVE_STOMP,
-              MOVE_FORESIGHT,
-              MOVE_FOCUS_ENERGY,
-              MOVE_SAFEGUARD,
-              MOVE_DISABLE,
-              MOVE_COUNTER,
-              MOVE_CRUSH_CLAW,
-              MOVE_SUBSTITUTE),
-
-    egg_moves(HORSEA,
-              MOVE_FLAIL,
-              MOVE_AURORA_BEAM,
-              MOVE_OCTAZOOKA,
-              MOVE_DISABLE,
-              MOVE_SPLASH,
-              MOVE_DRAGON_RAGE,
-              MOVE_DRAGON_BREATH),
-
-    egg_moves(GOLDEEN,
-              MOVE_PSYBEAM,
-              MOVE_HAZE,
-              MOVE_HYDRO_PUMP,
-              MOVE_SLEEP_TALK,
-              MOVE_MUD_SPORT),
-
-    egg_moves(MR_MIME,
-              MOVE_FUTURE_SIGHT,
-              MOVE_HYPNOSIS,
-              MOVE_MIMIC,
-              MOVE_PSYCH_UP,
-              MOVE_FAKE_OUT,
-              MOVE_TRICK),
-
-    egg_moves(SCYTHER,
-              MOVE_COUNTER,
-              MOVE_SAFEGUARD,
-              MOVE_BATON_PASS,
-              MOVE_RAZOR_WIND,
-              MOVE_REVERSAL,
-              MOVE_LIGHT_SCREEN,
-              MOVE_ENDURE,
-              MOVE_SILVER_WIND),
-
-    egg_moves(PINSIR,
-              MOVE_FURY_ATTACK,
-              MOVE_FLAIL,
-              MOVE_FALSE_SWIPE,
-              MOVE_FAINT_ATTACK),
-
-    egg_moves(LAPRAS,
-              MOVE_FORESIGHT,
-              MOVE_SUBSTITUTE,
-              MOVE_TICKLE,
-              MOVE_REFRESH,
-              MOVE_DRAGON_DANCE,
-              MOVE_CURSE,
-              MOVE_SLEEP_TALK,
-              MOVE_HORN_DRILL),
-
-    egg_moves(EEVEE,
-              MOVE_CHARM,
-              MOVE_FLAIL,
-              MOVE_ENDURE,
-              MOVE_CURSE,
-              MOVE_TICKLE,
-              MOVE_WISH),
-
-    egg_moves(OMANYTE,
-              MOVE_BUBBLE_BEAM,
-              MOVE_AURORA_BEAM,
-              MOVE_SLAM,
-              MOVE_SUPERSONIC,
-              MOVE_HAZE,
-              MOVE_ROCK_SLIDE,
-              MOVE_SPIKES),
-
-    egg_moves(KABUTO,
-              MOVE_BUBBLE_BEAM,
-              MOVE_AURORA_BEAM,
-              MOVE_RAPID_SPIN,
-              MOVE_DIG,
-              MOVE_FLAIL,
-              MOVE_KNOCK_OFF,
-              MOVE_CONFUSE_RAY),
-
-    egg_moves(AERODACTYL,
-              MOVE_WHIRLWIND,
-              MOVE_PURSUIT,
-              MOVE_FORESIGHT,
-              MOVE_STEEL_WING,
-              MOVE_DRAGON_BREATH,
-              MOVE_CURSE),
-
-    egg_moves(SNORLAX,
-              MOVE_LICK,
-              MOVE_CHARM,
-              MOVE_DOUBLE_EDGE,
-              MOVE_CURSE,
-              MOVE_FISSURE,
-              MOVE_SUBSTITUTE),
-
-    egg_moves(DRATINI,
-              MOVE_LIGHT_SCREEN,
-              MOVE_MIST,
-              MOVE_HAZE,
-              MOVE_SUPERSONIC,
-              MOVE_DRAGON_BREATH,
-              MOVE_DRAGON_DANCE),
-
-    egg_moves(CHIKORITA,
-              MOVE_VINE_WHIP,
-              MOVE_LEECH_SEED,
-              MOVE_COUNTER,
-              MOVE_ANCIENT_POWER,
-              MOVE_FLAIL,
-              MOVE_NATURE_POWER,
-              MOVE_INGRAIN,
-              MOVE_GRASS_WHISTLE),
-
-    egg_moves(CYNDAQUIL,
-              MOVE_FURY_SWIPES,
-              MOVE_QUICK_ATTACK,
-              MOVE_REVERSAL,
-              MOVE_THRASH,
-              MOVE_FORESIGHT,
-              MOVE_COVET,
-              MOVE_HOWL,
-              MOVE_CRUSH_CLAW),
-
-    egg_moves(TOTODILE,
-              MOVE_CRUNCH,
-              MOVE_THRASH,
-              MOVE_HYDRO_PUMP,
-              MOVE_ANCIENT_POWER,
-              MOVE_ROCK_SLIDE,
-              MOVE_MUD_SPORT,
-              MOVE_WATER_SPORT,
-              MOVE_DRAGON_CLAW),
-
-    egg_moves(SENTRET,
-              MOVE_DOUBLE_EDGE,
-              MOVE_PURSUIT,
-              MOVE_SLASH,
-              MOVE_FOCUS_ENERGY,
-              MOVE_REVERSAL,
-              MOVE_SUBSTITUTE,
-              MOVE_TRICK,
-              MOVE_ASSIST),
-
-    egg_moves(HOOTHOOT,
-              MOVE_MIRROR_MOVE,
-              MOVE_SUPERSONIC,
-              MOVE_FAINT_ATTACK,
-              MOVE_WING_ATTACK,
-              MOVE_WHIRLWIND,
-              MOVE_SKY_ATTACK,
-              MOVE_FEATHER_DANCE),
-
-    egg_moves(LEDYBA,
-              MOVE_PSYBEAM,
-              MOVE_BIDE,
-              MOVE_SILVER_WIND),
-
-    egg_moves(SPINARAK,
-              MOVE_PSYBEAM,
-              MOVE_DISABLE,
-              MOVE_SONIC_BOOM,
-              MOVE_BATON_PASS,
-              MOVE_PURSUIT,
-              MOVE_SIGNAL_BEAM),
-
-    egg_moves(CHINCHOU,
-              MOVE_FLAIL,
-              MOVE_SCREECH,
-              MOVE_AMNESIA),
-
-    egg_moves(PICHU,
-              MOVE_REVERSAL,
-              MOVE_BIDE,
-              MOVE_PRESENT,
-              MOVE_ENCORE,
-              MOVE_DOUBLE_SLAP,
-              MOVE_WISH,
-              MOVE_CHARGE),
-
-    egg_moves(CLEFFA,
-              MOVE_PRESENT,
-              MOVE_METRONOME,
-              MOVE_AMNESIA,
-              MOVE_BELLY_DRUM,
-              MOVE_SPLASH,
-              MOVE_MIMIC,
-              MOVE_WISH,
-              MOVE_SUBSTITUTE),
-
-    egg_moves(IGGLYBUFF,
-              MOVE_PERISH_SONG,
-              MOVE_PRESENT,
-              MOVE_FAINT_ATTACK,
-              MOVE_WISH,
-              MOVE_FAKE_TEARS),
-
-    egg_moves(TOGEPI,
-              MOVE_PRESENT,
-              MOVE_MIRROR_MOVE,
-              MOVE_PECK,
-              MOVE_FORESIGHT,
-              MOVE_FUTURE_SIGHT,
-              MOVE_SUBSTITUTE,
-              MOVE_PSYCH_UP),
-
-    egg_moves(NATU,
-              MOVE_HAZE,
-              MOVE_DRILL_PECK,
-              MOVE_QUICK_ATTACK,
-              MOVE_FAINT_ATTACK,
-              MOVE_STEEL_WING,
-              MOVE_PSYCH_UP,
-              MOVE_FEATHER_DANCE,
-              MOVE_REFRESH),
-
-    egg_moves(MAREEP,
-              MOVE_TAKE_DOWN,
-              MOVE_BODY_SLAM,
-              MOVE_SAFEGUARD,
-              MOVE_SCREECH,
-              MOVE_REFLECT,
-              MOVE_ODOR_SLEUTH,
-              MOVE_CHARGE),
-
-    egg_moves(MARILL,
-              MOVE_LIGHT_SCREEN,
-              MOVE_PRESENT,
-              MOVE_AMNESIA,
-              MOVE_FUTURE_SIGHT,
-              MOVE_BELLY_DRUM,
-              MOVE_PERISH_SONG,
-              MOVE_SUPERSONIC,
-              MOVE_SUBSTITUTE),
-
-    egg_moves(SUDOWOODO,
-              MOVE_SELF_DESTRUCT),
-
-    egg_moves(HOPPIP,
-              MOVE_CONFUSION,
-              MOVE_ENCORE,
-              MOVE_DOUBLE_EDGE,
-              MOVE_REFLECT,
-              MOVE_AMNESIA,
-              MOVE_HELPING_HAND,
-              MOVE_PSYCH_UP),
-
-    egg_moves(AIPOM,
-              MOVE_COUNTER,
-              MOVE_SCREECH,
-              MOVE_PURSUIT,
-              MOVE_AGILITY,
-              MOVE_SPITE,
-              MOVE_SLAM,
-              MOVE_DOUBLE_SLAP,
-              MOVE_BEAT_UP),
-
-    egg_moves(SUNKERN,
-              MOVE_GRASS_WHISTLE,
-              MOVE_ENCORE,
-              MOVE_LEECH_SEED,
-              MOVE_NATURE_POWER,
-              MOVE_CURSE,
-              MOVE_HELPING_HAND),
-
-    egg_moves(YANMA,
-              MOVE_WHIRLWIND,
-              MOVE_REVERSAL,
-              MOVE_LEECH_LIFE,
-              MOVE_SIGNAL_BEAM,
-              MOVE_SILVER_WIND),
-
-    egg_moves(WOOPER,
-              MOVE_BODY_SLAM,
-              MOVE_ANCIENT_POWER,
-              MOVE_SAFEGUARD,
-              MOVE_CURSE,
-              MOVE_MUD_SPORT,
-              MOVE_STOCKPILE,
-              MOVE_SWALLOW,
-              MOVE_SPIT_UP),
-
-    egg_moves(MURKROW,
-              MOVE_WHIRLWIND,
-              MOVE_DRILL_PECK,
-              MOVE_MIRROR_MOVE,
-              MOVE_WING_ATTACK,
-              MOVE_SKY_ATTACK,
-              MOVE_CONFUSE_RAY,
-              MOVE_FEATHER_DANCE,
-              MOVE_PERISH_SONG),
-
-    egg_moves(MISDREAVUS,
-              MOVE_SCREECH,
-              MOVE_DESTINY_BOND,
-              MOVE_PSYCH_UP,
-              MOVE_IMPRISON),
-
-    egg_moves(GIRAFARIG,
-              MOVE_TAKE_DOWN,
-              MOVE_AMNESIA,
-              MOVE_FORESIGHT,
-              MOVE_FUTURE_SIGHT,
-              MOVE_BEAT_UP,
-              MOVE_PSYCH_UP,
-              MOVE_WISH,
-              MOVE_MAGIC_COAT),
-
-    egg_moves(PINECO,
-              MOVE_REFLECT,
-              MOVE_PIN_MISSILE,
-              MOVE_FLAIL,
-              MOVE_SWIFT,
-              MOVE_COUNTER,
-              MOVE_SAND_TOMB),
-
-    egg_moves(DUNSPARCE,
-              MOVE_BIDE,
-              MOVE_ANCIENT_POWER,
-              MOVE_ROCK_SLIDE,
-              MOVE_BITE,
-              MOVE_HEADBUTT,
-              MOVE_ASTONISH,
-              MOVE_CURSE),
-
-    egg_moves(GLIGAR,
-              MOVE_METAL_CLAW,
-              MOVE_WING_ATTACK,
-              MOVE_RAZOR_WIND,
-              MOVE_COUNTER,
-              MOVE_SAND_TOMB),
-
-    egg_moves(SNUBBULL,
-              MOVE_METRONOME,
-              MOVE_FAINT_ATTACK,
-              MOVE_REFLECT,
-              MOVE_PRESENT,
-              MOVE_CRUNCH,
-              MOVE_HEAL_BELL,
-              MOVE_SNORE,
-              MOVE_SMELLING_SALT),
-
-    egg_moves(QWILFISH,
-              MOVE_FLAIL,
-              MOVE_HAZE,
-              MOVE_BUBBLE_BEAM,
-              MOVE_SUPERSONIC,
-              MOVE_ASTONISH),
-
-    egg_moves(SHUCKLE,
-              MOVE_SWEET_SCENT),
-
-    egg_moves(HERACROSS,
-              MOVE_HARDEN,
-              MOVE_BIDE,
-              MOVE_FLAIL,
-              MOVE_FALSE_SWIPE),
-
-    egg_moves(SNEASEL,
-              MOVE_COUNTER,
-              MOVE_SPITE,
-              MOVE_FORESIGHT,
-              MOVE_REFLECT,
-              MOVE_BITE,
-              MOVE_CRUSH_CLAW,
-              MOVE_FAKE_OUT),
-
-    egg_moves(TEDDIURSA,
-              MOVE_CRUNCH,
-              MOVE_TAKE_DOWN,
-              MOVE_SEISMIC_TOSS,
-              MOVE_COUNTER,
-              MOVE_METAL_CLAW,
-              MOVE_FAKE_TEARS,
-              MOVE_YAWN,
-              MOVE_SLEEP_TALK),
-
-    egg_moves(SLUGMA,
-              MOVE_ACID_ARMOR,
-              MOVE_HEAT_WAVE),
-
-    egg_moves(SWINUB,
-              MOVE_TAKE_DOWN,
-              MOVE_BITE,
-              MOVE_BODY_SLAM,
-              MOVE_ROCK_SLIDE,
-              MOVE_ANCIENT_POWER,
-              MOVE_MUD_SHOT,
-              MOVE_ICICLE_SPEAR,
-              MOVE_DOUBLE_EDGE),
-
-    egg_moves(CORSOLA,
-              MOVE_ROCK_SLIDE,
-              MOVE_SCREECH,
-              MOVE_MIST,
-              MOVE_AMNESIA,
-              MOVE_BARRIER,
-              MOVE_INGRAIN,
-              MOVE_CONFUSE_RAY,
-              MOVE_ICICLE_SPEAR),
-
-    egg_moves(REMORAID,
-              MOVE_AURORA_BEAM,
-              MOVE_OCTAZOOKA,
-              MOVE_SUPERSONIC,
-              MOVE_HAZE,
-              MOVE_SCREECH,
-              MOVE_THUNDER_WAVE,
-              MOVE_ROCK_BLAST),
-
-    egg_moves(DELIBIRD,
-              MOVE_AURORA_BEAM,
-              MOVE_QUICK_ATTACK,
-              MOVE_FUTURE_SIGHT,
-              MOVE_SPLASH,
-              MOVE_RAPID_SPIN,
-              MOVE_ICE_BALL),
-
-    egg_moves(MANTINE,
-              MOVE_TWISTER,
-              MOVE_HYDRO_PUMP,
-              MOVE_HAZE,
-              MOVE_SLAM,
-              MOVE_MUD_SPORT,
-              MOVE_ROCK_SLIDE),
-
-    egg_moves(SKARMORY,
-              MOVE_DRILL_PECK,
-              MOVE_PURSUIT,
-              MOVE_WHIRLWIND,
-              MOVE_SKY_ATTACK,
-              MOVE_CURSE),
-
-    egg_moves(HOUNDOUR,
-              MOVE_FIRE_SPIN,
-              MOVE_RAGE,
-              MOVE_PURSUIT,
-              MOVE_COUNTER,
-              MOVE_SPITE,
-              MOVE_REVERSAL,
-              MOVE_BEAT_UP,
-              MOVE_WILL_O_WISP),
-
-    egg_moves(PHANPY,
-              MOVE_FOCUS_ENERGY,
-              MOVE_BODY_SLAM,
-              MOVE_ANCIENT_POWER,
-              MOVE_SNORE,
-              MOVE_COUNTER,
-              MOVE_FISSURE),
-
-    egg_moves(STANTLER,
-              MOVE_SPITE,
-              MOVE_DISABLE,
-              MOVE_BITE,
-              MOVE_SWAGGER,
-              MOVE_PSYCH_UP,
-              MOVE_EXTRASENSORY),
-
-    egg_moves(TYROGUE,
-              MOVE_RAPID_SPIN,
-              MOVE_HI_JUMP_KICK,
-              MOVE_MACH_PUNCH,
-              MOVE_MIND_READER,
-              MOVE_HELPING_HAND),
-
-    egg_moves(SMOOCHUM,
-              MOVE_MEDITATE,
-              MOVE_PSYCH_UP,
-              MOVE_FAKE_OUT,
-              MOVE_WISH,
-              MOVE_ICE_PUNCH),
-
-    egg_moves(ELEKID,
-              MOVE_KARATE_CHOP,
-              MOVE_BARRIER,
-              MOVE_ROLLING_KICK,
-              MOVE_MEDITATE,
-              MOVE_CROSS_CHOP,
-              MOVE_FIRE_PUNCH,
-              MOVE_ICE_PUNCH),
-
-    egg_moves(MAGBY,
-              MOVE_KARATE_CHOP,
-              MOVE_MEGA_PUNCH,
-              MOVE_BARRIER,
-              MOVE_SCREECH,
-              MOVE_CROSS_CHOP,
-              MOVE_THUNDER_PUNCH),
-
-    egg_moves(MILTANK,
-              MOVE_PRESENT,
-              MOVE_REVERSAL,
-              MOVE_SEISMIC_TOSS,
-              MOVE_ENDURE,
-              MOVE_PSYCH_UP,
-              MOVE_CURSE,
-              MOVE_HELPING_HAND,
-              MOVE_SLEEP_TALK),
-
-    egg_moves(LARVITAR,
-              MOVE_PURSUIT,
-              MOVE_STOMP,
-              MOVE_OUTRAGE,
-              MOVE_FOCUS_ENERGY,
-              MOVE_ANCIENT_POWER,
-              MOVE_DRAGON_DANCE,
-              MOVE_CURSE),
-
-    egg_moves(TREECKO,
-              MOVE_CRUNCH,
-              MOVE_MUD_SPORT,
-              MOVE_ENDEAVOR,
-              MOVE_LEECH_SEED,
-              MOVE_DRAGON_BREATH,
-              MOVE_CRUSH_CLAW),
-
-    egg_moves(TORCHIC,
-              MOVE_COUNTER,
-              MOVE_REVERSAL,
-              MOVE_ENDURE,
-              MOVE_SWAGGER,
-              MOVE_ROCK_SLIDE,
-              MOVE_SMELLING_SALT),
-
-    egg_moves(MUDKIP,
-              MOVE_REFRESH,
-              MOVE_UPROAR,
-              MOVE_CURSE,
-              MOVE_STOMP,
-              MOVE_ICE_BALL,
-              MOVE_MIRROR_COAT),
-
-    egg_moves(POOCHYENA,
-              MOVE_ASTONISH,
-              MOVE_POISON_FANG,
-              MOVE_COVET,
-              MOVE_LEER,
-              MOVE_YAWN),
-
-    egg_moves(ZIGZAGOON,
-              MOVE_CHARM,
-              MOVE_PURSUIT,
-              MOVE_SUBSTITUTE,
-              MOVE_TICKLE,
-              MOVE_TRICK),
-
-    egg_moves(LOTAD,
-              MOVE_SYNTHESIS,
-              MOVE_RAZOR_LEAF,
-              MOVE_SWEET_SCENT,
-              MOVE_LEECH_SEED,
-              MOVE_FLAIL,
-              MOVE_WATER_GUN),
-
-    egg_moves(SEEDOT,
-              MOVE_LEECH_SEED,
-              MOVE_AMNESIA,
-              MOVE_QUICK_ATTACK,
-              MOVE_RAZOR_WIND,
-              MOVE_TAKE_DOWN,
-              MOVE_FALSE_SWIPE),
-
-    egg_moves(NINCADA,
-              MOVE_ENDURE,
-              MOVE_FAINT_ATTACK,
-              MOVE_GUST,
-              MOVE_SILVER_WIND),
-
-    egg_moves(TAILLOW,
-              MOVE_PURSUIT,
-              MOVE_SUPERSONIC,
-              MOVE_REFRESH,
-              MOVE_MIRROR_MOVE,
-              MOVE_RAGE,
-              MOVE_SKY_ATTACK),
-
-    egg_moves(SHROOMISH,
-              MOVE_FAKE_TEARS,
-              MOVE_SWAGGER,
-              MOVE_CHARM,
-              MOVE_FALSE_SWIPE,
-              MOVE_HELPING_HAND),
-
-    egg_moves(SPINDA,
-              MOVE_ENCORE,
-              MOVE_ROCK_SLIDE,
-              MOVE_ASSIST,
-              MOVE_DISABLE,
-              MOVE_BATON_PASS,
-              MOVE_WISH,
-              MOVE_TRICK,
-              MOVE_SMELLING_SALT),
-
-    egg_moves(WINGULL,
-              MOVE_MIST,
-              MOVE_TWISTER,
-              MOVE_AGILITY,
-              MOVE_GUST,
-              MOVE_WATER_SPORT),
-
-    egg_moves(SURSKIT,
-              MOVE_FORESIGHT,
-              MOVE_MUD_SHOT,
-              MOVE_PSYBEAM,
-              MOVE_HYDRO_PUMP,
-              MOVE_MIND_READER),
-
-    egg_moves(WAILMER,
-              MOVE_DOUBLE_EDGE,
-              MOVE_THRASH,
-              MOVE_SWAGGER,
-              MOVE_SNORE,
-              MOVE_SLEEP_TALK,
-              MOVE_CURSE,
-              MOVE_FISSURE,
-              MOVE_TICKLE),
-
-    egg_moves(SKITTY,
-              MOVE_HELPING_HAND,
-              MOVE_PSYCH_UP,
-              MOVE_UPROAR,
-              MOVE_FAKE_TEARS,
-              MOVE_WISH,
-              MOVE_BATON_PASS,
-              MOVE_SUBSTITUTE,
-              MOVE_TICKLE),
-
-    egg_moves(KECLEON,
-              MOVE_DISABLE,
-              MOVE_MAGIC_COAT,
-              MOVE_TRICK),
-
-    egg_moves(NOSEPASS,
-              MOVE_MAGNITUDE,
-              MOVE_ROLLOUT,
-              MOVE_EXPLOSION),
-
-    egg_moves(TORKOAL,
-              MOVE_ERUPTION,
-              MOVE_ENDURE,
-              MOVE_SLEEP_TALK,
-              MOVE_YAWN),
-
-    egg_moves(SABLEYE,
-              MOVE_PSYCH_UP,
-              MOVE_RECOVER,
-              MOVE_MOONLIGHT),
-
-    egg_moves(BARBOACH,
-              MOVE_THRASH,
-              MOVE_WHIRLPOOL,
-              MOVE_SPARK),
-
-    egg_moves(LUVDISC,
-              MOVE_SPLASH,
-              MOVE_SUPERSONIC,
-              MOVE_WATER_SPORT,
-              MOVE_MUD_SPORT),
-
-    egg_moves(CORPHISH,
-              MOVE_MUD_SPORT,
-              MOVE_ENDEAVOR,
-              MOVE_BODY_SLAM,
-              MOVE_ANCIENT_POWER),
-
-    egg_moves(FEEBAS,
-              MOVE_MIRROR_COAT,
-              MOVE_DRAGON_BREATH,
-              MOVE_MUD_SPORT,
-              MOVE_HYPNOSIS,
-              MOVE_LIGHT_SCREEN,
-              MOVE_CONFUSE_RAY),
-
-    egg_moves(CARVANHA,
-              MOVE_HYDRO_PUMP,
-              MOVE_DOUBLE_EDGE,
-              MOVE_THRASH),
-
-    egg_moves(TRAPINCH,
-              MOVE_FOCUS_ENERGY,
-              MOVE_QUICK_ATTACK,
-              MOVE_GUST),
-
-    egg_moves(MAKUHITA,
-              MOVE_FAINT_ATTACK,
-              MOVE_DETECT,
-              MOVE_FORESIGHT,
-              MOVE_HELPING_HAND,
-              MOVE_CROSS_CHOP,
-              MOVE_REVENGE,
-              MOVE_DYNAMIC_PUNCH,
-              MOVE_COUNTER),
-
-    egg_moves(ELECTRIKE,
-              MOVE_CRUNCH,
-              MOVE_HEADBUTT,
-              MOVE_UPROAR,
-              MOVE_CURSE,
-              MOVE_SWIFT),
-
-    egg_moves(NUMEL,
-              MOVE_HOWL,
-              MOVE_SCARY_FACE,
-              MOVE_BODY_SLAM,
-              MOVE_ROLLOUT,
-              MOVE_DEFENSE_CURL,
-              MOVE_STOMP),
-
-    egg_moves(SPHEAL,
-              MOVE_WATER_SPORT,
-              MOVE_STOCKPILE,
-              MOVE_SWALLOW,
-              MOVE_SPIT_UP,
-              MOVE_YAWN,
-              MOVE_ROCK_SLIDE,
-              MOVE_CURSE,
-              MOVE_FISSURE),
-
-    egg_moves(CACNEA,
-              MOVE_GRASS_WHISTLE,
-              MOVE_ACID,
-              MOVE_TEETER_DANCE,
-              MOVE_DYNAMIC_PUNCH,
-              MOVE_COUNTER),
-
-    egg_moves(SNORUNT,
-              MOVE_BLOCK,
-              MOVE_SPIKES),
-
-    egg_moves(AZURILL,
-              MOVE_ENCORE,
-              MOVE_SING,
-              MOVE_REFRESH,
-              MOVE_SLAM,
-              MOVE_TICKLE),
-
-    egg_moves(SPOINK,
-              MOVE_FUTURE_SIGHT,
-              MOVE_EXTRASENSORY,
-              MOVE_SUBSTITUTE,
-              MOVE_TRICK),
-
-    egg_moves(PLUSLE,
-              MOVE_SUBSTITUTE,
-              MOVE_WISH),
-
-    egg_moves(MINUN,
-              MOVE_SUBSTITUTE,
-              MOVE_WISH),
-
-    egg_moves(MAWILE,
-              MOVE_SWORDS_DANCE,
-              MOVE_FALSE_SWIPE,
-              MOVE_POISON_FANG,
-              MOVE_PSYCH_UP,
-              MOVE_ANCIENT_POWER,
-              MOVE_TICKLE),
-
-    egg_moves(MEDITITE,
-              MOVE_FIRE_PUNCH,
-              MOVE_THUNDER_PUNCH,
-              MOVE_ICE_PUNCH,
-              MOVE_FORESIGHT,
-              MOVE_FAKE_OUT,
-              MOVE_BATON_PASS,
-              MOVE_DYNAMIC_PUNCH),
-
-    egg_moves(SWABLU,
-              MOVE_AGILITY,
-              MOVE_HAZE,
-              MOVE_PURSUIT,
-              MOVE_RAGE),
-
-    egg_moves(DUSKULL,
-              MOVE_IMPRISON,
-              MOVE_DESTINY_BOND,
-              MOVE_PAIN_SPLIT,
-              MOVE_GRUDGE,
-              MOVE_MEMENTO,
-              MOVE_FAINT_ATTACK),
-
-    egg_moves(ROSELIA,
-              MOVE_SPIKES,
-              MOVE_SYNTHESIS,
-              MOVE_PIN_MISSILE,
-              MOVE_COTTON_SPORE),
-
-    egg_moves(SLAKOTH,
-              MOVE_PURSUIT,
-              MOVE_SLASH,
-              MOVE_BODY_SLAM,
-              MOVE_SNORE,
-              MOVE_CRUSH_CLAW,
-              MOVE_CURSE,
-              MOVE_SLEEP_TALK),
-
-    egg_moves(GULPIN,
-              MOVE_DREAM_EATER,
-              MOVE_ACID_ARMOR,
-              MOVE_SMOG,
-              MOVE_PAIN_SPLIT),
-
-    egg_moves(TROPIUS,
-              MOVE_HEADBUTT,
-              MOVE_SLAM,
-              MOVE_RAZOR_WIND,
-              MOVE_LEECH_SEED,
-              MOVE_NATURE_POWER),
-
-    egg_moves(WHISMUR,
-              MOVE_TAKE_DOWN,
-              MOVE_SNORE,
-              MOVE_SWAGGER,
-              MOVE_EXTRASENSORY,
-              MOVE_SMELLING_SALT),
-
-    egg_moves(CLAMPERL,
-              MOVE_REFRESH,
-              MOVE_MUD_SPORT,
-              MOVE_BODY_SLAM,
-              MOVE_SUPERSONIC,
-              MOVE_BARRIER,
-              MOVE_CONFUSE_RAY),
-
-    egg_moves(ABSOL,
-              MOVE_BATON_PASS,
-              MOVE_FAINT_ATTACK,
-              MOVE_DOUBLE_EDGE,
-              MOVE_MAGIC_COAT,
-              MOVE_CURSE,
-              MOVE_SUBSTITUTE),
-
-    egg_moves(SHUPPET,
-              MOVE_DISABLE,
-              MOVE_DESTINY_BOND,
-              MOVE_FORESIGHT,
-              MOVE_ASTONISH,
-              MOVE_IMPRISON),
-
-    egg_moves(SEVIPER,
-              MOVE_STOCKPILE,
-              MOVE_SWALLOW,
-              MOVE_SPIT_UP,
-              MOVE_BODY_SLAM),
-
-    egg_moves(ZANGOOSE,
-              MOVE_FLAIL,
-              MOVE_DOUBLE_KICK,
-              MOVE_RAZOR_WIND,
-              MOVE_COUNTER,
-              MOVE_ROAR,
-              MOVE_CURSE),
-
-    egg_moves(RELICANTH,
-              MOVE_MAGNITUDE,
-              MOVE_SKULL_BASH,
-              MOVE_WATER_SPORT,
-              MOVE_AMNESIA,
-              MOVE_SLEEP_TALK,
-              MOVE_ROCK_SLIDE),
-
-    egg_moves(ARON,
-              MOVE_ENDEAVOR,
-              MOVE_BODY_SLAM,
-              MOVE_STOMP,
-              MOVE_SMELLING_SALT),
-
-    egg_moves(CASTFORM,
-              MOVE_FUTURE_SIGHT,
-              MOVE_PSYCH_UP),
-
-    egg_moves(VOLBEAT,
-              MOVE_BATON_PASS,
-              MOVE_SILVER_WIND,
-              MOVE_TRICK),
-
-    egg_moves(ILLUMISE,
-              MOVE_BATON_PASS,
-              MOVE_SILVER_WIND,
-              MOVE_GROWTH),
-
-    egg_moves(LILEEP,
-              MOVE_BARRIER,
-              MOVE_RECOVER,
-              MOVE_MIRROR_COAT,
-              MOVE_ROCK_SLIDE),
-
-    egg_moves(ANORITH,
-              MOVE_RAPID_SPIN,
-              MOVE_KNOCK_OFF,
-              MOVE_SWORDS_DANCE,
-              MOVE_ROCK_SLIDE),
-
-    egg_moves(RALTS,
-              MOVE_DISABLE,
-              MOVE_WILL_O_WISP,
-              MOVE_MEAN_LOOK,
-              MOVE_MEMENTO,
-              MOVE_DESTINY_BOND),
-
-    egg_moves(BAGON,
-              MOVE_HYDRO_PUMP,
-              MOVE_THRASH,
-              MOVE_DRAGON_RAGE,
-              MOVE_TWISTER,
-              MOVE_DRAGON_DANCE),
-
-    egg_moves(CHIMECHO,
-              MOVE_DISABLE,
-              MOVE_CURSE,
-              MOVE_HYPNOSIS,
-              MOVE_DREAM_EATER),
-
-    0xFFFF
+const u16 gDummyEggMoves[] = {
+    0,
+};
+
+const u16 gBulbasaurEggMoves[] = {
+    MOVE_AMNESIA,
+    MOVE_CHARM,
+    MOVE_CURSE,
+    MOVE_ENDURE,
+    MOVE_GIGA_DRAIN,
+    MOVE_GRASS_WHISTLE,
+    // Grassy Terrain,
+    MOVE_INGRAIN,
+    MOVE_LEAF_STORM,
+    MOVE_LIGHT_SCREEN,
+    MOVE_MAGICAL_LEAF,
+    MOVE_NATURE_POWER,
+    MOVE_PETAL_DANCE,
+    MOVE_POWER_WHIP,
+    MOVE_SAFEGUARD,
+    MOVE_SKULL_BASH,
+    MOVE_SLUDGE,
+    0,
+};
+
+const u16 gIvysaurEggMoves[] = {
+    MOVE_AMNESIA,
+    MOVE_CHARM,
+    MOVE_CURSE,
+    MOVE_ENDURE,
+    MOVE_GIGA_DRAIN,
+    MOVE_GRASS_WHISTLE,
+    // Grassy Terrain,
+    MOVE_INGRAIN,
+    MOVE_LEAF_STORM,
+    MOVE_LIGHT_SCREEN,
+    MOVE_MAGICAL_LEAF,
+    MOVE_NATURE_POWER,
+    MOVE_PETAL_DANCE,
+    MOVE_POWER_WHIP,
+    MOVE_SAFEGUARD,
+    MOVE_SKULL_BASH,
+    MOVE_SLUDGE,
+    0,
+};
+
+const u16 gVenusaurEggMoves[] = {
+    MOVE_AMNESIA,
+    MOVE_CHARM,
+    MOVE_CURSE,
+    MOVE_ENDURE,
+    MOVE_GIGA_DRAIN,
+    MOVE_GRASS_WHISTLE,
+    // Grassy Terrain,
+    MOVE_INGRAIN,
+    MOVE_LEAF_STORM,
+    MOVE_LIGHT_SCREEN,
+    MOVE_MAGICAL_LEAF,
+    MOVE_NATURE_POWER,
+    MOVE_PETAL_DANCE,
+    MOVE_POWER_WHIP,
+    MOVE_SAFEGUARD,
+    MOVE_SKULL_BASH,
+    MOVE_SLUDGE,
+    0,
+};
+
+const u16 gCharmanderEggMoves[] = {
+    MOVE_AIR_CUTTER,
+    MOVE_ANCIENT_POWER,
+    MOVE_BEAT_UP,
+    MOVE_BELLY_DRUM,
+    MOVE_BITE,
+    MOVE_COUNTER,
+    MOVE_CRUNCH,
+    MOVE_DRAGON_DANCE,
+    MOVE_DRAGON_PULSE,
+    MOVE_DRAGON_RUSH,
+    MOVE_FLARE_BLITZ,
+    MOVE_FOCUS_PUNCH,
+    MOVE_METAL_CLAW,
+    MOVE_OUTRAGE,
+    MOVE_ROCK_SLIDE,
+    MOVE_SWORDS_DANCE,
+    0,
+};
+
+const u16 gCharmeleonEggMoves[] = {
+    MOVE_AIR_CUTTER,
+    MOVE_ANCIENT_POWER,
+    MOVE_BEAT_UP,
+    MOVE_BELLY_DRUM,
+    MOVE_BITE,
+    MOVE_COUNTER,
+    MOVE_CRUNCH,
+    MOVE_DRAGON_DANCE,
+    MOVE_DRAGON_PULSE,
+    MOVE_DRAGON_RUSH,
+    MOVE_FLARE_BLITZ,
+    MOVE_FOCUS_PUNCH,
+    MOVE_METAL_CLAW,
+    MOVE_OUTRAGE,
+    MOVE_ROCK_SLIDE,
+    MOVE_SWORDS_DANCE,
+    0,
+};
+
+const u16 gCharizardEggMoves[] = {
+    MOVE_AIR_CUTTER,
+    MOVE_ANCIENT_POWER,
+    MOVE_BEAT_UP,
+    MOVE_BELLY_DRUM,
+    MOVE_BITE,
+    MOVE_COUNTER,
+    MOVE_CRUNCH,
+    MOVE_DRAGON_DANCE,
+    MOVE_DRAGON_PULSE,
+    MOVE_DRAGON_RUSH,
+    MOVE_FLARE_BLITZ,
+    MOVE_FOCUS_PUNCH,
+    MOVE_METAL_CLAW,
+    MOVE_OUTRAGE,
+    MOVE_ROCK_SLIDE,
+    MOVE_SWORDS_DANCE,
+    0,
+};
+
+const u16 gSquirtleEggMoves[] = {
+    MOVE_AQUA_JET,
+    MOVE_AQUA_RING,
+    MOVE_AURA_SPHERE,
+    MOVE_BRINE,
+    MOVE_DRAGON_PULSE,
+    MOVE_FAKE_OUT,
+    MOVE_FLAIL,
+    MOVE_FORESIGHT,
+    MOVE_HAZE,
+    MOVE_MIRROR_COAT,
+    MOVE_MIST,
+    MOVE_MUDDY_WATER,
+    MOVE_MUD_SPORT,
+    MOVE_REFRESH,
+    MOVE_WATER_SPOUT,
+    MOVE_YAWN,
+    0,
+};
+
+const u16 gWartortleEggMoves[] = {
+    MOVE_AQUA_JET,
+    MOVE_AQUA_RING,
+    MOVE_AURA_SPHERE,
+    MOVE_BRINE,
+    MOVE_DRAGON_PULSE,
+    MOVE_FAKE_OUT,
+    MOVE_FLAIL,
+    MOVE_FORESIGHT,
+    MOVE_HAZE,
+    MOVE_MIRROR_COAT,
+    MOVE_MIST,
+    MOVE_MUDDY_WATER,
+    MOVE_MUD_SPORT,
+    MOVE_REFRESH,
+    MOVE_WATER_SPOUT,
+    MOVE_YAWN,
+    0,
+};
+
+const u16 gBlastoiseEggMoves[] = {
+    MOVE_AQUA_JET,
+    MOVE_AQUA_RING,
+    MOVE_AURA_SPHERE,
+    MOVE_BRINE,
+    MOVE_DRAGON_PULSE,
+    MOVE_FAKE_OUT,
+    MOVE_FLAIL,
+    MOVE_FORESIGHT,
+    MOVE_HAZE,
+    MOVE_MIRROR_COAT,
+    MOVE_MIST,
+    MOVE_MUDDY_WATER,
+    MOVE_MUD_SPORT,
+    MOVE_REFRESH,
+    MOVE_WATER_SPOUT,
+    MOVE_YAWN,
+    0,
+};
+
+const u16 gCaterpieEggMoves[] = {
+    0,
+};
+
+const u16 gMetapodEggMoves[] = {
+    0,
+};
+
+const u16 gButterfreeEggMoves[] = {
+    0,
+};
+
+const u16 gWeedleEggMoves[] = {
+    0,
+};
+
+const u16 gKakunaEggMoves[] = {
+    0,
+};
+
+const u16 gBeedrillEggMoves[] = {
+    0,
+};
+
+const u16 gPidgeyEggMoves[] = {
+    MOVE_AIR_CUTTER,
+    MOVE_AIR_SLASH,
+    MOVE_BRAVE_BIRD,
+    MOVE_DEFOG,
+    MOVE_FAINT_ATTACK,
+    MOVE_FORESIGHT,
+    MOVE_PURSUIT,
+    MOVE_STEEL_WING,
+    MOVE_UPROAR,
+    0,
+};
+
+const u16 gPidgeottoEggMoves[] = {
+    MOVE_AIR_CUTTER,
+    MOVE_AIR_SLASH,
+    MOVE_BRAVE_BIRD,
+    MOVE_DEFOG,
+    MOVE_FAINT_ATTACK,
+    MOVE_FORESIGHT,
+    MOVE_PURSUIT,
+    MOVE_STEEL_WING,
+    MOVE_UPROAR,
+    0,
+};
+
+const u16 gPidgeotEggMoves[] = {
+    MOVE_AIR_CUTTER,
+    MOVE_AIR_SLASH,
+    MOVE_BRAVE_BIRD,
+    MOVE_DEFOG,
+    MOVE_FAINT_ATTACK,
+    MOVE_FORESIGHT,
+    MOVE_PURSUIT,
+    MOVE_STEEL_WING,
+    MOVE_UPROAR,
+    0,
+};
+
+const u16 gRattataEggMoves[] = {
+    MOVE_BITE,
+    MOVE_COUNTER,
+    // Final Gambit,
+    MOVE_FLAME_WHEEL,
+    MOVE_FURY_SWIPES,
+    // Last Resort
+    MOVE_ME_FIRST,
+    MOVE_REVENGE,
+    MOVE_REVERSAL,
+    MOVE_SCREECH,
+    MOVE_SWAGGER,
+    MOVE_UPROAR,
+    0,
+};
+
+const u16 gRaticateEggMoves[] = {
+    MOVE_BITE,
+    MOVE_COUNTER,
+    // Final Gambit,
+    MOVE_FLAME_WHEEL,
+    MOVE_FURY_SWIPES,
+    // Last Resort
+    MOVE_ME_FIRST,
+    MOVE_REVENGE,
+    MOVE_REVERSAL,
+    MOVE_SCREECH,
+    MOVE_SWAGGER,
+    MOVE_UPROAR,
+    0,
+};
+
+const u16 gSpearowEggMoves[] = {
+    MOVE_ASTONISH,
+    MOVE_FALSE_SWIPE,
+    MOVE_FEATHER_DANCE,
+    MOVE_FAINT_ATTACK,
+    MOVE_QUICK_ATTACK,
+    MOVE_RAZOR_WIND,
+    MOVE_SCARY_FACE,
+    MOVE_SKY_ATTACK,
+    MOVE_STEEL_WING,
+    MOVE_TRI_ATTACK,
+    MOVE_UPROAR,
+    MOVE_WHIRLWIND,
+    0,
+};
+
+const u16 gFearowEggMoves[] = {
+    MOVE_ASTONISH,
+    MOVE_FALSE_SWIPE,
+    MOVE_FEATHER_DANCE,
+    MOVE_FAINT_ATTACK,
+    MOVE_QUICK_ATTACK,
+    MOVE_RAZOR_WIND,
+    MOVE_SCARY_FACE,
+    MOVE_SKY_ATTACK,
+    MOVE_STEEL_WING,
+    MOVE_TRI_ATTACK,
+    MOVE_UPROAR,
+    MOVE_WHIRLWIND,
+    0,
+};
+
+const u16 gEkansEggMoves[] = {
+    MOVE_BEAT_UP,
+    MOVE_DISABLE,
+    MOVE_IRON_TAIL,
+    MOVE_POISON_FANG,
+    MOVE_POISON_TAIL,
+    MOVE_PURSUIT,
+    MOVE_SCARY_FACE,
+    MOVE_SLAM,
+    MOVE_SNATCH,
+    MOVE_SPITE,
+    MOVE_SUCKER_PUNCH,
+    MOVE_SWITCHEROO,
+    0,
+};
+
+const u16 gArbokEggMoves[] = {
+    MOVE_BEAT_UP,
+    MOVE_DISABLE,
+    MOVE_IRON_TAIL,
+    MOVE_POISON_FANG,
+    MOVE_POISON_TAIL,
+    MOVE_PURSUIT,
+    MOVE_SCARY_FACE,
+    MOVE_SLAM,
+    MOVE_SNATCH,
+    MOVE_SPITE,
+    MOVE_SUCKER_PUNCH,
+    MOVE_SWITCHEROO,
+    0,
+};
+
+const u16 gPichuEggMoves[] = {
+    // Bestow
+    MOVE_BIDE,
+    MOVE_CHARGE,
+    MOVE_DISARM_VOICE,
+    MOVE_DOUBLE_SLAP,
+    // Electric Terrain
+    MOVE_ENCORE,
+    MOVE_ENDURE,
+    MOVE_FAKE_OUT,
+    MOVE_FLAIL,
+    MOVE_LUCKY_CHANT,
+    MOVE_PRESENT,
+    MOVE_REVERSAL,
+    MOVE_THUNDER_PUNCH,
+    MOVE_TICKLE,
+    MOVE_VOLT_TACKLE,
+    MOVE_WISH,
+    0,
+};
+
+const u16 gPikachuEggMoves[] = {
+    // Bestow
+    MOVE_BIDE,
+    MOVE_CHARGE,
+    MOVE_DISARM_VOICE,
+    MOVE_DOUBLE_SLAP,
+    // Electric Terrain
+    MOVE_ENCORE,
+    MOVE_ENDURE,
+    MOVE_FAKE_OUT,
+    MOVE_FLAIL,
+    MOVE_LUCKY_CHANT,
+    MOVE_PRESENT,
+    MOVE_REVERSAL,
+    MOVE_THUNDER_PUNCH,
+    MOVE_TICKLE,
+    MOVE_VOLT_TACKLE,
+    MOVE_WISH,
+    0,
+};
+
+const u16 gRaichuEggMoves[] = {
+    // Bestow
+    MOVE_BIDE,
+    MOVE_CHARGE,
+    MOVE_DISARM_VOICE,
+    MOVE_DOUBLE_SLAP,
+    // Electric Terrain
+    MOVE_ENCORE,
+    MOVE_ENDURE,
+    MOVE_FAKE_OUT,
+    MOVE_FLAIL,
+    MOVE_LUCKY_CHANT,
+    MOVE_PRESENT,
+    MOVE_REVERSAL,
+    MOVE_THUNDER_PUNCH,
+    MOVE_TICKLE,
+    MOVE_VOLT_TACKLE,
+    MOVE_WISH,
+    0,
+};
+
+const u16 gSandshrewEggMoves[] = {
+    MOVE_CHIP_AWAY,
+    MOVE_COUNTER,
+    MOVE_CRUSH_CLAW,
+    MOVE_ENDURE,
+    MOVE_FLAIL,
+    MOVE_HONE_CLAWS,
+    MOVE_METAL_CLAW,
+    MOVE_MUD_SHOT,
+    MOVE_NIGHT_SLASH,
+    MOVE_RAPID_SPIN,
+    // Rock Climb
+    MOVE_ROCK_SLIDE,
+    // Rototiller
+    MOVE_SAFEGUARD,
+    MOVE_SWORDS_DANCE,
+    0,
+};
+
+const u16 gSandslashEggMoves[] = {
+    MOVE_CHIP_AWAY,
+    MOVE_COUNTER,
+    MOVE_CRUSH_CLAW,
+    MOVE_ENDURE,
+    MOVE_FLAIL,
+    MOVE_HONE_CLAWS,
+    MOVE_METAL_CLAW,
+    MOVE_MUD_SHOT,
+    MOVE_NIGHT_SLASH,
+    MOVE_RAPID_SPIN,
+    // Rock Climb
+    MOVE_ROCK_SLIDE,
+    // Rototiller
+    MOVE_SAFEGUARD,
+    MOVE_SWORDS_DANCE,
+    0,
+};
+
+const u16 gNidoranFEggMoves[] = {
+    MOVE_BEAT_UP,
+    MOVE_CHARM,
+    MOVE_CHIP_AWAY,
+    MOVE_COUNTER,
+    MOVE_DISABLE,
+    MOVE_ENDURE,
+    MOVE_FOCUS_ENERGY,
+    MOVE_IRON_TAIL,
+    MOVE_POISON_TAIL,
+    MOVE_PURSUIT,
+    MOVE_SKULL_BASH,
+    MOVE_SUPERSONIC,
+    MOVE_TAKE_DOWN,
+    MOVE_VENOM_DRENCH,
+    0,
+};
+
+const u16 gNidorinaEggMoves[] = {
+    MOVE_BEAT_UP,
+    MOVE_CHARM,
+    MOVE_CHIP_AWAY,
+    MOVE_COUNTER,
+    MOVE_DISABLE,
+    MOVE_ENDURE,
+    MOVE_FOCUS_ENERGY,
+    MOVE_IRON_TAIL,
+    MOVE_POISON_TAIL,
+    MOVE_PURSUIT,
+    MOVE_SKULL_BASH,
+    MOVE_SUPERSONIC,
+    MOVE_TAKE_DOWN,
+    MOVE_VENOM_DRENCH,
+    0,
+};
+
+const u16 gNidoqueenEggMoves[] = {
+    MOVE_BEAT_UP,
+    MOVE_CHARM,
+    MOVE_CHIP_AWAY,
+    MOVE_COUNTER,
+    MOVE_DISABLE,
+    MOVE_ENDURE,
+    MOVE_FOCUS_ENERGY,
+    MOVE_IRON_TAIL,
+    MOVE_POISON_TAIL,
+    MOVE_PURSUIT,
+    MOVE_SKULL_BASH,
+    MOVE_SUPERSONIC,
+    MOVE_TAKE_DOWN,
+    MOVE_VENOM_DRENCH,
+    0,
+};
+
+const u16 gNidoranMEggMoves[] = {
+    MOVE_AMNESIA,
+    MOVE_BEAT_UP,
+    MOVE_CHIP_AWAY,
+    MOVE_CONFUSION,
+    MOVE_COUNTER,
+    MOVE_DISABLE,
+    MOVE_ENDURE,
+    MOVE_HEAD_SMASH,
+    MOVE_IRON_TAIL,
+    MOVE_POISON_TAIL,
+    MOVE_SUCKER_PUNCH,
+    MOVE_SUPERSONIC,
+    MOVE_TAKE_DOWN,
+    MOVE_VENOM_DRENCH,
+    0,
+};
+
+const u16 gNidorinoEggMoves[] = {
+    MOVE_AMNESIA,
+    MOVE_BEAT_UP,
+    MOVE_CHIP_AWAY,
+    MOVE_CONFUSION,
+    MOVE_COUNTER,
+    MOVE_DISABLE,
+    MOVE_ENDURE,
+    MOVE_HEAD_SMASH,
+    MOVE_IRON_TAIL,
+    MOVE_POISON_TAIL,
+    MOVE_SUCKER_PUNCH,
+    MOVE_SUPERSONIC,
+    MOVE_TAKE_DOWN,
+    MOVE_VENOM_DRENCH,
+    0,
+};
+
+const u16 gNidokingEggMoves[] = {
+    MOVE_AMNESIA,
+    MOVE_BEAT_UP,
+    MOVE_CHIP_AWAY,
+    MOVE_CONFUSION,
+    MOVE_COUNTER,
+    MOVE_DISABLE,
+    MOVE_ENDURE,
+    MOVE_HEAD_SMASH,
+    MOVE_IRON_TAIL,
+    MOVE_POISON_TAIL,
+    MOVE_SUCKER_PUNCH,
+    MOVE_SUPERSONIC,
+    MOVE_TAKE_DOWN,
+    MOVE_VENOM_DRENCH,
+    0,
+};
+
+const u16 gCleffaEggMoves[] = {
+    MOVE_AMNESIA,
+    MOVE_AROMATHERAPY,
+    MOVE_BELLY_DRUM,
+    MOVE_COVET,
+    MOVE_FAKE_TEARS,
+    MOVE_HEAL_PULSE,
+    MOVE_METRONOME,
+    MOVE_MIMIC,
+    // Misty Terrain
+    MOVE_PRESENT,
+    MOVE_SPLASH,
+    MOVE_STORED_POWER,
+    MOVE_SUBSTITUTE,
+    MOVE_TICKLE,
+    MOVE_WISH,
+    0,
+};
+
+const u16 gClefairyEggMoves[] = {
+    MOVE_AMNESIA,
+    MOVE_AROMATHERAPY,
+    MOVE_BELLY_DRUM,
+    MOVE_COVET,
+    MOVE_FAKE_TEARS,
+    MOVE_HEAL_PULSE,
+    MOVE_METRONOME,
+    MOVE_MIMIC,
+    // Misty Terrain
+    MOVE_PRESENT,
+    MOVE_SPLASH,
+    MOVE_STORED_POWER,
+    MOVE_SUBSTITUTE,
+    MOVE_TICKLE,
+    MOVE_WISH,
+    0,
+};
+
+const u16 gClefableEggMoves[] = {
+    MOVE_AMNESIA,
+    MOVE_AROMATHERAPY,
+    MOVE_BELLY_DRUM,
+    MOVE_COVET,
+    MOVE_FAKE_TEARS,
+    MOVE_HEAL_PULSE,
+    MOVE_METRONOME,
+    MOVE_MIMIC,
+    // Misty Terrain
+    MOVE_PRESENT,
+    MOVE_SPLASH,
+    MOVE_STORED_POWER,
+    MOVE_SUBSTITUTE,
+    MOVE_TICKLE,
+    MOVE_WISH,
+    0,
+};
+
+const u16 gVulpixEggMoves[] = {
+    MOVE_CAPTIVATE,
+    MOVE_DISABLE,
+    MOVE_ENERGY_BALL,
+    MOVE_EXTRASENSORY,
+    MOVE_FAINT_ATTACK,
+    MOVE_FLAIL,
+    MOVE_FLARE_BLITZ,
+    MOVE_HEAT_WAVE,
+    MOVE_HEX,
+    MOVE_HOWL,
+    MOVE_HYPNOSIS,
+    MOVE_POWER_SWAP,
+    MOVE_PSYCH_UP,
+    MOVE_SECRET_POWER,
+    MOVE_SPITE,
+    // Tail Slap
+    0,
+};
+
+const u16 gNinetalesEggMoves[] = {
+    MOVE_CAPTIVATE,
+    MOVE_DISABLE,
+    MOVE_ENERGY_BALL,
+    MOVE_EXTRASENSORY,
+    MOVE_FAINT_ATTACK,
+    MOVE_FLAIL,
+    MOVE_FLARE_BLITZ,
+    MOVE_HEAT_WAVE,
+    MOVE_HEX,
+    MOVE_HOWL,
+    MOVE_HYPNOSIS,
+    MOVE_POWER_SWAP,
+    MOVE_PSYCH_UP,
+    MOVE_SECRET_POWER,
+    MOVE_SPITE,
+    // Tail Slap
+    0,
+};
+
+const u16 gIgglybuffEggMoves[] = {
+    MOVE_CAPTIVATE,
+    MOVE_COVET,
+    MOVE_FAKE_TEARS,
+    MOVE_FAINT_ATTACK,
+    // Gravity
+    MOVE_HEAL_PULSE,
+    // Last Resort
+    // Misty Terrain
+    MOVE_PERISH_SONG,
+    MOVE_PRESENT,
+    MOVE_PUNISHMENT,
+    MOVE_SLEEP_TALK,
+    MOVE_WISH,
+    0,
+};
+
+const u16 gJigglypuffEggMoves[] = {
+    MOVE_CAPTIVATE,
+    MOVE_COVET,
+    MOVE_FAKE_TEARS,
+    MOVE_FAINT_ATTACK,
+    // Gravity
+    MOVE_HEAL_PULSE,
+    // Last Resort
+    // Misty Terrain
+    MOVE_PERISH_SONG,
+    MOVE_PRESENT,
+    MOVE_PUNISHMENT,
+    MOVE_SLEEP_TALK,
+    MOVE_WISH,
+    0,
+};
+
+const u16 gWigglytuffEggMoves[] = {
+    MOVE_CAPTIVATE,
+    MOVE_COVET,
+    MOVE_FAKE_TEARS,
+    MOVE_FAINT_ATTACK,
+    // Gravity
+    MOVE_HEAL_PULSE,
+    // Last Resort
+    // Misty Terrain
+    MOVE_PERISH_SONG,
+    MOVE_PRESENT,
+    MOVE_PUNISHMENT,
+    MOVE_SLEEP_TALK,
+    MOVE_WISH,
+    0,
+};
+
+const u16 gZubatEggMoves[] = {
+    MOVE_BRAVE_BIRD,
+    MOVE_CURSE,
+    MOVE_DEFOG,
+    MOVE_FAINT_ATTACK,
+    MOVE_GIGA_DRAIN,
+    MOVE_GUST,
+    MOVE_HYPNOSIS,
+    MOVE_NASTY_PLOT,
+    MOVE_PURSUIT,
+    MOVE_QUICK_ATTACK,
+    MOVE_STEEL_WING,
+    MOVE_VENOM_DRENCH,
+    MOVE_WHIRLWIND,
+    MOVE_ZEN_HEADBUTT,
+    0,
+};
+
+const u16 gGolbatEggMoves[] = {
+    MOVE_BRAVE_BIRD,
+    MOVE_CURSE,
+    MOVE_DEFOG,
+    MOVE_FAINT_ATTACK,
+    MOVE_GIGA_DRAIN,
+    MOVE_GUST,
+    MOVE_HYPNOSIS,
+    MOVE_NASTY_PLOT,
+    MOVE_PURSUIT,
+    MOVE_QUICK_ATTACK,
+    MOVE_STEEL_WING,
+    MOVE_VENOM_DRENCH,
+    MOVE_WHIRLWIND,
+    MOVE_ZEN_HEADBUTT,
+    0,
+};
+
+const u16 gCrobatEggMoves[] = {
+    MOVE_BRAVE_BIRD,
+    MOVE_CURSE,
+    MOVE_DEFOG,
+    MOVE_FAINT_ATTACK,
+    MOVE_GIGA_DRAIN,
+    MOVE_GUST,
+    MOVE_HYPNOSIS,
+    MOVE_NASTY_PLOT,
+    MOVE_PURSUIT,
+    MOVE_QUICK_ATTACK,
+    MOVE_STEEL_WING,
+    MOVE_VENOM_DRENCH,
+    MOVE_WHIRLWIND,
+    MOVE_ZEN_HEADBUTT,
+    0,
+};
+
+const u16 gOddishEggMoves[] = {
+    // After You
+    MOVE_CHARM,
+    MOVE_FLAIL,
+    MOVE_INGRAIN,
+    MOVE_NATURE_POWER,
+    MOVE_RAZOR_LEAF,
+    MOVE_SECRET_POWER,
+    // Strength Sap
+    MOVE_SWORDS_DANCE,
+    MOVE_SYNTHESIS,
+    MOVE_TEETER_DANCE,
+    MOVE_TICKLE,
+    0,
+};
+
+const u16 gGloomEggMoves[] = {
+    // After You
+    MOVE_CHARM,
+    MOVE_FLAIL,
+    MOVE_INGRAIN,
+    MOVE_NATURE_POWER,
+    MOVE_RAZOR_LEAF,
+    MOVE_SECRET_POWER,
+    // Strength Sap
+    MOVE_SWORDS_DANCE,
+    MOVE_SYNTHESIS,
+    MOVE_TEETER_DANCE,
+    MOVE_TICKLE,
+    0,
+};
+
+const u16 gVileplumeEggMoves[] = {
+    // After You
+    MOVE_CHARM,
+    MOVE_FLAIL,
+    MOVE_INGRAIN,
+    MOVE_NATURE_POWER,
+    MOVE_RAZOR_LEAF,
+    MOVE_SECRET_POWER,
+    // Strength Sap
+    MOVE_SWORDS_DANCE,
+    MOVE_SYNTHESIS,
+    MOVE_TEETER_DANCE,
+    MOVE_TICKLE,
+    0,
+};
+
+const u16 gBellossomEggMoves[] = {
+    // After You
+    MOVE_CHARM,
+    MOVE_FLAIL,
+    MOVE_INGRAIN,
+    MOVE_NATURE_POWER,
+    MOVE_RAZOR_LEAF,
+    MOVE_SECRET_POWER,
+    // Strength Sap
+    MOVE_SWORDS_DANCE,
+    MOVE_SYNTHESIS,
+    MOVE_TEETER_DANCE,
+    MOVE_TICKLE,
+    0,
+};
+
+const u16 gParasEggMoves[] = {
+    MOVE_AGILITY,
+    MOVE_BUG_BITE,
+    MOVE_COUNTER,
+    MOVE_CROSS_POISON,
+    MOVE_ENDURE,
+    MOVE_FALSE_SWIPE,
+    // Fell Stinger
+    MOVE_FLAIL,
+    // Grassy Terrain,
+    MOVE_LEECH_SEED,
+    MOVE_LIGHT_SCREEN,
+    MOVE_METAL_CLAW,
+    MOVE_NATURAL_GIFT,
+    MOVE_PSYBEAM,
+    MOVE_PURSUIT,
+    // Rototiller
+    MOVE_SCREECH,
+    MOVE_SWEET_SCENT,
+    // Wide Guard
+    0,
+};
+
+const u16 gParasectEggMoves[] = {
+    MOVE_AGILITY,
+    MOVE_BUG_BITE,
+    MOVE_COUNTER,
+    MOVE_CROSS_POISON,
+    MOVE_ENDURE,
+    MOVE_FALSE_SWIPE,
+    // Fell Stinger
+    MOVE_FLAIL,
+    // Grassy Terrain,
+    MOVE_LEECH_SEED,
+    MOVE_LIGHT_SCREEN,
+    MOVE_METAL_CLAW,
+    MOVE_NATURAL_GIFT,
+    MOVE_PSYBEAM,
+    MOVE_PURSUIT,
+    // Rototiller
+    MOVE_SCREECH,
+    MOVE_SWEET_SCENT,
+    // Wide Guard
+    0,
+};
+
+const u16 gVenonatEggMoves[] = {
+    MOVE_AGILITY,
+    MOVE_BATON_PASS,
+    MOVE_BUG_BITE,
+    MOVE_GIGA_DRAIN,
+    MOVE_MORNING_SUN,
+    // Rage Powder
+    MOVE_SCREECH,
+    MOVE_SECRET_POWER,
+    MOVE_SIGNAL_BEAM,
+    MOVE_SKILL_SWAP,
+    MOVE_TOXIC_SPIKES,
+    0,
+};
+
+const u16 gVenomothEggMoves[] = {
+    MOVE_AGILITY,
+    MOVE_BATON_PASS,
+    MOVE_BUG_BITE,
+    MOVE_GIGA_DRAIN,
+    MOVE_MORNING_SUN,
+    // Rage Powder
+    MOVE_SCREECH,
+    MOVE_SECRET_POWER,
+    MOVE_SIGNAL_BEAM,
+    MOVE_SKILL_SWAP,
+    MOVE_TOXIC_SPIKES,
+    0,
+};
+
+const u16 gDiglettEggMoves[] = {
+    MOVE_ANCIENT_POWER,
+    MOVE_ASTONISH,
+    MOVE_BEAT_UP,
+    MOVE_ENDURE,
+    MOVE_FAINT_ATTACK,
+    // Final Gambit,
+    MOVE_HEADBUTT,
+    MOVE_MEMENTO,
+    MOVE_MUD_BOMB,
+    MOVE_PURSUIT,
+    MOVE_REVERSAL,
+    MOVE_ROCK_SLIDE,
+    MOVE_SCREECH,
+    MOVE_UPROAR,
+    0,
+};
+
+const u16 gDugtrioEggMoves[] = {
+    MOVE_ANCIENT_POWER,
+    MOVE_ASTONISH,
+    MOVE_BEAT_UP,
+    MOVE_ENDURE,
+    MOVE_FAINT_ATTACK,
+    // Final Gambit,
+    MOVE_HEADBUTT,
+    MOVE_MEMENTO,
+    MOVE_MUD_BOMB,
+    MOVE_PURSUIT,
+    MOVE_REVERSAL,
+    MOVE_ROCK_SLIDE,
+    MOVE_SCREECH,
+    MOVE_UPROAR,
+    0,
+};
+
+const u16 gMeowthEggMoves[] = {
+    MOVE_AMNESIA,
+    MOVE_ASSIST,
+    MOVE_CHARM,
+    MOVE_FLAIL,
+    MOVE_FOUL_PLAY,
+    MOVE_HYPNOSIS,
+    MOVE_IRON_TAIL,
+    // Last Resort
+    MOVE_ODOR_SLEUTH,
+    MOVE_PSYCH_UP,
+    MOVE_PUNISHMENT,
+    MOVE_SNATCH,
+    MOVE_SPITE,
+    MOVE_TAIL_WHIP,
+    0,
+};
+
+const u16 gPersianEggMoves[] = {
+    MOVE_AMNESIA,
+    MOVE_ASSIST,
+    MOVE_CHARM,
+    MOVE_FLAIL,
+    MOVE_FOUL_PLAY,
+    MOVE_HYPNOSIS,
+    MOVE_IRON_TAIL,
+    // Last Resort
+    MOVE_ODOR_SLEUTH,
+    MOVE_PSYCH_UP,
+    MOVE_PUNISHMENT,
+    MOVE_SNATCH,
+    MOVE_SPITE,
+    MOVE_TAIL_WHIP,
+    0,
+};
+
+const u16 gPsyduckEggMoves[] = {
+    MOVE_CLEAR_SMOG,
+    MOVE_CONFUSE_RAY,
+    MOVE_CROSS_CHOP,
+    MOVE_ENCORE,
+    MOVE_FORESIGHT,
+    MOVE_FUTURE_SIGHT,
+    MOVE_HYPNOSIS,
+    MOVE_LIGHT_SCREEN,
+    MOVE_MUD_BOMB,
+    MOVE_PSYBEAM,
+    MOVE_PSYCHIC,
+    MOVE_REFRESH,
+    MOVE_SECRET_POWER,
+    // Simple Beam
+    MOVE_SLEEP_TALK,
+    MOVE_SYNCHRONOISE,
+    MOVE_YAWN,
+    0,
+};
+
+const u16 gGolduckEggMoves[] = {
+    MOVE_CLEAR_SMOG,
+    MOVE_CONFUSE_RAY,
+    MOVE_CROSS_CHOP,
+    MOVE_ENCORE,
+    MOVE_FORESIGHT,
+    MOVE_FUTURE_SIGHT,
+    MOVE_HYPNOSIS,
+    MOVE_LIGHT_SCREEN,
+    MOVE_MUD_BOMB,
+    MOVE_PSYBEAM,
+    MOVE_PSYCHIC,
+    MOVE_REFRESH,
+    MOVE_SECRET_POWER,
+    // Simple Beam
+    MOVE_SLEEP_TALK,
+    MOVE_SYNCHRONOISE,
+    MOVE_YAWN,
+    0,
+};
+
+const u16 gMankeyEggMoves[] = {
+    MOVE_BEAT_UP,
+    MOVE_CLOSE_COMBAT,
+    MOVE_COUNTER,
+    MOVE_ENCORE,
+    MOVE_FOCUS_PUNCH,
+    MOVE_FORESIGHT,
+    MOVE_MEDITATE,
+    MOVE_NIGHT_SLASH,
+    // Power Trip
+    MOVE_REVENGE,
+    MOVE_REVERSAL,
+    MOVE_ROCK_SLIDE,
+    MOVE_SLEEP_TALK,
+    MOVE_SMELLING_SALT,
+    0,
+};
+
+const u16 gPrimeapeEggMoves[] = {
+    MOVE_BEAT_UP,
+    MOVE_CLOSE_COMBAT,
+    MOVE_COUNTER,
+    MOVE_ENCORE,
+    MOVE_FOCUS_PUNCH,
+    MOVE_FORESIGHT,
+    MOVE_MEDITATE,
+    MOVE_NIGHT_SLASH,
+    // Power Trip
+    MOVE_REVENGE,
+    MOVE_REVERSAL,
+    MOVE_ROCK_SLIDE,
+    MOVE_SLEEP_TALK,
+    MOVE_SMELLING_SALT,
+    0,
+};
+
+const u16 gGrowlitheEggMoves[] = {
+    MOVE_BODY_SLAM,
+    // Burn Up
+    MOVE_CLOSE_COMBAT,
+    MOVE_COVET,
+    MOVE_CRUNCH,
+    MOVE_DOUBLE_EDGE,
+    MOVE_DOUBLE_KICK,
+    MOVE_FIRE_SPIN,
+    MOVE_FLARE_BLITZ,
+    MOVE_HEAT_WAVE,
+    MOVE_HOWL,
+    MOVE_IRON_TAIL,
+    MOVE_MORNING_SUN,
+    MOVE_SAFEGUARD,
+    MOVE_THRASH,
+    0,
+};
+
+const u16 gArcanineEggMoves[] = {
+    MOVE_BODY_SLAM,
+    // Burn Up
+    MOVE_CLOSE_COMBAT,
+    MOVE_COVET,
+    MOVE_CRUNCH,
+    MOVE_DOUBLE_EDGE,
+    MOVE_DOUBLE_KICK,
+    MOVE_FIRE_SPIN,
+    MOVE_FLARE_BLITZ,
+    MOVE_HEAT_WAVE,
+    MOVE_HOWL,
+    MOVE_IRON_TAIL,
+    MOVE_MORNING_SUN,
+    MOVE_SAFEGUARD,
+    MOVE_THRASH,
+    0,
+};
+
+const u16 gPoliwagEggMoves[] = {
+    MOVE_BUBBLE_BEAM,
+    MOVE_ENCORE,
+    MOVE_ENDEAVOR,
+    MOVE_ENDURE,
+    MOVE_HAZE,
+    MOVE_ICE_BALL,
+    MOVE_MIND_READER,
+    MOVE_MIST,
+    MOVE_MUD_SHOT,
+    MOVE_REFRESH,
+    MOVE_SPLASH,
+    MOVE_WATER_PULSE,
+    MOVE_WATER_SPORT,
+    0,
+};
+
+const u16 gPoliwhirlEggMoves[] = {
+    MOVE_BUBBLE_BEAM,
+    MOVE_ENCORE,
+    MOVE_ENDEAVOR,
+    MOVE_ENDURE,
+    MOVE_HAZE,
+    MOVE_ICE_BALL,
+    MOVE_MIND_READER,
+    MOVE_MIST,
+    MOVE_MUD_SHOT,
+    MOVE_REFRESH,
+    MOVE_SPLASH,
+    MOVE_WATER_PULSE,
+    MOVE_WATER_SPORT,
+    0,
+};
+
+const u16 gPoliwrathEggMoves[] = {
+    MOVE_BUBBLE_BEAM,
+    MOVE_ENCORE,
+    MOVE_ENDEAVOR,
+    MOVE_ENDURE,
+    MOVE_HAZE,
+    MOVE_ICE_BALL,
+    MOVE_MIND_READER,
+    MOVE_MIST,
+    MOVE_MUD_SHOT,
+    MOVE_REFRESH,
+    MOVE_SPLASH,
+    MOVE_WATER_PULSE,
+    MOVE_WATER_SPORT,
+    0,
+};
+
+const u16 gPolitoedEggMoves[] = {
+    MOVE_BUBBLE_BEAM,
+    MOVE_ENCORE,
+    MOVE_ENDEAVOR,
+    MOVE_ENDURE,
+    MOVE_HAZE,
+    MOVE_ICE_BALL,
+    MOVE_MIND_READER,
+    MOVE_MIST,
+    MOVE_MUD_SHOT,
+    MOVE_REFRESH,
+    MOVE_SPLASH,
+    MOVE_WATER_PULSE,
+    MOVE_WATER_SPORT,
+    0,
+};
+
+const u16 gAbraEggMoves[] = {
+    // Ally Switch
+    MOVE_BARRIER,
+    MOVE_ENCORE,
+    MOVE_FIRE_PUNCH,
+    MOVE_GUARD_SPLIT,
+    MOVE_GUARD_SWAP,
+    MOVE_ICE_PUNCH,
+    MOVE_KNOCK_OFF,
+    MOVE_POWER_TRICK,
+    // Psychic Terrain
+    MOVE_PSYCHO_SHIFT,
+    MOVE_SKILL_SWAP,
+    MOVE_THUNDER_PUNCH,
+    0,
+};
+
+const u16 gKadabraEggMoves[] = {
+    // Ally Switch
+    MOVE_BARRIER,
+    MOVE_ENCORE,
+    MOVE_FIRE_PUNCH,
+    MOVE_GUARD_SPLIT,
+    MOVE_GUARD_SWAP,
+    MOVE_ICE_PUNCH,
+    MOVE_KNOCK_OFF,
+    MOVE_POWER_TRICK,
+    // Psychic Terrain
+    MOVE_PSYCHO_SHIFT,
+    MOVE_SKILL_SWAP,
+    MOVE_THUNDER_PUNCH,
+    0,
+};
+
+const u16 gAlakazamEggMoves[] = {
+    // Ally Switch
+    MOVE_BARRIER,
+    MOVE_ENCORE,
+    MOVE_FIRE_PUNCH,
+    MOVE_GUARD_SPLIT,
+    MOVE_GUARD_SWAP,
+    MOVE_ICE_PUNCH,
+    MOVE_KNOCK_OFF,
+    MOVE_POWER_TRICK,
+    // Psychic Terrain
+    MOVE_PSYCHO_SHIFT,
+    MOVE_SKILL_SWAP,
+    MOVE_THUNDER_PUNCH,
+    0,
+};
+
+const u16 gMachopEggMoves[] = {
+    MOVE_BULLET_PUNCH,
+    MOVE_CLOSE_COMBAT,
+    MOVE_COUNTER,
+    MOVE_ENCORE,
+    MOVE_FIRE_PUNCH,
+    MOVE_HEAVY_SLAM,
+    MOVE_ICE_PUNCH,
+    MOVE_KNOCK_OFF,
+    MOVE_LIGHT_SCREEN,
+    MOVE_MEDITATE,
+    MOVE_POWER_TRICK,
+    // Quick Guard
+    MOVE_ROCK_SLIDE,
+    MOVE_ROLLING_KICK,
+    MOVE_SMELLING_SALT,
+    MOVE_THUNDER_PUNCH,
+    MOVE_TICKLE,
+    0,
+};
+
+const u16 gMachokeEggMoves[] = {
+    MOVE_BULLET_PUNCH,
+    MOVE_CLOSE_COMBAT,
+    MOVE_COUNTER,
+    MOVE_ENCORE,
+    MOVE_FIRE_PUNCH,
+    MOVE_HEAVY_SLAM,
+    MOVE_ICE_PUNCH,
+    MOVE_KNOCK_OFF,
+    MOVE_LIGHT_SCREEN,
+    MOVE_MEDITATE,
+    MOVE_POWER_TRICK,
+    // Quick Guard
+    MOVE_ROCK_SLIDE,
+    MOVE_ROLLING_KICK,
+    MOVE_SMELLING_SALT,
+    MOVE_THUNDER_PUNCH,
+    MOVE_TICKLE,
+    0,
+};
+
+const u16 gMachampEggMoves[] = {
+    MOVE_BULLET_PUNCH,
+    MOVE_CLOSE_COMBAT,
+    MOVE_COUNTER,
+    MOVE_ENCORE,
+    MOVE_FIRE_PUNCH,
+    MOVE_HEAVY_SLAM,
+    MOVE_ICE_PUNCH,
+    MOVE_KNOCK_OFF,
+    MOVE_LIGHT_SCREEN,
+    MOVE_MEDITATE,
+    MOVE_POWER_TRICK,
+    // Quick Guard
+    MOVE_ROCK_SLIDE,
+    MOVE_ROLLING_KICK,
+    MOVE_SMELLING_SALT,
+    MOVE_THUNDER_PUNCH,
+    MOVE_TICKLE,
+    0,
+};
+
+const u16 gBellsproutEggMoves[] = {
+    MOVE_ACID_SPRAY,
+    MOVE_BELCH,
+    MOVE_BULLET_SEED,
+    MOVE_CLEAR_SMOG,
+    MOVE_ENCORE,
+    MOVE_GIGA_DRAIN,
+    MOVE_INGRAIN,
+    MOVE_LEECH_LIFE,
+    MOVE_MAGICAL_LEAF,
+    MOVE_NATURAL_GIFT,
+    MOVE_POWER_WHIP,
+    MOVE_REFLECT,
+    // Strength Sap
+    MOVE_SWORDS_DANCE,
+    MOVE_SYNTHESIS,
+    MOVE_TICKLE,
+    MOVE_WEATHER_BALL,
+    MOVE_WORRY_SEED,
+    0,
+};
+
+const u16 gWeepinbellEggMoves[] = {
+    MOVE_ACID_SPRAY,
+    MOVE_BELCH,
+    MOVE_BULLET_SEED,
+    MOVE_CLEAR_SMOG,
+    MOVE_ENCORE,
+    MOVE_GIGA_DRAIN,
+    MOVE_INGRAIN,
+    MOVE_LEECH_LIFE,
+    MOVE_MAGICAL_LEAF,
+    MOVE_NATURAL_GIFT,
+    MOVE_POWER_WHIP,
+    MOVE_REFLECT,
+    // Strength Sap
+    MOVE_SWORDS_DANCE,
+    MOVE_SYNTHESIS,
+    MOVE_TICKLE,
+    MOVE_WEATHER_BALL,
+    MOVE_WORRY_SEED,
+    0,
+};
+
+const u16 gVictreebelEggMoves[] = {
+    MOVE_ACID_SPRAY,
+    MOVE_BELCH,
+    MOVE_BULLET_SEED,
+    MOVE_CLEAR_SMOG,
+    MOVE_ENCORE,
+    MOVE_GIGA_DRAIN,
+    MOVE_INGRAIN,
+    MOVE_LEECH_LIFE,
+    MOVE_MAGICAL_LEAF,
+    MOVE_NATURAL_GIFT,
+    MOVE_POWER_WHIP,
+    MOVE_REFLECT,
+    // Strength Sap
+    MOVE_SWORDS_DANCE,
+    MOVE_SYNTHESIS,
+    MOVE_TICKLE,
+    MOVE_WEATHER_BALL,
+    MOVE_WORRY_SEED,
+    0,
+};
+
+const u16 gTentacoolEggMoves[] = {
+    MOVE_ACUPRESSURE,
+    MOVE_AQUA_RING,
+    MOVE_AURORA_BEAM,
+    MOVE_BUBBLE,
+    MOVE_CONFUSE_RAY,
+    MOVE_HAZE,
+    MOVE_KNOCK_OFF,
+    MOVE_MIRROR_COAT,
+    MOVE_MUDDY_WATER,
+    MOVE_RAPID_SPIN,
+    MOVE_SAFEGUARD,
+    MOVE_TICKLE,
+    0,
+};
+
+const u16 gTentacruelEggMoves[] = {
+    MOVE_ACUPRESSURE,
+    MOVE_AQUA_RING,
+    MOVE_AURORA_BEAM,
+    MOVE_BUBBLE,
+    MOVE_CONFUSE_RAY,
+    MOVE_HAZE,
+    MOVE_KNOCK_OFF,
+    MOVE_MIRROR_COAT,
+    MOVE_MUDDY_WATER,
+    MOVE_RAPID_SPIN,
+    MOVE_SAFEGUARD,
+    MOVE_TICKLE,
+    0,
+};
+
+const u16 gGeodudeEggMoves[] = {
+    MOVE_AUTOTOMIZE,
+    MOVE_BLOCK,
+    MOVE_CURSE,
+    MOVE_ENDURE,
+    MOVE_FLAIL,
+    MOVE_FOCUS_PUNCH,
+    MOVE_HAMMER_ARM,
+    MOVE_MEGA_PUNCH,
+    // Rock Climb
+    MOVE_ROCK_SLIDE,
+    // Wide Guard
+    0,
+};
+
+const u16 gGravelerEggMoves[] = {
+    MOVE_AUTOTOMIZE,
+    MOVE_BLOCK,
+    MOVE_CURSE,
+    MOVE_ENDURE,
+    MOVE_FLAIL,
+    MOVE_FOCUS_PUNCH,
+    MOVE_HAMMER_ARM,
+    MOVE_MEGA_PUNCH,
+    // Rock Climb
+    MOVE_ROCK_SLIDE,
+    // Wide Guard
+    0,
+};
+
+const u16 gGolemEggMoves[] = {
+    MOVE_AUTOTOMIZE,
+    MOVE_BLOCK,
+    MOVE_CURSE,
+    MOVE_ENDURE,
+    MOVE_FLAIL,
+    MOVE_FOCUS_PUNCH,
+    MOVE_HAMMER_ARM,
+    MOVE_MEGA_PUNCH,
+    // Rock Climb
+    MOVE_ROCK_SLIDE,
+    // Wide Guard
+    0,
+};
+
+const u16 gPonytaEggMoves[] = {
+    // Ally Switch
+    MOVE_CAPTIVATE,
+    MOVE_CHARM,
+    MOVE_DOUBLE_EDGE,
+    MOVE_DOUBLE_KICK,
+    MOVE_FLAME_WHEEL,
+    // High Horsepower
+    MOVE_HORN_DRILL,
+    MOVE_HYPNOSIS,
+    MOVE_LOW_KICK,
+    MOVE_MORNING_SUN,
+    MOVE_THRASH,
+    0,
+};
+
+const u16 gRapidashEggMoves[] = {
+    // Ally Switch
+    MOVE_CAPTIVATE,
+    MOVE_CHARM,
+    MOVE_DOUBLE_EDGE,
+    MOVE_DOUBLE_KICK,
+    MOVE_FLAME_WHEEL,
+    // High Horsepower
+    MOVE_HORN_DRILL,
+    MOVE_HYPNOSIS,
+    MOVE_LOW_KICK,
+    MOVE_MORNING_SUN,
+    MOVE_THRASH,
+    0,
+};
+
+const u16 gSlowpokeEggMoves[] = {
+    MOVE_BELCH,
+    MOVE_BELLY_DRUM,
+    MOVE_BLOCK,
+    MOVE_FUTURE_SIGHT,
+    MOVE_ME_FIRST,
+    MOVE_MUD_SPORT,
+    MOVE_SAFEGUARD,
+    MOVE_SLEEP_TALK,
+    MOVE_SNORE,
+    MOVE_STOMP,
+    // Wonder Room
+    MOVE_ZEN_HEADBUTT,
+    0,
+};
+
+const u16 gSlowbroEggMoves[] = {
+    MOVE_BELCH,
+    MOVE_BELLY_DRUM,
+    MOVE_BLOCK,
+    MOVE_FUTURE_SIGHT,
+    MOVE_ME_FIRST,
+    MOVE_MUD_SPORT,
+    MOVE_SAFEGUARD,
+    MOVE_SLEEP_TALK,
+    MOVE_SNORE,
+    MOVE_STOMP,
+    // Wonder Room
+    MOVE_ZEN_HEADBUTT,
+    0,
+};
+
+const u16 gSlowkingEggMoves[] = {
+    MOVE_BELCH,
+    MOVE_BELLY_DRUM,
+    MOVE_BLOCK,
+    MOVE_FUTURE_SIGHT,
+    MOVE_ME_FIRST,
+    MOVE_MUD_SPORT,
+    MOVE_SAFEGUARD,
+    MOVE_SLEEP_TALK,
+    MOVE_SNORE,
+    MOVE_STOMP,
+    // Wonder Room
+    MOVE_ZEN_HEADBUTT,
+    0,
+};
+
+const u16 gMagnemiteEggMoves[] = {
+    0,
+};
+
+const u16 gMagnetonEggMoves[] = {
+    0,
+};
+
+const u16 gMagnezoneEggMoves[] = {
+    0,
+};
+
+const u16 gFarfetchdEggMoves[] = {
+    MOVE_COVET,
+    MOVE_CURSE,
+    MOVE_FEATHER_DANCE,
+    // Final Gambit,
+    // First Impression
+    MOVE_FLAIL,
+    MOVE_FORESIGHT,
+    MOVE_GUST,
+    MOVE_LEAF_BLADE,
+    MOVE_MIRROR_MOVE,
+    MOVE_MUD_SLAP,
+    MOVE_NIGHT_SLASH,
+    MOVE_QUICK_ATTACK,
+    MOVE_REVENGE,
+    MOVE_ROOST,
+    // Simple Beam
+    MOVE_STEEL_WING,
+    MOVE_TRUMP_CARD,
+    0,
+};
+
+const u16 gDoduoEggMoves[] = {
+    // Assurance
+    MOVE_BRAVE_BIRD,
+    MOVE_ENDEAVOR,
+    MOVE_FAINT_ATTACK,
+    MOVE_FLAIL,
+    MOVE_HAZE,
+    MOVE_MIRROR_MOVE,
+    MOVE_NATURAL_GIFT,
+    MOVE_QUICK_ATTACK,
+    MOVE_SUPERSONIC,
+    0,
+};
+
+const u16 gDodrioEggMoves[] = {
+    // Assurance
+    MOVE_BRAVE_BIRD,
+    MOVE_ENDEAVOR,
+    MOVE_FAINT_ATTACK,
+    MOVE_FLAIL,
+    MOVE_HAZE,
+    MOVE_MIRROR_MOVE,
+    MOVE_NATURAL_GIFT,
+    MOVE_QUICK_ATTACK,
+    MOVE_SUPERSONIC,
+    0,
+};
+
+const u16 gSeelEggMoves[] = {
+    MOVE_BELCH,
+    MOVE_DISABLE,
+    MOVE_ENCORE,
+    MOVE_ENTRAINMENT,
+    MOVE_FAKE_OUT,
+    MOVE_HORN_DRILL,
+    MOVE_ICICLE_SPEAR,
+    MOVE_IRON_TAIL,
+    MOVE_LICK,
+    MOVE_PERISH_SONG,
+    MOVE_SIGNAL_BEAM,
+    MOVE_SLAM,
+    MOVE_SLEEP_TALK,
+    MOVE_SPIT_UP,
+    MOVE_STOCKPILE,
+    MOVE_SWALLOW,
+    MOVE_WATER_PULSE,
+    0,
+};
+
+const u16 gDewgongEggMoves[] = {
+    MOVE_BELCH,
+    MOVE_DISABLE,
+    MOVE_ENCORE,
+    MOVE_ENTRAINMENT,
+    MOVE_FAKE_OUT,
+    MOVE_HORN_DRILL,
+    MOVE_ICICLE_SPEAR,
+    MOVE_IRON_TAIL,
+    MOVE_LICK,
+    MOVE_PERISH_SONG,
+    MOVE_SIGNAL_BEAM,
+    MOVE_SLAM,
+    MOVE_SLEEP_TALK,
+    MOVE_SPIT_UP,
+    MOVE_STOCKPILE,
+    MOVE_SWALLOW,
+    MOVE_WATER_PULSE,
+    0,
+};
+
+const u16 gGrimerEggMoves[] = {
+    MOVE_ACID_SPRAY,
+    MOVE_CURSE,
+    MOVE_EXPLOSION,
+    MOVE_HAZE,
+    MOVE_IMPRISON,
+    MOVE_LICK,
+    MOVE_MEAN_LOOK,
+    // Power-Up Punch,
+    MOVE_SCARY_FACE,
+    MOVE_SHADOW_PUNCH,
+    MOVE_SHADOW_SNEAK,
+    MOVE_SPIT_UP,
+    MOVE_STOCKPILE,
+    MOVE_SWALLOW,
+    0,
+};
+
+const u16 gMukEggMoves[] = {
+    MOVE_ACID_SPRAY,
+    MOVE_CURSE,
+    MOVE_EXPLOSION,
+    MOVE_HAZE,
+    MOVE_IMPRISON,
+    MOVE_LICK,
+    MOVE_MEAN_LOOK,
+    // Power-Up Punch,
+    MOVE_SCARY_FACE,
+    MOVE_SHADOW_PUNCH,
+    MOVE_SHADOW_SNEAK,
+    MOVE_SPIT_UP,
+    MOVE_STOCKPILE,
+    MOVE_SWALLOW,
+    0,
+};
+
+const u16 gShellderEggMoves[] = {
+    MOVE_AQUA_RING,
+    MOVE_AVALANCHE,
+    MOVE_BARRIER,
+    MOVE_BUBBLE_BEAM,
+    MOVE_ICICLE_SPEAR,
+    MOVE_MUD_SHOT,
+    MOVE_RAPID_SPIN,
+    MOVE_ROCK_BLAST,
+    MOVE_SCREECH,
+    MOVE_TAKE_DOWN,
+    MOVE_TWINEEDLE,
+    MOVE_WATER_PULSE,
+    0,
+};
+
+const u16 gCloysterEggMoves[] = {
+    MOVE_AQUA_RING,
+    MOVE_AVALANCHE,
+    MOVE_BARRIER,
+    MOVE_BUBBLE_BEAM,
+    MOVE_ICICLE_SPEAR,
+    MOVE_MUD_SHOT,
+    MOVE_RAPID_SPIN,
+    MOVE_ROCK_BLAST,
+    MOVE_SCREECH,
+    MOVE_TAKE_DOWN,
+    MOVE_TWINEEDLE,
+    MOVE_WATER_PULSE,
+    0,
+};
+
+const u16 gGastlyEggMoves[] = {
+    MOVE_ASTONISH,
+    MOVE_CLEAR_SMOG,
+    MOVE_DISABLE,
+    MOVE_EXPLOSION,
+    MOVE_FIRE_PUNCH,
+    MOVE_GRUDGE,
+    MOVE_HAZE,
+    MOVE_ICE_PUNCH,
+    MOVE_PERISH_SONG,
+    MOVE_PSYWAVE,
+    MOVE_REFLECT_TYPE,
+    MOVE_SCARY_FACE,
+    MOVE_SMOG,
+    MOVE_THUNDER_PUNCH,
+    MOVE_WILL_O_WISP,
+    0,
+};
+
+const u16 gHaunterEggMoves[] = {
+    MOVE_ASTONISH,
+    MOVE_CLEAR_SMOG,
+    MOVE_DISABLE,
+    MOVE_EXPLOSION,
+    MOVE_FIRE_PUNCH,
+    MOVE_GRUDGE,
+    MOVE_HAZE,
+    MOVE_ICE_PUNCH,
+    MOVE_PERISH_SONG,
+    MOVE_PSYWAVE,
+    MOVE_REFLECT_TYPE,
+    MOVE_SCARY_FACE,
+    MOVE_SMOG,
+    MOVE_THUNDER_PUNCH,
+    MOVE_WILL_O_WISP,
+    0,
+};
+
+const u16 gGengarEggMoves[] = {
+    MOVE_ASTONISH,
+    MOVE_CLEAR_SMOG,
+    MOVE_DISABLE,
+    MOVE_EXPLOSION,
+    MOVE_FIRE_PUNCH,
+    MOVE_GRUDGE,
+    MOVE_HAZE,
+    MOVE_ICE_PUNCH,
+    MOVE_PERISH_SONG,
+    MOVE_PSYWAVE,
+    MOVE_REFLECT_TYPE,
+    MOVE_SCARY_FACE,
+    MOVE_SMOG,
+    MOVE_THUNDER_PUNCH,
+    MOVE_WILL_O_WISP,
+    0,
+};
+
+const u16 gOnixEggMoves[] = {
+    MOVE_BLOCK,
+    MOVE_DEFENSE_CURL,
+    MOVE_EXPLOSION,
+    MOVE_FLAIL,
+    MOVE_HEAVY_SLAM,
+    MOVE_ROCK_BLAST,
+    // Rock Climb
+    MOVE_ROCK_SLIDE,
+    MOVE_ROLLOUT,
+    // Rototiller
+    MOVE_STEALTH_ROCK,
+    // Wide Guard
+    0,
+};
+
+const u16 gSteelixEggMoves[] = {
+    MOVE_BLOCK,
+    MOVE_DEFENSE_CURL,
+    MOVE_EXPLOSION,
+    MOVE_FLAIL,
+    MOVE_HEAVY_SLAM,
+    MOVE_ROCK_BLAST,
+    // Rock Climb
+    MOVE_ROCK_SLIDE,
+    MOVE_ROLLOUT,
+    // Rototiller
+    MOVE_STEALTH_ROCK,
+    // Wide Guard
+    0,
+};
+
+const u16 gDrowzeeEggMoves[] = {
+    MOVE_ASSIST,
+    MOVE_BARRIER,
+    MOVE_FIRE_PUNCH,
+    MOVE_FLATTER,
+    MOVE_GUARD_SWAP,
+    MOVE_ICE_PUNCH,
+    MOVE_NASTY_PLOT,
+    MOVE_POWER_SPLIT,
+    // Psychic Terrain
+    MOVE_PSYCHO_CUT,
+    MOVE_ROLE_PLAY,
+    MOVE_SECRET_POWER,
+    MOVE_SKILL_SWAP,
+    MOVE_THUNDER_PUNCH,
+    0,
+};
+
+const u16 gHypnoEggMoves[] = {
+    MOVE_ASSIST,
+    MOVE_BARRIER,
+    MOVE_FIRE_PUNCH,
+    MOVE_FLATTER,
+    MOVE_GUARD_SWAP,
+    MOVE_ICE_PUNCH,
+    MOVE_NASTY_PLOT,
+    MOVE_POWER_SPLIT,
+    // Psychic Terrain
+    MOVE_PSYCHO_CUT,
+    MOVE_ROLE_PLAY,
+    MOVE_SECRET_POWER,
+    MOVE_SKILL_SWAP,
+    MOVE_THUNDER_PUNCH,
+    0,
+};
+
+const u16 gKrabbyEggMoves[] = {
+    MOVE_AGILITY,
+    // Ally Switch
+    MOVE_AMNESIA,
+    MOVE_ANCIENT_POWER,
+    MOVE_BIDE,
+    MOVE_CHIP_AWAY,
+    MOVE_DIG,
+    MOVE_ENDURE,
+    MOVE_FLAIL,
+    MOVE_HAZE,
+    MOVE_KNOCK_OFF,
+    MOVE_SLAM,
+    MOVE_SWORDS_DANCE,
+    MOVE_TICKLE,
+    0,
+};
+
+const u16 gKinglerEggMoves[] = {
+    MOVE_AGILITY,
+    // Ally Switch
+    MOVE_AMNESIA,
+    MOVE_ANCIENT_POWER,
+    MOVE_BIDE,
+    MOVE_CHIP_AWAY,
+    MOVE_DIG,
+    MOVE_ENDURE,
+    MOVE_FLAIL,
+    MOVE_HAZE,
+    MOVE_KNOCK_OFF,
+    MOVE_SLAM,
+    MOVE_SWORDS_DANCE,
+    MOVE_TICKLE,
+    0,
+};
+
+const u16 gVoltorbEggMoves[] = {
+    0,
+};
+
+const u16 gElectrodeEggMoves[] = {
+    0,
+};
+
+const u16 gExeggcuteEggMoves[] = {
+    MOVE_ANCIENT_POWER,
+    MOVE_BLOCK,
+    MOVE_CURSE,
+    MOVE_GIGA_DRAIN,
+    // Grassy Terrain,
+    MOVE_INGRAIN,
+    MOVE_LEAF_STORM,
+    MOVE_LUCKY_CHANT,
+    MOVE_MOONLIGHT,
+    MOVE_NATURAL_GIFT,
+    MOVE_NATURE_POWER,
+    MOVE_POWER_SWAP,
+    MOVE_PSYCH_UP,
+    MOVE_REFLECT,
+    MOVE_SKILL_SWAP,
+    MOVE_SYNTHESIS,
+    0,
+};
+
+const u16 gExeggutorEggMoves[] = {
+    MOVE_ANCIENT_POWER,
+    MOVE_BLOCK,
+    MOVE_CURSE,
+    MOVE_GIGA_DRAIN,
+    // Grassy Terrain,
+    MOVE_INGRAIN,
+    MOVE_LEAF_STORM,
+    MOVE_LUCKY_CHANT,
+    MOVE_MOONLIGHT,
+    MOVE_NATURAL_GIFT,
+    MOVE_NATURE_POWER,
+    MOVE_POWER_SWAP,
+    MOVE_PSYCH_UP,
+    MOVE_REFLECT,
+    MOVE_SKILL_SWAP,
+    MOVE_SYNTHESIS,
+    0,
+};
+
+const u16 gCuboneEggMoves[] = {
+    MOVE_ANCIENT_POWER,
+    MOVE_BELLY_DRUM,
+    MOVE_CHIP_AWAY,
+    MOVE_CURSE,
+    MOVE_DETECT,
+    MOVE_DOUBLE_KICK,
+    MOVE_ENDURE,
+    MOVE_IRON_HEAD,
+    MOVE_PERISH_SONG,
+    MOVE_ROCK_SLIDE,
+    MOVE_SCREECH,
+    MOVE_SKULL_BASH,
+    MOVE_SWORDS_DANCE,
+    0,
+};
+
+const u16 gMarowakEggMoves[] = {
+    MOVE_ANCIENT_POWER,
+    MOVE_BELLY_DRUM,
+    MOVE_CHIP_AWAY,
+    MOVE_CURSE,
+    MOVE_DETECT,
+    MOVE_DOUBLE_KICK,
+    MOVE_ENDURE,
+    MOVE_IRON_HEAD,
+    MOVE_PERISH_SONG,
+    MOVE_ROCK_SLIDE,
+    MOVE_SCREECH,
+    MOVE_SKULL_BASH,
+    MOVE_SWORDS_DANCE,
+    0,
+};
+
+const u16 gTyrogueEggMoves[] = {
+    MOVE_BULLET_PUNCH,
+    MOVE_COUNTER,
+    MOVE_ENDURE,
+    MOVE_FEINT,
+    MOVE_HELPING_HAND,
+    MOVE_HI_JUMP_KICK,
+    MOVE_MACH_PUNCH,
+    MOVE_MIND_READER,
+    MOVE_PURSUIT,
+    MOVE_RAPID_SPIN,
+    MOVE_VACUUM_WAVE,
+    0,
+};
+
+const u16 gHitmonleeEggMoves[] = {
+    MOVE_BULLET_PUNCH,
+    MOVE_COUNTER,
+    MOVE_ENDURE,
+    MOVE_FEINT,
+    MOVE_HELPING_HAND,
+    MOVE_HI_JUMP_KICK,
+    MOVE_MACH_PUNCH,
+    MOVE_MIND_READER,
+    MOVE_PURSUIT,
+    MOVE_RAPID_SPIN,
+    MOVE_VACUUM_WAVE,
+    0,
+};
+
+const u16 gHitmonchanEggMoves[] = {
+    MOVE_BULLET_PUNCH,
+    MOVE_COUNTER,
+    MOVE_ENDURE,
+    MOVE_FEINT,
+    MOVE_HELPING_HAND,
+    MOVE_HI_JUMP_KICK,
+    MOVE_MACH_PUNCH,
+    MOVE_MIND_READER,
+    MOVE_PURSUIT,
+    MOVE_RAPID_SPIN,
+    MOVE_VACUUM_WAVE,
+    0,
+};
+
+const u16 gHitmontopEggMoves[] = {
+    MOVE_BULLET_PUNCH,
+    MOVE_COUNTER,
+    MOVE_ENDURE,
+    MOVE_FEINT,
+    MOVE_HELPING_HAND,
+    MOVE_HI_JUMP_KICK,
+    MOVE_MACH_PUNCH,
+    MOVE_MIND_READER,
+    MOVE_PURSUIT,
+    MOVE_RAPID_SPIN,
+    MOVE_VACUUM_WAVE,
+    0,
+};
+
+const u16 gLickitungEggMoves[] = {
+    MOVE_AMNESIA,
+    MOVE_BELCH,
+    MOVE_BELLY_DRUM,
+    MOVE_BODY_SLAM,
+    MOVE_CURSE,
+    MOVE_HAMMER_ARM,
+    MOVE_MAGNITUDE,
+    MOVE_MUDDY_WATER,
+    MOVE_SLEEP_TALK,
+    MOVE_SMELLING_SALT,
+    MOVE_SNORE,
+    MOVE_SUBSTITUTE,
+    MOVE_THRASH,
+    MOVE_ZEN_HEADBUTT,
+    0,
+};
+
+const u16 gLickilickyEggMoves[] = {
+    MOVE_AMNESIA,
+    MOVE_BELCH,
+    MOVE_BELLY_DRUM,
+    MOVE_BODY_SLAM,
+    MOVE_CURSE,
+    MOVE_HAMMER_ARM,
+    MOVE_MAGNITUDE,
+    MOVE_MUDDY_WATER,
+    MOVE_SLEEP_TALK,
+    MOVE_SMELLING_SALT,
+    MOVE_SNORE,
+    MOVE_SUBSTITUTE,
+    MOVE_THRASH,
+    MOVE_ZEN_HEADBUTT,
+    0,
+};
+
+const u16 gKoffingEggMoves[] = {
+    MOVE_CURSE,
+    MOVE_DESTINY_BOND,
+    MOVE_GRUDGE,
+    MOVE_PAIN_SPLIT,
+    MOVE_PSYBEAM,
+    MOVE_PSYWAVE,
+    MOVE_SCREECH,
+    MOVE_SPITE,
+    MOVE_SPIT_UP,
+    MOVE_STOCKPILE,
+    MOVE_SWALLOW,
+    MOVE_TOXIC_SPIKES,
+    MOVE_VENOM_DRENCH,
+    MOVE_WILL_O_WISP,
+    0,
+};
+
+const u16 gWeezingEggMoves[] = {
+    MOVE_CURSE,
+    MOVE_DESTINY_BOND,
+    MOVE_GRUDGE,
+    MOVE_PAIN_SPLIT,
+    MOVE_PSYBEAM,
+    MOVE_PSYWAVE,
+    MOVE_SCREECH,
+    MOVE_SPITE,
+    MOVE_SPIT_UP,
+    MOVE_STOCKPILE,
+    MOVE_SWALLOW,
+    MOVE_TOXIC_SPIKES,
+    MOVE_VENOM_DRENCH,
+    MOVE_WILL_O_WISP,
+    0,
+};
+
+const u16 gRhyhornEggMoves[] = {
+    MOVE_COUNTER,
+    MOVE_CRUNCH,
+    MOVE_CRUSH_CLAW,
+    MOVE_CURSE,
+    MOVE_DRAGON_RUSH,
+    MOVE_FIRE_FANG,
+    MOVE_GUARD_SPLIT,
+    MOVE_ICE_FANG,
+    MOVE_IRON_TAIL,
+    MOVE_MAGNITUDE,
+    MOVE_METAL_BURST,
+    MOVE_REVERSAL,
+    // Rock Climb
+    MOVE_ROCK_SLIDE,
+    // Rototiller
+    MOVE_SKULL_BASH,
+    MOVE_SWORDS_DANCE,
+    MOVE_THUNDER_FANG,
+    0,
+};
+
+const u16 gRhydonEggMoves[] = {
+    MOVE_COUNTER,
+    MOVE_CRUNCH,
+    MOVE_CRUSH_CLAW,
+    MOVE_CURSE,
+    MOVE_DRAGON_RUSH,
+    MOVE_FIRE_FANG,
+    MOVE_GUARD_SPLIT,
+    MOVE_ICE_FANG,
+    MOVE_IRON_TAIL,
+    MOVE_MAGNITUDE,
+    MOVE_METAL_BURST,
+    MOVE_REVERSAL,
+    // Rock Climb
+    MOVE_ROCK_SLIDE,
+    // Rototiller
+    MOVE_SKULL_BASH,
+    MOVE_SWORDS_DANCE,
+    MOVE_THUNDER_FANG,
+    0,
+};
+
+const u16 gRhyperiorEggMoves[] = {
+    MOVE_COUNTER,
+    MOVE_CRUNCH,
+    MOVE_CRUSH_CLAW,
+    MOVE_CURSE,
+    MOVE_DRAGON_RUSH,
+    MOVE_FIRE_FANG,
+    MOVE_GUARD_SPLIT,
+    MOVE_ICE_FANG,
+    MOVE_IRON_TAIL,
+    MOVE_MAGNITUDE,
+    MOVE_METAL_BURST,
+    MOVE_REVERSAL,
+    // Rock Climb
+    MOVE_ROCK_SLIDE,
+    // Rototiller
+    MOVE_SKULL_BASH,
+    MOVE_SWORDS_DANCE,
+    MOVE_THUNDER_FANG,
+    0,
+};
+
+const u16 gHappinyEggMoves[] = {
+    MOVE_AROMATHERAPY,
+    MOVE_COUNTER,
+    MOVE_ENDURE,
+    // Gravity
+    MOVE_HEAL_BELL,
+    MOVE_HELPING_HAND,
+    // Last Resort
+    MOVE_METRONOME,
+    MOVE_MUD_BOMB,
+    MOVE_NATURAL_GIFT,
+    MOVE_PRESENT,
+    MOVE_SEISMIC_TOSS,
+    MOVE_SUBSTITUTE,
+    0,
+};
+
+const u16 gChanseyEggMoves[] = {
+    MOVE_AROMATHERAPY,
+    MOVE_COUNTER,
+    MOVE_ENDURE,
+    // Gravity
+    MOVE_HEAL_BELL,
+    MOVE_HELPING_HAND,
+    // Last Resort
+    MOVE_METRONOME,
+    MOVE_MUD_BOMB,
+    MOVE_NATURAL_GIFT,
+    MOVE_PRESENT,
+    MOVE_SEISMIC_TOSS,
+    MOVE_SUBSTITUTE,
+    0,
+};
+
+const u16 gBlisseyEggMoves[] = {
+    MOVE_AROMATHERAPY,
+    MOVE_COUNTER,
+    MOVE_ENDURE,
+    // Gravity
+    MOVE_HEAL_BELL,
+    MOVE_HELPING_HAND,
+    // Last Resort
+    MOVE_METRONOME,
+    MOVE_MUD_BOMB,
+    MOVE_NATURAL_GIFT,
+    MOVE_PRESENT,
+    MOVE_SEISMIC_TOSS,
+    MOVE_SUBSTITUTE,
+    0,
+};
+
+const u16 gTangelaEggMoves[] = {
+    MOVE_AMNESIA,
+    MOVE_CONFUSION,
+    MOVE_ENDEAVOR,
+    MOVE_FLAIL,
+    MOVE_GIGA_DRAIN,
+    MOVE_LEAF_STORM,
+    MOVE_LEECH_SEED,
+    MOVE_MEGA_DRAIN,
+    MOVE_NATURAL_GIFT,
+    MOVE_NATURE_POWER,
+    MOVE_POWER_SWAP,
+    // Rage Powder
+    MOVE_REFLECT,
+    MOVE_WAKE_UP_SLAP,
+    0,
+};
+
+const u16 gTangrowthEggMoves[] = {
+    MOVE_AMNESIA,
+    MOVE_CONFUSION,
+    MOVE_ENDEAVOR,
+    MOVE_FLAIL,
+    MOVE_GIGA_DRAIN,
+    MOVE_LEAF_STORM,
+    MOVE_LEECH_SEED,
+    MOVE_MEGA_DRAIN,
+    MOVE_NATURAL_GIFT,
+    MOVE_NATURE_POWER,
+    MOVE_POWER_SWAP,
+    // Rage Powder
+    MOVE_REFLECT,
+    MOVE_WAKE_UP_SLAP,
+    0,
+};
+
+const u16 gKangaskhanEggMoves[] = {
+    // Circle Throw
+    MOVE_COUNTER,
+    MOVE_CRUSH_CLAW,
+    MOVE_DISABLE,
+    MOVE_DOUBLE_EDGE,
+    MOVE_ENDEAVOR,
+    MOVE_FOCUS_ENERGY,
+    MOVE_FOCUS_PUNCH,
+    MOVE_FORESIGHT,
+    MOVE_HAMMER_ARM,
+    MOVE_SAFEGUARD,
+    MOVE_STOMP,
+    MOVE_SUBSTITUTE,
+    MOVE_TRUMP_CARD,
+    MOVE_UPROAR,
+    0,
+};
+
+const u16 gHorseaEggMoves[] = {
+    MOVE_AURORA_BEAM,
+    MOVE_CLEAR_SMOG,
+    MOVE_DISABLE,
+    MOVE_DRAGON_BREATH,
+    MOVE_DRAGON_RAGE,
+    MOVE_FLAIL,
+    MOVE_MUDDY_WATER,
+    MOVE_OCTAZOOKA,
+    MOVE_OUTRAGE,
+    MOVE_RAZOR_WIND,
+    MOVE_SIGNAL_BEAM,
+    MOVE_SPLASH,
+    MOVE_WATER_PULSE,
+    0,
+};
+
+const u16 gSeadraEggMoves[] = {
+    MOVE_AURORA_BEAM,
+    MOVE_CLEAR_SMOG,
+    MOVE_DISABLE,
+    MOVE_DRAGON_BREATH,
+    MOVE_DRAGON_RAGE,
+    MOVE_FLAIL,
+    MOVE_MUDDY_WATER,
+    MOVE_OCTAZOOKA,
+    MOVE_OUTRAGE,
+    MOVE_RAZOR_WIND,
+    MOVE_SIGNAL_BEAM,
+    MOVE_SPLASH,
+    MOVE_WATER_PULSE,
+    0,
+};
+
+const u16 gKingdraEggMoves[] = {
+    MOVE_AURORA_BEAM,
+    MOVE_CLEAR_SMOG,
+    MOVE_DISABLE,
+    MOVE_DRAGON_BREATH,
+    MOVE_DRAGON_RAGE,
+    MOVE_FLAIL,
+    MOVE_MUDDY_WATER,
+    MOVE_OCTAZOOKA,
+    MOVE_OUTRAGE,
+    MOVE_RAZOR_WIND,
+    MOVE_SIGNAL_BEAM,
+    MOVE_SPLASH,
+    MOVE_WATER_PULSE,
+    0,
+};
+
+const u16 gGoldeenEggMoves[] = {
+    MOVE_AQUA_TAIL,
+    MOVE_BODY_SLAM,
+    MOVE_HAZE,
+    MOVE_HYDRO_PUMP,
+    MOVE_MUD_SHOT,
+    MOVE_MUD_SLAP,
+    MOVE_MUD_SPORT,
+    MOVE_PSYBEAM,
+    MOVE_SIGNAL_BEAM,
+    MOVE_SKULL_BASH,
+    MOVE_SLEEP_TALK,
+    0,
+};
+
+const u16 gSeakingEggMoves[] = {
+    MOVE_AQUA_TAIL,
+    MOVE_BODY_SLAM,
+    MOVE_HAZE,
+    MOVE_HYDRO_PUMP,
+    MOVE_MUD_SHOT,
+    MOVE_MUD_SLAP,
+    MOVE_MUD_SPORT,
+    MOVE_PSYBEAM,
+    MOVE_SIGNAL_BEAM,
+    MOVE_SKULL_BASH,
+    MOVE_SLEEP_TALK,
+    0,
+};
+
+const u16 gStaryuEggMoves[] = {
+    0,
+};
+
+const u16 gStarmieEggMoves[] = {
+    0,
+};
+
+const u16 gMimeJrEggMoves[] = {
+    MOVE_CHARM,
+    MOVE_CONFUSE_RAY,
+    MOVE_FAKE_OUT,
+    MOVE_FUTURE_SIGHT,
+    MOVE_HEALING_WISH,
+    MOVE_HYPNOSIS,
+    MOVE_ICY_WIND,
+    // Magic Room
+    MOVE_MIMIC,
+    MOVE_NASTY_PLOT,
+    MOVE_POWER_SPLIT,
+    // Psychic Terrain
+    MOVE_PSYCH_UP,
+    MOVE_TEETER_DANCE,
+    MOVE_TRICK,
+    MOVE_WAKE_UP_SLAP,
+    0,
+};
+
+const u16 gMrMimeEggMoves[] = {
+    MOVE_CHARM,
+    MOVE_CONFUSE_RAY,
+    MOVE_FAKE_OUT,
+    MOVE_FUTURE_SIGHT,
+    MOVE_HEALING_WISH,
+    MOVE_HYPNOSIS,
+    MOVE_ICY_WIND,
+    // Magic Room
+    MOVE_MIMIC,
+    MOVE_NASTY_PLOT,
+    MOVE_POWER_SPLIT,
+    // Psychic Terrain
+    MOVE_PSYCH_UP,
+    MOVE_TEETER_DANCE,
+    MOVE_TRICK,
+    MOVE_WAKE_UP_SLAP,
+    0,
+};
+
+const u16 gScytherEggMoves[] = {
+    MOVE_BATON_PASS,
+    MOVE_BUG_BUZZ,
+    MOVE_COUNTER,
+    MOVE_DEFOG,
+    MOVE_ENDURE,
+    MOVE_LIGHT_SCREEN,
+    MOVE_NIGHT_SLASH,
+    // Quick Guard
+    MOVE_RAZOR_WIND,
+    MOVE_REVERSAL,
+    MOVE_SAFEGUARD,
+    MOVE_SILVER_WIND,
+    MOVE_STEEL_WING,
+    0,
+};
+
+const u16 gScizorEggMoves[] = {
+    MOVE_BATON_PASS,
+    MOVE_BUG_BUZZ,
+    MOVE_COUNTER,
+    MOVE_DEFOG,
+    MOVE_ENDURE,
+    MOVE_LIGHT_SCREEN,
+    MOVE_NIGHT_SLASH,
+    // Quick Guard
+    MOVE_RAZOR_WIND,
+    MOVE_REVERSAL,
+    MOVE_SAFEGUARD,
+    MOVE_SILVER_WIND,
+    MOVE_STEEL_WING,
+    0,
+};
+
+const u16 gSmoochumEggMoves[] = {
+    MOVE_CAPTIVATE,
+    MOVE_FAKE_OUT,
+    MOVE_ICE_PUNCH,
+    MOVE_MEDITATE,
+    MOVE_MIRACLE_EYE,
+    MOVE_NASTY_PLOT,
+    MOVE_PSYCH_UP,
+    MOVE_WAKE_UP_SLAP,
+    MOVE_WISH,
+    0,
+};
+
+const u16 gJynxEggMoves[] = {
+    MOVE_CAPTIVATE,
+    MOVE_FAKE_OUT,
+    MOVE_ICE_PUNCH,
+    MOVE_MEDITATE,
+    MOVE_MIRACLE_EYE,
+    MOVE_NASTY_PLOT,
+    MOVE_PSYCH_UP,
+    MOVE_WAKE_UP_SLAP,
+    MOVE_WISH,
+    0,
+};
+
+const u16 gElekidEggMoves[] = {
+    MOVE_BARRIER,
+    MOVE_CROSS_CHOP,
+    MOVE_DYNAMIC_PUNCH,
+    MOVE_FEINT,
+    MOVE_FIRE_PUNCH,
+    MOVE_FOCUS_PUNCH,
+    MOVE_HAMMER_ARM,
+    MOVE_ICE_PUNCH,
+    MOVE_KARATE_CHOP,
+    MOVE_MEDITATE,
+    MOVE_ROLLING_KICK,
+    0,
+};
+
+const u16 gElectabuzzEggMoves[] = {
+    MOVE_BARRIER,
+    MOVE_CROSS_CHOP,
+    MOVE_DYNAMIC_PUNCH,
+    MOVE_FEINT,
+    MOVE_FIRE_PUNCH,
+    MOVE_FOCUS_PUNCH,
+    MOVE_HAMMER_ARM,
+    MOVE_ICE_PUNCH,
+    MOVE_KARATE_CHOP,
+    MOVE_MEDITATE,
+    MOVE_ROLLING_KICK,
+    0,
+};
+
+const u16 gElectivireEggMoves[] = {
+    MOVE_BARRIER,
+    MOVE_CROSS_CHOP,
+    MOVE_DYNAMIC_PUNCH,
+    MOVE_FEINT,
+    MOVE_FIRE_PUNCH,
+    MOVE_FOCUS_PUNCH,
+    MOVE_HAMMER_ARM,
+    MOVE_ICE_PUNCH,
+    MOVE_KARATE_CHOP,
+    MOVE_MEDITATE,
+    MOVE_ROLLING_KICK,
+    0,
+};
+
+const u16 gMagbyEggMoves[] = {
+    MOVE_BARRIER,
+    MOVE_BELCH,
+    MOVE_BELLY_DRUM,
+    MOVE_CROSS_CHOP,
+    MOVE_DYNAMIC_PUNCH,
+    MOVE_FLARE_BLITZ,
+    MOVE_FOCUS_ENERGY,
+    MOVE_IRON_TAIL,
+    MOVE_KARATE_CHOP,
+    MOVE_MACH_PUNCH,
+    MOVE_MEGA_PUNCH,
+    MOVE_POWER_SWAP,
+    MOVE_SCREECH,
+    MOVE_THUNDER_PUNCH,
+    0,
+};
+
+const u16 gMagmarEggMoves[] = {
+    MOVE_BARRIER,
+    MOVE_BELCH,
+    MOVE_BELLY_DRUM,
+    MOVE_CROSS_CHOP,
+    MOVE_DYNAMIC_PUNCH,
+    MOVE_FLARE_BLITZ,
+    MOVE_FOCUS_ENERGY,
+    MOVE_IRON_TAIL,
+    MOVE_KARATE_CHOP,
+    MOVE_MACH_PUNCH,
+    MOVE_MEGA_PUNCH,
+    MOVE_POWER_SWAP,
+    MOVE_SCREECH,
+    MOVE_THUNDER_PUNCH,
+    0,
+};
+
+const u16 gMagmortarEggMoves[] = {
+    MOVE_BARRIER,
+    MOVE_BELCH,
+    MOVE_BELLY_DRUM,
+    MOVE_CROSS_CHOP,
+    MOVE_DYNAMIC_PUNCH,
+    MOVE_FLARE_BLITZ,
+    MOVE_FOCUS_ENERGY,
+    MOVE_IRON_TAIL,
+    MOVE_KARATE_CHOP,
+    MOVE_MACH_PUNCH,
+    MOVE_MEGA_PUNCH,
+    MOVE_POWER_SWAP,
+    MOVE_SCREECH,
+    MOVE_THUNDER_PUNCH,
+    0,
+};
+
+const u16 gPinsirEggMoves[] = {
+    MOVE_BUG_BITE,
+    MOVE_CLOSE_COMBAT,
+    MOVE_FALSE_SWIPE,
+    MOVE_FEINT,
+    MOVE_FAINT_ATTACK,
+    MOVE_FLAIL,
+    MOVE_FURY_ATTACK,
+    MOVE_ME_FIRST,
+    MOVE_QUICK_ATTACK,
+    MOVE_SUPERPOWER,
+    0,
+};
+
+const u16 gTaurosEggMoves[] = {
+    0,
+};
+
+const u16 gMagikarpEggMoves[] = {
+    0,
+};
+
+const u16 gGyaradosEggMoves[] = {
+    0,
+};
+
+const u16 gLaprasEggMoves[] = {
+    MOVE_ANCIENT_POWER,
+    MOVE_AVALANCHE,
+    MOVE_CURSE,
+    MOVE_DRAGON_DANCE,
+    MOVE_DRAGON_PULSE,
+    MOVE_FISSURE,
+    MOVE_FORESIGHT,
+    MOVE_FREEZE_DRY,
+    MOVE_FUTURE_SIGHT,
+    MOVE_HORN_DRILL,
+    MOVE_REFRESH,
+    MOVE_SLEEP_TALK,
+    MOVE_SUBSTITUTE,
+    MOVE_TICKLE,
+    MOVE_WHIRLPOOL,
+    0,
+};
+
+const u16 gDittoEggMoves[] = {
+    0,
+};
+
+const u16 gEeveeEggMoves[] = {
+    MOVE_CAPTIVATE,
+    MOVE_CHARM,
+    MOVE_COVET,
+    MOVE_CURSE,
+    MOVE_DETECT,
+    MOVE_ENDURE,
+    MOVE_FAKE_TEARS,
+    MOVE_FLAIL,
+    MOVE_NATURAL_GIFT,
+    MOVE_STORED_POWER,
+    MOVE_SYNCHRONOISE,
+    MOVE_TICKLE,
+    MOVE_WISH,
+    MOVE_YAWN,
+    0,
+};
+
+const u16 gVaporeonEggMoves[] = {
+    MOVE_CAPTIVATE,
+    MOVE_CHARM,
+    MOVE_COVET,
+    MOVE_CURSE,
+    MOVE_DETECT,
+    MOVE_ENDURE,
+    MOVE_FAKE_TEARS,
+    MOVE_FLAIL,
+    MOVE_NATURAL_GIFT,
+    MOVE_STORED_POWER,
+    MOVE_SYNCHRONOISE,
+    MOVE_TICKLE,
+    MOVE_WISH,
+    MOVE_YAWN,
+    0,
+};
+
+const u16 gJolteonEggMoves[] = {
+    MOVE_CAPTIVATE,
+    MOVE_CHARM,
+    MOVE_COVET,
+    MOVE_CURSE,
+    MOVE_DETECT,
+    MOVE_ENDURE,
+    MOVE_FAKE_TEARS,
+    MOVE_FLAIL,
+    MOVE_NATURAL_GIFT,
+    MOVE_STORED_POWER,
+    MOVE_SYNCHRONOISE,
+    MOVE_TICKLE,
+    MOVE_WISH,
+    MOVE_YAWN,
+    0,
+};
+
+const u16 gFlareonEggMoves[] = {
+    MOVE_CAPTIVATE,
+    MOVE_CHARM,
+    MOVE_COVET,
+    MOVE_CURSE,
+    MOVE_DETECT,
+    MOVE_ENDURE,
+    MOVE_FAKE_TEARS,
+    MOVE_FLAIL,
+    MOVE_NATURAL_GIFT,
+    MOVE_STORED_POWER,
+    MOVE_SYNCHRONOISE,
+    MOVE_TICKLE,
+    MOVE_WISH,
+    MOVE_YAWN,
+    0,
+};
+
+const u16 gEspeonEggMoves[] = {
+    MOVE_CAPTIVATE,
+    MOVE_CHARM,
+    MOVE_COVET,
+    MOVE_CURSE,
+    MOVE_DETECT,
+    MOVE_ENDURE,
+    MOVE_FAKE_TEARS,
+    MOVE_FLAIL,
+    MOVE_NATURAL_GIFT,
+    MOVE_STORED_POWER,
+    MOVE_SYNCHRONOISE,
+    MOVE_TICKLE,
+    MOVE_WISH,
+    MOVE_YAWN,
+    0,
+};
+
+const u16 gUmbreonEggMoves[] = {
+    MOVE_CAPTIVATE,
+    MOVE_CHARM,
+    MOVE_COVET,
+    MOVE_CURSE,
+    MOVE_DETECT,
+    MOVE_ENDURE,
+    MOVE_FAKE_TEARS,
+    MOVE_FLAIL,
+    MOVE_NATURAL_GIFT,
+    MOVE_STORED_POWER,
+    MOVE_SYNCHRONOISE,
+    MOVE_TICKLE,
+    MOVE_WISH,
+    MOVE_YAWN,
+    0,
+};
+
+const u16 gLeafeonEggMoves[] = {
+    MOVE_CAPTIVATE,
+    MOVE_CHARM,
+    MOVE_COVET,
+    MOVE_CURSE,
+    MOVE_DETECT,
+    MOVE_ENDURE,
+    MOVE_FAKE_TEARS,
+    MOVE_FLAIL,
+    MOVE_NATURAL_GIFT,
+    MOVE_STORED_POWER,
+    MOVE_SYNCHRONOISE,
+    MOVE_TICKLE,
+    MOVE_WISH,
+    MOVE_YAWN,
+    0,
+};
+
+const u16 gGlaceonEggMoves[] = {
+    MOVE_CAPTIVATE,
+    MOVE_CHARM,
+    MOVE_COVET,
+    MOVE_CURSE,
+    MOVE_DETECT,
+    MOVE_ENDURE,
+    MOVE_FAKE_TEARS,
+    MOVE_FLAIL,
+    MOVE_NATURAL_GIFT,
+    MOVE_STORED_POWER,
+    MOVE_SYNCHRONOISE,
+    MOVE_TICKLE,
+    MOVE_WISH,
+    MOVE_YAWN,
+    0,
+};
+
+const u16 gSylveonEggMoves[] = {
+    MOVE_CAPTIVATE,
+    MOVE_CHARM,
+    MOVE_COVET,
+    MOVE_CURSE,
+    MOVE_DETECT,
+    MOVE_ENDURE,
+    MOVE_FAKE_TEARS,
+    MOVE_FLAIL,
+    MOVE_NATURAL_GIFT,
+    MOVE_STORED_POWER,
+    MOVE_SYNCHRONOISE,
+    MOVE_TICKLE,
+    MOVE_WISH,
+    MOVE_YAWN,
+    0,
+};
+
+const u16 gPorygonEggMoves[] = {
+    0,
+};
+
+const u16 gPorygon2EggMoves[] = {
+    0,
+};
+
+const u16 gPorygonZEggMoves[] = {
+    0,
+};
+
+const u16 gOmanyteEggMoves[] = {
+    MOVE_AURORA_BEAM,
+    MOVE_BIDE,
+    MOVE_BUBBLE_BEAM,
+    MOVE_HAZE,
+    MOVE_KNOCK_OFF,
+    MOVE_MUDDY_WATER,
+    MOVE_REFLECT_TYPE,
+    MOVE_ROCK_SLIDE,
+    MOVE_SLAM,
+    MOVE_SPIKES,
+    MOVE_SUPERSONIC,
+    MOVE_TOXIC_SPIKES,
+    MOVE_WATER_PULSE,
+    MOVE_WHIRLPOOL,
+    MOVE_WRING_OUT,
+    0,
+};
+
+const u16 gOmastarEggMoves[] = {
+    MOVE_AURORA_BEAM,
+    MOVE_BIDE,
+    MOVE_BUBBLE_BEAM,
+    MOVE_HAZE,
+    MOVE_KNOCK_OFF,
+    MOVE_MUDDY_WATER,
+    MOVE_REFLECT_TYPE,
+    MOVE_ROCK_SLIDE,
+    MOVE_SLAM,
+    MOVE_SPIKES,
+    MOVE_SUPERSONIC,
+    MOVE_TOXIC_SPIKES,
+    MOVE_WATER_PULSE,
+    MOVE_WHIRLPOOL,
+    MOVE_WRING_OUT,
+    0,
+};
+
+const u16 gKabutoEggMoves[] = {
+    MOVE_AURORA_BEAM,
+    MOVE_BUBBLE_BEAM,
+    MOVE_CONFUSE_RAY,
+    MOVE_DIG,
+    MOVE_FLAIL,
+    MOVE_FORESIGHT,
+    MOVE_GIGA_DRAIN,
+    MOVE_ICY_WIND,
+    MOVE_KNOCK_OFF,
+    MOVE_MUD_SHOT,
+    MOVE_RAPID_SPIN,
+    MOVE_SCREECH,
+    MOVE_TAKE_DOWN,
+    0,
+};
+
+const u16 gKabutopsEggMoves[] = {
+    MOVE_AURORA_BEAM,
+    MOVE_BUBBLE_BEAM,
+    MOVE_CONFUSE_RAY,
+    MOVE_DIG,
+    MOVE_FLAIL,
+    MOVE_FORESIGHT,
+    MOVE_GIGA_DRAIN,
+    MOVE_ICY_WIND,
+    MOVE_KNOCK_OFF,
+    MOVE_MUD_SHOT,
+    MOVE_RAPID_SPIN,
+    MOVE_SCREECH,
+    MOVE_TAKE_DOWN,
+    0,
+};
+
+const u16 gAerodactylEggMoves[] = {
+    // Assurance
+    MOVE_CURSE,
+    MOVE_DRAGON_BREATH,
+    MOVE_FORESIGHT,
+    MOVE_PURSUIT,
+    MOVE_ROOST,
+    MOVE_STEEL_WING,
+    MOVE_TAILWIND,
+    MOVE_WHIRLWIND,
+    // Wide Guard
+    0,
+};
+
+const u16 gMunchlaxEggMoves[] = {
+    // After You
+    MOVE_BELCH,
+    MOVE_CHARM,
+    MOVE_COUNTER,
+    MOVE_CURSE,
+    MOVE_DOUBLE_EDGE,
+    MOVE_LICK,
+    MOVE_NATURAL_GIFT,
+    MOVE_PURSUIT,
+    // Power-Up Punch,
+    MOVE_SELF_DESTRUCT,
+    MOVE_SUBSTITUTE,
+    MOVE_WHIRLWIND,
+    MOVE_ZEN_HEADBUTT,
+    0,
+};
+
+const u16 gSnorlaxEggMoves[] = {
+    // After You
+    MOVE_BELCH,
+    MOVE_CHARM,
+    MOVE_COUNTER,
+    MOVE_CURSE,
+    MOVE_DOUBLE_EDGE,
+    MOVE_LICK,
+    MOVE_NATURAL_GIFT,
+    MOVE_FISSURE,
+    MOVE_LICK,
+    MOVE_NATURAL_GIFT,
+    MOVE_PURSUIT,
+    // Power-Up Punch,
+    MOVE_SELF_DESTRUCT,
+    MOVE_PURSUIT,
+    MOVE_SUBSTITUTE,
+    MOVE_WHIRLWIND,
+    0,
+};
+
+const u16 gArticunoEggMoves[] = {
+    0,
+};
+
+const u16 gZapdosEggMoves[] = {
+    0,
+};
+
+const u16 gMoltresEggMoves[] = {
+    0,
+};
+
+const u16 gDratiniEggMoves[] = {
+    MOVE_AQUA_JET,
+    MOVE_DRAGON_BREATH,
+    MOVE_DRAGON_DANCE,
+    MOVE_DRAGON_PULSE,
+    MOVE_DRAGON_RUSH,
+    MOVE_EXTREME_SPEED,
+    MOVE_HAZE,
+    MOVE_IRON_TAIL,
+    MOVE_LIGHT_SCREEN,
+    MOVE_MIST,
+    MOVE_SUPERSONIC,
+    MOVE_WATER_PULSE,
+    0,
+};
+
+const u16 gDragonairEggMoves[] = {
+    MOVE_AQUA_JET,
+    MOVE_DRAGON_BREATH,
+    MOVE_DRAGON_DANCE,
+    MOVE_DRAGON_PULSE,
+    MOVE_DRAGON_RUSH,
+    MOVE_EXTREME_SPEED,
+    MOVE_HAZE,
+    MOVE_IRON_TAIL,
+    MOVE_LIGHT_SCREEN,
+    MOVE_MIST,
+    MOVE_SUPERSONIC,
+    MOVE_WATER_PULSE,
+    0,
+};
+
+const u16 gDragoniteEggMoves[] = {
+    MOVE_AQUA_JET,
+    MOVE_DRAGON_BREATH,
+    MOVE_DRAGON_DANCE,
+    MOVE_DRAGON_PULSE,
+    MOVE_DRAGON_RUSH,
+    MOVE_EXTREME_SPEED,
+    MOVE_HAZE,
+    MOVE_IRON_TAIL,
+    MOVE_LIGHT_SCREEN,
+    MOVE_MIST,
+    MOVE_SUPERSONIC,
+    MOVE_WATER_PULSE,
+    0,
+};
+
+const u16 gMewtwoEggMoves[] = {
+    0,
+};
+
+const u16 gMewEggMoves[] = {
+    0,
+};
+
+const u16 gChikoritaEggMoves[] = {
+    MOVE_ANCIENT_POWER,
+    MOVE_AROMATHERAPY,
+    MOVE_BODY_SLAM,
+    MOVE_COUNTER,
+    MOVE_FLAIL,
+    MOVE_GRASS_WHISTLE,
+    // Grassy Terrain,
+    MOVE_HEAL_PULSE,
+    MOVE_INGRAIN,
+    MOVE_LEAF_STORM,
+    MOVE_LEECH_SEED,
+    MOVE_NATURE_POWER,
+    MOVE_REFRESH,
+    MOVE_VINE_WHIP,
+    MOVE_WRING_OUT,
+    0,
+};
+
+const u16 gBayleefEggMoves[] = {
+    MOVE_ANCIENT_POWER,
+    MOVE_AROMATHERAPY,
+    MOVE_BODY_SLAM,
+    MOVE_COUNTER,
+    MOVE_FLAIL,
+    MOVE_GRASS_WHISTLE,
+    // Grassy Terrain,
+    MOVE_HEAL_PULSE,
+    MOVE_INGRAIN,
+    MOVE_LEAF_STORM,
+    MOVE_LEECH_SEED,
+    MOVE_NATURE_POWER,
+    MOVE_REFRESH,
+    MOVE_VINE_WHIP,
+    MOVE_WRING_OUT,
+    0,
+};
+
+const u16 gMeganiumEggMoves[] = {
+    MOVE_ANCIENT_POWER,
+    MOVE_AROMATHERAPY,
+    MOVE_BODY_SLAM,
+    MOVE_COUNTER,
+    MOVE_FLAIL,
+    MOVE_GRASS_WHISTLE,
+    // Grassy Terrain,
+    MOVE_HEAL_PULSE,
+    MOVE_INGRAIN,
+    MOVE_LEAF_STORM,
+    MOVE_LEECH_SEED,
+    MOVE_NATURE_POWER,
+    MOVE_REFRESH,
+    MOVE_VINE_WHIP,
+    MOVE_WRING_OUT,
+    0,
+};
+
+const u16 gCyndaquilEggMoves[] = {
+    MOVE_COVET,
+    MOVE_CRUSH_CLAW,
+    MOVE_DOUBLE_EDGE,
+    MOVE_DOUBLE_KICK,
+    MOVE_EXTRASENSORY,
+    MOVE_FLAME_BURST,
+    MOVE_FLARE_BLITZ,
+    MOVE_FORESIGHT,
+    MOVE_FURY_SWIPES,
+    MOVE_HOWL,
+    MOVE_NATURE_POWER,
+    MOVE_QUICK_ATTACK,
+    MOVE_REVERSAL,
+    MOVE_THRASH,
+    0,
+};
+
+const u16 gQuilavaEggMoves[] = {
+    MOVE_COVET,
+    MOVE_CRUSH_CLAW,
+    MOVE_DOUBLE_EDGE,
+    MOVE_DOUBLE_KICK,
+    MOVE_EXTRASENSORY,
+    MOVE_FLAME_BURST,
+    MOVE_FLARE_BLITZ,
+    MOVE_FORESIGHT,
+    MOVE_FURY_SWIPES,
+    MOVE_HOWL,
+    MOVE_NATURE_POWER,
+    MOVE_QUICK_ATTACK,
+    MOVE_REVERSAL,
+    MOVE_THRASH,
+    0,
+};
+
+const u16 gTyphlosionEggMoves[] = {
+    MOVE_COVET,
+    MOVE_CRUSH_CLAW,
+    MOVE_DOUBLE_EDGE,
+    MOVE_DOUBLE_KICK,
+    MOVE_EXTRASENSORY,
+    MOVE_FLAME_BURST,
+    MOVE_FLARE_BLITZ,
+    MOVE_FORESIGHT,
+    MOVE_FURY_SWIPES,
+    MOVE_HOWL,
+    MOVE_NATURE_POWER,
+    MOVE_QUICK_ATTACK,
+    MOVE_REVERSAL,
+    MOVE_THRASH,
+    0,
+};
+
+const u16 gTotodileEggMoves[] = {
+    MOVE_ANCIENT_POWER,
+    MOVE_AQUA_JET,
+    MOVE_BLOCK,
+    MOVE_CRUNCH,
+    MOVE_DRAGON_CLAW,
+    MOVE_DRAGON_DANCE,
+    MOVE_FAKE_TEARS,
+    MOVE_FLATTER,
+    MOVE_HYDRO_PUMP,
+    MOVE_ICE_PUNCH,
+    MOVE_METAL_CLAW,
+    MOVE_MUD_SPORT,
+    MOVE_ROCK_SLIDE,
+    MOVE_THRASH,
+    MOVE_WATER_PULSE,
+    MOVE_WATER_SPORT,
+    0,
+};
+
+const u16 gCroconawEggMoves[] = {
+    MOVE_ANCIENT_POWER,
+    MOVE_AQUA_JET,
+    MOVE_BLOCK,
+    MOVE_CRUNCH,
+    MOVE_DRAGON_CLAW,
+    MOVE_DRAGON_DANCE,
+    MOVE_FAKE_TEARS,
+    MOVE_FLATTER,
+    MOVE_HYDRO_PUMP,
+    MOVE_ICE_PUNCH,
+    MOVE_METAL_CLAW,
+    MOVE_MUD_SPORT,
+    MOVE_ROCK_SLIDE,
+    MOVE_THRASH,
+    MOVE_WATER_PULSE,
+    MOVE_WATER_SPORT,
+    0,
+};
+
+const u16 gFeraligatrEggMoves[] = {
+    MOVE_ANCIENT_POWER,
+    MOVE_AQUA_JET,
+    MOVE_BLOCK,
+    MOVE_CRUNCH,
+    MOVE_DRAGON_CLAW,
+    MOVE_DRAGON_DANCE,
+    MOVE_FAKE_TEARS,
+    MOVE_FLATTER,
+    MOVE_HYDRO_PUMP,
+    MOVE_ICE_PUNCH,
+    MOVE_METAL_CLAW,
+    MOVE_MUD_SPORT,
+    MOVE_ROCK_SLIDE,
+    MOVE_THRASH,
+    MOVE_WATER_PULSE,
+    MOVE_WATER_SPORT,
+    0,
+};
+
+const u16 gSentretEggMoves[] = {
+    MOVE_ASSIST,
+    MOVE_PUPPY_EYES,
+    MOVE_CAPTIVATE,
+    MOVE_CHARM,
+    MOVE_COVET,
+    MOVE_DOUBLE_EDGE,
+    MOVE_FOCUS_ENERGY,
+    MOVE_IRON_TAIL,
+    // Last Resort
+    MOVE_NATURAL_GIFT,
+    MOVE_PURSUIT,
+    MOVE_REVERSAL,
+    MOVE_SLASH,
+    MOVE_SUBSTITUTE,
+    MOVE_TRICK,
+    0,
+};
+
+const u16 gFurretEggMoves[] = {
+    MOVE_ASSIST,
+    MOVE_PUPPY_EYES,
+    MOVE_CAPTIVATE,
+    MOVE_CHARM,
+    MOVE_COVET,
+    MOVE_DOUBLE_EDGE,
+    MOVE_FOCUS_ENERGY,
+    MOVE_IRON_TAIL,
+    // Last Resort
+    MOVE_NATURAL_GIFT,
+    MOVE_PURSUIT,
+    MOVE_REVERSAL,
+    MOVE_SLASH,
+    MOVE_SUBSTITUTE,
+    MOVE_TRICK,
+    0,
+};
+
+const u16 gHoothootEggMoves[] = {
+    MOVE_AGILITY,
+    MOVE_DEFOG,
+    MOVE_FEATHER_DANCE,
+    MOVE_FAINT_ATTACK,
+    MOVE_HURRICANE,
+    MOVE_MEAN_LOOK,
+    MOVE_MIRROR_MOVE,
+    MOVE_NIGHT_SHADE,
+    MOVE_SKY_ATTACK,
+    MOVE_SUPERSONIC,
+    MOVE_WHIRLWIND,
+    MOVE_WING_ATTACK,
+    0,
+};
+
+const u16 gNoctowlEggMoves[] = {
+    MOVE_AGILITY,
+    MOVE_DEFOG,
+    MOVE_FEATHER_DANCE,
+    MOVE_FAINT_ATTACK,
+    MOVE_HURRICANE,
+    MOVE_MEAN_LOOK,
+    MOVE_MIRROR_MOVE,
+    MOVE_NIGHT_SHADE,
+    MOVE_SKY_ATTACK,
+    MOVE_SUPERSONIC,
+    MOVE_WHIRLWIND,
+    MOVE_WING_ATTACK,
+    0,
+};
+
+const u16 gLedybaEggMoves[] = {
+    MOVE_BIDE,
+    MOVE_BUG_BITE,
+    MOVE_BUG_BUZZ,
+    MOVE_COUNTER,
+    MOVE_DIZZY_PUNCH,
+    MOVE_DRAIN_PUNCH,
+    MOVE_ENCORE,
+    MOVE_ENDURE,
+    MOVE_FOCUS_PUNCH,
+    MOVE_KNOCK_OFF,
+    MOVE_PSYBEAM,
+    MOVE_SCREECH,
+    MOVE_SILVER_WIND,
+    MOVE_TAILWIND,
+    0,
+};
+
+const u16 gLedianEggMoves[] = {
+    MOVE_BIDE,
+    MOVE_BUG_BITE,
+    MOVE_BUG_BUZZ,
+    MOVE_COUNTER,
+    MOVE_DIZZY_PUNCH,
+    MOVE_DRAIN_PUNCH,
+    MOVE_ENCORE,
+    MOVE_ENDURE,
+    MOVE_FOCUS_PUNCH,
+    MOVE_KNOCK_OFF,
+    MOVE_PSYBEAM,
+    MOVE_SCREECH,
+    MOVE_SILVER_WIND,
+    MOVE_TAILWIND,
+    0,
+};
+
+const u16 gSpinarakEggMoves[] = {
+    MOVE_BATON_PASS,
+    MOVE_DISABLE,
+    // Electroweb
+    // Lunge
+    MOVE_MEGAHORN,
+    MOVE_NIGHT_SLASH,
+    MOVE_POISON_JAB,
+    MOVE_PSYBEAM,
+    MOVE_PURSUIT,
+    // Rage Powder
+    MOVE_SIGNAL_BEAM,
+    MOVE_SONIC_BOOM,
+    MOVE_TOXIC_SPIKES,
+    MOVE_TWINEEDLE,
+    0,
+};
+
+const u16 gAriadosEggMoves[] = {
+    MOVE_BATON_PASS,
+    MOVE_DISABLE,
+    // Electroweb
+    // Lunge
+    MOVE_MEGAHORN,
+    MOVE_NIGHT_SLASH,
+    MOVE_POISON_JAB,
+    MOVE_PSYBEAM,
+    MOVE_PURSUIT,
+    // Rage Powder
+    MOVE_SIGNAL_BEAM,
+    MOVE_SONIC_BOOM,
+    MOVE_TOXIC_SPIKES,
+    MOVE_TWINEEDLE,
+    0,
+};
+
+const u16 gChinchouEggMoves[] = {
+    MOVE_AGILITY,
+    MOVE_AMNESIA,
+    MOVE_BRINE,
+    MOVE_FLAIL,
+    MOVE_MIST,
+    MOVE_PSYBEAM,
+    MOVE_SCREECH,
+    MOVE_SHOCK_WAVE,
+    MOVE_SOAK,
+    MOVE_WATER_PULSE,
+    MOVE_WHIRLPOOL,
+    0,
+};
+
+const u16 gLanturnEggMoves[] = {
+    MOVE_AGILITY,
+    MOVE_AMNESIA,
+    MOVE_BRINE,
+    MOVE_FLAIL,
+    MOVE_MIST,
+    MOVE_PSYBEAM,
+    MOVE_SCREECH,
+    MOVE_SHOCK_WAVE,
+    MOVE_SOAK,
+    MOVE_WATER_PULSE,
+    MOVE_WHIRLPOOL,
+    0,
+};
+
+const u16 gTogepiEggMoves[] = {
+    MOVE_EXTRASENSORY,
+    MOVE_FORESIGHT,
+    MOVE_FUTURE_SIGHT,
+    MOVE_LUCKY_CHANT,
+    MOVE_MIRROR_MOVE,
+    MOVE_MORNING_SUN,
+    MOVE_NASTY_PLOT,
+    MOVE_PECK,
+    MOVE_PRESENT,
+    MOVE_PSYCHO_SHIFT,
+    MOVE_PSYCH_UP,
+    MOVE_SECRET_POWER,
+    MOVE_STORED_POWER,
+    MOVE_SUBSTITUTE,
+    0,
+};
+
+const u16 gTogeticEggMoves[] = {
+    MOVE_EXTRASENSORY,
+    MOVE_FORESIGHT,
+    MOVE_FUTURE_SIGHT,
+    MOVE_LUCKY_CHANT,
+    MOVE_MIRROR_MOVE,
+    MOVE_MORNING_SUN,
+    MOVE_NASTY_PLOT,
+    MOVE_PECK,
+    MOVE_PRESENT,
+    MOVE_PSYCHO_SHIFT,
+    MOVE_PSYCH_UP,
+    MOVE_SECRET_POWER,
+    MOVE_STORED_POWER,
+    MOVE_SUBSTITUTE,
+    0,
+};
+
+const u16 gTogekissEggMoves[] = {
+    MOVE_EXTRASENSORY,
+    MOVE_FORESIGHT,
+    MOVE_FUTURE_SIGHT,
+    MOVE_LUCKY_CHANT,
+    MOVE_MIRROR_MOVE,
+    MOVE_MORNING_SUN,
+    MOVE_NASTY_PLOT,
+    MOVE_PECK,
+    MOVE_PRESENT,
+    MOVE_PSYCHO_SHIFT,
+    MOVE_PSYCH_UP,
+    MOVE_SECRET_POWER,
+    MOVE_STORED_POWER,
+    MOVE_SUBSTITUTE,
+    0,
+};
+
+const u16 gNatuEggMoves[] = {
+    // Ally Switch
+    MOVE_DRILL_PECK,
+    MOVE_FEATHER_DANCE,
+    MOVE_FAINT_ATTACK,
+    MOVE_HAZE,
+    MOVE_PSYCH_UP,
+    MOVE_QUICK_ATTACK,
+    MOVE_REFRESH,
+    MOVE_ROOST,
+    // Simple Beam
+    MOVE_SKILL_SWAP,
+    MOVE_STEEL_WING,
+    MOVE_SUCKER_PUNCH,
+    MOVE_SYNCHRONOISE,
+    MOVE_ZEN_HEADBUTT,
+    0,
+};
+
+const u16 gXatuEggMoves[] = {
+    // Ally Switch
+    MOVE_DRILL_PECK,
+    MOVE_FEATHER_DANCE,
+    MOVE_FAINT_ATTACK,
+    MOVE_HAZE,
+    MOVE_PSYCH_UP,
+    MOVE_QUICK_ATTACK,
+    MOVE_REFRESH,
+    MOVE_ROOST,
+    // Simple Beam
+    MOVE_SKILL_SWAP,
+    MOVE_STEEL_WING,
+    MOVE_SUCKER_PUNCH,
+    MOVE_SYNCHRONOISE,
+    MOVE_ZEN_HEADBUTT,
+    0,
+};
+
+const u16 gMareepEggMoves[] = {
+    // After You
+    MOVE_AGILITY,
+    MOVE_BODY_SLAM,
+    MOVE_CHARGE,
+    MOVE_EERIE_IMPULSE,
+    // Electric Terrain
+    MOVE_FLATTER,
+    MOVE_IRON_TAIL,
+    MOVE_ODOR_SLEUTH,
+    MOVE_REFLECT,
+    MOVE_SAFEGUARD,
+    MOVE_SAND_ATTACK,
+    MOVE_SCREECH,
+    MOVE_TAKE_DOWN,
+    0,
+};
+
+const u16 gFlaaffyEggMoves[] = {
+    // After You
+    MOVE_AGILITY,
+    MOVE_BODY_SLAM,
+    MOVE_CHARGE,
+    MOVE_EERIE_IMPULSE,
+    // Electric Terrain
+    MOVE_FLATTER,
+    MOVE_IRON_TAIL,
+    MOVE_ODOR_SLEUTH,
+    MOVE_REFLECT,
+    MOVE_SAFEGUARD,
+    MOVE_SAND_ATTACK,
+    MOVE_SCREECH,
+    MOVE_TAKE_DOWN,
+    0,
+};
+
+const u16 gAmpharosEggMoves[] = {
+    // After You
+    MOVE_AGILITY,
+    MOVE_BODY_SLAM,
+    MOVE_CHARGE,
+    MOVE_EERIE_IMPULSE,
+    // Electric Terrain
+    MOVE_FLATTER,
+    MOVE_IRON_TAIL,
+    MOVE_ODOR_SLEUTH,
+    MOVE_REFLECT,
+    MOVE_SAFEGUARD,
+    MOVE_SAND_ATTACK,
+    MOVE_SCREECH,
+    MOVE_TAKE_DOWN,
+    0,
+};
+
+const u16 gAzurillEggMoves[] = {
+    MOVE_AMNESIA,
+    MOVE_AQUA_JET,
+    MOVE_BELLY_DRUM,
+    MOVE_BODY_SLAM,
+    MOVE_CAMOUFLAGE,
+    MOVE_COPYCAT,
+    MOVE_ENCORE,
+    MOVE_FAKE_TEARS,
+    MOVE_FUTURE_SIGHT,
+    MOVE_LIGHT_SCREEN,
+    MOVE_MUDDY_WATER,
+    MOVE_PERISH_SONG,
+    MOVE_PRESENT,
+    MOVE_REFRESH,
+    MOVE_SING,
+    MOVE_SLAM,
+    MOVE_SOAK,
+    MOVE_SUBSTITUTE,
+    MOVE_SUPERPOWER,
+    MOVE_SUPERSONIC,
+    MOVE_TICKLE,
+    MOVE_WATER_SPORT,
+    0,
+};
+
+const u16 gMarillEggMoves[] = {
+    MOVE_AMNESIA,
+    MOVE_AQUA_JET,
+    MOVE_BELLY_DRUM,
+    MOVE_BODY_SLAM,
+    MOVE_CAMOUFLAGE,
+    MOVE_COPYCAT,
+    MOVE_ENCORE,
+    MOVE_FAKE_TEARS,
+    MOVE_FUTURE_SIGHT,
+    MOVE_LIGHT_SCREEN,
+    MOVE_MUDDY_WATER,
+    MOVE_PERISH_SONG,
+    MOVE_PRESENT,
+    MOVE_REFRESH,
+    MOVE_SING,
+    MOVE_SLAM,
+    MOVE_SOAK,
+    MOVE_SUBSTITUTE,
+    MOVE_SUPERPOWER,
+    MOVE_SUPERSONIC,
+    MOVE_TICKLE,
+    MOVE_WATER_SPORT,
+    0,
+};
+
+const u16 gAzumarillEggMoves[] = {
+    MOVE_AMNESIA,
+    MOVE_AQUA_JET,
+    MOVE_BELLY_DRUM,
+    MOVE_BODY_SLAM,
+    MOVE_CAMOUFLAGE,
+    MOVE_COPYCAT,
+    MOVE_ENCORE,
+    MOVE_FAKE_TEARS,
+    MOVE_FUTURE_SIGHT,
+    MOVE_LIGHT_SCREEN,
+    MOVE_MUDDY_WATER,
+    MOVE_PERISH_SONG,
+    MOVE_PRESENT,
+    MOVE_REFRESH,
+    MOVE_SING,
+    MOVE_SLAM,
+    MOVE_SOAK,
+    MOVE_SUBSTITUTE,
+    MOVE_SUPERPOWER,
+    MOVE_SUPERSONIC,
+    MOVE_TICKLE,
+    MOVE_WATER_SPORT,
+    0,
+};
+
+const u16 gBonslyEggMoves[] = {
+    MOVE_CURSE,
+    MOVE_DEFENSE_CURL,
+    MOVE_ENDURE,
+    MOVE_HARDEN,
+    MOVE_HEADBUTT,
+    MOVE_ROLLOUT,
+    MOVE_SAND_TOMB,
+    MOVE_SELF_DESTRUCT,
+    MOVE_STEALTH_ROCK,
+    0,
+};
+
+const u16 gSudowoodoEggMoves[] = {
+    MOVE_CURSE,
+    MOVE_DEFENSE_CURL,
+    MOVE_ENDURE,
+    MOVE_HARDEN,
+    MOVE_HEADBUTT,
+    MOVE_ROLLOUT,
+    MOVE_SAND_TOMB,
+    MOVE_SELF_DESTRUCT,
+    MOVE_STEALTH_ROCK,
+    0,
+};
+
+const u16 gHoppipEggMoves[] = {
+    MOVE_AMNESIA,
+    MOVE_AROMATHERAPY,
+    MOVE_CONFUSION,
+    MOVE_COTTON_GUARD,
+    MOVE_DOUBLE_EDGE,
+    MOVE_ENCORE,
+    MOVE_ENDURE,
+    // Grassy Terrain,
+    MOVE_HELPING_HAND,
+    MOVE_PSYCH_UP,
+    MOVE_REFLECT,
+    MOVE_SEED_BOMB,
+    // Strength Sap
+    MOVE_WORRY_SEED,
+    0,
+};
+
+const u16 gSkiploomEggMoves[] = {
+    MOVE_AMNESIA,
+    MOVE_AROMATHERAPY,
+    MOVE_CONFUSION,
+    MOVE_COTTON_GUARD,
+    MOVE_DOUBLE_EDGE,
+    MOVE_ENCORE,
+    MOVE_ENDURE,
+    // Grassy Terrain,
+    MOVE_HELPING_HAND,
+    MOVE_PSYCH_UP,
+    MOVE_REFLECT,
+    MOVE_SEED_BOMB,
+    // Strength Sap
+    MOVE_WORRY_SEED,
+    0,
+};
+
+const u16 gJumpluffEggMoves[] = {
+    MOVE_AMNESIA,
+    MOVE_AROMATHERAPY,
+    MOVE_CONFUSION,
+    MOVE_COTTON_GUARD,
+    MOVE_DOUBLE_EDGE,
+    MOVE_ENCORE,
+    MOVE_ENDURE,
+    // Grassy Terrain,
+    MOVE_HELPING_HAND,
+    MOVE_PSYCH_UP,
+    MOVE_REFLECT,
+    MOVE_SEED_BOMB,
+    // Strength Sap
+    MOVE_WORRY_SEED,
+    0,
+};
+
+const u16 gAipomEggMoves[] = {
+    MOVE_AGILITY,
+    MOVE_BEAT_UP,
+    MOVE_BOUNCE,
+    MOVE_COUNTER,
+    MOVE_COVET,
+    MOVE_DOUBLE_SLAP,
+    MOVE_FAKE_OUT,
+    MOVE_PURSUIT,
+    // Quick Guard
+    MOVE_REVENGE,
+    MOVE_SCREECH,
+    MOVE_SLAM,
+    MOVE_SPITE,
+    MOVE_SWITCHEROO,
+    // Tail Slap
+    0,
+};
+
+const u16 gAmbipomEggMoves[] = {
+    MOVE_AGILITY,
+    MOVE_BEAT_UP,
+    MOVE_BOUNCE,
+    MOVE_COUNTER,
+    MOVE_COVET,
+    MOVE_DOUBLE_SLAP,
+    MOVE_FAKE_OUT,
+    MOVE_PURSUIT,
+    // Quick Guard
+    MOVE_REVENGE,
+    MOVE_SCREECH,
+    MOVE_SLAM,
+    MOVE_SPITE,
+    MOVE_SWITCHEROO,
+    // Tail Slap
+    0,
+};
+
+const u16 gSunkernEggMoves[] = {
+    MOVE_BIDE,
+    MOVE_CURSE,
+    MOVE_ENCORE,
+    MOVE_ENDURE,
+    MOVE_GRASS_WHISTLE,
+    // Grassy Terrain,
+    MOVE_HELPING_HAND,
+    MOVE_INGRAIN,
+    MOVE_LEECH_SEED,
+    MOVE_MORNING_SUN,
+    MOVE_NATURAL_GIFT,
+    MOVE_NATURE_POWER,
+    MOVE_SWEET_SCENT,
+    0,
+};
+
+const u16 gSunfloraEggMoves[] = {
+    MOVE_BIDE,
+    MOVE_CURSE,
+    MOVE_ENCORE,
+    MOVE_ENDURE,
+    MOVE_GRASS_WHISTLE,
+    // Grassy Terrain,
+    MOVE_HELPING_HAND,
+    MOVE_INGRAIN,
+    MOVE_LEECH_SEED,
+    MOVE_MORNING_SUN,
+    MOVE_NATURAL_GIFT,
+    MOVE_NATURE_POWER,
+    MOVE_SWEET_SCENT,
+    0,
+};
+
+const u16 gYanmaEggMoves[] = {
+    MOVE_DOUBLE_EDGE,
+    MOVE_FEINT,
+    MOVE_FAINT_ATTACK,
+    MOVE_LEECH_LIFE,
+    MOVE_PURSUIT,
+    MOVE_REVERSAL,
+    MOVE_SECRET_POWER,
+    MOVE_SIGNAL_BEAM,
+    MOVE_SILVER_WIND,
+    MOVE_WHIRLWIND,
+    0,
+};
+
+const u16 gYanmegaEggMoves[] = {
+    MOVE_DOUBLE_EDGE,
+    MOVE_FEINT,
+    MOVE_FAINT_ATTACK,
+    MOVE_LEECH_LIFE,
+    MOVE_PURSUIT,
+    MOVE_REVERSAL,
+    MOVE_SECRET_POWER,
+    MOVE_SIGNAL_BEAM,
+    MOVE_SILVER_WIND,
+    MOVE_WHIRLWIND,
+    0,
+};
+
+const u16 gWooperEggMoves[] = {
+    MOVE_ACID_SPRAY,
+    // After You
+    MOVE_ANCIENT_POWER,
+    MOVE_BODY_SLAM,
+    MOVE_COUNTER,
+    MOVE_CURSE,
+    MOVE_DOUBLE_KICK,
+    MOVE_EERIE_IMPULSE,
+    MOVE_ENCORE,
+    MOVE_GUARD_SWAP,
+    MOVE_MUD_SPORT,
+    // Power-Up Punch,
+    MOVE_RECOVER,
+    MOVE_SAFEGUARD,
+    MOVE_SLEEP_TALK,
+    MOVE_SPIT_UP,
+    MOVE_STOCKPILE,
+    MOVE_SWALLOW,
+    0,
+};
+
+const u16 gQuagsireEggMoves[] = {
+    MOVE_ACID_SPRAY,
+    // After You
+    MOVE_ANCIENT_POWER,
+    MOVE_BODY_SLAM,
+    MOVE_COUNTER,
+    MOVE_CURSE,
+    MOVE_DOUBLE_KICK,
+    MOVE_EERIE_IMPULSE,
+    MOVE_ENCORE,
+    MOVE_GUARD_SWAP,
+    MOVE_MUD_SPORT,
+    // Power-Up Punch,
+    MOVE_RECOVER,
+    MOVE_SAFEGUARD,
+    MOVE_SLEEP_TALK,
+    MOVE_SPIT_UP,
+    MOVE_STOCKPILE,
+    MOVE_SWALLOW,
+    0,
+};
+
+const u16 gMurkrowEggMoves[] = {
+    // Assurance
+    MOVE_BRAVE_BIRD,
+    MOVE_CONFUSE_RAY,
+    MOVE_DRILL_PECK,
+    MOVE_FEATHER_DANCE,
+    MOVE_FAINT_ATTACK,
+    MOVE_FLATTER,
+    MOVE_MIRROR_MOVE,
+    MOVE_PERISH_SONG,
+    MOVE_PSYCHO_SHIFT,
+    MOVE_ROOST,
+    MOVE_SCREECH,
+    MOVE_SKY_ATTACK,
+    MOVE_WHIRLWIND,
+    MOVE_WING_ATTACK,
+    0,
+};
+
+const u16 gHonchkrowEggMoves[] = {
+    // Assurance
+    MOVE_BRAVE_BIRD,
+    MOVE_CONFUSE_RAY,
+    MOVE_DRILL_PECK,
+    MOVE_FEATHER_DANCE,
+    MOVE_FAINT_ATTACK,
+    MOVE_FLATTER,
+    MOVE_MIRROR_MOVE,
+    MOVE_PERISH_SONG,
+    MOVE_PSYCHO_SHIFT,
+    MOVE_ROOST,
+    MOVE_SCREECH,
+    MOVE_SKY_ATTACK,
+    MOVE_WHIRLWIND,
+    MOVE_WING_ATTACK,
+    0,
+};
+
+const u16 gMisdreavusEggMoves[] = {
+    MOVE_CURSE,
+    MOVE_DESTINY_BOND,
+    MOVE_IMPRISON,
+    MOVE_ME_FIRST,
+    MOVE_MEMENTO,
+    MOVE_NASTY_PLOT,
+    MOVE_OMINOUS_WIND,
+    MOVE_PSYCH_UP,
+    MOVE_SCREECH,
+    MOVE_SHADOW_SNEAK,
+    MOVE_SKILL_SWAP,
+    MOVE_SPITE,
+    MOVE_SUCKER_PUNCH,
+    // Wonder Room
+    0,
+};
+
+const u16 gMismagiusEggMoves[] = {
+    MOVE_CURSE,
+    MOVE_DESTINY_BOND,
+    MOVE_IMPRISON,
+    MOVE_ME_FIRST,
+    MOVE_MEMENTO,
+    MOVE_NASTY_PLOT,
+    MOVE_OMINOUS_WIND,
+    MOVE_PSYCH_UP,
+    MOVE_SCREECH,
+    MOVE_SHADOW_SNEAK,
+    MOVE_SKILL_SWAP,
+    MOVE_SPITE,
+    MOVE_SUCKER_PUNCH,
+    // Wonder Room
+    0,
+};
+
+const u16 gUnownEggMoves[] = {
+    0,
+};
+
+const u16 gWynautEggMoves[] = {
+    0,
+};
+
+const u16 gWobbuffetEggMoves[] = {
+    0,
+};
+
+const u16 gGirafarigEggMoves[] = {
+    MOVE_AMNESIA,
+    MOVE_BEAT_UP,
+    MOVE_DOUBLE_KICK,
+    MOVE_FORESIGHT,
+    MOVE_FUTURE_SIGHT,
+    MOVE_MAGIC_COAT,
+    MOVE_MEAN_LOOK,
+    MOVE_MIRROR_COAT,
+    // Psychic Fangs
+    // Psychic Terrain
+    MOVE_PSYCH_UP,
+    MOVE_RAZOR_WIND,
+    MOVE_SECRET_POWER,
+    MOVE_SKILL_SWAP,
+    MOVE_TAKE_DOWN,
+    MOVE_WISH,
+    0,
+};
+
+const u16 gPinecoEggMoves[] = {
+    MOVE_COUNTER,
+    MOVE_DOUBLE_EDGE,
+    MOVE_ENDURE,
+    MOVE_FLAIL,
+    MOVE_PIN_MISSILE,
+    MOVE_POWER_TRICK,
+    MOVE_REFLECT,
+    MOVE_REVENGE,
+    MOVE_SAND_TOMB,
+    MOVE_STEALTH_ROCK,
+    MOVE_SWIFT,
+    MOVE_TOXIC_SPIKES,
+    0,
+};
+
+const u16 gForretressEggMoves[] = {
+    MOVE_COUNTER,
+    MOVE_DOUBLE_EDGE,
+    MOVE_ENDURE,
+    MOVE_FLAIL,
+    MOVE_PIN_MISSILE,
+    MOVE_POWER_TRICK,
+    MOVE_REFLECT,
+    MOVE_REVENGE,
+    MOVE_SAND_TOMB,
+    MOVE_STEALTH_ROCK,
+    MOVE_SWIFT,
+    MOVE_TOXIC_SPIKES,
+    0,
+};
+
+const u16 gDunsparceEggMoves[] = {
+    MOVE_AGILITY,
+    MOVE_ANCIENT_POWER,
+    MOVE_ASTONISH,
+    MOVE_BIDE,
+    MOVE_BITE,
+    MOVE_CURSE,
+    MOVE_HEADBUTT,
+    MOVE_HEX,
+    MOVE_MAGIC_COAT,
+    MOVE_ROCK_SLIDE,
+    MOVE_SECRET_POWER,
+    MOVE_SLEEP_TALK,
+    MOVE_SNORE,
+    MOVE_TRUMP_CARD,
+    0,
+};
+
+const u16 gGligarEggMoves[] = {
+    MOVE_AGILITY,
+    MOVE_BATON_PASS,
+    MOVE_COUNTER,
+    MOVE_CROSS_POISON,
+    MOVE_DOUBLE_EDGE,
+    MOVE_FEINT,
+    MOVE_METAL_CLAW,
+    MOVE_NIGHT_SLASH,
+    MOVE_POISON_TAIL,
+    MOVE_POWER_TRICK,
+    MOVE_RAZOR_WIND,
+    // Rock Climb
+    MOVE_SAND_TOMB,
+    MOVE_WING_ATTACK,
+    0,
+};
+
+const u16 gGliscorEggMoves[] = {
+    MOVE_AGILITY,
+    MOVE_BATON_PASS,
+    MOVE_COUNTER,
+    MOVE_CROSS_POISON,
+    MOVE_DOUBLE_EDGE,
+    MOVE_FEINT,
+    MOVE_METAL_CLAW,
+    MOVE_NIGHT_SLASH,
+    MOVE_POISON_TAIL,
+    MOVE_POWER_TRICK,
+    MOVE_RAZOR_WIND,
+    // Rock Climb
+    MOVE_SAND_TOMB,
+    MOVE_WING_ATTACK,
+    0,
+};
+
+const u16 gSnubbullEggMoves[] = {
+    MOVE_CLOSE_COMBAT,
+    MOVE_CRUNCH,
+    MOVE_DOUBLE_EDGE,
+    MOVE_FAKE_TEARS,
+    MOVE_FAINT_ATTACK,
+    MOVE_FIRE_FANG,
+    MOVE_FOCUS_PUNCH,
+    MOVE_HEAL_BELL,
+    MOVE_ICE_FANG,
+    MOVE_METRONOME,
+    MOVE_MIMIC,
+    MOVE_PRESENT,
+    MOVE_REFLECT,
+    MOVE_SMELLING_SALT,
+    MOVE_SNORE,
+    MOVE_THUNDER_FANG,
+    0,
+};
+
+const u16 gGranbullEggMoves[] = {
+    MOVE_CLOSE_COMBAT,
+    MOVE_CRUNCH,
+    MOVE_DOUBLE_EDGE,
+    MOVE_FAKE_TEARS,
+    MOVE_FAINT_ATTACK,
+    MOVE_FIRE_FANG,
+    MOVE_FOCUS_PUNCH,
+    MOVE_HEAL_BELL,
+    MOVE_ICE_FANG,
+    MOVE_METRONOME,
+    MOVE_MIMIC,
+    MOVE_PRESENT,
+    MOVE_REFLECT,
+    MOVE_SMELLING_SALT,
+    MOVE_SNORE,
+    MOVE_THUNDER_FANG,
+    0,
+};
+
+const u16 gQwilfishEggMoves[] = {
+    MOVE_ACID_SPRAY,
+    MOVE_AQUA_JET,
+    MOVE_ASTONISH,
+    MOVE_BRINE,
+    MOVE_BUBBLE_BEAM,
+    MOVE_FLAIL,
+    MOVE_HAZE,
+    MOVE_POISON_JAB,
+    MOVE_SIGNAL_BEAM,
+    MOVE_SUPERSONIC,
+    MOVE_WATER_PULSE,
+    0,
+};
+
+const u16 gShuckleEggMoves[] = {
+    MOVE_ACID,
+    MOVE_ACUPRESSURE,
+    // Final Gambit,
+    MOVE_HELPING_HAND,
+    MOVE_KNOCK_OFF,
+    MOVE_MUD_SLAP,
+    MOVE_ROCK_BLAST,
+    MOVE_SAND_TOMB,
+    MOVE_SWEET_SCENT,
+    0,
+};
+
+const u16 gHeracrossEggMoves[] = {
+    MOVE_BIDE,
+    MOVE_DOUBLE_EDGE,
+    MOVE_FALSE_SWIPE,
+    MOVE_FLAIL,
+    MOVE_FOCUS_PUNCH,
+    MOVE_HARDEN,
+    MOVE_MEGAHORN,
+    MOVE_PURSUIT,
+    MOVE_REVENGE,
+    MOVE_ROCK_BLAST,
+    MOVE_SEISMIC_TOSS,
+    0,
+};
+
+const u16 gSneaselEggMoves[] = {
+    MOVE_ASSIST,
+    MOVE_AVALANCHE,
+    MOVE_BITE,
+    MOVE_COUNTER,
+    MOVE_CRUSH_CLAW,
+    MOVE_DOUBLE_HIT,
+    MOVE_FAKE_OUT,
+    MOVE_FEINT,
+    MOVE_FORESIGHT,
+    MOVE_ICE_PUNCH,
+    MOVE_ICE_SHARD,
+    MOVE_ICICLE_CRASH,
+    MOVE_PUNISHMENT,
+    MOVE_PURSUIT,
+    MOVE_REFLECT,
+    MOVE_SPITE,
+    // Throat Chop,
+    0,
+};
+
+const u16 gWeavileEggMoves[] = {
+    MOVE_ASSIST,
+    MOVE_AVALANCHE,
+    MOVE_BITE,
+    MOVE_COUNTER,
+    MOVE_CRUSH_CLAW,
+    MOVE_DOUBLE_HIT,
+    MOVE_FAKE_OUT,
+    MOVE_FEINT,
+    MOVE_FORESIGHT,
+    MOVE_ICE_PUNCH,
+    MOVE_ICE_SHARD,
+    MOVE_ICICLE_CRASH,
+    MOVE_PUNISHMENT,
+    MOVE_PURSUIT,
+    MOVE_REFLECT,
+    MOVE_SPITE,
+    // Throat Chop,
+    0,
+};
+
+const u16 gTeddiursaEggMoves[] = {
+    MOVE_BELLY_DRUM,
+    MOVE_CHIP_AWAY,
+    MOVE_CLOSE_COMBAT,
+    MOVE_COUNTER,
+    MOVE_CROSS_CHOP,
+    MOVE_CRUNCH,
+    MOVE_DOUBLE_EDGE,
+    MOVE_FAKE_TEARS,
+    MOVE_METAL_CLAW,
+    MOVE_NIGHT_SLASH,
+    MOVE_PLAY_ROUGH,
+    MOVE_SEISMIC_TOSS,
+    MOVE_SLEEP_TALK,
+    MOVE_TAKE_DOWN,
+    MOVE_YAWN,
+    0,
+};
+
+const u16 gUrsaringEggMoves[] = {
+    MOVE_BELLY_DRUM,
+    MOVE_CHIP_AWAY,
+    MOVE_CLOSE_COMBAT,
+    MOVE_COUNTER,
+    MOVE_CROSS_CHOP,
+    MOVE_CRUNCH,
+    MOVE_DOUBLE_EDGE,
+    MOVE_FAKE_TEARS,
+    MOVE_METAL_CLAW,
+    MOVE_NIGHT_SLASH,
+    MOVE_PLAY_ROUGH,
+    MOVE_SEISMIC_TOSS,
+    MOVE_SLEEP_TALK,
+    MOVE_TAKE_DOWN,
+    MOVE_YAWN,
+    0,
+};
+
+const u16 gSlugmaEggMoves[] = {
+    MOVE_ACID_ARMOR,
+    MOVE_CURSE,
+    MOVE_EARTH_POWER,
+    MOVE_GUARD_SWAP,
+    MOVE_HEAT_WAVE,
+    MOVE_INFERNO,
+    MOVE_MEMENTO,
+    MOVE_ROLLOUT,
+    MOVE_SMOKESCREEN,
+    MOVE_SPIT_UP,
+    MOVE_STOCKPILE,
+    MOVE_SWALLOW,
+    0,
+};
+
+const u16 gMagcargoEggMoves[] = {
+    MOVE_ACID_ARMOR,
+    MOVE_CURSE,
+    MOVE_EARTH_POWER,
+    MOVE_GUARD_SWAP,
+    MOVE_HEAT_WAVE,
+    MOVE_INFERNO,
+    MOVE_MEMENTO,
+    MOVE_ROLLOUT,
+    MOVE_SMOKESCREEN,
+    MOVE_SPIT_UP,
+    MOVE_STOCKPILE,
+    MOVE_SWALLOW,
+    0,
+};
+
+const u16 gSwinubEggMoves[] = {
+    MOVE_ANCIENT_POWER,
+    MOVE_AVALANCHE,
+    MOVE_BITE,
+    MOVE_BODY_SLAM,
+    MOVE_CURSE,
+    MOVE_DOUBLE_EDGE,
+    MOVE_FISSURE,
+    MOVE_FREEZE_DRY,
+    MOVE_ICICLE_CRASH,
+    MOVE_ICICLE_SPEAR,
+    MOVE_MUD_SHOT,
+    MOVE_ROCK_SLIDE,
+    MOVE_STEALTH_ROCK,
+    MOVE_TAKE_DOWN,
+    0,
+};
+
+const u16 gPiloswineEggMoves[] = {
+    MOVE_ANCIENT_POWER,
+    MOVE_AVALANCHE,
+    MOVE_BITE,
+    MOVE_BODY_SLAM,
+    MOVE_CURSE,
+    MOVE_DOUBLE_EDGE,
+    MOVE_FISSURE,
+    MOVE_FREEZE_DRY,
+    MOVE_ICICLE_CRASH,
+    MOVE_ICICLE_SPEAR,
+    MOVE_MUD_SHOT,
+    MOVE_ROCK_SLIDE,
+    MOVE_STEALTH_ROCK,
+    MOVE_TAKE_DOWN,
+    0,
+};
+
+const u16 gMamoswineEggMoves[] = {
+    MOVE_ANCIENT_POWER,
+    MOVE_AVALANCHE,
+    MOVE_BITE,
+    MOVE_BODY_SLAM,
+    MOVE_CURSE,
+    MOVE_DOUBLE_EDGE,
+    MOVE_FISSURE,
+    MOVE_FREEZE_DRY,
+    MOVE_ICICLE_CRASH,
+    MOVE_ICICLE_SPEAR,
+    MOVE_MUD_SHOT,
+    MOVE_ROCK_SLIDE,
+    MOVE_STEALTH_ROCK,
+    MOVE_TAKE_DOWN,
+    0,
+};
+
+const u16 gCorsolaEggMoves[] = {
+    MOVE_AMNESIA,
+    MOVE_AQUA_RING,
+    MOVE_BARRIER,
+    MOVE_BIDE,
+    MOVE_CAMOUFLAGE,
+    MOVE_CONFUSE_RAY,
+    MOVE_CURSE,
+    MOVE_HEAD_SMASH,
+    MOVE_ICICLE_SPEAR,
+    MOVE_INGRAIN,
+    // Liquidation
+    MOVE_MIST,
+    MOVE_NATURE_POWER,
+    MOVE_ROCK_SLIDE,
+    MOVE_SCREECH,
+    MOVE_WATER_PULSE,
+    0,
+};
+
+const u16 gRemoraidEggMoves[] = {
+    MOVE_ACID_SPRAY,
+    MOVE_AURORA_BEAM,
+    MOVE_ENTRAINMENT,
+    MOVE_FLAIL,
+    MOVE_HAZE,
+    MOVE_MUD_SHOT,
+    MOVE_OCTAZOOKA,
+    MOVE_ROCK_BLAST,
+    MOVE_SCREECH,
+    MOVE_SNORE,
+    MOVE_SUPERSONIC,
+    MOVE_SWIFT,
+    MOVE_THUNDER_WAVE,
+    MOVE_WATER_PULSE,
+    MOVE_WATER_SPOUT,
+    0,
+};
+
+const u16 gOctilleryEggMoves[] = {
+    MOVE_ACID_SPRAY,
+    MOVE_AURORA_BEAM,
+    MOVE_ENTRAINMENT,
+    MOVE_FLAIL,
+    MOVE_HAZE,
+    MOVE_MUD_SHOT,
+    MOVE_OCTAZOOKA,
+    MOVE_ROCK_BLAST,
+    MOVE_SCREECH,
+    MOVE_SNORE,
+    MOVE_SUPERSONIC,
+    MOVE_SWIFT,
+    MOVE_THUNDER_WAVE,
+    MOVE_WATER_PULSE,
+    MOVE_WATER_SPOUT,
+    0,
+};
+
+const u16 gDelibirdEggMoves[] = {
+    MOVE_AURORA_BEAM,
+    // Bestow
+    MOVE_COUNTER,
+    MOVE_DESTINY_BOND,
+    MOVE_FAKE_OUT,
+    MOVE_FREEZE_DRY,
+    MOVE_FUTURE_SIGHT,
+    MOVE_ICE_BALL,
+    MOVE_ICE_PUNCH,
+    MOVE_ICE_SHARD,
+    MOVE_ICY_WIND,
+    MOVE_QUICK_ATTACK,
+    MOVE_RAPID_SPIN,
+    MOVE_SPIKES,
+    MOVE_SPLASH,
+    0,
+};
+
+const u16 gMantykeEggMoves[] = {
+    MOVE_AMNESIA,
+    MOVE_HAZE,
+    MOVE_HYDRO_PUMP,
+    MOVE_MIRROR_COAT,
+    MOVE_MUD_SPORT,
+    MOVE_ROCK_SLIDE,
+    MOVE_SIGNAL_BEAM,
+    MOVE_SLAM,
+    MOVE_SPLASH,
+    MOVE_TAILWIND,
+    MOVE_TWISTER,
+    MOVE_WATER_SPORT,
+    // Wide Guard
+    0,
+};
+
+const u16 gMantineEggMoves[] = {
+    MOVE_AMNESIA,
+    MOVE_HAZE,
+    MOVE_HYDRO_PUMP,
+    MOVE_MIRROR_COAT,
+    MOVE_MUD_SPORT,
+    MOVE_ROCK_SLIDE,
+    MOVE_SIGNAL_BEAM,
+    MOVE_SLAM,
+    MOVE_SPLASH,
+    MOVE_TAILWIND,
+    MOVE_TWISTER,
+    MOVE_WATER_SPORT,
+    // Wide Guard
+    0,
+};
+
+const u16 gSkarmoryEggMoves[] = {
+    // Assurance
+    MOVE_BRAVE_BIRD,
+    MOVE_CURSE,
+    MOVE_DRILL_PECK,
+    MOVE_ENDURE,
+    MOVE_GUARD_SWAP,
+    MOVE_PURSUIT,
+    MOVE_SKY_ATTACK,
+    MOVE_STEALTH_ROCK,
+    MOVE_WHIRLWIND,
+    0,
+};
+
+const u16 gHoundourEggMoves[] = {
+    MOVE_BEAT_UP,
+    MOVE_COUNTER,
+    MOVE_DESTINY_BOND,
+    MOVE_FEINT,
+    MOVE_FIRE_FANG,
+    MOVE_FIRE_SPIN,
+    MOVE_NASTY_PLOT,
+    MOVE_PUNISHMENT,
+    MOVE_PURSUIT,
+    MOVE_RAGE,
+    MOVE_REVERSAL,
+    MOVE_SPITE,
+    MOVE_SUCKER_PUNCH,
+    MOVE_THUNDER_FANG,
+    MOVE_WILL_O_WISP,
+    0,
+};
+
+const u16 gHoundoomEggMoves[] = {
+    MOVE_BEAT_UP,
+    MOVE_COUNTER,
+    MOVE_DESTINY_BOND,
+    MOVE_FEINT,
+    MOVE_FIRE_FANG,
+    MOVE_FIRE_SPIN,
+    MOVE_NASTY_PLOT,
+    MOVE_PUNISHMENT,
+    MOVE_PURSUIT,
+    MOVE_RAGE,
+    MOVE_REVERSAL,
+    MOVE_SPITE,
+    MOVE_SUCKER_PUNCH,
+    MOVE_THUNDER_FANG,
+    MOVE_WILL_O_WISP,
+    0,
+};
+
+const u16 gPhanpyEggMoves[] = {
+    MOVE_ANCIENT_POWER,
+    MOVE_BODY_SLAM,
+    MOVE_COUNTER,
+    MOVE_ENDEAVOR,
+    MOVE_FISSURE,
+    MOVE_FOCUS_ENERGY,
+    MOVE_HEAD_SMASH,
+    MOVE_HEAVY_SLAM,
+    // High Horsepower
+    MOVE_ICE_SHARD,
+    MOVE_MUD_SLAP,
+    MOVE_PLAY_ROUGH,
+    MOVE_SNORE,
+    0,
+};
+
+const u16 gDonphanEggMoves[] = {
+    MOVE_ANCIENT_POWER,
+    MOVE_BODY_SLAM,
+    MOVE_COUNTER,
+    MOVE_ENDEAVOR,
+    MOVE_FISSURE,
+    MOVE_FOCUS_ENERGY,
+    MOVE_HEAD_SMASH,
+    MOVE_HEAVY_SLAM,
+    // High Horsepower
+    MOVE_ICE_SHARD,
+    MOVE_MUD_SLAP,
+    MOVE_PLAY_ROUGH,
+    MOVE_SNORE,
+    0,
+};
+
+const u16 gStantlerEggMoves[] = {
+    MOVE_BITE,
+    MOVE_DISABLE,
+    MOVE_DOUBLE_KICK,
+    MOVE_EXTRASENSORY,
+    MOVE_ME_FIRST,
+    MOVE_MEGAHORN,
+    MOVE_MUD_SPORT,
+    MOVE_PSYCH_UP,
+    MOVE_RAGE,
+    MOVE_SPITE,
+    MOVE_SWAGGER,
+    MOVE_THRASH,
+    MOVE_ZEN_HEADBUTT,
+    0,
+};
+
+const u16 gSmeargleEggMoves[] = {
+    0,
+};
+
+const u16 gMiltankEggMoves[] = {
+    MOVE_BELCH,
+    MOVE_CURSE,
+    MOVE_DIZZY_PUNCH,
+    MOVE_DOUBLE_EDGE,
+    MOVE_ENDURE,
+    MOVE_HAMMER_ARM,
+    MOVE_HEART_STAMP,
+    MOVE_HELPING_HAND,
+    MOVE_NATURAL_GIFT,
+    MOVE_PRESENT,
+    MOVE_PSYCH_UP,
+    MOVE_PUNISHMENT,
+    MOVE_REVERSAL,
+    MOVE_SEISMIC_TOSS,
+    MOVE_SLEEP_TALK,
+    0,
+};
+
+const u16 gRaikouEggMoves[] = {
+    0,
+};
+
+const u16 gEnteiEggMoves[] = {
+    0,
+};
+
+const u16 gSuicuneEggMoves[] = {
+    0,
+};
+
+const u16 gLarvitarEggMoves[] = {
+    MOVE_ANCIENT_POWER,
+    // Assurance
+    MOVE_CURSE,
+    MOVE_DRAGON_DANCE,
+    MOVE_FOCUS_ENERGY,
+    MOVE_IRON_DEFENSE,
+    MOVE_IRON_HEAD,
+    MOVE_IRON_TAIL,
+    MOVE_OUTRAGE,
+    MOVE_PURSUIT,
+    MOVE_STEALTH_ROCK,
+    MOVE_STOMP,
+    0,
+};
+
+const u16 gPupitarEggMoves[] = {
+    MOVE_ANCIENT_POWER,
+    // Assurance
+    MOVE_CURSE,
+    MOVE_DRAGON_DANCE,
+    MOVE_FOCUS_ENERGY,
+    MOVE_IRON_DEFENSE,
+    MOVE_IRON_HEAD,
+    MOVE_IRON_TAIL,
+    MOVE_OUTRAGE,
+    MOVE_PURSUIT,
+    MOVE_STEALTH_ROCK,
+    MOVE_STOMP,
+    0,
+};
+
+const u16 gTyranitarEggMoves[] = {
+    MOVE_ANCIENT_POWER,
+    // Assurance
+    MOVE_CURSE,
+    MOVE_DRAGON_DANCE,
+    MOVE_FOCUS_ENERGY,
+    MOVE_IRON_DEFENSE,
+    MOVE_IRON_HEAD,
+    MOVE_IRON_TAIL,
+    MOVE_OUTRAGE,
+    MOVE_PURSUIT,
+    MOVE_STEALTH_ROCK,
+    MOVE_STOMP,
+    0,
+};
+
+const u16 gLugiaEggMoves[] = {
+    0,
+};
+
+const u16 gHoOhEggMoves[] = {
+    0,
+};
+
+const u16 gCelebiEggMoves[] = {
+    0,
+};
+
+const u16 gTreeckoEggMoves[] = {
+    MOVE_BULLET_SEED,
+    MOVE_CRUNCH,
+    MOVE_CRUSH_CLAW,
+    MOVE_DOUBLE_KICK,
+    MOVE_DRAGON_BREATH,
+    MOVE_ENDEAVOR,
+    MOVE_GRASS_WHISTLE,
+    // Grassy Terrain,
+    MOVE_LEAF_STORM,
+    MOVE_LEECH_SEED,
+    MOVE_MAGICAL_LEAF,
+    MOVE_MUD_SPORT,
+    MOVE_NATURAL_GIFT,
+    MOVE_RAZOR_WIND,
+    MOVE_SYNTHESIS,
+    MOVE_WORRY_SEED,
+    0,
+};
+
+const u16 gGrovyleEggMoves[] = {
+    MOVE_BULLET_SEED,
+    MOVE_CRUNCH,
+    MOVE_CRUSH_CLAW,
+    MOVE_DOUBLE_KICK,
+    MOVE_DRAGON_BREATH,
+    MOVE_ENDEAVOR,
+    MOVE_GRASS_WHISTLE,
+    // Grassy Terrain,
+    MOVE_LEAF_STORM,
+    MOVE_LEECH_SEED,
+    MOVE_MAGICAL_LEAF,
+    MOVE_MUD_SPORT,
+    MOVE_NATURAL_GIFT,
+    MOVE_RAZOR_WIND,
+    MOVE_SYNTHESIS,
+    MOVE_WORRY_SEED,
+    0,
+};
+
+const u16 gSceptileEggMoves[] = {
+    MOVE_BULLET_SEED,
+    MOVE_CRUNCH,
+    MOVE_CRUSH_CLAW,
+    MOVE_DOUBLE_KICK,
+    MOVE_DRAGON_BREATH,
+    MOVE_ENDEAVOR,
+    MOVE_GRASS_WHISTLE,
+    // Grassy Terrain,
+    MOVE_LEAF_STORM,
+    MOVE_LEECH_SEED,
+    MOVE_MAGICAL_LEAF,
+    MOVE_MUD_SPORT,
+    MOVE_NATURAL_GIFT,
+    MOVE_RAZOR_WIND,
+    MOVE_SYNTHESIS,
+    MOVE_WORRY_SEED,
+    0,
+};
+
+const u16 gTorchicEggMoves[] = {
+    MOVE_AGILITY,
+    MOVE_BATON_PASS,
+    MOVE_COUNTER,
+    MOVE_CRUSH_CLAW,
+    MOVE_CURSE,
+    MOVE_ENDURE,
+    MOVE_FEATHER_DANCE,
+    MOVE_FEINT,
+    MOVE_FLAME_BURST,
+    // Last Resort
+    MOVE_LOW_KICK,
+    MOVE_NIGHT_SLASH,
+    MOVE_REVERSAL,
+    MOVE_ROCK_SLIDE,
+    MOVE_SMELLING_SALT,
+    MOVE_SWAGGER,
+    0,
+};
+
+const u16 gCombuskenEggMoves[] = {
+    MOVE_AGILITY,
+    MOVE_BATON_PASS,
+    MOVE_COUNTER,
+    MOVE_CRUSH_CLAW,
+    MOVE_CURSE,
+    MOVE_ENDURE,
+    MOVE_FEATHER_DANCE,
+    MOVE_FEINT,
+    MOVE_FLAME_BURST,
+    // Last Resort
+    MOVE_LOW_KICK,
+    MOVE_NIGHT_SLASH,
+    MOVE_REVERSAL,
+    MOVE_ROCK_SLIDE,
+    MOVE_SMELLING_SALT,
+    MOVE_SWAGGER,
+    0,
+};
+
+const u16 gBlazikenEggMoves[] = {
+    MOVE_AGILITY,
+    MOVE_BATON_PASS,
+    MOVE_COUNTER,
+    MOVE_CRUSH_CLAW,
+    MOVE_CURSE,
+    MOVE_ENDURE,
+    MOVE_FEATHER_DANCE,
+    MOVE_FEINT,
+    MOVE_FLAME_BURST,
+    // Last Resort
+    MOVE_LOW_KICK,
+    MOVE_NIGHT_SLASH,
+    MOVE_REVERSAL,
+    MOVE_ROCK_SLIDE,
+    MOVE_SMELLING_SALT,
+    MOVE_SWAGGER,
+    0,
+};
+
+const u16 gMudkipEggMoves[] = {
+    MOVE_ANCIENT_POWER,
+    MOVE_AVALANCHE,
+    MOVE_BARRIER,
+    MOVE_BITE,
+    MOVE_COUNTER,
+    MOVE_CURSE,
+    MOVE_DOUBLE_EDGE,
+    MOVE_ICE_BALL,
+    MOVE_MIRROR_COAT,
+    MOVE_MUD_BOMB,
+    MOVE_REFRESH,
+    MOVE_SLUDGE,
+    MOVE_STOMP,
+    MOVE_UPROAR,
+    MOVE_WHIRLPOOL,
+    // Wide Guard
+    MOVE_YAWN,
+    0,
+};
+
+const u16 gMarshtompEggMoves[] = {
+    MOVE_ANCIENT_POWER,
+    MOVE_AVALANCHE,
+    MOVE_BARRIER,
+    MOVE_BITE,
+    MOVE_COUNTER,
+    MOVE_CURSE,
+    MOVE_DOUBLE_EDGE,
+    MOVE_ICE_BALL,
+    MOVE_MIRROR_COAT,
+    MOVE_MUD_BOMB,
+    MOVE_REFRESH,
+    MOVE_SLUDGE,
+    MOVE_STOMP,
+    MOVE_UPROAR,
+    MOVE_WHIRLPOOL,
+    // Wide Guard
+    MOVE_YAWN,
+    0,
+};
+
+const u16 gSwampertEggMoves[] = {
+    MOVE_ANCIENT_POWER,
+    MOVE_AVALANCHE,
+    MOVE_BARRIER,
+    MOVE_BITE,
+    MOVE_COUNTER,
+    MOVE_CURSE,
+    MOVE_DOUBLE_EDGE,
+    MOVE_ICE_BALL,
+    MOVE_MIRROR_COAT,
+    MOVE_MUD_BOMB,
+    MOVE_REFRESH,
+    MOVE_SLUDGE,
+    MOVE_STOMP,
+    MOVE_UPROAR,
+    MOVE_WHIRLPOOL,
+    // Wide Guard
+    MOVE_YAWN,
+    0,
+};
+
+const u16 gPoochyenaEggMoves[] = {
+    MOVE_ASTONISH,
+    MOVE_COVET,
+    MOVE_FIRE_FANG,
+    MOVE_ICE_FANG,
+    MOVE_LEER,
+    MOVE_ME_FIRST,
+    MOVE_PLAY_ROUGH,
+    MOVE_POISON_FANG,
+    MOVE_SLEEP_TALK,
+    MOVE_SNATCH,
+    MOVE_SUCKER_PUNCH,
+    MOVE_THUNDER_FANG,
+    MOVE_YAWN,
+    0,
+};
+
+const u16 gMightyenaEggMoves[] = {
+    MOVE_ASTONISH,
+    MOVE_COVET,
+    MOVE_FIRE_FANG,
+    MOVE_ICE_FANG,
+    MOVE_LEER,
+    MOVE_ME_FIRST,
+    MOVE_PLAY_ROUGH,
+    MOVE_POISON_FANG,
+    MOVE_SLEEP_TALK,
+    MOVE_SNATCH,
+    MOVE_SUCKER_PUNCH,
+    MOVE_THUNDER_FANG,
+    MOVE_YAWN,
+    0,
+};
+
+const u16 gZigzagoonEggMoves[] = {
+    MOVE_CHARM,
+    MOVE_EXTREME_SPEED,
+    MOVE_HELPING_HAND,
+    MOVE_MUD_SLAP,
+    MOVE_PURSUIT,
+    // Rock Climb
+    // Simple Beam
+    MOVE_SLEEP_TALK,
+    MOVE_SUBSTITUTE,
+    MOVE_TICKLE,
+    MOVE_TRICK,
+    0,
+};
+
+const u16 gLinooneEggMoves[] = {
+    MOVE_CHARM,
+    MOVE_EXTREME_SPEED,
+    MOVE_HELPING_HAND,
+    MOVE_MUD_SLAP,
+    MOVE_PURSUIT,
+    // Rock Climb
+    // Simple Beam
+    MOVE_SLEEP_TALK,
+    MOVE_SUBSTITUTE,
+    MOVE_TICKLE,
+    MOVE_TRICK,
+    0,
+};
+
+const u16 gWurmpleEggMoves[] = {
+    0,
+};
+
+const u16 gSilcoonEggMoves[] = {
+    0,
+};
+
+const u16 gBeautiflyEggMoves[] = {
+    0,
+};
+
+const u16 gCascoonEggMoves[] = {
+    0,
+};
+
+const u16 gDustoxEggMoves[] = {
+    0,
+};
+
+const u16 gLotadEggMoves[] = {
+    MOVE_COUNTER,
+    MOVE_FLAIL,
+    MOVE_GIGA_DRAIN,
+    MOVE_LEECH_SEED,
+    MOVE_RAZOR_LEAF,
+    MOVE_SWEET_SCENT,
+    MOVE_SYNTHESIS,
+    MOVE_TEETER_DANCE,
+    MOVE_TICKLE,
+    MOVE_WATER_GUN,
+    0,
+};
+
+const u16 gLombreEggMoves[] = {
+    MOVE_COUNTER,
+    MOVE_FLAIL,
+    MOVE_GIGA_DRAIN,
+    MOVE_LEECH_SEED,
+    MOVE_RAZOR_LEAF,
+    MOVE_SWEET_SCENT,
+    MOVE_SYNTHESIS,
+    MOVE_TEETER_DANCE,
+    MOVE_TICKLE,
+    MOVE_WATER_GUN,
+    0,
+};
+
+const u16 gLudicoloEggMoves[] = {
+    MOVE_COUNTER,
+    MOVE_FLAIL,
+    MOVE_GIGA_DRAIN,
+    MOVE_LEECH_SEED,
+    MOVE_RAZOR_LEAF,
+    MOVE_SWEET_SCENT,
+    MOVE_SYNTHESIS,
+    MOVE_TEETER_DANCE,
+    MOVE_TICKLE,
+    MOVE_WATER_GUN,
+    0,
+};
+
+const u16 gSeedotEggMoves[] = {
+    MOVE_AMNESIA,
+    MOVE_BEAT_UP,
+    MOVE_BULLET_SEED,
+    MOVE_DEFOG,
+    MOVE_FALSE_SWIPE,
+    MOVE_FOUL_PLAY,
+    // Grassy Terrain,
+    MOVE_LEECH_SEED,
+    MOVE_NASTY_PLOT,
+    MOVE_POWER_SWAP,
+    MOVE_QUICK_ATTACK,
+    MOVE_RAZOR_WIND,
+    MOVE_TAKE_DOWN,
+    MOVE_WORRY_SEED,
+    0,
+};
+
+const u16 gNuzleafEggMoves[] = {
+    MOVE_AMNESIA,
+    MOVE_BEAT_UP,
+    MOVE_BULLET_SEED,
+    MOVE_DEFOG,
+    MOVE_FALSE_SWIPE,
+    MOVE_FOUL_PLAY,
+    // Grassy Terrain,
+    MOVE_LEECH_SEED,
+    MOVE_NASTY_PLOT,
+    MOVE_POWER_SWAP,
+    MOVE_QUICK_ATTACK,
+    MOVE_RAZOR_WIND,
+    MOVE_TAKE_DOWN,
+    MOVE_WORRY_SEED,
+    0,
+};
+
+const u16 gShiftryEggMoves[] = {
+    MOVE_AMNESIA,
+    MOVE_BEAT_UP,
+    MOVE_BULLET_SEED,
+    MOVE_DEFOG,
+    MOVE_FALSE_SWIPE,
+    MOVE_FOUL_PLAY,
+    // Grassy Terrain,
+    MOVE_LEECH_SEED,
+    MOVE_NASTY_PLOT,
+    MOVE_POWER_SWAP,
+    MOVE_QUICK_ATTACK,
+    MOVE_RAZOR_WIND,
+    MOVE_TAKE_DOWN,
+    MOVE_WORRY_SEED,
+    0,
+};
+
+const u16 gTaillowEggMoves[] = {
+    MOVE_BOOMBURST,
+    MOVE_BRAVE_BIRD,
+    MOVE_DEFOG,
+    MOVE_HURRICANE,
+    MOVE_MIRROR_MOVE,
+    MOVE_PURSUIT,
+    MOVE_RAGE,
+    MOVE_REFRESH,
+    MOVE_ROOST,
+    MOVE_SKY_ATTACK,
+    MOVE_STEEL_WING,
+    MOVE_SUPERSONIC,
+    MOVE_WHIRLWIND,
+    0,
+};
+
+const u16 gSwellowEggMoves[] = {
+    MOVE_BOOMBURST,
+    MOVE_BRAVE_BIRD,
+    MOVE_DEFOG,
+    MOVE_HURRICANE,
+    MOVE_MIRROR_MOVE,
+    MOVE_PURSUIT,
+    MOVE_RAGE,
+    MOVE_REFRESH,
+    MOVE_ROOST,
+    MOVE_SKY_ATTACK,
+    MOVE_STEEL_WING,
+    MOVE_SUPERSONIC,
+    MOVE_WHIRLWIND,
+    0,
+};
+
+const u16 gWingullEggMoves[] = {
+    MOVE_AGILITY,
+    MOVE_AQUA_RING,
+    MOVE_BRINE,
+    MOVE_GUST,
+    MOVE_KNOCK_OFF,
+    MOVE_MIST,
+    MOVE_ROOST,
+    MOVE_SOAK,
+    MOVE_TWISTER,
+    MOVE_WATER_SPORT,
+    // Wide Guard
+    0,
+};
+
+const u16 gPelipperEggMoves[] = {
+    MOVE_AGILITY,
+    MOVE_AQUA_RING,
+    MOVE_BRINE,
+    MOVE_GUST,
+    MOVE_KNOCK_OFF,
+    MOVE_MIST,
+    MOVE_ROOST,
+    MOVE_SOAK,
+    MOVE_TWISTER,
+    MOVE_WATER_SPORT,
+    // Wide Guard
+    0,
+};
+
+const u16 gRaltsEggMoves[] = {
+    // Ally Switch
+    MOVE_CONFUSE_RAY,
+    MOVE_DESTINY_BOND,
+    MOVE_DISABLE,
+    MOVE_ENCORE,
+    MOVE_GRUDGE,
+    MOVE_MEAN_LOOK,
+    MOVE_MEMENTO,
+    // Misty Terrain
+    MOVE_SHADOW_SNEAK,
+    MOVE_SKILL_SWAP,
+    MOVE_SYNCHRONOISE,
+    MOVE_WILL_O_WISP,
+    0,
+};
+
+const u16 gKirliaEggMoves[] = {
+    // Ally Switch
+    MOVE_CONFUSE_RAY,
+    MOVE_DESTINY_BOND,
+    MOVE_DISABLE,
+    MOVE_ENCORE,
+    MOVE_GRUDGE,
+    MOVE_MEAN_LOOK,
+    MOVE_MEMENTO,
+    // Misty Terrain
+    MOVE_SHADOW_SNEAK,
+    MOVE_SKILL_SWAP,
+    MOVE_SYNCHRONOISE,
+    MOVE_WILL_O_WISP,
+    0,
+};
+
+const u16 gGardevoirEggMoves[] = {
+    // Ally Switch
+    MOVE_CONFUSE_RAY,
+    MOVE_DESTINY_BOND,
+    MOVE_DISABLE,
+    MOVE_ENCORE,
+    MOVE_GRUDGE,
+    MOVE_MEAN_LOOK,
+    MOVE_MEMENTO,
+    // Misty Terrain
+    MOVE_SHADOW_SNEAK,
+    MOVE_SKILL_SWAP,
+    MOVE_SYNCHRONOISE,
+    MOVE_WILL_O_WISP,
+    0,
+};
+
+const u16 gGalladeEggMoves[] = {
+    // Ally Switch
+    MOVE_CONFUSE_RAY,
+    MOVE_DESTINY_BOND,
+    MOVE_DISABLE,
+    MOVE_ENCORE,
+    MOVE_GRUDGE,
+    MOVE_MEAN_LOOK,
+    MOVE_MEMENTO,
+    // Misty Terrain
+    MOVE_SHADOW_SNEAK,
+    MOVE_SKILL_SWAP,
+    MOVE_SYNCHRONOISE,
+    MOVE_WILL_O_WISP,
+    0,
+};
+
+const u16 gSurskitEggMoves[] = {
+    MOVE_AQUA_JET,
+    MOVE_BUG_BITE,
+    MOVE_ENDURE,
+    // Fell Stinger
+    MOVE_FORESIGHT,
+    MOVE_HYDRO_PUMP,
+    // Lunge
+    MOVE_MIND_READER,
+    MOVE_MUD_SHOT,
+    MOVE_POWER_SPLIT,
+    MOVE_PSYBEAM,
+    MOVE_SIGNAL_BEAM,
+    0,
+};
+
+const u16 gMasquerainEggMoves[] = {
+    MOVE_AQUA_JET,
+    MOVE_BUG_BITE,
+    MOVE_ENDURE,
+    // Fell Stinger
+    MOVE_FORESIGHT,
+    MOVE_HYDRO_PUMP,
+    // Lunge
+    MOVE_MIND_READER,
+    MOVE_MUD_SHOT,
+    MOVE_POWER_SPLIT,
+    MOVE_PSYBEAM,
+    MOVE_SIGNAL_BEAM,
+    0,
+};
+
+const u16 gShroomishEggMoves[] = {
+    MOVE_BULLET_SEED,
+    MOVE_CHARM,
+    MOVE_DRAIN_PUNCH,
+    MOVE_FAKE_TEARS,
+    MOVE_FALSE_SWIPE,
+    MOVE_FOCUS_PUNCH,
+    MOVE_HELPING_HAND,
+    MOVE_NATURAL_GIFT,
+    MOVE_SEED_BOMB,
+    MOVE_SWAGGER,
+    MOVE_WAKE_UP_SLAP,
+    MOVE_WORRY_SEED,
+    0,
+};
+
+const u16 gBreloomEggMoves[] = {
+    MOVE_BULLET_SEED,
+    MOVE_CHARM,
+    MOVE_DRAIN_PUNCH,
+    MOVE_FAKE_TEARS,
+    MOVE_FALSE_SWIPE,
+    MOVE_FOCUS_PUNCH,
+    MOVE_HELPING_HAND,
+    MOVE_NATURAL_GIFT,
+    MOVE_SEED_BOMB,
+    MOVE_SWAGGER,
+    MOVE_WAKE_UP_SLAP,
+    MOVE_WORRY_SEED,
+    0,
+};
+
+const u16 gSlakothEggMoves[] = {
+    // After You
+    MOVE_BODY_SLAM,
+    MOVE_CRUSH_CLAW,
+    MOVE_CURSE,
+    MOVE_HAMMER_ARM,
+    MOVE_NIGHT_SLASH,
+    MOVE_PURSUIT,
+    MOVE_SLASH,
+    MOVE_SLEEP_TALK,
+    MOVE_SNORE,
+    MOVE_TICKLE,
+    0,
+};
+
+const u16 gVigorothEggMoves[] = {
+    // After You
+    MOVE_BODY_SLAM,
+    MOVE_CRUSH_CLAW,
+    MOVE_CURSE,
+    MOVE_HAMMER_ARM,
+    MOVE_NIGHT_SLASH,
+    MOVE_PURSUIT,
+    MOVE_SLASH,
+    MOVE_SLEEP_TALK,
+    MOVE_SNORE,
+    MOVE_TICKLE,
+    0,
+};
+
+const u16 gSlakingEggMoves[] = {
+    // After You
+    MOVE_BODY_SLAM,
+    MOVE_CRUSH_CLAW,
+    MOVE_CURSE,
+    MOVE_HAMMER_ARM,
+    MOVE_NIGHT_SLASH,
+    MOVE_PURSUIT,
+    MOVE_SLASH,
+    MOVE_SLEEP_TALK,
+    MOVE_SNORE,
+    MOVE_TICKLE,
+    0,
+};
+
+const u16 gNincadaEggMoves[] = {
+    MOVE_BUG_BITE,
+    MOVE_BUG_BUZZ,
+    MOVE_ENDURE,
+    MOVE_FAINT_ATTACK,
+    // Final Gambit,
+    MOVE_GUST,
+    MOVE_NIGHT_SLASH,
+    MOVE_SILVER_WIND,
+    0,
+};
+
+const u16 gNinjaskEggMoves[] = {
+    MOVE_BUG_BITE,
+    MOVE_BUG_BUZZ,
+    MOVE_ENDURE,
+    MOVE_FAINT_ATTACK,
+    // Final Gambit,
+    MOVE_GUST,
+    MOVE_NIGHT_SLASH,
+    MOVE_SILVER_WIND,
+    0,
+};
+
+const u16 gShedinjaEggMoves[] = {
+    MOVE_BUG_BITE,
+    MOVE_BUG_BUZZ,
+    MOVE_ENDURE,
+    MOVE_FAINT_ATTACK,
+    // Final Gambit,
+    MOVE_GUST,
+    MOVE_NIGHT_SLASH,
+    MOVE_SILVER_WIND,
+    0,
+};
+
+const u16 gWhismurEggMoves[] = {
+    // Circle Throw
+    MOVE_DISARM_VOICE,
+    MOVE_ENDEAVOR,
+    MOVE_EXTRASENSORY,
+    MOVE_FAKE_TEARS,
+    MOVE_HAMMER_ARM,
+    MOVE_SMELLING_SALT,
+    MOVE_SMOKESCREEN,
+    MOVE_SNORE,
+    MOVE_SWAGGER,
+    MOVE_TAKE_DOWN,
+    MOVE_WHIRLWIND,
+    0,
+};
+
+const u16 gLoudredEggMoves[] = {
+    // Circle Throw
+    MOVE_DISARM_VOICE,
+    MOVE_ENDEAVOR,
+    MOVE_EXTRASENSORY,
+    MOVE_FAKE_TEARS,
+    MOVE_HAMMER_ARM,
+    MOVE_SMELLING_SALT,
+    MOVE_SMOKESCREEN,
+    MOVE_SNORE,
+    MOVE_SWAGGER,
+    MOVE_TAKE_DOWN,
+    MOVE_WHIRLWIND,
+    0,
+};
+
+const u16 gExploudEggMoves[] = {
+    // Circle Throw
+    MOVE_DISARM_VOICE,
+    MOVE_ENDEAVOR,
+    MOVE_EXTRASENSORY,
+    MOVE_FAKE_TEARS,
+    MOVE_HAMMER_ARM,
+    MOVE_SMELLING_SALT,
+    MOVE_SMOKESCREEN,
+    MOVE_SNORE,
+    MOVE_SWAGGER,
+    MOVE_TAKE_DOWN,
+    MOVE_WHIRLWIND,
+    0,
+};
+
+const u16 gMakuhitaEggMoves[] = {
+    MOVE_BULLET_PUNCH,
+    MOVE_CHIP_AWAY,
+    MOVE_COUNTER,
+    MOVE_CROSS_CHOP,
+    MOVE_DETECT,
+    MOVE_DYNAMIC_PUNCH,
+    MOVE_FEINT,
+    MOVE_FAINT_ATTACK,
+    MOVE_FOCUS_PUNCH,
+    MOVE_FORESIGHT,
+    MOVE_HELPING_HAND,
+    MOVE_REVENGE,
+    MOVE_WAKE_UP_SLAP,
+    // Wide Guard
+    0,
+};
+
+const u16 gHariyamaEggMoves[] = {
+    MOVE_BULLET_PUNCH,
+    MOVE_CHIP_AWAY,
+    MOVE_COUNTER,
+    MOVE_CROSS_CHOP,
+    MOVE_DETECT,
+    MOVE_DYNAMIC_PUNCH,
+    MOVE_FEINT,
+    MOVE_FAINT_ATTACK,
+    MOVE_FOCUS_PUNCH,
+    MOVE_FORESIGHT,
+    MOVE_HELPING_HAND,
+    MOVE_REVENGE,
+    MOVE_WAKE_UP_SLAP,
+    // Wide Guard
+    0,
+};
+
+const u16 gNosepassEggMoves[] = {
+    MOVE_BLOCK,
+    MOVE_DOUBLE_EDGE,
+    MOVE_ENDURE,
+    MOVE_EXPLOSION,
+    MOVE_MAGNITUDE,
+    MOVE_ROLLOUT,
+    MOVE_STEALTH_ROCK,
+    // Wide Guard
+    0,
+};
+
+const u16 gProbopassEggMoves[] = {
+    MOVE_BLOCK,
+    MOVE_DOUBLE_EDGE,
+    MOVE_ENDURE,
+    MOVE_EXPLOSION,
+    MOVE_MAGNITUDE,
+    MOVE_ROLLOUT,
+    MOVE_STEALTH_ROCK,
+    // Wide Guard
+    0,
+};
+
+const u16 gSkittyEggMoves[] = {
+    MOVE_BATON_PASS,
+    MOVE_CAPTIVATE,
+    MOVE_COSMIC_POWER,
+    MOVE_FAKE_OUT,
+    MOVE_FAKE_TEARS,
+    MOVE_HELPING_HAND,
+    // Last Resort
+    MOVE_MUD_BOMB,
+    MOVE_PSYCH_UP,
+    // Simple Beam
+    MOVE_SUBSTITUTE,
+    MOVE_SUCKER_PUNCH,
+    MOVE_TICKLE,
+    MOVE_UPROAR,
+    MOVE_WISH,
+    MOVE_ZEN_HEADBUTT,
+    0,
+};
+
+const u16 gDelcattyEggMoves[] = {
+    MOVE_BATON_PASS,
+    MOVE_CAPTIVATE,
+    MOVE_COSMIC_POWER,
+    MOVE_FAKE_OUT,
+    MOVE_FAKE_TEARS,
+    MOVE_HELPING_HAND,
+    // Last Resort
+    MOVE_MUD_BOMB,
+    MOVE_PSYCH_UP,
+    // Simple Beam
+    MOVE_SUBSTITUTE,
+    MOVE_SUCKER_PUNCH,
+    MOVE_TICKLE,
+    MOVE_UPROAR,
+    MOVE_WISH,
+    MOVE_ZEN_HEADBUTT,
+    0,
+};
+
+const u16 gSableyeEggMoves[] = {
+    MOVE_CAPTIVATE,
+    MOVE_FEINT,
+    MOVE_FLATTER,
+    MOVE_IMPRISON,
+    MOVE_MEAN_LOOK,
+    MOVE_METAL_BURST,
+    MOVE_MOONLIGHT,
+    MOVE_NASTY_PLOT,
+    MOVE_PSYCH_UP,
+    MOVE_RECOVER,
+    MOVE_SUCKER_PUNCH,
+    MOVE_TRICK,
+    0,
+};
+
+const u16 gMawileEggMoves[] = {
+    MOVE_ANCIENT_POWER,
+    MOVE_CAPTIVATE,
+    MOVE_FALSE_SWIPE,
+    MOVE_FIRE_FANG,
+    MOVE_GUARD_SWAP,
+    MOVE_ICE_FANG,
+    MOVE_METAL_BURST,
+    // Misty Terrain
+    MOVE_POISON_FANG,
+    // Power-Up Punch,
+    MOVE_PSYCH_UP,
+    MOVE_PUNISHMENT,
+    MOVE_SEISMIC_TOSS,
+    MOVE_SLAM,
+    MOVE_SUCKER_PUNCH,
+    MOVE_SWORDS_DANCE,
+    MOVE_THUNDER_FANG,
+    MOVE_TICKLE,
+    0,
+};
+
+const u16 gAronEggMoves[] = {
+    MOVE_BODY_SLAM,
+    MOVE_CURSE,
+    MOVE_DRAGON_RUSH,
+    MOVE_ENDEAVOR,
+    MOVE_HEAD_SMASH,
+    MOVE_IRON_HEAD,
+    MOVE_REVERSAL,
+    MOVE_SCREECH,
+    MOVE_SMELLING_SALT,
+    MOVE_STEALTH_ROCK,
+    MOVE_STOMP,
+    MOVE_SUPERPOWER,
+    0,
+};
+
+const u16 gLaironEggMoves[] = {
+    MOVE_BODY_SLAM,
+    MOVE_CURSE,
+    MOVE_DRAGON_RUSH,
+    MOVE_ENDEAVOR,
+    MOVE_HEAD_SMASH,
+    MOVE_IRON_HEAD,
+    MOVE_REVERSAL,
+    MOVE_SCREECH,
+    MOVE_SMELLING_SALT,
+    MOVE_STEALTH_ROCK,
+    MOVE_STOMP,
+    MOVE_SUPERPOWER,
+    0,
+};
+
+const u16 gAggronEggMoves[] = {
+    MOVE_BODY_SLAM,
+    MOVE_CURSE,
+    MOVE_DRAGON_RUSH,
+    MOVE_ENDEAVOR,
+    MOVE_HEAD_SMASH,
+    MOVE_IRON_HEAD,
+    MOVE_REVERSAL,
+    MOVE_SCREECH,
+    MOVE_SMELLING_SALT,
+    MOVE_STEALTH_ROCK,
+    MOVE_STOMP,
+    MOVE_SUPERPOWER,
+    0,
+};
+
+const u16 gMedititeEggMoves[] = {
+    MOVE_BATON_PASS,
+    MOVE_BULLET_PUNCH,
+    MOVE_DRAIN_PUNCH,
+    MOVE_DYNAMIC_PUNCH,
+    MOVE_FAKE_OUT,
+    MOVE_FIRE_PUNCH,
+    MOVE_FORESIGHT,
+    MOVE_GUARD_SWAP,
+    MOVE_ICE_PUNCH,
+    MOVE_POWER_SWAP,
+    MOVE_PSYCHO_CUT,
+    // Quick Guard
+    MOVE_SECRET_POWER,
+    MOVE_THUNDER_PUNCH,
+    0,
+};
+
+const u16 gMedichamEggMoves[] = {
+    MOVE_BATON_PASS,
+    MOVE_BULLET_PUNCH,
+    MOVE_DRAIN_PUNCH,
+    MOVE_DYNAMIC_PUNCH,
+    MOVE_FAKE_OUT,
+    MOVE_FIRE_PUNCH,
+    MOVE_FORESIGHT,
+    MOVE_GUARD_SWAP,
+    MOVE_ICE_PUNCH,
+    MOVE_POWER_SWAP,
+    MOVE_PSYCHO_CUT,
+    // Quick Guard
+    MOVE_SECRET_POWER,
+    MOVE_THUNDER_PUNCH,
+    0,
+};
+
+const u16 gElectrikeEggMoves[] = {
+    MOVE_CRUNCH,
+    MOVE_CURSE,
+    MOVE_DISCHARGE,
+    MOVE_EERIE_IMPULSE,
+    MOVE_ELECTRO_BALL,
+    MOVE_FIRE_FANG,
+    MOVE_FLAME_BURST,
+    MOVE_HEADBUTT,
+    MOVE_ICE_FANG,
+    MOVE_SHOCK_WAVE,
+    MOVE_SWIFT,
+    MOVE_SWITCHEROO,
+    MOVE_THUNDER_FANG,
+    MOVE_UPROAR,
+    0,
+};
+
+const u16 gManectricEggMoves[] = {
+    MOVE_CRUNCH,
+    MOVE_CURSE,
+    MOVE_DISCHARGE,
+    MOVE_EERIE_IMPULSE,
+    MOVE_ELECTRO_BALL,
+    MOVE_FIRE_FANG,
+    MOVE_FLAME_BURST,
+    MOVE_HEADBUTT,
+    MOVE_ICE_FANG,
+    MOVE_SHOCK_WAVE,
+    MOVE_SWIFT,
+    MOVE_SWITCHEROO,
+    MOVE_THUNDER_FANG,
+    MOVE_UPROAR,
+    0,
+};
+
+const u16 gPlusleEggMoves[] = {
+    MOVE_CHARM,
+    MOVE_DISCHARGE,
+    MOVE_FAKE_TEARS,
+    MOVE_LUCKY_CHANT,
+    MOVE_SING,
+    MOVE_SUBSTITUTE,
+    MOVE_SWEET_KISS,
+    // Tearful Look
+    MOVE_WISH,
+    0,
+};
+
+const u16 gMinunEggMoves[] = {
+    MOVE_CHARM,
+    MOVE_DISCHARGE,
+    MOVE_FAKE_TEARS,
+    MOVE_LUCKY_CHANT,
+    MOVE_SING,
+    MOVE_SUBSTITUTE,
+    MOVE_SWEET_KISS,
+    // Tearful Look
+    MOVE_WISH,
+    0,
+};
+
+const u16 gVolbeatEggMoves[] = {
+    MOVE_BATON_PASS,
+    MOVE_BUG_BUZZ,
+    MOVE_DIZZY_PUNCH,
+    MOVE_ENCORE,
+    // Lunge
+    MOVE_SEISMIC_TOSS,
+    MOVE_SILVER_WIND,
+    MOVE_TRICK,
+    0,
+};
+
+const u16 gIllumiseEggMoves[] = {
+    MOVE_AROMATHERAPY,
+    MOVE_BATON_PASS,
+    MOVE_BUG_BUZZ,
+    MOVE_CAPTIVATE,
+    MOVE_CONFUSE_RAY,
+    MOVE_ENCORE,
+    MOVE_FAKE_TEARS,
+    MOVE_GROWTH,
+    MOVE_SILVER_WIND,
+    0,
+};
+
+const u16 gBudewEggMoves[] = {
+    MOVE_BULLET_SEED,
+    MOVE_COTTON_SPORE,
+    MOVE_EXTRASENSORY,
+    MOVE_GIGA_DRAIN,
+    MOVE_GRASS_WHISTLE,
+    MOVE_LEAF_STORM,
+    MOVE_MIND_READER,
+    MOVE_NATURAL_GIFT,
+    MOVE_PIN_MISSILE,
+    MOVE_POWER_WHIP,
+    MOVE_RAZOR_LEAF,
+    MOVE_SEED_BOMB,
+    MOVE_SLEEP_POWDER,
+    MOVE_SPIKES,
+    MOVE_SYNTHESIS,
+    0,
+};
+
+const u16 gRoseliaEggMoves[] = {
+    MOVE_BULLET_SEED,
+    MOVE_COTTON_SPORE,
+    MOVE_EXTRASENSORY,
+    MOVE_GIGA_DRAIN,
+    MOVE_GRASS_WHISTLE,
+    MOVE_LEAF_STORM,
+    MOVE_MIND_READER,
+    MOVE_NATURAL_GIFT,
+    MOVE_PIN_MISSILE,
+    MOVE_POWER_WHIP,
+    MOVE_RAZOR_LEAF,
+    MOVE_SEED_BOMB,
+    MOVE_SLEEP_POWDER,
+    MOVE_SPIKES,
+    MOVE_SYNTHESIS,
+    0,
+};
+
+const u16 gRoseradeEggMoves[] = {
+    MOVE_BULLET_SEED,
+    MOVE_COTTON_SPORE,
+    MOVE_EXTRASENSORY,
+    MOVE_GIGA_DRAIN,
+    MOVE_GRASS_WHISTLE,
+    MOVE_LEAF_STORM,
+    MOVE_MIND_READER,
+    MOVE_NATURAL_GIFT,
+    MOVE_PIN_MISSILE,
+    MOVE_POWER_WHIP,
+    MOVE_RAZOR_LEAF,
+    MOVE_SEED_BOMB,
+    MOVE_SLEEP_POWDER,
+    MOVE_SPIKES,
+    MOVE_SYNTHESIS,
+    0,
+};
+
+const u16 gGulpinEggMoves[] = {
+    MOVE_ACID_ARMOR,
+    MOVE_CURSE,
+    MOVE_DESTINY_BOND,
+    MOVE_DREAM_EATER,
+    MOVE_GUNK_SHOT,
+    MOVE_MUD_SLAP,
+    MOVE_PAIN_SPLIT,
+    MOVE_SMOG,
+    MOVE_VENOM_DRENCH,
+    0,
+};
+
+const u16 gSwalotEggMoves[] = {
+    MOVE_ACID_ARMOR,
+    MOVE_CURSE,
+    MOVE_DESTINY_BOND,
+    MOVE_DREAM_EATER,
+    MOVE_GUNK_SHOT,
+    MOVE_MUD_SLAP,
+    MOVE_PAIN_SPLIT,
+    MOVE_SMOG,
+    MOVE_VENOM_DRENCH,
+    0,
+};
+
+const u16 gCarvanhaEggMoves[] = {
+    MOVE_ANCIENT_POWER,
+    MOVE_BRINE,
+    MOVE_DESTINY_BOND,
+    MOVE_DOUBLE_EDGE,
+    MOVE_HYDRO_PUMP,
+    // Psychic Fangs
+    MOVE_SWIFT,
+    MOVE_THRASH,
+    0,
+};
+
+const u16 gSharpedoEggMoves[] = {
+    MOVE_ANCIENT_POWER,
+    MOVE_BRINE,
+    MOVE_DESTINY_BOND,
+    MOVE_DOUBLE_EDGE,
+    MOVE_HYDRO_PUMP,
+    // Psychic Fangs
+    MOVE_SWIFT,
+    MOVE_THRASH,
+    0,
+};
+
+const u16 gWailmerEggMoves[] = {
+    MOVE_AQUA_RING,
+    MOVE_BODY_SLAM,
+    MOVE_CLEAR_SMOG,
+    MOVE_CURSE,
+    MOVE_DEFENSE_CURL,
+    MOVE_DOUBLE_EDGE,
+    MOVE_FISSURE,
+    MOVE_SLEEP_TALK,
+    MOVE_SNORE,
+    MOVE_SOAK,
+    MOVE_SWAGGER,
+    MOVE_THRASH,
+    MOVE_TICKLE,
+    MOVE_ZEN_HEADBUTT,
+    0,
+};
+
+const u16 gWailordEggMoves[] = {
+    MOVE_AQUA_RING,
+    MOVE_BODY_SLAM,
+    MOVE_CLEAR_SMOG,
+    MOVE_CURSE,
+    MOVE_DEFENSE_CURL,
+    MOVE_DOUBLE_EDGE,
+    MOVE_FISSURE,
+    MOVE_SLEEP_TALK,
+    MOVE_SNORE,
+    MOVE_SOAK,
+    MOVE_SWAGGER,
+    MOVE_THRASH,
+    MOVE_TICKLE,
+    MOVE_ZEN_HEADBUTT,
+    0,
+};
+
+const u16 gNumelEggMoves[] = {
+    MOVE_ANCIENT_POWER,
+    MOVE_BODY_SLAM,
+    MOVE_DEFENSE_CURL,
+    MOVE_ENDURE,
+    MOVE_GROWTH,
+    MOVE_HEAT_WAVE,
+    MOVE_HEAVY_SLAM,
+    MOVE_HOWL,
+    MOVE_IRON_HEAD,
+    MOVE_MUD_BOMB,
+    MOVE_ROLLOUT,
+    MOVE_SCARY_FACE,
+    MOVE_SPIT_UP,
+    MOVE_STOCKPILE,
+    MOVE_STOMP,
+    MOVE_SWALLOW,
+    MOVE_YAWN,
+    0,
+};
+
+const u16 gCameruptEggMoves[] = {
+    MOVE_ANCIENT_POWER,
+    MOVE_BODY_SLAM,
+    MOVE_DEFENSE_CURL,
+    MOVE_ENDURE,
+    MOVE_GROWTH,
+    MOVE_HEAT_WAVE,
+    MOVE_HEAVY_SLAM,
+    MOVE_HOWL,
+    MOVE_IRON_HEAD,
+    MOVE_MUD_BOMB,
+    MOVE_ROLLOUT,
+    MOVE_SCARY_FACE,
+    MOVE_SPIT_UP,
+    MOVE_STOCKPILE,
+    MOVE_STOMP,
+    MOVE_SWALLOW,
+    MOVE_YAWN,
+    0,
+};
+
+const u16 gTorkoalEggMoves[] = {
+    MOVE_CLEAR_SMOG,
+    MOVE_EARTHQUAKE,
+    MOVE_ENDURE,
+    MOVE_ERUPTION,
+    MOVE_FISSURE,
+    MOVE_FLAME_BURST,
+    MOVE_SKULL_BASH,
+    MOVE_SLEEP_TALK,
+    MOVE_SUPERPOWER,
+    MOVE_YAWN,
+    0,
+};
+
+const u16 gSpoinkEggMoves[] = {
+    MOVE_AMNESIA,
+    MOVE_ENDURE,
+    MOVE_EXTRASENSORY,
+    MOVE_FUTURE_SIGHT,
+    MOVE_LUCKY_CHANT,
+    MOVE_MIRROR_COAT,
+    // Simple Beam
+    MOVE_SKILL_SWAP,
+    MOVE_SUBSTITUTE,
+    MOVE_TRICK,
+    MOVE_WHIRLWIND,
+    MOVE_ZEN_HEADBUTT,
+    0,
+};
+
+const u16 gGrumpigEggMoves[] = {
+    MOVE_AMNESIA,
+    MOVE_ENDURE,
+    MOVE_EXTRASENSORY,
+    MOVE_FUTURE_SIGHT,
+    MOVE_LUCKY_CHANT,
+    MOVE_MIRROR_COAT,
+    // Simple Beam
+    MOVE_SKILL_SWAP,
+    MOVE_SUBSTITUTE,
+    MOVE_TRICK,
+    MOVE_WHIRLWIND,
+    MOVE_ZEN_HEADBUTT,
+    0,
+};
+
+const u16 gSpindaEggMoves[] = {
+    MOVE_ASSIST,
+    MOVE_BATON_PASS,
+    MOVE_DISABLE,
+    MOVE_ENCORE,
+    MOVE_FAKE_OUT,
+    MOVE_FAKE_TEARS,
+    MOVE_GUARD_SPLIT,
+    MOVE_ICY_WIND,
+    MOVE_PSYCHO_CUT,
+    MOVE_PSYCHO_SHIFT,
+    MOVE_RAPID_SPIN,
+    MOVE_ROCK_SLIDE,
+    MOVE_ROLE_PLAY,
+    MOVE_SMELLING_SALT,
+    MOVE_SPOTLIGHT,
+    MOVE_TRICK,
+    MOVE_WATER_PULSE,
+    MOVE_WISH,
+    0,
+};
+
+const u16 gTrapinchEggMoves[] = {
+    MOVE_BUG_BITE,
+    MOVE_EARTH_POWER,
+    MOVE_ENDURE,
+    MOVE_FLAIL,
+    MOVE_FOCUS_ENERGY,
+    MOVE_FURY_CUTTER,
+    MOVE_GUST,
+    MOVE_MUD_SHOT,
+    MOVE_QUICK_ATTACK,
+    MOVE_SIGNAL_BEAM,
+    0,
+};
+
+const u16 gVibravaEggMoves[] = {
+    MOVE_BUG_BITE,
+    MOVE_EARTH_POWER,
+    MOVE_ENDURE,
+    MOVE_FLAIL,
+    MOVE_FOCUS_ENERGY,
+    MOVE_FURY_CUTTER,
+    MOVE_GUST,
+    MOVE_MUD_SHOT,
+    MOVE_QUICK_ATTACK,
+    MOVE_SIGNAL_BEAM,
+    0,
+};
+
+const u16 gFlygonEggMoves[] = {
+    MOVE_BUG_BITE,
+    MOVE_EARTH_POWER,
+    MOVE_ENDURE,
+    MOVE_FLAIL,
+    MOVE_FOCUS_ENERGY,
+    MOVE_FURY_CUTTER,
+    MOVE_GUST,
+    MOVE_MUD_SHOT,
+    MOVE_QUICK_ATTACK,
+    MOVE_SIGNAL_BEAM,
+    0,
+};
+
+const u16 gCacneaEggMoves[] = {
+    MOVE_ACID,
+    MOVE_BELCH,
+    MOVE_BLOCK,
+    MOVE_COUNTER,
+    MOVE_DISABLE,
+    MOVE_DYNAMIC_PUNCH,
+    // Fell Stinger
+    MOVE_GRASS_WHISTLE,
+    MOVE_LOW_KICK,
+    MOVE_MAGICAL_LEAF,
+    MOVE_NASTY_PLOT,
+    // Power-Up Punch,
+    // Rototiller
+    MOVE_SEED_BOMB,
+    MOVE_SMELLING_SALT,
+    MOVE_SWITCHEROO,
+    MOVE_TEETER_DANCE,
+    MOVE_WORRY_SEED,
+    0,
+};
+
+const u16 gCacturneEggMoves[] = {
+    MOVE_ACID,
+    MOVE_BELCH,
+    MOVE_BLOCK,
+    MOVE_COUNTER,
+    MOVE_DISABLE,
+    MOVE_DYNAMIC_PUNCH,
+    // Fell Stinger
+    MOVE_GRASS_WHISTLE,
+    MOVE_LOW_KICK,
+    MOVE_MAGICAL_LEAF,
+    MOVE_NASTY_PLOT,
+    // Power-Up Punch,
+    // Rototiller
+    MOVE_SEED_BOMB,
+    MOVE_SMELLING_SALT,
+    MOVE_SWITCHEROO,
+    MOVE_TEETER_DANCE,
+    MOVE_WORRY_SEED,
+    0,
+};
+
+const u16 gSwabluEggMoves[] = {
+    MOVE_AGILITY,
+    MOVE_DRAGON_RUSH,
+    MOVE_FEATHER_DANCE,
+    MOVE_HAZE,
+    MOVE_HYPER_VOICE,
+    MOVE_PLAY_ROUGH,
+    MOVE_POWER_SWAP,
+    MOVE_PURSUIT,
+    MOVE_RAGE,
+    MOVE_ROOST,
+    MOVE_STEEL_WING,
+    0,
+};
+
+const u16 gAltariaEggMoves[] = {
+    MOVE_AGILITY,
+    MOVE_DRAGON_RUSH,
+    MOVE_FEATHER_DANCE,
+    MOVE_HAZE,
+    MOVE_HYPER_VOICE,
+    MOVE_PLAY_ROUGH,
+    MOVE_POWER_SWAP,
+    MOVE_PURSUIT,
+    MOVE_RAGE,
+    MOVE_ROOST,
+    MOVE_STEEL_WING,
+    0,
+};
+
+const u16 gZangooseEggMoves[] = {
+    MOVE_BELLY_DRUM,
+    MOVE_COUNTER,
+    MOVE_CURSE,
+    MOVE_DISABLE,
+    MOVE_DOUBLE_HIT,
+    MOVE_DOUBLE_KICK,
+    MOVE_FEINT,
+    // Final Gambit,
+    MOVE_FLAIL,
+    MOVE_FURY_SWIPES,
+    MOVE_IRON_TAIL,
+    MOVE_METAL_CLAW,
+    MOVE_NIGHT_SLASH,
+    // Quick Guard
+    MOVE_RAZOR_WIND,
+    MOVE_ROAR,
+    0,
+};
+
+const u16 gSeviperEggMoves[] = {
+    // Assurance
+    MOVE_BODY_SLAM,
+    // Final Gambit,
+    MOVE_IRON_TAIL,
+    MOVE_NIGHT_SLASH,
+    MOVE_PUNISHMENT,
+    MOVE_SCARY_FACE,
+    MOVE_SPIT_UP,
+    MOVE_STOCKPILE,
+    MOVE_SWALLOW,
+    MOVE_SWITCHEROO,
+    MOVE_WRING_OUT,
+    0,
+};
+
+const u16 gLunatoneEggMoves[] = {
+    0,
+};
+
+const u16 gSolrockEggMoves[] = {
+    0,
+};
+
+const u16 gBarboachEggMoves[] = {
+    MOVE_DRAGON_DANCE,
+    MOVE_EARTH_POWER,
+    MOVE_FLAIL,
+    MOVE_HYDRO_PUMP,
+    MOVE_MUDDY_WATER,
+    MOVE_MUD_SHOT,
+    MOVE_SPARK,
+    MOVE_TAKE_DOWN,
+    MOVE_THRASH,
+    MOVE_WHIRLPOOL,
+    0,
+};
+
+const u16 gWhiscashEggMoves[] = {
+    MOVE_DRAGON_DANCE,
+    MOVE_EARTH_POWER,
+    MOVE_FLAIL,
+    MOVE_HYDRO_PUMP,
+    MOVE_MUDDY_WATER,
+    MOVE_MUD_SHOT,
+    MOVE_SPARK,
+    MOVE_TAKE_DOWN,
+    MOVE_THRASH,
+    MOVE_WHIRLPOOL,
+    0,
+};
+
+const u16 gCorphishEggMoves[] = {
+    MOVE_ANCIENT_POWER,
+    MOVE_AQUA_JET,
+    MOVE_BODY_SLAM,
+    MOVE_CHIP_AWAY,
+    MOVE_DOUBLE_EDGE,
+    MOVE_DRAGON_DANCE,
+    MOVE_ENDEAVOR,
+    MOVE_KNOCK_OFF,
+    MOVE_METAL_CLAW,
+    MOVE_MUD_SPORT,
+    MOVE_SUPERPOWER,
+    MOVE_SWITCHEROO,
+    MOVE_TRUMP_CARD,
+    0,
+};
+
+const u16 gCrawdauntEggMoves[] = {
+    MOVE_ANCIENT_POWER,
+    MOVE_AQUA_JET,
+    MOVE_BODY_SLAM,
+    MOVE_CHIP_AWAY,
+    MOVE_DOUBLE_EDGE,
+    MOVE_DRAGON_DANCE,
+    MOVE_ENDEAVOR,
+    MOVE_KNOCK_OFF,
+    MOVE_METAL_CLAW,
+    MOVE_MUD_SPORT,
+    MOVE_SUPERPOWER,
+    MOVE_SWITCHEROO,
+    MOVE_TRUMP_CARD,
+    0,
+};
+
+const u16 gBaltoyEggMoves[] = {
+    0,
+};
+
+const u16 gClaydolEggMoves[] = {
+    0,
+};
+
+const u16 gLileepEggMoves[] = {
+    MOVE_BARRIER,
+    MOVE_CURSE,
+    MOVE_ENDURE,
+    MOVE_MEGA_DRAIN,
+    MOVE_MIRROR_COAT,
+    MOVE_RECOVER,
+    MOVE_ROCK_SLIDE,
+    MOVE_STEALTH_ROCK,
+    MOVE_TICKLE,
+    MOVE_WRING_OUT,
+    0,
+};
+
+const u16 gCradilyEggMoves[] = {
+    MOVE_BARRIER,
+    MOVE_CURSE,
+    MOVE_ENDURE,
+    MOVE_MEGA_DRAIN,
+    MOVE_MIRROR_COAT,
+    MOVE_RECOVER,
+    MOVE_ROCK_SLIDE,
+    MOVE_STEALTH_ROCK,
+    MOVE_TICKLE,
+    MOVE_WRING_OUT,
+    0,
+};
+
+const u16 gAnorithEggMoves[] = {
+    MOVE_AQUA_JET,
+    MOVE_CROSS_POISON,
+    MOVE_CURSE,
+    MOVE_IRON_DEFENSE,
+    MOVE_KNOCK_OFF,
+    MOVE_RAPID_SPIN,
+    MOVE_ROCK_SLIDE,
+    MOVE_SAND_ATTACK,
+    MOVE_SCREECH,
+    MOVE_SWORDS_DANCE,
+    MOVE_WATER_PULSE,
+    0,
+};
+
+const u16 gArmaldoEggMoves[] = {
+    MOVE_AQUA_JET,
+    MOVE_CROSS_POISON,
+    MOVE_CURSE,
+    MOVE_IRON_DEFENSE,
+    MOVE_KNOCK_OFF,
+    MOVE_RAPID_SPIN,
+    MOVE_ROCK_SLIDE,
+    MOVE_SAND_ATTACK,
+    MOVE_SCREECH,
+    MOVE_SWORDS_DANCE,
+    MOVE_WATER_PULSE,
+    0,
+};
+
+const u16 gFeebasEggMoves[] = {
+    MOVE_BRINE,
+    MOVE_CAPTIVATE,
+    MOVE_CONFUSE_RAY,
+    MOVE_DRAGON_BREATH,
+    MOVE_DRAGON_PULSE,
+    MOVE_HAZE,
+    MOVE_HYPNOSIS,
+    MOVE_IRON_TAIL,
+    MOVE_LIGHT_SCREEN,
+    MOVE_MIRROR_COAT,
+    MOVE_MIST,
+    MOVE_MUD_SPORT,
+    MOVE_TICKLE,
+    0,
+};
+
+const u16 gMiloticEggMoves[] = {
+    MOVE_BRINE,
+    MOVE_CAPTIVATE,
+    MOVE_CONFUSE_RAY,
+    MOVE_DRAGON_BREATH,
+    MOVE_DRAGON_PULSE,
+    MOVE_HAZE,
+    MOVE_HYPNOSIS,
+    MOVE_IRON_TAIL,
+    MOVE_LIGHT_SCREEN,
+    MOVE_MIRROR_COAT,
+    MOVE_MIST,
+    MOVE_MUD_SPORT,
+    MOVE_TICKLE,
+    0,
+};
+
+const u16 gCastformEggMoves[] = {
+    MOVE_AMNESIA,
+    MOVE_CLEAR_SMOG,
+    MOVE_COSMIC_POWER,
+    MOVE_DISABLE,
+    MOVE_FUTURE_SIGHT,
+    MOVE_GUARD_SWAP,
+    MOVE_HEX,
+    MOVE_LUCKY_CHANT,
+    MOVE_OMINOUS_WIND,
+    MOVE_PSYCH_UP,
+    MOVE_REFLECT_TYPE,
+    0,
+};
+
+const u16 gKecleonEggMoves[] = {
+    MOVE_CAMOUFLAGE,
+    MOVE_DISABLE,
+    MOVE_DIZZY_PUNCH,
+    MOVE_FAKE_OUT,
+    MOVE_FOUL_PLAY,
+    MOVE_MAGIC_COAT,
+    MOVE_NASTY_PLOT,
+    // Power-Up Punch,
+    MOVE_RECOVER,
+    MOVE_SKILL_SWAP,
+    MOVE_SNATCH,
+    MOVE_TRICK,
+    0,
+};
+
+const u16 gShuppetEggMoves[] = {
+    MOVE_ASTONISH,
+    MOVE_CONFUSE_RAY,
+    MOVE_DESTINY_BOND,
+    MOVE_DISABLE,
+    MOVE_FORESIGHT,
+    MOVE_GUNK_SHOT,
+    MOVE_IMPRISON,
+    MOVE_OMINOUS_WIND,
+    MOVE_PAYBACK,
+    MOVE_PHANTOM_FORCE,
+    MOVE_PURSUIT,
+    MOVE_SHADOW_SNEAK,
+    0,
+};
+
+const u16 gBanetteEggMoves[] = {
+    MOVE_ASTONISH,
+    MOVE_CONFUSE_RAY,
+    MOVE_DESTINY_BOND,
+    MOVE_DISABLE,
+    MOVE_FORESIGHT,
+    MOVE_GUNK_SHOT,
+    MOVE_IMPRISON,
+    MOVE_OMINOUS_WIND,
+    MOVE_PAYBACK,
+    MOVE_PHANTOM_FORCE,
+    MOVE_PURSUIT,
+    MOVE_SHADOW_SNEAK,
+    0,
+};
+
+const u16 gDuskullEggMoves[] = {
+    MOVE_DARK_PULSE,
+    MOVE_DESTINY_BOND,
+    MOVE_FAINT_ATTACK,
+    MOVE_GRUDGE,
+    MOVE_HAZE,
+    MOVE_IMPRISON,
+    MOVE_MEMENTO,
+    MOVE_OMINOUS_WIND,
+    MOVE_PAIN_SPLIT,
+    MOVE_SKILL_SWAP,
+    0,
+};
+
+const u16 gDusclopsEggMoves[] = {
+    MOVE_DARK_PULSE,
+    MOVE_DESTINY_BOND,
+    MOVE_FAINT_ATTACK,
+    MOVE_GRUDGE,
+    MOVE_HAZE,
+    MOVE_IMPRISON,
+    MOVE_MEMENTO,
+    MOVE_OMINOUS_WIND,
+    MOVE_PAIN_SPLIT,
+    MOVE_SKILL_SWAP,
+    0,
+};
+
+const u16 gDusknoirEggMoves[] = {
+    MOVE_DARK_PULSE,
+    MOVE_DESTINY_BOND,
+    MOVE_FAINT_ATTACK,
+    MOVE_GRUDGE,
+    MOVE_HAZE,
+    MOVE_IMPRISON,
+    MOVE_MEMENTO,
+    MOVE_OMINOUS_WIND,
+    MOVE_PAIN_SPLIT,
+    MOVE_SKILL_SWAP,
+    0,
+};
+
+const u16 gTropiusEggMoves[] = {
+    MOVE_BULLET_SEED,
+    MOVE_CURSE,
+    MOVE_DRAGON_DANCE,
+    // Dragon Hammer,
+    MOVE_HEADBUTT,
+    MOVE_LEAF_BLADE,
+    MOVE_LEAF_STORM,
+    MOVE_LEECH_SEED,
+    MOVE_NATURAL_GIFT,
+    MOVE_NATURE_POWER,
+    MOVE_RAZOR_WIND,
+    MOVE_SLAM,
+    MOVE_SYNTHESIS,
+    0,
+};
+
+const u16 gChinglingEggMoves[] = {
+    MOVE_COSMIC_POWER,
+    MOVE_CURSE,
+    MOVE_DISABLE,
+    MOVE_DREAM_EATER,
+    MOVE_FUTURE_SIGHT,
+    MOVE_HYPNOSIS,
+    MOVE_RECOVER,
+    MOVE_SKILL_SWAP,
+    MOVE_STORED_POWER,
+    MOVE_WISH,
+    0,
+};
+
+const u16 gChimechoEggMoves[] = {
+    MOVE_COSMIC_POWER,
+    // Crafty Shield,
+    MOVE_CURSE,
+    MOVE_DISABLE,
+    MOVE_DREAM_EATER,
+    MOVE_FUTURE_SIGHT,
+    MOVE_HYPNOSIS,
+    MOVE_PERISH_SONG,
+    MOVE_RECOVER,
+    MOVE_SKILL_SWAP,
+    MOVE_STORED_POWER,
+    MOVE_WISH,
+    0,
+};
+
+const u16 gAbsolEggMoves[] = {
+    // Assurance
+    MOVE_BATON_PASS,
+    MOVE_CURSE,
+    MOVE_DOUBLE_EDGE,
+    MOVE_FAINT_ATTACK,
+    MOVE_HEX,
+    MOVE_MAGIC_COAT,
+    MOVE_MEAN_LOOK,
+    MOVE_ME_FIRST,
+    MOVE_MEGAHORN,
+    MOVE_PERISH_SONG,
+    MOVE_PLAY_ROUGH,
+    MOVE_PUNISHMENT,
+    MOVE_SUBSTITUTE,
+    MOVE_SUCKER_PUNCH,
+    MOVE_ZEN_HEADBUTT,
+    0,
+};
+
+const u16 gSnoruntEggMoves[] = {
+    MOVE_AVALANCHE,
+    MOVE_BIDE,
+    MOVE_BLOCK,
+    MOVE_DISABLE,
+    MOVE_FAKE_TEARS,
+    MOVE_HEX,
+    MOVE_ROLLOUT,
+    MOVE_SPIKES,
+    MOVE_SWITCHEROO,
+    MOVE_WEATHER_BALL,
+    0,
+};
+
+const u16 gGlalieEggMoves[] = {
+    MOVE_AVALANCHE,
+    MOVE_BIDE,
+    MOVE_BLOCK,
+    MOVE_DISABLE,
+    MOVE_FAKE_TEARS,
+    MOVE_HEX,
+    MOVE_ROLLOUT,
+    MOVE_SPIKES,
+    MOVE_SWITCHEROO,
+    MOVE_WEATHER_BALL,
+    0,
+};
+
+const u16 gFroslassEggMoves[] = {
+    MOVE_AVALANCHE,
+    MOVE_BIDE,
+    MOVE_BLOCK,
+    MOVE_DISABLE,
+    MOVE_FAKE_TEARS,
+    MOVE_HEX,
+    MOVE_ROLLOUT,
+    MOVE_SPIKES,
+    MOVE_SWITCHEROO,
+    MOVE_WEATHER_BALL,
+    0,
+};
+
+const u16 gSphealEggMoves[] = {
+    MOVE_AQUA_RING,
+    MOVE_BELLY_DRUM,
+    MOVE_CURSE,
+    MOVE_FISSURE,
+    MOVE_ROCK_SLIDE,
+    MOVE_ROLLOUT,
+    MOVE_SIGNAL_BEAM,
+    MOVE_SLEEP_TALK,
+    MOVE_SPIT_UP,
+    MOVE_STOCKPILE,
+    MOVE_SWALLOW,
+    MOVE_WATER_PULSE,
+    MOVE_WATER_SPORT,
+    MOVE_YAWN,
+    0,
+};
+
+const u16 gSealeoEggMoves[] = {
+    MOVE_AQUA_RING,
+    MOVE_BELLY_DRUM,
+    MOVE_CURSE,
+    MOVE_FISSURE,
+    MOVE_ROCK_SLIDE,
+    MOVE_ROLLOUT,
+    MOVE_SIGNAL_BEAM,
+    MOVE_SLEEP_TALK,
+    MOVE_SPIT_UP,
+    MOVE_STOCKPILE,
+    MOVE_SWALLOW,
+    MOVE_WATER_PULSE,
+    MOVE_WATER_SPORT,
+    MOVE_YAWN,
+    0,
+};
+
+const u16 gWalreinEggMoves[] = {
+    MOVE_AQUA_RING,
+    MOVE_BELLY_DRUM,
+    MOVE_CURSE,
+    MOVE_FISSURE,
+    MOVE_ROCK_SLIDE,
+    MOVE_ROLLOUT,
+    MOVE_SIGNAL_BEAM,
+    MOVE_SLEEP_TALK,
+    MOVE_SPIT_UP,
+    MOVE_STOCKPILE,
+    MOVE_SWALLOW,
+    MOVE_WATER_PULSE,
+    MOVE_WATER_SPORT,
+    MOVE_YAWN,
+    0,
+};
+
+const u16 gClamperlEggMoves[] = {
+    MOVE_AQUA_RING,
+    MOVE_BARRIER,
+    MOVE_BODY_SLAM,
+    MOVE_BRINE,
+    MOVE_CONFUSE_RAY,
+    MOVE_ENDURE,
+    MOVE_MUDDY_WATER,
+    MOVE_MUD_SPORT,
+    MOVE_REFRESH,
+    MOVE_SUPERSONIC,
+    MOVE_WATER_PULSE,
+    0,
+};
+
+const u16 gHuntailEggMoves[] = {
+    MOVE_AQUA_RING,
+    MOVE_BARRIER,
+    MOVE_BODY_SLAM,
+    MOVE_BRINE,
+    MOVE_CONFUSE_RAY,
+    MOVE_ENDURE,
+    MOVE_MUDDY_WATER,
+    MOVE_MUD_SPORT,
+    MOVE_REFRESH,
+    MOVE_SUPERSONIC,
+    MOVE_WATER_PULSE,
+    0,
+};
+
+const u16 gGorebyssEggMoves[] = {
+    MOVE_AQUA_RING,
+    MOVE_BARRIER,
+    MOVE_BODY_SLAM,
+    MOVE_BRINE,
+    MOVE_CONFUSE_RAY,
+    MOVE_ENDURE,
+    MOVE_MUDDY_WATER,
+    MOVE_MUD_SPORT,
+    MOVE_REFRESH,
+    MOVE_SUPERSONIC,
+    MOVE_WATER_PULSE,
+    0,
+};
+
+const u16 gRelicanthEggMoves[] = {
+    MOVE_AMNESIA,
+    MOVE_AQUA_TAIL,
+    MOVE_BRINE,
+    MOVE_MAGNITUDE,
+    MOVE_MUDDY_WATER,
+    MOVE_MUD_SHOT,
+    MOVE_MUD_SLAP,
+    MOVE_ROCK_SLIDE,
+    MOVE_SKULL_BASH,
+    MOVE_SLEEP_TALK,
+    MOVE_SNORE,
+    MOVE_WATER_SPORT,
+    MOVE_ZEN_HEADBUTT,
+    0,
+};
+
+const u16 gLuvdiscEggMoves[] = {
+    MOVE_AQUA_JET,
+    MOVE_AQUA_RING,
+    MOVE_BRINE,
+    MOVE_CAPTIVATE,
+    MOVE_ENTRAINMENT,
+    MOVE_HEAL_PULSE,
+    MOVE_MUD_SPORT,
+    MOVE_SPLASH,
+    MOVE_SUPERSONIC,
+    MOVE_WATER_SPORT,
+    0,
+};
+
+const u16 gBagonEggMoves[] = {
+    MOVE_DEFENSE_CURL,
+    MOVE_DRAGON_DANCE,
+    MOVE_DRAGON_PULSE,
+    MOVE_DRAGON_RAGE,
+    MOVE_DRAGON_RUSH,
+    MOVE_ENDURE,
+    MOVE_FIRE_FANG,
+    MOVE_HYDRO_PUMP,
+    MOVE_SHADOW_CLAW,
+    MOVE_THRASH,
+    MOVE_TWISTER,
+    0,
+};
+
+const u16 gShelgonEggMoves[] = {
+    MOVE_DEFENSE_CURL,
+    MOVE_DRAGON_DANCE,
+    MOVE_DRAGON_PULSE,
+    MOVE_DRAGON_RAGE,
+    MOVE_DRAGON_RUSH,
+    MOVE_ENDURE,
+    MOVE_FIRE_FANG,
+    MOVE_HYDRO_PUMP,
+    MOVE_SHADOW_CLAW,
+    MOVE_THRASH,
+    MOVE_TWISTER,
+    0,
+};
+
+const u16 gSalamenceEggMoves[] = {
+    MOVE_DEFENSE_CURL,
+    MOVE_DRAGON_DANCE,
+    MOVE_DRAGON_PULSE,
+    MOVE_DRAGON_RAGE,
+    MOVE_DRAGON_RUSH,
+    MOVE_ENDURE,
+    MOVE_FIRE_FANG,
+    MOVE_HYDRO_PUMP,
+    MOVE_SHADOW_CLAW,
+    MOVE_THRASH,
+    MOVE_TWISTER,
+    0,
+};
+
+const u16 gBeldumEggMoves[] = {
+    0,
+};
+
+const u16 gMetangEggMoves[] = {
+    0,
+};
+
+const u16 gMetagrossEggMoves[] = {
+    0,
+};
+
+const u16 gRegirockEggMoves[] = {
+    0,
+};
+
+const u16 gRegiceEggMoves[] = {
+    0,
+};
+
+const u16 gRegisteelEggMoves[] = {
+    0,
+};
+
+const u16 gLatiasEggMoves[] = {
+    0,
+};
+
+const u16 gLatiosEggMoves[] = {
+    0,
+};
+
+const u16 gKyogreEggMoves[] = {
+    0,
+};
+
+const u16 gGroudonEggMoves[] = {
+    0,
+};
+
+const u16 gRayquazaEggMoves[] = {
+    0,
+};
+
+const u16 gJirachiEggMoves[] = {
+    0,
+};
+
+const u16 gDeoxysEggMoves[] = {
+    0,
 };

@@ -102,3 +102,11 @@ SALLY: Skitty Lv17, Bellsprout Lv17
 ROBIN: Chingling Lv18, Taillow Lv17
 EDDIE: Ratatta Lv18, Spinarak Lv19
 
+ROUTE 117
+ANNA&MEG:
+DYLAN:
+LYDIA: Magby, Swinub, Budew, Totodile
+MARIA: Doduo
+DEREK: Ledian, Ariados
+ISAAC: Phanpy, Pichu, Mantyke, Cyndaquil
+

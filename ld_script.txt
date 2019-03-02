@@ -69,6 +69,7 @@ SECTIONS {
         src/util.o(.text);
         src/blend_palette.o(.text);
         src/daycare.o(.text);
+        src/daycare.o(.data);
         src/egg_hatch.o(.text);
         src/battle/battle_interface.o(.text);
         src/battle/smokescreen.o(.text);

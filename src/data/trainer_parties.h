@@ -9252,7 +9252,12 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Kylee[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Wally2[] = {
     {
 	.iv = 30,
-	.level = 16,
+	.level = 18,
+	.species = SPECIES_SKITTY
+    },
+    {
+	.iv = 30,
+	.level = 19,
 	.species = SPECIES_RALTS
     }
 };

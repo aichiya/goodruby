@@ -13,6 +13,240 @@ NUMEL: Secondary ability Simple is replaced with Oblivious
 
 TODO:
 
+Venusaur: (no change)
+Charizard: ???
+Blastoise: Water/Steel
+Butterfree: Add Air Slash, Hurricane
+Beedrill: ???
+Pidgeot: ???
+Raticate: ???
+Fearow: ???
+Arbok: +10 HP/Def, add Moonlight
+Raichu: ???
+Sandslash: +10 Def/SDef, add Spikes, Spiky Shield, Iron Barbs
+Nidoqueen: (no changes)
+Nidoking: (no changes)
+Clefable: (no changes)
+Ninetales: Add Recover
+Wigglytuff: Add Moonblast, Boomburst
+Vileplume: +10 Def, No Guard, Shadow Ball
+Parasect: ???
+Venomoth: (no changes)
+Dugtrio: Add Guts
+Persian: ???
+Golduck: ???
+Primeape: ???
+Arcanine: (no changes)
+Poliwrath: Add Drain Punch
+Alakazam: (no changes)
+Machamp: (no changes)
+Victreebel: +10 Speed
+Tentacruel: Add Power Whip
+Golem: ???
+Rapidash: +15 Speed
+Slowbro: (no changes)
+Farfetch'd: ???
+Dodrio: ???
+Dewgong: ???
+Muk: Add Adaptability
+Cloyster: (no changes)
+Gengar: (no changes)
+Hypno: ???
+Kingler: ???
+Electrode: Add Nasty Plot, Overheat
+Exeggutor: ???
+Marowak: Add Head Smash
+Hitmonlee: ???
+Hitmonchan: ???
+Weezing: ???
+Kangaskhan: ???
+Seaking: ???
+Starmie: (no changes)
+Mr. Mime: Add Draining Kiss, ???
+Jynx: ???
+Pinsir: ???
+Tauros: ???
+Gyarados: (no changes)
+Lapras: ???
+Ditto: (no changes)
+Vapreon: (no changes)
+Jolteon: (no changes)
+Flareon: ???
+Omastar: ???
+Kabutops: ???
+Aerodactyl: ???
+Snorlax: (no changes)
+Articuno: ???
+Zapdos: (no changes)
+Moltres: (no changes)
+Dragonite: (no changes)
+Mew: (no changes)
+
+Meganium: ???
+Typhlosion: Add Earth Power
+Feraligatr: (no change)
+Furret: Add Hustle, 
+Noctowl: ???
+Ledian: ???
+Ariados: ???
+Crobat: (no change)
+Lanturn: (minor buff)
+Xatu: (minor buff)
+Ampharos: Electric/Dragon, add relevant dragon moves, postpone evo
+Bellossom: Fairy/Grass, add Moonblast, Earth Power, add modded Flower Gift (+atk/def/satk/sdef for self only in sun)
+Azumarill: (no change)
+Sudowoodo: ???
+Politoed: (no change)
+Jumpluff: ???
+Sunflora: Grass/Fire, add Flamethrower, Fire Blast, Heat Wave, Inferno
+Quagsire: ???
+Espeon: (no changes)
+Umbreon: (no changes)
+Slowking: (no changes)
+Unown: (no changes)
+Wobbuffet: (no changes)
+Girafarig: ???
+Forretress: ???
+Dunsparce: ???
+Steelix: Add Coil
+Granbull: (minor buff)
+Qwilfish: ???
+Scizor: (no changes)
+Shuckle: ???
+Heracross: (no changes)
+Ursaring: ???
+Magcargo: drought???
+Corsola: +10 hp/def/satk/sdef
+Octillery: ???
+Delibird: +50 atk/satk, +20 speed, add Icicle Crash, Brave Bird, Superpower, Explosion
+Mantine: (no changes)
+Skarmory: (no changes)
+Houndoom: (minor buff)
+Kingdra: (no changes)
+Donphan: ???
+Stantler: ???
+Smeargle: auto-learn Sketch on level if movepool empty
+Hitmontop: ???
+Miltank: ???
+Blissey: (no changes)
+Raikou: add event moves
+Entei: add event moves
+Suicune: add events moves
+Tyranitar: (no changes)
+Celebi: (no changes)
+
+Sceptile: ???
+Blaziken: (no changes)
+Swampert: (no changes)
+Mightyena: Add Close Combat, ???
+Linoone: ???
+Beautifly: HA Intimidate, add Leech Life, shuffle draining moves earlier
+Dustox: HA Filter
+Ludicolo: ???
+Shiftry: Add Heat Wave
+Ninjask: ???
+Shedinja: (no changes)
+Swellow: (no changes)
+Breloom: (no changes)
+Spinda: ???
+Pelipper: (no changes)
+Masquerain: Bug/Water, ???
+Wailord: ???
+Delcatty: HA Fur Coat
+Kecleon: ???
+Claydol: ???
+Torkoal: (no changes)
+Sableye: (no changes)
+Whiscash: ???
+Luvdisc: Water/Fairy, +10 Atk, +20 Def/SDef/Speed, +50 SAtk, HA Triage, Wish, Healing Wish, Heal Bell, Dazzling Gleam, Lovely Kiss
+Crawdaunt: (no changes)
+Milotic: (no changes)
+Sharpedo: (no changes)
+Flygon: HA Tinted Lens
+Hariyama: (minor buff)
+Manectric: ???
+Camerupt: ???
+Walrein: ???
+Cacturne: ???
+Glalie: Add Refrigerate
+Lunatone: Moonlight
+Solrock: Morning Sun
+Grumpig: ???
+Plusle: Prankster, ???
+Minun: Prankster, ???
+Mawile: ???
+Medicham: (minor buff)
+Altaria: Fairy/Dragon, ???
+Slaking: U-Turn
+Swalot: ???
+Tropius: ???
+Exploud: (minor buff)
+Huntail: ???
+Gorebyss: ???
+Absol: ???
+Banette: Ghost/Dark, +10 Atk, +30 SAtk, +10 Spd, Nasty Plot
+Seviper: ???
+Zangoose: (minor buff)
+Relicanth: ???
+Aggron: ???
+Castform: +20 SAtk/SDef/Speed, modded Forecast changes weather prior to using Fire/Water/Ice moves, Thunder, Solarbeam, Hurricane
+Volbeat: Bug/Fairy, (minor buff)
+Illumise: Bug/Fairy, Nasty Plot, (minor buff)
+Cradily: ???
+Armaldo: ???
+Gardevoir: (no changes)
+Salamence: (no changes)
+Metagross: HA Iron Fist
+Regirock: ???
+Regice: ???
+Registeel: ???
+Latias: (no changes)
+Latios: (no changes)
+Jirachi: (no changes)
+Deoxys: (no change)
+Chimecho: ???
+
+Roserade: (no changes)
+Ambipom: ???
+Mismagius: HA Pixilate
+Honchkrow: (no changes)
+Weavile: (no changes)
+Magnezone: (no changes)
+Lickilicky: ???
+Rhyperior: (no changes)
+Tangrowth: (no changes)
+Electivire: ???
+Magmortar: ???
+Togekiss: (no change)
+Yanmega: ???
+Leafeon: ???
+Glaceon: ???
+Sylveon: (no changes)
+Gliscor: (no changes)
+Mamoswine: (no changes)
+Porygon-Z: (no changes)
+Gallade: (no changes)
+Probopass: HA Levitate
+Dusknoir: Add Levitate
+Froslass: Add Snow Warning
+
+
+
+
+
+
+
+Ampharos: Electric/Dragon
+Sunflora: Grass/Fire
+Bellossom: Grass/Fairy
+Masquerain: Bug/Water
+Luvdisc: Water/Fairy
+Swablu: Fairy/Flying
+Altaria: Fairy/Dragon
+Banette: Ghost/Dark
+
+
+
 Trade evos:
 Machoke evolves into Machamp by leveling up while knowing Cross Chop
 Graveler evolves into Golem by using a Shiny Stone

@@ -36,6 +36,7 @@ static void SetInitialEggData(struct Pokemon *, u16, struct DayCare *);
 static u8 GetDaycareCompatibilityScore(struct DayCare *);
 
 #include "data/pokemon/egg_moves.h"
+#include "data/pokemon/egg_moves_pointers.h"
 
 static const u8 *const sCompatibilityMessages[] = {
     DaycareText_GetAlongVeryWell,
@@ -466,38 +467,19 @@ static void InheritIVs(struct Pokemon *egg, struct DayCare *daycare)
     }
 }
 
-// Counts the number of egg moves a pokemon learns and stores the moves in
-// the given array.
-static u8 GetEggMoves(struct Pokemon *pokemon, u16 *eggMoves)
+// Counts the number of egg moves a pokemon learns.
+static u8 CountEggMoves(struct Pokemon *pokemon)
 {
-    u16 eggMoveIdx;
+    const u16* eggMoves;
     u16 numEggMoves;
     u16 species;
-    u16 i;
 
     numEggMoves = 0;
-    eggMoveIdx = 0;
     species = GetMonData(pokemon, MON_DATA_SPECIES);
-    for (i = 0; i < ARRAY_COUNT(gEggMoves) - 1; i++)
-    {
-        if (gEggMoves[i] == species + EGG_MOVES_SPECIES_OFFSET)
-        {
-            eggMoveIdx = i + 1;
-            break;
-        }
-    }
+    eggMoves = gEggMoves[species];
 
-    for (i = 0; i < 10; i++)
-    {
-        if (gEggMoves[eggMoveIdx + i] > EGG_MOVES_SPECIES_OFFSET)
-        {
-            // TODO: the curly braces around this if statement are required for a matching build.
-            break;
-        }
-
-        eggMoves[i] = gEggMoves[eggMoveIdx + i];
+    while (eggMoves[numEggMoves] != 0)
         numEggMoves++;
-    }
 
     return numEggMoves;
 }
@@ -508,6 +490,7 @@ void BuildEggMoveset(struct Pokemon *egg, struct BoxPokemon *father, struct BoxP
     u32 numLevelUpMoves;
     u32 numEggMoves;
     u16 i, j;
+    const u16* eggMoves;
 
     numSharedParentMoves = 0;
     for (i = 0; i < 4; i++)
@@ -528,7 +511,8 @@ void BuildEggMoveset(struct Pokemon *egg, struct BoxPokemon *father, struct BoxP
         gHatchedEggMotherMoves[i] = GetBoxMonData(mother, MON_DATA_MOVE1 + i);
     }
 
-    numEggMoves = GetEggMoves(egg, gHatchedEggEggMoves);
+    numEggMoves = CountEggMoves(egg);
+    eggMoves = gEggMoves[GetMonData(egg, MON_DATA_SPECIES)];
 
     for (i = 0; i < 4; i++)
     {
@@ -536,7 +520,7 @@ void BuildEggMoveset(struct Pokemon *egg, struct BoxPokemon *father, struct BoxP
         {
             for (j = 0; j < numEggMoves; j++)
             {
-                if (gHatchedEggFatherMoves[i] == gHatchedEggEggMoves[j])
+                if (gHatchedEggFatherMoves[i] == eggMoves[j])
                 {
                     if (GiveMoveToMon(egg, gHatchedEggFatherMoves[i]) == 0xffff)
                         DeleteFirstMoveAndGiveMoveToMon(egg, gHatchedEggFatherMoves[i]);
