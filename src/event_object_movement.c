@@ -1748,7 +1748,7 @@ static void get_berry_tree_graphics(struct EventObject *eventObject, struct Spri
         sprite->invisible = FALSE;
         berryId = GetBerryTypeByBerryTreeId(eventObject->trainerRange_berryTreeId) - 1;
         berryStage--;
-        if (berryId > 0x2B)
+        if (berryId > 0x3D)
         {
             berryId = 0;
         }

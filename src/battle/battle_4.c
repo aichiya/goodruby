@@ -331,6 +331,7 @@ extern u8 BattleScript_IncinerateDestroyBerry[];
 extern u8 BattleScript_LiftedProtect[];
 extern u8 BattleScript_SpikyShieldRecoil[];
 extern u8 BattleScript_FinishUTurn[];
+extern u8 BattleScript_UseResistBerry[];
 
 extern const u8 gStatusConditionString_PoisonJpn[];
 extern const u8 gStatusConditionString_SleepJpn[];
@@ -2207,6 +2208,7 @@ static void ModulateDmgByType(u8 multiplier)
 static void atk06_typecalc(void)
 {
     u8 move_type, defenderAbility;
+    u16 def_item;
 	
 	defenderAbility = gBattleMons[gBankTarget].ability;
 	if (gBattleMons[gBankAttacker].ability == ABILITY_MOLD_BREAKER)
@@ -2292,8 +2294,35 @@ static void atk06_typecalc(void)
 		
 		if (gMoveResultFlags & MOVE_RESULT_SUPER_EFFECTIVE && (gBattleMons[gBankTarget].ability == ABILITY_SOLID_ROCK || gBattleMons[gBankTarget].ability == ABILITY_FILTER))
 			gBattleMoveDamage = gBattleMoveDamage * 3 / 4;
+
+        // Resist berries.
+        // This is a bit of hack, but we assume the Natural Gift type == resisted type.
+        // This is true for all canon resist berries.
+        // Also we're ignoring enigma berries because lol.
+        def_item = gBattleMons[gBankTarget].item;
+        if ((gMoveResultFlags & MOVE_RESULT_SUPER_EFFECTIVE || move_type == TYPE_NORMAL) &&
+            ItemId_GetHoldEffect(def_item) == HOLD_EFFECT_RESIST_BERRY &&
+            ItemId_GetNatGiftType(def_item) == move_type &&
+            gBattleMoveDamage > 0 &&
+            (!(gBattleMons[gBankTarget].status2 & STATUS2_SUBSTITUTE) || gHitMarker & HITMARKER_IGNORE_SUBSTITUTE) &&
+            !AbilityBattleEffects(ABILITYEFFECT_CHECK_OTHER_SIDE, gBankTarget, ABILITY_UNNERVE, 0, 0))
+        {
+            gBattleMoveDamage /= 2;
+            gWishFutureKnock.berryEatenPokes[GetBattlerSide(gBankTarget)] |= gBitTable[gBattlerPartyIndexes[gBankTarget]];
+            
+            gBattlescriptCurrInstr++;
+            BattleScriptPushCursor();
+            gBattlescriptCurrInstr = BattleScript_UseResistBerry;
+        }
+        else
+        {
+            gBattlescriptCurrInstr++;
+        }
     }
-    gBattlescriptCurrInstr++;
+    else
+    {
+        gBattlescriptCurrInstr++;
+    }
 }
 static void CheckWonderGuardAndLevitate(void)
 {

@@ -6596,3 +6596,10 @@ BattleScript_TrickRoomEnds::
 	printstring BATTLE_TEXT_TrickRoomEnd
 	waitmessage 64
 	end2
+
+BattleScript_UseResistBerry::
+	playanimation TARGET, B_ANIM_ITEM_EFFECT, NULL
+    printstring BATTLE_TEXT_ResistBerry
+    waitmessage 64
+	removeitem TARGET
+    return

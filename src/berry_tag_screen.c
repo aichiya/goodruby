@@ -19,7 +19,6 @@
 #include "task.h"
 #include "text.h"
 
-#define OFFSET_7B (123)
 #define FIRST_BERRY ITEM_CHERI_BERRY
 
 struct Struct2000000
@@ -133,12 +132,12 @@ static bool8 sub_8146058(void)
         gMain.state += 1;
         break;
     case 8:
-        berry = gSpecialVar_ItemId + OFFSET_7B;
+        berry = gSpecialVar_ItemId - FIRST_BERRY;
         gUnknown_0203932C = CreateBerrySprite(berry, 56, 64);
         gMain.state += 1;
         break;
     case 9:
-        sub_8146600(gSpecialVar_ItemId + OFFSET_7B);
+        sub_8146600(gSpecialVar_ItemId - FIRST_BERRY);
         gMain.state += 1;
         break;
     case 10:
@@ -275,7 +274,7 @@ static void sub_81464E4(void)
     u8 buffer[16];
 #endif
 
-    berryInfo = GetBerryInfo(gSpecialVar_ItemId + OFFSET_7B + 1);
+    berryInfo = GetBerryInfo(gSpecialVar_ItemId + 1 - FIRST_BERRY);
 
     ConvertIntToDecimalStringN(gStringVar1, gSpecialVar_ItemId - FIRST_BERRY + 1, STR_CONV_MODE_LEADING_ZEROS, 2);
     Menu_PrintText(gStringVar1, 12, 4);
@@ -447,7 +446,7 @@ static void sub_81468BC(void)
     sub_81464E4();
 
     // center of berry sprite
-    gUnknown_0203932C = CreateBerrySprite(gSpecialVar_ItemId + OFFSET_7B, 56, 64);
+    gUnknown_0203932C = CreateBerrySprite(gSpecialVar_ItemId - FIRST_BERRY, 56, 64);
 
-    sub_8146600(gSpecialVar_ItemId + OFFSET_7B);
+    sub_8146600(gSpecialVar_ItemId - FIRST_BERRY);
 }

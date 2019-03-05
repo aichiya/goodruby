@@ -70,5 +70,6 @@
 #define HOLD_EFFECT_STICK          66
 #define HOLD_EFFECT_SITRUS         67
 #define HOLD_EFFECT_MAIL           68
+#define HOLD_EFFECT_RESIST_BERRY   69
 
 #endif // GUARD_CONSTANTS_HOLD_EFFECTS_H

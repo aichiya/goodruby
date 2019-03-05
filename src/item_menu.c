@@ -1320,7 +1320,7 @@ static void sub_80A46FC(u16 taskId, int b, int c, int d)
         text = gStringVar1;
         text = sub_80A425C(taskId, text, i);
         CopyItemName(gCurrentBagPocketItemSlots[r4].itemId, gStringVar2);
-        sub_80A41E0(text, gCurrentBagPocketItemSlots[r4].itemId - 0x84, gStringVar2, gCurrentBagPocketItemSlots[r4].quantity, 3);
+        sub_80A41E0(text, gCurrentBagPocketItemSlots[r4].itemId + 1 - ITEM_CHERI_BERRY, gStringVar2, gCurrentBagPocketItemSlots[r4].quantity, 3);
         Menu_PrintText(gStringVar1, 14, r5);
     }
 }
@@ -4282,6 +4282,24 @@ static const struct {const u8 *lzPic; const u8 *lzPalette;} sBerryGraphicsTable[
     {gBerryPic_Watmel, gBerryPalette_Watmel},
     {gBerryPic_Durin,  gBerryPalette_Durin},
     {gBerryPic_Belue,  gBerryPalette_Belue},
+    {gBerryPic_Occa,   gBerryPalette_Occa}, // Occa
+    {gBerryPic_Passho, gBerryPalette_Passho}, // Passho
+    {gBerryPic_Wacan,  gBerryPalette_Wacan}, // Wacan
+    {gBerryPic_Rindo,  gBerryPalette_Rindo}, // Rindo
+    {gBerryPic_Yache,  gBerryPalette_Yache}, // Yache
+    {gBerryPic_Chople, gBerryPalette_Chople}, // Chople
+    {gBerryPic_Kebia,  gBerryPalette_Kebia}, // Kebia
+    {gBerryPic_Shuca,  gBerryPalette_Shuca}, // Shuca
+    {gBerryPic_Coba,   gBerryPalette_Coba}, // Coba
+    {gBerryPic_Payapa, gBerryPalette_Payapa}, // Payapa
+    {gBerryPic_Tanga,  gBerryPalette_Tanga}, // Tanga
+    {gBerryPic_Charti, gBerryPalette_Charti}, // Charti
+    {gBerryPic_Kasib,  gBerryPalette_Kasib}, // Kasib
+    {gBerryPic_Haban,  gBerryPalette_Haban}, // Haban
+    {gBerryPic_Colbur, gBerryPalette_Colbur}, // Colbur
+    {gBerryPic_Babiri, gBerryPalette_Babiri}, // Babiri
+    {gBerryPic_Chilan, gBerryPalette_Chilan}, // Chilan
+    {gBerryPic_Roseli, gBerryPalette_Roseli}, // Roseli
     {gBerryPic_Liechi, gBerryPalette_Liechi},
     {gBerryPic_Ganlon, gBerryPalette_Ganlon},
     {gBerryPic_Salac,  gBerryPalette_Salac},

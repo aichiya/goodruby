@@ -426,6 +426,7 @@ enum
     BATTLE_TEXT_TrickRoom,
     BATTLE_TEXT_TrickRoomEnd,
     BATTLE_TEXT_WildAppeared4,
+    BATTLE_TEXT_ResistBerry,
 };
 
 const u8 BattleText_UnknownString[] = _("{STRING 33}");
@@ -982,6 +983,7 @@ const u8 BattleText_AuroraVeilLittle[] = _("{STRING 38}'s {STRING 17}\nlowers da
 const u8 BattleText_TrickRoom[] = _("{ATTACKING_MON} twisted\nthe dimensions!");
 const u8 BattleText_TrickRoomEnd[] = _("The twisted dimensions\nreturned to normal!");
 const u8 BattleText_WildAppeared4[] = _("Wild {STRING 3} was hooked!\p");
+const u8 BattleText_ResistBerry[] = _("{DEFENDING_MON} ate its {STRING 19}\nto weaken the damage taken!");
 
 
 const u8 *const gUnknown_08400F58[] =
@@ -1431,6 +1433,7 @@ const u8 *const gBattleStringsTable[] =
     BattleText_TrickRoom,
     BattleText_TrickRoomEnd,
     BattleText_WildAppeared4,
+    BattleText_ResistBerry,
 };
 
 // below are lists of battle string enums and NOT pointers to the strings.

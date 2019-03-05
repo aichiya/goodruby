@@ -103,10 +103,23 @@ ROBIN: Chingling Lv18, Taillow Lv17
 EDDIE: Ratatta Lv18, Spinarak Lv19
 
 ROUTE 117
-ANNA&MEG:
-DYLAN:
-LYDIA: Magby, Swinub, Budew, Totodile
-MARIA: Doduo
-DEREK: Ledian, Ariados
-ISAAC: Phanpy, Pichu, Mantyke, Cyndaquil
+ANNA&MEG: Meowth Lv21, Skitty Lv19
+DYLAN: Ponyta Lv20, Taillow Lv20
+LYDIA: Magby, Swinub, Budew, Totodile (all Lv18)
+MARIA: Doduo Lv20, Diglett Lv20
+DEREK: Ledian Lv20, Ariados Lv20
+ISAAC: Phanpy, Pichu, Mantyke, Cyndaquil (all Lv18)
 
+ROUTE 118
+ROSE: Roselia Lv21
+WADE: Krabby Lv21
+DALTON: Voltorb Lv19, Loudred Lv20
+
+MAUVILLE GYM:
+WALLY: Skitty Lv18, Ralts Lv19
+KIRK: Electrike Lv21, Voltorb Lv21
+BEN: Flaaffy Lv21, Raticate Lv21, Pikachu Lv20
+SHAWN: Magnemite Lv21, Loudred Lv21
+VIVIAN: Meditite Lv22 (thunderpunch)
+
+WATTSON:

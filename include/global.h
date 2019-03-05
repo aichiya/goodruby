@@ -95,7 +95,7 @@ enum LanguageId
 
 // capacities of various saveblock objects
 #define DAYCARE_MON_COUNT   2
-#define POKEBLOCKS_COUNT    38
+#define POKEBLOCKS_COUNT    29
 #define PARTY_SIZE          6
 #define EVENT_OBJECTS_COUNT 16
 #define BERRY_TREES_COUNT   128
@@ -110,7 +110,7 @@ enum LanguageId
 #define BAG_KEYITEMS_COUNT  20
 #define BAG_POKEBALLS_COUNT 13
 #define BAG_TMHM_COUNT      100
-#define BAG_BERRIES_COUNT   43
+#define BAG_BERRIES_COUNT   61
 
 enum
 {
@@ -665,7 +665,7 @@ struct SaveBlock1 /* 0x02025734 */
     /*0x600*/ struct ItemSlot bagPocket_PokeBalls[BAG_POKEBALLS_COUNT];
     /*0x634*/ struct ItemSlot bagPocket_TMHM[BAG_TMHM_COUNT];
     /*0x7C4*/ struct ItemSlot bagPocket_Berries[BAG_BERRIES_COUNT];
-    /*0x870*/ struct Pokeblock pokeblocks[POKEBLOCKS_COUNT];
+    /*0x8B8*/ struct Pokeblock pokeblocks[POKEBLOCKS_COUNT];
     /*0x9A0*/ u8 dexSeen2[6]; //can be repurposed
     /*0x9A6*/ u16 trainerRematchStepCounter;
     /*0x9A8*/ u8 trainerRematches[56];
