@@ -144,11 +144,8 @@ static u8 GetTrainerApproachDistanceEast(struct EventObject *trainerObj, s16 ran
         return 0;
 }
 
-#ifdef BUGFIX_TRAINERAPPROACH
+// BUGFIX def removed
 #define COLLISION_MASK ~1
-#else
-#define COLLISION_MASK 1
-#endif
 
 static bool8 CheckPathBetweenTrainerAndPlayer(struct EventObject *trainerObj, u8 approachDistance, u8 direction)
 {

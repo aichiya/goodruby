@@ -26,7 +26,7 @@ GnarledRidge_Text_Trainer3Meet::
     .string "team. Behold!$"
 
 GnarledRidge_Text_Trainer3Beat::
-    .string "I didn't say battle-optimal!$"
+    .string "I didn't say optimal for battle!$"
 
 GnarledRidge_Text_Trainer3Chat::
     .string "My buddy says I should use\n"
