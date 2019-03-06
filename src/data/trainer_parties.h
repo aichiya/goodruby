@@ -3878,8 +3878,8 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Karen1[] = {
     },
     {
 	.iv = 10,
-	.level = 13,
-	.species = SPECIES_PONYTA
+	.level = 14,
+	.species = SPECIES_TAILLOW
     }
 };
 

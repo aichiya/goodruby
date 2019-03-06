@@ -4,6 +4,8 @@ DUSTOX: HA CompoundEyes becomes Filter
 
 Classic:
 PIDGEY: Learns all moves before Whirlwind earlier, learns Air Cutter at 13
+HITMONCHAN: Learns Drain Punch by relearner
+LEDIAN: Adjust early move positions, remove Tackle, add Air Cutter and Drain Punch. Swarm replaced with Magic Guard.
 BEAUTIFLY: Learns Mega Drain and Giga Drain earlier, loses Absorb, now learns Leech Life
 SKITTY, DELCATTY: Does not have secondary ability Normalize
 WINGULL, PELIPPER: Secondary abilities Hydration/Drizzle are switched with hidden ability Rain Dish
@@ -87,7 +89,7 @@ Typhlosion: Add Earth Power
 Feraligatr: (no change)
 Furret: Add Hustle, 
 Noctowl: ???
-Ledian: ???
+Ledian: Add Magic Guard, shift moves
 Ariados: ???
 Crobat: (no change)
 Lanturn: (minor buff)

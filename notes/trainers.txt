@@ -40,7 +40,7 @@ GRUNT: Koffing Lv13, Houndour Lv14
 
 ROUTE 116 HIGH
 JERRY: Drowzee Lv13, Zigzagoon Lv13, Paras Lv13
-KAREN: Shroomish Lv13, Ponyta Lv13
+KAREN: Shroomish Lv13, Taillow Lv14
 
 GNARLED RIDGE
 JIMMY: Pidgey, Electrike, Growlithe
