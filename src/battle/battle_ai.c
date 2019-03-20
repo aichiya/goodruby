@@ -145,6 +145,7 @@ static void BattleAICmd_end(void);
 static void BattleAICmd_if_level_compare(void);
 static void BattleAICmd_if_taunted(void);
 static void BattleAICmd_if_not_taunted(void);
+static void BattleAICmd_if_hazards(void);
 
 typedef void (*BattleAICmdFunc)(void);
 
@@ -244,6 +245,7 @@ static const BattleAICmdFunc sBattleAICmdTable[] =
     BattleAICmd_if_level_compare,            // 0x5B
     BattleAICmd_if_taunted,                  // 0x5C
     BattleAICmd_if_not_taunted,              // 0x5D
+    BattleAICmd_if_hazards,                  // 0x5E
 };
 
 #ifdef NONMATCHING
@@ -2131,6 +2133,25 @@ static void BattleAICmd_if_not_taunted(void)
         gAIScriptPtr = T1_READ_PTR(gAIScriptPtr + 1);
     else
         gAIScriptPtr += 5;
+}
+
+static void BattleAICmd_if_hazards(void)
+{
+    u16 index;
+    u32 arg1, arg2;
+
+    if (gAIScriptPtr[1] == USER)
+        index = gBankAttacker;
+    else
+        index = gBankTarget;
+
+    arg1 = GetBattlerPosition(index) & 1;
+    arg2 = T1_READ_32(gAIScriptPtr + 2);
+
+    if ((gSideTimers[arg1].spikesAmount & arg2) != 0)
+        gAIScriptPtr = T1_READ_PTR(gAIScriptPtr + 6);
+    else
+        gAIScriptPtr += 10;
 }
 
 void AIStackPushVar(u8 *var)

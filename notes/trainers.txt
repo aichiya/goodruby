@@ -81,6 +81,17 @@ Onix Lv18 Sunny Day, Stealth Rock, Rock Tomb, Tackle
 Mightyena Lv18 Bite, Snarl, Fire Fang, Sand Attack
 Magmar Lv20 Sunny Day, Ember, Smog, Feint Attack
 
+ROUTE 103
+DAISY: Bayleef Lv20
+AMY&LIV: Mareep Lv18, Hoothoot Lv18
+MIGUEL: Lombre Lv18, Skitty Lv19
+ANDREW: Mankey Lv18, Magikarp Lv18, Magikarp Lv18, Slowpoke Lv18
+
+TRICK HOUSE 1
+SALLY: Skitty Lv17, Bellsprout Lv17
+ROBIN: Chingling Lv18, Taillow Lv17
+EDDIE: Ratatta Lv18, Spinarak Lv19
+
 ROUTE 110
 ISABEL: Pichu Lv17, Pikachu Lv18, Plusle Lv18
 TIMMY: Aron Lv18, Quilava Lv18, Electrike Lv18
@@ -97,29 +108,45 @@ Combusken Lv21: Double Kick, Flame Charge, Ember, Bulk Up
 Marshtomp Lv21: Mud Shot, Water Gun, Bulldoze, Stealth Rock
 Grovyle Lv21: Mega Drain, Fury Cutter, Pursuit, Cut
 
-TRICK HOUSE 1
-SALLY: Skitty Lv17, Bellsprout Lv17
-ROBIN: Chingling Lv18, Taillow Lv17
-EDDIE: Ratatta Lv18, Spinarak Lv19
-
 ROUTE 117
-ANNA&MEG: Meowth Lv21, Skitty Lv19
-DYLAN: Ponyta Lv20, Taillow Lv20
-LYDIA: Magby, Swinub, Budew, Totodile (all Lv18)
-MARIA: Doduo Lv20, Diglett Lv20
-DEREK: Ledian Lv20, Ariados Lv20
-ISAAC: Phanpy, Pichu, Mantyke, Cyndaquil (all Lv18)
+ANNA&MEG: Meowth Lv21, Skitty Lv20
+DYLAN: Ponyta Lv21, Taillow Lv21
+LYDIA: Budew, Magby, Swinub, Totodile (all Lv19)
+MARIA: Doduo Lv21, Diglett Lv21
+DEREK: Ledian Lv21, Ariados Lv21
+ISAAC: Phanpy, Pichu, Mantyke, Cyndaquil (all Lv19)
 
 ROUTE 118
-ROSE: Roselia Lv21
-WADE: Krabby Lv21
-DALTON: Voltorb Lv19, Loudred Lv20
+ROSE: Roselia Lv22
+WADE: Krabby Lv21, Carvanha Lv21
+DALTON: Zubat Lv20, Loudred Lv21
+
+CYCLING ROAD
+JACLYN: Drowzee Lv22
+ABIGAIL: Magnemite Lv22
+ANTHONY: Aron Lv21, Furret Lv21
+BENJAMIN: Voltorb Lv18, Voltorb Lv19, Voltorb Lv20, Voltorb Lv21
+JASMINE: Poliwag Lv21, Voltorb Lv21
+JACOB: Pikachu Lv22
 
 MAUVILLE GYM:
 WALLY: Skitty Lv18, Ralts Lv19
-KIRK: Electrike Lv21, Voltorb Lv21
-BEN: Flaaffy Lv21, Raticate Lv21, Pikachu Lv20
-SHAWN: Magnemite Lv21, Loudred Lv21
-VIVIAN: Meditite Lv22 (thunderpunch)
+KIRK: Electrike Lv22, Voltorb Lv22
+BEN: Flaaffy Lv21, Raticate Lv21, Pikachu Lv21
+SHAWN: Magnemite Lv22, Loudred Lv22
+VIVIAN: Meditite Lv23 (thunderpunch)
+
+RUSTURF TUNNEL:
+MIKE: Loudred Lv22, Rhyhorn Lv22
 
 WATTSON:
+Plusle Lv23: Volt Switch, Swift, Fake Tears, Thunder Wave
+Raichu Lv23: Volt Switch, Grass Knot, Brick Break, Quick Attack
+Gligar Lv24@Oran Berry: U-Turn, Rock Smash, Toxic, Sand Attack
+Magneton Lv25@Shuca Berry: Volt Switch, Mirror Shot, Tri Attack, Thunder Wave
+
+WINSTRATES:
+VICTOR: Clefairy Lv22, Snubbull Lv22
+VICTORIA: Nidorina Lv22, Weepinbell Lv22
+VIVI: Kirlia Lv22, Chimecho Lv22
+VICKY: Houndour Lv22, Sableye Lv22

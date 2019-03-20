@@ -467,6 +467,16 @@ const struct MenuAction MultichoiceList_72[] =
     {gOtherText_CancelNoTerminator, NULL},
 };
 
+const struct MenuAction MultichoiceList_73[] =
+{
+    {OtherText_Pikachu, NULL},
+    {OtherText_Cubone, NULL},
+    {OtherText_Clefairy, NULL},
+    {OtherText_Eevee, NULL},
+    {OtherText_Porygon, NULL},
+    {gOtherText_CancelNoTerminator, NULL},
+};
+
 const struct MenuAction MultichoiceList_01[] =
 {
     {gOtherText_CancelNoTerminator, NULL},
@@ -553,6 +563,7 @@ const struct MultichoiceListStruct gMultichoiceLists[] =
     {MultichoiceList_70, ARRAY_COUNT(MultichoiceList_70)},
     {MultichoiceList_71, ARRAY_COUNT(MultichoiceList_71)},
     {MultichoiceList_72, ARRAY_COUNT(MultichoiceList_72)},
+    {MultichoiceList_73, ARRAY_COUNT(MultichoiceList_73)},
 };
 
 const u8 *const gUnknown_083CE048[] =

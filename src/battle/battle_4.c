@@ -1163,18 +1163,6 @@ static const u16 sNaturePowerMoves[] =
     MOVE_TRI_ATTACK,
 };
 
-// weight-based damage table for Low Kick
-// format: min. weight (hectograms), base power
-static const u16 sWeightToDamageTable[] =
-{
-    100, 20,
-    250, 40,
-    500, 60,
-    1000, 80,
-    2000, 100,
-    0xFFFF, 0xFFFF
-};
-
 static const u8 sTerrainToType[] =
 {
     TYPE_GRASS, // tall grass
@@ -2179,7 +2167,6 @@ static void ModulateDmgByType(u8 multiplier)
         gMoveResultFlags &= ~MOVE_RESULT_SUPER_EFFECTIVE;
 		multiplier = 0;
         break;
-		
     case 5: //not very effecting
         if (gBattleMoves[gCurrentMove].power && !(gMoveResultFlags & MOVE_RESULT_NO_EFFECT))
         {
@@ -2300,7 +2287,7 @@ static void atk06_typecalc(void)
         // This is true for all canon resist berries.
         // Also we're ignoring enigma berries because lol.
         def_item = gBattleMons[gBankTarget].item;
-        if ((gMoveResultFlags & MOVE_RESULT_SUPER_EFFECTIVE || move_type == TYPE_NORMAL) &&
+        if (((gMoveResultFlags & MOVE_RESULT_SUPER_EFFECTIVE) || move_type == TYPE_NORMAL) &&
             ItemId_GetHoldEffect(def_item) == HOLD_EFFECT_RESIST_BERRY &&
             ItemId_GetNatGiftType(def_item) == move_type &&
             gBattleMoveDamage > 0 &&
@@ -12337,22 +12324,7 @@ static void atkDC_trysetgrudge(void)
 
 static void atkDD_weightdamagecalculation(void)
 {
-    int i;
-	u16 weight = GetPokedexHeightWeight(SpeciesToNationalPokedexNum(gBattleMons[gBankTarget].species), 1);
-	if (gBattleMons[gBankTarget].ability == ABILITY_HEAVY_METAL)
-		weight *= 2;
-	else if (gBattleMons[gBankTarget].ability == ABILITY_LIGHT_METAL)
-		weight /= 2;
-	
-    for (i = 0; sWeightToDamageTable[i] != 0xFFFF; i += 2)
-    {
-        if (sWeightToDamageTable[i] > weight)
-            break;
-    }
-    if (sWeightToDamageTable[i] != 0xFFFF)
-        gDynamicBasePower = sWeightToDamageTable[i + 1];
-    else
-        gDynamicBasePower = 120;
+    // Now unused.
     gBattlescriptCurrInstr++;
 }
 
@@ -14275,39 +14247,7 @@ static void sp1B_sleepremoval(void)
 
 static void sp1C_heavyslam(void)
 {
-	u16 attackerwt = GetPokedexHeightWeight(SpeciesToNationalPokedexNum(gBattleMons[gBankAttacker].species), 1);
-	u16 targetwt = GetPokedexHeightWeight(SpeciesToNationalPokedexNum(gBattleMons[gBankTarget].species), 1);
-	
-	if (gBattleMons[gBankAttacker].ability == ABILITY_HEAVY_METAL)
-		attackerwt *= 2;
-	else if (gBattleMons[gBankAttacker].ability == ABILITY_LIGHT_METAL)
-		attackerwt /= 2;
-		
-	if (gBattleMons[gBankTarget].ability == ABILITY_HEAVY_METAL)
-		targetwt *= 2;
-	else if (gBattleMons[gBankTarget].ability == ABILITY_LIGHT_METAL)
-		targetwt /= 2;
-	
-	if (targetwt*2 >= attackerwt)
-	{
-		gDynamicBasePower = 40;
-	}
-	else if (targetwt*3 >= attackerwt)
-	{
-		gDynamicBasePower = 60;
-	}
-	else if (targetwt*4 >= attackerwt)
-	{
-		gDynamicBasePower = 80;
-	}
-	else if (targetwt*5 >= attackerwt)
-	{
-		gDynamicBasePower = 100;
-	}
-	else
-	{
-		gDynamicBasePower = 120;
-	}
+
 }
 
 static void sp1D_aquaring(void)

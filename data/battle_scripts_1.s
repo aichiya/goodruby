@@ -1846,7 +1846,7 @@ BattleScript_EffectSonicboom: @ 81D7FB4
 	ppreduce
 	typecalc
 	bicbyte gMoveResultFlags, MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE
-	setword gBattleMoveDamage, 1
+	setword gBattleMoveDamage, 20
 	adjustsetdamage
 	goto BattleScript_HitFromAtkAnimation
 
@@ -2456,7 +2456,12 @@ BattleScript_EffectCharge: @ 81D869A
 	waitanimation
 	printstring BATTLE_TEXT_ChargingPower
 	waitmessage 64
-	goto BattleScript_MoveEnd
+    
+	setstatchanger SP_DEFENSE, 1, FALSE
+	statbuffchange AFFECTS_USER | 0x1, BattleScript_StatUpEnd
+	jumpifbyte NOT_EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_StatUpDoAnim
+	pause 32
+	goto BattleScript_StatUpPrintString
 
 BattleScript_EffectTaunt: @ 81D86AB
 	attackcanceler

@@ -257,22 +257,22 @@ MauvilleCity_GameCorner_EventScript_156DA6:: @ 8156DA6
 
 MauvilleCity_GameCorner_EventScript_156DB4:: @ 8156DB4
 	setvar VAR_TEMP_1, 2
-	bufferitemname 0, ITEM_TM29_PSYCHIC
+	bufferitemname 0, ITEM_TM54_FIRE_PUNCH
 	goto MauvilleCity_GameCorner_EventScript_156DEC
 
 MauvilleCity_GameCorner_EventScript_156DC2:: @ 8156DC2
 	setvar VAR_TEMP_1, 3
-	bufferitemname 0, ITEM_TM35_FLAMETHROWER
+	bufferitemname 0, ITEM_TM55_ICE_PUNCH
 	goto MauvilleCity_GameCorner_EventScript_156DEC
 
 MauvilleCity_GameCorner_EventScript_156DD0:: @ 8156DD0
 	setvar VAR_TEMP_1, 4
-	bufferitemname 0, ITEM_TM24_THUNDERBOLT
+	bufferitemname 0, ITEM_TM56_THUNDER_PUNCH
 	goto MauvilleCity_GameCorner_EventScript_156DEC
 
 MauvilleCity_GameCorner_EventScript_156DDE:: @ 8156DDE
 	setvar VAR_TEMP_1, 5
-	bufferitemname 0, ITEM_TM13_ICE_BEAM
+	bufferitemname 0, ITEM_TM90_SUBSTITUTE
 	goto MauvilleCity_GameCorner_EventScript_156DEC
 
 MauvilleCity_GameCorner_EventScript_156DEC:: @ 8156DEC
@@ -289,12 +289,12 @@ MauvilleCity_GameCorner_EventScript_156DEC:: @ 8156DEC
 
 MauvilleCity_GameCorner_EventScript_156E3C:: @ 8156E3C
 	checkcoins VAR_TEMP_2
-	compare VAR_TEMP_2, 1500
+	compare VAR_TEMP_2, 3500
 	goto_if_lt MauvilleCity_GameCorner_EventScript_156F5E
 	checkitemspace ITEM_TM32_DRAIN_PUNCH, 1
 	compare RESULT, 0
 	goto_if_eq MauvilleCity_GameCorner_EventScript_156F6C
-	takecoins 1500
+	takecoins 3500
 	giveitem ITEM_TM32_DRAIN_PUNCH, 1
 	updatecoinsbox 0, 0
 	playse SE_REGI
@@ -306,11 +306,11 @@ MauvilleCity_GameCorner_EventScript_156E76:: @ 8156E76
 	checkcoins VAR_TEMP_2
 	compare VAR_TEMP_2, 3500
 	goto_if_lt MauvilleCity_GameCorner_EventScript_156F5E
-	checkitemspace ITEM_TM29_PSYCHIC, 1
+	checkitemspace ITEM_TM54_FIRE_PUNCH, 1
 	compare RESULT, 0
 	goto_if_eq MauvilleCity_GameCorner_EventScript_156F6C
 	takecoins 3500
-	giveitem ITEM_TM29_PSYCHIC, 1
+	giveitem ITEM_TM54_FIRE_PUNCH, 1
 	updatecoinsbox 0, 0
 	playse SE_REGI
 	msgbox MauvilleCity_GameCorner_Text_181F08, 4
@@ -319,13 +319,13 @@ MauvilleCity_GameCorner_EventScript_156E76:: @ 8156E76
 
 MauvilleCity_GameCorner_EventScript_156EB0:: @ 8156EB0
 	checkcoins VAR_TEMP_2
-	compare VAR_TEMP_2, 4000
+	compare VAR_TEMP_2, 3500
 	goto_if_lt MauvilleCity_GameCorner_EventScript_156F5E
-	checkitemspace ITEM_TM35_FLAMETHROWER, 1
+	checkitemspace ITEM_TM55_ICE_PUNCH, 1
 	compare RESULT, 0
 	goto_if_eq MauvilleCity_GameCorner_EventScript_156F6C
-	takecoins 4000
-	giveitem ITEM_TM35_FLAMETHROWER, 1
+	takecoins 3500
+	giveitem ITEM_TM55_ICE_PUNCH, 1
 	updatecoinsbox 0, 0
 	playse SE_REGI
 	msgbox MauvilleCity_GameCorner_Text_181F08, 4
@@ -334,13 +334,13 @@ MauvilleCity_GameCorner_EventScript_156EB0:: @ 8156EB0
 
 MauvilleCity_GameCorner_EventScript_156EEA:: @ 8156EEA
 	checkcoins VAR_TEMP_2
-	compare VAR_TEMP_2, 4000
+	compare VAR_TEMP_2, 3500
 	goto_if_lt MauvilleCity_GameCorner_EventScript_156F5E
-	checkitemspace ITEM_TM24_THUNDERBOLT, 1
+	checkitemspace ITEM_TM56_THUNDER_PUNCH, 1
 	compare RESULT, 0
 	goto_if_eq MauvilleCity_GameCorner_EventScript_156F6C
-	takecoins 4000
-	giveitem ITEM_TM24_THUNDERBOLT, 1
+	takecoins 3500
+	giveitem ITEM_TM56_THUNDER_PUNCH, 1
 	updatecoinsbox 0, 0
 	playse SE_REGI
 	msgbox MauvilleCity_GameCorner_Text_181F08, 4
@@ -349,13 +349,13 @@ MauvilleCity_GameCorner_EventScript_156EEA:: @ 8156EEA
 
 MauvilleCity_GameCorner_EventScript_156F24:: @ 8156F24
 	checkcoins VAR_TEMP_2
-	compare VAR_TEMP_2, 4000
+	compare VAR_TEMP_2, 9950
 	goto_if_lt MauvilleCity_GameCorner_EventScript_156F5E
-	checkitemspace ITEM_TM13_ICE_BEAM, 1
+	checkitemspace ITEM_TM90_SUBSTITUTE, 1
 	compare RESULT, 0
 	goto_if_eq MauvilleCity_GameCorner_EventScript_156F6C
-	takecoins 4000
-	giveitem ITEM_TM13_ICE_BEAM, 1
+	takecoins 9950
+	giveitem ITEM_TM90_SUBSTITUTE, 1
 	updatecoinsbox 0, 0
 	playse SE_REGI
 	msgbox MauvilleCity_GameCorner_Text_181F08, 4
@@ -652,4 +652,200 @@ MauvilleCity_GameCorner_EventScript_157295:: @ 8157295
 MauvilleCity_GameCorner_EventScript_1572B5:: @ 81572B5
 	msgbox MauvilleCity_GameCorner_Text_182420, 4
 	releaseall
+	end
+
+MauvilleCity_GameCorner_EventScript_MonPrizesStart::
+	lock
+	faceplayer
+	msgbox MauvilleCity_GameCorner_Text_181DE1, 4
+	checkitem ITEM_COIN_CASE, 1
+	compare RESULT, 1
+	goto_if_eq MauvilleCity_GameCorner_EventScript_MonPrizesStartFirst
+	release
+	end
+
+MauvilleCity_GameCorner_EventScript_MonPrizesStartFirst:
+	message MauvilleCity_GameCorner_Text_181E17
+	waitmessage
+	showcoinsbox 0, 0
+	setvar VAR_TEMP_1, 0
+	goto MauvilleCity_GameCorner_EventScript_MonPrizes
+
+MauvilleCity_GameCorner_EventScript_MonPrizes:
+    multichoice 12, 0, 73, 0
+    switch RESULT
+	case 0, MauvilleCity_GameCorner_EventScript_PikachuConfirm
+	case 1, MauvilleCity_GameCorner_EventScript_CuboneConfirm
+	case 2, MauvilleCity_GameCorner_EventScript_ClefairyConfirm
+	case 3, MauvilleCity_GameCorner_EventScript_EeveeConfirm
+	case 4, MauvilleCity_GameCorner_EventScript_PorygonConfirm
+	goto MauvilleCity_GameCorner_EventScript_156D0D
+	end
+    
+MauvilleCity_GameCorner_EventScript_PikachuConfirm:
+	setvar VAR_TEMP_1, 1
+    bufferspeciesname 0, SPECIES_PIKACHU
+	goto MauvilleCity_GameCorner_EventScript_MonConfirm
+    
+MauvilleCity_GameCorner_EventScript_CuboneConfirm:
+	setvar VAR_TEMP_1, 2
+    bufferspeciesname 0, SPECIES_CUBONE
+	goto MauvilleCity_GameCorner_EventScript_MonConfirm
+    
+MauvilleCity_GameCorner_EventScript_ClefairyConfirm:
+	setvar VAR_TEMP_1, 3
+    bufferspeciesname 0, SPECIES_CLEFAIRY
+	goto MauvilleCity_GameCorner_EventScript_MonConfirm
+    
+MauvilleCity_GameCorner_EventScript_EeveeConfirm:
+	setvar VAR_TEMP_1, 4
+    bufferspeciesname 0, SPECIES_EEVEE
+	goto MauvilleCity_GameCorner_EventScript_MonConfirm
+    
+MauvilleCity_GameCorner_EventScript_PorygonConfirm:
+	setvar VAR_TEMP_1, 5
+    bufferspeciesname 0, SPECIES_PORYGON
+	goto MauvilleCity_GameCorner_EventScript_MonConfirm
+
+MauvilleCity_GameCorner_EventScript_MonConfirm:
+	msgbox MauvilleCity_GameCorner_Text_181E33, MSGBOX_YESNO
+	compare RESULT, NO
+	goto_if_eq MauvilleCity_GameCorner_EventScript_156F77
+	switch VAR_TEMP_1
+	case 1, MauvilleCity_GameCorner_EventScript_Pikachu
+	case 2, MauvilleCity_GameCorner_EventScript_Cubone
+	case 3, MauvilleCity_GameCorner_EventScript_Clefairy
+	case 4, MauvilleCity_GameCorner_EventScript_Eevee
+	case 5, MauvilleCity_GameCorner_EventScript_Porygon
+	end
+    
+MauvilleCity_GameCorner_EventScript_Pikachu:
+	checkcoins VAR_TEMP_2
+	compare VAR_TEMP_2, 120
+	goto_if_lt MauvilleCity_GameCorner_EventScript_NoCoinsForMon
+	getpartysize
+	compare RESULT, 6
+    goto_if_eq MauvilleCity_GameCorner_EventScript_NoRoom
+	copyvar VAR_SPECIAL_4, RESULT
+	takecoins 120
+	updatecoinsbox 0, 0
+	playse SE_REGI
+    waitse
+	playfanfare MUS_FANFA4
+	bufferspeciesname 0, SPECIES_PIKACHU
+	message MauvilleCity_GameCorner_Text_GetMon
+	waitfanfare
+	waitmessage
+	givemon SPECIES_PIKACHU, 14, ITEM_NONE, 0x0, 0x0, 0
+	bufferspeciesname 1, SPECIES_PIKACHU
+	msgbox MossdeepCity_StevensHouse_Text_1A1102, MSGBOX_YESNO
+	compare RESULT, YES
+	call_if_eq MossdeepCity_StevensHouse_EventScript_1A0678
+    goto MauvilleCity_GameCorner_EventScript_MonPrizesStartFirst
+    
+MauvilleCity_GameCorner_EventScript_Cubone:
+	checkcoins VAR_TEMP_2
+	compare VAR_TEMP_2, 520
+	goto_if_lt MauvilleCity_GameCorner_EventScript_NoCoinsForMon
+	getpartysize
+	compare RESULT, 6
+    goto_if_eq MauvilleCity_GameCorner_EventScript_NoRoom
+	copyvar VAR_SPECIAL_4, RESULT
+	takecoins 520
+	updatecoinsbox 0, 0
+	playse SE_REGI
+    waitse
+	playfanfare MUS_FANFA4
+	bufferspeciesname 0, SPECIES_CUBONE
+	message MauvilleCity_GameCorner_Text_GetMon
+	waitfanfare
+	waitmessage
+	givemon SPECIES_CUBONE, 14, ITEM_NONE, 0x0, 0x0, 0
+	bufferspeciesname 1, SPECIES_CUBONE
+	msgbox MossdeepCity_StevensHouse_Text_1A1102, MSGBOX_YESNO
+	compare RESULT, YES
+	call_if_eq MossdeepCity_StevensHouse_EventScript_1A0678
+    goto MauvilleCity_GameCorner_EventScript_MonPrizesStartFirst
+    
+MauvilleCity_GameCorner_EventScript_Clefairy:
+	checkcoins VAR_TEMP_2
+	compare VAR_TEMP_2, 1030
+	goto_if_lt MauvilleCity_GameCorner_EventScript_NoCoinsForMon
+	getpartysize
+	compare RESULT, 6
+    goto_if_eq MauvilleCity_GameCorner_EventScript_NoRoom
+	copyvar VAR_SPECIAL_4, RESULT
+	takecoins 1030
+	updatecoinsbox 0, 0
+	playse SE_REGI
+    waitse
+	playfanfare MUS_FANFA4
+	bufferspeciesname 0, SPECIES_CLEFAIRY
+	message MauvilleCity_GameCorner_Text_GetMon
+	waitfanfare
+	waitmessage
+	givemon SPECIES_CLEFAIRY, 14, ITEM_NONE, 0x0, 0x0, 0
+	bufferspeciesname 1, SPECIES_CLEFAIRY
+	msgbox MossdeepCity_StevensHouse_Text_1A1102, MSGBOX_YESNO
+	compare RESULT, YES
+	call_if_eq MossdeepCity_StevensHouse_EventScript_1A0678
+    goto MauvilleCity_GameCorner_EventScript_MonPrizesStartFirst
+    
+MauvilleCity_GameCorner_EventScript_Eevee:
+	checkcoins VAR_TEMP_2
+	compare VAR_TEMP_2, 2700
+	goto_if_lt MauvilleCity_GameCorner_EventScript_NoCoinsForMon
+	getpartysize
+	compare RESULT, 6
+    goto_if_eq MauvilleCity_GameCorner_EventScript_NoRoom
+	copyvar VAR_SPECIAL_4, RESULT
+	takecoins 2700
+	updatecoinsbox 0, 0
+	playse SE_REGI
+    waitse
+	playfanfare MUS_FANFA4
+	bufferspeciesname 0, SPECIES_EEVEE
+	message MauvilleCity_GameCorner_Text_GetMon
+	waitfanfare
+	waitmessage
+	givemon SPECIES_EEVEE, 14, ITEM_NONE, 0x0, 0x0, 0
+	bufferspeciesname 1, SPECIES_EEVEE
+	msgbox MossdeepCity_StevensHouse_Text_1A1102, MSGBOX_YESNO
+	compare RESULT, YES
+	call_if_eq MossdeepCity_StevensHouse_EventScript_1A0678
+    goto MauvilleCity_GameCorner_EventScript_MonPrizesStartFirst
+    
+MauvilleCity_GameCorner_EventScript_Porygon:
+	checkcoins VAR_TEMP_2
+	compare VAR_TEMP_2, 7777
+	goto_if_lt MauvilleCity_GameCorner_EventScript_NoCoinsForMon
+	getpartysize
+	compare RESULT, 6
+    goto_if_eq MauvilleCity_GameCorner_EventScript_NoRoom
+	copyvar VAR_SPECIAL_4, RESULT
+	takecoins 7777
+	updatecoinsbox 0, 0
+	playse SE_REGI
+    waitse
+	playfanfare MUS_FANFA4
+	bufferspeciesname 0, SPECIES_PORYGON
+	message MauvilleCity_GameCorner_Text_GetMon
+	waitfanfare
+	waitmessage
+	givemon SPECIES_PORYGON, 14, ITEM_NONE, 0x0, 0x0, 0
+	bufferspeciesname 1, SPECIES_PORYGON
+	msgbox MossdeepCity_StevensHouse_Text_1A1102, MSGBOX_YESNO
+	compare RESULT, YES
+	call_if_eq MossdeepCity_StevensHouse_EventScript_1A0678
+    goto MauvilleCity_GameCorner_EventScript_MonPrizesStartFirst
+
+MauvilleCity_GameCorner_EventScript_NoRoom:
+	msgbox MauvilleCity_GameCorner_Text_NoRoom, 4
+	hidecoinsbox 0, 0
+	release
+	end
+
+MauvilleCity_GameCorner_EventScript_NoCoinsForMon:
+	msgbox MauvilleCity_GameCorner_Text_181E76, 4
+	goto MauvilleCity_GameCorner_EventScript_MonPrizes
 	end

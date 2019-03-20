@@ -169,9 +169,9 @@ AI_CheckBadMove_CheckEffect: @ 81DA14F
 	if_effect EFFECT_MINIMIZE, AI_CBM_EvasionUp
 	if_effect EFFECT_CURSE, AI_CBM_Curse
 	if_effect EFFECT_SPIKES, AI_CBM_Spikes
-	if_effect EFFECT_STEALTH_ROCK, AI_CBM_Spikes
-	if_effect EFFECT_STICKY_WEB, AI_CBM_Spikes
-	if_effect EFFECT_TOXIC_SPIKES, AI_CBM_Spikes
+	if_effect EFFECT_STEALTH_ROCK, AI_CBM_StealthRock
+	if_effect EFFECT_STICKY_WEB, AI_CBM_StickyWeb
+	if_effect EFFECT_TOXIC_SPIKES, AI_CBM_ToxicSpikes
 	if_effect EFFECT_FORESIGHT, AI_CBM_Foresight
 	if_effect EFFECT_PERISH_SONG, AI_CBM_PerishSong
 	if_effect EFFECT_SANDSTORM, AI_CBM_Sandstorm
@@ -448,7 +448,19 @@ AI_CBM_Curse: @ 81DA694
 	end
 
 AI_CBM_Spikes: @ 81DA6A5
-	if_status4 TARGET, S_SPIKES, Score_Minus10
+	if_hazard TARGET, 0x3, Score_Minus10
+	end
+
+AI_CBM_StealthRock:
+	if_hazard TARGET, 0x4, Score_Minus10
+	end
+
+AI_CBM_ToxicSpikes:
+	if_hazard TARGET, 0x8, Score_Minus10
+	end
+
+AI_CBM_StickyWeb:
+	if_hazard TARGET, 0x20, Score_Minus10
 	end
 
 AI_CBM_Foresight: @ 81DA6B0

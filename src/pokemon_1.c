@@ -1581,7 +1581,7 @@ void CreateMonWithNature(struct Pokemon *mon, u16 species, u8 level, u8 fixedIV,
     CreateMon(mon, species, level, fixedIV, 1, personality, 0, 0);
 }
 
-void CreateMonWithGenderNatureLetter(struct Pokemon *mon, u16 species, u8 level, u8 fixedIV, u8 gender, u8 nature, u8 unownLetter)
+void CreateMonWithGenderNatureLetterOTID(struct Pokemon *mon, u16 species, u8 level, u8 fixedIV, u8 gender, u8 nature, u8 unownLetter, u8 otIdType, u32 fixedOTID)
 {
     u32 personality;
 
@@ -1608,7 +1608,12 @@ void CreateMonWithGenderNatureLetter(struct Pokemon *mon, u16 species, u8 level,
             || gender != GetGenderFromSpeciesAndPersonality(species, personality));
     }
 
-    CreateMon(mon, species, level, fixedIV, 1, personality, 0, 0);
+    CreateMon(mon, species, level, fixedIV, 1, personality, otIdType, fixedOTID);
+}
+
+void CreateMonWithGenderNatureLetter(struct Pokemon *mon, u16 species, u8 level, u8 fixedIV, u8 gender, u8 nature, u8 unownLetter)
+{
+    CreateMonWithGenderNatureLetterOTID(mon, species, level, fixedIV, gender, nature, unownLetter, 0, 0);
 }
 
 // This is only used to create Wally's Ralts.

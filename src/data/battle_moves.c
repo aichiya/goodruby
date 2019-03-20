@@ -877,8 +877,8 @@ const struct BattleMove gBattleMoves[] = {
     },
 
     [MOVE_LOW_KICK] = {
-        .effect = EFFECT_WEIGHT_BASED,
-        .power = 1,
+        .effect = EFFECT_HIT,
+        .power = 2,
         .type = TYPE_FIGHTING,
         .accuracy = 100,
         .pp = 20,
@@ -5427,8 +5427,8 @@ const struct BattleMove gBattleMoves[] = {
     },
 
     [MOVE_HEAVY_SLAM] = {
-        .effect = EFFECT_WEIGHT_BASED,
-        .power = 1,
+        .effect = EFFECT_HIT,
+        .power = 2,
         .type = TYPE_STEEL,
         .accuracy = 100,
         .pp = 10,
@@ -6714,8 +6714,8 @@ const struct BattleMove gBattleMoves[] = {
     },
 
     [MOVE_GRASS_KNOT] = {
-        .effect = EFFECT_WEIGHT_BASED,
-        .power = 1,
+        .effect = EFFECT_HIT,
+        .power = 2,
         .type = TYPE_GRASS,
         .accuracy = 100,
         .pp = 20,

@@ -15575,7 +15575,6 @@ Move_ACROBATICS:
 	clearmonbg ANIM_BATTLER_DEF_PARTNER
 	blendoff
 	end
-	
 
 General_Imposter:
 	createvisualtask sub_8141E10, 5
@@ -15591,8 +15590,6 @@ General_Imposter:
 General_ReturnToTrainer:
 	playsewithpan SE_W104, 63
 	createvisualtask sub_80A8A80, 5, 0, 8
-	waitforvisualfinish
-	createsprite gBattleAnimSpriteTemplate_84024D0, ANIM_BATTLER_ATTACKER, 2
 	waitforvisualfinish
 	end
 
@@ -15651,8 +15648,30 @@ Move_DRAIN_PUNCH:
 Move_FOCUS_BLAST:
     end
 
-Move_VOLT_SWITCH:
-    end
+Move_VOLT_SWITCH::
+	loadspritegfx ANIM_TAG_SPARK
+	loadspritegfx ANIM_TAG_SPARK_2
+	loadspritegfx ANIM_TAG_THIN_RING
+	monbg ANIM_BATTLER_ATTACKER
+	setalpha 12, 8
+	
+	createsprite gBattleAnimSpriteTemplate_83D79A4, ANIM_BATTLER_ATTACKER, 3, 0, 0, 0, 0, 0x3BDF, 8
+	playsewithpan SE_W268, 192
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_83D79A4, ANIM_BATTLER_ATTACKER, 3, 0, 0, 0, 0, 0x3BDF, 8
+	delay 4
+	createvisualtask AnimTask_ShakeMon, 5, 1, 0, 3, 45, 1
+	createsprite gBattleAnimSpriteTemplate_83D79A4, ANIM_BATTLER_ATTACKER, 3, 0, 0, 0, 0, 0x3BDF, 8
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_83D79A4, ANIM_BATTLER_ATTACKER, 3, 0, 0, 0, 0, 0x3BDF, 8
+	delay 4
+	call ElectricityEffect
+	playsewithpan SE_W085B, 192
+	
+	clearmonbg ANIM_BATTLER_ATTACKER
+	blendoff
+	delay 8
+	end
 
 Move_MAGIC_GLEAM:
     end

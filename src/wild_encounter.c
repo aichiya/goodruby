@@ -1249,18 +1249,18 @@ const struct WildPokemonInfo ShoalCave_LowTideIceRoom_LandMonsInfo = {10, ShoalC
 
 const struct WildPokemon NewMauville_Entrance_LandMons [] =
 {
-    {24, 24, SPECIES_VOLTORB},
-    {24, 24, SPECIES_MAGNEMITE},
-    {25, 25, SPECIES_VOLTORB},
-    {25, 25, SPECIES_MAGNEMITE},
-    {23, 23, SPECIES_VOLTORB},
-    {23, 23, SPECIES_MAGNEMITE},
-    {26, 26, SPECIES_VOLTORB},
-    {26, 26, SPECIES_MAGNEMITE},
-    {22, 22, SPECIES_VOLTORB},
-    {22, 22, SPECIES_MAGNEMITE},
-    {22, 22, SPECIES_VOLTORB},
-    {22, 22, SPECIES_MAGNEMITE},
+    {16, 19, SPECIES_VOLTORB},
+    {16, 19, SPECIES_MAGNEMITE},
+    {16, 19, SPECIES_VOLTORB},
+    {16, 19, SPECIES_MAGNEMITE},
+    {16, 19, SPECIES_SHUPPET},
+    {16, 19, SPECIES_SHUPPET},
+    {16, 19, SPECIES_VOLTORB},
+    {16, 19, SPECIES_MAGNEMITE},
+    {16, 19, SPECIES_ELEKID},
+    {16, 19, SPECIES_ELEKID},
+    {16, 19, SPECIES_ELEKID},
+    {16, 19, SPECIES_ELEKID},
 };
 const struct WildPokemonInfo NewMauville_Entrance_LandMonsInfo = {10, NewMauville_Entrance_LandMons};
 
@@ -1957,26 +1957,18 @@ const struct WildPokemonInfo Route116_LandMonsInfo = {20, Route116_LandMons};
 
 const struct WildPokemon Route117_LandMons [] =
 {
-    {13, 13, SPECIES_ZIGZAGOON},
-    {13, 13, SPECIES_ROSELIA},
-    {14, 14, SPECIES_ZIGZAGOON},
-    {14, 14, SPECIES_ROSELIA},
-    {13, 13, SPECIES_MARILL},
-    {13, 13, SPECIES_ODDISH},
-#ifdef SAPPHIRE
-    {13, 13, SPECIES_VOLBEAT},
-    {13, 13, SPECIES_VOLBEAT},
-    {14, 14, SPECIES_VOLBEAT},
-    {14, 14, SPECIES_VOLBEAT},
-    {13, 13, SPECIES_ILLUMISE},
-#else
-    {13, 13, SPECIES_ILLUMISE},
-    {13, 13, SPECIES_ILLUMISE},
-    {14, 14, SPECIES_ILLUMISE},
-    {14, 14, SPECIES_ILLUMISE},
-    {13, 13, SPECIES_VOLBEAT},
-#endif
-    {13, 13, SPECIES_SURSKIT},
+    {14, 16, SPECIES_RATTATA},
+    {14, 16, SPECIES_ODDISH},
+    {14, 16, SPECIES_MAREEP},
+    {14, 16, SPECIES_MAREEP},
+    {14, 16, SPECIES_VOLBEAT},
+    {14, 16, SPECIES_ILLUMISE},
+    {14, 16, SPECIES_ROSELIA},
+    {13, 16, SPECIES_ROSELIA},
+    {14, 16, SPECIES_MARILL},
+    {14, 16, SPECIES_MIME_JR},
+    {14, 16, SPECIES_MARILL},
+    {14, 16, SPECIES_MIME_JR},
 };
 const struct WildPokemonInfo Route117_LandMonsInfo = {20, Route117_LandMons};
 

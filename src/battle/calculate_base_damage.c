@@ -74,12 +74,92 @@ const u8 gHoldEffectToType[][2] =
     {HOLD_EFFECT_NORMAL_POWER,   TYPE_NORMAL}
 };
 
+// weight-based damage table for Low Kick
+// format: min. weight (hectograms), base power
+static const u16 sWeightToDamageTable[] =
+{
+    100, 20,
+    250, 40,
+    500, 60,
+    1000, 80,
+    2000, 100,
+    0xFFFF, 0xFFFF
+};
+
 u8 GetBattlerSide(u8 bank);
+u16 SpeciesToNationalPokedexNum(u16 species);
+u16 GetPokedexHeightWeight(u16 national_num, u8 heightweight);
 
 #define APPLY_STAT_MOD(var, mon, stat, statMod)                                     \
 {                                                                                   \
     (var) = (stat) * (gStatStageRatios)[statMod][0];                                \
     (var) /= (gStatStageRatios)[statMod][1];                                        \
+}
+
+static void adjustBasePower(struct BattlePokemon *attacker, struct BattlePokemon *defender, u32 move, u8 defenderAbility)
+{
+    switch (move)
+    {
+        case MOVE_LOW_KICK:
+        case MOVE_GRASS_KNOT:
+        {
+            u8 i;
+            u16 weight = GetPokedexHeightWeight(SpeciesToNationalPokedexNum(defender->species), 1);
+            if (defenderAbility == ABILITY_HEAVY_METAL)
+                weight *= 2;
+            else if (defenderAbility == ABILITY_LIGHT_METAL)
+                weight /= 2;
+            
+            for (i = 0; sWeightToDamageTable[i] != 0xFFFF; i += 2)
+            {
+                if (sWeightToDamageTable[i] > weight)
+                    break;
+            }
+            if (sWeightToDamageTable[i] != 0xFFFF)
+                gBattleMovePower = sWeightToDamageTable[i + 1];
+            else
+                gBattleMovePower = 120;
+        }
+        break;
+        
+        case MOVE_HEAVY_SLAM:
+        {	
+            u16 attackerwt = GetPokedexHeightWeight(SpeciesToNationalPokedexNum(attacker->species), 1);
+            u16 targetwt = GetPokedexHeightWeight(SpeciesToNationalPokedexNum(defender->species), 1);
+            
+            if (attacker->ability == ABILITY_HEAVY_METAL)
+                attackerwt *= 2;
+            else if (attacker->ability == ABILITY_LIGHT_METAL)
+                attackerwt /= 2;
+                
+            if (defenderAbility == ABILITY_HEAVY_METAL)
+                targetwt *= 2;
+            else if (defenderAbility == ABILITY_LIGHT_METAL)
+                targetwt /= 2;
+            
+            if (targetwt*2 >= attackerwt)
+            {
+                gBattleMovePower = 40;
+            }
+            else if (targetwt*3 >= attackerwt)
+            {
+                gBattleMovePower = 60;
+            }
+            else if (targetwt*4 >= attackerwt)
+            {
+                gBattleMovePower = 80;
+            }
+            else if (targetwt*5 >= attackerwt)
+            {
+                gBattleMovePower = 100;
+            }
+            else
+            {
+                gBattleMovePower = 120;
+            }
+        }
+        break;
+    }
 }
 
 s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *defender, u32 move, u16 sideStatus, u16 powerOverride, u8 typeOverride, u8 bankAtk, u8 bankDef)
@@ -142,6 +222,8 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
 	defenderAbility = defender->ability;
 	if (attacker->ability == ABILITY_MOLD_BREAKER)
 		defenderAbility = 0;
+
+    adjustBasePower(attacker, defender, move, defenderAbility);
 
     if (attacker->ability == ABILITY_HUGE_POWER || attacker->ability == ABILITY_PURE_POWER)
         attack *= 2;

@@ -552,3 +552,10 @@
 	.byte 0x5d
 	.4byte \address
 	.endm
+
+	.macro if_hazard target, status, address
+	.byte 0x5e
+	.byte \target
+	.4byte \status
+	.4byte \address
+	.endm

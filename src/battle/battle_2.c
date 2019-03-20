@@ -1215,7 +1215,7 @@ u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
                 const struct TrainerMonNoItemDefaultMoves *partyData = gTrainers[trainerNum].party.NoItemDefaultMoves;
 
                 fixedIV = partyData[i].iv * 31 / 255;
-                CreateMon(&party[i], partyData[i].species, partyData[i].level, fixedIV, TRUE, personalityValue, 2, 0);
+                CreateMon(&party[i], partyData[i].species, partyData[i].level, fixedIV, TRUE, personalityValue, 1, 0);
                 break;
             }
             case F_TRAINER_PARTY_CUSTOM_MOVESET:
@@ -1223,7 +1223,7 @@ u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
                 const struct TrainerMonNoItemCustomMoves *partyData = gTrainers[trainerNum].party.NoItemCustomMoves;
 
                 fixedIV = partyData[i].iv * 31 / 255;
-                CreateMon(&party[i], partyData[i].species, partyData[i].level, fixedIV, TRUE, personalityValue, 2, 0);
+                CreateMon(&party[i], partyData[i].species, partyData[i].level, fixedIV, TRUE, personalityValue, 1, 0);
 
                 for (j = 0; j < 4; j++)
                 {
@@ -1237,7 +1237,7 @@ u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
                 const struct TrainerMonItemDefaultMoves *partyData = gTrainers[trainerNum].party.ItemDefaultMoves;
 
                 fixedIV = partyData[i].iv * 31 / 255;
-                CreateMon(&party[i], partyData[i].species, partyData[i].level, fixedIV, TRUE, personalityValue, 2, 0);
+                CreateMon(&party[i], partyData[i].species, partyData[i].level, fixedIV, TRUE, personalityValue, 1, 0);
 
                 SetMonData(&party[i], MON_DATA_HELD_ITEM, &partyData[i].heldItem);
                 break;
@@ -1247,7 +1247,7 @@ u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
                 const struct TrainerMonItemCustomMoves *partyData = gTrainers[trainerNum].party.ItemCustomMoves;
 
                 fixedIV = partyData[i].iv * 31 / 255;
-                CreateMon(&party[i], partyData[i].species, partyData[i].level, fixedIV, TRUE, personalityValue, 2, 0);
+                CreateMon(&party[i], partyData[i].species, partyData[i].level, fixedIV, TRUE, personalityValue, 1, 0);
 
                 SetMonData(&party[i], MON_DATA_HELD_ITEM, &partyData[i].heldItem);
                 for (j = 0; j < 4; j++)
@@ -1263,7 +1263,7 @@ u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
 				u8 ability;
 
                 fixedIV = partyData[i].iv * 31 / 255;
-				CreateMonWithGenderNatureLetter(&party[i], partyData[i].species, partyData[i].level, fixedIV, partyData[i].gender, partyData[i].nature, 0);
+				CreateMonWithGenderNatureLetterOTID(&party[i], partyData[i].species, partyData[i].level, fixedIV, partyData[i].gender, partyData[i].nature, 0, 1, 0);
 
 				ability = partyData[i].ability;
 				if (ability == 0 || ability == 1)

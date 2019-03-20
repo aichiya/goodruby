@@ -11,6 +11,7 @@ MauvilleCity_GameCorner_EventObjects:: @ 83883C0
 	object_event 10, EVENT_OBJ_GFX_MAN_4, 0, 1, 7, 3, MOVEMENT_TYPE_FACE_RIGHT, 1, 1, 0, 0, MauvilleCity_GameCorner_EventScript_1570F8, 0
 	object_event 11, EVENT_OBJ_GFX_MANIAC, 0, 9, 8, 3, MOVEMENT_TYPE_FACE_LEFT, 1, 1, 0, 0, MauvilleCity_GameCorner_EventScript_157115, 0
 	object_event 12, EVENT_OBJ_GFX_WOMAN_7, 0, 4, 6, 3, MOVEMENT_TYPE_FACE_LEFT, 1, 1, 0, 0, MauvilleCity_GameCorner_EventScript_157125, 0
+	object_event 13, EVENT_OBJ_GFX_BEAUTY, 0, 15, 2, 3, MOVEMENT_TYPE_FACE_DOWN, 0, 0, 0, 0, MauvilleCity_GameCorner_EventScript_MonPrizesStart, 0
 
 MauvilleCity_GameCorner_MapWarps:: @ 83884E0
 	warp_def 11, 10, 3, 5, MAP_MAUVILLE_CITY
