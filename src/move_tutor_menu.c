@@ -20,7 +20,9 @@
 #include "task.h"
 #include "trig.h"
 #include "constants/songs.h"
+#include "constants/species.h"
 
+extern u16 gSpecialVar_0x8003;
 extern u16 gSpecialVar_0x8004;
 extern u16 gSpecialVar_0x8005;
 extern u8 gTileBuffer[];
@@ -397,6 +399,12 @@ static void MoveTutorMain(void)
     case 6:
         if (!ChangeToBattleMoveInfoWindow())
             HandleMoveTutorMenuInput();
+        break;
+    case 7:
+        if (Menu_UpdateWindowText())
+        {
+            sMoveTutorMenu->state--;
+        }
         break;
     case 8:
         if (Menu_UpdateWindowText())
@@ -808,7 +816,10 @@ static void InitMoveTutorMenuStrings(void)
     s32 i;
     u8 nickname[POKEMON_NAME_LENGTH + 1];
 
-    sMoveTutorMenu->numMenuChoices = GetMoveTutorMoves(&gPlayerParty[sMoveTutorMenu->partyMonIndex], sMoveTutorMenu->movesToLearn);
+    if (gSpecialVar_0x8003)
+        sMoveTutorMenu->numMenuChoices = GetEggTutorMoves(&gPlayerParty[sMoveTutorMenu->partyMonIndex], sMoveTutorMenu->movesToLearn);
+    else
+        sMoveTutorMenu->numMenuChoices = GetMoveTutorMoves(&gPlayerParty[sMoveTutorMenu->partyMonIndex], sMoveTutorMenu->movesToLearn);
     for (i = 0; i < sMoveTutorMenu->numMenuChoices; i++)
         StringCopy(sMoveTutorMenu->moveNames[i], gMoveNames[sMoveTutorMenu->movesToLearn[i]]);
     GetMonData(&gPlayerParty[sMoveTutorMenu->partyMonIndex], MON_DATA_NICKNAME, nickname);
@@ -867,10 +878,38 @@ static void HandleMoveTutorMenuInput(void)
         PlaySE(SE_SELECT);
         if (sMoveTutorMenu->menuSelection != sMoveTutorMenu->numMenuChoices - 1)
         {
-            sMoveTutorMenu->state = 8;
-            StringCopy(gStringVar2, sMoveTutorMenu->moveNames[sMoveTutorMenu->menuSelection]);
-            StringExpandPlaceholders(gStringVar4, gOtherText_TeachSpecificMove);
-            MenuPrintMessage(gStringVar4, 3, 15);
+            u8 present = 0;
+            if (!gSpecialVar_0x8003)
+            {
+                present = 1;
+            }
+            else // egg tutor
+            {
+                u8 i, j;
+                for (i = 0; i < 6 && !present; i++)
+                {
+                    if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES2, 0) != SPECIES_EGG)
+                        for (j = 0; j < 4 && !present; j++)
+                        {
+                            present = GetMonData(&gPlayerParty[i], MON_DATA_MOVE1 + j, 0) == sMoveTutorMenu->movesToLearn[sMoveTutorMenu->menuSelection];
+                        }
+                }
+            }
+
+            if (present)
+            {
+                sMoveTutorMenu->state = 8;
+                StringCopy(gStringVar2, sMoveTutorMenu->moveNames[sMoveTutorMenu->menuSelection]);
+                StringExpandPlaceholders(gStringVar4, gOtherText_TeachSpecificMove);
+                MenuPrintMessage(gStringVar4, 3, 15);
+            }
+            else
+            {
+                sMoveTutorMenu->state = 7;
+                StringCopy(gStringVar2, sMoveTutorMenu->moveNames[sMoveTutorMenu->menuSelection]);
+                StringExpandPlaceholders(gStringVar4, gOtherText_CantTeachEggMove);
+                MenuPrintMessage(gStringVar4, 3, 15);
+            }
         }
         else
         {

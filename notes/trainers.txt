@@ -142,7 +142,7 @@ MIKE: Loudred Lv22, Rhyhorn Lv22
 WATTSON:
 Plusle Lv23: Volt Switch, Swift, Fake Tears, Thunder Wave
 Raichu Lv23: Volt Switch, Grass Knot, Brick Break, Quick Attack
-Gligar Lv24@Oran Berry: U-Turn, Rock Smash, Toxic, Sand Attack
+Gligar Lv24@Oran Berry: U-Turn, Rock Smash, Poison Tail, Sand Attack
 Magneton Lv25@Shuca Berry: Volt Switch, Mirror Shot, Tri Attack, Thunder Wave
 
 WINSTRATES:
@@ -150,3 +150,28 @@ VICTOR: Clefairy Lv22, Snubbull Lv22
 VICTORIA: Nidorina Lv22, Weepinbell Lv22
 VIVI: Kirlia Lv22, Chimecho Lv22
 VICKY: Houndour Lv22, Sableye Lv22
+
+ROUTE 111 SOUTH:
+GABBY & TY: Minun Lv22, Eevee Lv22
+IRENE: Teddiursa Lv23
+TRAVIS: Nidorino Lv22, Cubone Lv22
+
+ROUTE 112:
+LARRY: Pidgeotto Lv22, Nuzleaf Lv23
+CAROL: Bellsprout Lv22, Gloom Lv23
+TRENT: Geodude Lv23, Spinda Lv23
+BRICE: Sandshrew Lv23, Bonsly Lv23
+
+ROUTE 111 NORTH:
+WILTON: Omanyte Lv23, Noctowl Lv23, Beedrill Lv23
+BROOKE: Charmeleon Lv23, Exeggcute Lv23, Quagsire Lv23
+DAISUKE: Heracross Lv25
+
+ROUTE 113:
+NEAL: Linoone Lv23, Slowpoke Lv23
+LAO: Koffing Lv23, Ninjask Lv23, Koffing Lv23
+MADELINE: Flareon Lv25
+TORI&TIA: Spinda Lv23, Spinda Lv23
+LUNG: Scyther Lv25
+DILLION: Spearow Lv22, Mightyena Lv23, Aipom Lv23
+

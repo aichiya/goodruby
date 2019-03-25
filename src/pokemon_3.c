@@ -55,6 +55,7 @@ extern s8 gPokeblockFlavorCompatibilityTable[];
 extern u8 gLastUsedAbility;
 extern const u8 BattleText_PreventedSwitch[];
 extern u16 gBattlerPartyIndexes[];
+extern u16 *gEggMoves[];
 
 extern u8 BattleText_Rose[];
 extern u8 BattleText_UnknownString3[];
@@ -1024,7 +1025,7 @@ u8 GetMoveTutorMoves(struct Pokemon *mon, u16 *moves)
             break;
 
         moveLevel = gLevelUpLearnsets[species][i] >> 16;
-        if (moveLevel <= (level << 9))
+        if (moveLevel <= level)
         {
             for (j = 0; j < 4 && knownMoves[j] != (gLevelUpLearnsets[species][i] & 0xFFFF); j++)
                 ;
@@ -1054,7 +1055,7 @@ u8 GetLevelUpMovesBySpecies(u16 species, u16 *moves)
      return numMoves;
 }
 
-u8 sub_8040574(struct Pokemon *mon)
+u8 CountMoveTutorMoves(struct Pokemon *mon)
 {
     u16 learnedMoves[4];
     u16 moves[20];
@@ -1069,7 +1070,7 @@ u8 sub_8040574(struct Pokemon *mon)
     for (i = 0; i < 4; i++)
         learnedMoves[i] = GetMonData(mon, MON_DATA_MOVE1 + i, 0);
 
-    for (i = 0; i < 20; i++)
+    for (i = 0; i < MAX_MOVE_TUTOR_MOVES; i++)
     {
         u16 moveLevel;
 
@@ -1078,7 +1079,7 @@ u8 sub_8040574(struct Pokemon *mon)
 
         moveLevel = gLevelUpLearnsets[species][i] >> 16;
 
-        if (moveLevel <= (level << 9))
+        if (moveLevel <= level)
         {
             for (j = 0; j < 4 && learnedMoves[j] != (gLevelUpLearnsets[species][i] & 0xFFFF); j++)
                 ;
@@ -1095,6 +1096,39 @@ u8 sub_8040574(struct Pokemon *mon)
     }
 
     return numMoves;
+}
+
+u8 GetEggTutorMoves(struct Pokemon *mon, u16* moves)
+{
+    u16 learnedMoves[4];
+    u16 currentMove;
+    u8 numMoves = 0;
+    u16 species = GetMonData(mon, MON_DATA_SPECIES, 0);
+    u8 i, j;
+
+    for (i = 0; i < 4; i++)
+        learnedMoves[i] = GetMonData(mon, MON_DATA_MOVE1 + i, 0);
+
+    for (i = 0; i < MAX_MOVE_TUTOR_MOVES; i++)
+    {
+        currentMove = gEggMoves[species][i];
+        if (currentMove == 0x0)
+            break;
+
+        for (j = 0; j < 4 && (learnedMoves[j] != currentMove); j++)
+            ;
+
+        if (j == 4)
+            moves[numMoves++] = currentMove;
+    }
+
+    return numMoves;
+}
+
+u8 CountEggTutorMoves(struct Pokemon *mon)
+{
+    u16 moves[20];
+    return GetEggTutorMoves(mon, moves);
 }
 
 u16 SpeciesToPokedexNum(u16 species)

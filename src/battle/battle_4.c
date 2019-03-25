@@ -3221,7 +3221,7 @@ void SetMoveEffect(bool8 primary, u8 certainArg)
                     {gBattleCommunication[MULTISTRING_CHOOSER] = 0; return;}
             }
             if ((gBattleMons[gEffectBank].type1 == TYPE_FIRE || gBattleMons[gEffectBank].type2 == TYPE_FIRE)
-                && !(gHitMarker & HITMARKER_IGNORE_SAFEGUARD) && (primary == 1 || certain == 0x80))
+                && (gHitMarker & HITMARKER_IGNORE_SAFEGUARD) && (primary == 1 || certain == 0x80))
             {
                 BattleScriptPush(gBattlescriptCurrInstr + 1);
                 gBattlescriptCurrInstr = BattleScript_BRNPrevention;
@@ -3336,7 +3336,10 @@ void SetMoveEffect(bool8 primary, u8 certainArg)
             return;
         }
         else if (StatusChanged == 0)
-            {gBattlescriptCurrInstr++; return;}
+        {
+            gBattleCommunication[MOVE_EFFECT_BYTE] = 0;
+            gBattlescriptCurrInstr++; return;
+        }
     }
     else
     {

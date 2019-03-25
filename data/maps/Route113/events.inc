@@ -42,7 +42,7 @@ Route113_MapBGEvents:: @ 8382BE0
 	bg_event 31, 5, 0, BG_EVENT_PLAYER_FACING_ANY, Route113_EventScript_150629
 	bg_secret_base_event 49, 8, 0, SECRET_BASE_RED_CAVE1_3
 	bg_hidden_item_event 72, 4, 3, ITEM_ETHER, FLAG_HIDDEN_ITEM_3
-	bg_hidden_item_event 22, 5, 3, ITEM_TM90_SUBSTITUTE, FLAG_HIDDEN_ITEM_1E
+	bg_hidden_item_event 22, 5, 3, ITEM_TM09_VENOSHOCK, FLAG_HIDDEN_ITEM_1E
 
 Route113_MapEvents:: @ 8382C34
 	map_events Route113_EventObjects, Route113_MapWarps, Route113_MapCoordEvents, Route113_MapBGEvents

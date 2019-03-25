@@ -505,31 +505,18 @@ const struct WildPokemonInfo JaggedPass_LandMonsInfo = {20, JaggedPass_LandMons}
 
 const struct WildPokemon FieryPath_LandMons [] =
 {
-    {15, 15, SPECIES_NUMEL},
-#ifdef SAPPHIRE
-    {15, 15, SPECIES_GRIMER},
-#else
-    {15, 15, SPECIES_KOFFING},
-#endif
-    {16, 16, SPECIES_NUMEL},
-    {15, 15, SPECIES_MACHOP},
-    {15, 15, SPECIES_TORKOAL},
-    {15, 15, SPECIES_SLUGMA},
-#ifdef SAPPHIRE
-    {16, 16, SPECIES_GRIMER},
-#else
-    {16, 16, SPECIES_KOFFING},
-#endif
-    {16, 16, SPECIES_MACHOP},
-    {14, 14, SPECIES_TORKOAL},
-    {16, 16, SPECIES_TORKOAL},
-#ifdef SAPPHIRE
-    {14, 14, SPECIES_KOFFING},
-    {14, 14, SPECIES_KOFFING},
-#else
-    {14, 14, SPECIES_GRIMER},
-    {14, 14, SPECIES_GRIMER},
-#endif
+    {17, 19, SPECIES_KOFFING},
+    {17, 19, SPECIES_GRIMER},
+    {17, 19, SPECIES_NUMEL},
+    {17, 19, SPECIES_NUMEL},
+    {17, 19, SPECIES_SLUGMA},
+    {17, 19, SPECIES_TORKOAL},
+    {17, 19, SPECIES_MAGBY},
+    {17, 19, SPECIES_MAGBY},
+    {17, 19, SPECIES_MACHOP},
+    {17, 19, SPECIES_DIGLETT},
+    {17, 19, SPECIES_MACHOP},
+    {17, 19, SPECIES_DIGLETT},
 };
 const struct WildPokemonInfo FieryPath_LandMonsInfo = {10, FieryPath_LandMons};
 
@@ -1802,35 +1789,35 @@ const struct WildPokemonInfo Route111_FishingMonsInfo = {30, Route111_FishingMon
 
 const struct WildPokemon Route112_LandMons [] =
 {
-    {15, 15, SPECIES_NUMEL},
-    {15, 15, SPECIES_NUMEL},
-    {15, 15, SPECIES_MACHOP},
-    {14, 14, SPECIES_NUMEL},
-    {14, 14, SPECIES_NUMEL},
-    {14, 14, SPECIES_MACHOP},
-    {16, 16, SPECIES_NUMEL},
-    {16, 16, SPECIES_MACHOP},
-    {16, 16, SPECIES_NUMEL},
-    {16, 16, SPECIES_NUMEL},
-    {16, 16, SPECIES_NUMEL},
-    {16, 16, SPECIES_NUMEL},
+    {16, 19, SPECIES_MACHOP},
+    {16, 19, SPECIES_NUMEL},
+    {16, 19, SPECIES_MACHOP},
+    {16, 19, SPECIES_NUMEL},
+    {16, 19, SPECIES_SLUGMA},
+    {16, 19, SPECIES_PONYTA},
+    {16, 19, SPECIES_SLUGMA},
+    {16, 19, SPECIES_PONYTA},
+    {16, 19, SPECIES_TYROGUE},
+    {16, 19, SPECIES_TYROGUE},
+    {16, 19, SPECIES_TYROGUE},
+    {16, 19, SPECIES_TYROGUE},
 };
 const struct WildPokemonInfo Route112_LandMonsInfo = {20, Route112_LandMons};
 
 const struct WildPokemon Route113_LandMons [] =
 {
-    {15, 15, SPECIES_SPINDA},
-    {15, 15, SPECIES_SPINDA},
-    {15, 15, SPECIES_SANDSHREW},
-    {14, 14, SPECIES_SPINDA},
-    {14, 14, SPECIES_SPINDA},
-    {14, 14, SPECIES_SANDSHREW},
-    {16, 16, SPECIES_SPINDA},
-    {16, 16, SPECIES_SANDSHREW},
-    {16, 16, SPECIES_SPINDA},
-    {16, 16, SPECIES_SKARMORY},
-    {16, 16, SPECIES_SPINDA},
-    {16, 16, SPECIES_SKARMORY},
+    {18, 20, SPECIES_SPINDA},
+    {18, 20, SPECIES_SPINDA},
+    {18, 20, SPECIES_SPINDA},
+    {18, 20, SPECIES_SLUGMA},
+    {18, 20, SPECIES_SANDSHREW},
+    {18, 20, SPECIES_VENONAT},
+    {18, 20, SPECIES_SLUGMA},
+    {18, 20, SPECIES_SANDSHREW},
+    {18, 20, SPECIES_VENONAT},
+    {18, 20, SPECIES_SKARMORY},
+    {18, 20, SPECIES_VENONAT},
+    {18, 20, SPECIES_SKARMORY},
 };
 const struct WildPokemonInfo Route113_LandMonsInfo = {20, Route113_LandMons};
 

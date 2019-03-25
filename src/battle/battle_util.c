@@ -2567,22 +2567,6 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 		}
                 break;
             case ABILITY_FLAME_BODY:
-		if (DEBUG && (gUnknown_02023A14_50 & 4))
-		{
-		    if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
-		     && gBattleMons[gBankAttacker].hp != 0
-		     && !gProtectStructs[gBankAttacker].confusionSelfDmg
-		     && (gBattleMoves[move].flags & F_MAKES_CONTACT)
-		     && (gSpecialStatuses[gBankTarget].moveturnLostHP_physical || gSpecialStatuses[gBankTarget].moveturnLostHP_special))
-		    {
-			gBattleCommunication[MOVE_EFFECT_BYTE] = 0x43;
-			BattleScriptPushCursor();
-			gBattlescriptCurrInstr = BattleScript_ApplySecondaryEffect;
-			gHitMarker |= HITMARKER_IGNORE_SAFEGUARD;
-			effect++;
-		    }
-		}
-		else
 		{
 		    if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
 		     && gBattleMons[gBankAttacker].hp != 0

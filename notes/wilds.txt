@@ -1,12 +1,10 @@
 WEIRDOS:
-Venonat
 Meowth
 Farfetch'd
 Exeggcute
 Lickitung
 Lapras
 Aerodactyl
-Bonsly
 Sunkern
 Wooper
 Murkrow
@@ -65,12 +63,12 @@ ROUTE 110: Rattata (20%), Electrike (20%), Oddish (15%), Gulpin (15%), Plusle (1
 ROUTE 117: Rattata (20%), Oddish (20%), Mareep (20%), Roselia (10%), Volbeat (10%), Illumise (10%), Marill (5%), Mime Jr. (5%)
 GAME CORNER: Pikachu, Cubone, Clefairy, Eevee, Porygon
 NEW MAUVILLE: Voltorb (35%), Magnemite (35%), Shuppet (20%), Elekid (10%)
-ROUTE 112: Machop, Numel, Ponyta, Tyrogue
-PATH: Machop, Numel, Diglett, Tyrogue, Grimer, Koffing, Slugma, Torkoal, Magby
-ROUTE 113: Spinda, Slugma,  Sandshrew, Skarmory
+ROUTE 112: Machop (30%), Numel (30%), Slugma (15%), Ponyta (15%), Tyrogue (10%)
+PATH: Numel (20%), Grimer (20%), Koffing (20%), Slugma (10%), Torkoal (10%), Magby (10%), Machop (5%), Diglett (5%)
+ROUTE 113: Spinda (50%), Venonat (15%), Slugma (15%), Sandshrew (15%), Skarmory (5%)
 ROUTE 114: Lombre, Nuzleaf, Furret, Swablu, Zangoose, Seviper, Misdreavus
 FALLS 1F: Zubat, Lunatone, Solrock, Clefairy, Misdreavus
-JAGGED PASS: Machop, Numel, Tyrogue, Spoink, Ponyta
+JAGGED PASS: Machop, Numel, Tyrogue, Spoink, Ponyta, Sudowoodo
 FALLARBOR: Togepi egg
 DESERT: Sandshrew, Trapinch, Cacnea, Baltoy, Gligar, Larvitar
 ROUTE 115: Swellow, Wingull, Swablu, Jigglypuff, Clefairy

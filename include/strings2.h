@@ -201,6 +201,7 @@ extern const u8 OtherText_Appeal[];
 extern const u8 OtherText_Jam[];
 extern const u8 gOtherText_TeachWhichMove[];
 extern const u8 gOtherText_TeachSpecificMove[];
+extern const u8 gOtherText_CantTeachEggMove[];
 extern const u8 gOtherText_PokeLearnedMove[];
 extern const u8 gOtherText_DeleteOlderMove[];
 extern const u8 gOtherText_StopLearningMove[];

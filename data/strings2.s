@@ -368,6 +368,9 @@ gOtherText_TeachWhichMove:: @ 842CCC7
 gOtherText_TeachSpecificMove:: @ 842CCDF
 	.string "Teach {STR_VAR_2}?$"
 
+gOtherText_CantTeachEggMove::
+    .string "No Pokémon in the party currently\nknows the move {STR_VAR_2}.$"
+
 gOtherText_PokeLearnedMove:: @ 842CCE9
 	.string "{STR_VAR_1} learned {STR_VAR_2}.$"
 

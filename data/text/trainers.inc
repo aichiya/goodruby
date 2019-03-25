@@ -1193,7 +1193,7 @@ Route113_Text_1BBAB7:: @ 81BBAB7
 Route113_Text_1BBB27:: @ 81BBB27
 	.string "I use this parasol to ward off this\n"
 	.string "filthy, yucky volcanic ash from my\l"
-	.string "dear NUMEL.$"
+	.string "dear Flareon.$"
 
 Route113_Text_1BBB7A:: @ 81BBB7A
 	.string "Huff, huff...\n"

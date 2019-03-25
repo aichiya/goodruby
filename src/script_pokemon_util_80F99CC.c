@@ -22,6 +22,7 @@
 extern const u8 gPPUpReadMasks[];
 
 extern u8 gPlayerPartyCount;
+extern u16 gSpecialVar_0x8003;
 extern u16 gSpecialVar_0x8004;
 extern u16 gSpecialVar_0x8005;
 extern u8 gUnknown_02038694;
@@ -245,7 +246,8 @@ void sub_80F9E1C(void)
 
     for (i = 0; i < gPlayerPartyCount; i++)
     {
-        if (!sub_8040574(&gPlayerParty[i]))
+        u8 count = gSpecialVar_0x8003 ? CountEggTutorMoves(&gPlayerParty[i]) : CountMoveTutorMoves(&gPlayerParty[i]);
+        if (!count)
             DrawMonDescriptorStatus(i, 0x9A);
         else
             DrawMonDescriptorStatus(i, 0x8C);
@@ -261,7 +263,8 @@ void HandleMoveTutorPartyMenu(u8 var)
         case A_BUTTON:
             PlaySE(SE_SELECT);
             gSpecialVar_0x8004 = sub_806CA38(var);
-            gSpecialVar_0x8005 = sub_8040574(&gPlayerParty[gSpecialVar_0x8004]);
+            gSpecialVar_0x8005 = (gSpecialVar_0x8003 ? CountEggTutorMoves(&gPlayerParty[gSpecialVar_0x8004]) : 
+                                                       CountMoveTutorMoves(&gPlayerParty[gSpecialVar_0x8004]));
             sub_8123138(var);
             break;
         case B_BUTTON:
