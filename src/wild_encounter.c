@@ -1823,28 +1823,18 @@ const struct WildPokemonInfo Route113_LandMonsInfo = {20, Route113_LandMons};
 
 const struct WildPokemon Route114_LandMons [] =
 {
-    {16, 16, SPECIES_SWABLU},
-    {15, 17, SPECIES_SWABLU},
-    {15, 15, SPECIES_LOTAD},
-    {15, 15, SPECIES_SEEDOT},
-#ifdef SAPPHIRE
-    {15, 15, SPECIES_LOTAD},
-    {16, 16, SPECIES_SEVIPER},
-    {16, 18, SPECIES_LOMBRE},
-    {16, 18, SPECIES_NUZLEAF},
-    {17, 17, SPECIES_SEVIPER},
-    {15, 17, SPECIES_ZANGOOSE},
-    {17, 17, SPECIES_SEVIPER},
-#else
-    {15, 15, SPECIES_SEEDOT},
-    {16, 16, SPECIES_ZANGOOSE},
-    {16, 18, SPECIES_LOMBRE},
-    {16, 18, SPECIES_NUZLEAF},
-    {17, 17, SPECIES_ZANGOOSE},
-    {15, 17, SPECIES_SEVIPER},
-    {17, 17, SPECIES_ZANGOOSE},
-#endif
-    {15, 15, SPECIES_SURSKIT},
+    {19, 21, SPECIES_LOMBRE},
+    {19, 21, SPECIES_NUZLEAF},
+    {19, 21, SPECIES_SWABLU},
+    {19, 21, SPECIES_SWABLU},
+    {19, 21, SPECIES_ZANGOOSE},
+    {19, 21, SPECIES_SEVIPER},
+    {19, 21, SPECIES_FURRET},
+    {19, 21, SPECIES_FURRET},
+    {19, 21, SPECIES_FURRET},
+    {19, 21, SPECIES_MISDREAVUS},
+    {19, 21, SPECIES_FURRET},
+    {19, 21, SPECIES_MISDREAVUS},
 };
 const struct WildPokemonInfo Route114_LandMonsInfo = {20, Route114_LandMons};
 
