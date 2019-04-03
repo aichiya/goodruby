@@ -2053,6 +2053,7 @@ MauvilleCity_GameCorner_EventScript_1A02A5:: @ 81A02A5
 Route110_TrickHouseEnd_EventScript_1A02A5:: @ 81A02A5
 Route110_TrickHouseEntrance_EventScript_1A02A5:: @ 81A02A5
 Route113_GlassWorkshop_EventScript_1A02A5:: @ 81A02A5
+EventScript_PackIsFull::
 	msgbox MauvilleCity_GameCorner_Text_1A0CC2, 4
 	return
 

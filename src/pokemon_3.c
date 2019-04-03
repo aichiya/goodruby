@@ -276,6 +276,7 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
     u8 beauty = GetMonData(mon, MON_DATA_BEAUTY, 0);
     u16 upperPersonality = personality >> 16;
     u8 holdEffect;
+    u8 gender = GetMonGender(mon);
 
     if (heldItem == ITEM_ENIGMA_BERRY)
         holdEffect = gSaveBlock1.enigmaBerry.holdEffect;
@@ -370,11 +371,22 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
     case 3:
         for (i = 0; i < 8; i++)
         {
-            if (gEvolutionTable[species][i].method == EVO_ITEM
-             && gEvolutionTable[species][i].param == evolutionItem)
+            if (gEvolutionTable[species][i].param == evolutionItem)
             {
-                targetSpecies = gEvolutionTable[species][i].targetSpecies;
-                break;
+                switch (gEvolutionTable[species][i].method)
+                {
+                    case EVO_ITEM:
+                        targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                        break;
+                    case EVO_ITEM_MALE:
+                        if (gender == MON_MALE)
+                            targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                        break;
+                    case EVO_ITEM_FEMALE:
+                        if (gender == MON_FEMALE)
+                            targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                        break;
+                }
             }
         }
         break;

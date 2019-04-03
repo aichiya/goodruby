@@ -449,6 +449,26 @@ static const u8 gItemDescription_LeafStone[] = _(
     "species of POKéMON\n"
     "evolve.");
 
+static const u8 gItemDescription_ShinyStone[] = _(
+    "Makes certain\n"
+    "species of POKéMON\n"
+    "evolve.");
+
+static const u8 gItemDescription_DawnStone[] = _(
+    "Makes certain\n"
+    "species of POKéMON\n"
+    "evolve.");
+
+static const u8 gItemDescription_DuskStone[] = _(
+    "Makes certain\n"
+    "species of POKéMON\n"
+    "evolve.");
+
+static const u8 gItemDescription_IceStone[] = _(
+    "Makes certain\n"
+    "species of POKéMON\n"
+    "evolve.");
+
 static const u8 gItemDescription_TinyMushroom[] = _(
     "A plain, ordinary\n"
     "mushroom.\n"

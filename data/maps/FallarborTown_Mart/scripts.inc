@@ -25,6 +25,7 @@ FallarborTown_Mart_Items:: @ 8153980
 	.2byte ITEM_X_DEFEND
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_GUARD_SPEC
+	.2byte ITEM_STAR_PIECE
 	.2byte ITEM_NONE
 	release
 	end

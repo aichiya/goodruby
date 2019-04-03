@@ -303,7 +303,7 @@ MeteorFalls_1F_1R_EventScript_1B1808:: @ 81B1808
 	end
 
 MeteorFalls_1F_1R_EventScript_1B1815:: @ 81B1815
-	giveitem_std ITEM_MOON_STONE, 1, 1
+	giveitem_std ITEM_STAR_PIECE, 1, 1
 	end
 
 MeteorFalls_1F_1R_EventScript_1B1822:: @ 81B1822

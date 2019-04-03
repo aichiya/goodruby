@@ -128,3 +128,194 @@ Route114_EventScript_150912:: @ 8150912
 	trainerbattle 4, TRAINER_TYRA_AND_IVY, 0, Route114_Text_1BC8D8, Route114_Text_1BC8FB, Route114_Text_1BC96A
 	msgbox Route114_Text_1BC91E, 6
 	end
+
+Route114_EventScript_StoneManiac::
+	lock
+	faceplayer
+	msgbox Route114_Text_StoneManiacIntro, 4
+    
+	checkitem ITEM_STAR_PIECE, 1
+	compare RESULT, 0
+	goto_if_eq Route114_EventScript_StoneManiacNoPiece
+    
+    msgbox Route114_Text_StoneManiacHavePiece, 4
+    goto Route114_EventScript_StoneManiacPage1
+    
+Route114_EventScript_StoneManiacPage1::
+    multichoice 15, 0, 74, 0
+    switch RESULT
+    case 0, Route114_EventScript_StoneManiacFireStone
+    case 1, Route114_EventScript_StoneManiacWaterStone
+    case 2, Route114_EventScript_StoneManiacThunderStone
+    case 3, Route114_EventScript_StoneManiacLeafStone
+    case 4, Route114_EventScript_StoneManiacMoonStone
+    case 5, Route114_EventScript_StoneManiacPage2
+    goto Route114_EventScript_StoneManiacCancel
+
+Route114_EventScript_StoneManiacPage2::
+    multichoice 15, 0, 75, 0
+    switch RESULT
+    case 0, Route114_EventScript_StoneManiacSunStone
+    case 1, Route114_EventScript_StoneManiacDawnStone
+    case 2, Route114_EventScript_StoneManiacDuskStone
+    case 3, Route114_EventScript_StoneManiacShinyStone
+    case 4, Route114_EventScript_StoneManiacIceStone
+    case 5, Route114_EventScript_StoneManiacPage1
+    goto Route114_EventScript_StoneManiacCancel
+
+Route114_EventScript_StoneManiacCancel::
+    msgbox Route114_Text_StoneManiacCancel, 4
+    release
+    end
+
+Route114_EventScript_StoneManiacFireStone::
+	setvar VAR_TEMP_1, 1
+	bufferitemname 0, ITEM_FIRE_STONE
+	checkitemspace ITEM_FIRE_STONE, 1
+	compare RESULT, 0
+	goto_if_eq Route114_EventScript_StoneManiacCantCarry
+    goto Route114_EventScript_StoneManiacConfirm
+
+Route114_EventScript_StoneManiacThunderStone::
+	setvar VAR_TEMP_1, 2
+	bufferitemname 0, ITEM_THUNDER_STONE
+	checkitemspace ITEM_THUNDER_STONE, 1
+	compare RESULT, 0
+	goto_if_eq Route114_EventScript_StoneManiacCantCarry
+    goto Route114_EventScript_StoneManiacConfirm
+
+Route114_EventScript_StoneManiacWaterStone::
+	setvar VAR_TEMP_1, 3
+	bufferitemname 0, ITEM_WATER_STONE
+	checkitemspace ITEM_WATER_STONE, 1
+	compare RESULT, 0
+	goto_if_eq Route114_EventScript_StoneManiacCantCarry
+    goto Route114_EventScript_StoneManiacConfirm
+
+Route114_EventScript_StoneManiacLeafStone::
+	setvar VAR_TEMP_1, 4
+	bufferitemname 0, ITEM_LEAF_STONE
+	checkitemspace ITEM_LEAF_STONE, 1
+	compare RESULT, 0
+	goto_if_eq Route114_EventScript_StoneManiacCantCarry
+    goto Route114_EventScript_StoneManiacConfirm
+
+Route114_EventScript_StoneManiacMoonStone::
+	setvar VAR_TEMP_1, 5
+	bufferitemname 0, ITEM_MOON_STONE
+	checkitemspace ITEM_MOON_STONE, 1
+	compare RESULT, 0
+	goto_if_eq Route114_EventScript_StoneManiacCantCarry
+    goto Route114_EventScript_StoneManiacConfirm
+
+Route114_EventScript_StoneManiacSunStone::
+	setvar VAR_TEMP_1, 6
+	bufferitemname 0, ITEM_SUN_STONE
+	checkitemspace ITEM_SUN_STONE, 1
+	compare RESULT, 0
+	goto_if_eq Route114_EventScript_StoneManiacCantCarry
+    goto Route114_EventScript_StoneManiacConfirm
+
+Route114_EventScript_StoneManiacShinyStone::
+	setvar VAR_TEMP_1, 9
+	bufferitemname 0, ITEM_SHINY_STONE
+	checkitemspace ITEM_SHINY_STONE, 1
+	compare RESULT, 0
+	goto_if_eq Route114_EventScript_StoneManiacCantCarry
+    goto Route114_EventScript_StoneManiacConfirm
+
+Route114_EventScript_StoneManiacDuskStone::
+	setvar VAR_TEMP_1, 8
+	bufferitemname 0, ITEM_DUSK_STONE
+	checkitemspace ITEM_DUSK_STONE, 1
+	compare RESULT, 0
+	goto_if_eq Route114_EventScript_StoneManiacCantCarry
+    goto Route114_EventScript_StoneManiacConfirm
+
+Route114_EventScript_StoneManiacDawnStone::
+	setvar VAR_TEMP_1, 7
+	bufferitemname 0, ITEM_DAWN_STONE
+	checkitemspace ITEM_DAWN_STONE, 1
+	compare RESULT, 0
+	goto_if_eq Route114_EventScript_StoneManiacCantCarry
+    goto Route114_EventScript_StoneManiacConfirm
+
+Route114_EventScript_StoneManiacIceStone::
+	setvar VAR_TEMP_1, 10
+	bufferitemname 0, ITEM_ICE_STONE
+	checkitemspace ITEM_ICE_STONE, 1
+	compare RESULT, 0
+	goto_if_eq Route114_EventScript_StoneManiacCantCarry
+    goto Route114_EventScript_StoneManiacConfirm
+
+Route114_EventScript_StoneManiacCantCarry::
+    call EventScript_PackIsFull
+    goto Route114_EventScript_StoneManiacPage1
+
+Route114_EventScript_StoneManiacConfirm::
+    msgbox Route114_Text_StoneManiacConfirm, MSGBOX_YESNO
+	compare RESULT, NO
+	goto_if_eq Route114_EventScript_StoneManiacPage1
+    switch VAR_TEMP_1
+    case 1, Route114_EventScript_StoneManiacGiveFireStone
+    case 2, Route114_EventScript_StoneManiacGiveWaterStone
+    case 3, Route114_EventScript_StoneManiacGiveThunderStone
+    case 4, Route114_EventScript_StoneManiacGiveLeafStone
+    case 5, Route114_EventScript_StoneManiacGiveMoonStone
+    case 6, Route114_EventScript_StoneManiacGiveSunStone
+    case 7, Route114_EventScript_StoneManiacGiveDawnStone
+    case 8, Route114_EventScript_StoneManiacGiveDuskStone
+    case 9, Route114_EventScript_StoneManiacGiveShinyStone
+    case 10, Route114_EventScript_StoneManiacGiveIceStone
+    release
+    end
+
+Route114_EventScript_StoneManiacGiveFireStone::
+	giveitem_std ITEM_FIRE_STONE
+    goto Route114_EventScript_StoneManiacTakeStarPiece
+
+Route114_EventScript_StoneManiacGiveWaterStone::
+	giveitem_std ITEM_WATER_STONE
+    goto Route114_EventScript_StoneManiacTakeStarPiece
+
+Route114_EventScript_StoneManiacGiveThunderStone::
+	giveitem_std ITEM_THUNDER_STONE
+    goto Route114_EventScript_StoneManiacTakeStarPiece
+
+Route114_EventScript_StoneManiacGiveLeafStone::
+	giveitem_std ITEM_LEAF_STONE
+    goto Route114_EventScript_StoneManiacTakeStarPiece
+
+Route114_EventScript_StoneManiacGiveMoonStone::
+	giveitem_std ITEM_MOON_STONE
+    goto Route114_EventScript_StoneManiacTakeStarPiece
+
+Route114_EventScript_StoneManiacGiveSunStone::
+	giveitem_std ITEM_SUN_STONE
+    goto Route114_EventScript_StoneManiacTakeStarPiece
+
+Route114_EventScript_StoneManiacGiveDawnStone::
+	giveitem_std ITEM_DAWN_STONE
+    goto Route114_EventScript_StoneManiacTakeStarPiece
+
+Route114_EventScript_StoneManiacGiveDuskStone::
+	giveitem_std ITEM_DUSK_STONE
+    goto Route114_EventScript_StoneManiacTakeStarPiece
+
+Route114_EventScript_StoneManiacGiveShinyStone::
+	giveitem_std ITEM_SHINY_STONE
+    goto Route114_EventScript_StoneManiacTakeStarPiece
+
+Route114_EventScript_StoneManiacGiveIceStone::
+	giveitem_std ITEM_ICE_STONE
+    goto Route114_EventScript_StoneManiacTakeStarPiece
+
+Route114_EventScript_StoneManiacTakeStarPiece::
+    takeitem ITEM_STAR_PIECE, 1
+    msgbox Route114_Text_StoneManiacTakeStarPiece, 4
+    release
+    end
+
+Route114_EventScript_StoneManiacNoPiece::
+    release
+    end

@@ -505,6 +505,8 @@ enum {
 #define EVO_LEVEL_NINJASK    0x000d // Pokémon reaches the specified level (special value for Ninjask)
 #define EVO_LEVEL_SHEDINJA   0x000e // Pokémon reaches the specified level (special value for Shedinja)
 #define EVO_BEAUTY           0x000f // Pokémon levels up with beauty ≥ specified value
+#define EVO_ITEM_MALE        0x0010 // Pokemon evolves by item if male (Kirlia->Gallade)
+#define EVO_ITEM_FEMALE      0x0011 // Pokemon evolves by item if female (Snorunt->Froslass)
 
 struct Evolution
 {

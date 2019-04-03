@@ -477,6 +477,27 @@ const struct MenuAction MultichoiceList_73[] =
     {gOtherText_CancelNoTerminator, NULL},
 };
 
+const struct MenuAction MultichoiceList_74[] =
+{
+    {OtherText_FireStone, NULL},
+    {OtherText_WaterStone, NULL},
+    {OtherText_ThunderStone, NULL},
+    {OtherText_LeafStone, NULL},
+    {OtherText_MoonStone, NULL},
+    {OtherText_More, NULL},
+};
+
+const struct MenuAction MultichoiceList_75[] =
+{
+    {OtherText_SunStone, NULL},
+    {OtherText_DawnStone, NULL},
+    {OtherText_DuskStone, NULL},
+    {OtherText_ShinyStone, NULL},
+    {OtherText_IceStone, NULL},
+    {OtherText_Previous, NULL},
+};
+
+
 const struct MenuAction MultichoiceList_01[] =
 {
     {gOtherText_CancelNoTerminator, NULL},
@@ -564,6 +585,8 @@ const struct MultichoiceListStruct gMultichoiceLists[] =
     {MultichoiceList_71, ARRAY_COUNT(MultichoiceList_71)},
     {MultichoiceList_72, ARRAY_COUNT(MultichoiceList_72)},
     {MultichoiceList_73, ARRAY_COUNT(MultichoiceList_73)},
+    {MultichoiceList_74, ARRAY_COUNT(MultichoiceList_74)},
+    {MultichoiceList_75, ARRAY_COUNT(MultichoiceList_75)},
 };
 
 const u8 *const gUnknown_083CE048[] =

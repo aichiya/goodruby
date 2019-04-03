@@ -22,6 +22,7 @@ Route114_EventObjects:: @ 8382C48
 	object_event 21, EVENT_OBJ_GFX_BREAKABLE_ROCK, 0, 11, 64, 5, MOVEMENT_TYPE_LOOK_AROUND, 1, 1, 0, 0, S_BreakableRock, FLAG_TEMP_15
 	object_event 22, EVENT_OBJ_GFX_LASS, 0, 24, 44, 3, MOVEMENT_TYPE_FACE_DOWN, 1, 1, 1, 0, Route114_EventScript_150912, 0
 	object_event 23, EVENT_OBJ_GFX_LASS, 0, 23, 44, 3, MOVEMENT_TYPE_FACE_DOWN, 1, 1, 1, 0, Route114_EventScript_1508F7, 0
+	object_event 24, EVENT_OBJ_GFX_FAT_MAN, 0, 30, 6, 3, MOVEMENT_TYPE_FACE_UP, 1, 1, 1, 0, Route114_EventScript_StoneManiac, 0
 
 Route114_MapWarps:: @ 8382E70
 	warp_def 8, 63, 0, 0, MAP_METEOR_FALLS_1F_1R
