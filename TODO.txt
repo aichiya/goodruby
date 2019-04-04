@@ -11,6 +11,7 @@
 --make twineedle roll on both hits
 --Things that alter abilities (Skill Swap) reveal abilities
 --Unburden will not proc if Trick removes an item
+--add pursuit and u-turn/volt switch interaction
 
 --update move targetting for surf, etc.
 

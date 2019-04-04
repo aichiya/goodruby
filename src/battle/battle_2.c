@@ -1186,6 +1186,7 @@ u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
                         case 1: ball = ITEM_DUSK_BALL; break;
                         default: ball = ITEM_POKE_BALL; break;
                     }
+                    break;
 
                 case TRAINER_CLASS_POKEFAN: 
                 case TRAINER_CLASS_POKEMON_BREEDER:

@@ -169,18 +169,18 @@ const struct WildPokemonInfo EverGrandeCity_FishingMonsInfo = {10, EverGrandeCit
 
 const struct WildPokemon MeteorFalls_1F_1R_LandMons [] =
 {
-    {16, 16, SPECIES_ZUBAT},
-    {17, 17, SPECIES_ZUBAT},
-    {18, 18, SPECIES_ZUBAT},
-    {15, 15, SPECIES_ZUBAT},
-    {14, 14, SPECIES_ZUBAT},
-    {14, 18, SPECIES_LUNATONE},
-    {14, 18, SPECIES_SOLROCK},
-    {14, 18, SPECIES_SOLROCK},
-    {19, 19, SPECIES_ZUBAT},
-    {20, 20, SPECIES_ZUBAT},
-    {19, 19, SPECIES_ZUBAT},
-    {20, 20, SPECIES_ZUBAT},
+    {19, 22, SPECIES_ZUBAT},
+    {19, 22, SPECIES_ZUBAT},
+    {19, 22, SPECIES_ARON},
+    {19, 22, SPECIES_ARON},
+    {19, 22, SPECIES_SOLROCK},
+    {19, 22, SPECIES_LUNATONE},
+    {19, 22, SPECIES_CLEFAIRY},
+    {19, 22, SPECIES_CLEFAIRY},
+    {19, 22, SPECIES_CLEFAIRY},
+    {19, 22, SPECIES_MISDREAVUS},
+    {19, 22, SPECIES_CLEFAIRY},
+    {19, 22, SPECIES_MISDREAVUS},
 };
 const struct WildPokemonInfo MeteorFalls_1F_1R_LandMonsInfo = {10, MeteorFalls_1F_1R_LandMons};
 

@@ -53,11 +53,7 @@ MeteorFalls_1F_1R_EventScript_15C49C:: @ 815C49C
 	removeobject 6
 	applymovement 7, MeteorFalls_1F_1R_Movement_15C628
 	waitmovement 0
-	.ifdef SAPPHIRE
 	msgbox MeteorFalls_1F_1R_Text_1933EC, 4
-	.else
-	msgbox MeteorFalls_1F_1R_Text_193584, 4
-	.endif
 	closemessage
 	applymovement 8, MeteorFalls_1F_1R_Movement_15C639
 	applymovement 9, MeteorFalls_1F_1R_Movement_15C64A

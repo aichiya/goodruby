@@ -67,7 +67,7 @@ ROUTE 112: Machop (30%), Numel (30%), Slugma (15%), Ponyta (15%), Tyrogue (10%)
 PATH: Numel (20%), Grimer (20%), Koffing (20%), Slugma (10%), Torkoal (10%), Magby (10%), Machop (5%), Diglett (5%)
 ROUTE 113: Spinda (50%), Venonat (15%), Slugma (15%), Sandshrew (15%), Skarmory (5%)
 ROUTE 114: Lombre (20%), Nuzleaf (20%), Swablu (20%), Furret (15%), Zangoose (10%), Seviper (10%), Misdreavus (5%)
-FALLS 1F: Zubat, Lunatone, Solrock, Clefairy, Misdreavus
+FALLS 1F: Zubat (40%), Aron (20%), Clefairy (15%), Lunatone (10%), Solrock (10%), Misdreavus (5%)
 JAGGED PASS: Machop, Numel, Tyrogue, Spoink, Ponyta, Sudowoodo
 FALLARBOR: Togepi egg
 DESERT: Sandshrew, Trapinch, Cacnea, Baltoy, Gligar, Larvitar

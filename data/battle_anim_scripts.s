@@ -605,8 +605,6 @@ Move_DOUBLE_SLAP: @ 81C77C5
 Move_DOUBLE_HIT:
 	loadspritegfx 10135
 	monbg ANIM_BATTLER_TARGET
-	loadspritegfx ANIM_TAG_IMPACT
-	monbg ANIM_BATTLER_TARGET
 	setalpha 12, 8
 	choosetwoturnanim Move_DOUBLE_SLAP_FirstHit, Move_DOUBLE_SLAP_SecondHit
 Move_DOUBLE_SLAP_End:

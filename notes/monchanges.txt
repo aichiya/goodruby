@@ -8,6 +8,7 @@ PSYDUCK: Now has access to Nasty Plot and Slack Off as egg moves.
 KRABBY: Learns most moves at different levels, no longer learns Stomp, gains several moves by level-up
 HITMONCHAN: Learns Drain Punch by relearner
 LEDIAN: Adjust early move positions, remove Tackle, add Air Cutter and Drain Punch. Swarm replaced with Magic Guard.
+MISDREAVUS: Adjust early move positions, add Hyper Voice.
 BEAUTIFLY: Learns Mega Drain and Giga Drain earlier, loses Absorb, now learns Leech Life
 SKITTY, DELCATTY: Does not have secondary ability Normalize
 WINGULL, PELIPPER: Secondary abilities Hydration/Drizzle are switched with hidden ability Rain Dish

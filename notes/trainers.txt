@@ -179,9 +179,16 @@ ROUTE 114:
 NOLAN: Barboach Lv24, Psyduck Lv24
 CLAUDE: Goldeen Lv24, Tentacool Lv24
 NANCY: Tangela Lv26
-TYRA&IVY: 
-SHANE:
-STEVE:
-BERNIE:
-LUCAS:
-LENNY:
+TYRA&IVY: Stantler Lv25, Spoink Lv24
+SHANE: Electrike Lv24, Numel Lv24
+STEVE: Lickitung Lv26
+BERNIE: Slugma Lv24, Wooper Lv25, Slugma Lv26
+LUCAS: Graveler Lv27
+LENNY: Loudred Lv25, Machop Lv25
+
+ROUTE 115 SOUTH:
+NOB: Hitmonchan Lv26
+HECTOR: Clefairy Lv25, Jigglypuff Lv25, Arbok Lv26, Clefairy Lv25
+CYNDY: Meditite Lv25, Hitmontop Lv26
+
+
