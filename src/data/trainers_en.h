@@ -149,7 +149,7 @@ const struct Trainer gTrainers[] = {
         .items = {0, 0, 0, 0}, //{ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = 0x1,
-        .partySize = 1,
+        .partySize = 2,
         .party = {.NoItemDefaultMoves = gTrainerParty_Grunt9 }
     },
 
@@ -233,7 +233,7 @@ const struct Trainer gTrainers[] = {
         .items = {0, 0, 0, 0}, //{ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = 0x1,
-        .partySize = 1,
+        .partySize = 2,
         .party = {.NoItemDefaultMoves = gTrainerParty_Grunt15 }
     },
 
@@ -491,7 +491,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_ARCHIE_3] =
     {
-        .partyFlags = 0,
+        .partyFlags = F_TRAINER_PARTY_FULL_CONTROL,
         .trainerClass = TRAINER_CLASS_AQUA_LEADER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
         .trainerPic = TRAINER_PIC_ARCHIE,
@@ -499,8 +499,8 @@ const struct Trainer gTrainers[] = {
         .items = {0, 0, 0, 0}, //{ITEM_SUPER_POTION, ITEM_SUPER_POTION, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = 0x7,
-        .partySize = 3,
-        .party = {.NoItemDefaultMoves = gTrainerParty_Archie3 }
+        .partySize = 4,
+        .party = {.FullControl = gTrainerParty_Archie3 }
     },
 
     [TRAINER_DAISY] =

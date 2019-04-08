@@ -228,6 +228,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     if (attacker->ability == ABILITY_HUGE_POWER || attacker->ability == ABILITY_PURE_POWER)
         attack *= 2;
 
+    /*
     if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_BATTLE_TOWER | BATTLE_TYPE_EREADER_TRAINER)))
     {
         if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER)
@@ -259,7 +260,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
             && FlagGet(FLAG_BADGE07_GET)
             && !GetBattlerSide(bankDef))
             spDefense = (110 * spDefense) / 100;
-    }
+    } */
 
     for (i = 0; i < 17; i++)
     {

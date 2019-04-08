@@ -191,4 +191,10 @@ NOB: Hitmonchan Lv26
 HECTOR: Clefairy Lv25, Jigglypuff Lv25, Arbok Lv26, Clefairy Lv25
 CYNDY: Meditite Lv25, Hitmontop Lv26
 
+MT CHIMNEY:
+GRUNT: Carvanha Lv26, Grimer Lv26
+MATT: Golbat Lv26, Poliwhirl Lv26, Huntail Lv26
+GRUNT: Wailmer Lv26, Mightyena Lv26
+GRUNT: Lombre Lv26, Carvanha Lv26
+ARCHIE: Murkrow Lv26, Sharpedo Lv27, Electabuzz Lv27, Tentacruel Lv28
 

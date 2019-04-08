@@ -13778,8 +13778,7 @@ Move_PETAL_STORM:
 	createsprite gBattleAnimSpriteTemplate_PetalStorm2, ANIM_BATTLER_ATTACKER, 2, 0, 1,  28, -37, 9
 	delay 4
 	
-	
-	createsprite gSimplePaletteBlendSpriteTemplate, 2, 1, 1, 8, 0, 0x625D
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_BATTLER_ATTACKER, 2, 1, 1, 8, 0, 0x625D
 	end
 
 _PetalStormSubcall1:

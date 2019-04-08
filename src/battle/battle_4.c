@@ -2300,6 +2300,7 @@ static void atk06_typecalc(void)
             gBattlescriptCurrInstr++;
             BattleScriptPushCursor();
             gBattlescriptCurrInstr = BattleScript_UseResistBerry;
+			gLastUsedItem = gBattleMons[gBankTarget].item;
         }
         else
         {
@@ -7362,8 +7363,9 @@ static void atk5D_getmoneyreward(void)
                 const struct TrainerMonFullControl *data = gTrainers[gTrainerBattleOpponent].party.FullControl;
                 r5 = data[gTrainers[gTrainerBattleOpponent].partySize - 1].level;
 			}
+            break;
         }
-        for (; gTrainerMoney[i * 4] != 0xFF && gTrainerMoney[i * 4 + 1] != gTrainers[gTrainerBattleOpponent].trainerClass ; i++) {}
+        for (; gTrainerMoney[i * 4] != 0xFF && gTrainerMoney[i * 4] != gTrainers[gTrainerBattleOpponent].trainerClass ; i++) {}
 
         money_to_give = (r5 << 2) * gBattleStruct->moneyMultiplier;
         if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE)

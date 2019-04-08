@@ -6169,8 +6169,8 @@ u32 GetModifiedSpeed(u8 bank)
     }
 	
     // Only give badge speed boost to the player's mon.
-    if (!(gBattleTypeFlags & BATTLE_TYPE_LINK) && FlagGet(FLAG_BADGE03_GET) && GetBattlerSide(bank) == 0)
-        speed = (speed * 110) / 100;
+    //if (!(gBattleTypeFlags & BATTLE_TYPE_LINK) && FlagGet(FLAG_BADGE03_GET) && GetBattlerSide(bank) == 0)
+    //    speed = (speed * 110) / 100;
 
     if (heldItemEffect == HOLD_EFFECT_MACHO_BRACE)
         speed /= 2;

@@ -133,9 +133,14 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Grunt8[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Grunt9[] = {
     {
 	.iv = 0,
-	.level = 9,
-	.species = SPECIES_POOCHYENA
-    }
+	.level = 26,
+	.species = SPECIES_WAILMER
+    },
+    {
+	.iv = 0,
+	.level = 26,
+	.species = SPECIES_MIGHTYENA
+    },
 };
 
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Grunt10[] = {
@@ -180,13 +185,13 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Grunt12[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Grunt13[] = {
     {
 	.iv = 0,
-	.level = 20,
-	.species = SPECIES_ZUBAT
+	.level = 26,
+	.species = SPECIES_CARVANHA
     },
     {
 	.iv = 0,
-	.level = 20,
-	.species = SPECIES_POOCHYENA
+	.level = 26,
+	.species = SPECIES_GOLBAT
     }
 };
 
@@ -206,9 +211,14 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Grunt14[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Grunt15[] = {
     {
 	.iv = 0,
-	.level = 11,
-	.species = SPECIES_POOCHYENA
-    }
+	.level = 26,
+	.species = SPECIES_LOMBRE
+    },
+    {
+	.iv = 0,
+	.level = 26,
+	.species = SPECIES_CARVANHA
+    },
 };
 
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Grunt16[] = {
@@ -422,18 +432,18 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Matt1[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Matt2[] = {
     {
 	.iv = 50,
-	.level = 20,
-	.species = SPECIES_CARVANHA
+	.level = 26,
+	.species = SPECIES_MIGHTYENA
     },
     {
 	.iv = 50,
-	.level = 20,
-	.species = SPECIES_POOCHYENA
+	.level = 26,
+	.species = SPECIES_POLIWHIRL
     },
     {
 	.iv = 50,
-	.level = 20,
-	.species = SPECIES_CARVANHA
+	.level = 27,
+	.species = SPECIES_HUNTAIL
     }
 };
 
@@ -481,22 +491,55 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Archie2[] = {
     }
 };
 
-const struct TrainerMonNoItemDefaultMoves gTrainerParty_Archie3[] = {
+const struct TrainerMonFullControl gTrainerParty_Archie3[] = {
     {
-	.iv = 150,
-	.level = 24,
-	.species = SPECIES_MIGHTYENA
+	.iv = 0,
+	.level = 28,
+	.species = SPECIES_SHARPEDO,
+	.heldItem = ITEM_SCOPE_LENS,
+	.ability = 0, // Rough Skin
+	.moves = {MOVE_AQUA_JET, MOVE_BRINE, MOVE_BITE, MOVE_ICE_FANG},
+		.evs = {0, 0, 0, 128, 0, 128},
+		.nature = NATURE_RASH,
+		.gender = MON_MALE,
+		.ball = ITEM_GREAT_BALL,
     },
     {
-	.iv = 150,
-	.level = 24,
-	.species = SPECIES_GOLBAT
+	.iv = 0,
+	.level = 28,
+	.species = SPECIES_EXEGGUTOR,
+	.heldItem = ITEM_ORAN_BERRY,
+	.ability = 2, // Harvest
+	.moves = {MOVE_GRASS_KNOT, MOVE_PSYSHOCK, MOVE_LEECH_SEED, MOVE_SLEEP_POWDER},
+		.evs = {0, 0, 128, 0, 0, 128},
+		.nature = NATURE_CALM,
+		.gender = MON_MALE,
+		.ball = ITEM_AQUA_BALL,
     },
     {
-	.iv = 150,
-	.level = 25,
-	.species = SPECIES_SHARPEDO
-    }
+	.iv = 0,
+	.level = 28,
+	.species = SPECIES_ELECTABUZZ,
+	.heldItem = 0,
+	.ability = 0, // Static
+	.moves = {MOVE_THUNDER_PUNCH, MOVE_VOLT_SWITCH, MOVE_LOW_KICK, MOVE_LIGHT_SCREEN},
+		.evs = {128, 64, 0, 0, 64, 0},
+		.nature = NATURE_MILD,
+		.gender = MON_MALE,
+		.ball = ITEM_AQUA_BALL,
+    },
+    {
+	.iv = 0,
+	.level = 29,
+	.species = SPECIES_TENTACRUEL,
+	.heldItem = ITEM_WACAN_BERRY,
+	.ability = 2, // Rain Dish
+	.moves = {MOVE_BUBBLE_BEAM, MOVE_ACID_SPRAY, MOVE_GIGA_DRAIN, MOVE_RAIN_DANCE},
+		.evs = {0, 0, 64, 64, 128, 0},
+		.nature = NATURE_TIMID,
+		.gender = MON_MALE,
+		.ball = ITEM_AQUA_BALL,
+    },
 };
 
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Daisy[] = {
