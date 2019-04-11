@@ -2633,19 +2633,14 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Dalton5[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Cole[] = {
     {
 	.iv = 100,
-	.level = 22,
+	.level = 29,
 	.species = SPECIES_SLUGMA
     },
     {
 	.iv = 100,
-	.level = 22,
-	.species = SPECIES_SLUGMA
+	.level = 29,
+	.species = SPECIES_QUILAVA
     },
-    {
-	.iv = 100,
-	.level = 22,
-	.species = SPECIES_NUMEL
-    }
 };
 
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Flint[] = {
@@ -2659,13 +2654,13 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Flint[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Axle[] = {
     {
 	.iv = 100,
-	.level = 23,
-	.species = SPECIES_NUMEL
+	.level = 29,
+	.species = SPECIES_VULPIX
     },
     {
 	.iv = 100,
-	.level = 23,
-	.species = SPECIES_SLUGMA
+	.level = 29,
+	.species = SPECIES_NUMEL
     }
 };
 
@@ -2680,14 +2675,19 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Jake[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Andy[] = {
     {
 	.iv = 100,
-	.level = 23,
-	.species = SPECIES_SLUGMA
+	.level = 29,
+	.species = SPECIES_GROWLITHE
     },
     {
 	.iv = 100,
-	.level = 23,
-	.species = SPECIES_NUMEL
-    }
+	.level = 29,
+	.species = SPECIES_CHARMELEON
+    },
+    {
+	.iv = 100,
+	.level = 29,
+	.species = SPECIES_PONYTA
+    },
 };
 
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Bernie1[] = {
@@ -3734,25 +3734,55 @@ const struct TrainerMonFullControl gTrainerParty_Wattson[] = {
     },
 };
 
-const struct TrainerMonNoItemCustomMoves gTrainerParty_Flannery[] = {
+const struct TrainerMonFullControl gTrainerParty_Flannery[] = {
     {
-	.iv = 200,
-	.level = 26,
-	.species = SPECIES_SLUGMA,
-        .moves = MOVE_OVERHEAT, MOVE_SMOG, MOVE_LIGHT_SCREEN, MOVE_SUNNY_DAY
-    },
-    {
-	.iv = 200,
-	.level = 26,
-	.species = SPECIES_SLUGMA,
-        .moves = MOVE_FLAMETHROWER, MOVE_ROCK_SLIDE, MOVE_LIGHT_SCREEN, MOVE_SUNNY_DAY
-    },
-    {
-	.iv = 250,
-	.level = 28,
+	.iv = 0,
+	.level = 31,
 	.species = SPECIES_TORKOAL,
-        .moves = MOVE_OVERHEAT, MOVE_BODY_SLAM, MOVE_FLAIL, MOVE_ATTRACT
-    }
+	.heldItem = 0,
+	.ability = 2, // Drought
+	.moves = {MOVE_OVERHEAT, MOVE_BULLDOZE, MOVE_BODY_SLAM, MOVE_SUNNY_DAY},
+		.evs = {252, 0, 0, 0, 64, 0},
+		.nature = NATURE_RELAXED,
+		.gender = MON_FEMALE,
+		.ball = ITEM_GREAT_BALL,
+    },
+    {
+	.iv = 0,
+	.level = 31,
+	.species = SPECIES_KANGASKHAN,
+	.heldItem = 0,
+	.ability = 0, // Early Bird
+	.moves = {MOVE_CHIP_AWAY, MOVE_FIRE_PUNCH, MOVE_DRAIN_PUNCH, MOVE_THUNDER_PUNCH},
+		.evs = {0, 128, 64, 64, 0, 64},
+		.nature = NATURE_ADAMANT,
+		.gender = MON_FEMALE,
+		.ball = ITEM_ULTRA_BALL,
+    },
+    {
+	.iv = 0,
+	.level = 31,
+	.species = SPECIES_SUNFLORA,
+	.heldItem = ITEM_CHARTI_BERRY,
+	.ability = 2, // Drought
+	.moves = {MOVE_OVERHEAT, MOVE_GIGA_DRAIN, MOVE_LEECH_SEED, MOVE_SUNNY_DAY},
+		.evs = {0, 0, 64, 0, 252, 0},
+		.nature = NATURE_MODEST,
+		.gender = MON_FEMALE,
+		.ball = ITEM_POKE_BALL,
+    },
+    {
+	.iv = 0,
+	.level = 32,
+	.species = SPECIES_FLAREON,
+	.heldItem = ITEM_SITRUS_BERRY,
+	.ability = 0, // Flash Fire
+	.moves = {MOVE_OVERHEAT, MOVE_WILL_O_WISP, MOVE_SECRET_POWER, MOVE_REST},
+		.evs = {128, 0, 128, 0, 64, 0},
+		.nature = NATURE_SASSY,
+		.gender = MON_FEMALE,
+		.ball = ITEM_PREMIER_BALL,
+    },
 };
 
 const struct TrainerMonNoItemCustomMoves gTrainerParty_Norman[] = {
@@ -9229,9 +9259,15 @@ const struct TrainerMonNoItemCustomMoves gTrainerParty_Johanna[] = {
 const struct TrainerMonNoItemCustomMoves gTrainerParty_Zane[] = {
     {
 	.iv = 100,
-	.level = 24,
-	.species = SPECIES_KECLEON,
-        .moves = MOVE_FLAMETHROWER, MOVE_FURY_SWIPES, MOVE_FAINT_ATTACK, MOVE_BIND
+	.level = 29,
+	.species = SPECIES_BAGON,
+        .moves = MOVE_FLAMETHROWER, MOVE_CRUNCH, MOVE_HEADBUTT, MOVE_BITE
+    },
+    {
+	.iv = 100,
+	.level = 30,
+	.species = SPECIES_OCTILLERY,
+        .moves = MOVE_FLAMETHROWER, MOVE_AURORA_BEAM, MOVE_OCTAZOOKA, MOVE_SIGNAL_BEAM
     }
 };
 
@@ -9247,9 +9283,9 @@ const struct TrainerMonNoItemCustomMoves gTrainerParty_Vivian[] = {
 const struct TrainerMonNoItemCustomMoves gTrainerParty_Sadie[] = {
     {
 	.iv = 100,
-	.level = 24,
-	.species = SPECIES_MEDITITE,
-        .moves = MOVE_BIDE, MOVE_DETECT, MOVE_CONFUSION, MOVE_FIRE_PUNCH
+	.level = 30,
+	.species = SPECIES_PRIMEAPE,
+        .moves = MOVE_FIRE_PUNCH, MOVE_PUNISHMENT, MOVE_LEER, 0
     }
 };
 

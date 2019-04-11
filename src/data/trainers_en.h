@@ -2822,8 +2822,8 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Cole"),
         .items = {0, 0, 0, 0}, //{ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
-        .aiFlags = 0x1,
-        .partySize = 3,
+        .aiFlags = 0x7,
+        .partySize = 2,
         .party = {.NoItemDefaultMoves = gTrainerParty_Cole }
     },
 
@@ -2850,7 +2850,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Axle"),
         .items = {0, 0, 0, 0}, //{ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
-        .aiFlags = 0x1,
+        .aiFlags = 0x7,
         .partySize = 2,
         .party = {.NoItemDefaultMoves = gTrainerParty_Axle }
     },
@@ -2878,8 +2878,8 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Andy"),
         .items = {0, 0, 0, 0}, //{ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
-        .aiFlags = 0x1,
-        .partySize = 2,
+        .aiFlags = 0x7,
+        .partySize = 3,
         .party = {.NoItemDefaultMoves = gTrainerParty_Andy }
     },
 
@@ -3753,7 +3753,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_FLANNERY] =
     {
-        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .partyFlags = F_TRAINER_PARTY_FULL_CONTROL,
         .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
         .trainerPic = TRAINER_PIC_FLANNERY,
@@ -3761,8 +3761,8 @@ const struct Trainer gTrainers[] = {
         .items = {0, 0, 0, 0}, //{ITEM_HYPER_POTION, ITEM_HYPER_POTION, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = 0x7,
-        .partySize = 3,
-        .party = {.NoItemCustomMoves = gTrainerParty_Flannery }
+        .partySize = 4,
+        .party = {.FullControl = gTrainerParty_Flannery }
     },
 
     [TRAINER_NORMAN] =
@@ -9081,7 +9081,7 @@ const struct Trainer gTrainers[] = {
         .items = {0, 0, 0, 0}, //{ITEM_HYPER_POTION, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = 0x7,
-        .partySize = 1,
+        .partySize = 2,
         .party = {.NoItemCustomMoves = gTrainerParty_Zane }
     },
 

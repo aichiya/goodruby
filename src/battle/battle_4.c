@@ -3237,7 +3237,7 @@ void SetMoveEffect(bool8 primary, u8 certainArg)
             if (gBattleMons[gEffectBank].type1 == TYPE_FIRE) {break;}
             if (gBattleMons[gEffectBank].type2 == TYPE_FIRE) {break;}
             if (gBattleMons[gEffectBank].ability == ABILITY_WATER_VEIL) {break;}
-            if (gBattleMons[gEffectBank].status1 == 0) {break;}
+            if (gBattleMons[gEffectBank].status1 != 0) {break;}
             StatusChanged = 1;
             break;
         case STATUS_FREEZE:

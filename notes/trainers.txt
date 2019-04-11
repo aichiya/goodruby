@@ -211,7 +211,9 @@ SHELBY: Meditite Lv28, Machoke Lv29
 
 LAVARIDGE GYM:
 COLE: Slugma Lv29, Quilava Lv29
-ZANE: Octillery Lv29, Flareon Lv29
+ZANE: Bagon Lv29, Octillery Lv30
 AXLE: Vulpix Lv29, Numel Lv29
 SADIE: Primeape Lv30
 ANDY: Growlithe Lv29, Charmeleon Lv29, Ponyta Lv29
+
+FLANNERY:

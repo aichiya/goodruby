@@ -349,7 +349,6 @@ static bool8 FindMonThatAbsorbsOpponentsMove(void)
 
     for (i = 0; i < 6; i++)
     {
-        u16 species;
         u8 monAbility;
 
         if (GetMonData(&gEnemyParty[i], MON_DATA_HP) == 0)
@@ -367,11 +366,7 @@ static bool8 FindMonThatAbsorbsOpponentsMove(void)
         if (i == ewram16068arr(battlerIn2))
             continue;
 
-        species = GetMonData(&gEnemyParty[i], MON_DATA_SPECIES);
-        if (GetMonData(&gEnemyParty[i], MON_DATA_ALT_ABILITY) != 0)
-            monAbility = gBaseStats[species].ability2;
-        else
-            monAbility = gBaseStats[species].ability1;
+        monAbility = GetMonAbility(&gEnemyParty[i]);
 
         if (absorbingTypeAbility == monAbility && Random() & 1)
         {

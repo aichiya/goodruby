@@ -1,5 +1,5 @@
 Liberty:
-BEAUTIFY: HA CompoundEyes becomes Intimidate
+BEAUTIFY: HA Rivalry becomes Intimidate
 DUSTOX: HA CompoundEyes becomes Filter
 
 Classic:
@@ -8,8 +8,11 @@ PSYDUCK: Now has access to Nasty Plot and Slack Off as egg moves.
 KRABBY: Learns most moves at different levels, no longer learns Stomp, gains several moves by level-up
 HITMONCHAN: Learns Drain Punch by relearner
 LEDIAN: Adjust early move positions, remove Tackle, add Air Cutter and Drain Punch. Swarm replaced with Magic Guard.
+SUNFLORA: Now Grass/Fire. Chlorophyll -> Flash Fire, HA Early Bird -> Drought. Learns Flame Burst on evolution.
+          Learns Fire Spin instead of Bullet Seed. Learns Inferno. Learns all Fire TMs except Fire Punch.
 MISDREAVUS: Adjust early move positions, add Hyper Voice.
-BEAUTIFLY: Learns Mega Drain and Giga Drain earlier, loses Absorb, now learns Leech Life
+BEAUTIFLY: Learns Mega Drain and Giga Drain earlier, loses Absorb, now learns Leech Life. HA Rivalry -> Intimidate.
+DUSTOX: HA CompoundEyes -> Filter.
 SKITTY, DELCATTY: Does not have secondary ability Normalize
 WINGULL, PELIPPER: Secondary abilities Hydration/Drizzle are switched with hidden ability Rain Dish
 TORKOAL: Secondary ability Drought is switched with hidden ability Shell Armor

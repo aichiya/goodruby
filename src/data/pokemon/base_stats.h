@@ -6512,7 +6512,7 @@ const struct BaseStats gBaseStats[] =
         .baseSpAttack  = 105,
         .baseSpDefense = 85,
         .type1 = TYPE_GRASS,
-        .type2 = TYPE_GRASS,
+        .type2 = TYPE_FIRE,
         .catchRate = 120,
         .expYield = 149,
         .evYield_HP        = 0,
@@ -6529,12 +6529,12 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroup1 = EGG_GROUP_GRASS,
         .eggGroup2 = EGG_GROUP_GRASS,
-        .ability1 = ABILITY_CHLOROPHYLL,
+        .ability1 = ABILITY_FLASH_FIRE,
         .ability2 = ABILITY_SOLAR_POWER,
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_YELLOW,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_EARLY_BIRD,
+		.hiddenAbility = ABILITY_DROUGHT,
     },
 
     [SPECIES_YANMA] =
@@ -9909,7 +9909,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_YELLOW,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_RIVALRY,
+		.hiddenAbility = ABILITY_INTIMIDATE,
     },
 
     [SPECIES_CASCOON] =
@@ -9977,7 +9977,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_COMPOUND_EYES,
+		.hiddenAbility = ABILITY_FILTER,
     },
 
     [SPECIES_LOTAD] =

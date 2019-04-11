@@ -241,6 +241,11 @@ const u16 gSudowoodoEvoMoves[] = {
 	0,
 };
 
+const u16 gSunfloraEvoMoves[] = {
+    MOVE_FLAME_BURST,
+    0,
+};
+
 const u16 gEspeonEvoMoves[] = {
 	MOVE_CONFUSION,
 	0,
