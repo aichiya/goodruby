@@ -625,6 +625,7 @@ BattleScript_StatDownDoAnim: @ 81D725F
 BattleScript_StatDownPrintString: @ 81D7269
 	printfromtable gStatDownStringIds
 	waitmessage 64
+    special 0x41
 
 BattleScript_StatDownEnd: @ 81D7271
 	goto BattleScript_MoveEnd
@@ -633,6 +634,7 @@ BattleScript_StatDown:: @ 81D7276
 	playanimation 2, B_ANIM_STATS_CHANGE, sANIM_ARG1
 	printfromtable gStatDownStringIds
 	waitmessage 64
+    special 0x41
 	return
 
 BattleScript_EffectHaze: @ 81D7286
@@ -2369,6 +2371,7 @@ BattleScript_EffectMemento: @ 81D8583
 	jumpifbyte GREATER_THAN, cMULTISTRING_CHOOSER, 1, BattleScript_1D85D0
 	printfromtable gStatDownStringIds
 	waitmessage 64
+    special 0x41
 
 BattleScript_1D85D0: @ 81D85D0
 	playstatchangeanimation TARGET, 16, 3
@@ -2377,6 +2380,7 @@ BattleScript_1D85D0: @ 81D85D0
 	jumpifbyte GREATER_THAN, cMULTISTRING_CHOOSER, 1, BattleScript_1D85F3
 	printfromtable gStatDownStringIds
 	waitmessage 64
+    special 0x41
 
 BattleScript_1D85F3: @ 81D85F3
 	tryfaintmon USER, FALSE, NULL
@@ -2833,6 +2837,7 @@ BattleScript_TickleDoMoveAnim: @ 81D8A1F
 	jumpifbyte EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_TickleTryLowerDef
 	printfromtable gStatDownStringIds
 	waitmessage 64
+    special 0x41
 
 BattleScript_TickleTryLowerDef: @ 81D8A55
 	playstatchangeanimation TARGET, 4, 1
@@ -2841,6 +2846,7 @@ BattleScript_TickleTryLowerDef: @ 81D8A55
 	jumpifbyte EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_TickleEnd
 	printfromtable gStatDownStringIds
 	waitmessage 64
+    special 0x41
 
 BattleScript_TickleEnd: @ 81D8A78
 	goto BattleScript_MoveEnd
@@ -4244,6 +4250,7 @@ BattleScript_1D97A1: @ 81D97A1
 	playanimation TARGET, B_ANIM_STATS_CHANGE, sANIM_ARG1
 	printstring BATTLE_TEXT_CutsAttack
 	waitmessage 64
+    special 0x43
 
 BattleScript_1D97E4: @ 81D97E4
 	addbyte gBankTarget, 1
@@ -5109,6 +5116,7 @@ Defog_StatDownDoAnim: @ 81D725F
 Defog_StatDownPrintString: @ 81D7269
 	printfromtable gStatDownStringIds
 	waitmessage 64
+    special 0x41
 
 Defog_StatDownEnd: @ 81D7271
 	special 0x5
@@ -5388,7 +5396,8 @@ BattleScript_StickyWebgBank1StatAnim:
 
 BattleScript_StickyWebStatMessage:
 	printfromtable gStatDownStringIds
-	waitmessage 64	
+	waitmessage 64
+    special 0x42
 	return
 
 BattleScript_PrintStickyWebMessage:
@@ -5789,18 +5798,21 @@ BattleScript_VenomDrenchStartDrops:
 	statbuffchange 0x1, BattleScriptVenomDrenchSAtkDrop
 	printfromtable gStatDownStringIds
 	waitmessage 64
+    special 0x41
 BattleScriptVenomDrenchSAtkDrop:
 	jumpifstat TARGET, EQUAL, SP_ATTACK, 0, BattleScriptVenomDrenchSpeedDrop
 	setstatchanger SP_ATTACK, 1, TRUE
 	statbuffchange 0x1, BattleScriptVenomDrenchSpeedDrop
 	printfromtable gStatDownStringIds
 	waitmessage 64
+    special 0x41
 BattleScriptVenomDrenchSpeedDrop:
 	jumpifstat TARGET, EQUAL, SP_ATTACK, 0, BattleScriptVenomDrenchEnd
 	setstatchanger SPEED, 1, TRUE
 	statbuffchange 0x1, BattleScriptVenomDrenchEnd
 	printfromtable gStatDownStringIds
 	waitmessage 64
+    special 0x41
 BattleScriptVenomDrenchEnd:
 	goto BattleScript_MoveEnd
 
@@ -6185,6 +6197,7 @@ BattleScript_NobleRoarDoMoveAnim:
 	jumpifbyte EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_NobleRoarTryLowerSAtk
 	printfromtable gStatDownStringIds
 	waitmessage 64
+    special 0x41
 
 BattleScript_NobleRoarTryLowerSAtk:
 	setstatchanger SP_ATTACK, 1, TRUE
@@ -6192,6 +6205,7 @@ BattleScript_NobleRoarTryLowerSAtk:
 	jumpifbyte EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_NobleRoarEnd
 	printfromtable gStatDownStringIds
 	waitmessage 64
+    special 0x41
 
 BattleScript_NobleRoarEnd:
 	goto BattleScript_MoveEnd
@@ -6608,3 +6622,17 @@ BattleScript_UseResistBerry::
     waitmessage 64
 	removeitem TARGET
     return
+
+BattleScript_DefiantProc::
+	setbyte sFIELD_1B, 0
+	playstatchangeanimation TARGET, 0x02, 0x2
+    printstring BATTLE_TEXT_DefiantProc
+	waitmessage 64
+	return
+
+BattleScript_CompetitiveProc::
+	setbyte sFIELD_1B, 0
+	playstatchangeanimation TARGET, 0x10, 0x2
+    printstring BATTLE_TEXT_DefiantProc
+	waitmessage 64
+	return

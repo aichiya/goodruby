@@ -101,14 +101,14 @@ gAbilityNames:: @ 81FA248
 	.string "Magic Guard$", 13
 	.string "Unaware$", 13
 	.string "Friend Guard$", 13
-	.string "COMPETITIVE$", 13
+	.string "Competitive$", 13
 	.string "Infiltrator$", 13
 	.string "Dry Skin$", 13
 	.string "Wonder Skin$", 13
 	.string "Sand Force$", 13
 	.string "Technician$", 13
 	.string "Anger Point$", 13
-	.string "DEFIANT$", 13
+	.string "Defiant$", 13
 	.string "Regenerator$", 13
 	.string "Justified$", 13
 	.string "Steadfast$", 13

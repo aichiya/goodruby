@@ -188,7 +188,7 @@ LENNY: Loudred Lv25, Machop Lv25
 
 ROUTE 115 SOUTH:
 NOB: Hitmonchan Lv26
-HECTOR: Clefairy Lv25, Jigglypuff Lv25, Arbok Lv26, Clefairy Lv25
+HECTOR: Dunsparce Lv27
 CYNDY: Meditite Lv25, Hitmontop Lv26
 
 MT CHIMNEY:
@@ -196,5 +196,22 @@ GRUNT: Carvanha Lv26, Grimer Lv26
 MATT: Golbat Lv26, Poliwhirl Lv26, Huntail Lv26
 GRUNT: Wailmer Lv26, Mightyena Lv26
 GRUNT: Lombre Lv26, Carvanha Lv26
-ARCHIE: Murkrow Lv26, Sharpedo Lv27, Electabuzz Lv27, Tentacruel Lv28
+ARCHIE: Sharpedo Lv28, Exeggutor Lv28, Electabuzz Lv28, Tentacruel Lv29
 
+JAGGED PASS:
+ERIC: Onix Lv27, Baltoy Lv27, Rhyhorn Lv28
+ETHAN: Ivysaur Lv28, Geodude Lv27
+DIANA: Jigglypuff Lv27, Arbok Lv28, Clefairy Lv27
+
+MT. CHIMNEY:
+SHIRLEY: Espeon Lv28, Sylveon Lv28
+SHEILA: Jolteon Lv28, Umbreon Lv28
+MELISSA: Vaporeon Lv28, Glaceon Lv28
+SHELBY: Meditite Lv28, Machoke Lv29
+
+LAVARIDGE GYM:
+COLE: Slugma Lv29, Quilava Lv29
+ZANE: Octillery Lv29, Flareon Lv29
+AXLE: Vulpix Lv29, Numel Lv29
+SADIE: Primeape Lv30
+ANDY: Growlithe Lv29, Charmeleon Lv29, Ponyta Lv29

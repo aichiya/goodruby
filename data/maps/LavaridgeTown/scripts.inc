@@ -284,7 +284,7 @@ LavaridgeTown_EventScript_14E75A:: @ 814E75A
 	message LavaridgeTown_Text_16C2EA
 	waitfanfare
 	waitmessage
-	giveegg SPECIES_WYNAUT
+	giveegg SPECIES_TOGEPI
 	release
 	end
 

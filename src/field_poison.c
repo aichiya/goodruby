@@ -126,7 +126,8 @@ s32 DoPoisonFieldEffect(void)
 
         if (GetMonData(mon, MON_DATA_SANITY_BIT2) != 0
          && GetPrimaryStatus(GetMonData(mon, MON_DATA_STATUS)) == STATUS_PRIMARY_POISON
-		 && GetMonAbility(mon) != ABILITY_POISON_HEAL)
+		 && GetMonAbility(mon) != ABILITY_POISON_HEAL
+         && GetMonAbility(mon) != ABILITY_MAGIC_GUARD)
         {
             // decrement HP of poisoned mon
             hp = GetMonData(mon, MON_DATA_HP);

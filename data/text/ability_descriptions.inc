@@ -430,6 +430,12 @@ gAbilityDescription_StormDrain:
 gAbilityDescription_Infiltrator:
 	.string "Bypasses barriers.$"
 
+gAbilityDescription_Defiant:
+    .string "Stat drops boost Attack.$"
+
+gAbilityDescription_Competitive:
+    .string "Stat drops boost Sp.Atk.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -535,14 +541,14 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_MagicGuard
 	.4byte gAbilityDescription_Unaware
 	.4byte gAbilityDescription_FriendGuard
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Competitive
 	.4byte gAbilityDescription_Infiltrator
 	.4byte gAbilityDescription_DrySkin
 	.4byte gAbilityDescription_WonderSkin
 	.4byte gAbilityDescription_SandForce
 	.4byte gAbilityDescription_Technician
 	.4byte gAbilityDescription_AngerPoint
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Defiant
 	.4byte gAbilityDescription_Regenerator
 	.4byte gAbilityDescription_Justified
 	.4byte gAbilityDescription_Steadfast

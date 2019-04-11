@@ -424,3 +424,4 @@
     enum BATTLE_TEXT_TrickRoomEnd
     enum BATTLE_TEXT_WildAppeared4
     enum BATTLE_TEXT_ResistBerry
+    enum BATTLE_TEXT_DefiantProc

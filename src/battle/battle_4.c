@@ -332,6 +332,8 @@ extern u8 BattleScript_LiftedProtect[];
 extern u8 BattleScript_SpikyShieldRecoil[];
 extern u8 BattleScript_FinishUTurn[];
 extern u8 BattleScript_UseResistBerry[];
+extern u8 BattleScript_DefiantProc[];
+extern u8 BattleScript_CompetitiveProc[];
 
 extern const u8 gStatusConditionString_PoisonJpn[];
 extern const u8 gStatusConditionString_SleepJpn[];
@@ -712,6 +714,9 @@ static void sp3D_psychoshiftsleep(void);
 static void sp3E_uturncheck(void);
 static void sp3F_setauroraveil(void);
 static void sp40_settrickroom(void);
+static void sp41_checkdefiant(void);
+static void sp42_checkdefiantwebs(void);
+static void sp43_checkdefianttarget(void);
 
 
 void (* const gBattleScriptingCommandsTable[])(void) =
@@ -13487,6 +13492,9 @@ void (* const gBattleScriptingSpecialTable[])(void) =
 	sp3E_uturncheck,
     sp3F_setauroraveil,
     sp40_settrickroom,
+    sp41_checkdefiant,
+    sp42_checkdefiantwebs,
+    sp43_checkdefianttarget,
 };
 
 
@@ -14935,7 +14943,6 @@ static void sp3F_setauroraveil(void)
         else
             gBattleCommunication[MULTISTRING_CHOOSER] = 8;
     }
-    gBattlescriptCurrInstr++;
 }
 
 static void sp40_settrickroom(void)
@@ -14949,5 +14956,82 @@ static void sp40_settrickroom(void)
     {
         gWishFutureKnock.trickRoomDuration = 0;
         gBattleCommunication[MULTISTRING_CHOOSER] = 7;
+    }
+}
+
+static void sp41_checkdefiant(void)
+{
+    if (GetBattlerSide(gEffectBank) != GetBattlerSide(gBankAttacker))
+    {
+        if (gBattleMons[gEffectBank].ability == ABILITY_DEFIANT &&
+            gBattleMons[gEffectBank].statStages[STAT_STAGE_ATK] != 13)
+        {
+            gBattleMons[gEffectBank].statStages[STAT_STAGE_ATK]++;
+            if (gBattleMons[gEffectBank].statStages[STAT_STAGE_ATK] != 13)
+                gBattleMons[gEffectBank].statStages[STAT_STAGE_ATK]++;
+			BattleScriptPushCursor();
+			gBattlescriptCurrInstr = BattleScript_DefiantProc;
+            PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_STAGE_ATK);
+        }
+        else if (gBattleMons[gEffectBank].ability == ABILITY_COMPETITIVE &&
+            gBattleMons[gEffectBank].statStages[STAT_STAGE_SPATK] != 13)
+        {
+            gBattleMons[gEffectBank].statStages[STAT_STAGE_SPATK]++;
+            if (gBattleMons[gEffectBank].statStages[STAT_STAGE_SPATK] != 13)
+                gBattleMons[gEffectBank].statStages[STAT_STAGE_SPATK]++;
+			BattleScriptPushCursor();
+			gBattlescriptCurrInstr = BattleScript_CompetitiveProc;
+            PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_STAGE_SPATK);
+        }
+    }
+}
+
+static void sp42_checkdefiantwebs(void)
+{
+    if (gBattleMons[gEffectBank].ability == ABILITY_DEFIANT &&
+        gBattleMons[gEffectBank].statStages[STAT_STAGE_ATK] != 13)
+    {
+        gBattleMons[gEffectBank].statStages[STAT_STAGE_ATK]++;
+        if (gBattleMons[gEffectBank].statStages[STAT_STAGE_ATK] != 13)
+            gBattleMons[gEffectBank].statStages[STAT_STAGE_ATK]++;
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = BattleScript_DefiantProc;
+        PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_STAGE_ATK);
+    }
+    else if (gBattleMons[gEffectBank].ability == ABILITY_COMPETITIVE &&
+        gBattleMons[gEffectBank].statStages[STAT_STAGE_SPATK] != 13)
+    {
+        gBattleMons[gEffectBank].statStages[STAT_STAGE_SPATK]++;
+        if (gBattleMons[gEffectBank].statStages[STAT_STAGE_SPATK] != 13)
+            gBattleMons[gEffectBank].statStages[STAT_STAGE_SPATK]++;
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = BattleScript_CompetitiveProc;
+        PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_STAGE_SPATK);
+    }
+}
+
+static void sp43_checkdefianttarget(void)
+{
+    gEffectBank = gBankTarget;
+
+    if (gBattleMons[gEffectBank].ability == ABILITY_DEFIANT &&
+        gBattleMons[gEffectBank].statStages[STAT_STAGE_ATK] != 13)
+    {
+        gBattleMons[gEffectBank].statStages[STAT_STAGE_ATK]++;
+        if (gBattleMons[gEffectBank].statStages[STAT_STAGE_ATK] != 13)
+            gBattleMons[gEffectBank].statStages[STAT_STAGE_ATK]++;
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = BattleScript_DefiantProc;
+        PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_STAGE_ATK);
+    }
+    else if (gBattleMons[gEffectBank].ability == ABILITY_COMPETITIVE &&
+        gBattleMons[gEffectBank].statStages[STAT_STAGE_SPATK] != 13)
+    {
+        gBattleMons[gEffectBank].statStages[STAT_STAGE_SPATK]++;
+        if (gBattleMons[gEffectBank].statStages[STAT_STAGE_SPATK] != 13)
+            gBattleMons[gEffectBank].statStages[STAT_STAGE_SPATK]++;
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = BattleScript_CompetitiveProc;
+        PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_STAGE_SPATK);
     }
 }

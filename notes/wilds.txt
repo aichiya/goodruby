@@ -9,8 +9,8 @@ Sunkern
 Wooper
 Murkrow
 Girafarig
-Pineco
 Snubbull
+Pineco
 Shuckle
 Swinub
 Mantyke
@@ -68,7 +68,7 @@ PATH: Numel (20%), Grimer (20%), Koffing (20%), Slugma (10%), Torkoal (10%), Mag
 ROUTE 113: Spinda (50%), Venonat (15%), Slugma (15%), Sandshrew (15%), Skarmory (5%)
 ROUTE 114: Lombre (20%), Nuzleaf (20%), Swablu (20%), Furret (15%), Zangoose (10%), Seviper (10%), Misdreavus (5%)
 FALLS 1F: Zubat (40%), Aron (20%), Clefairy (15%), Lunatone (10%), Solrock (10%), Misdreavus (5%)
-JAGGED PASS: Machop, Numel, Tyrogue, Spoink, Ponyta, Sudowoodo
+JAGGED PASS: Machop (20%), Numel (20%), Mankey (15%), Spoink (10%), Pineco (10%), Slugma (10%), Ponyta (10%), Sudowoodo (5%)
 FALLARBOR: Togepi egg
 DESERT: Sandshrew, Trapinch, Cacnea, Baltoy, Gligar, Larvitar
 ROUTE 115: Swellow, Wingull, Swablu, Jigglypuff, Clefairy
