@@ -1730,18 +1730,18 @@ const struct WildPokemonInfo Route110_FishingMonsInfo = {30, Route110_FishingMon
 
 const struct WildPokemon Route111_LandMons [] =
 {
-    {20, 20, SPECIES_SANDSHREW},
-    {20, 20, SPECIES_TRAPINCH},
-    {21, 21, SPECIES_SANDSHREW},
-    {21, 21, SPECIES_TRAPINCH},
-    {19, 19, SPECIES_CACNEA},
-    {21, 21, SPECIES_CACNEA},
-    {19, 19, SPECIES_SANDSHREW},
-    {19, 19, SPECIES_TRAPINCH},
-    {20, 20, SPECIES_BALTOY},
-    {20, 20, SPECIES_BALTOY},
-    {22, 22, SPECIES_BALTOY},
-    {22, 22, SPECIES_BALTOY},
+    {22, 25, SPECIES_SANDSHREW},
+    {22, 25, SPECIES_TRAPINCH},
+    {22, 25, SPECIES_CACNEA},
+    {22, 25, SPECIES_BALTOY},
+    {22, 25, SPECIES_DIGLETT},
+    {22, 25, SPECIES_GLIGAR},
+    {22, 25, SPECIES_CACNEA},
+    {22, 25, SPECIES_LARVITAR},
+    {22, 25, SPECIES_SANDSHREW},
+    {22, 25, SPECIES_TRAPINCH},
+    {22, 25, SPECIES_SANDSHREW},
+    {22, 25, SPECIES_TRAPINCH},
 };
 const struct WildPokemonInfo Route111_LandMonsInfo = {10, Route111_LandMons};
 

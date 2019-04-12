@@ -217,3 +217,14 @@ SADIE: Primeape Lv30
 ANDY: Growlithe Lv29, Charmeleon Lv29, Ponyta Lv29
 
 FLANNERY:
+Torkoal Lv31: Overheat, Bulldoze, Body Slam, Sunny Day
+Kangaskhan Lv31: Chip Away, Fire Punch, ThunderPunch, Drain Punch
+Sunflora@Charti Lv31: Overheat, Giga Drain, Leech Seed, Sunny Day
+Flareon@Sitrus Lv32: Overheat, Will-o-wisp, Secret Power, Rest
+
+ROUTE 111 DESERT:
+CLIFF: Gligar Lv31, Ledian Lv31
+HEIDI: Sandslash Lv31, Munchlax Lv31
+DREW: Trapinch Lv31, Venomoth Lv31
+BECKY: Sandshrew Lv31, Gloom Lv32
+DUSTY: Relicanth Lv33

@@ -454,6 +454,16 @@ const u16 gExploudEvoMoves[] = {
 	0,
 };
 
+const u16 gCradilyEvoMoves[] = {
+	MOVE_ACID_SPRAY,
+	0,
+};
+
+const u16 gArmaldoEvoMoves[] = {
+	MOVE_AQUA_TAIL,
+	0,
+};
+
 const u16 gShelgonEvoMoves[] = {
 	MOVE_PROTECT,
 	0,

@@ -659,9 +659,9 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Rose5[] = {
 const struct TrainerMonNoItemCustomMoves gTrainerParty_Dusty1[] = {
     {
 	.iv = 50,
-	.level = 24,
-	.species = SPECIES_SANDSLASH,
-        .moves = MOVE_DIG, MOVE_SLASH, MOVE_SAND_ATTACK, MOVE_POISON_STING
+	.level = 33,
+	.species = SPECIES_RELICANTH,
+        .moves = MOVE_ROCK_TOMB, MOVE_DIVE, MOVE_ANCIENT_POWER, MOVE_SECRET_POWER
     }
 };
 
@@ -2760,33 +2760,29 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Bernie5[] = {
     }
 };
 
-const struct TrainerMonNoItemCustomMoves gTrainerParty_Drew[] = {
+const struct TrainerMonNoItemDefaultMoves gTrainerParty_Drew[] = {
     {
 	.iv = 0,
-	.level = 24,
-	.species = SPECIES_SANDSHREW,
-        .moves = MOVE_DIG, MOVE_SAND_ATTACK, MOVE_POISON_STING, MOVE_SLASH
-    }
+	.level = 31,
+	.species = SPECIES_TRAPINCH,
+    },
+    {
+	.iv = 0,
+	.level = 31,
+	.species = SPECIES_VENOMOTH,
+    },
 };
 
-const struct TrainerMonNoItemCustomMoves gTrainerParty_Cliff[] = {
+const struct TrainerMonNoItemDefaultMoves gTrainerParty_Cliff[] = {
     {
 	.iv = 0,
-	.level = 22,
-	.species = SPECIES_BALTOY,
-        .moves = MOVE_RAPID_SPIN, MOVE_MUD_SLAP, MOVE_PSYBEAM, MOVE_ROCK_TOMB
+	.level = 31,
+	.species = SPECIES_GLIGAR,
     },
     {
 	.iv = 0,
-	.level = 22,
-	.species = SPECIES_SANDSHREW,
-        .moves = MOVE_POISON_STING, MOVE_SAND_ATTACK, MOVE_SCRATCH, MOVE_DIG
-    },
-    {
-	.iv = 0,
-	.level = 22,
-	.species = SPECIES_BALTOY,
-        .moves = MOVE_RAPID_SPIN, MOVE_MUD_SLAP, MOVE_PSYBEAM, MOVE_ROCK_TOMB
+	.level = 31,
+	.species = SPECIES_LEDIAN,
     }
 };
 
@@ -6558,27 +6554,29 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Jenny5[] = {
     }
 };
 
-const struct TrainerMonNoItemCustomMoves gTrainerParty_Heidi[] = {
+const struct TrainerMonNoItemDefaultMoves gTrainerParty_Heidi[] = {
     {
 	.iv = 0,
-	.level = 23,
-	.species = SPECIES_SANDSHREW,
-        .moves = MOVE_DIG, MOVE_SAND_ATTACK, MOVE_POISON_STING, MOVE_SLASH
+	.level = 31,
+	.species = SPECIES_SANDSLASH,
     },
     {
 	.iv = 0,
-	.level = 23,
-	.species = SPECIES_BALTOY,
-        .moves = MOVE_RAPID_SPIN, MOVE_MUD_SLAP, MOVE_PSYBEAM, MOVE_ROCK_TOMB
+	.level = 31,
+	.species = SPECIES_MUNCHLAX,
     }
 };
 
-const struct TrainerMonNoItemCustomMoves gTrainerParty_Becky[] = {
+const struct TrainerMonNoItemDefaultMoves gTrainerParty_Becky[] = {
     {
 	.iv = 0,
-	.level = 24,
+	.level = 31,
 	.species = SPECIES_SANDSHREW,
-        .moves = MOVE_SAND_ATTACK, MOVE_POISON_STING, MOVE_SLASH, MOVE_DIG
+    },
+    {
+	.iv = 0,
+	.level = 32,
+	.species = SPECIES_GLOOM,
     }
 };
 

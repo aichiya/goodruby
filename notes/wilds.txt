@@ -70,7 +70,7 @@ ROUTE 114: Lombre (20%), Nuzleaf (20%), Swablu (20%), Furret (15%), Zangoose (10
 FALLS 1F: Zubat (40%), Aron (20%), Clefairy (15%), Lunatone (10%), Solrock (10%), Misdreavus (5%)
 JAGGED PASS: Machop (20%), Numel (20%), Mankey (15%), Spoink (10%), Pineco (10%), Slugma (10%), Ponyta (10%), Sudowoodo (5%)
 FALLARBOR: Togepi egg
-DESERT: Sandshrew, Trapinch, Cacnea, Baltoy, Gligar, Larvitar
+DESERT: Sandshrew (25%), Trapinch (25%), Cacnea (15%), Baltoy (10%), Diglett (10%), Gligar (10%), Larvitar (5%)
 ROUTE 115: Swellow, Wingull, Swablu, Jigglypuff, Clefairy
 NEW MAUVILLE: Voltorb, Magnemite, Elekid
 ROUTE 118: Raticate, Aipom, Wingull, Manectric, Kecleon

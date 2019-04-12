@@ -624,7 +624,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Dusty"),
         .items = {0, 0, 0, 0}, //{ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
-        .aiFlags = 0x1,
+        .aiFlags = 0x7,
         .partySize = 1,
         .party = {.NoItemCustomMoves = gTrainerParty_Dusty1 }
     },
@@ -2955,7 +2955,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_DREW] =
     {
-        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .partyFlags = 0,
         .trainerClass = TRAINER_CLASS_CAMPER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_CAMPER,
@@ -2963,13 +2963,13 @@ const struct Trainer gTrainers[] = {
         .items = {0, 0, 0, 0}, //{ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = 0x1,
-        .partySize = 1,
-        .party = {.NoItemCustomMoves = gTrainerParty_Drew }
+        .partySize = 2,
+        .party = {.NoItemDefaultMoves = gTrainerParty_Drew }
     },
 
     [TRAINER_CLIFF] =
     {
-        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .partyFlags = 0,
         .trainerClass = TRAINER_CLASS_CAMPER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_CAMPER,
@@ -2977,8 +2977,8 @@ const struct Trainer gTrainers[] = {
         .items = {0, 0, 0, 0}, //{ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = 0x1,
-        .partySize = 3,
-        .party = {.NoItemCustomMoves = gTrainerParty_Cliff }
+        .partySize = 2,
+        .party = {.NoItemDefaultMoves = gTrainerParty_Cliff }
     },
 
     [TRAINER_LARRY] =
@@ -6567,7 +6567,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_HEIDI] =
     {
-        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .partyFlags = 0,
         .trainerClass = TRAINER_CLASS_PICNICKER,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GIRL,
         .trainerPic = TRAINER_PIC_PICNICKER,
@@ -6576,12 +6576,12 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = 0x1,
         .partySize = 2,
-        .party = {.NoItemCustomMoves = gTrainerParty_Heidi }
+        .party = {.NoItemDefaultMoves = gTrainerParty_Heidi }
     },
 
     [TRAINER_BECKY] =
     {
-        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .partyFlags = 0,
         .trainerClass = TRAINER_CLASS_PICNICKER,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GIRL,
         .trainerPic = TRAINER_PIC_PICNICKER,
@@ -6589,8 +6589,8 @@ const struct Trainer gTrainers[] = {
         .items = {0, 0, 0, 0}, //{ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = 0x1,
-        .partySize = 1,
-        .party = {.NoItemCustomMoves = gTrainerParty_Becky }
+        .partySize = 2,
+        .party = {.NoItemDefaultMoves = gTrainerParty_Becky }
     },
 
     [TRAINER_CAROL] =

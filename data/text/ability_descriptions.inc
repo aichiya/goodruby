@@ -436,6 +436,9 @@ gAbilityDescription_Defiant:
 gAbilityDescription_Competitive:
     .string "Stat drops boost Sp.Atk.$"
 
+gAbilityDescription_FurCoat:
+	.string "Doubles Defense.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -590,3 +593,4 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_StormDrain
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
+    .4byte gAbilityDescription_FurCoat

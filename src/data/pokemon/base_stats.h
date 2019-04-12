@@ -10687,11 +10687,11 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FAIRY,
         .ability1 = ABILITY_CUTE_CHARM,
-        .ability2 = ABILITY_NONE,
+        .ability2 = ABILITY_WONDER_SKIN,
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_PINK,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_WONDER_SKIN,
+		.hiddenAbility = ABILITY_OBLIVIOUS,
     },
 
     [SPECIES_DELCATTY] =
@@ -10721,11 +10721,11 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FAIRY,
         .ability1 = ABILITY_CUTE_CHARM,
-        .ability2 = ABILITY_NONE,
+        .ability2 = ABILITY_WONDER_SKIN,
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_PURPLE,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_WONDER_SKIN,
+		.hiddenAbility = ABILITY_FUR_COAT,
     },
 
     [SPECIES_KECLEON] =

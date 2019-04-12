@@ -150,4 +150,5 @@ gAbilityNames:: @ 81FA248
 	.string "Storm Drain$", 13
     .string "PIXILATE$", 13
     .string "MOTOR DRIVE$", 13
+    .string "Fur Coat$", 13
 
