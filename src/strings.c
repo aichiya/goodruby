@@ -913,6 +913,12 @@ const u8 OtherText_SecretBasesWonderful[] = _("SECRET BASES are so wonderful!\nC
 const u8 OtherText_PokeLeague[] = _("POKéMON LEAGUE");
 const u8 OtherText_PokeCenter[] = _("POKéMON CENTER");
 
+const u8 OtherText_RootFossil[] = _("Root Fossil");
+const u8 OtherText_ClawFossil[] = _("Claw Fossil");
+const u8 OtherText_DomeFossil[] = _("Dome Fossil");
+const u8 OtherText_HelixFossil[] = _("Helix Fossil");
+const u8 OtherText_NoFossil[] = _("No Fossil");
+
 const u8 gOtherText_GetsAPokeBlock[] = _(" gets a {POKEBLOCK}?");
 
 const u8 OtherText_Coolness[] = _("Coolness ");
@@ -945,6 +951,7 @@ const u8 gSystemText_SaveCompleted[] = _("Save completed.");
 const u8 gSystemText_SaveFailed[] = _("Save failed...");
 const u8 gSystemText_NoSaveFileNoTime[] = _("There is no save file, so the time\ncan't be set.");
 const u8 gSystemText_ClockAdjustmentUsable[] = _("The in-game clock adjustment system\nis now useable.");
+
 const u8 gSystemText_Saving[] = _("SAVING...\nDON'T TURN OFF THE POWER.");
 
 #elif GERMAN

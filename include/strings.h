@@ -889,6 +889,12 @@ extern const u8 OtherText_SecretBasesWonderful[];
 extern const u8 OtherText_PokeLeague[];
 extern const u8 OtherText_PokeCenter[];
 
+extern const u8 OtherText_RootFossil[];
+extern const u8 OtherText_ClawFossil[];
+extern const u8 OtherText_DomeFossil[];
+extern const u8 OtherText_HelixFossil[];
+extern const u8 OtherText_NoFossil[];
+
 extern const u8 gOtherText_GetsAPokeBlock[];
 
 extern const u8 OtherText_Coolness[];

@@ -497,6 +497,47 @@ const struct MenuAction MultichoiceList_75[] =
     {OtherText_Previous, NULL},
 };
 
+const struct MenuAction MultichoiceList_76[] =
+{
+    {OtherText_RootFossil, NULL},
+    {OtherText_ClawFossil, NULL},
+    {OtherText_NoFossil, NULL},
+};
+
+const struct MenuAction MultichoiceList_77[] =
+{
+    {OtherText_RootFossil, NULL},
+    {OtherText_DomeFossil, NULL},
+    {OtherText_NoFossil, NULL},
+};
+
+const struct MenuAction MultichoiceList_78[] =
+{
+    {OtherText_RootFossil, NULL},
+    {OtherText_HelixFossil, NULL},
+    {OtherText_NoFossil, NULL},
+};
+
+const struct MenuAction MultichoiceList_79[] =
+{
+    {OtherText_ClawFossil, NULL},
+    {OtherText_DomeFossil, NULL},
+    {OtherText_NoFossil, NULL},
+};
+
+const struct MenuAction MultichoiceList_80[] =
+{
+    {OtherText_ClawFossil, NULL},
+    {OtherText_HelixFossil, NULL},
+    {OtherText_NoFossil, NULL},
+};
+
+const struct MenuAction MultichoiceList_81[] =
+{
+    {OtherText_DomeFossil, NULL},
+    {OtherText_HelixFossil, NULL},
+    {OtherText_NoFossil, NULL},
+};
 
 const struct MenuAction MultichoiceList_01[] =
 {
@@ -587,6 +628,12 @@ const struct MultichoiceListStruct gMultichoiceLists[] =
     {MultichoiceList_73, ARRAY_COUNT(MultichoiceList_73)},
     {MultichoiceList_74, ARRAY_COUNT(MultichoiceList_74)},
     {MultichoiceList_75, ARRAY_COUNT(MultichoiceList_75)},
+    {MultichoiceList_76, ARRAY_COUNT(MultichoiceList_76)},
+    {MultichoiceList_77, ARRAY_COUNT(MultichoiceList_77)},
+    {MultichoiceList_78, ARRAY_COUNT(MultichoiceList_78)},
+    {MultichoiceList_79, ARRAY_COUNT(MultichoiceList_79)},
+    {MultichoiceList_80, ARRAY_COUNT(MultichoiceList_80)},
+    {MultichoiceList_81, ARRAY_COUNT(MultichoiceList_81)},
 };
 
 const u8 *const gUnknown_083CE048[] =

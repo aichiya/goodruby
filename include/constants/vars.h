@@ -94,6 +94,7 @@
 #define VAR_ROUTE103_STATE         0x4062
 
 #define VAR_ROUTE110_STATE         0x4069
+#define VAR_FOSSILS_PICKED_UP      0x406A
 
 #define VAR_ROUTE116_STATE         0x406F
 

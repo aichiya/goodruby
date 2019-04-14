@@ -47,47 +47,108 @@ Route111_EventScript_15000D:: @ 815000D
 	cleartrainerflag TRAINER_VIVI
 	end
 
-Route111_EventScript_150023:: @ 8150023
+Route111_EventScript_RootFossil:: @ 8150023
 	lockall
-	msgbox Route111_Text_16FA54, MSGBOX_YESNO
+    bufferitemname 0, ITEM_ROOT_FOSSIL
+    call Route111_EventScript_FossilMessage
 	compare RESULT, NO
-	goto_if_eq Route111_EventScript_15005F
+	goto_if_eq Route111_EventScript_IgnoreFossil
 	giveitem_std ITEM_ROOT_FOSSIL
 	closemessage
 	setflag FLAG_HIDE_ROOT_FOSSIL
-	setflag FLAG_HIDE_CLAW_FOSSIL
+    addvar VAR_FOSSILS_PICKED_UP, 1
 	removeobject 34
-	delay 30
-	applymovement 35, Route111_Movement_1500AF
-	waitmovement 0
-	removeobject 35
+    compare VAR_FOSSILS_PICKED_UP, 2
+    goto_if_eq Route111_EventScript_FossilsSink
 	releaseall
 	end
 
-Route111_EventScript_15005F:: @ 815005F
-	msgbox Route111_Text_16FACE, 4
-	releaseall
-	end
-
-Route111_EventScript_150069:: @ 8150069
+Route111_EventScript_ClawFossil:: @ 8150023
 	lockall
-	msgbox Route111_Text_16FAED, MSGBOX_YESNO
+    bufferitemname 0, ITEM_CLAW_FOSSIL
+    call Route111_EventScript_FossilMessage
 	compare RESULT, NO
-	goto_if_eq Route111_EventScript_1500A5
+	goto_if_eq Route111_EventScript_IgnoreFossil
 	giveitem_std ITEM_CLAW_FOSSIL
 	closemessage
 	setflag FLAG_HIDE_CLAW_FOSSIL
-	setflag FLAG_HIDE_ROOT_FOSSIL
+    addvar VAR_FOSSILS_PICKED_UP, 1
 	removeobject 35
+    compare VAR_FOSSILS_PICKED_UP, 2
+    goto_if_eq Route111_EventScript_FossilsSink
+	releaseall
+	end
+
+Route111_EventScript_DomeFossil:: @ 8150023
+	lockall
+    bufferitemname 0, ITEM_DOME_FOSSIL
+    call Route111_EventScript_FossilMessage
+	compare RESULT, NO
+	goto_if_eq Route111_EventScript_IgnoreFossil
+	giveitem_std ITEM_DOME_FOSSIL
+	closemessage
+	setflag FLAG_HIDE_DOME_FOSSIL
+    addvar VAR_FOSSILS_PICKED_UP, 1
+	removeobject 37
+    compare VAR_FOSSILS_PICKED_UP, 2
+    goto_if_eq Route111_EventScript_FossilsSink
+	releaseall
+	end
+
+Route111_EventScript_HelixFossil:: @ 8150023
+	lockall
+    bufferitemname 0, ITEM_HELIX_FOSSIL
+    call Route111_EventScript_FossilMessage
+	compare RESULT, NO
+	goto_if_eq Route111_EventScript_IgnoreFossil
+	giveitem_std ITEM_HELIX_FOSSIL
+	closemessage
+	setflag FLAG_HIDE_HELIX_FOSSIL
+    addvar VAR_FOSSILS_PICKED_UP, 1
+	removeobject 38
+    compare VAR_FOSSILS_PICKED_UP, 2
+    goto_if_eq Route111_EventScript_FossilsSink
+	releaseall
+	end
+    
+Route111_EventScript_FossilMessage::
+	compare VAR_FOSSILS_PICKED_UP, 0
+    goto_if_eq Route111_EventScript_FossilMessage0
+    compare VAR_FOSSILS_PICKED_UP, 1
+    goto_if_eq Route111_EventScript_FossilMessage1
+    return
+
+Route111_EventScript_FossilMessage0::
+	msgbox Route111_Text_FoundFossilOne, MSGBOX_YESNO
+    return
+
+Route111_EventScript_FossilMessage1::
+	msgbox Route111_Text_FoundFossilTwo, MSGBOX_YESNO
+    return
+
+Route111_EventScript_IgnoreFossil:: @ 81500A5
+	msgbox Route111_Text_IgnoreFossil, 4
+	releaseall
+	end
+
+Route111_EventScript_FossilsSink::
+	setflag FLAG_HIDE_ROOT_FOSSIL
+	setflag FLAG_HIDE_CLAW_FOSSIL
+	setflag FLAG_HIDE_DOME_FOSSIL
+	setflag FLAG_HIDE_HELIX_FOSSIL
 	delay 30
 	applymovement 34, Route111_Movement_1500AF
 	waitmovement 0
 	removeobject 34
-	releaseall
-	end
-
-Route111_EventScript_1500A5:: @ 81500A5
-	msgbox Route111_Text_16FB67, 4
+	applymovement 35, Route111_Movement_1500AF
+	waitmovement 0
+	removeobject 35
+	applymovement 37, Route111_Movement_1500AF
+	waitmovement 0
+	removeobject 37
+	applymovement 38, Route111_Movement_1500AF
+	waitmovement 0
+	removeobject 38
 	releaseall
 	end
 

@@ -59,14 +59,20 @@ Route111_Text_16FA22:: @ 816FA22
 	.string "If you're not in any hurry, visit with\n"
 	.string "us awhile.$"
 
-Route111_Text_16FA54:: @ 816FA54
-	.string "You found the ROOT FOSSIL.\p"
-	.string "If this FOSSIL is taken, the other\n"
-	.string "one will sink into the sand...\p"
-	.string "Take the ROOT FOSSIL anyway?$"
+Route111_Text_FoundFossilOne:: @ 816FA54
+	.string "You found the {STR_VAR_1}.\p"
+	.string "If two Fossils are taken, the other\n"
+	.string "two will sink into the sand...\p"
+	.string "Take the {STR_VAR_1} anyway?$"
 
-Route111_Text_16FACE:: @ 816FACE
-	.string "{PLAYER} left the ROOT FOSSIL alone.$"
+Route111_Text_FoundFossilTwo:: @ 816FA54
+	.string "You found the {STR_VAR_1}.\p"
+	.string "If you take this fossil, the\n"
+	.string "other two will sink into the sand...\p"
+	.string "Take the {STR_VAR_1} anyway?$"
+
+Route111_Text_IgnoreFossil:: @ 816FACE
+	.string "{PLAYER} left the {STR_VAR_1} alone.$"
 
 Route111_Text_16FAED:: @ 816FAED
 	.string "You found the CLAW FOSSIL.\p"
