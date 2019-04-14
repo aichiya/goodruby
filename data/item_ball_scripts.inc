@@ -47,7 +47,7 @@ Route111_EventScript_1B14C8:: @ 81B14C8
 	end
 
 Route111_EventScript_1B14D5:: @ 81B14D5
-	giveitem_std ITEM_STARDUST, 1, 1
+	giveitem_std ITEM_EVIOLITE, 1, 1
 	end
 
 Route111_EventScript_1B14E2:: @ 81B14E2

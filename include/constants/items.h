@@ -271,7 +271,7 @@
 #define ITEM_METAL_POWDER 261
 #define ITEM_THICK_CLUB 262
 #define ITEM_STICK 263
-#define ITEM_0E2 264
+#define ITEM_EVIOLITE 264
 #define ITEM_0E3 265
 #define ITEM_0E4 266
 #define ITEM_0E5 267
