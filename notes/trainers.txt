@@ -217,10 +217,10 @@ SADIE: Primeape Lv30
 ANDY: Growlithe Lv29, Charmeleon Lv29, Ponyta Lv29
 
 FLANNERY:
-Torkoal Lv31: Overheat, Bulldoze, Body Slam, Sunny Day
-Kangaskhan Lv31: Chip Away, Fire Punch, ThunderPunch, Drain Punch
-Sunflora@Charti Lv31: Overheat, Giga Drain, Leech Seed, Sunny Day
-Flareon@Sitrus Lv32: Overheat, Will-o-wisp, Secret Power, Rest
+Torkoal Lv32: Overheat, Bulldoze, Body Slam, Sunny Day
+Kangaskhan Lv32: Chip Away, Fire Punch, ThunderPunch, Drain Punch
+Sunflora@Charti Lv32: Overheat, Giga Drain, Leech Seed, Sunny Day
+Flareon@Sitrus Lv33: Overheat, Will-o-wisp, Secret Power, Rest
 
 ROUTE 111 DESERT:
 CLIFF: Gligar Lv31, Ledian Lv31
@@ -228,3 +228,12 @@ HEIDI: Sandslash Lv31, Munchlax Lv31
 DREW: Trapinch Lv31, Venomoth Lv31
 BECKY: Sandshrew Lv31, Gloom Lv32
 DUSTY: Relicanth Lv33
+
+PETALBURG GYM:
+RANDALL (Speed): Swellow@Liechi Lv33 (Aerial Ace, Quick Attack, Agility, Endeavor)
+MARY (Evasion): Smeargle@BrightPowder Lv33 (Spore, Minimize, Seismic Toss, Night Shade)
+PARKER (Ailment): Stantler@Lum Lv33 (Thunder Wave, Confuse Ray, Stomp, Bite)
+LORI (Defense): Delcatty@Sitrus Lv33 (Secret Power, Charge Beam, Charm, Thunder Wave)
+GEORGE (Recovery): Miltank@Leftovers Lv33 (Milk Drink, Heal Bell, Body Slam, Defense Curl)
+JODY (Strength): Ursaring@Silk Scarf Lv33 (Swords Dance, Chip Away, Feint Attack, Metal Claw)
+BERKE (OHKO): Snorlax@Scope Lens Lv33 (SelfDestruct)

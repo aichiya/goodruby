@@ -969,36 +969,64 @@ const struct TrainerMonNoItemCustomMoves gTrainerParty_Ricky5[] = {
     }
 };
 
-const struct TrainerMonNoItemDefaultMoves gTrainerParty_Randall[] = {
+const struct TrainerMonFullControl gTrainerParty_Randall[] = {
     {
-	.iv = 100,
-	.level = 27,
-	.species = SPECIES_DELCATTY
-    }
+	.iv = 0,
+	.level = 33,
+	.species = SPECIES_SWELLOW,
+	.heldItem = ITEM_SALAC_BERRY,
+	.ability = 0, // Guts
+	.moves = {MOVE_AERIAL_ACE, MOVE_QUICK_ATTACK, MOVE_STEEL_WING, MOVE_AGILITY},
+		.evs = {0, 0, 0, 252, 0, 0},
+		.nature = NATURE_JOLLY,
+		.gender = MON_MALE,
+		.ball = ITEM_POKE_BALL,
+    },
 };
 
-const struct TrainerMonNoItemDefaultMoves gTrainerParty_Parker[] = {
+const struct TrainerMonFullControl gTrainerParty_Parker[] = {
     {
-	.iv = 100,
-	.level = 27,
-	.species = SPECIES_LINOONE
-    }
+	.iv = 0,
+	.level = 33,
+	.species = SPECIES_STANTLER,
+	.heldItem = ITEM_LUM_BERRY,
+	.ability = 0, // Intimidate
+	.moves = {MOVE_THUNDER_WAVE, MOVE_CONFUSE_RAY, MOVE_STOMP, MOVE_BITE},
+		.evs = {128, 0, 0, 128, 0, 0},
+		.nature = NATURE_JOLLY,
+		.gender = MON_MALE,
+		.ball = ITEM_POKE_BALL,
+    },
 };
 
-const struct TrainerMonNoItemDefaultMoves gTrainerParty_George[] = {
+const struct TrainerMonFullControl gTrainerParty_George[] = {
     {
-	.iv = 100,
-	.level = 27,
-	.species = SPECIES_LINOONE
-    }
+	.iv = 0,
+	.level = 33,
+	.species = SPECIES_MILTANK,
+	.heldItem = ITEM_LEFTOVERS,
+	.ability = 1, // Scrappy
+	.moves = {MOVE_BODY_SLAM, MOVE_DEFENSE_CURL, MOVE_MILK_DRINK, MOVE_HEAL_BELL},
+		.evs = {0, 0, 128, 0, 0, 128},
+		.nature = NATURE_CAREFUL,
+		.gender = MON_FEMALE,
+		.ball = ITEM_GREAT_BALL,
+    },
 };
 
-const struct TrainerMonNoItemDefaultMoves gTrainerParty_Berke[] = {
+const struct TrainerMonFullControl gTrainerParty_Berke[] = {
     {
-	.iv = 100,
-	.level = 27,
-	.species = SPECIES_ZANGOOSE
-    }
+	.iv = 0,
+	.level = 33,
+	.species = SPECIES_SNORLAX,
+	.heldItem = ITEM_SCOPE_LENS,
+	.ability = 1, // Thick Fat
+	.moves = {MOVE_SELF_DESTRUCT, 0, 0, 0},
+		.evs = {0, 252, 0, 0, 0, 0},
+		.nature = NATURE_ADAMANT,
+		.gender = MON_MALE,
+		.ball = ITEM_HEAVY_BALL,
+    },
 };
 
 const struct TrainerMonNoItemCustomMoves gTrainerParty_Clyde[] = {
@@ -1256,28 +1284,49 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Warren[] = {
     }
 };
 
-const struct TrainerMonNoItemDefaultMoves gTrainerParty_Mary[] = {
+const struct TrainerMonFullControl gTrainerParty_Mary[] = {
     {
-	.iv = 100,
-	.level = 27,
-	.species = SPECIES_DELCATTY
-    }
+	.iv = 0,
+	.level = 33,
+	.species = SPECIES_SMEARGLE,
+	.heldItem = ITEM_BRIGHT_POWDER,
+	.ability = 2, // Moody
+	.moves = {MOVE_MINIMIZE, MOVE_SPORE, MOVE_SEISMIC_TOSS, MOVE_NIGHT_SHADE},
+		.evs = {128, 0, 0, 128, 0, 0},
+		.nature = NATURE_TIMID,
+		.gender = MON_FEMALE,
+		.ball = ITEM_POKE_BALL,
+    },
 };
 
-const struct TrainerMonNoItemDefaultMoves gTrainerParty_Lori[] = {
+const struct TrainerMonFullControl gTrainerParty_Lori[] = {
     {
-	.iv = 100,
-	.level = 27,
-	.species = SPECIES_LINOONE
-    }
+	.iv = 0,
+	.level = 33,
+	.species = SPECIES_DELCATTY,
+	.heldItem = ITEM_SITRUS_BERRY,
+	.ability = 2, // Fur Coat
+	.moves = {MOVE_SECRET_POWER, MOVE_CHARGE_BEAM, MOVE_THUNDER_WAVE, MOVE_CHARM},
+		.evs = {0, 0, 252, 0, 0, 0},
+		.nature = NATURE_RELAXED,
+		.gender = MON_FEMALE,
+		.ball = ITEM_POKE_BALL,
+    },
 };
 
-const struct TrainerMonNoItemDefaultMoves gTrainerParty_Jody[] = {
+const struct TrainerMonFullControl gTrainerParty_Jody[] = {
     {
-	.iv = 100,
-	.level = 27,
-	.species = SPECIES_ZANGOOSE
-    }
+	.iv = 0,
+	.level = 33,
+	.species = SPECIES_URSARING,
+	.heldItem = ITEM_SILK_SCARF,
+	.ability = 0, // Guts
+	.moves = {MOVE_SWORDS_DANCE, MOVE_CHIP_AWAY, MOVE_FAINT_ATTACK, MOVE_METAL_CLAW},
+		.evs = {0, 252, 0, 0, 0, 0},
+		.nature = NATURE_ADAMANT,
+		.gender = MON_FEMALE,
+		.ball = ITEM_GREAT_BALL,
+    },
 };
 
 const struct TrainerMonNoItemCustomMoves gTrainerParty_Wendy[] = {
@@ -3733,7 +3782,7 @@ const struct TrainerMonFullControl gTrainerParty_Wattson[] = {
 const struct TrainerMonFullControl gTrainerParty_Flannery[] = {
     {
 	.iv = 0,
-	.level = 31,
+	.level = 32,
 	.species = SPECIES_TORKOAL,
 	.heldItem = 0,
 	.ability = 2, // Drought
@@ -3745,7 +3794,7 @@ const struct TrainerMonFullControl gTrainerParty_Flannery[] = {
     },
     {
 	.iv = 0,
-	.level = 31,
+	.level = 32,
 	.species = SPECIES_KANGASKHAN,
 	.heldItem = 0,
 	.ability = 0, // Early Bird
@@ -3757,7 +3806,7 @@ const struct TrainerMonFullControl gTrainerParty_Flannery[] = {
     },
     {
 	.iv = 0,
-	.level = 31,
+	.level = 32,
 	.species = SPECIES_SUNFLORA,
 	.heldItem = ITEM_CHARTI_BERRY,
 	.ability = 2, // Drought
@@ -3769,7 +3818,7 @@ const struct TrainerMonFullControl gTrainerParty_Flannery[] = {
     },
     {
 	.iv = 0,
-	.level = 32,
+	.level = 33,
 	.species = SPECIES_FLAREON,
 	.heldItem = ITEM_SITRUS_BERRY,
 	.ability = 0, // Flash Fire
@@ -3781,25 +3830,55 @@ const struct TrainerMonFullControl gTrainerParty_Flannery[] = {
     },
 };
 
-const struct TrainerMonNoItemCustomMoves gTrainerParty_Norman[] = {
+const struct TrainerMonFullControl gTrainerParty_Norman[] = {
     {
-	.iv = 200,
-	.level = 28,
+	.iv = 0,
+	.level = 33,
 	.species = SPECIES_SLAKING,
-        .moves = MOVE_ENCORE, MOVE_FACADE, MOVE_YAWN, MOVE_FAINT_ATTACK
+	.heldItem = ITEM_CHOPLE_BERRY,
+	.ability = 0, // Truant
+	.moves = {MOVE_HYPER_BEAM, MOVE_FAINT_ATTACK, MOVE_BRICK_BREAK, MOVE_PURSUIT},
+		.evs = {0, 0, 128, 0, 252, 0},
+		.nature = NATURE_QUIET,
+		.gender = MON_MALE,
+		.ball = ITEM_POKE_BALL,
     },
     {
-	.iv = 200,
-	.level = 30,
+	.iv = 0,
+	.level = 34,
+	.species = SPECIES_MEDICHAM,
+	.heldItem = ITEM_LUM_BERRY,
+	.ability = 0, // Pure Power
+	.moves = {MOVE_DRAIN_PUNCH, MOVE_ICE_PUNCH, MOVE_THUNDER_PUNCH, MOVE_FAKE_OUT},
+		.evs = {128, 0, 64, 128, 0, 64},
+		.nature = NATURE_ADAMANT,
+		.gender = MON_MALE,
+		.ball = ITEM_POKE_BALL,
+    },
+    {
+	.iv = 0,
+	.level = 34,
+	.species = SPECIES_GIRAFARIG,
+	.heldItem = ITEM_SITRUS_BERRY,
+	.ability = 0, // Inner Focus
+	.moves = {MOVE_FACADE, MOVE_BITE, MOVE_ZEN_HEADBUTT, MOVE_PSYBEAM},
+		.evs = {0, 128, 0, 128, 128, 0},
+		.nature = NATURE_HASTY,
+		.gender = MON_FEMALE,
+		.ball = ITEM_GREAT_BALL,
+    },
+    {
+	.iv = 0,
+	.level = 35,
 	.species = SPECIES_VIGOROTH,
-        .moves = MOVE_SLASH, MOVE_FAINT_ATTACK, MOVE_FACADE, MOVE_ENCORE
+	.heldItem = ITEM_EVIOLITE,
+	.ability = 0, // Vital Spirit
+	.moves = {MOVE_CHIP_AWAY, MOVE_FAINT_ATTACK, MOVE_SLACK_OFF, MOVE_BULK_UP},
+		.evs = {128, 64, 0, 64, 0, 128},
+		.nature = NATURE_CAREFUL,
+		.gender = MON_MALE,
+		.ball = ITEM_PREMIER_BALL,
     },
-    {
-	.iv = 250,
-	.level = 31,
-	.species = SPECIES_SLAKING,
-        .moves = MOVE_FOCUS_PUNCH, MOVE_SLACK_OFF, MOVE_FACADE, MOVE_FAINT_ATTACK
-    }
 };
 
 const struct TrainerMonNoItemCustomMoves gTrainerParty_Winona[] = {

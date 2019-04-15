@@ -995,7 +995,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_RANDALL] =
     {
-        .partyFlags = 0,
+        .partyFlags = F_TRAINER_PARTY_FULL_CONTROL,
         .trainerClass = TRAINER_CLASS_COOL_TRAINER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
         .trainerPic = TRAINER_PIC_COOL_TRAINER_M,
@@ -1004,12 +1004,12 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = 0x7,
         .partySize = 1,
-        .party = {.NoItemDefaultMoves = gTrainerParty_Randall }
+        .party = {.FullControl = gTrainerParty_Randall }
     },
 
     [TRAINER_PARKER] =
     {
-        .partyFlags = 0,
+        .partyFlags = F_TRAINER_PARTY_FULL_CONTROL,
         .trainerClass = TRAINER_CLASS_COOL_TRAINER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
         .trainerPic = TRAINER_PIC_COOL_TRAINER_M,
@@ -1018,12 +1018,12 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = 0x7,
         .partySize = 1,
-        .party = {.NoItemDefaultMoves = gTrainerParty_Parker }
+        .party = {.FullControl = gTrainerParty_Parker }
     },
 
     [TRAINER_GEORGE] =
     {
-        .partyFlags = 0,
+        .partyFlags = F_TRAINER_PARTY_FULL_CONTROL,
         .trainerClass = TRAINER_CLASS_COOL_TRAINER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
         .trainerPic = TRAINER_PIC_COOL_TRAINER_M,
@@ -1032,12 +1032,12 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = 0x7,
         .partySize = 1,
-        .party = {.NoItemDefaultMoves = gTrainerParty_George }
+        .party = {.FullControl = gTrainerParty_George }
     },
 
     [TRAINER_BERKE] =
     {
-        .partyFlags = 0,
+        .partyFlags = F_TRAINER_PARTY_FULL_CONTROL,
         .trainerClass = TRAINER_CLASS_COOL_TRAINER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
         .trainerPic = TRAINER_PIC_COOL_TRAINER_M,
@@ -1046,7 +1046,7 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = 0x7,
         .partySize = 1,
-        .party = {.NoItemDefaultMoves = gTrainerParty_Berke }
+        .party = {.FullControl = gTrainerParty_Berke }
     },
 
     [TRAINER_CLYDE] =
@@ -1247,7 +1247,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_MARY] =
     {
-        .partyFlags = 0,
+        .partyFlags = F_TRAINER_PARTY_FULL_CONTROL,
         .trainerClass = TRAINER_CLASS_COOL_TRAINER,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_COOL,
         .trainerPic = TRAINER_PIC_COOL_TRAINER_F,
@@ -1256,12 +1256,12 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = 0x7,
         .partySize = 1,
-        .party = {.NoItemDefaultMoves = gTrainerParty_Mary }
+        .party = {.FullControl = gTrainerParty_Mary }
     },
 
     [TRAINER_LORI] =
     {
-        .partyFlags = 0,
+        .partyFlags = F_TRAINER_PARTY_FULL_CONTROL,
         .trainerClass = TRAINER_CLASS_COOL_TRAINER,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_COOL,
         .trainerPic = TRAINER_PIC_COOL_TRAINER_F,
@@ -1270,12 +1270,12 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = 0x7,
         .partySize = 1,
-        .party = {.NoItemDefaultMoves = gTrainerParty_Lori }
+        .party = {.FullControl = gTrainerParty_Lori }
     },
 
     [TRAINER_JODY] =
     {
-        .partyFlags = 0,
+        .partyFlags = F_TRAINER_PARTY_FULL_CONTROL,
         .trainerClass = TRAINER_CLASS_COOL_TRAINER,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_COOL,
         .trainerPic = TRAINER_PIC_COOL_TRAINER_F,
@@ -1284,7 +1284,7 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = 0xb,
         .partySize = 1,
-        .party = {.NoItemDefaultMoves = gTrainerParty_Jody }
+        .party = {.FullControl = gTrainerParty_Jody }
     },
 
     [TRAINER_WENDY] =
@@ -3767,7 +3767,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_NORMAN] =
     {
-        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .partyFlags = F_TRAINER_PARTY_FULL_CONTROL,
         .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_NORMAN,
@@ -3775,8 +3775,8 @@ const struct Trainer gTrainers[] = {
         .items = {0, 0, 0, 0}, //{ITEM_HYPER_POTION, ITEM_HYPER_POTION, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = 0x7,
-        .partySize = 3,
-        .party = {.NoItemCustomMoves = gTrainerParty_Norman }
+        .partySize = 4,
+        .party = {.FullControl = gTrainerParty_Norman }
     },
 
     [TRAINER_WINONA] =

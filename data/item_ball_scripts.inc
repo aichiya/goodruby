@@ -43,7 +43,7 @@ Route110_EventScript_1B14BB:: @ 81B14BB
 	end
 
 Route111_EventScript_1B14C8:: @ 81B14C8
-	giveitem_std ITEM_TM37_HEAT_WAVE, 1, 1
+	giveitem_std ITEM_TM80_ROCK_SLIDE, 1, 1
 	end
 
 Route111_EventScript_1B14D5:: @ 81B14D5
