@@ -67,13 +67,13 @@ RusturfTunnel_Text_19461D:: @ 819461D
 	.string "Wow! You shattered that boulder\n"
 	.string "blocking the way.\p"
 	.string "To show you how much I appreciate it,\n"
-	.string "I'd like you to have this HM.$"
+	.string "I'd like you to have this TM.$"
 
 RusturfTunnel_Text_194693:: @ 8194693
-	.string "That HM contains STRENGTH.\p"
-	.string "If a muscular POKéMON were to learn\n"
-	.string "that, it would be able to move even\l"
-	.string "large boulders.$"
+	.string "That TM contains Bulldoze.\p"
+	.string "We were going to use it to dig\n"
+	.string "this tunnel, but it's far too,\l"
+	.string "loud for the job.$"
 
 RusturfTunnel_Text_194706:: @ 8194706
 	.string "WANDA!\n"
