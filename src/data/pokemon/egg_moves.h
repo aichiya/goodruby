@@ -434,6 +434,8 @@ const u16 gSandshrewEggMoves[] = {
     MOVE_ROCK_SLIDE,
     // Rototiller
     MOVE_SAFEGUARD,
+    MOVE_SPIKES,
+    MOVE_SPIKY_SHIELD,
     MOVE_SWORDS_DANCE,
     0,
 };
@@ -453,6 +455,8 @@ const u16 gSandslashEggMoves[] = {
     MOVE_ROCK_SLIDE,
     // Rototiller
     MOVE_SAFEGUARD,
+    MOVE_SPIKES,
+    MOVE_SPIKY_SHIELD,
     MOVE_SWORDS_DANCE,
     0,
 };
@@ -6377,10 +6381,12 @@ const u16 gLuvdiscEggMoves[] = {
     MOVE_CAPTIVATE,
     MOVE_ENTRAINMENT,
     MOVE_HEAL_PULSE,
+    MOVE_HEALING_WISH,
     MOVE_MUD_SPORT,
     MOVE_SPLASH,
     MOVE_SUPERSONIC,
     MOVE_WATER_SPORT,
+    MOVE_WISH,
     0,
 };
 

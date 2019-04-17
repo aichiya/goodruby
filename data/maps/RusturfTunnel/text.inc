@@ -72,7 +72,7 @@ RusturfTunnel_Text_19461D:: @ 819461D
 RusturfTunnel_Text_194693:: @ 8194693
 	.string "That TM contains Bulldoze.\p"
 	.string "We were going to use it to dig\n"
-	.string "this tunnel, but it's far too,\l"
+	.string "this tunnel, but it's far too\l"
 	.string "loud for the job.$"
 
 RusturfTunnel_Text_194706:: @ 8194706

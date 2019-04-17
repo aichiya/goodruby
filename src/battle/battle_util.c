@@ -2438,6 +2438,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
                 }
                 break;
             case ABILITY_ROUGH_SKIN:
+            case ABILITY_IRON_BARBS:
                 if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
                  && gBattleMons[gBankAttacker].hp != 0
                  && !gProtectStructs[gBankAttacker].confusionSelfDmg
@@ -2983,7 +2984,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 							}
 						}
 					}
-					if (gBattleMons[target2].hp != 0 && !effect)
+					if (gBattleMons[target2].hp != 0 && !effect && (gBattleTypeFlags & BATTLE_TYPE_DOUBLE))
 					{
 						for (j = 0; j < 4 && !effect; j++)
 						{
@@ -3044,7 +3045,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 							}
 						}
 					}
-					if (gBattleMons[target2].hp != 0)
+					if (gBattleMons[target2].hp != 0 && (gBattleTypeFlags & BATTLE_TYPE_DOUBLE))
 					{
 						for (j = 0; j < 4; j++)
 						{

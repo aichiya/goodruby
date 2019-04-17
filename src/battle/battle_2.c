@@ -6269,10 +6269,15 @@ u8 GetWhoStrikesFirst(u8 bank1, u8 bank2, bool8 ignoreMovePriorities)
 		bank1Prio -= 1;
 	else if (gBattleMons[bank1].ability == ABILITY_PRANKSTER && gBattleMoves[bank1Move].moveClass == CLASS_STATUS)
 		bank1Prio += 2;
+	else if (gBattleMons[bank1].ability == ABILITY_TRIAGE && gBattleMoves[bank1Move].flags & F_HEALING)
+		bank1Prio += 6;
+
 	if (gBattleMons[bank2].ability == ABILITY_STALL)
 		bank2Prio -= 1;
 	else if (gBattleMons[bank2].ability == ABILITY_PRANKSTER && gBattleMoves[bank2Move].moveClass == CLASS_STATUS)
 		bank2Prio += 2;
+	else if (gBattleMons[bank2].ability == ABILITY_TRIAGE && gBattleMoves[bank2Move].flags & F_HEALING)
+		bank1Prio += 6;
 
     if (bank1Prio != 0 || bank2Prio != 0)
     {

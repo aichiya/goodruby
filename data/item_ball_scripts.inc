@@ -479,23 +479,23 @@ CaveOfOrigin_B3F_EventScript_1B1A44:: @ 81B1A44
 	end
 
 Route110_TrickHousePuzzle1_EventScript_1B1A51:: @ 81B1A51
-	giveitem_std ITEM_ORANGE_MAIL, 1, 1
+	giveitem_std ITEM_SUPER_POTION, 1, 1
 	end
 
 Route110_TrickHousePuzzle2_EventScript_1B1A5E:: @ 81B1A5E
-	giveitem_std ITEM_HARBOR_MAIL, 1, 1
+	giveitem_std ITEM_FULL_HEAL, 1, 1
 	end
 
 Route110_TrickHousePuzzle2_EventScript_1B1A6B:: @ 81B1A6B
-	giveitem_std ITEM_WAVE_MAIL, 1, 1
+	giveitem_std ITEM_HEART_SCALE, 1, 1
 	end
 
 Route110_TrickHousePuzzle3_EventScript_1B1A78:: @ 81B1A78
-	giveitem_std ITEM_SHADOW_MAIL, 1, 1
+	giveitem_std ITEM_STAR_PIECE, 1, 1
 	end
 
 Route110_TrickHousePuzzle3_EventScript_1B1A85:: @ 81B1A85
-	giveitem_std ITEM_WOOD_MAIL, 1, 1
+	giveitem_std ITEM_HYPER_POTION, 1, 1
 	end
 
 Route110_TrickHousePuzzle4_EventScript_1B1A92:: @ 81B1A92

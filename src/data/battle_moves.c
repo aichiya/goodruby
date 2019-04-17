@@ -937,7 +937,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_HEALING,
 		.moveClass = CLASS_SPECIAL,
     },
 
@@ -950,7 +950,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_HEALING,
 		.moveClass = CLASS_SPECIAL,
     },
 
@@ -1379,7 +1379,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH,
+        .flags = F_AFFECTED_BY_SNATCH | F_HEALING,
 		.moveClass = CLASS_STATUS,
     },
 
@@ -1769,7 +1769,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_SNATCH,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_SNATCH | F_HEALING,
 		.moveClass = CLASS_STATUS,
     },
 
@@ -1808,7 +1808,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_HEALING,
 		.moveClass = CLASS_SPECIAL,
     },
 
@@ -1847,7 +1847,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT | F_HEALING,
 		.moveClass = CLASS_PHYSICAL,
     },
 
@@ -2640,7 +2640,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_HEALING,
 		.moveClass = CLASS_SPECIAL,
     },
 
@@ -2718,7 +2718,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_AFFECTED_BY_PROTECT,
+        .flags = F_AFFECTED_BY_SNATCH | F_AFFECTED_BY_PROTECT | F_HEALING,
 		.moveClass = CLASS_STATUS,
     },
 
@@ -3056,7 +3056,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH,
+        .flags = F_AFFECTED_BY_SNATCH | F_HEALING,
 		.moveClass = CLASS_STATUS,
     },
 
@@ -3069,7 +3069,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH,
+        .flags = F_AFFECTED_BY_SNATCH | F_HEALING,
 		.moveClass = CLASS_STATUS,
     },
 
@@ -3082,7 +3082,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH,
+        .flags = F_AFFECTED_BY_SNATCH | F_HEALING,
 		.moveClass = CLASS_STATUS,
     },
 
@@ -3342,7 +3342,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH,
+        .flags = F_AFFECTED_BY_SNATCH | F_HEALING,
 		.moveClass = CLASS_STATUS,
     },
 
@@ -3563,7 +3563,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_PROTECT,
+        .flags = F_AFFECTED_BY_PROTECT | F_HEALING,
 		.moveClass = CLASS_STATUS,
     },
 
@@ -3953,7 +3953,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH,
+        .flags = F_AFFECTED_BY_SNATCH | F_HEALING,
 		.moveClass = CLASS_STATUS,
     },
 
@@ -5084,7 +5084,7 @@ const struct BattleMove gBattleMoves[] = {
 		.secondaryEffectChance = 0,
 		.target = TARGET_USER,
 		.priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH,
+        .flags = F_AFFECTED_BY_SNATCH | F_HEALING,
 		.moveClass = CLASS_STATUS,
 	},
 	
@@ -5149,7 +5149,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT | F_HEALING,
 		.moveClass = CLASS_SPECIAL,
     },
 
@@ -5214,7 +5214,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
+        .flags = F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_HEALING,
 		.moveClass = CLASS_STATUS,
     },
 
@@ -5227,7 +5227,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH,
+        .flags = F_AFFECTED_BY_SNATCH | F_HEALING,
 		.moveClass = CLASS_STATUS,
     },
 
@@ -6657,7 +6657,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT | F_HEALING,
 		.moveClass = CLASS_PHYSICAL,
     },
 

@@ -151,4 +151,6 @@ gAbilityNames:: @ 81FA248
     .string "PIXILATE$", 13
     .string "MOTOR DRIVE$", 13
     .string "Fur Coat$", 13
+    .string "Iron Barbs$", 13
+    .string "Triage$", 13
 

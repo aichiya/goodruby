@@ -439,6 +439,9 @@ gAbilityDescription_Competitive:
 gAbilityDescription_FurCoat:
 	.string "Doubles Defense.$"
 
+gAbilityDescription_Triage:
+	.string "Healing moves get priority.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -594,3 +597,5 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
     .4byte gAbilityDescription_FurCoat
+    .4byte gAbilityDescription_RoughSkin
+    .4byte gAbilityDescription_Triage

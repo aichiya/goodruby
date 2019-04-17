@@ -443,8 +443,7 @@ struct BattleMove
     u8 secondaryEffectChance;
     u8 target;
     s8 priority;
-    u8 flags;
-	u8 filler1;
+    u16 flags;
 	u8 moveClass;
 	u8 filler2;
 };

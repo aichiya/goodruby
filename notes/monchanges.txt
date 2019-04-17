@@ -1,37 +1,73 @@
-Liberty:
-BEAUTIFY: HA Rivalry becomes Intimidate
-DUSTOX: HA CompoundEyes becomes Filter
+TYPE CHANGES:
+SUNFLORA: Grass -> Grass/Fire.
+LUVDISC: Water -> Water/Fairy.
+VOLBEAT: Bug -> Bug/Electric.
+ILLUMISE: Bug -> Bug/Fairy.
 
-Classic:
-PIDGEY: Learns all moves before Whirlwind earlier, learns Air Cutter at 13
-PSYDUCK: Now has access to Nasty Plot and Slack Off as egg moves.
-KRABBY: Learns most moves at different levels, no longer learns Stomp, gains several moves by level-up
-HITMONCHAN: Learns Drain Punch by relearner
-OMANYTE: Level-up movepool re-arranged.
-KABUTO: Level-up movepool re-arranged. Learns Leech Life.
-LEDIAN: Adjust early move positions, remove Tackle, add Air Cutter and Drain Punch. Swarm replaced with Magic Guard.
-SUNFLORA: Now Grass/Fire. Chlorophyll -> Flash Fire, HA Early Bird -> Drought. Learns Flame Burst on evolution.
-          Learns Fire Spin instead of Bullet Seed. Learns Inferno. Learns all Fire TMs except Fire Punch.
-MISDREAVUS: Adjust early move positions, add Hyper Voice.
-BEAUTIFLY: Learns Mega Drain and Giga Drain earlier, loses Absorb, now learns Leech Life. HA Rivalry -> Intimidate.
+
+ABILITY AND STAT CHANGES:
+SANDSHREW, SANDSLASH: Sandshrew gains Anticipation. Sandslash gains Iron Barbs.
+RAPIDASH: Base Speed up from 105 to 115.
+LEDYBA, LEDIAN: Swarm replaced with Magic Guard.
+SUNFLORA: Chlorophyll -> Flash Fire, HA Early Bird -> Drought.
+BEAUTIFLY: HA Rivalry -> Intimidate.
 DUSTOX: HA CompoundEyes -> Filter.
-SKITTY, DELCATTY: Normalize -> Wonder Skin, Skitty's HA Wonder Skin -> Olbivious, Delcatty's HA Wonder Skin -> Fur Coat.
+SKITTY, DELCATTY: Normalize -> Wonder Skin, Skitty's HA Wonder Skin -> Oblivious, Delcatty's HA Wonder Skin -> Fur Coat.
 WINGULL, PELIPPER: Secondary abilities Hydration/Drizzle are switched with hidden ability Rain Dish
 TORKOAL: Secondary ability Drought is switched with hidden ability Shell Armor
 NUMEL: Secondary ability Simple is replaced with Oblivious
+LUVDISC: Base stats up to 43/40/75/70/85/117, Hydration is now secondary ability, gained HA Triage
+
+
+MOVEPOOL CHANGES:
+PIDGEY: Learns all moves before Whirlwind earlier, learns Air Cutter at 13
+SANDSHREW: Now has access to Spikes and Spiky Shield as egg moves.
+PSYDUCK: Now has access to Nasty Plot and Slack Off as egg moves.
+KRABBY: Learns most moves at different levels, no longer learns Stomp, gains several moves by level-up
+VOLTORB, ELECTRODE: Gains TM50 Overheat. Learns Nasty Plot instead of Gyro Ball.
+HITMONCHAN: Learns Drain Punch by relearner
+OMANYTE: Level-up movepool re-arranged.
+KABUTO: Level-up movepool re-arranged. Learns Leech Life.
+LEDYBA: Adjust early move positions, add Air Cutter.
+HOPPIP: Learns many moves significantly earlier. Jumpluff learns final level-up move at 55 (down from 69).
+SUNFLORA: Learns Flame Burst on evolution. Learns Fire Spin instead of Bullet Seed. Learns Inferno. Learns most Fire TMs.
+MISDREAVUS: Adjust early move positions, add Hyper Voice.
+BEAUTIFLY: Learns Mega Drain and Giga Drain earlier, loses Absorb, now learns Leech Life.
+LUVDISC: Gains Lovely Kiss by level, gains Wish and Healing Wish as an egg move. Gains TM07 Heal Bell and TM85 Dazzling Gleam.
+VOLBEAT: Gains TM04 Calm Mind, TM72 Volt Switch, and TM74 Wild Charge.
+ILLUMISE: Learns Extrasensory instead of Zen Headbutt. Learns Moonblast instead of Play Rough. Gains TM04 Calm Mind, TM72 Volt Switch.
 ANORITH: Learns Aqua Tail on evolution.
 LILEEP: Level-up movepool re-arranged. Learns Acid Spray on evolution.
 
 
+EXPERIENCE CHANGES:
+All pokemon families in Erratic and Fluctuating experience groups have been moved to other groups as follows:
+NINCADA: Erratic -> Medium Fast
+FEEBAS: Erratic -> Slow
+SWABLU: Erratic -> Slow
+CLAMPERL: Erratic -> Medium Fast
+ZANGOOSE: Erratic -> Medium Fast
+VOLBEAT: Erratic -> Fast
+LILEEP: Erratic -> Medium Fast
+ANORITH: Erratic -> Medium Fast
+SHROOMISH: Fluctuating -> Medium Slow
+WAILMER: Fluctuating -> Slow
+CORPHISH: Fluctuating -> Medium Slow
+MAKUHITA: Fluctuating -> Medium Slow
+GULPIN: Fluctuating -> Medium Slow
+SEVIPER: Fluctuating -> Medium Fast
+ILLUMISE: Fluctuating -> Fast
+
+
 MOVE CHANGES:
-Crabhammer: Gains 10% chance to lower Defense
+Crabhammer: Gains 10% chance to lower Defense [todo]
 
 
 TODO:
 
 Venusaur: (no change)
 Charizard: ???
-Blastoise: Water/Steel
+Blastoise: ???
 Butterfree: Add Air Slash, Hurricane
 Beedrill: ???
 Pidgeot: ???
@@ -174,7 +210,7 @@ Claydol: ???
 Torkoal: (no changes)
 Sableye: (no changes)
 Whiscash: ???
-Luvdisc: Water/Fairy, +10 Atk, +20 Def/SDef/Speed, +50 SAtk, HA Triage, Wish, Healing Wish, Heal Bell, Dazzling Gleam, Lovely Kiss
+Luvdisc: Water/Fairy, +10 Atk, +20 Def/SDef/Speed, +30 SAtk, HA Triage, Wish, Healing Wish, Heal Bell, Dazzling Gleam, Lovely Kiss
 Crawdaunt: (no changes)
 Milotic: (no changes)
 Sharpedo: (no changes)

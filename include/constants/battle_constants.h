@@ -223,6 +223,7 @@
 #define F_AFFECTED_BY_KINGS_ROCK  (1 << 5)
 #define F_SHEER_FORCE             (1 << 6)
 #define F_PUNCH                   (1 << 7)
+#define F_HEALING                 (1 << 8)
 
 #define CLASS_PHYSICAL 0
 #define CLASS_SPECIAL 1
