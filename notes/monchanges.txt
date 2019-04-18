@@ -16,6 +16,7 @@ SKITTY, DELCATTY: Normalize -> Wonder Skin, Skitty's HA Wonder Skin -> Oblivious
 WINGULL, PELIPPER: Secondary abilities Hydration/Drizzle are switched with hidden ability Rain Dish
 TORKOAL: Secondary ability Drought is switched with hidden ability Shell Armor
 NUMEL: Secondary ability Simple is replaced with Oblivious
+SPINDA: Base stats up to 70/70/70/70/70/70.
 LUVDISC: Base stats up to 43/40/75/70/85/117, Hydration is now secondary ability, gained HA Triage
 
 
@@ -36,6 +37,7 @@ BEAUTIFLY: Learns Mega Drain and Giga Drain earlier, loses Absorb, now learns Le
 LUVDISC: Gains Lovely Kiss by level, gains Wish and Healing Wish as an egg move. Gains TM07 Heal Bell and TM85 Dazzling Gleam.
 VOLBEAT: Gains TM04 Calm Mind, TM72 Volt Switch, and TM74 Wild Charge.
 ILLUMISE: Learns Extrasensory instead of Zen Headbutt. Learns Moonblast instead of Play Rough. Gains TM04 Calm Mind, TM72 Volt Switch.
+SPINDA: Gains TM49 Superpower and TM50 Overheat. Learns Hammer Arm as an egg move.
 ANORITH: Learns Aqua Tail on evolution.
 LILEEP: Level-up movepool re-arranged. Learns Acid Spray on evolution.
 

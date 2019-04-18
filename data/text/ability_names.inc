@@ -139,7 +139,7 @@ gAbilityNames:: @ 81FA248
 	.string "Sap Sipper$", 13
 	.string "Prankster$", 13
 	.string "Telepathy$", 13
-	.string "CONTRARY$", 13
+	.string "Contrary$", 13
 	.string "PICKPOCKET$", 13
 	.string "HONEY GATHER$", 13
 	.string "Moody$", 13

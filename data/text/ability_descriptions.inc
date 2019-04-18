@@ -409,6 +409,9 @@ gAbilityDescription_Prankster:
 gAbilityDescription_Telepathy:
 	.string "Avoids ally moves.$"
 
+gAbilityDescription_Contrary:
+	.string "Invert stat changes.$"
+
 gAbilityDescription_Moody:
 	.string "Stats fluctuate.$"
 
@@ -585,7 +588,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_SapSipper
 	.4byte gAbilityDescription_Prankster
 	.4byte gAbilityDescription_Telepathy
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Contrary
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Unimplemented
 	.4byte gAbilityDescription_Moody
