@@ -428,6 +428,9 @@ enum
     BATTLE_TEXT_WildAppeared4,
     BATTLE_TEXT_ResistBerry,
     BATTLE_TEXT_DefiantProc,
+    BATTLE_TEXT_Higher,
+    BATTLE_TEXT_Lower,
+    BATTLE_TEXT_BoostsAttack,
 };
 
 const u8 BattleText_UnknownString[] = _("{STRING 33}");
@@ -485,8 +488,8 @@ const u8 BattleText_Paralyzed3[] = _("{ATTACKING_MON} is paralyzed!\nIt can't mo
 const u8 BattleText_AlreadyParalyzed[] = _("{DEFENDING_MON} is\nalready paralyzed!");
 const u8 BattleText_ParalysisHealed[] = _("{DEFENDING_MON} was\nhealed of paralysis!");
 const u8 BattleText_DreamEaten[] = _("{DEFENDING_MON}'s\ndream was eaten!");
-const u8 BattleText_AttackingStatNoHigher[] = _("{ATTACKING_MON}'s {STRING 0}\nwon't go higher!");
-const u8 BattleText_DefendingStatNoHigher[] = _("{DEFENDING_MON}'s {STRING 0}\nwon't go lower!");
+const u8 BattleText_AttackingStatNoHigher[] = _("{ATTACKING_MON}'s {STRING 0}\nwon't go {STRING 1}");
+const u8 BattleText_DefendingStatNoHigher[] = _("{DEFENDING_MON}'s {STRING 0}\nwon't go {STRING 1}");
 const u8 BattleText_StoppedWorking[] = _("Your team's {STRING 0}\nstopped working!");
 const u8 BattleText_StoppedWorking2[] = _("The foe's {STRING 0}\nstopped working!");
 const u8 BattleText_Confused[] = _("{ATTACKING_MON} is\nconfused!");
@@ -986,6 +989,9 @@ const u8 BattleText_TrickRoomEnd[] = _("The twisted dimensions\nreturned to norm
 const u8 BattleText_WildAppeared4[] = _("Wild {STRING 3} was hooked!\p");
 const u8 BattleText_ResistBerry[] = _("{DEFENDING_MON} ate its {STRING 19}\nto weaken the damage taken!");
 const u8 BattleText_DefiantProc[] = _("{DEFENDING_MON}'s {STRING 22}\nsharply raised its {STRING 0}!");
+const u8 BattleText_Higher[] = _("higher!");
+const u8 BattleText_Lower[] = _("lower!");
+const u8 BattleText_BoostsAttack[] = _("{STRING 16}'s {STRING 23}\nboosts {DEFENDING_MON}'s Attack!");
 
 
 const u8 *const gUnknown_08400F58[] =
@@ -1437,6 +1443,9 @@ const u8 *const gBattleStringsTable[] =
     BattleText_WildAppeared4,
     BattleText_ResistBerry,
     BattleText_DefiantProc,
+    BattleText_Higher,
+    BattleText_Lower,
+    BattleText_BoostsAttack,
 };
 
 // below are lists of battle string enums and NOT pointers to the strings.

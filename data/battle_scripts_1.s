@@ -4248,6 +4248,7 @@ BattleScript_1D97A1: @ 81D97A1
 	jumpifbyte GREATER_THAN, cMULTISTRING_CHOOSER, 1, BattleScript_1D97E4
 	setgraphicalstatchangevalues
 	playanimation TARGET, B_ANIM_STATS_CHANGE, sANIM_ARG1
+    jumpifability TARGET, ABILITY_CONTRARY, BattleScript_IntimIntoContraryMsg
 	printstring BATTLE_TEXT_CutsAttack
 	waitmessage 64
     special 0x43
@@ -4264,6 +4265,12 @@ BattleScript_1D97F0: @ 81D97F0
 	printstring BATTLE_TEXT_PreventedOther
 	waitmessage 64
 	goto BattleScript_1D97E4
+
+BattleScript_IntimIntoContraryMsg:
+	printstring BATTLE_TEXT_BoostsAttack
+	waitmessage 64
+    special 0x43
+    goto BattleScript_1D97E4
 
 BattleScript_DroughtActivates:: @ 81D97FE
 	pause 32

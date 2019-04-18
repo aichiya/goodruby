@@ -425,3 +425,6 @@
     enum BATTLE_TEXT_WildAppeared4
     enum BATTLE_TEXT_ResistBerry
     enum BATTLE_TEXT_DefiantProc
+    enum BATTLE_TEXT_Higher
+    enum BATTLE_TEXT_Lower
+    enum BATTLE_TEXT_BoostsAttack
