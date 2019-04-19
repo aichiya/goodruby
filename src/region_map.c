@@ -151,6 +151,7 @@ const struct RegionMapLocation gRegionMapLocations[] =
     {19, 10, 1, 1, gMapName_SkyPillar},
     { 0,  0, 1, 1, gMapName_SecretBase},
     { 1,  3, 1, 2, gMapName_GnarledRidge},
+    { 4,  7, 1, 1, gMapName_Route135},
     { 0,  0, 1, 1, gMapName_None},
 };
 

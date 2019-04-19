@@ -63,6 +63,7 @@
 	.include "data/maps/Route132/events.inc"
 	.include "data/maps/Route133/events.inc"
 	.include "data/maps/Route134/events.inc"
+	.include "data/maps/Route135/events.inc"
 	.include "data/maps/Underwater1/events.inc"
 	.include "data/maps/Underwater2/events.inc"
 	.include "data/maps/Underwater3/events.inc"

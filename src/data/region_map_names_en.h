@@ -48,6 +48,7 @@ const u8 gMapName_Route131[] = _("Route 131");
 const u8 gMapName_Route132[] = _("Route 132");
 const u8 gMapName_Route133[] = _("Route 133");
 const u8 gMapName_Route134[] = _("Route 134");
+const u8 gMapName_Route135[] = _("Route 135");
 const u8 gMapName_Underwater[] = _("Underwater");
 const u8 gMapName_GraniteCave[] = _("Granite Cave");
 const u8 gMapName_MtChimney[] = _("Mt. Chimney");

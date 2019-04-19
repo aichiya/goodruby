@@ -89,7 +89,8 @@
 #define MAPSEC_SKY_PILLAR            0x55
 #define MAPSEC_SECRET_BASE           0x56
 #define MAPSEC_GNARLED_RIDGE         0x57
-#define MAPSEC_DYNAMIC               0x58
-#define MAPSEC_NOTHING               0x59
+#define MAPSEC_ROUTE_135             0x58
+#define MAPSEC_DYNAMIC               0x59
+#define MAPSEC_NOTHING               0x5A
 
 #endif // GUARD_REGIONMAPSEC_H

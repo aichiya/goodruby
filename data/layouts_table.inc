@@ -333,3 +333,4 @@ gMapLayouts:: @ 8304F18
 	.4byte SkyPillar_5F_Layout
 	.4byte SkyPillar_Top_Layout
     .4byte GnarledRidge_Layout
+    .4byte Route135_Layout

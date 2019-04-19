@@ -48,6 +48,7 @@
 	.include "data/maps/Route132/header.inc"
 	.include "data/maps/Route133/header.inc"
 	.include "data/maps/Route134/header.inc"
+	.include "data/maps/Route135/header.inc"
 	.include "data/maps/Underwater1/header.inc"
 	.include "data/maps/Underwater2/header.inc"
 	.include "data/maps/Underwater3/header.inc"

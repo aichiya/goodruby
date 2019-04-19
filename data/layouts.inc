@@ -331,3 +331,4 @@
 	.include "data/layouts/SkyPillar_5F/layout.inc"
 	.include "data/layouts/SkyPillar_Top/layout.inc"
     .include "data/layouts/GnarledRidge/layout.inc"
+    .include "data/layouts/Route135/layout.inc"
