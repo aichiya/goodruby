@@ -381,7 +381,7 @@ Route110_TrickHouseEntrance_EventScript_1613FA:: @ 81613FA
 	end
 
 Route110_TrickHouseEntrance_EventScript_161426:: @ 8161426
-	giveitem_std ITEM_HARD_STONE
+	giveitem_std ITEM_TM92_TRICK_ROOM
 	compare RESULT, 1
 	goto_if_eq Route110_TrickHouseEntrance_EventScript_161502
 	compare RESULT, 0

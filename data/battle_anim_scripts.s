@@ -15692,4 +15692,29 @@ Move_GRASS_KNOT:
 	end
 
 Move_TRICK_ROOM:
-    end
+	loadspritegfx ANIM_TAG_EYE_SPARKLE
+	monbg ANIM_BATTLER_ATTACKER
+	monbg ANIM_BATTLER_TARGET
+	monbg ANIM_BATTLER_ATK_PARTNER
+	monbg ANIM_BATTLER_DEF_PARTNER
+	call SetPsychicBackground
+    delay 10
+    
+	createsprite gBattleAnimSpriteTemplate_83D7B94, ANIM_BATTLER_ATTACKER, 0, 16, -8
+	playsewithpan SE_W197, SOUND_PAN_ATTACKER
+	waitforvisualfinish
+    delay 3
+    
+	createvisualtask sub_80E2324, 2, 257, 257, 257
+	playsewithpan SE_W129, SOUND_PAN_ATTACKER
+	setarg ARG_RET_ID, -1
+    delay 60
+	createvisualtask sub_80E2324, 2, 257, 257, 257
+    
+	call BackgroundRestore
+	waitforvisualfinish
+	clearmonbg ANIM_BATTLER_ATTACKER
+	clearmonbg ANIM_BATTLER_TARGET
+	clearmonbg ANIM_BATTLER_ATK_PARTNER
+	clearmonbg ANIM_BATTLER_DEF_PARTNER
+	end

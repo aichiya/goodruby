@@ -151,6 +151,11 @@ VICTORIA: Nidorina Lv22, Weepinbell Lv22
 VIVI: Kirlia Lv22, Chimecho Lv22
 VICKY: Houndour Lv22, Sableye Lv22
 
+TRICK HOUSE 2
+TED: Numel Lv23
+PAUL: Paras Lv22, Mime Jr. Lv22
+GEORGIA: Flaaffy Lv22, Butterfree Lv22
+
 ROUTE 111 SOUTH:
 GABBY & TY: Minun Lv22, Eevee Lv22
 IRENE: Teddiursa Lv23
@@ -221,6 +226,11 @@ Torkoal Lv32: Overheat, Bulldoze, Body Slam, Sunny Day
 Kangaskhan Lv32: Chip Away, Fire Punch, ThunderPunch, Drain Punch
 Sunflora@Charti Lv32: Overheat, Giga Drain, Leech Seed, Sunny Day
 Flareon@Sitrus Lv33: Overheat, Will-o-wisp, Secret Power, Rest
+
+TRICK HOUSE 3
+JUSTIN: Houndour Lv30, Kecleon Lv31
+MARTHA: Smoochum Lv30, Azumarill Lv31
+ALAN: Nosepass Lv30, Machoke Lv30, Sudowoodo Lv30
 
 ROUTE 111 DESERT:
 CLIFF: Gligar Lv31, Ledian Lv31

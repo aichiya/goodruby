@@ -2864,9 +2864,14 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Shane[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Justin[] = {
     {
 	.iv = 0,
-	.level = 24,
+	.level = 30,
+	.species = SPECIES_HOUNDOUR
+    },
+    {
+	.iv = 0,
+	.level = 31,
 	.species = SPECIES_KECLEON
-    }
+    },
 };
 
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Ethan1[] = {
@@ -3979,27 +3984,22 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Jerry1[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Ted[] = {
     {
 	.iv = 10,
-	.level = 17,
-	.species = SPECIES_RALTS
+	.level = 23,
+	.species = SPECIES_NUMEL
     }
 };
 
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Paul[] = {
     {
 	.iv = 10,
-	.level = 15,
-	.species = SPECIES_NUMEL
+	.level = 22,
+	.species = SPECIES_PARAS
     },
     {
 	.iv = 10,
-	.level = 15,
-	.species = SPECIES_ODDISH
+	.level = 22,
+	.species = SPECIES_MIME_JR
     },
-    {
-	.iv = 10,
-	.level = 15,
-	.species = SPECIES_WINGULL
-    }
 };
 
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Jerry2[] = {
@@ -4075,13 +4075,13 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Karen1[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Georgia[] = {
     {
 	.iv = 10,
-	.level = 16,
-	.species = SPECIES_SHROOMISH
+	.level = 22,
+	.species = SPECIES_FLAAFFY
     },
     {
 	.iv = 10,
-	.level = 16,
-	.species = SPECIES_BEAUTIFLY
+	.level = 22,
+	.species = SPECIES_BUTTERFREE
     }
 };
 
@@ -6683,13 +6683,13 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Nancy[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Martha[] = {
     {
 	.iv = 0,
-	.level = 23,
-	.species = SPECIES_SKITTY
+	.level = 30,
+	.species = SPECIES_SMOOCHUM
     },
     {
 	.iv = 0,
-	.level = 23,
-	.species = SPECIES_SWABLU
+	.level = 31,
+	.species = SPECIES_AZUMARILL
     }
 };
 
@@ -9047,18 +9047,18 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Lucas1[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Alan[] = {
     {
 	.iv = 0,
-	.level = 22,
-	.species = SPECIES_GEODUDE
-    },
-    {
-	.iv = 0,
-	.level = 22,
+	.level = 30,
 	.species = SPECIES_NOSEPASS
     },
     {
 	.iv = 0,
-	.level = 22,
-	.species = SPECIES_GRAVELER
+	.level = 30,
+	.species = SPECIES_MACHOKE
+    },
+    {
+	.iv = 0,
+	.level = 30,
+	.species = SPECIES_SUDOWOODO
     }
 };
 

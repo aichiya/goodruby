@@ -6204,6 +6204,13 @@ u8 GetWhoStrikesFirst(u8 bank1, u8 bank2, bool8 ignoreMovePriorities)
 
     bank1AdjustedSpeed = GetModifiedSpeed(bank1);
 	bank2AdjustedSpeed = GetModifiedSpeed(bank2);
+    
+    if (gWishFutureKnock.trickRoomDuration)
+    {
+        u32 buffer = bank1AdjustedSpeed;
+        bank1AdjustedSpeed = bank2AdjustedSpeed;
+        bank2AdjustedSpeed = buffer;
+    }
 
     if (gBattleMons[bank1].item == ITEM_ENIGMA_BERRY)
     {
