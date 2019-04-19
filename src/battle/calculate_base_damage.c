@@ -305,7 +305,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         defense *= 2;
     if (attackerHoldEffect == HOLD_EFFECT_THICK_CLUB && (attacker->species == SPECIES_CUBONE || attacker->species == SPECIES_MAROWAK))
         attack *= 2;
-    if (defenderHoldEffect == HOLD_EFFECT_EVIOLITE && gEvolutionTable[defender->species][0].method == 0)
+    if (defenderHoldEffect == HOLD_EFFECT_EVIOLITE && gEvolutionTable[defender->species][0].method != 0)
     {
         defense = (defense * 3) / 2;
         spDefense = (spDefense * 3) / 2;
