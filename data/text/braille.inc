@@ -221,3 +221,44 @@ AncientTomb_Braille_1C552E:: @ 81C552E
 	.braille "HOPE AND LOVE,\n"
 	.braille "AIM TO THE SKY\n"
 	.braille "IN THE MIDDLE.$"
+
+GraniteCave_B3F_Braille::
+	.byte 0
+	.byte 2
+	.byte 29
+	.byte 17
+	.byte 1
+	.byte 3
+    .braille "OBEY THE PATH\n"
+    .braille "OF THE SUN\n"
+    .braille "WRITTEN BELOW.$"
+
+GraniteCave_B4F_BrailleMorning::
+	.byte 0
+	.byte 4
+	.byte 29
+	.byte 15
+	.byte 2
+	.byte 7
+    .braille "IN MORNING,\n"
+    .braille "CHARGE RIGHT.$"
+
+GraniteCave_B4F_BrailleDay::
+	.byte 0
+	.byte 4
+	.byte 29
+	.byte 15
+	.byte 2
+	.byte 7
+    .braille "IN THE DAY,\n"
+    .braille "UP, THEN UP.$"
+
+GraniteCave_B4F_BrailleNight::
+	.byte 0
+	.byte 4
+	.byte 29
+	.byte 15
+	.byte 2
+	.byte 7
+    .braille "AT NIGHT,\n"
+    .braille "USE CUT.$"

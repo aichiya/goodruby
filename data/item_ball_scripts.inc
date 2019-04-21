@@ -282,6 +282,18 @@ GraniteCave_B2F_EventScript_1B17C7:: @ 81B17C7
 	giveitem_std ITEM_RARE_CANDY, 1, 1
 	end
 
+GraniteCave_B3F_EventScript_HardStone::
+	giveitem_std ITEM_HARD_STONE, 1, 1
+	end
+
+GraniteCave_B3F_EventScript_TM40::
+	giveitem_std ITEM_TM40_AERIAL_ACE, 1, 1
+	end
+
+GraniteCave_B3F_EventScript_Calcium::
+	giveitem_std ITEM_CALCIUM, 1, 1
+	end
+
 JaggedPass_EventScript_1B17D4:: @ 81B17D4
 	giveitem_std ITEM_BURN_HEAL, 1, 1
 	end

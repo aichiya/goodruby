@@ -217,6 +217,29 @@ bool32 BrailleWait_CheckButtonPress(void)
         return FALSE;
 }
 
+bool8 ShouldDoBrailleCutEffect(void)
+{
+    if (!FlagGet(FLAG_TEMP_F) && (gSaveBlock1.location.mapGroup == MAP_GROUP(GRANITE_CAVE_B3F) && gSaveBlock1.location.mapNum == MAP_NUM(GRANITE_CAVE_B3F)))
+    {
+        if (gSaveBlock1.pos.x == 17 && gSaveBlock1.pos.y == 15)
+            return TRUE;
+    }
+
+    return FALSE;
+}
+
+void DoBrailleCutEffect(void)
+{
+    FieldEffectActiveListRemove(FLDEFF_CUT_GRASS);
+    MapGridSetMetatileIdAt(24, 20, 513);
+    MapGridSetMetatileIdAt(25, 20, 513);
+    MapGridSetMetatileIdAt(26, 20, 513);
+    DrawWholeMapView();
+    PlaySE(SE_BAN);
+    FlagSet(FLAG_TEMP_F);
+    ScriptContext2_Disable();
+}
+
 void DoSealedChamberShakingEffect1(void)
 {
     u8 taskId = CreateTask(SealedChamberShakingEffect, 0x9);

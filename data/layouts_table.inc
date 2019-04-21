@@ -334,3 +334,6 @@ gMapLayouts:: @ 8304F18
 	.4byte SkyPillar_Top_Layout
     .4byte GnarledRidge_Layout
     .4byte Route135_Layout
+    .4byte GraniteCave_B3F_Layout
+    .4byte GraniteCave_B4F_Layout
+    .4byte GraniteCave_Stairs_Layout

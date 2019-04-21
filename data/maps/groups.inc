@@ -390,6 +390,9 @@ gMapGroup24:: @ 83082F8
 	.4byte ShoalCave_LowTideIceRoom
 	.4byte SkyPillar_5F
 	.4byte SkyPillar_Top
+	.4byte GraniteCave_B3F
+	.4byte GraniteCave_B4F
+	.4byte GraniteCave_Stairs
 
 	.align 2
 gMapGroup25:: @ 8308450

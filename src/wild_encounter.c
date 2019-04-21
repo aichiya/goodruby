@@ -437,13 +437,40 @@ const struct WildPokemonInfo GraniteCave_B2F_LandMonsInfo = {10, GraniteCave_B2F
 
 const struct WildPokemon GraniteCave_B2F_RockSmashMons [] =
 {
-    {10, 15, SPECIES_GEODUDE},
-    {10, 20, SPECIES_NOSEPASS},
-    {5, 10, SPECIES_GEODUDE},
-    {15, 20, SPECIES_GEODUDE},
-    {15, 20, SPECIES_GEODUDE},
+    {15, 20, SPECIES_NOSEPASS},
+    {15, 20, SPECIES_NOSEPASS},
+    {15, 20, SPECIES_NOSEPASS},
+    {15, 20, SPECIES_NOSEPASS},
+    {15, 20, SPECIES_NOSEPASS},
 };
-const struct WildPokemonInfo GraniteCave_B2F_RockSmashMonsInfo = {20, GraniteCave_B2F_RockSmashMons};
+const struct WildPokemonInfo GraniteCave_B2F_RockSmashMonsInfo = {90, GraniteCave_B2F_RockSmashMons};
+
+const struct WildPokemon GraniteCave_B4F_LandMons [] =
+{
+    {15, 17, SPECIES_ZUBAT},
+    {15, 17, SPECIES_NOSEPASS},
+    {15, 17, SPECIES_KRABBY},
+    {15, 17, SPECIES_SEEL},
+    {15, 17, SPECIES_SABLEYE},
+    {15, 17, SPECIES_MAWILE},
+    {15, 17, SPECIES_ZUBAT},
+    {15, 17, SPECIES_NOSEPASS},
+    {15, 17, SPECIES_ONIX},
+    {15, 17, SPECIES_ONIX},
+    {15, 17, SPECIES_ONIX},
+    {15, 17, SPECIES_ONIX},
+};
+const struct WildPokemonInfo GraniteCave_B4F_LandMonsInfo = {10, GraniteCave_B4F_LandMons};
+
+const struct WildPokemon GraniteCave_B4F_RockSmashMons [] =
+{
+    {15, 20, SPECIES_SHUCKLE},
+    {15, 20, SPECIES_NOSEPASS},
+    {15, 20, SPECIES_NOSEPASS},
+    {15, 20, SPECIES_NOSEPASS},
+    {15, 20, SPECIES_NOSEPASS},
+};
+const struct WildPokemonInfo GraniteCave_B4F_RockSmashMonsInfo = {90, GraniteCave_B4F_RockSmashMons};
 
 const struct WildPokemon GraniteCave_StevensRoom_LandMons [] =
 {
@@ -2841,6 +2868,30 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .fishingMonsInfo = NULL,
     },
     {
+        .mapGroup = MAP_GROUP(GRANITE_CAVE_B3F),
+        .mapNum = MAP_NUM(GRANITE_CAVE_B3F),
+        .landMonsInfo = NULL,
+        .waterMonsInfo = NULL,
+        .rockSmashMonsInfo = &GraniteCave_B4F_RockSmashMonsInfo,
+        .fishingMonsInfo = NULL,
+    },
+    {
+        .mapGroup = MAP_GROUP(GRANITE_CAVE_B4F),
+        .mapNum = MAP_NUM(GRANITE_CAVE_B4F),
+        .landMonsInfo = &GraniteCave_B4F_LandMonsInfo,
+        .waterMonsInfo = NULL,
+        .rockSmashMonsInfo = &GraniteCave_B4F_RockSmashMonsInfo,
+        .fishingMonsInfo = NULL,
+    },
+    {
+        .mapGroup = MAP_GROUP(GRANITE_CAVE_STAIRS),
+        .mapNum = MAP_NUM(GRANITE_CAVE_STAIRS),
+        .landMonsInfo = &GraniteCave_B4F_LandMonsInfo,
+        .waterMonsInfo = NULL,
+        .rockSmashMonsInfo = &GraniteCave_B4F_RockSmashMonsInfo,
+        .fishingMonsInfo = NULL,
+    },
+    {
         .mapGroup = MAP_GROUP(GRANITE_CAVE_STEVENS_ROOM),
         .mapNum = MAP_NUM(GRANITE_CAVE_STEVENS_ROOM),
         .landMonsInfo = &GraniteCave_StevensRoom_LandMonsInfo,
@@ -3686,9 +3737,9 @@ static u8 ChooseWildMonIndex_Water(void)
 {
     u8 rand = Random() % 100;
 
-    if (rand < 60)                  //60% chance
+    if (rand < 50)                  //50% chance
         return 0;
-    if (rand >= 60 && rand < 90)    //30% chance
+    if (rand >= 50 && rand < 90)    //40% chance
         return 1;
     if (rand >= 90 && rand < 95)    //5% chance
         return 2;

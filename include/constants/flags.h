@@ -751,6 +751,9 @@
 #define FLAG_ITEM_MAGMA_HIDEOUT_B1F_3       0x46E
 #define FLAG_ITEM_ROUTE104_4                0x46F
 #define FLAG_ITEM_GNARLED_RIDGE_1           0x470
+#define FLAG_ITEM_GRANITE_CAVE_B3F_1        0x471
+#define FLAG_ITEM_GRANITE_CAVE_B3F_2        0x472
+#define FLAG_ITEM_GRANITE_CAVE_B3F_3        0x473
 
 #define FLAG_DEFEATED_RUSTBORO_GYM          0x4B1
 

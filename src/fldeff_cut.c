@@ -14,6 +14,7 @@
 #include "sprite.h"
 #include "task.h"
 #include "trig.h"
+#include "braille_puzzles.h"
 #include "ewram.h"
 #include "constants/field_effects.h"
 #include "constants/event_objects.h"
@@ -137,6 +138,12 @@ bool8 SetUpFieldMove_Cut(void)
         gPostMenuFieldCallback = FieldCallback_CutTree;
         return TRUE;
     }
+    else if (ShouldDoBrailleCutEffect())
+    {
+        gFieldCallback = FieldCallback_PrepareFadeInFromMenu;
+        gPostMenuFieldCallback = FieldCallback_CutGrass;
+        return TRUE;
+    }
     else
     {
         PlayerGetDestCoords(&gPlayerFacingPosition.x, &gPlayerFacingPosition.y);
@@ -209,6 +216,12 @@ bool8 FldEff_CutGrass(void)
     s16 x, y;
     u8 tileBehavior;
     u8 i = 0, j;
+
+    if (ShouldDoBrailleCutEffect())
+    {
+        DoBrailleCutEffect();
+        return 0;
+    }
 
     PlaySE(SE_W015);
     PlayerGetDestCoords(&gPlayerFacingPosition.x, &gPlayerFacingPosition.y);

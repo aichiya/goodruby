@@ -368,6 +368,9 @@
 #define MAP_SHOAL_CAVE_LOW_TIDE_ICE_ROOM          (83 | (24 << 8))
 #define MAP_SKY_PILLAR_5F                         (84 | (24 << 8))
 #define MAP_SKY_PILLAR_TOP                        (85 | (24 << 8))
+#define MAP_GRANITE_CAVE_B3F                      (86 | (24 << 8))
+#define MAP_GRANITE_CAVE_B4F                      (87 | (24 << 8))
+#define MAP_GRANITE_CAVE_STAIRS                   (88 | (24 << 8))
 
 // Map Group 25
 #define MAP_SECRET_BASE_RED_CAVE1    (0 | (25 << 8))
