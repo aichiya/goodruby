@@ -8,6 +8,8 @@ ILLUMISE: Bug -> Bug/Fairy.
 ABILITY AND STAT CHANGES:
 SANDSHREW, SANDSLASH: Sandshrew gains Anticipation. Sandslash gains Iron Barbs.
 RAPIDASH: Base Speed up from 105 to 115.
+SEEL: Base Speed up from 45 to 55.
+DEWGONG: Base Speed up from 70 to 90.
 LEDYBA, LEDIAN: Swarm replaced with Magic Guard.
 SUNFLORA: Chlorophyll -> Flash Fire, HA Early Bird -> Drought.
 BEAUTIFLY: HA Rivalry -> Intimidate.
@@ -24,11 +26,12 @@ MOVEPOOL CHANGES:
 PIDGEY: Learns all moves before Whirlwind earlier, learns Air Cutter at 13
 SANDSHREW: Now has access to Spikes and Spiky Shield as egg moves.
 PSYDUCK: Now has access to Nasty Plot and Slack Off as egg moves.
+DEWGONG: Level-up movepool re-arranged. Learns Megahorn and Body Slam instead of Dive. Gains TM89 U-Turn. Now has access to Slack Off as an egg move.
 KRABBY: Learns most moves at different levels, no longer learns Stomp, gains several moves by level-up
 VOLTORB, ELECTRODE: Gains TM50 Overheat. Learns Nasty Plot instead of Gyro Ball.
 HITMONCHAN: Learns Drain Punch by relearner
-OMANYTE: Level-up movepool re-arranged.
-KABUTO: Level-up movepool re-arranged. Learns Leech Life.
+OMANYTE, OMASTAR: Level-up movepool re-arranged.
+KABUTO, KABUTOPS: Level-up movepool re-arranged. Learns Leech Life.
 LEDYBA: Adjust early move positions, add Air Cutter.
 HOPPIP: Learns many moves significantly earlier. Jumpluff learns final level-up move at 55 (down from 69).
 SUNFLORA: Learns Flame Burst on evolution. Learns Fire Spin instead of Bullet Seed. Learns Inferno. Learns most Fire TMs.

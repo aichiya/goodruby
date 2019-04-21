@@ -93,3 +93,5 @@ CAVE OF ORIGIN: Unown
 SEALED CHAMBER:
 
 GNARLED DEN: Kangaskhan
+
+ROCK SMASH: Nosepass and Shuckle in Granite Cave, Geodude everywhere else.
