@@ -44,6 +44,24 @@ SPINDA: Gains TM49 Superpower and TM50 Overheat. Learns Hammer Arm as an egg mov
 ANORITH: Learns Aqua Tail on evolution.
 LILEEP: Level-up movepool re-arranged. Learns Acid Spray on evolution.
 
+EVOLUTION CHANGES:
+KADABRA: Evolves to Alakazam at level 35.
+MACHOKE: Evolves to Machamp at level 40.
+GRAVELER: Evolves to Golem at level 38.
+HAUNTER: Evolves to Gengar at level 38.
+POLIWHIRL: Evolves to Poliwrath using Water Stone. Evolves to Politoed using a Shiny Stone.
+SLOWPOKE: Evolves to Slowbro by level. Evolves to Slowking using a Shiny Stone.
+ONIX: Evolves to Steelix using a Dawn Stone.
+SEADRA: Evolves to Kingler using a Water Stone.
+SCYTHER: Evolves to Scizor using a Dawn Stone.
+EEVEE: Evolves to Leafeon using a Leaf Stone. Evolves to Glaceon using an Ice Stone.
+       Evolves to Espeon using a Sun Stone. Evolves to Umbreon using a Moon Stone.
+       Evolves to Sylveon using a Shiny Stone.
+PORYGON: ?????
+PORYGON2: ?????
+CLAMPERL: ?????
+
+
 
 EXPERIENCE CHANGES:
 All pokemon families in Erratic and Fluctuating experience groups have been moved to other groups as follows:

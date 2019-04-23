@@ -6,6 +6,7 @@
 #include "decompress.h"
 #include "event_data.h"
 #include "graphics.h"
+#include "item.h"
 #include "m4a.h"
 #include "main.h"
 #include "menu.h"
@@ -3328,7 +3329,8 @@ static void sub_8090040(u8 a)
 
 static void Task_InitSizeScreenMultistep(u8 taskId)
 {
-    u8 spriteId;
+    //u8 spriteId;
+    u16 num = NationalPokedexNumToSpecies(gUnknown_0202FFBC->dexNum);
 
     switch (gMain.state)
     {
@@ -3362,42 +3364,243 @@ static void Task_InitSizeScreenMultistep(u8 taskId)
             Text_LoadWindowTemplate(&gWindowTemplate_81E702C);
             InitMenuWindow(&gWindowTemplate_81E702C);
             string[0] = EOS;
-            StringAppend(string, gDexText_SizeComparedTo);
-            StringAppend(string, gSaveBlock2.playerName);
-            MenuPrint_Centered(string, 3, 15, 0xC0);
+            StringAppend(string, gSpeciesNames[num]);
+            StringAppend(string, gDexText_Abilities);
+            Menu_PrintText(string, 10, 3);
+            
+            string[0] = EOS;
+            StringAppend(string, gDexText_AbilityOne);
+            StringAppend(string, gAbilityNames[gBaseStats[num].ability1]);
+            Menu_PrintText(string, 10, 5);
+            
+            string[0] = EOS;
+            StringAppend(string, gDexText_AbilityTwo);
+            if (gBaseStats[num].ability1 == gBaseStats[num].ability2)
+                StringAppend(string, gAbilityNames[0]);
+            else
+                StringAppend(string, gAbilityNames[gBaseStats[num].ability2]);
+            Menu_PrintText(string, 10, 7);
+            
+            string[0] = EOS;
+            StringAppend(string, gDexText_AbilityHidden);
+            if (gBaseStats[num].ability1 == gBaseStats[num].hiddenAbility)
+                StringAppend(string, gAbilityNames[0]);
+            else
+                StringAppend(string, gAbilityNames[gBaseStats[num].hiddenAbility]);
+            Menu_PrintText(string, 10, 9);
+
+            string[0] = EOS;
+            StringAppend(string, gDexText_BaseHP);
+            Menu_PrintText(string, 1, 11);
+            
+            string[0] = EOS;
+            ConvertIntToDecimalStringN(string, gBaseStats[num].baseHP, STR_CONV_MODE_RIGHT_ALIGN, 3);
+            Menu_PrintText(string, 4, 11);
+
+            string[0] = EOS;
+            StringAppend(string, gDexText_BaseAtk);
+            Menu_PrintText(string, 7, 11);
+            
+            string[0] = EOS;
+            ConvertIntToDecimalStringN(string, gBaseStats[num].baseAttack, STR_CONV_MODE_RIGHT_ALIGN, 3);
+            Menu_PrintText(string, 10, 11);
+            
+            string[0] = EOS;
+            StringAppend(string, gDexText_BaseDef);
+            Menu_PrintText(string, 13, 11);
+            
+            string[0] = EOS;
+            ConvertIntToDecimalStringN(string, gBaseStats[num].baseDefense, STR_CONV_MODE_RIGHT_ALIGN, 3);
+            Menu_PrintText(string, 16, 11);
+
+            string[0] = EOS;
+            StringAppend(string, gDexText_BaseSpeed);
+            Menu_PrintText(string, 1, 13);
+            
+            string[0] = EOS;
+            ConvertIntToDecimalStringN(string, gBaseStats[num].baseSpeed, STR_CONV_MODE_RIGHT_ALIGN, 3);
+            Menu_PrintText(string, 4, 13);
+
+            string[0] = EOS;
+            StringAppend(string, gDexText_BaseSAtk);
+            Menu_PrintText(string, 7, 13);
+            
+            string[0] = EOS;
+            ConvertIntToDecimalStringN(string, gBaseStats[num].baseSpAttack, STR_CONV_MODE_RIGHT_ALIGN, 3);
+            Menu_PrintText(string, 10, 13);
+            
+            string[0] = EOS;
+            StringAppend(string, gDexText_BaseSDef);
+            Menu_PrintText(string, 13, 13);
+            
+            string[0] = EOS;
+            ConvertIntToDecimalStringN(string, gBaseStats[num].baseSpDefense, STR_CONV_MODE_RIGHT_ALIGN, 3);
+            Menu_PrintText(string, 16, 13);
+
             gMain.state++;
         }
         break;
+
     case 4:
+        {
+            u8 i;
+            u8 string[42];
+            
+            if (num == SPECIES_EEVEE)
+            {
+                string[0] = EOS;
+                StringAppend(string, gDexText_EeveeEvo);
+                Menu_PrintText(string, 1, 15);
+            }
+            else if (num == SPECIES_TYROGUE)
+            {
+                string[0] = EOS;
+                StringAppend(string, gDexText_TyrogueEvo);
+                Menu_PrintText(string, 1, 15);
+                
+                string[0] = EOS;
+                StringAppend(string, gDexText_TyrogueEvo2);
+                Menu_PrintText(string, 1, 17);
+            }
+            else
+            {
+                for (i = 0; i < 2; i++) // only room for two; special-case the likes of eevee, tyrogue
+                {
+                    u8 y = 15 + (2 * i);
+                    u8 buffer[12];
+                    u16 evospecies = gEvolutionTable[num][i].targetSpecies;
+                    if (!GetSetPokedexFlag(SpeciesToNationalPokedexNum(evospecies), FLAG_GET_SEEN))
+                        evospecies = 0;
+                    
+                    string[0] = EOS;
+                    switch (gEvolutionTable[num][i].method)
+                    {
+                        case 0:
+                        if (i == 0)
+                        {
+                            StringAppend(string, gDexText_DoesNotEvolve);
+                            Menu_PrintText(string, 1, y);
+                        } 
+                        break;
+                        case EVO_LEVEL:
+                        case EVO_LEVEL_NINJASK:
+                        {
+                            StringAppend(string, gDexText_EvolvesInto);
+                            StringAppend(string, gSpeciesNames[evospecies]);
+                            StringAppend(string, gDexText_AtLevel);
+                            ConvertIntToDecimalStringN(buffer, gEvolutionTable[num][i].param, STR_CONV_MODE_LEFT_ALIGN, 2);
+                            StringAppend(string, buffer);
+                            Menu_PrintText(string, 1, y);
+                        }
+                        break;
+                        case EVO_LEVEL_SILCOON:
+                        case EVO_LEVEL_CASCOON:
+                        {
+                            StringAppend(string, gDexText_MayEvolveInto);
+                            StringAppend(string, gSpeciesNames[evospecies]);
+                            StringAppend(string, gDexText_AtLevel);
+                            ConvertIntToDecimalStringN(buffer, gEvolutionTable[num][i].param, STR_CONV_MODE_LEFT_ALIGN, 2);
+                            StringAppend(string, buffer);
+                            Menu_PrintText(string, 1, y);
+                        }
+                        break;
+                        case EVO_ITEM:
+                        {
+                            StringAppend(string, gDexText_EvolvesInto);
+                            StringAppend(string, gSpeciesNames[evospecies]);
+                            StringAppend(string, gDexText_Using);
+                            CopyItemName(gEvolutionTable[num][i].param, buffer);
+                            StringAppend(string, buffer);
+                            Menu_PrintText(string, 1, y);
+                        }
+                        break;
+                        case EVO_ITEM_MALE:
+                        {
+                            StringAppend(string, gDexText_EvolvesInto);
+                            StringAppend(string, gSpeciesNames[evospecies]);
+                            StringAppend(string, gDexText_Using);
+                            CopyItemName(gEvolutionTable[num][i].param, buffer);
+                            StringAppend(string, buffer);
+                            StringAppend(string, gDexText_IfMale);
+                            Menu_PrintText(string, 1, y);
+                        }
+                        break;
+                        case EVO_ITEM_FEMALE:
+                        {
+                            StringAppend(string, gDexText_EvolvesInto);
+                            StringAppend(string, gSpeciesNames[evospecies]);
+                            StringAppend(string, gDexText_Using);
+                            CopyItemName(gEvolutionTable[num][i].param, buffer);
+                            StringAppend(string, buffer);
+                            StringAppend(string, gDexText_IfFemale);
+                            Menu_PrintText(string, 1, y);
+                        }
+                        break;
+                        case EVO_FRIENDSHIP:
+                        {
+                            StringAppend(string, gDexText_EvolvesInto);
+                            StringAppend(string, gSpeciesNames[evospecies]);
+                            StringAppend(string, gDexText_WhenFriendly);
+                            Menu_PrintText(string, 1, y);
+                        }
+                        break;
+                        case EVO_BEAUTY:
+                        {
+                            StringAppend(string, gDexText_EvolvesInto);
+                            StringAppend(string, gSpeciesNames[evospecies]);
+                            StringAppend(string, gDexText_WhenBeautiful);
+                            Menu_PrintText(string, 1, y);
+                        }
+                        break;
+                        case EVO_LEVEL_SHEDINJA:
+                        {
+                            StringAppend(string, gSpeciesNames[evospecies]);
+                            StringAppend(string, gDexText_Appears);
+                            Menu_PrintText(string, 1, y);
+                        }
+                        break;
+                    }
+                }
+            }
+            
+            gMain.state++;
+        }
+        break;
+
+    case 5:
         ResetPaletteFade();
         gMain.state++;
         break;
-    case 5:
+    case 6:
+        gTasks[taskId].data[4] = (u16)sub_80918EC(gUnknown_0202FFBC->dexNum, 0x28, 0x38, 0);
+        gSprites[gTasks[taskId].data[4]].oam.priority = 0;
+        /*
         spriteId = sub_8091A4C(gSaveBlock2.playerGender, 152, 56, 0);
         gSprites[spriteId].oam.affineMode = 1;
         gSprites[spriteId].oam.matrixNum = 1;
         gSprites[spriteId].oam.priority = 0;
         gSprites[spriteId].pos2.y = gPokedexEntries[gUnknown_0202FFBC->dexNum].trainerOffset;
         SetOamMatrix(1, gPokedexEntries[gUnknown_0202FFBC->dexNum].trainerScale, 0, 0, gPokedexEntries[gUnknown_0202FFBC->dexNum].trainerScale);
-        LoadPalette(gUnknown_083B4EC4, (gSprites[spriteId].oam.paletteNum + 16) * 16, sizeof(gUnknown_083B4EC4));
+        LoadPalette(gUnknown_083B4EC4, (gSprites[spriteId].oam.paletteNum + 16) * 16, sizeof(gUnknown_083B4EC4)); */
         gMain.state++;
         break;
-    case 6:
+    case 7:
+        /*
         spriteId = sub_80918EC(gUnknown_0202FFBC->dexNum, 88, 56, 1);
         gSprites[spriteId].oam.affineMode = 1;
         gSprites[spriteId].oam.matrixNum = 2;
         gSprites[spriteId].oam.priority = 0;
         gSprites[spriteId].pos2.y = gPokedexEntries[gUnknown_0202FFBC->dexNum].pokemonOffset;
         SetOamMatrix(2, gPokedexEntries[gUnknown_0202FFBC->dexNum].pokemonScale, 0, 0, gPokedexEntries[gUnknown_0202FFBC->dexNum].pokemonScale);
-        LoadPalette(gUnknown_083B4EC4, (gSprites[spriteId].oam.paletteNum + 16) * 16, sizeof(gUnknown_083B4EC4));
+        LoadPalette(gUnknown_083B4EC4, (gSprites[spriteId].oam.paletteNum + 16) * 16, sizeof(gUnknown_083B4EC4)); */
         gMain.state++;
         break;
-    case 7:
+    case 8:
         BeginNormalPaletteFade(0xFFFFFFEB, 0, 16, 0, RGB(0, 0, 0));
         SetVBlankCallback(gUnknown_03005CEC);
         gMain.state++;
         break;
-    case 8:
+    case 9:
         REG_BLDCNT = 0;
         REG_BLDALPHA = 0;
         REG_BLDY = 0;
@@ -3405,7 +3608,7 @@ static void Task_InitSizeScreenMultistep(u8 taskId)
         REG_DISPCNT = DISPCNT_MODE_0 | DISPCNT_OBJ_1D_MAP | DISPCNT_BG1_ON | DISPCNT_BG2_ON | DISPCNT_BG3_ON | DISPCNT_OBJ_ON;
         gMain.state++;
         break;
-    case 9:
+    case 10:
         if (!gPaletteFade.active)
         {
             gPokedexView->unk64F = 0;
