@@ -42,16 +42,6 @@ const struct WildPokemon PetalburgCity_FishingMons [] =
 };
 const struct WildPokemonInfo PetalburgCity_FishingMonsInfo = {10, PetalburgCity_FishingMons};
 
-const struct WildPokemon SlateportCity_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {10, 30, SPECIES_WINGULL},
-    {15, 25, SPECIES_WINGULL},
-    {25, 30, SPECIES_PELIPPER},
-    {25, 30, SPECIES_PELIPPER},
-};
-const struct WildPokemonInfo SlateportCity_WaterMonsInfo = {4, SlateportCity_WaterMons};
-
 const struct WildPokemon SlateportCity_FishingMons [] =
 {
     {5, 10, SPECIES_MAGIKARP},
@@ -66,16 +56,6 @@ const struct WildPokemon SlateportCity_FishingMons [] =
     {40, 45, SPECIES_WAILMER},
 };
 const struct WildPokemonInfo SlateportCity_FishingMonsInfo = {10, SlateportCity_FishingMons};
-
-const struct WildPokemon LilycoveCity_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {10, 30, SPECIES_WINGULL},
-    {15, 25, SPECIES_WINGULL},
-    {25, 30, SPECIES_PELIPPER},
-    {25, 30, SPECIES_PELIPPER},
-};
-const struct WildPokemonInfo LilycoveCity_WaterMonsInfo = {4, LilycoveCity_WaterMons};
 
 const struct WildPokemon LilycoveCity_FishingMons [] =
 {
@@ -92,16 +72,6 @@ const struct WildPokemon LilycoveCity_FishingMons [] =
 };
 const struct WildPokemonInfo LilycoveCity_FishingMonsInfo = {10, LilycoveCity_FishingMons};
 
-const struct WildPokemon MossdeepCity_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {10, 30, SPECIES_WINGULL},
-    {15, 25, SPECIES_WINGULL},
-    {25, 30, SPECIES_PELIPPER},
-    {25, 30, SPECIES_PELIPPER},
-};
-const struct WildPokemonInfo MossdeepCity_WaterMonsInfo = {4, MossdeepCity_WaterMons};
-
 const struct WildPokemon MossdeepCity_FishingMons [] =
 {
     {5, 10, SPECIES_MAGIKARP},
@@ -117,16 +87,6 @@ const struct WildPokemon MossdeepCity_FishingMons [] =
 };
 const struct WildPokemonInfo MossdeepCity_FishingMonsInfo = {10, MossdeepCity_FishingMons};
 
-const struct WildPokemon SootopolisCity_WaterMons [] =
-{
-    {5, 35, SPECIES_MAGIKARP},
-    {10, 30, SPECIES_MAGIKARP},
-    {15, 25, SPECIES_MAGIKARP},
-    {25, 30, SPECIES_MAGIKARP},
-    {25, 30, SPECIES_MAGIKARP},
-};
-const struct WildPokemonInfo SootopolisCity_WaterMonsInfo = {1, SootopolisCity_WaterMons};
-
 const struct WildPokemon SootopolisCity_FishingMons [] =
 {
     {5, 10, SPECIES_MAGIKARP},
@@ -141,16 +101,6 @@ const struct WildPokemon SootopolisCity_FishingMons [] =
     {5, 45, SPECIES_GYARADOS},
 };
 const struct WildPokemonInfo SootopolisCity_FishingMonsInfo = {10, SootopolisCity_FishingMons};
-
-const struct WildPokemon EverGrandeCity_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {10, 30, SPECIES_WINGULL},
-    {15, 25, SPECIES_WINGULL},
-    {25, 30, SPECIES_PELIPPER},
-    {25, 30, SPECIES_PELIPPER},
-};
-const struct WildPokemonInfo EverGrandeCity_WaterMonsInfo = {4, EverGrandeCity_WaterMons};
 
 const struct WildPokemon EverGrandeCity_FishingMons [] =
 {
@@ -183,16 +133,6 @@ const struct WildPokemon MeteorFalls_1F_1R_LandMons [] =
     {19, 22, SPECIES_MISDREAVUS},
 };
 const struct WildPokemonInfo MeteorFalls_1F_1R_LandMonsInfo = {10, MeteorFalls_1F_1R_LandMons};
-
-const struct WildPokemon MeteorFalls_1F_1R_WaterMons [] =
-{
-    {5, 35, SPECIES_ZUBAT},
-    {30, 35, SPECIES_ZUBAT},
-    {25, 35, SPECIES_SOLROCK},
-    {25, 35, SPECIES_LUNATONE},
-    {25, 35, SPECIES_LUNATONE},
-};
-const struct WildPokemonInfo MeteorFalls_1F_1R_WaterMonsInfo = {4, MeteorFalls_1F_1R_WaterMons};
 
 const struct WildPokemon MeteorFalls_1F_1R_FishingMons [] =
 {
@@ -236,16 +176,6 @@ const struct WildPokemon MeteorFalls_1F_2R_LandMons [] =
 };
 const struct WildPokemonInfo MeteorFalls_1F_2R_LandMonsInfo = {10, MeteorFalls_1F_2R_LandMons};
 
-const struct WildPokemon MeteorFalls_1F_2R_WaterMons [] =
-{
-    {30, 35, SPECIES_GOLBAT},
-    {30, 35, SPECIES_GOLBAT},
-    {25, 35, SPECIES_LUNATONE},
-    {25, 35, SPECIES_SOLROCK},
-    {25, 35, SPECIES_SOLROCK},
-};
-const struct WildPokemonInfo MeteorFalls_1F_2R_WaterMonsInfo = {4, MeteorFalls_1F_2R_WaterMons};
-
 const struct WildPokemon MeteorFalls_1F_2R_FishingMons [] =
 {
     {5, 10, SPECIES_MAGIKARP},
@@ -287,16 +217,6 @@ const struct WildPokemon MeteorFalls_B1F_1R_LandMons [] =
     {40, 40, SPECIES_GOLBAT},
 };
 const struct WildPokemonInfo MeteorFalls_B1F_1R_LandMonsInfo = {10, MeteorFalls_B1F_1R_LandMons};
-
-const struct WildPokemon MeteorFalls_B1F_1R_WaterMons [] =
-{
-    {30, 35, SPECIES_GOLBAT},
-    {30, 35, SPECIES_GOLBAT},
-    {25, 35, SPECIES_LUNATONE},
-    {25, 35, SPECIES_SOLROCK},
-    {25, 35, SPECIES_SOLROCK},
-};
-const struct WildPokemonInfo MeteorFalls_B1F_1R_WaterMonsInfo = {4, MeteorFalls_B1F_1R_WaterMons};
 
 const struct WildPokemon MeteorFalls_B1F_1R_FishingMons [] =
 {
@@ -341,16 +261,6 @@ const struct WildPokemon MeteorFalls_B1F_2R_LandMons [] =
     {40, 40, SPECIES_GOLBAT},
 };
 const struct WildPokemonInfo MeteorFalls_B1F_2R_LandMonsInfo = {10, MeteorFalls_B1F_2R_LandMons};
-
-const struct WildPokemon MeteorFalls_B1F_2R_WaterMons [] =
-{
-    {30, 35, SPECIES_GOLBAT},
-    {30, 35, SPECIES_GOLBAT},
-    {25, 35, SPECIES_LUNATONE},
-    {25, 35, SPECIES_SOLROCK},
-    {25, 35, SPECIES_SOLROCK},
-};
-const struct WildPokemonInfo MeteorFalls_B1F_2R_WaterMonsInfo = {4, MeteorFalls_B1F_2R_WaterMons};
 
 const struct WildPokemon MeteorFalls_B1F_2R_FishingMons [] =
 {
@@ -701,16 +611,6 @@ const struct WildPokemon MtPyre_Summit_LandMons [] =
 };
 const struct WildPokemonInfo MtPyre_Summit_LandMonsInfo = {10, MtPyre_Summit_LandMons};
 
-const struct WildPokemon SeafloorCavern_Entrance_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {5, 35, SPECIES_ZUBAT},
-    {30, 35, SPECIES_ZUBAT},
-    {30, 35, SPECIES_GOLBAT},
-    {30, 35, SPECIES_GOLBAT},
-};
-const struct WildPokemonInfo SeafloorCavern_Entrance_WaterMonsInfo = {4, SeafloorCavern_Entrance_WaterMons};
-
 const struct WildPokemon SeafloorCavern_Entrance_FishingMons [] =
 {
     {5, 10, SPECIES_MAGIKARP},
@@ -828,16 +728,6 @@ const struct WildPokemon SeafloorCavern_Room6_LandMons [] =
 };
 const struct WildPokemonInfo SeafloorCavern_Room6_LandMonsInfo = {4, SeafloorCavern_Room6_LandMons};
 
-const struct WildPokemon SeafloorCavern_Room6_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {5, 35, SPECIES_ZUBAT},
-    {30, 35, SPECIES_ZUBAT},
-    {30, 35, SPECIES_GOLBAT},
-    {30, 35, SPECIES_GOLBAT},
-};
-const struct WildPokemonInfo SeafloorCavern_Room6_WaterMonsInfo = {4, SeafloorCavern_Room6_WaterMons};
-
 const struct WildPokemon SeafloorCavern_Room6_FishingMons [] =
 {
     {5, 10, SPECIES_MAGIKARP},
@@ -869,16 +759,6 @@ const struct WildPokemon SeafloorCavern_Room7_LandMons [] =
     {36, 36, SPECIES_GOLBAT},
 };
 const struct WildPokemonInfo SeafloorCavern_Room7_LandMonsInfo = {4, SeafloorCavern_Room7_LandMons};
-
-const struct WildPokemon SeafloorCavern_Room7_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {5, 35, SPECIES_ZUBAT},
-    {30, 35, SPECIES_ZUBAT},
-    {30, 35, SPECIES_GOLBAT},
-    {30, 35, SPECIES_GOLBAT},
-};
-const struct WildPokemonInfo SeafloorCavern_Room7_WaterMonsInfo = {4, SeafloorCavern_Room7_WaterMons};
 
 const struct WildPokemon SeafloorCavern_Room7_FishingMons [] =
 {
@@ -1094,16 +974,6 @@ const struct WildPokemon VictoryRoad_B2F_LandMons [] =
 };
 const struct WildPokemonInfo VictoryRoad_B2F_LandMonsInfo = {10, VictoryRoad_B2F_LandMons};
 
-const struct WildPokemon VictoryRoad_B2F_WaterMons [] =
-{
-    {30, 35, SPECIES_GOLBAT},
-    {25, 30, SPECIES_GOLBAT},
-    {35, 40, SPECIES_GOLBAT},
-    {35, 40, SPECIES_GOLBAT},
-    {35, 40, SPECIES_GOLBAT},
-};
-const struct WildPokemonInfo VictoryRoad_B2F_WaterMonsInfo = {4, VictoryRoad_B2F_WaterMons};
-
 const struct WildPokemon VictoryRoad_B2F_FishingMons [] =
 {
     {5, 10, SPECIES_MAGIKARP},
@@ -1136,16 +1006,6 @@ const struct WildPokemon ShoalCave_LowTideEntranceRoom_LandMons [] =
 };
 const struct WildPokemonInfo ShoalCave_LowTideEntranceRoom_LandMonsInfo = {10, ShoalCave_LowTideEntranceRoom_LandMons};
 
-const struct WildPokemon ShoalCave_LowTideEntranceRoom_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {5, 35, SPECIES_ZUBAT},
-    {25, 30, SPECIES_SPHEAL},
-    {25, 30, SPECIES_SPHEAL},
-    {25, 35, SPECIES_SPHEAL},
-};
-const struct WildPokemonInfo ShoalCave_LowTideEntranceRoom_WaterMonsInfo = {4, ShoalCave_LowTideEntranceRoom_WaterMons};
-
 const struct WildPokemon ShoalCave_LowTideEntranceRoom_FishingMons [] =
 {
     {5, 10, SPECIES_MAGIKARP},
@@ -1177,16 +1037,6 @@ const struct WildPokemon ShoalCave_LowTideInnerRoom_LandMons [] =
     {32, 32, SPECIES_SPHEAL},
 };
 const struct WildPokemonInfo ShoalCave_LowTideInnerRoom_LandMonsInfo = {10, ShoalCave_LowTideInnerRoom_LandMons};
-
-const struct WildPokemon ShoalCave_LowTideInnerRoom_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {5, 35, SPECIES_ZUBAT},
-    {25, 30, SPECIES_SPHEAL},
-    {25, 30, SPECIES_SPHEAL},
-    {25, 35, SPECIES_SPHEAL},
-};
-const struct WildPokemonInfo ShoalCave_LowTideInnerRoom_WaterMonsInfo = {4, ShoalCave_LowTideInnerRoom_WaterMons};
 
 const struct WildPokemon ShoalCave_LowTideInnerRoom_FishingMons [] =
 {
@@ -1288,16 +1138,6 @@ const struct WildPokemon NewMauville_Inside_LandMons [] =
 };
 const struct WildPokemonInfo NewMauville_Inside_LandMonsInfo = {10, NewMauville_Inside_LandMons};
 
-const struct WildPokemon AbandonedShip_Rooms_B1F_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {5, 35, SPECIES_TENTACOOL},
-    {5, 35, SPECIES_TENTACOOL},
-    {5, 35, SPECIES_TENTACOOL},
-    {30, 35, SPECIES_TENTACRUEL},
-};
-const struct WildPokemonInfo AbandonedShip_Rooms_B1F_WaterMonsInfo = {4, AbandonedShip_Rooms_B1F_WaterMons};
-
 const struct WildPokemon AbandonedShip_Rooms_B1F_FishingMons [] =
 {
     {5, 10, SPECIES_MAGIKARP},
@@ -1312,16 +1152,6 @@ const struct WildPokemon AbandonedShip_Rooms_B1F_FishingMons [] =
     {20, 25, SPECIES_TENTACRUEL},
 };
 const struct WildPokemonInfo AbandonedShip_Rooms_B1F_FishingMonsInfo = {20, AbandonedShip_Rooms_B1F_FishingMons};
-
-const struct WildPokemon AbandonedShip_HiddenFloorCorridors_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {5, 35, SPECIES_TENTACOOL},
-    {5, 35, SPECIES_TENTACOOL},
-    {5, 35, SPECIES_TENTACOOL},
-    {30, 35, SPECIES_TENTACRUEL},
-};
-const struct WildPokemonInfo AbandonedShip_HiddenFloorCorridors_WaterMonsInfo = {4, AbandonedShip_HiddenFloorCorridors_WaterMons};
 
 const struct WildPokemon AbandonedShip_HiddenFloorCorridors_FishingMons [] =
 {
@@ -1462,16 +1292,6 @@ const struct WildPokemon Route102_LandMons [] =
 };
 const struct WildPokemonInfo Route102_LandMonsInfo = {20, Route102_LandMons};
 
-const struct WildPokemon Route102_WaterMons [] =
-{
-    {20, 30, SPECIES_MARILL},
-    {10, 20, SPECIES_MARILL},
-    {30, 35, SPECIES_MARILL},
-    {5, 10, SPECIES_MARILL},
-    {20, 30, SPECIES_SURSKIT},
-};
-const struct WildPokemonInfo Route102_WaterMonsInfo = {4, Route102_WaterMons};
-
 const struct WildPokemon Route102_FishingMons [] =
 {
     {5, 10, SPECIES_MAGIKARP},
@@ -1503,16 +1323,6 @@ const struct WildPokemon Route103_LandMons [] =
     {2, 4, SPECIES_WINGULL},
 };
 const struct WildPokemonInfo Route103_LandMonsInfo = {20, Route103_LandMons};
-
-const struct WildPokemon Route103_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {10, 30, SPECIES_WINGULL},
-    {15, 25, SPECIES_WINGULL},
-    {25, 30, SPECIES_PELIPPER},
-    {25, 30, SPECIES_PELIPPER},
-};
-const struct WildPokemonInfo Route103_WaterMonsInfo = {4, Route103_WaterMons};
 
 const struct WildPokemon Route103_FishingMons [] =
 {
@@ -1546,16 +1356,6 @@ const struct WildPokemon Route104_LandMons [] =
 };
 const struct WildPokemonInfo Route104_LandMonsInfo = {20, Route104_LandMons};
 
-const struct WildPokemon Route104_WaterMons [] =
-{
-    {10, 30, SPECIES_WINGULL},
-    {15, 25, SPECIES_WINGULL},
-    {15, 25, SPECIES_WINGULL},
-    {25, 30, SPECIES_PELIPPER},
-    {25, 30, SPECIES_PELIPPER},
-};
-const struct WildPokemonInfo Route104_WaterMonsInfo = {4, Route104_WaterMons};
-
 const struct WildPokemon Route104_FishingMons [] =
 {
     {5, 10, SPECIES_MAGIKARP},
@@ -1571,16 +1371,6 @@ const struct WildPokemon Route104_FishingMons [] =
 };
 const struct WildPokemonInfo Route104_FishingMonsInfo = {30, Route104_FishingMons};
 
-const struct WildPokemon Route105_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {10, 30, SPECIES_WINGULL},
-    {15, 25, SPECIES_WINGULL},
-    {25, 30, SPECIES_PELIPPER},
-    {25, 30, SPECIES_PELIPPER},
-};
-const struct WildPokemonInfo Route105_WaterMonsInfo = {4, Route105_WaterMons};
-
 const struct WildPokemon Route105_FishingMons [] =
 {
     {5, 10, SPECIES_MAGIKARP},
@@ -1595,16 +1385,6 @@ const struct WildPokemon Route105_FishingMons [] =
     {40, 45, SPECIES_WAILMER},
 };
 const struct WildPokemonInfo Route105_FishingMonsInfo = {30, Route105_FishingMons};
-
-const struct WildPokemon Route106_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {10, 30, SPECIES_WINGULL},
-    {15, 25, SPECIES_WINGULL},
-    {25, 30, SPECIES_PELIPPER},
-    {25, 30, SPECIES_PELIPPER},
-};
-const struct WildPokemonInfo Route106_WaterMonsInfo = {4, Route106_WaterMons};
 
 const struct WildPokemon Route106_FishingMons [] =
 {
@@ -1638,16 +1418,6 @@ const struct WildPokemon Route107_LandMons [] =
 };
 const struct WildPokemonInfo Route107_LandMonsInfo = {20, Route107_LandMons};
 
-const struct WildPokemon Route107_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {10, 30, SPECIES_WINGULL},
-    {15, 25, SPECIES_WINGULL},
-    {25, 30, SPECIES_PELIPPER},
-    {25, 30, SPECIES_PELIPPER},
-};
-const struct WildPokemonInfo Route107_WaterMonsInfo = {4, Route107_WaterMons};
-
 const struct WildPokemon Route107_FishingMons [] =
 {
     {5, 10, SPECIES_MAGIKARP},
@@ -1663,16 +1433,6 @@ const struct WildPokemon Route107_FishingMons [] =
 };
 const struct WildPokemonInfo Route107_FishingMonsInfo = {30, Route107_FishingMons};
 
-const struct WildPokemon Route108_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {10, 30, SPECIES_WINGULL},
-    {15, 25, SPECIES_WINGULL},
-    {25, 30, SPECIES_PELIPPER},
-    {25, 30, SPECIES_PELIPPER},
-};
-const struct WildPokemonInfo Route108_WaterMonsInfo = {4, Route108_WaterMons};
-
 const struct WildPokemon Route108_FishingMons [] =
 {
     {5, 10, SPECIES_MAGIKARP},
@@ -1687,16 +1447,6 @@ const struct WildPokemon Route108_FishingMons [] =
     {40, 45, SPECIES_WAILMER},
 };
 const struct WildPokemonInfo Route108_FishingMonsInfo = {30, Route108_FishingMons};
-
-const struct WildPokemon Route109_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {10, 30, SPECIES_WINGULL},
-    {15, 25, SPECIES_WINGULL},
-    {25, 30, SPECIES_PELIPPER},
-    {25, 30, SPECIES_PELIPPER},
-};
-const struct WildPokemonInfo Route109_WaterMonsInfo = {4, Route109_WaterMons};
 
 const struct WildPokemon Route109_FishingMons [] =
 {
@@ -1730,16 +1480,6 @@ const struct WildPokemon Route110_LandMons [] =
 };
 const struct WildPokemonInfo Route110_LandMonsInfo = {20, Route110_LandMons};
 
-const struct WildPokemon Route110_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {10, 30, SPECIES_WINGULL},
-    {15, 25, SPECIES_WINGULL},
-    {25, 30, SPECIES_PELIPPER},
-    {25, 30, SPECIES_PELIPPER},
-};
-const struct WildPokemonInfo Route110_WaterMonsInfo = {4, Route110_WaterMons};
-
 const struct WildPokemon Route110_FishingMons [] =
 {
     {5, 10, SPECIES_MAGIKARP},
@@ -1771,16 +1511,6 @@ const struct WildPokemon Route111_LandMons [] =
     {22, 25, SPECIES_TRAPINCH},
 };
 const struct WildPokemonInfo Route111_LandMonsInfo = {10, Route111_LandMons};
-
-const struct WildPokemon Route111_WaterMons [] =
-{
-    {20, 30, SPECIES_MARILL},
-    {10, 20, SPECIES_MARILL},
-    {30, 35, SPECIES_MARILL},
-    {5, 10, SPECIES_MARILL},
-    {20, 30, SPECIES_SURSKIT},
-};
-const struct WildPokemonInfo Route111_WaterMonsInfo = {4, Route111_WaterMons};
 
 const struct WildPokemon Route111_RockSmashMons [] =
 {
@@ -1858,16 +1588,6 @@ const struct WildPokemon Route114_LandMons [] =
 };
 const struct WildPokemonInfo Route114_LandMonsInfo = {20, Route114_LandMons};
 
-const struct WildPokemon Route114_WaterMons [] =
-{
-    {20, 30, SPECIES_MARILL},
-    {10, 20, SPECIES_MARILL},
-    {30, 35, SPECIES_MARILL},
-    {5, 10, SPECIES_MARILL},
-    {20, 30, SPECIES_SURSKIT},
-};
-const struct WildPokemonInfo Route114_WaterMonsInfo = {4, Route114_WaterMons};
-
 const struct WildPokemon Route114_RockSmashMons [] =
 {
     {10, 15, SPECIES_GEODUDE},
@@ -1909,16 +1629,6 @@ const struct WildPokemon Route115_LandMons [] =
     {25, 25, SPECIES_WINGULL},
 };
 const struct WildPokemonInfo Route115_LandMonsInfo = {20, Route115_LandMons};
-
-const struct WildPokemon Route115_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {10, 30, SPECIES_WINGULL},
-    {15, 25, SPECIES_WINGULL},
-    {25, 30, SPECIES_PELIPPER},
-    {25, 30, SPECIES_PELIPPER},
-};
-const struct WildPokemonInfo Route115_WaterMonsInfo = {4, Route115_WaterMons};
 
 const struct WildPokemon Route115_FishingMons [] =
 {
@@ -1969,16 +1679,6 @@ const struct WildPokemon Route117_LandMons [] =
 };
 const struct WildPokemonInfo Route117_LandMonsInfo = {20, Route117_LandMons};
 
-const struct WildPokemon Route117_WaterMons [] =
-{
-    {20, 30, SPECIES_MARILL},
-    {10, 20, SPECIES_MARILL},
-    {30, 35, SPECIES_MARILL},
-    {5, 10, SPECIES_MARILL},
-    {20, 30, SPECIES_SURSKIT},
-};
-const struct WildPokemonInfo Route117_WaterMonsInfo = {4, Route117_WaterMons};
-
 const struct WildPokemon Route117_FishingMons [] =
 {
     {5, 10, SPECIES_MAGIKARP},
@@ -2010,16 +1710,6 @@ const struct WildPokemon Route118_LandMons [] =
     {25, 25, SPECIES_KECLEON},
 };
 const struct WildPokemonInfo Route118_LandMonsInfo = {20, Route118_LandMons};
-
-const struct WildPokemon Route118_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {10, 30, SPECIES_WINGULL},
-    {15, 25, SPECIES_WINGULL},
-    {25, 30, SPECIES_PELIPPER},
-    {25, 30, SPECIES_PELIPPER},
-};
-const struct WildPokemonInfo Route118_WaterMonsInfo = {4, Route118_WaterMons};
 
 const struct WildPokemon Route118_FishingMons [] =
 {
@@ -2053,16 +1743,6 @@ const struct WildPokemon Route119_LandMons [] =
 };
 const struct WildPokemonInfo Route119_LandMonsInfo = {15, Route119_LandMons};
 
-const struct WildPokemon Route119_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {10, 30, SPECIES_WINGULL},
-    {15, 25, SPECIES_WINGULL},
-    {25, 30, SPECIES_PELIPPER},
-    {25, 30, SPECIES_PELIPPER},
-};
-const struct WildPokemonInfo Route119_WaterMonsInfo = {4, Route119_WaterMons};
-
 const struct WildPokemon Route119_FishingMons [] =
 {
     {5, 10, SPECIES_MAGIKARP},
@@ -2094,16 +1774,6 @@ const struct WildPokemon Route120_LandMons [] =
     {25, 25, SPECIES_SURSKIT},
 };
 const struct WildPokemonInfo Route120_LandMonsInfo = {20, Route120_LandMons};
-
-const struct WildPokemon Route120_WaterMons [] =
-{
-    {20, 30, SPECIES_MARILL},
-    {10, 20, SPECIES_MARILL},
-    {30, 35, SPECIES_MARILL},
-    {5, 10, SPECIES_MARILL},
-    {20, 30, SPECIES_SURSKIT},
-};
-const struct WildPokemonInfo Route120_WaterMonsInfo = {4, Route120_WaterMons};
 
 const struct WildPokemon Route120_FishingMons [] =
 {
@@ -2145,16 +1815,6 @@ const struct WildPokemon Route121_LandMons [] =
 };
 const struct WildPokemonInfo Route121_LandMonsInfo = {20, Route121_LandMons};
 
-const struct WildPokemon Route121_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {10, 30, SPECIES_WINGULL},
-    {15, 25, SPECIES_WINGULL},
-    {25, 30, SPECIES_PELIPPER},
-    {25, 30, SPECIES_PELIPPER},
-};
-const struct WildPokemonInfo Route121_WaterMonsInfo = {4, Route121_WaterMons};
-
 const struct WildPokemon Route121_FishingMons [] =
 {
     {5, 10, SPECIES_MAGIKARP},
@@ -2169,16 +1829,6 @@ const struct WildPokemon Route121_FishingMons [] =
     {40, 45, SPECIES_WAILMER},
 };
 const struct WildPokemonInfo Route121_FishingMonsInfo = {30, Route121_FishingMons};
-
-const struct WildPokemon Route122_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {10, 30, SPECIES_WINGULL},
-    {15, 25, SPECIES_WINGULL},
-    {25, 30, SPECIES_PELIPPER},
-    {25, 30, SPECIES_PELIPPER},
-};
-const struct WildPokemonInfo Route122_WaterMonsInfo = {4, Route122_WaterMons};
 
 const struct WildPokemon Route122_FishingMons [] =
 {
@@ -2220,16 +1870,6 @@ const struct WildPokemon Route123_LandMons [] =
 };
 const struct WildPokemonInfo Route123_LandMonsInfo = {20, Route123_LandMons};
 
-const struct WildPokemon Route123_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {10, 30, SPECIES_WINGULL},
-    {15, 25, SPECIES_WINGULL},
-    {25, 30, SPECIES_PELIPPER},
-    {25, 30, SPECIES_PELIPPER},
-};
-const struct WildPokemonInfo Route123_WaterMonsInfo = {4, Route123_WaterMons};
-
 const struct WildPokemon Route123_FishingMons [] =
 {
     {5, 10, SPECIES_MAGIKARP},
@@ -2244,16 +1884,6 @@ const struct WildPokemon Route123_FishingMons [] =
     {40, 45, SPECIES_WAILMER},
 };
 const struct WildPokemonInfo Route123_FishingMonsInfo = {30, Route123_FishingMons};
-
-const struct WildPokemon Route124_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {10, 30, SPECIES_WINGULL},
-    {15, 25, SPECIES_WINGULL},
-    {25, 30, SPECIES_PELIPPER},
-    {25, 30, SPECIES_PELIPPER},
-};
-const struct WildPokemonInfo Route124_WaterMonsInfo = {4, Route124_WaterMons};
 
 const struct WildPokemon Route124_FishingMons [] =
 {
@@ -2270,16 +1900,6 @@ const struct WildPokemon Route124_FishingMons [] =
 };
 const struct WildPokemonInfo Route124_FishingMonsInfo = {30, Route124_FishingMons};
 
-const struct WildPokemon Route125_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {10, 30, SPECIES_WINGULL},
-    {15, 25, SPECIES_WINGULL},
-    {25, 30, SPECIES_PELIPPER},
-    {25, 30, SPECIES_PELIPPER},
-};
-const struct WildPokemonInfo Route125_WaterMonsInfo = {4, Route125_WaterMons};
-
 const struct WildPokemon Route125_FishingMons [] =
 {
     {5, 10, SPECIES_MAGIKARP},
@@ -2294,16 +1914,6 @@ const struct WildPokemon Route125_FishingMons [] =
     {40, 45, SPECIES_WAILMER},
 };
 const struct WildPokemonInfo Route125_FishingMonsInfo = {30, Route125_FishingMons};
-
-const struct WildPokemon Route126_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {10, 30, SPECIES_WINGULL},
-    {15, 25, SPECIES_WINGULL},
-    {25, 30, SPECIES_PELIPPER},
-    {25, 30, SPECIES_PELIPPER},
-};
-const struct WildPokemonInfo Route126_WaterMonsInfo = {4, Route126_WaterMons};
 
 const struct WildPokemon Route126_FishingMons [] =
 {
@@ -2320,16 +1930,6 @@ const struct WildPokemon Route126_FishingMons [] =
 };
 const struct WildPokemonInfo Route126_FishingMonsInfo = {30, Route126_FishingMons};
 
-const struct WildPokemon Route127_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {10, 30, SPECIES_WINGULL},
-    {15, 25, SPECIES_WINGULL},
-    {25, 30, SPECIES_PELIPPER},
-    {25, 30, SPECIES_PELIPPER},
-};
-const struct WildPokemonInfo Route127_WaterMonsInfo = {4, Route127_WaterMons};
-
 const struct WildPokemon Route127_FishingMons [] =
 {
     {5, 10, SPECIES_MAGIKARP},
@@ -2345,16 +1945,6 @@ const struct WildPokemon Route127_FishingMons [] =
 };
 const struct WildPokemonInfo Route127_FishingMonsInfo = {30, Route127_FishingMons};
 
-const struct WildPokemon Route128_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {10, 30, SPECIES_WINGULL},
-    {15, 25, SPECIES_WINGULL},
-    {25, 30, SPECIES_PELIPPER},
-    {25, 30, SPECIES_PELIPPER},
-};
-const struct WildPokemonInfo Route128_WaterMonsInfo = {4, Route128_WaterMons};
-
 const struct WildPokemon Route128_FishingMons [] =
 {
     {5, 10, SPECIES_MAGIKARP},
@@ -2369,16 +1959,6 @@ const struct WildPokemon Route128_FishingMons [] =
     {40, 45, SPECIES_WAILMER},
 };
 const struct WildPokemonInfo Route128_FishingMonsInfo = {30, Route128_FishingMons};
-
-const struct WildPokemon Route129_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {10, 30, SPECIES_WINGULL},
-    {15, 25, SPECIES_WINGULL},
-    {25, 30, SPECIES_PELIPPER},
-    {35, 40, SPECIES_WAILORD},
-};
-const struct WildPokemonInfo Route129_WaterMonsInfo = {4, Route129_WaterMons};
 
 const struct WildPokemon Route129_FishingMons [] =
 {
@@ -2412,16 +1992,6 @@ const struct WildPokemon Route130_LandMons [] =
 };
 const struct WildPokemonInfo Route130_LandMonsInfo = {20, Route130_LandMons};
 
-const struct WildPokemon Route130_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {10, 30, SPECIES_WINGULL},
-    {15, 25, SPECIES_WINGULL},
-    {25, 30, SPECIES_PELIPPER},
-    {25, 30, SPECIES_PELIPPER},
-};
-const struct WildPokemonInfo Route130_WaterMonsInfo = {4, Route130_WaterMons};
-
 const struct WildPokemon Route130_FishingMons [] =
 {
     {5, 10, SPECIES_MAGIKARP},
@@ -2436,16 +2006,6 @@ const struct WildPokemon Route130_FishingMons [] =
     {40, 45, SPECIES_WAILMER},
 };
 const struct WildPokemonInfo Route130_FishingMonsInfo = {30, Route130_FishingMons};
-
-const struct WildPokemon Route131_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {10, 30, SPECIES_WINGULL},
-    {15, 25, SPECIES_WINGULL},
-    {25, 30, SPECIES_PELIPPER},
-    {25, 30, SPECIES_PELIPPER},
-};
-const struct WildPokemonInfo Route131_WaterMonsInfo = {4, Route131_WaterMons};
 
 const struct WildPokemon Route131_FishingMons [] =
 {
@@ -2462,16 +2022,6 @@ const struct WildPokemon Route131_FishingMons [] =
 };
 const struct WildPokemonInfo Route131_FishingMonsInfo = {30, Route131_FishingMons};
 
-const struct WildPokemon Route132_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {10, 30, SPECIES_WINGULL},
-    {15, 25, SPECIES_WINGULL},
-    {25, 30, SPECIES_PELIPPER},
-    {25, 30, SPECIES_PELIPPER},
-};
-const struct WildPokemonInfo Route132_WaterMonsInfo = {4, Route132_WaterMons};
-
 const struct WildPokemon Route132_FishingMons [] =
 {
     {5, 10, SPECIES_MAGIKARP},
@@ -2487,16 +2037,6 @@ const struct WildPokemon Route132_FishingMons [] =
 };
 const struct WildPokemonInfo Route132_FishingMonsInfo = {30, Route132_FishingMons};
 
-const struct WildPokemon Route133_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {10, 30, SPECIES_WINGULL},
-    {15, 25, SPECIES_WINGULL},
-    {25, 30, SPECIES_PELIPPER},
-    {25, 30, SPECIES_PELIPPER},
-};
-const struct WildPokemonInfo Route133_WaterMonsInfo = {4, Route133_WaterMons};
-
 const struct WildPokemon Route133_FishingMons [] =
 {
     {5, 10, SPECIES_MAGIKARP},
@@ -2511,16 +2051,6 @@ const struct WildPokemon Route133_FishingMons [] =
     {40, 45, SPECIES_WAILMER},
 };
 const struct WildPokemonInfo Route133_FishingMonsInfo = {30, Route133_FishingMons};
-
-const struct WildPokemon Route134_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {10, 30, SPECIES_WINGULL},
-    {15, 25, SPECIES_WINGULL},
-    {25, 30, SPECIES_PELIPPER},
-    {25, 30, SPECIES_PELIPPER},
-};
-const struct WildPokemonInfo Route134_WaterMonsInfo = {4, Route134_WaterMons};
 
 const struct WildPokemon Route134_FishingMons [] =
 {
@@ -2553,16 +2083,6 @@ const struct WildPokemon SafariZone_Northwest_LandMons [] =
     {29, 29, SPECIES_PINSIR},
 };
 const struct WildPokemonInfo SafariZone_Northwest_LandMonsInfo = {25, SafariZone_Northwest_LandMons};
-
-const struct WildPokemon SafariZone_Northwest_WaterMons [] =
-{
-    {20, 30, SPECIES_PSYDUCK},
-    {20, 30, SPECIES_PSYDUCK},
-    {30, 35, SPECIES_PSYDUCK},
-    {30, 35, SPECIES_GOLDUCK},
-    {25, 40, SPECIES_GOLDUCK},
-};
-const struct WildPokemonInfo SafariZone_Northwest_WaterMonsInfo = {9, SafariZone_Northwest_WaterMons};
 
 const struct WildPokemon SafariZone_Northwest_FishingMons [] =
 {
@@ -2623,16 +2143,6 @@ const struct WildPokemon SafariZone_Southwest_LandMons [] =
 };
 const struct WildPokemonInfo SafariZone_Southwest_LandMonsInfo = {25, SafariZone_Southwest_LandMons};
 
-const struct WildPokemon SafariZone_Southwest_WaterMons [] =
-{
-    {20, 30, SPECIES_PSYDUCK},
-    {20, 30, SPECIES_PSYDUCK},
-    {30, 35, SPECIES_PSYDUCK},
-    {30, 35, SPECIES_PSYDUCK},
-    {30, 35, SPECIES_PSYDUCK},
-};
-const struct WildPokemonInfo SafariZone_Southwest_WaterMonsInfo = {9, SafariZone_Southwest_WaterMons};
-
 const struct WildPokemon SafariZone_Southwest_FishingMons [] =
 {
     {5, 10, SPECIES_MAGIKARP},
@@ -2665,16 +2175,6 @@ const struct WildPokemon SafariZone_Southeast_LandMons [] =
 };
 const struct WildPokemonInfo SafariZone_Southeast_LandMonsInfo = {25, SafariZone_Southeast_LandMons};
 
-const struct WildPokemon DewfordTown_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {10, 30, SPECIES_WINGULL},
-    {15, 25, SPECIES_WINGULL},
-    {25, 30, SPECIES_PELIPPER},
-    {25, 30, SPECIES_PELIPPER},
-};
-const struct WildPokemonInfo DewfordTown_WaterMonsInfo = {4, DewfordTown_WaterMons};
-
 const struct WildPokemon DewfordTown_FishingMons [] =
 {
     {5, 10, SPECIES_MAGIKARP},
@@ -2689,16 +2189,6 @@ const struct WildPokemon DewfordTown_FishingMons [] =
     {40, 45, SPECIES_WAILMER},
 };
 const struct WildPokemonInfo DewfordTown_FishingMonsInfo = {10, DewfordTown_FishingMons};
-
-const struct WildPokemon PacifidlogTown_WaterMons [] =
-{
-    {5, 35, SPECIES_TENTACOOL},
-    {10, 30, SPECIES_WINGULL},
-    {15, 25, SPECIES_WINGULL},
-    {25, 30, SPECIES_PELIPPER},
-    {25, 30, SPECIES_PELIPPER},
-};
-const struct WildPokemonInfo PacifidlogTown_WaterMonsInfo = {4, PacifidlogTown_WaterMons};
 
 const struct WildPokemon PacifidlogTown_FishingMons [] =
 {
@@ -2759,7 +2249,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(PETALBURG_CITY),
         .mapNum = MAP_NUM(PETALBURG_CITY),
         .landMonsInfo = NULL,
-        .waterMonsInfo = &PetalburgCity_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&PetalburgCity_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &PetalburgCity_FishingMonsInfo,
     },
@@ -2767,7 +2257,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(SLATEPORT_CITY),
         .mapNum = MAP_NUM(SLATEPORT_CITY),
         .landMonsInfo = NULL,
-        .waterMonsInfo = &SlateportCity_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&SlateportCity_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &SlateportCity_FishingMonsInfo,
     },
@@ -2775,7 +2265,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(LILYCOVE_CITY),
         .mapNum = MAP_NUM(LILYCOVE_CITY),
         .landMonsInfo = NULL,
-        .waterMonsInfo = &LilycoveCity_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&LilycoveCity_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &LilycoveCity_FishingMonsInfo,
     },
@@ -2783,7 +2273,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(MOSSDEEP_CITY),
         .mapNum = MAP_NUM(MOSSDEEP_CITY),
         .landMonsInfo = NULL,
-        .waterMonsInfo = &MossdeepCity_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&MossdeepCity_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &MossdeepCity_FishingMonsInfo,
     },
@@ -2791,7 +2281,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(SOOTOPOLIS_CITY),
         .mapNum = MAP_NUM(SOOTOPOLIS_CITY),
         .landMonsInfo = NULL,
-        .waterMonsInfo = &SootopolisCity_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&SootopolisCity_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &SootopolisCity_FishingMonsInfo,
     },
@@ -2799,7 +2289,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(EVER_GRANDE_CITY),
         .mapNum = MAP_NUM(EVER_GRANDE_CITY),
         .landMonsInfo = NULL,
-        .waterMonsInfo = &EverGrandeCity_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&EverGrandeCity_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &EverGrandeCity_FishingMonsInfo,
     },
@@ -2807,7 +2297,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(METEOR_FALLS_1F_1R),
         .mapNum = MAP_NUM(METEOR_FALLS_1F_1R),
         .landMonsInfo = &MeteorFalls_1F_1R_LandMonsInfo,
-        .waterMonsInfo = &MeteorFalls_1F_1R_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&MeteorFalls_1F_1R_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &MeteorFalls_1F_1R_FishingMonsInfo,
     },
@@ -2815,7 +2305,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(METEOR_FALLS_1F_2R),
         .mapNum = MAP_NUM(METEOR_FALLS_1F_2R),
         .landMonsInfo = &MeteorFalls_1F_2R_LandMonsInfo,
-        .waterMonsInfo = &MeteorFalls_1F_2R_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&MeteorFalls_1F_2R_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &MeteorFalls_1F_2R_FishingMonsInfo,
     },
@@ -2823,7 +2313,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(METEOR_FALLS_B1F_1R),
         .mapNum = MAP_NUM(METEOR_FALLS_B1F_1R),
         .landMonsInfo = &MeteorFalls_B1F_1R_LandMonsInfo,
-        .waterMonsInfo = &MeteorFalls_B1F_1R_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&MeteorFalls_B1F_1R_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &MeteorFalls_B1F_1R_FishingMonsInfo,
     },
@@ -2831,7 +2321,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(METEOR_FALLS_B1F_2R),
         .mapNum = MAP_NUM(METEOR_FALLS_B1F_2R),
         .landMonsInfo = &MeteorFalls_B1F_2R_LandMonsInfo,
-        .waterMonsInfo = &MeteorFalls_B1F_2R_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&MeteorFalls_B1F_2R_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &MeteorFalls_B1F_2R_FishingMonsInfo,
     },
@@ -2991,7 +2481,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(SEAFLOOR_CAVERN_ENTRANCE),
         .mapNum = MAP_NUM(SEAFLOOR_CAVERN_ENTRANCE),
         .landMonsInfo = NULL,
-        .waterMonsInfo = &SeafloorCavern_Entrance_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&SeafloorCavern_Entrance_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &SeafloorCavern_Entrance_FishingMonsInfo,
     },
@@ -3039,7 +2529,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(SEAFLOOR_CAVERN_ROOM6),
         .mapNum = MAP_NUM(SEAFLOOR_CAVERN_ROOM6),
         .landMonsInfo = &SeafloorCavern_Room6_LandMonsInfo,
-        .waterMonsInfo = &SeafloorCavern_Room6_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&SeafloorCavern_Room6_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &SeafloorCavern_Room6_FishingMonsInfo,
     },
@@ -3047,7 +2537,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(SEAFLOOR_CAVERN_ROOM7),
         .mapNum = MAP_NUM(SEAFLOOR_CAVERN_ROOM7),
         .landMonsInfo = &SeafloorCavern_Room7_LandMonsInfo,
-        .waterMonsInfo = &SeafloorCavern_Room7_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&SeafloorCavern_Room7_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &SeafloorCavern_Room7_FishingMonsInfo,
     },
@@ -3119,7 +2609,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(VICTORY_ROAD_B2F),
         .mapNum = MAP_NUM(VICTORY_ROAD_B2F),
         .landMonsInfo = &VictoryRoad_B2F_LandMonsInfo,
-        .waterMonsInfo = &VictoryRoad_B2F_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&VictoryRoad_B2F_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &VictoryRoad_B2F_FishingMonsInfo,
     },
@@ -3127,7 +2617,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(SHOAL_CAVE_LOW_TIDE_ENTRANCE_ROOM),
         .mapNum = MAP_NUM(SHOAL_CAVE_LOW_TIDE_ENTRANCE_ROOM),
         .landMonsInfo = &ShoalCave_LowTideEntranceRoom_LandMonsInfo,
-        .waterMonsInfo = &ShoalCave_LowTideEntranceRoom_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&ShoalCave_LowTideEntranceRoom_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &ShoalCave_LowTideEntranceRoom_FishingMonsInfo,
     },
@@ -3135,7 +2625,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(SHOAL_CAVE_LOW_TIDE_INNER_ROOM),
         .mapNum = MAP_NUM(SHOAL_CAVE_LOW_TIDE_INNER_ROOM),
         .landMonsInfo = &ShoalCave_LowTideInnerRoom_LandMonsInfo,
-        .waterMonsInfo = &ShoalCave_LowTideInnerRoom_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&ShoalCave_LowTideInnerRoom_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &ShoalCave_LowTideInnerRoom_FishingMonsInfo,
     },
@@ -3183,7 +2673,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(ABANDONED_SHIP_ROOMS_B1F),
         .mapNum = MAP_NUM(ABANDONED_SHIP_ROOMS_B1F),
         .landMonsInfo = NULL,
-        .waterMonsInfo = &AbandonedShip_Rooms_B1F_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&AbandonedShip_Rooms_B1F_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &AbandonedShip_Rooms_B1F_FishingMonsInfo,
     },
@@ -3191,7 +2681,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(ABANDONED_SHIP_HIDDEN_FLOOR_CORRIDORS),
         .mapNum = MAP_NUM(ABANDONED_SHIP_HIDDEN_FLOOR_CORRIDORS),
         .landMonsInfo = NULL,
-        .waterMonsInfo = &AbandonedShip_HiddenFloorCorridors_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&AbandonedShip_HiddenFloorCorridors_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &AbandonedShip_HiddenFloorCorridors_FishingMonsInfo,
     },
@@ -3231,7 +2721,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(ROUTE102),
         .mapNum = MAP_NUM(ROUTE102),
         .landMonsInfo = &Route102_LandMonsInfo,
-        .waterMonsInfo = &Route102_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&Route102_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &Route102_FishingMonsInfo,
     },
@@ -3239,7 +2729,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(ROUTE103),
         .mapNum = MAP_NUM(ROUTE103),
         .landMonsInfo = &Route103_LandMonsInfo,
-        .waterMonsInfo = &Route103_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&Route103_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &Route103_FishingMonsInfo,
     },
@@ -3247,7 +2737,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(ROUTE104),
         .mapNum = MAP_NUM(ROUTE104),
         .landMonsInfo = &Route104_LandMonsInfo,
-        .waterMonsInfo = &Route104_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&Route104_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &Route104_FishingMonsInfo,
     },
@@ -3255,7 +2745,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(ROUTE105),
         .mapNum = MAP_NUM(ROUTE105),
         .landMonsInfo = NULL,
-        .waterMonsInfo = &Route105_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&Route105_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &Route105_FishingMonsInfo,
     },
@@ -3263,7 +2753,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(ROUTE106),
         .mapNum = MAP_NUM(ROUTE106),
         .landMonsInfo = NULL,
-        .waterMonsInfo = &Route106_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&Route106_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &Route106_FishingMonsInfo,
     },
@@ -3271,7 +2761,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(ROUTE107),
         .mapNum = MAP_NUM(ROUTE107),
         .landMonsInfo = &Route107_LandMonsInfo,
-        .waterMonsInfo = &Route107_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&Route107_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &Route107_FishingMonsInfo,
     },
@@ -3279,7 +2769,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(ROUTE108),
         .mapNum = MAP_NUM(ROUTE108),
         .landMonsInfo = NULL,
-        .waterMonsInfo = &Route108_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&Route108_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &Route108_FishingMonsInfo,
     },
@@ -3287,7 +2777,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(ROUTE109),
         .mapNum = MAP_NUM(ROUTE109),
         .landMonsInfo = NULL,
-        .waterMonsInfo = &Route109_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&Route109_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &Route109_FishingMonsInfo,
     },
@@ -3295,7 +2785,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(ROUTE110),
         .mapNum = MAP_NUM(ROUTE110),
         .landMonsInfo = &Route110_LandMonsInfo,
-        .waterMonsInfo = &Route110_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&Route110_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &Route110_FishingMonsInfo,
     },
@@ -3303,7 +2793,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(ROUTE111),
         .mapNum = MAP_NUM(ROUTE111),
         .landMonsInfo = &Route111_LandMonsInfo,
-        .waterMonsInfo = &Route111_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&Route111_WaterMonsInfo,
         .rockSmashMonsInfo = &Route111_RockSmashMonsInfo,
         .fishingMonsInfo = &Route111_FishingMonsInfo,
     },
@@ -3327,7 +2817,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(ROUTE114),
         .mapNum = MAP_NUM(ROUTE114),
         .landMonsInfo = &Route114_LandMonsInfo,
-        .waterMonsInfo = &Route114_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&Route114_WaterMonsInfo,
         .rockSmashMonsInfo = &Route114_RockSmashMonsInfo,
         .fishingMonsInfo = &Route114_FishingMonsInfo,
     },
@@ -3335,7 +2825,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(ROUTE115),
         .mapNum = MAP_NUM(ROUTE115),
         .landMonsInfo = &Route115_LandMonsInfo,
-        .waterMonsInfo = &Route115_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&Route115_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &Route115_FishingMonsInfo,
     },
@@ -3351,7 +2841,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(ROUTE117),
         .mapNum = MAP_NUM(ROUTE117),
         .landMonsInfo = &Route117_LandMonsInfo,
-        .waterMonsInfo = &Route117_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&Route117_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &Route117_FishingMonsInfo,
     },
@@ -3359,7 +2849,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(ROUTE118),
         .mapNum = MAP_NUM(ROUTE118),
         .landMonsInfo = &Route118_LandMonsInfo,
-        .waterMonsInfo = &Route118_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&Route118_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &Route118_FishingMonsInfo,
     },
@@ -3367,7 +2857,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(ROUTE119),
         .mapNum = MAP_NUM(ROUTE119),
         .landMonsInfo = &Route119_LandMonsInfo,
-        .waterMonsInfo = &Route119_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&Route119_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &Route119_FishingMonsInfo,
     },
@@ -3375,7 +2865,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(ROUTE120),
         .mapNum = MAP_NUM(ROUTE120),
         .landMonsInfo = &Route120_LandMonsInfo,
-        .waterMonsInfo = &Route120_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&Route120_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &Route120_FishingMonsInfo,
     },
@@ -3383,7 +2873,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(ROUTE121),
         .mapNum = MAP_NUM(ROUTE121),
         .landMonsInfo = &Route121_LandMonsInfo,
-        .waterMonsInfo = &Route121_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&Route121_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &Route121_FishingMonsInfo,
     },
@@ -3391,7 +2881,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(ROUTE122),
         .mapNum = MAP_NUM(ROUTE122),
         .landMonsInfo = NULL,
-        .waterMonsInfo = &Route122_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&Route122_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &Route122_FishingMonsInfo,
     },
@@ -3399,7 +2889,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(ROUTE123),
         .mapNum = MAP_NUM(ROUTE123),
         .landMonsInfo = &Route123_LandMonsInfo,
-        .waterMonsInfo = &Route123_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&Route123_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &Route123_FishingMonsInfo,
     },
@@ -3407,7 +2897,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(ROUTE124),
         .mapNum = MAP_NUM(ROUTE124),
         .landMonsInfo = NULL,
-        .waterMonsInfo = &Route124_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&Route124_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &Route124_FishingMonsInfo,
     },
@@ -3415,7 +2905,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(ROUTE125),
         .mapNum = MAP_NUM(ROUTE125),
         .landMonsInfo = NULL,
-        .waterMonsInfo = &Route125_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&Route125_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &Route125_FishingMonsInfo,
     },
@@ -3423,7 +2913,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(ROUTE126),
         .mapNum = MAP_NUM(ROUTE126),
         .landMonsInfo = NULL,
-        .waterMonsInfo = &Route126_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&Route126_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &Route126_FishingMonsInfo,
     },
@@ -3431,7 +2921,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(ROUTE127),
         .mapNum = MAP_NUM(ROUTE127),
         .landMonsInfo = NULL,
-        .waterMonsInfo = &Route127_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&Route127_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &Route127_FishingMonsInfo,
     },
@@ -3439,7 +2929,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(ROUTE128),
         .mapNum = MAP_NUM(ROUTE128),
         .landMonsInfo = NULL,
-        .waterMonsInfo = &Route128_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&Route128_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &Route128_FishingMonsInfo,
     },
@@ -3447,7 +2937,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(ROUTE129),
         .mapNum = MAP_NUM(ROUTE129),
         .landMonsInfo = NULL,
-        .waterMonsInfo = &Route129_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&Route129_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &Route129_FishingMonsInfo,
     },
@@ -3455,7 +2945,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(ROUTE130),
         .mapNum = MAP_NUM(ROUTE130),
         .landMonsInfo = &Route130_LandMonsInfo,
-        .waterMonsInfo = &Route130_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&Route130_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &Route130_FishingMonsInfo,
     },
@@ -3463,7 +2953,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(ROUTE131),
         .mapNum = MAP_NUM(ROUTE131),
         .landMonsInfo = NULL,
-        .waterMonsInfo = &Route131_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&Route131_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &Route131_FishingMonsInfo,
     },
@@ -3471,7 +2961,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(ROUTE132),
         .mapNum = MAP_NUM(ROUTE132),
         .landMonsInfo = NULL,
-        .waterMonsInfo = &Route132_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&Route132_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &Route132_FishingMonsInfo,
     },
@@ -3479,7 +2969,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(ROUTE133),
         .mapNum = MAP_NUM(ROUTE133),
         .landMonsInfo = NULL,
-        .waterMonsInfo = &Route133_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&Route133_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &Route133_FishingMonsInfo,
     },
@@ -3487,7 +2977,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(ROUTE134),
         .mapNum = MAP_NUM(ROUTE134),
         .landMonsInfo = NULL,
-        .waterMonsInfo = &Route134_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&Route134_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &Route134_FishingMonsInfo,
     },
@@ -3495,7 +2985,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(SAFARI_ZONE_NORTHWEST),
         .mapNum = MAP_NUM(SAFARI_ZONE_NORTHWEST),
         .landMonsInfo = &SafariZone_Northwest_LandMonsInfo,
-        .waterMonsInfo = &SafariZone_Northwest_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&SafariZone_Northwest_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &SafariZone_Northwest_FishingMonsInfo,
     },
@@ -3511,7 +3001,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(SAFARI_ZONE_SOUTHWEST),
         .mapNum = MAP_NUM(SAFARI_ZONE_SOUTHWEST),
         .landMonsInfo = &SafariZone_Southwest_LandMonsInfo,
-        .waterMonsInfo = &SafariZone_Southwest_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&SafariZone_Southwest_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &SafariZone_Southwest_FishingMonsInfo,
     },
@@ -3527,7 +3017,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(DEWFORD_TOWN),
         .mapNum = MAP_NUM(DEWFORD_TOWN),
         .landMonsInfo = NULL,
-        .waterMonsInfo = &DewfordTown_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&DewfordTown_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &DewfordTown_FishingMonsInfo,
     },
@@ -3535,7 +3025,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(PACIFIDLOG_TOWN),
         .mapNum = MAP_NUM(PACIFIDLOG_TOWN),
         .landMonsInfo = NULL,
-        .waterMonsInfo = &PacifidlogTown_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&PacifidlogTown_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &PacifidlogTown_FishingMonsInfo,
     },
@@ -3543,7 +3033,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(UNDERWATER1),
         .mapNum = MAP_NUM(UNDERWATER1),
         .landMonsInfo = NULL,
-        .waterMonsInfo = &Underwater1_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&Underwater1_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = NULL,
     },
@@ -3551,7 +3041,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(UNDERWATER2),
         .mapNum = MAP_NUM(UNDERWATER2),
         .landMonsInfo = NULL,
-        .waterMonsInfo = &Underwater2_WaterMonsInfo,
+        .waterMonsInfo = NULL, //&Underwater2_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = NULL,
     },

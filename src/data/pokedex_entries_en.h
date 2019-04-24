@@ -5403,9 +5403,18 @@ static const u8 DexDescription_Roserade_1[] = _(
   "different toxins, but it can jab with\n"
   "near-fatal using both.");
 static const u8 DexDescription_Roserade_2[] = _(
-  "It attratcs prey with a sweet aroma, then\n"
+  "It attracts prey with a sweet aroma, then\n"
   "downs it with thorny whips hidden in its\n"
   "arms.");
+
+static const u8 DexDescription_Ambipom_1[] = _(
+  "They work in large colonies and make\n"
+  "rings by linking their tails,\n"
+  "apparently in friendship.");
+static const u8 DexDescription_Ambipom_2[] = _(
+  "Its two tails are very adept at handling\n"
+  "objects; it rarely uses its hands.\n"
+  "");
 
 
 
@@ -9672,8 +9681,8 @@ const struct PokedexEntry gPokedexEntries[] =
         .categoryName = _("Bud"),
         .height = 2,
         .weight = 12,
-        .descriptionPage1 = DexDescription_Dummy_1,
-        .descriptionPage2 = DexDescription_Dummy_2,
+        .descriptionPage1 = DexDescription_Budew_1,
+        .descriptionPage2 = DexDescription_Budew_2,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
@@ -9683,8 +9692,8 @@ const struct PokedexEntry gPokedexEntries[] =
         .categoryName = _("Bouquet"),
         .height = 9,
         .weight = 145,
-        .descriptionPage1 = DexDescription_Dummy_1,
-        .descriptionPage2 = DexDescription_Dummy_2,
+        .descriptionPage1 = DexDescription_Roserade_1,
+        .descriptionPage2 = DexDescription_Roserade_2,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
@@ -9694,8 +9703,8 @@ const struct PokedexEntry gPokedexEntries[] =
         .categoryName = _("Long Tail"),
         .height = 12,
         .weight = 203,
-        .descriptionPage1 = DexDescription_Dummy_1,
-        .descriptionPage2 = DexDescription_Dummy_2,
+        .descriptionPage1 = DexDescription_Ambipom_1,
+        .descriptionPage2 = DexDescription_Ambipom_2,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,

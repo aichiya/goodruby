@@ -13,7 +13,7 @@ LYLE: Wurmple Lv7, Caterpie Lv7, Weedle Lv7, Ledyba Lv7, Spinarak Lv7
 GRUNT: Houndour Lv10 [Bite]
 JAMES: Nincada Lv9, Venonat Lv9
 
-ROUTE 105 NORTH
+ROUTE 104 NORTH
 HALEY: Shroomish Lv9, NidoranF Lv9
 CINDY: Skitty@Sitrus Lv10
 GINA & MIA: Cleffa Lv9, Igglybuff Lv9
@@ -247,3 +247,36 @@ LORI (Defense): Delcatty@Sitrus Lv33 (Secret Power, Charge Beam, Charm, Thunder 
 GEORGE (Recovery): Miltank@Leftovers Lv33 (Milk Drink, Heal Bell, Body Slam, Defense Curl)
 JODY (Strength): Ursaring@Silk Scarf Lv33 (Swords Dance, Chip Away, Feint Attack, Metal Claw)
 BERKE (OHKO): Snorlax@Scope Lens Lv33 (SelfDestruct)
+
+ROUTE 105
+DAWN:
+BEVERLY:
+AUSTIN:
+LUIS:
+FOSTER: Trapinch Lv33, Linoone Lv33
+
+ROUTE 106
+DOUGLAS:
+NICOLE:
+
+ROUTE 107
+BETH:
+DARRIN:
+LISA&RAY:
+TONY:
+DENISE:
+
+ROUTE 108
+JEROME:
+TARA:
+MATTHEW:
+MISSY:
+
+ROUTE 109
+GWEN:
+CARMEN:
+ALICE:
+DAVID:
+MEL&PAUL:
+CARTER:
+
