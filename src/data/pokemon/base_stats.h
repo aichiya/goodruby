@@ -3878,7 +3878,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_GRASS,
         .eggGroup2 = EGG_GROUP_GRASS,
         .ability1 = ABILITY_CHLOROPHYLL,
-        .ability2 = ABILITY_LEAF_GUARD,
+        .ability2 = ABILITY_UNNERVE,
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
@@ -5174,7 +5174,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_LEAF_GUARD,
+		.hiddenAbility = ABILITY_THICK_FAT,
     },
 
     [SPECIES_BAYLEEF] =
@@ -5208,7 +5208,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_LEAF_GUARD,
+		.hiddenAbility = ABILITY_THICK_FAT,
     },
 
     [SPECIES_MEGANIUM] =
@@ -5242,7 +5242,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_LEAF_GUARD,
+		.hiddenAbility = ABILITY_THICK_FAT,
     },
 
     [SPECIES_CYNDAQUIL] =
@@ -6360,7 +6360,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FAIRY,
         .eggGroup2 = EGG_GROUP_GRASS,
         .ability1 = ABILITY_CHLOROPHYLL,
-        .ability2 = ABILITY_LEAF_GUARD,
+        .ability2 = ABILITY_UNBURDEN,
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_PINK,
         .noFlip = FALSE,
@@ -6394,7 +6394,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FAIRY,
         .eggGroup2 = EGG_GROUP_GRASS,
         .ability1 = ABILITY_CHLOROPHYLL,
-        .ability2 = ABILITY_LEAF_GUARD,
+        .ability2 = ABILITY_UNBURDEN,
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
@@ -6428,7 +6428,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FAIRY,
         .eggGroup2 = EGG_GROUP_GRASS,
         .ability1 = ABILITY_CHLOROPHYLL,
-        .ability2 = ABILITY_LEAF_GUARD,
+        .ability2 = ABILITY_UNBURDEN,
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
@@ -7316,7 +7316,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_BLACK,
         .noFlip = TRUE,
-		.hiddenAbility = ABILITY_PICKPOCKET,
+		.hiddenAbility = ABILITY_EARLY_BIRD,
     },
 
     [SPECIES_TEDDIURSA] =
@@ -10113,7 +10113,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_PICKPOCKET,
+		.hiddenAbility = ABILITY_ANTICIPATION,
     },
 
     [SPECIES_NUZLEAF] =
@@ -10147,7 +10147,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_PICKPOCKET,
+		.hiddenAbility = ABILITY_ANTICIPATION,
     },
 
     [SPECIES_SHIFTRY] =
@@ -10181,7 +10181,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_PICKPOCKET,
+		.hiddenAbility = ABILITY_PRANKSTER,
     },
 
     [SPECIES_NINCADA] =
@@ -12323,7 +12323,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = TRUE,
-		.hiddenAbility = ABILITY_LEAF_GUARD,
+		.hiddenAbility = ABILITY_TECHNICIAN,
     },
 
     [SPECIES_SLAKOTH] =
@@ -13989,7 +13989,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = TRUE,
-		.hiddenAbility = ABILITY_LEAF_GUARD,
+		.hiddenAbility = ABILITY_RATTLED,
     },
 
     [SPECIES_ROSERADE] =
@@ -14363,7 +14363,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_BLACK,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_PICKPOCKET,
+		.hiddenAbility = ABILITY_PRESSURE,
     },
 
     [SPECIES_MAGNEZONE] =
@@ -14495,7 +14495,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_GRASS,
         .eggGroup2 = EGG_GROUP_GRASS,
         .ability1 = ABILITY_CHLOROPHYLL,
-        .ability2 = ABILITY_LEAF_GUARD,
+        .ability2 = ABILITY_UNNERVE,
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
@@ -14664,8 +14664,8 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FIELD,
-        .ability1 = ABILITY_LEAF_GUARD,
-        .ability2 = ABILITY_LEAF_GUARD,
+        .ability1 = ABILITY_SAP_SIPPER,
+        .ability2 = ABILITY_SAP_SIPPER,
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,

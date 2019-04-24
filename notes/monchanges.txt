@@ -10,16 +10,23 @@ SANDSHREW, SANDSLASH: Sandshrew gains Anticipation. Sandslash gains Iron Barbs.
 RAPIDASH: Base Speed up from 105 to 115.
 SEEL: Base Speed up from 45 to 55.
 DEWGONG: Base Speed up from 70 to 90.
+TANGELA, TANGROWTH: Leaf Guard -> Unnerve.
+CHIKORITA, BAYLEEF, MEGANIUM: HA Leaf Guard -> Thick Fat.
 LEDYBA, LEDIAN: Swarm replaced with Magic Guard.
+HOPPIP, SKIPLOOM, JUMPLUFF: Leaf Guard -> Unburden.
 SUNFLORA: Chlorophyll -> Flash Fire, HA Early Bird -> Drought.
+SNEASEL, WEAVILE: Sneasel's HA Pickpocket -> Early Bird. Weavile's HA Pickpocket -> Pressure.
+SEEDOT, NUZLEAF, SHIFTRY: Seedot's, Nuzleaf's HA Pickpocket -> Anticipation. Shiftry's HA Pickpocket -> Prankster.
 BEAUTIFLY: HA Rivalry -> Intimidate.
 DUSTOX: HA CompoundEyes -> Filter.
 SKITTY, DELCATTY: Normalize -> Wonder Skin, Skitty's HA Wonder Skin -> Oblivious, Delcatty's HA Wonder Skin -> Fur Coat.
 WINGULL, PELIPPER: Secondary abilities Hydration/Drizzle are switched with hidden ability Rain Dish
+BUDEW, ROSELIA, ROSERADE: Budew's HA Leaf Guard -> Rattled. Roselia's HA Leaf Guard -> Technician.
 TORKOAL: Secondary ability Drought is switched with hidden ability Shell Armor
 NUMEL: Secondary ability Simple is replaced with Oblivious
 SPINDA: Base stats up to 70/70/70/70/70/70.
 LUVDISC: Base stats up to 43/40/75/70/85/117, Hydration is now secondary ability, gained HA Triage
+LEAFEON: Leaf Guard -> Sap Siper.
 
 
 MOVEPOOL CHANGES:
