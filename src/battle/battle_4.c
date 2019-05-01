@@ -717,6 +717,7 @@ static void sp40_settrickroom(void);
 static void sp41_checkdefiant(void);
 static void sp42_checkdefiantwebs(void);
 static void sp43_checkdefianttarget(void);
+static void sp44_preparecatchexp(void);
 
 
 void (* const gBattleScriptingCommandsTable[])(void) =
@@ -13299,6 +13300,7 @@ void (* const gBattleScriptingSpecialTable[])(void) =
     sp41_checkdefiant,
     sp42_checkdefiantwebs,
     sp43_checkdefianttarget,
+    sp44_preparecatchexp,
 };
 
 
@@ -14838,4 +14840,12 @@ static void sp43_checkdefianttarget(void)
         gBattlescriptCurrInstr = BattleScript_CompetitiveProc;
         PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_STAGE_SPATK);
     }
+}
+
+static void sp44_preparecatchexp(void)
+{
+    gBattleStruct->wildVictorySong++;
+    gActiveBattler = 1;
+    EmitSpriteInvisibility(0, 1);
+    MarkBufferBankForExecution(gActiveBattler);
 }

@@ -8291,7 +8291,7 @@ const struct TrainerMonNoItemCustomMoves gTrainerParty_Grunt36[] = {
 	.iv = 0,
 	.level = 9,
 	.species = SPECIES_HOUNDOUR,
-		.moves = MOVE_BITE, 0, 0, 0
+		.moves = MOVE_PURSUIT, MOVE_LEER, 0, 0
     }
 };
 

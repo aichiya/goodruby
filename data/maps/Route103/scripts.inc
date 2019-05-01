@@ -131,7 +131,6 @@ Route103_EventScript_14ED46:: @ 814ED46
 Route103_Movement_14ED67:: @ 814ED67
 	walk_left
 	walk_down
-	walk_down
 	end_movement
 
 Route103_Movement_14ED6B:: @ 814ED6B
@@ -140,16 +139,17 @@ Route103_Movement_14ED6B:: @ 814ED6B
 	walk_down
 	walk_down
 	walk_down
+	walk_down
 	end_movement
 
 Route103_Movement_14ED71:: @ 814ED71
-	walk_down
 	walk_down
 	end_movement
 
 Route103_Movement_14ED74:: @ 814ED74
 	jump_2_down
 	delay_16
+	walk_down
 	walk_down
 	walk_down
 	end_movement

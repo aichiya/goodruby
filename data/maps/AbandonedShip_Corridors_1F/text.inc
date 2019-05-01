@@ -6,7 +6,7 @@ AbandonedShip_Corridors_1F_Text_198479:: @ 8198479
 	.string "Whoa, you overwhelmed me!$"
 
 AbandonedShip_Corridors_1F_Text_198493:: @ 8198493
-	.string "It's not easy throwing POKé BALLS\n"
+	.string "It's not easy throwing Poké Balls\n"
 	.string "while hanging on to an inner tube!$"
 
 AbandonedShip_Corridors_1F_Text_1984D8:: @ 81984D8

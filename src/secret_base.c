@@ -23,6 +23,7 @@
 #include "palette.h"
 #include "pokemon.h"
 #include "overworld.h"
+#include "random.h"
 #include "script.h"
 #include "sound.h"
 #include "string_util.h"
@@ -34,6 +35,7 @@
 #include "constants/items.h"
 #include "constants/map_types.h"
 #include "constants/moves.h"
+#include "constants/secret_bases.h"
 #include "constants/species.h"
 #include "constants/vars.h"
 
@@ -601,7 +603,7 @@ void sub_80BC114(void)
         gSpecialVar_Result = 0;
 }
 
-u8 sub_80BC14C(u8 sbid)
+u8 SecretBaseAtLocationID(u8 sbid)
 {
     s16 idx;
 
@@ -767,7 +769,7 @@ u8 sub_80BC538(void)
 
 void sub_80BC56C(void)
 {
-    if (sub_80BC268(sub_80BC14C(gCurrentSecretBaseId)) == TRUE)
+    if (sub_80BC268(SecretBaseAtLocationID(gCurrentSecretBaseId)) == TRUE)
         gSpecialVar_Result = 1;
     else if (sub_80BC538() > 9)
         gSpecialVar_Result = 2;
@@ -777,7 +779,7 @@ void sub_80BC56C(void)
 
 void sub_80BC5BC(void)
 {
-    gSaveBlock1.secretBases[sub_80BC14C(gCurrentSecretBaseId)].sbr_field_1_6 ^= 1;
+    gSaveBlock1.secretBases[SecretBaseAtLocationID(gCurrentSecretBaseId)].sbr_field_1_6 ^= 1;
     FlagSet(FLAG_DECORATION_16);
 }
 
@@ -1559,3 +1561,64 @@ void sub_80BD674(void *playerRecords, u32 size, u8 c)
             gSaveBlock1.secretBases[0].sbr_field_e++;
     }
 }
+
+u8 RandomSecretBaseID()
+{
+    while (1)
+    {
+        u8 id = (10 * (Random() % 24)) + (1 + (Random() % 5));
+        
+        if ((id % 10 == 4) && !(id == SECRET_BASE_TREE1_4 || id == SECRET_BASE_TREE2_4 || id == SECRET_BASE_SHRUB1_4))
+            continue;
+
+        if (SecretBaseAtLocationID(id))
+            continue;
+
+        return id;
+    }
+}
+
+void DecorateRandomBase(struct SecretBaseRecord* base)
+{
+    //u8 id = base->secretBaseId / 10;
+    
+    
+}
+
+void MakeRandomBase(struct SecretBaseRecord* base)
+{
+    u16 tid;
+    
+    base->secretBaseId = RandomSecretBaseID();
+    base->gender = Random() % 2;
+    base->playerName[0] = CHAR_J;
+    base->playerName[1] = CHAR_e;
+    base->playerName[2] = CHAR_f;
+    base->playerName[3] = CHAR_f;
+    base->playerName[4] = EOS;
+    
+    tid = Random();
+    base->trainerId[0] = (u8)(tid & 0xFF);
+    base->trainerId[1] = (u8)(tid >> 8);
+    tid = Random();
+    base->trainerId[2] = (u8)(tid & 0xFF);
+    base->trainerId[3] = (u8)(tid >> 8);
+    
+    base->partySpecies[0] = SPECIES_FURRET;
+    base->partyLevels[0] = 15;
+    base->partyMoves[0] = MOVE_SECRET_POWER;
+    
+    // TODO: decorate it
+    
+}
+
+void PopulateSecretBases()
+{
+    u8 i;
+    
+    for (i = 1; i < SECRET_BASES_COUNT; i++)
+    {
+        MakeRandomBase(&gSaveBlock1.secretBases[i]);
+    }
+}
+

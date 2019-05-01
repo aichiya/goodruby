@@ -82,8 +82,8 @@ struct PokedexView
 
 enum
 {
-    DEX_MODE_HOENN,
-    DEX_MODE_NATIONAL
+    DEX_MODE_NATIONAL,
+    DEX_MODE_HOENN
 };
 
 enum
@@ -1111,8 +1111,8 @@ static const u8 gUnknown_083B58A4[][4] =
 };
 static const struct UnknownStruct2 gUnknown_083B58C0[] =
 {
-    {DexText_HoennDex2,    DexText_HoennDex},
     {DexText_NationalDex2, DexText_NationalDex},
+    {DexText_HoennDex2,    DexText_HoennDex},
     {NULL, NULL},
 };
 static const struct UnknownStruct2 gUnknown_083B58D8[] =
@@ -1211,9 +1211,9 @@ static void Task_PokedexResultsScreenExitPokedex(u8 taskId);
 static bool8 sub_808D344(u8 a);
 static void sub_808D640(void);
 static void SortPokedex(u8 dexMode, u8 sortMode);
-static void sub_808DEB0(u16 a, u8 b, u8 c, u16 d);
-static void sub_808DF88(u16 a, u8 b, u8 c, u16 d);
-static u8 sub_808DFE4(u16 num, u8 b, u8 c);
+static void Dex_WriteMonNumber(u16 a, u8 b, u8 c, u16 d);
+static void Dex_DrawMonOwnedBall(u16 a, u8 b, u8 c, u16 d);
+static u8 Dex_WriteMonName(u16 num, u8 b, u8 c);
 static void sub_808E090(u8 a, u8 b, u16 c);
 static void sub_808E0CC(u16 a, u16 b);
 static bool8 sub_808E208(u8 a, u8 b, u8 c);
@@ -2127,15 +2127,15 @@ static void sub_808DBE8(u8 a, u16 b, u16 c)
                 sub_808E090(0x11, i * 2, c);
                 if (gPokedexView->unk0[_b].seen)
                 {
-                    sub_808DEB0(_b, 0x12, i * 2, c);
-                    sub_808DF88(gPokedexView->unk0[_b].owned, 0x11, i * 2, c);
-                    sub_808DFE4(gPokedexView->unk0[_b].dexNum, 0x17, i * 2);
+                    Dex_WriteMonNumber(_b, 0x12, i * 2, c);
+                    Dex_DrawMonOwnedBall(gPokedexView->unk0[_b].owned, 0x11, i * 2, c);
+                    Dex_WriteMonName(gPokedexView->unk0[_b].dexNum, 0x17, i * 2);
                 }
                 else
                 {
-                    sub_808DEB0(_b, 0x12, i * 2, c);
-                    sub_808DF88(0, 0x11, i * 2, c);
-                    sub_808DFE4(0, 0x17, i * 2);
+                    Dex_WriteMonNumber(_b, 0x12, i * 2, c);
+                    Dex_DrawMonOwnedBall(0, 0x11, i * 2, c);
+                    Dex_WriteMonName(0, 0x17, i * 2);
                 }
             }
             _b++;
@@ -2152,15 +2152,15 @@ static void sub_808DBE8(u8 a, u16 b, u16 c)
             sub_808E090(0x11, gPokedexView->unk630 * 2, c);
             if (gPokedexView->unk0[_b].seen)
             {
-                sub_808DEB0(_b, 0x12, gPokedexView->unk630 * 2, c);
-                sub_808DF88(gPokedexView->unk0[_b].owned, 0x11, gPokedexView->unk630 * 2, c);
-                sub_808DFE4(gPokedexView->unk0[_b].dexNum, 0x17, gPokedexView->unk630 * 2);
+                Dex_WriteMonNumber(_b, 0x12, gPokedexView->unk630 * 2, c);
+                Dex_DrawMonOwnedBall(gPokedexView->unk0[_b].owned, 0x11, gPokedexView->unk630 * 2, c);
+                Dex_WriteMonName(gPokedexView->unk0[_b].dexNum, 0x17, gPokedexView->unk630 * 2);
             }
             else
             {
-                sub_808DEB0(_b, 0x12, gPokedexView->unk630 * 2, c);
-                sub_808DF88(0, 0x11, gPokedexView->unk630 * 2, c);
-                sub_808DFE4(0, 0x17, gPokedexView->unk630 * 2);
+                Dex_WriteMonNumber(_b, 0x12, gPokedexView->unk630 * 2, c);
+                Dex_DrawMonOwnedBall(0, 0x11, gPokedexView->unk630 * 2, c);
+                Dex_WriteMonName(0, 0x17, gPokedexView->unk630 * 2);
             }
         }
         break;
@@ -2176,22 +2176,22 @@ static void sub_808DBE8(u8 a, u16 b, u16 c)
             sub_808E090(0x11, r2 * 2, c);
             if (gPokedexView->unk0[_b].seen)
             {
-                sub_808DEB0(_b, 0x12, r2 * 2, c);
-                sub_808DF88(gPokedexView->unk0[_b].owned, 0x11, r2 * 2, c);
-                sub_808DFE4(gPokedexView->unk0[_b].dexNum, 0x17, r2 * 2);
+                Dex_WriteMonNumber(_b, 0x12, r2 * 2, c);
+                Dex_DrawMonOwnedBall(gPokedexView->unk0[_b].owned, 0x11, r2 * 2, c);
+                Dex_WriteMonName(gPokedexView->unk0[_b].dexNum, 0x17, r2 * 2);
             }
             else
             {
-                sub_808DEB0(_b, 0x12, r2 * 2, c);
-                sub_808DF88(0, 0x11, r2 * 2, c);
-                sub_808DFE4(0, 0x17, r2 * 2);
+                Dex_WriteMonNumber(_b, 0x12, r2 * 2, c);
+                Dex_DrawMonOwnedBall(0, 0x11, r2 * 2, c);
+                Dex_WriteMonName(0, 0x17, r2 * 2);
             }
         }
         break;
     }
 }
 
-static void sub_808DEB0(u16 a, u8 b, u8 c, u16 d)
+static void Dex_WriteMonNumber(u16 a, u8 b, u8 c, u16 d)
 {
     u8 text[4];
     u16 unk[2];
@@ -2210,7 +2210,7 @@ static void sub_808DEB0(u16 a, u8 b, u8 c, u16 d)
     Menu_PrintText(text, b - 15, c);
 }
 
-static void sub_808DF88(u16 a, u8 b, u8 c, u16 d)
+static void Dex_DrawMonOwnedBall(u16 a, u8 b, u8 c, u16 d)
 {
     u16 unk[2];
 
@@ -2228,7 +2228,7 @@ static void sub_808DF88(u16 a, u8 b, u8 c, u16 d)
     *(u16 *)(VRAM + d * 0x800 + (c + 1) * 0x40 + b * 2) = unk[1];
 }
 
-static u8 sub_808DFE4(u16 num, u8 b, u8 c)
+static u8 Dex_WriteMonName(u16 num, u8 b, u8 c)
 {
     u8 text[10];
     u8 i;

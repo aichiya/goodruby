@@ -4,6 +4,13 @@
 // Maximum number of secret bases the game can store. This include 1 for the player, and up to 19 others from linked players.
 #define MAX_SECRET_BASES 20
 
+struct RandomSecretBaseDecorPattern
+{
+    u8 x;
+    u8 y;
+    u8 type;
+};
+
 void ResetSecretBases(void);
 void SetCurrentSecretBaseVar(void);
 void CheckPlayerHasSecretBase(void);
@@ -20,6 +27,7 @@ u8 sub_80BCCA4(u8 secretBaseIndex);
 const u8 *GetSecretBaseTrainerLoseText(void);
 void sub_80BCF1C(u8 taskId);
 void sub_80BD674(void *playerRecords, u32 size, u8 c);
+void PopulateSecretBases();
 #if DEBUG
 void unref_sub_80BCD7C(u8 secretBaseIndex);
 u8 *sub_80BC190(u8 *dest, u8 arg1);

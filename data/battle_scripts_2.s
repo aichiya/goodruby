@@ -74,6 +74,11 @@ BattleScript_SuccessBallThrow:: @ 81D9EC2
 
 BattleScript_PrintCaughtMonInfo: @ 81D9ED0
 	printstring BATTLE_TEXT_BallCaught1
+    
+    special 0x44
+	setbyte sGIVEEXP_STATE, 0
+	getexp TARGET
+    
 	trysetcaughtmondexflags BattleScript_TryNicknameCaughtMon
 	printstring BATTLE_TEXT_AddedToDex
 	waitstate
