@@ -1264,7 +1264,15 @@ u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
 				u8 ability;
 
                 fixedIV = partyData[i].iv * 31 / 255;
-				CreateMonWithGenderNatureLetterOTID(&party[i], partyData[i].species, partyData[i].level, fixedIV, partyData[i].gender, partyData[i].nature, 0, 1, 0);
+                if (partyData[i].gender == MON_MALE)
+                    personalityValue |= 0x80;
+                else if (partyData[i].gender == MON_FEMALE)
+                    personalityValue &= ~(0x80);
+                CreateMon(&party[i], partyData[i].species, partyData[i].level, fixedIV, TRUE, personalityValue, 1, 0);
+
+				//CreateMonWithGenderNatureLetterOTID(&party[i], partyData[i].species, partyData[i].level, fixedIV, partyData[i].gender, partyData[i].nature, 0, 1, 0);
+				SetMonData(&party[i], partyData[i].nature, &ability);
+                
 
 				ability = partyData[i].ability;
 				if (ability == 0 || ability == 1)

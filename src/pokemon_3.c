@@ -256,6 +256,9 @@ u8 *sub_803F378(u16 itemId)
 
 u8 GetNature(struct Pokemon *mon)
 {
+    u32 nature = GetMonData(mon, MON_DATA_NATURE_OVERRIDE, 0);
+    if (nature)
+        return nature;
     return GetMonData(mon, MON_DATA_PERSONALITY, 0) % 25;
 }
 

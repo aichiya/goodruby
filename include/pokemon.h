@@ -87,7 +87,7 @@
 #define MON_DATA_KNOWN_MOVES       81
 #define MON_DATA_RIBBON_COUNT      82
 #define MON_DATA_RIBBONS           83
-#define MON_DATA_83                84
+#define MON_DATA_NATURE_OVERRIDE   84
 #define MON_DATA_ATK2              85
 #define MON_DATA_DEF2              86
 #define MON_DATA_SPEED2            87
@@ -195,7 +195,11 @@ struct PokemonSubstruct0
 {
     u16 species;
     u16 heldItem;
-    u32 experience;
+    
+    u32 experience:24;
+    u32 natureOverride:5;
+    u32 unused:3;
+    
     u8 ppBonuses;
     u8 friendship;
 };
