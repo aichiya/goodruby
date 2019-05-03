@@ -959,9 +959,11 @@ const u16 gMeowthEggMoves[] = {
     MOVE_ODOR_SLEUTH,
     MOVE_PSYCH_UP,
     MOVE_PUNISHMENT,
+    MOVE_SHOCK_WAVE,
     MOVE_SNATCH,
     MOVE_SPITE,
     MOVE_TAIL_WHIP,
+    MOVE_WATER_PULSE,
     0,
 };
 
@@ -977,9 +979,11 @@ const u16 gPersianEggMoves[] = {
     MOVE_ODOR_SLEUTH,
     MOVE_PSYCH_UP,
     MOVE_PUNISHMENT,
+    MOVE_SHOCK_WAVE,
     MOVE_SNATCH,
     MOVE_SPITE,
     MOVE_TAIL_WHIP,
+    MOVE_WATER_PULSE,
     0,
 };
 

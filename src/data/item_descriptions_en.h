@@ -1,46 +1,46 @@
 static const u8 gItemDescription_MasterBall[] = _(
-    "The best BALL that\n"
-    "catches a POKéMON\n"
+    "The best Ball that\n"
+    "catches a Pokémon\n"
     "without fail.");
 
 static const u8 gItemDescription_UltraBall[] = _(
-    "A better BALL with\n"
+    "A better Ball with\n"
     "a higher catch rate\n"
-    "than a GREAT BALL.");
+    "than a GREAT Ball.");
 
 static const u8 gItemDescription_GreatBall[] = _(
-    "A good BALL with a\n"
+    "A good Ball with a\n"
     "higher catch rate\n"
-    "than a POKé BALL.");
+    "than a POKé Ball.");
 
 static const u8 gItemDescription_PokeBall[] = _(
     "A tool used for\n"
     "catching wild\n"
-    "POKéMON.");
+    "Pokémon.");
 
 static const u8 gItemDescription_SafariBall[] = _(
-    "A special BALL that\n"
+    "A special Ball that\n"
     "is used only in the\n"
     "SAFARI ZONE.");
 
 static const u8 gItemDescription_NetBall[] = _(
-    "A BALL that works\n"
+    "A Ball that works\n"
     "well on WATER- and\n"
-    "BUG-type POKéMON.");
+    "BUG-type Pokémon.");
 
 static const u8 gItemDescription_DiveBall[] = _(
-    "A BALL that works\n"
-    "better on POKéMON\n"
+    "A Ball that works\n"
+    "better on Pokémon\n"
     "on the ocean floor.");
 
 static const u8 gItemDescription_NestBall[] = _(
-    "A BALL that works\n"
+    "A Ball that works\n"
     "better on weaker\n"
-    "POKéMON.");
+    "Pokémon.");
 
 static const u8 gItemDescription_RepeatBall[] = _(
-    "A BALL that works\n"
-    "better on POKéMON\n"
+    "A Ball that works\n"
+    "better on Pokémon\n"
     "caught before.");
 
 static const u8 gItemDescription_TimerBall[] = _(
@@ -49,24 +49,24 @@ static const u8 gItemDescription_TimerBall[] = _(
     "taken in battle.");
 
 static const u8 gItemDescription_LuxuryBall[] = _(
-    "A cozy BALL that\n"
-    "makes POKéMON\n"
+    "A cozy Ball that\n"
+    "makes Pokémon\n"
     "more friendly.");
 
 static const u8 gItemDescription_PremierBall[] = _(
-    "A rare BALL made\n"
+    "A rare Ball made\n"
     "in commemoration\n"
     "of some event.");
 
 static const u8 gItemDescription_LevelBall[] = _(
     "A Ball that works\n"
     "well on lower\n"
-    "level POKéMON.");
+    "level Pokémon.");
 
 static const u8 gItemDescription_LureBall[] = _(
     "A Ball that works\n"
     "well on fished\n"
-    "up POKéMON.");
+    "up Pokémon.");
 
 static const u8 gItemDescription_MoonBall[] = _(
     "A Ball that works\n"
@@ -75,28 +75,28 @@ static const u8 gItemDescription_MoonBall[] = _(
 
 static const u8 gItemDescription_FriendBall[] = _(
     "A Ball that makes\n"
-    "a POKéMON friendly\n"
+    "a Pokémon friendly\n"
     "when caught.");
 
 static const u8 gItemDescription_LoveBall[] = _(
     "Works well on\n"
-    "POKéMON of the\n"
+    "Pokémon of the\n"
     "opposite gender.");
 
 static const u8 gItemDescription_HeavyBall[] = _(
-    "Works well on\n"
-    "very heavy\n"
-    "POKéMON.");
+    "A ball that works\n"
+    "well on very\n"
+    "heavy Pokémon.");
 
 static const u8 gItemDescription_FastBall[] = _(
-    "Works well on\n"
-    "very fast\n"
-    "POKéMON.");
+    "A ball that works\n"
+    "well on very\n"
+    "fast Pokémon.");
 
 static const u8 gItemDescription_HealBall[] = _(
     "A remedial Ball\n"
     "that restores\n"
-    "caught POKéMON.");
+    "caught Pokémon.");
 
 static const u8 gItemDescription_QuickBall[] = _(
     "Works well if\n"

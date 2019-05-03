@@ -775,7 +775,7 @@ void SetBoxMonData(struct BoxPokemon *boxMon, s32 field, const u8 *data)
         SET32(substruct0->experience);
         break;
     case MON_DATA_NATURE_OVERRIDE:
-        SET32(substruct0->natureOverride);
+        SET8(substruct0->natureOverride);
         break;
     case MON_DATA_PP_BONUSES:
         SET8(substruct0->ppBonuses);

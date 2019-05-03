@@ -196,12 +196,11 @@ struct PokemonSubstruct0
     u16 species;
     u16 heldItem;
     
-    u32 experience:24;
-    u32 natureOverride:5;
-    u32 unused:3;
+    u32 experience;
     
     u8 ppBonuses;
     u8 friendship;
+    u8 natureOverride;
 };
 
 struct PokemonSubstruct1

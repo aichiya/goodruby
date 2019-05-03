@@ -652,15 +652,15 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_PURPLE,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_HUSTLE,
+		.hiddenAbility = ABILITY_STRONG_JAW,
     },
 
     [SPECIES_RATICATE] =
     {
         .baseHP        = 55,
-        .baseAttack    = 81,
+        .baseAttack    = 101,
         .baseDefense   = 60,
-        .baseSpeed     = 97,
+        .baseSpeed     = 102,
         .baseSpAttack  = 50,
         .baseSpDefense = 70,
         .type1 = TYPE_NORMAL,
@@ -681,12 +681,12 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FIELD,
-        .ability1 = ABILITY_RUN_AWAY,
+        .ability1 = ABILITY_GLUTTONY,
         .ability2 = ABILITY_GUTS,
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_HUSTLE,
+		.hiddenAbility = ABILITY_STRONG_JAW,
     },
 
     [SPECIES_SPEAROW] =
@@ -1780,10 +1780,10 @@ const struct BaseStats gBaseStats[] =
     [SPECIES_PERSIAN] =
     {
         .baseHP        = 65,
-        .baseAttack    = 70,
+        .baseAttack    = 90,
         .baseDefense   = 60,
         .baseSpeed     = 115,
-        .baseSpAttack  = 65,
+        .baseSpAttack  = 85,
         .baseSpDefense = 65,
         .type1 = TYPE_NORMAL,
         .type2 = TYPE_NORMAL,
@@ -5451,9 +5451,9 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_SENTRET] =
     {
-        .baseHP        = 35,
+        .baseHP        = 45,
         .baseAttack    = 46,
-        .baseDefense   = 34,
+        .baseDefense   = 44,
         .baseSpeed     = 20,
         .baseSpAttack  = 35,
         .baseSpDefense = 45,
@@ -5480,7 +5480,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_FRISK,
+		.hiddenAbility = ABILITY_HUSTLE,
     },
 
     [SPECIES_FURRET] =
@@ -5509,12 +5509,12 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FIELD,
-        .ability1 = ABILITY_RUN_AWAY,
+        .ability1 = ABILITY_FRISK,
         .ability2 = ABILITY_KEEN_EYE,
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_FRISK,
+		.hiddenAbility = ABILITY_HUSTLE,
     },
 
     [SPECIES_HOOTHOOT] =
@@ -9780,10 +9780,10 @@ const struct BaseStats gBaseStats[] =
     {
         .baseHP        = 78,
         .baseAttack    = 70,
-        .baseDefense   = 61,
-        .baseSpeed     = 100,
+        .baseDefense   = 66,
+        .baseSpeed     = 110,
         .baseSpAttack  = 50,
-        .baseSpDefense = 61,
+        .baseSpDefense = 66,
         .type1 = TYPE_NORMAL,
         .type2 = TYPE_NORMAL,
         .catchRate = 90,

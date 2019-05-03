@@ -353,6 +353,11 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
 		attack = (130 * attack) / 100;
 		spAttack = (130 * spAttack) / 100;
 	}
+    if (attacker->ability == ABILITY_STRONG_JAW && (gBattleMoves[move].flags & F_BITING))
+    {
+		attack = (150 * attack) / 100;
+		spAttack = (150 * spAttack) / 100;
+    }
 	if (attacker->ability == ABILITY_ANALYTIC)
 	{
 		for (i = 0; i < 4; i++)

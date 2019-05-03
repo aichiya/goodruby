@@ -1271,7 +1271,7 @@ u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
                 CreateMon(&party[i], partyData[i].species, partyData[i].level, fixedIV, TRUE, personalityValue, 1, 0);
 
 				//CreateMonWithGenderNatureLetterOTID(&party[i], partyData[i].species, partyData[i].level, fixedIV, partyData[i].gender, partyData[i].nature, 0, 1, 0);
-				SetMonData(&party[i], partyData[i].nature, &ability);
+				SetMonData(&party[i], MON_DATA_NATURE_OVERRIDE, &partyData[i].nature);
                 
 
 				ability = partyData[i].ability;

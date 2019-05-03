@@ -153,4 +153,5 @@ gAbilityNames:: @ 81FA248
     .string "Fur Coat$", 13
     .string "Iron Barbs$", 13
     .string "Triage$", 13
+    .string "Strong Jaw$", 13
 

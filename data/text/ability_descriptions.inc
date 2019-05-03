@@ -445,6 +445,9 @@ gAbilityDescription_FurCoat:
 gAbilityDescription_Triage:
 	.string "Healing moves get priority.$"
 
+gAbilityDescription_StrongJaw:
+	.string "Powers up biting moves.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -602,3 +605,4 @@ gAbilityDescriptions:: @ 81FA110
     .4byte gAbilityDescription_FurCoat
     .4byte gAbilityDescription_RoughSkin
     .4byte gAbilityDescription_Triage
+    .4byte gAbilityDescription_StrongJaw

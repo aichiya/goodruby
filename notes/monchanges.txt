@@ -6,16 +6,20 @@ ILLUMISE: Bug -> Bug/Fairy.
 
 
 ABILITY AND STAT CHANGES:
+RATTATA, RATICATE: Raticate gets +5 Speed, +20 Atk. Both HA Hustle replaced with Strong Jaw. Raticate's Run Away replaced with Gluttony.
 SANDSHREW, SANDSLASH: Sandshrew gains Anticipation. Sandslash gains Iron Barbs.
+MEOWTH, PERSIAN: Persian gets +20 Atk/SAtk.
 RAPIDASH: Base Speed up from 105 to 115.
 SEEL: Base Speed up from 45 to 55.
 DEWGONG: Base Speed up from 70 to 90.
 TANGELA, TANGROWTH: Leaf Guard -> Unnerve.
 CHIKORITA, BAYLEEF, MEGANIUM: HA Leaf Guard -> Thick Fat.
+SENTRET, FURRET: Sentret gets +10 HP/Def. Furret gets +5 HP, +10 Atk/Def. Furret's Run Away -> Frisk. Both HA Frisk -> Hustle.
 LEDYBA, LEDIAN: Swarm replaced with Magic Guard.
 HOPPIP, SKIPLOOM, JUMPLUFF: Leaf Guard -> Unburden.
 SUNFLORA: Chlorophyll -> Flash Fire, HA Early Bird -> Drought.
 SNEASEL, WEAVILE: Sneasel's HA Pickpocket -> Early Bird. Weavile's HA Pickpocket -> Pressure.
+ZIGZAGOON, LINOONE: Linoone's base stats up to 78/70/66/50/66/110.
 SEEDOT, NUZLEAF, SHIFTRY: Seedot's, Nuzleaf's HA Pickpocket -> Anticipation. Shiftry's HA Pickpocket -> Prankster.
 BEAUTIFLY: HA Rivalry -> Intimidate.
 DUSTOX: HA CompoundEyes -> Filter.
@@ -32,6 +36,7 @@ LEAFEON: Leaf Guard -> Sap Siper.
 MOVEPOOL CHANGES:
 PIDGEY: Learns all moves before Whirlwind earlier, learns Air Cutter at 13
 SANDSHREW: Now has access to Spikes and Spiky Shield as egg moves.
+MEOWTH: Learns Shock Wave and Water Pulse as egg moves.
 PSYDUCK: Now has access to Nasty Plot and Slack Off as egg moves.
 DEWGONG: Level-up movepool re-arranged. Learns Megahorn and Body Slam instead of Dive. Gains TM89 U-Turn. Now has access to Slack Off as an egg move.
 KRABBY: Learns most moves at different levels, no longer learns Stomp, gains several moves by level-up
