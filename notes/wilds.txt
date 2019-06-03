@@ -8,7 +8,6 @@ Wooper
 Murkrow
 Girafarig
 Snubbull
-Pineco
 Swinub
 Mantyke
 Houndour
@@ -56,8 +55,11 @@ ROUTE 107: Pidgey (25%), Wingull (20%), Ekans (15%), Slowpoke (10%), Krabby (10%
 GRANITE CAVE  1F: Zubat (25%), Geodude (25%), Ekans (15%), Makuhita (15%), Abra (10%), Krabby (10%)
 GRANITE CAVE B1F: Zubat (25%), Aron (20%), Ekans (10%), Makuhita (10%), Onix (10%), Abra (10%), Sableye (5%), Mawile (5%), Geodude (5%)
 GRANITE CAVE B2F: Zubat (25%), Aron (20%), Ekans (10%), Onix (10%), Abra (10%), Sableye (10%), Mawile (10%), Geodude (5%)
-ROUTE 110: Rattata (20%), Electrike (20%), Oddish (15%), Gulpin (15%), Plusle (10%), Minun (10%), Wingull (10%) (e: Voltorb)
+ROUTE 110 SOUTH: Rattata (20%), Electrike (20%), Oddish (15%), Gulpin (15%), Plusle (10%), Minun (10%), Wingull (10%)
+ROUTE 110 NORTH: Wingull (20%), Electrike (20%), Oddish (15%), Gulpin (15%), Plusle (10%), Minun (10%), Rattata (10%) (event: Voltorb)
+ROUTE 103 EAST: Rattata (20%), Mareep (20%), Zigzagoon (15%), Wingull (15%), Ledyba (15%), Hoppip (10%), Abra (5%)
 ROUTE 117: Rattata (20%), Oddish (20%), Mareep (20%), Roselia (10%), Volbeat (10%), Illumise (10%), Marill (5%), Mime Jr. (5%)
+ROUTE 111: Rattata (25%), Cacnea (25%), Machop (15%), Sandshrew (15%), Slugma (10%), Oddish (10%)
 GAME CORNER: Pikachu, Cubone, Clefairy, Eevee, Porygon
 GRANITE CAVE B4F: Zubat (25%), Nosepass (25%), Onix (10%), Krabby (10%), Seel (10%), Sableye (10%), Mawile (10%)
 NEW MAUVILLE: Voltorb (35%), Magnemite (35%), Shuppet (20%), Elekid (10%)
@@ -94,3 +96,27 @@ SEALED CHAMBER:
 GNARLED DEN: Kangaskhan
 
 ROCK SMASH: Nosepass and Shuckle in Granite Cave, Geodude everywhere else.
+
+ROUTE 101: Lv2-3
+ROUTE 103: Lv2-4
+ROUTE 102: Lv3-5
+ROUTE 104: Lv4-6
+WOODS: Lv6-8
+ROUTE 116: Lv7-10
+RIDGE: Lv10-11
+ROUTE 107: Lv10-12
+GRANITE CAVE: Lv11-13
+ROUTE 110 SOUTH: Lv12-15
+ROUTE 110 NORTH: Lv14-16
+ROUTE 103 WEST: Lv14-16
+ROUTE 117: Lv15-17
+ROUTE 111: Lv15-17
+DEEP GRANITE CAVE: Lv15-17
+NEW MAUVILLE: Lv16-19
+ROUTE 112: Lv16-19
+FIERY PATH: Lv17-19
+ROUTE 113: Lv18-20
+ROUTE 114: Lv19-21
+METEOR FALLS: Lv19-22
+JAGGED PASS: Lv20-23
+DESERT: Lv22-25

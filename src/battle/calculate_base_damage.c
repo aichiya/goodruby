@@ -468,7 +468,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         }
     }
 	
-	if (defender->ability == ABILITY_UNAWARE)
+	if (defenderAbility == ABILITY_UNAWARE)
 		attackMod = 6;
 	
 	if (move == MOVE_CHIP_AWAY || attacker->ability == ABILITY_UNAWARE)

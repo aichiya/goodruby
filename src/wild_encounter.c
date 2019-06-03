@@ -1324,6 +1324,23 @@ const struct WildPokemon Route103_LandMons [] =
 };
 const struct WildPokemonInfo Route103_LandMonsInfo = {20, Route103_LandMons};
 
+const struct WildPokemon Route103_AltLandMons [] =
+{
+    {14, 16, SPECIES_RATTATA},
+    {14, 16, SPECIES_MAREEP},
+    {14, 16, SPECIES_ZIGZAGOON},
+    {14, 16, SPECIES_WINGULL},
+    {14, 16, SPECIES_LEDYBA},
+    {14, 16, SPECIES_HOPPIP},
+    {14, 16, SPECIES_ZIGZAGOON},
+    {14, 16, SPECIES_WINGULL},
+    {14, 16, SPECIES_LEDYBA},
+    {14, 16, SPECIES_ABRA},
+    {14, 16, SPECIES_LEDYBA},
+    {14, 16, SPECIES_ABRA},
+};
+const struct WildPokemonInfo Route103_AltLandMonsInfo = {20, Route103_AltLandMons};
+
 const struct WildPokemon Route103_FishingMons [] =
 {
     {5, 10, SPECIES_MAGIKARP},
@@ -1463,9 +1480,9 @@ const struct WildPokemon Route109_FishingMons [] =
 };
 const struct WildPokemonInfo Route109_FishingMonsInfo = {30, Route109_FishingMons};
 
-const struct WildPokemon Route110_LandMons [] =
+const struct WildPokemon Route110_AltLandMons [] =
 {
-    {12, 15, SPECIES_RATTATA},
+    {12, 15, SPECIES_WINGULL},
     {12, 15, SPECIES_ELECTRIKE},
     {12, 15, SPECIES_GULPIN},
     {12, 15, SPECIES_ODDISH},
@@ -1473,10 +1490,27 @@ const struct WildPokemon Route110_LandMons [] =
     {12, 15, SPECIES_MINUN},
     {12, 15, SPECIES_GULPIN},
     {12, 15, SPECIES_ODDISH},
-    {12, 15, SPECIES_WINGULL},
-    {12, 15, SPECIES_WINGULL},
-    {12, 15, SPECIES_WINGULL},
-    {12, 15, SPECIES_WINGULL},
+    {12, 15, SPECIES_RATTATA},
+    {12, 15, SPECIES_RATTATA},
+    {12, 15, SPECIES_RATTATA},
+    {12, 15, SPECIES_RATTATA},
+};
+const struct WildPokemonInfo Route110_AltLandMonsInfo = {20, Route110_AltLandMons};
+
+const struct WildPokemon Route110_LandMons [] =
+{
+    {14, 16, SPECIES_RATTATA},
+    {14, 16, SPECIES_ELECTRIKE},
+    {14, 16, SPECIES_GULPIN},
+    {14, 16, SPECIES_ODDISH},
+    {14, 16, SPECIES_PLUSLE},
+    {14, 16, SPECIES_MINUN},
+    {14, 16, SPECIES_GULPIN},
+    {14, 16, SPECIES_ODDISH},
+    {14, 16, SPECIES_WINGULL},
+    {14, 16, SPECIES_WINGULL},
+    {14, 16, SPECIES_WINGULL},
+    {14, 16, SPECIES_WINGULL},
 };
 const struct WildPokemonInfo Route110_LandMonsInfo = {20, Route110_LandMons};
 
@@ -1536,6 +1570,23 @@ const struct WildPokemon Route111_FishingMons [] =
     {40, 45, SPECIES_BARBOACH},
 };
 const struct WildPokemonInfo Route111_FishingMonsInfo = {30, Route111_FishingMons};
+
+const struct WildPokemon Route111_AltLandMons [] =
+{
+    {15, 18, SPECIES_RATTATA},
+    {15, 18, SPECIES_CACNEA},
+    {15, 18, SPECIES_MACHOP},
+    {15, 18, SPECIES_SANDSHREW},
+    {15, 18, SPECIES_SLUGMA},
+    {15, 18, SPECIES_ODDISH},
+    {15, 18, SPECIES_RATTATA},
+    {15, 18, SPECIES_CACNEA},
+    {15, 18, SPECIES_MACHOP},
+    {15, 18, SPECIES_SANDSHREW},
+    {15, 18, SPECIES_MACHOP},
+    {15, 18, SPECIES_SANDSHREW},
+};
+const struct WildPokemonInfo Route111_AltLandMonsInfo = {10, Route111_AltLandMons};
 
 const struct WildPokemon Route112_LandMons [] =
 {
@@ -1664,18 +1715,18 @@ const struct WildPokemonInfo Route116_LandMonsInfo = {20, Route116_LandMons};
 
 const struct WildPokemon Route117_LandMons [] =
 {
-    {14, 16, SPECIES_RATTATA},
-    {14, 16, SPECIES_ODDISH},
-    {14, 16, SPECIES_MAREEP},
-    {14, 16, SPECIES_MAREEP},
-    {14, 16, SPECIES_VOLBEAT},
-    {14, 16, SPECIES_ILLUMISE},
-    {14, 16, SPECIES_ROSELIA},
-    {13, 16, SPECIES_ROSELIA},
-    {14, 16, SPECIES_MARILL},
-    {14, 16, SPECIES_MIME_JR},
-    {14, 16, SPECIES_MARILL},
-    {14, 16, SPECIES_MIME_JR},
+    {15, 17, SPECIES_RATTATA},
+    {15, 17, SPECIES_ODDISH},
+    {15, 17, SPECIES_MAREEP},
+    {15, 17, SPECIES_MAREEP},
+    {15, 17, SPECIES_VOLBEAT},
+    {15, 17, SPECIES_ILLUMISE},
+    {15, 17, SPECIES_ROSELIA},
+    {15, 17, SPECIES_ROSELIA},
+    {15, 17, SPECIES_MARILL},
+    {15, 17, SPECIES_MIME_JR},
+    {15, 17, SPECIES_MARILL},
+    {15, 17, SPECIES_MIME_JR},
 };
 const struct WildPokemonInfo Route117_LandMonsInfo = {20, Route117_LandMons};
 
@@ -2732,6 +2783,11 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .waterMonsInfo = NULL, //&Route103_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &Route103_FishingMonsInfo,
+        .altXLow = 61,
+        .altYLow = 4,
+        .altXHigh = 66,
+        .altYHigh = 8,
+        .altLandMonsInfo = &Route103_AltLandMonsInfo,
     },
     {
         .mapGroup = MAP_GROUP(ROUTE104),
@@ -2788,6 +2844,11 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .waterMonsInfo = NULL, //&Route110_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &Route110_FishingMonsInfo,
+        .altXLow = 8,
+        .altYLow = 92,
+        .altXHigh = 15,
+        .altYHigh = 98,
+        .altLandMonsInfo = &Route110_AltLandMonsInfo,
     },
     {
         .mapGroup = MAP_GROUP(ROUTE111),
@@ -2796,6 +2857,11 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .waterMonsInfo = NULL, //&Route111_WaterMonsInfo,
         .rockSmashMonsInfo = &Route111_RockSmashMonsInfo,
         .fishingMonsInfo = &Route111_FishingMonsInfo,
+        .altXLow = 22,
+        .altYLow = 112,
+        .altXHigh = 28,
+        .altYHigh = 118,
+        .altLandMonsInfo = &Route111_AltLandMonsInfo
     },
     {
         .mapGroup = MAP_GROUP(ROUTE112),
@@ -3515,14 +3581,29 @@ bool8 StandardWildEncounter(u16 curMetatileBehavior, u16 prevMetatileBehavior)
                         }
                         else
                         {
+                            s16 x = gEventObjects[gPlayerAvatar.eventObjectId].currentCoords.x - 7;
+                            s16 y = gEventObjects[gPlayerAvatar.eventObjectId].currentCoords.y - 7;
                             if (DoMassOutbreakEncounterTest() == TRUE && SetUpMassOutbreakEncounter(1) == TRUE)
                             {
                                 BattleSetup_StartWildBattle();
                                 return 1;
                             }
-                            if (GenerateWildMon(gWildMonHeaders[headerNum].landMonsInfo, 0, TRUE) == TRUE)
+                            if (gWildMonHeaders[headerNum].altXLow <= x && gWildMonHeaders[headerNum].altYLow <= y &&
+                                gWildMonHeaders[headerNum].altXHigh >= x && gWildMonHeaders[headerNum].altYHigh >= y)
                             {
-                                goto label;
+                                if (GenerateWildMon(gWildMonHeaders[headerNum].altLandMonsInfo, 0, TRUE) == TRUE)
+                                {
+                                    BattleSetup_StartWildBattle();
+                                    return 1;
+                                }
+                            }
+                            else
+                            {
+                                if (GenerateWildMon(gWildMonHeaders[headerNum].landMonsInfo, 0, TRUE) == TRUE)
+                                {
+                                    BattleSetup_StartWildBattle();
+                                    return 1;
+                                }
                             }
                         }
                     }
@@ -3549,11 +3630,8 @@ bool8 StandardWildEncounter(u16 curMetatileBehavior, u16 prevMetatileBehavior)
                         }
                         else
                         {
-                            //_08085268
                             if (GenerateWildMon(gWildMonHeaders[headerNum].waterMonsInfo, 1, TRUE) == TRUE)
                             {
-                            label:
-                                //_0808527A
                                 BattleSetup_StartWildBattle();
                                 return 1;
                             }
