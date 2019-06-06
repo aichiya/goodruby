@@ -1373,6 +1373,23 @@ const struct WildPokemon Route104_LandMons [] =
 };
 const struct WildPokemonInfo Route104_LandMonsInfo = {20, Route104_LandMons};
 
+const struct WildPokemon Route104_AltLandMons [] =
+{
+    {7, 9, SPECIES_ZIGZAGOON},
+    {7, 9, SPECIES_BELLSPROUT},
+    {7, 9, SPECIES_LEDYBA},
+    {7, 9, SPECIES_TAILLOW},
+    {7, 9, SPECIES_LOTAD},
+    {7, 9, SPECIES_SHROOMISH},
+    {7, 9, SPECIES_ZIGZAGOON},
+    {7, 9, SPECIES_LEDYBA},
+    {7, 9, SPECIES_SHROOMISH},
+    {7, 9, SPECIES_SKITTY},
+    {7, 9, SPECIES_SHROOMISH},
+    {7, 9, SPECIES_SKITTY},
+};
+const struct WildPokemonInfo Route104_AltLandMonsInfo = {20, Route104_AltLandMons};
+
 const struct WildPokemon Route104_FishingMons [] =
 {
     {5, 10, SPECIES_MAGIKARP},
@@ -2796,6 +2813,11 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .waterMonsInfo = NULL, //&Route104_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &Route104_FishingMonsInfo,
+        .altXLow = 1,
+        .altYLow = 3,
+        .altXHigh = 10,
+        .altYHigh = 13,
+        .altLandMonsInfo = &Route104_AltLandMonsInfo,
     },
     {
         .mapGroup = MAP_GROUP(ROUTE105),

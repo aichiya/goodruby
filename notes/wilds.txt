@@ -46,8 +46,9 @@ Remoraid
 ROUTE 101: Zigzagoon (30%), Wurmple (30%), Ledyba (30%), Poochyena (10%)
 ROUTE 103: Zigzagoon (30%), Poochyena (30%), Ledyba (20%), Wingull (10%), Hoppip (10%)
 ROUTE 102: Zigzagoon (20%), Poochyena (20%), Wurmple (20%), Seedot (10%), Lotad (10%), Psyduck (10%), Taillow (4%), Ralts (4%), Surskit (2%)
-ROUTE 104: Zigzagoon (20%), Poochyena (20%), Wurmple (20%), Wingull (10%), Hoppip (10%), Taillow (10%), Azurill (5%), Bellsprout (5%)
+ROUTE 104 SOUTH: Zigzagoon (20%), Poochyena (20%), Wurmple (20%), Wingull (10%), Hoppip (10%), Taillow (10%), Azurill (5%), Bellsprout (5%)
 WOODS: Hoothoot (20%), Bellsprout (20%), Shroomish (10%), Paras (10%), Caterpie (10%), Weedle (10%), Spinarak (5%), Zigzagoon (5%), Taillow (5%), Slakoth (5%)
+ROUTE 104 NORTH: Zigzagoon (25%), Bellsprout (20%), Ledyba (15%), Taillow (10%), Lotad (10%), Marill (10%), Shroomish (5%), Skitty (5%)
 ROUTE 116: Sentret (25%), Whismur (25%), Taillow (20%), Nincada (15%), Mankey (10%), Skitty (5%)
 TUNNEL: Whismur (60%), Drowzee (25%), Chingling (20%), Dunsparce (5%)
 RIDGE: Sentret (20%), Spearow (20%), Mankey (15%), Nincada (10%), Teddiursa (10%), Cubone (10%), Slugma (5%), NidoranF (5%), NidoranM (5%)
@@ -102,6 +103,7 @@ ROUTE 103: Lv2-4
 ROUTE 102: Lv3-5
 ROUTE 104: Lv4-6
 WOODS: Lv6-8
+ROUTE 104 NORTH: Lv7-9
 ROUTE 116: Lv7-10
 RIDGE: Lv10-11
 ROUTE 107: Lv10-12

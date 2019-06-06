@@ -5485,9 +5485,9 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_FURRET] =
     {
-        .baseHP        = 85,
-        .baseAttack    = 76,
-        .baseDefense   = 64,
+        .baseHP        = 90,
+        .baseAttack    = 86,
+        .baseDefense   = 74,
         .baseSpeed     = 90,
         .baseSpAttack  = 45,
         .baseSpDefense = 55,
