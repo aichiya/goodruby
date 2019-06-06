@@ -20,6 +20,12 @@ ABILITY, STAT, AND MOVEPOOL CHANGES:
  * Sandslash gains secondary ability Iron Barbs.
  * Now learns Spikes and Spiky Shield by breeding.
 
+#046 Paras, #047 Parasect
+ * Parasect's base stats changed: 60/95/80/60/80/30 (405) -> 60/105/90/70/90/30 (445).
+ * Level-up movepool heavily adjusted.
+ * Now learns Mega Drain, Curse, Clear Smog, and Leech Life by level.
+ * Now learns Aromatherapy, Memento, and Seed Bomb by breeding.
+
 #052 Meowth, #053 Persian
  * Persian's base stats changed: 65/70/60/65/65/115 (440) -> 65/90/60/85/65/115 (480).
  * Now learns Shock Wave and Water Pulse by breeding.
@@ -229,7 +235,10 @@ MOVE CHANGES:
 Crabhammer: Gains 10% chance to lower Defense [todo]
 
 
-TODO:
+
+
+everything below this point is speculative (and dated!):
+===============================
 
 Venusaur: (no change)
 Charizard: ???

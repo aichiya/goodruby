@@ -837,6 +837,7 @@ const u16 gBellossomEggMoves[] = {
 
 const u16 gParasEggMoves[] = {
     MOVE_AGILITY,
+    MOVE_AROMATHERAPY,
     MOVE_BUG_BITE,
     MOVE_COUNTER,
     MOVE_CROSS_POISON,
@@ -847,12 +848,14 @@ const u16 gParasEggMoves[] = {
     // Grassy Terrain,
     MOVE_LEECH_SEED,
     MOVE_LIGHT_SCREEN,
+    MOVE_MEMENTO,
     MOVE_METAL_CLAW,
     MOVE_NATURAL_GIFT,
     MOVE_PSYBEAM,
     MOVE_PURSUIT,
     // Rototiller
     MOVE_SCREECH,
+    MOVE_SEED_BOMB,
     MOVE_SWEET_SCENT,
     // Wide Guard
     0,
@@ -860,6 +863,7 @@ const u16 gParasEggMoves[] = {
 
 const u16 gParasectEggMoves[] = {
     MOVE_AGILITY,
+    MOVE_AROMATHERAPY,
     MOVE_BUG_BITE,
     MOVE_COUNTER,
     MOVE_CROSS_POISON,
@@ -870,12 +874,14 @@ const u16 gParasectEggMoves[] = {
     // Grassy Terrain,
     MOVE_LEECH_SEED,
     MOVE_LIGHT_SCREEN,
+    MOVE_MEMENTO,
     MOVE_METAL_CLAW,
     MOVE_NATURAL_GIFT,
     MOVE_PSYBEAM,
     MOVE_PURSUIT,
     // Rototiller
     MOVE_SCREECH,
+    MOVE_SEED_BOMB,
     MOVE_SWEET_SCENT,
     // Wide Guard
     0,

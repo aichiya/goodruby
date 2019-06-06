@@ -1576,11 +1576,11 @@ const struct BaseStats gBaseStats[] =
     [SPECIES_PARASECT] =
     {
         .baseHP        = 60,
-        .baseAttack    = 95,
-        .baseDefense   = 80,
+        .baseAttack    = 105,
+        .baseDefense   = 90,
         .baseSpeed     = 30,
-        .baseSpAttack  = 60,
-        .baseSpDefense = 80,
+        .baseSpAttack  = 70,
+        .baseSpDefense = 90,
         .type1 = TYPE_BUG,
         .type2 = TYPE_GRASS,
         .catchRate = 75,
