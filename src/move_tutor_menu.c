@@ -71,7 +71,6 @@ struct MoveTutorMenu
     bool8 redrawCursor;
     bool8 redrawMoveSelectionWindow;
     u16 movesToLearn[MAX_MOVE_TUTOR_MOVES];
-    u8 filler48[10];
     u8 moveNames[6][25];
     u8 fillerE8[475];
     bool8 redrawMoveInfoWindow;

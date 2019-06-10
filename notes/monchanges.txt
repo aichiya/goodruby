@@ -15,6 +15,11 @@ ABILITY, STAT, AND MOVEPOOL CHANGES:
  * Entire line's Hidden Ability Hustle replaced with Strong Jaw.
  * Raticate's Ability Run Away replaced with Gluttony.
 
+#023 Ekans, #024 Arbok
+ * Level-up movepool heavily adjusted.
+ * Now learns Poison Fang, Poison Jab, and Scary Face by level.
+ * No longer learns Gastro Acid or Acid by level.
+
 #027 Sandshrew, #028 Sandslash
  * Sandshrew gains secondary ability Anticipation.
  * Sandslash gains secondary ability Iron Barbs.

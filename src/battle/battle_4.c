@@ -3433,7 +3433,10 @@ void SetMoveEffect(bool8 primary, u8 certainArg)
                 gBattleCommunication[MULTISTRING_CHOOSER]++;
             break;
         case 14: //25% recoil
-            gBattleMoveDamage = (gHpDealt) / 4;
+            if (gCurrentMove == MOVE_STRUGGLE)
+                gBattleMoveDamage = gBattleMons[gBankAttacker].maxHP / 4;
+            else
+                gBattleMoveDamage = (gHpDealt) / 4;
             if (gBattleMoveDamage == 0)
                 gBattleMoveDamage = 1;
             BattleScriptPush(gBattlescriptCurrInstr + 1);

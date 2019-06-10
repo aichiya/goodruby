@@ -416,6 +416,23 @@ const struct WildPokemon PetalburgWoods_LandMons [] =
 };
 const struct WildPokemonInfo PetalburgWoods_LandMonsInfo = {20, PetalburgWoods_LandMons};
 
+const struct WildPokemon PetalburgWoods_AltLandMons [] =
+{
+    {10, 11, SPECIES_HOOTHOOT},
+    {10, 11, SPECIES_BELLSPROUT},
+    {10, 11, SPECIES_SHROOMISH},
+    {10, 11, SPECIES_PARAS},
+    {10, 11, SPECIES_PINECO},
+    {10, 11, SPECIES_PINECO},
+    {10, 11, SPECIES_SPINARAK},
+    {10, 11, SPECIES_ZIGZAGOON},
+    {10, 11, SPECIES_SLAKOTH},
+    {10, 11, SPECIES_TAILLOW},
+    {10, 11, SPECIES_SLAKOTH},
+    {10, 11, SPECIES_TAILLOW},
+};
+const struct WildPokemonInfo PetalburgWoods_AltLandMonsInfo = {20, PetalburgWoods_AltLandMons};
+
 const struct WildPokemon JaggedPass_LandMons [] =
 {
     {20, 23, SPECIES_NUMEL},
@@ -2464,6 +2481,11 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .waterMonsInfo = NULL,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = NULL,
+        .altXLow = 29,
+        .altYLow = 3,
+        .altXHigh = 46,
+        .altYHigh = 31,
+        .altLandMonsInfo = &PetalburgWoods_AltLandMonsInfo,
     },
     {
         .mapGroup = MAP_GROUP(JAGGED_PASS),
