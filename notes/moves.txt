@@ -1,3 +1,8 @@
+NEEDS ANIM:
+Infestation
+Focus Blast
+Magic Gleam
+
 TODO PROBABLY:
 Fell Stinger
 Final Gambit
@@ -36,5 +41,5 @@ NOT A CHANCE:
 Ally Switch
 Sky Drop
 
-
-(infestation still needs an animation)
+MISSING:
+Aurora Veil

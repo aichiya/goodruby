@@ -6738,4 +6738,147 @@ const struct BattleMove gBattleMoves[] = {
         .flags = F_MIRROR_MOVE_COMPATIBLE,
 		.moveClass = CLASS_STATUS,
     },
+
+    [MOVE_FELL_STINGER] = {
+        .effect = EFFECT_HIT, // :y
+        .power = 50,
+        .type = TYPE_BUG,
+        .accuracy = 100,
+        .pp = 25,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+		.moveClass = CLASS_PHYSICAL,
+    },
+
+    [MOVE_FINAL_GAMBIT] = {
+        .effect = EFFECT_HIT, // :y
+        .power = 1,
+        .type = TYPE_FIGHTING,
+        .accuracy = 100,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
+		.moveClass = CLASS_SPECIAL,
+    },
+
+    [MOVE_LAST_RESORT] = {
+        .effect = EFFECT_HIT, // :y
+        .power = 140,
+        .type = TYPE_NORMAL,
+        .accuracy = 100,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+		.moveClass = CLASS_PHYSICAL,
+    },
+
+    [MOVE_CIRCLE_THROW] = {
+        .effect = EFFECT_DRAGON_TAIL,
+        .power = 60,
+        .type = TYPE_FIGHTING,
+        .accuracy = 90,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = -6,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+		.moveClass = CLASS_PHYSICAL,
+    },
+
+    [MOVE_MYSTIC_FIRE] = {
+        .effect = EFFECT_SPECIAL_ATTACK_DOWN_HIT,
+        .power = 75,
+        .type = TYPE_FIRE,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 100,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
+		.moveClass = CLASS_SPECIAL,
+    },
+
+    [MOVE_ROCK_WRECKER] = {
+        .effect = EFFECT_RECHARGE,
+        .power = 150,
+        .type = TYPE_ROCK,
+        .accuracy = 90,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
+		.moveClass = CLASS_PHYSICAL,
+    },
+
+    [MOVE_HORSEPOWER] = {
+        .effect = EFFECT_HIT,
+        .power = 95,
+        .type = TYPE_GROUND,
+        .accuracy = 95,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+		.moveClass = CLASS_PHYSICAL,
+    },
+
+    [MOVE_RAGE_POWDER] = {
+        .effect = EFFECT_FOLLOW_ME,
+        .power = 0,
+        .type = TYPE_BUG,
+        .accuracy = 100,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = TARGET_USER,
+        .priority = 2,
+        .flags = 0,
+		.moveClass = CLASS_STATUS,
+    },
+
+    [MOVE_BURN_UP] = {
+        .effect = EFFECT_HIT, // :y
+        .power = 130,
+        .type = TYPE_FIRE,
+        .accuracy = 100,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
+		.moveClass = CLASS_SPECIAL,
+    },
+
+    [MOVE_TEARFUL_LOOK] = {
+        .effect = EFFECT_ATTACK_DOWN, // :y
+        .power = 0,
+        .type = TYPE_NORMAL,
+        .accuracy = 0,
+        .pp = 30,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
+		.moveClass = CLASS_STATUS,
+    },
+
+    [MOVE_TOXIC_THREAD] = {
+        .effect = EFFECT_POISON, // :y
+        .power = 0,
+        .type = TYPE_POISON,
+        .accuracy = 100,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
+		.moveClass = CLASS_STATUS,
+    },
 };

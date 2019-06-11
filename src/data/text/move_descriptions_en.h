@@ -2066,6 +2066,38 @@ static const u8 MoveDescription_TrickRoom[] = _(
     "Slow Pokémon move before\n"
     "fast Pokémon for 4 turns.");
 
+static const u8 MoveDescription_FellStinger[] = _(
+    "Drastically raises Attack\n"
+    "if it causes fainting.");
+
+static const u8 MoveDescription_FinalGambit[] = _(
+    "Inflicts user's HP in damage\n"
+    "but makes the user faint.");
+
+static const u8 MoveDescription_LastResort[] = _(
+    "Can only be used after all\n"
+    "other moves have been used.");
+
+static const u8 MoveDescription_MysticFire[] = _(
+    "A special flame that\n"
+    "lowers the target's Sp.Atk.");
+
+static const u8 MoveDescription_Horsepower[] = _(
+    "A powerful stomp using\n"
+    "the entire body.");
+
+static const u8 MoveDescription_BurnUp[] = _(
+    "Consumes the user's Fire\n"
+    "typing to fuel the attack.");
+
+static const u8 MoveDescription_TearfulLook[] = _(
+    "Gets teary-eyed to reduce\n"
+    "the foe's Attack and Sp.Atk.");
+
+static const u8 MoveDescription_ToxicThread[] = _(
+    "Shoots string to poison\n"
+    "and slow the foe.");
+
 
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
@@ -2585,4 +2617,15 @@ const u8 * const gMoveDescriptions[] = {
     MoveDescription_MagicGleam,
     MoveDescription_GrassKnot,
     MoveDescription_TrickRoom,
+    MoveDescription_FellStinger,
+    MoveDescription_FinalGambit,
+    MoveDescription_LastResort,
+    MoveDescription_DragonTail,
+    MoveDescription_MysticFire,
+    MoveDescription_HyperBeam,
+    MoveDescription_Horsepower,
+    MoveDescription_FollowMe,
+    MoveDescription_BurnUp,
+    MoveDescription_TearfulLook,
+    MoveDescription_ToxicThread,
 };
