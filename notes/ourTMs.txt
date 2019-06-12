@@ -1,0 +1,301 @@
+01 - Focus Punch    *North of Rustboro, on ground
+02 - Dragon Claw    *Meteor Falls
+03 - Psyshock       *Sootopolis Gym
+04 - Calm Mind      *Mossdeep Gym
+05 - Roar           *West of Fallarbor
+06 - Toxic          *Fiery Path
+07 - Heal Bell      Slateport Market (*Shoal Cave)
+08 - Bulk Up        Dewford Gym
+09 - Venoshock      Route 113, hidden
+10 - Hidden Power   *Slateport shop + Fortree Town
+11 - Sunny Day      *Scorched Slab
+12 - Taunt          *Trick House
+13 - Ice Beam       *Abandoned Ship + Game Corner
+14 - Blizzard       *Department Store
+15 - Hyper Beam     Petalburg Gym
+16 - Light Screen   *Department Store
+17 - Protect        *Department Store
+18 - Rain Dance     *Abandoned Ship
+19 - Giga Drain     *South of Mt. Pyre
+20 - Safeguard      *Department Store
+21 - Seed Bomb      *Pacifidlog (replacing Frustration)
+22 - Solar Beam     *Safari Zone
+23 - Iron Tail      *Meteor Falls
+24 - Thunderbolt    *Game Corner
+25 - Thunder        *Department Store
+26 - Earthquake     *Seafloor Cavern
+27 - Return         *Pacifidlog
+28 - Dig            Fossil Maniac
+29 - Psychic        *Victory Road+Game Corner
+30 - Shadow Ball    *Mt. Pyre
+31 - Brick Break    *Sootopolis
+32 - Drain Punch    Game Corner
+33 - Reflect        *Department Store
+34 - Sludge Wave    *Mauville Gym
+35 - Flamethrower   *Game Corner
+36 - Sludge Bomb    *Dewford Town (later)
+37 - Heat Wave      *Desert
+38 - Fire Blast     *Department Store
+39 - Rock Tomb      Slateport Market
+40 - Aerial Ace     Granite Cave
+41 - Torment        *Slateport Contest Hall
+42 - Facade         [Gone]
+43 - Secret Power   North of Desert
+44 - Rest           *Department Store
+45 - Attract        Verdanturf Contest Hall
+46 - Thief          Slateport Museum
+47 - Steel Wing     Granite Cave from Steven
+48 - Icy Wind       *Mt. Pyre
+49 - Superpower     *SS Tidal
+50 - Overheat       *Lavaridge Gym
+51 - Roost
+52 - Focus Blast
+53 - Energy Ball
+54 - Fire Punch     Game Corner
+55 - Ice Punch      Game Corner
+56 - ThunderPunch   Game Corner
+57 - Charge Beam    Slateport Market
+58 - Endure         Slateport Market
+59 - Dragon Pulse
+60 - Hyper Voice
+61 - Will-o-Wisp
+62 - Acrobatics
+63 - Aqua Tail
+64 - Explosion
+65 - Shadow Claw
+66 - Payback
+67 - Knock Off
+68 - Giga Impact
+69 - Rock Polish
+70 - Foul Play
+71 - Stone Edge
+72 - Volt Switch    Mauville Gym
+73 - Thunder Wave
+74 - Wild Charge
+75 - Swords Dance
+76 - Stealth Rock   Rustboro Gym
+77 - Drill Run
+78 - Bulldoze       Rusturf Tunnel
+79 - Dark Pulse
+80 - Rock Slide     Route 111 Desert
+81 - X-Scissor
+82 - Dragon Tail
+83 - Natural Gift
+84 - Poison Jab
+85 - Dazzling Gleam
+86 - Grass Knot     Boy South of Rustboro
+87 - Signal Beam
+88 - Sleep Talk
+89 - U-Turn
+90 - Substitute     Game Corner
+91 - Flash Cannon
+92 - Trick Room     Trick House Round 3
+H1 - Cut
+H2 - Fly
+H3 - Surf
+H4 - Strength
+H5 - Flash
+H6 - Rock Smash
+H7 - Waterfall
+H8 - Dive
+
+TUTORS:
+Frenzy Plant
+Blast Burn
+Hydro Cannon
+Volt Tackle
+Draco Meteor
+Dragon Ascent
+
+
+
+
+scrap:
+
+
+01 - Focus Punch
+02 - Dragon Claw
+03 - Psyshock
+04 - Calm Mind
+05 - Roar
+06 - Toxic
+07 - 
+08 - Bulk Up
+09 - Venoshock
+10 - Hidden Power
+11 - Sunny Day
+12 - Taunt
+13 - Ice Beam
+14 - Blizzard
+15 - Hyper Beam
+16 - Light Screen
+17 - Protect
+18 - Rain Dance
+19 - Giga Drain 
+20 - Safeguard
+21 - 
+22 - Solar Beam
+23 - Iron Tail
+24 - Thunderbolt
+25 - Thunder
+26 - Earthquake
+27 - Return
+28 - Dig
+29 - Psychic
+30 - Shadow Ball
+31 - Brick Break
+32 - 
+33 - Reflect
+34 - Sludge Wave
+35 - Flamethrower
+36 - Sludge Bomb
+37 - 
+38 - Fire Blast
+39 - Rock Tomb
+40 - Aerial Ace
+41 - Torment
+42 - Facade
+43 - Secret Power
+44 - Rest
+45 - Attract
+46 - Thief
+47 - Steel Wing
+48 - 
+49 - 
+50 - Overheat
+51 - Roost
+52 - Focus Blast
+53 - Energy Ball
+54 - 
+55 - 
+56 - 
+57 - Charge Beam
+58 - Endure
+59 - Dragon Pulse
+60 - 
+61 - Will-o-Wisp
+62 - Acrobatics
+63 - 
+64 - Explosion
+65 - Shadow Claw
+66 - Payback
+67 - 
+68 - Giga Impact
+69 - Rock Polish
+70 - Aurora Veil
+71 - Stone Edge
+72 - Volt Switch
+73 - Thunder Wave
+74 - 
+75 - Swords Dance
+76 - Stealth Rock
+77 - 
+78 - Bulldoze
+79 - Dark Pulse
+80 - Rock Slide
+81 - X-Scissor
+82 - Dragon Tail
+83 - Natural Gift
+84 - Poison Jab
+85 - 
+86 - Grass Knot
+87 - 
+88 - Sleep Talk
+89 - U-Turn
+90 - Substitute
+91 - Flash Cannon
+92 - Trick Room
+
+
+Dazzling Gleam
+Fire Punch
+Thunder Punch
+Ice Punch
+Knock Off
+Drain Punch
+Wild Charge
+
+Signal Beam
+Heal Bell
+Aqua Tail
+Seed Bomb
+Heat Wave
+Hyper Voice
+Superpower
+Drill Run
+Icy Wind
+
+Liquidation: Kingler
+
+DEFINITE TUTORS:
+Frenzy Plant
+Blast Burn
+Hydro Cannon
+Volt Tackle
+Draco Meteor
+Dragon Ascent
+
+
+WEIRD TUTORS:
+Snore
+Electroweb
+Defog
+Low Kick
+Uproar
+Helping Hand
+Shock Wave
+Last Resort?
+Worry Seed
+Covet
+Bug Bite
+Snatch
+Recycle
+Spite
+Synthesis
+Iron Defense
+Role Play
+Water Pulse
+Laser Focus
+Trick
+Sky Attack
+Skill Swap
+Endeavor
+Low Kick
+Bounce
+Nature Power
+Snarl
+
+LEGIT MOVES:
+Pain Split
+Tailwind
+Zen Headbutt
+Magic Coat
+Super Fang
+Outrage
+Earth Power
+Gunk Shot
+Dual Chop
+Iron Head
+
+Hone Claws
+Work Up
+Flame Charge
+Low Sweep
+
+Maybe keep:
+Leech Life
+Incinerate
+Avalanche
+Captivate
+Frost Breath
+Pluck
+Infestation
+Struggle Bug
+Psych Up
+Fling
+
+HMs:
+Flash
+Surf
+Rock Smash
+Waterfall

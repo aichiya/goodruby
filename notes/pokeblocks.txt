@@ -1,0 +1,96 @@
+MY ELEGANT SYSTEM:
+
+Berries have explicit tiers.
+Pokeblocks have three (four) bytes: level, feel, flavor bitfield, (and color).
+
+RESULT:
+FLAVOR: Ignore all contributing berries that do not give the highest available flavor mod. Sum results.
+ Highest flavors are present, others are absent.
+
+LEVEL: (8 + SumOfFlavors) * speed
+FEEL: Set to highest contributing smoothness, minus number of blenders.
+
+TIER 0: Cheri, Chesto, Pecha, Rawst, Aspear, Oran, Persim
+50% efficiency, 10 Level, 20 Feel, single flavor. Please don't.
++1 Flavor to a single flavor
+20 Smoothness
+
+TIER 1: Figy, Wiki, Mago, Aguav, Iapapa
+120% efficiency, 48 Level, 40 Feel, single-type
++45 Flavor
+40 Smoothness
+
+TIER 2: Razz, Bluk, Nanab, Wepear, Pinap
+150% efficiency, 30 Level, 20 Feel, single-type.
++25 Flavor
+20 Smoothness
+
+TIER 3: Pomeg, Kelpsy, Qualot, Hondew, Grepa
+220% efficiency, 36 Level, 30 Feel, dual remote types.
++35/+35 Flavor
+30 Smoothness
+
+TIER 3b: Tamato, Cornn, Magost, Rabuta, Nomel
+220% efficiency, 36 Level, 30 Feel, dual adjacent types.
++35/+35 Flavor
+30 Smoothness
+
+TIER 5: Liechi, Ganlon, Salac, Petaya, Apicot
+300% efficiency, 40 Level, 40 feel, triple-type.
++40/+40/+40 Flavor
+40 Smoothness
+
+TIER 6: Spelon, Pamtre, Watmel, Durin, Belue
+450% efficiency, 60 Level, 40 feel, triple-type.
++60/+60/+60 Flavor
+40 Smoothness
+
+TIER 7: Lansat, Starf
+600% efficiency, 65 level, 50 feel, quad-type. Flagrantly broken.
++65/+65/+65/+65 Flavor
+50 Smoothness
+
+
+
+
+GAME FREAK INSANITY:
+
+Status tier: Cheri, Chesto, Pecha, Rawst, Aspear
+Produces blocks with level average 12, feel 22-24, 54%
+
+HP tier: Oran, Persim, Lum, Sitrus
+2-tables blocks with level average 12, feel 22, 54%
+3-tables blocks with level average 10, feel 21, 47%
+4-tables blocks with level average 10, feel 20, 50%
+
+PP tier: Leppa
+Produces blocks with level average 23, feel 20-22, 115%
+
+Clutch tier: Figy, Wiki, Mago, Aguav, Iapapa
+2-tables blocks with level average 25, feel 24, 104%
+3-tables blocks with level average 23, feel 23, 100%
+4-tables blocks with level average 23, feel 22, 104%
+
+Useless tier A: Razz, Bluk, Nanab, Wepear, Pinap
+Produces blocks with level average 12, feel 20-22, 60%
+
+Useless tier B: Pomeg, Kelpsy, Qualot, Hondew, Grepa
+Produces blocks with average level 23, feel 20-22, 115%
+
+Useless tier C: Tomato, Cornn, Magost, Rabuta, Nomel
+Produces blocks with average level 25, feel 23-25, 108%
+
+Premium tier: Spelon, Pamtre, Watmel, Durin, Belue
+Produces blocks with average level 51, feel 33-45, 154%
+
+Pinch tier: Liechi, Ganlon, Salac, Petaya, Apicot
+Produces blocks with average level 62, feel 35-50, 177%
+
+Meme tier: Lansat, Starf
+2-tables blocks with level average 12, feel 25, 48%
+3-tables blocks with level average 10, feel 24, 41%
+4-tables blocks with level average 10, feel 23, 43%
+
+e-reader berries vary wildly but are almost all worse than pinch tier
+
+drash at the 3-person table competes on level but not feel

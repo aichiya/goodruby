@@ -1,0 +1,100 @@
+01 - Focus Punch or Hone Claws or Work Up
+02 - Dragon Claw
+03 - Water Pulse or Psyshock
+04 - Calm Mind
+05 - Roar
+06 - Toxic
+07 - Hail
+08 - Bulk Up
+09 - Bullet Seed or Venoshock
+10 - Hidden Power
+11 - Sunny Day
+12 - Taunt
+13 - Ice Beam
+14 - Blizzard
+15 - Hyper Beam
+16 - Light Screen
+17 - Protect
+18 - Rain Dance
+19 - Giga Drain or Telekinesis or Roost
+20 - Safeguard
+21 - Frustration
+22 - Solar Beam
+23 - Iron Tail or Smack DOwn
+24 - Thunderbolt
+25 - Thunder
+26 - Earthquake
+27 - Return
+28 - Dig or Leech Life
+29 - Psychic
+30 - Shadow Ball
+31 - Brick Break
+32 - Double Team
+33 - Reflect
+34 - Shock Wave or Sludge Wave
+35 - Flamethrower
+36 - Sludge Bomb
+37 - Sandstorm
+38 - Fire Blast
+39 - Rock Tomb
+40 - Aerial Ace
+41 - Torment
+42 - Facade
+43 - Secret Power or Flame Charge
+44 - Rest
+45 - Attract
+46 - Thief
+47 - Steel Wing or Low Sweep
+48 - Skill Swap or Round
+49 - Snatch or Echoed Voice
+50 - Overheat
+51 - Roost or Steel Wing
+52 - Focus Blast
+53 - Energy Ball
+54 - False Swipe
+55 - Brine or Scald
+56 - Fling
+57 - Charge Beam
+58 - Endure or Sky Drop
+59 - Dragon Pulse or Incinerate or Brutal Swing
+60 - Drain Punch or Quash
+61 - Will-o-Wisp
+62 - Silver Wind or Acrobatics
+63 - Embargo
+64 - Explosion
+65 - Shadow Claw
+66 - Payback
+67 - Recycle or Retaliate or Smart Strike
+68 - Giga Impact
+69 - Rock Polish
+70 - Flash or Aurora Veil
+71 - Stone Edge
+72 - Avalanche or Volt Switch
+73 - Thunder Wave
+74 - Gyro Ball
+75 - Swords Dance
+76 - Stealth Rock or Struggle Bug
+77 - Psych Up
+78 - Captivate or Bulldoze
+79 - Dark Pulse or Frost Breath
+80 - Rock Slide
+81 - X-Scissor
+82 - Sleep Talk or Dragon Tail
+83 - Natural Gift or Work Up or Infestation
+84 - Poison Jab
+85 - Dream Eater
+86 - Grass Knot
+87 - Swagger
+88 - Pluck or Sleep Talk
+89 - U-Turn
+90 - Substitute
+91 - Flash Cannon
+92 - Trick Room
+93 - Wild Charge
+94 - Rock Smash or Secret Power or Surf
+95 - Snarl
+96 - Nature Power
+97 - Dark Pulse
+98 - Power-up Punch or Waterfall
+99 - Dazzling Gleam
+100- Confide
