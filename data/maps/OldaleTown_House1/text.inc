@@ -5,3 +5,6 @@ OldaleTown_House1_Text_17476D:: @ 817476D
 	.string "party, try switching around the order\l"
 	.string "of your POKéMON.\p"
 	.string "It could give you an advantage.$"
+
+OldaleTown_House1_Text_chet:
+	.string "now cheating.$"
