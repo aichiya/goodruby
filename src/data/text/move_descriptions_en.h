@@ -2076,7 +2076,7 @@ static const u8 MoveDescription_FinalGambit[] = _(
 
 static const u8 MoveDescription_LastResort[] = _(
     "Can only be used after all\n"
-    "other moves have been used.");
+    "other moves are used.");
 
 static const u8 MoveDescription_MysticFire[] = _(
     "A special flame that\n"

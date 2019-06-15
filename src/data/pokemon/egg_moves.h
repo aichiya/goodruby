@@ -263,10 +263,10 @@ const u16 gPidgeotEggMoves[] = {
 const u16 gRattataEggMoves[] = {
     MOVE_BITE,
     MOVE_COUNTER,
-    // Final Gambit,
+    MOVE_FINAL_GAMBIT,
     MOVE_FLAME_WHEEL,
     MOVE_FURY_SWIPES,
-    // Last Resort
+    MOVE_LAST_RESORT,
     MOVE_ME_FIRST,
     MOVE_REVENGE,
     MOVE_REVERSAL,
@@ -279,10 +279,10 @@ const u16 gRattataEggMoves[] = {
 const u16 gRaticateEggMoves[] = {
     MOVE_BITE,
     MOVE_COUNTER,
-    // Final Gambit,
+    MOVE_FINAL_GAMBIT,
     MOVE_FLAME_WHEEL,
     MOVE_FURY_SWIPES,
-    // Last Resort
+    MOVE_LAST_RESORT,
     MOVE_ME_FIRST,
     MOVE_REVENGE,
     MOVE_REVERSAL,
@@ -673,7 +673,7 @@ const u16 gIgglybuffEggMoves[] = {
     MOVE_FAINT_ATTACK,
     // Gravity
     MOVE_HEAL_PULSE,
-    // Last Resort
+    MOVE_LAST_RESORT,
     // Misty Terrain
     MOVE_PERISH_SONG,
     MOVE_PRESENT,
@@ -690,7 +690,7 @@ const u16 gJigglypuffEggMoves[] = {
     MOVE_FAINT_ATTACK,
     // Gravity
     MOVE_HEAL_PULSE,
-    // Last Resort
+    MOVE_LAST_RESORT,
     // Misty Terrain
     MOVE_PERISH_SONG,
     MOVE_PRESENT,
@@ -707,7 +707,7 @@ const u16 gWigglytuffEggMoves[] = {
     MOVE_FAINT_ATTACK,
     // Gravity
     MOVE_HEAL_PULSE,
-    // Last Resort
+    MOVE_LAST_RESORT,
     // Misty Terrain
     MOVE_PERISH_SONG,
     MOVE_PRESENT,
@@ -843,7 +843,7 @@ const u16 gParasEggMoves[] = {
     MOVE_CROSS_POISON,
     MOVE_ENDURE,
     MOVE_FALSE_SWIPE,
-    // Fell Stinger
+    MOVE_FELL_STINGER,
     MOVE_FLAIL,
     // Grassy Terrain,
     MOVE_LEECH_SEED,
@@ -869,7 +869,7 @@ const u16 gParasectEggMoves[] = {
     MOVE_CROSS_POISON,
     MOVE_ENDURE,
     MOVE_FALSE_SWIPE,
-    // Fell Stinger
+    MOVE_FELL_STINGER,
     MOVE_FLAIL,
     // Grassy Terrain,
     MOVE_LEECH_SEED,
@@ -893,7 +893,7 @@ const u16 gVenonatEggMoves[] = {
     MOVE_BUG_BITE,
     MOVE_GIGA_DRAIN,
     MOVE_MORNING_SUN,
-    // Rage Powder
+    MOVE_RAGE_POWDER,
     MOVE_SCREECH,
     MOVE_SECRET_POWER,
     MOVE_SIGNAL_BEAM,
@@ -908,7 +908,7 @@ const u16 gVenomothEggMoves[] = {
     MOVE_BUG_BITE,
     MOVE_GIGA_DRAIN,
     MOVE_MORNING_SUN,
-    // Rage Powder
+    MOVE_RAGE_POWDER,
     MOVE_SCREECH,
     MOVE_SECRET_POWER,
     MOVE_SIGNAL_BEAM,
@@ -923,7 +923,7 @@ const u16 gDiglettEggMoves[] = {
     MOVE_BEAT_UP,
     MOVE_ENDURE,
     MOVE_FAINT_ATTACK,
-    // Final Gambit,
+    MOVE_FINAL_GAMBIT,
     MOVE_HEADBUTT,
     MOVE_MEMENTO,
     MOVE_MUD_BOMB,
@@ -941,7 +941,7 @@ const u16 gDugtrioEggMoves[] = {
     MOVE_BEAT_UP,
     MOVE_ENDURE,
     MOVE_FAINT_ATTACK,
-    // Final Gambit,
+    MOVE_FINAL_GAMBIT,
     MOVE_HEADBUTT,
     MOVE_MEMENTO,
     MOVE_MUD_BOMB,
@@ -961,7 +961,7 @@ const u16 gMeowthEggMoves[] = {
     MOVE_FOUL_PLAY,
     MOVE_HYPNOSIS,
     MOVE_IRON_TAIL,
-    // Last Resort
+    MOVE_LAST_RESORT,
     MOVE_ODOR_SLEUTH,
     MOVE_PSYCH_UP,
     MOVE_PUNISHMENT,
@@ -981,7 +981,7 @@ const u16 gPersianEggMoves[] = {
     MOVE_FOUL_PLAY,
     MOVE_HYPNOSIS,
     MOVE_IRON_TAIL,
-    // Last Resort
+    MOVE_LAST_RESORT,
     MOVE_ODOR_SLEUTH,
     MOVE_PSYCH_UP,
     MOVE_PUNISHMENT,
@@ -1077,7 +1077,7 @@ const u16 gPrimeapeEggMoves[] = {
 
 const u16 gGrowlitheEggMoves[] = {
     MOVE_BODY_SLAM,
-    // Burn Up
+    MOVE_BURN_UP,
     MOVE_CLOSE_COMBAT,
     MOVE_COVET,
     MOVE_CRUNCH,
@@ -1096,7 +1096,7 @@ const u16 gGrowlitheEggMoves[] = {
 
 const u16 gArcanineEggMoves[] = {
     MOVE_BODY_SLAM,
-    // Burn Up
+    MOVE_BURN_UP,
     MOVE_CLOSE_COMBAT,
     MOVE_COVET,
     MOVE_CRUNCH,
@@ -1445,7 +1445,7 @@ const u16 gPonytaEggMoves[] = {
     MOVE_DOUBLE_EDGE,
     MOVE_DOUBLE_KICK,
     MOVE_FLAME_WHEEL,
-    // High Horsepower
+    MOVE_HORSEPOWER,
     MOVE_HORN_DRILL,
     MOVE_HYPNOSIS,
     MOVE_LOW_KICK,
@@ -1461,7 +1461,7 @@ const u16 gRapidashEggMoves[] = {
     MOVE_DOUBLE_EDGE,
     MOVE_DOUBLE_KICK,
     MOVE_FLAME_WHEEL,
-    // High Horsepower
+    MOVE_HORSEPOWER,
     MOVE_HORN_DRILL,
     MOVE_HYPNOSIS,
     MOVE_LOW_KICK,
@@ -1534,7 +1534,7 @@ const u16 gFarfetchdEggMoves[] = {
     MOVE_COVET,
     MOVE_CURSE,
     MOVE_FEATHER_DANCE,
-    // Final Gambit,
+    MOVE_FINAL_GAMBIT,
     // First Impression
     MOVE_FLAIL,
     MOVE_FORESIGHT,
@@ -2140,7 +2140,7 @@ const u16 gHappinyEggMoves[] = {
     // Gravity
     MOVE_HEAL_BELL,
     MOVE_HELPING_HAND,
-    // Last Resort
+    MOVE_LAST_RESORT,
     MOVE_METRONOME,
     MOVE_MUD_BOMB,
     MOVE_NATURAL_GIFT,
@@ -2157,7 +2157,7 @@ const u16 gChanseyEggMoves[] = {
     // Gravity
     MOVE_HEAL_BELL,
     MOVE_HELPING_HAND,
-    // Last Resort
+    MOVE_LAST_RESORT,
     MOVE_METRONOME,
     MOVE_MUD_BOMB,
     MOVE_NATURAL_GIFT,
@@ -2174,7 +2174,7 @@ const u16 gBlisseyEggMoves[] = {
     // Gravity
     MOVE_HEAL_BELL,
     MOVE_HELPING_HAND,
-    // Last Resort
+    MOVE_LAST_RESORT,
     MOVE_METRONOME,
     MOVE_MUD_BOMB,
     MOVE_NATURAL_GIFT,
@@ -2196,7 +2196,7 @@ const u16 gTangelaEggMoves[] = {
     MOVE_NATURAL_GIFT,
     MOVE_NATURE_POWER,
     MOVE_POWER_SWAP,
-    // Rage Powder
+    MOVE_RAGE_POWDER,
     MOVE_REFLECT,
     MOVE_WAKE_UP_SLAP,
     0,
@@ -2214,14 +2214,14 @@ const u16 gTangrowthEggMoves[] = {
     MOVE_NATURAL_GIFT,
     MOVE_NATURE_POWER,
     MOVE_POWER_SWAP,
-    // Rage Powder
+    MOVE_RAGE_POWDER,
     MOVE_REFLECT,
     MOVE_WAKE_UP_SLAP,
     0,
 };
 
 const u16 gKangaskhanEggMoves[] = {
-    // Circle Throw
+    MOVE_CIRCLE_THROW,
     MOVE_COUNTER,
     MOVE_CRUSH_CLAW,
     MOVE_DISABLE,
@@ -3123,7 +3123,7 @@ const u16 gSentretEggMoves[] = {
     MOVE_DOUBLE_EDGE,
     MOVE_FOCUS_ENERGY,
     MOVE_IRON_TAIL,
-    // Last Resort
+    MOVE_LAST_RESORT,
     MOVE_NATURAL_GIFT,
     MOVE_PURSUIT,
     MOVE_REVERSAL,
@@ -3142,7 +3142,7 @@ const u16 gFurretEggMoves[] = {
     MOVE_DOUBLE_EDGE,
     MOVE_FOCUS_ENERGY,
     MOVE_IRON_TAIL,
-    // Last Resort
+    MOVE_LAST_RESORT,
     MOVE_NATURAL_GIFT,
     MOVE_PURSUIT,
     MOVE_REVERSAL,
@@ -3232,7 +3232,7 @@ const u16 gSpinarakEggMoves[] = {
     MOVE_POISON_JAB,
     MOVE_PSYBEAM,
     MOVE_PURSUIT,
-    // Rage Powder
+    MOVE_RAGE_POWDER,
     MOVE_SIGNAL_BEAM,
     MOVE_SONIC_BOOM,
     MOVE_TOXIC_SPIKES,
@@ -3250,7 +3250,7 @@ const u16 gAriadosEggMoves[] = {
     MOVE_POISON_JAB,
     MOVE_PSYBEAM,
     MOVE_PURSUIT,
-    // Rage Powder
+    MOVE_RAGE_POWDER,
     MOVE_SIGNAL_BEAM,
     MOVE_SONIC_BOOM,
     MOVE_TOXIC_SPIKES,
@@ -3986,7 +3986,7 @@ const u16 gQwilfishEggMoves[] = {
 const u16 gShuckleEggMoves[] = {
     MOVE_ACID,
     MOVE_ACUPRESSURE,
-    // Final Gambit,
+    MOVE_FINAL_GAMBIT,
     MOVE_HELPING_HAND,
     MOVE_KNOCK_OFF,
     MOVE_MUD_SLAP,
@@ -4349,7 +4349,7 @@ const u16 gPhanpyEggMoves[] = {
     MOVE_FOCUS_ENERGY,
     MOVE_HEAD_SMASH,
     MOVE_HEAVY_SLAM,
-    // High Horsepower
+    MOVE_HORSEPOWER,
     MOVE_ICE_SHARD,
     MOVE_MUD_SLAP,
     MOVE_PLAY_ROUGH,
@@ -4366,7 +4366,7 @@ const u16 gDonphanEggMoves[] = {
     MOVE_FOCUS_ENERGY,
     MOVE_HEAD_SMASH,
     MOVE_HEAVY_SLAM,
-    // High Horsepower
+    MOVE_HORSEPOWER,
     MOVE_ICE_SHARD,
     MOVE_MUD_SLAP,
     MOVE_PLAY_ROUGH,
@@ -4556,7 +4556,7 @@ const u16 gTorchicEggMoves[] = {
     MOVE_FEATHER_DANCE,
     MOVE_FEINT,
     MOVE_FLAME_BURST,
-    // Last Resort
+    MOVE_LAST_RESORT,
     MOVE_LOW_KICK,
     MOVE_NIGHT_SLASH,
     MOVE_REVERSAL,
@@ -4576,7 +4576,7 @@ const u16 gCombuskenEggMoves[] = {
     MOVE_FEATHER_DANCE,
     MOVE_FEINT,
     MOVE_FLAME_BURST,
-    // Last Resort
+    MOVE_LAST_RESORT,
     MOVE_LOW_KICK,
     MOVE_NIGHT_SLASH,
     MOVE_REVERSAL,
@@ -4596,7 +4596,7 @@ const u16 gBlazikenEggMoves[] = {
     MOVE_FEATHER_DANCE,
     MOVE_FEINT,
     MOVE_FLAME_BURST,
-    // Last Resort
+    MOVE_LAST_RESORT,
     MOVE_LOW_KICK,
     MOVE_NIGHT_SLASH,
     MOVE_REVERSAL,
@@ -4985,7 +4985,7 @@ const u16 gSurskitEggMoves[] = {
     MOVE_AQUA_JET,
     MOVE_BUG_BITE,
     MOVE_ENDURE,
-    // Fell Stinger
+    MOVE_FELL_STINGER,
     MOVE_FORESIGHT,
     MOVE_HYDRO_PUMP,
     // Lunge
@@ -5001,7 +5001,7 @@ const u16 gMasquerainEggMoves[] = {
     MOVE_AQUA_JET,
     MOVE_BUG_BITE,
     MOVE_ENDURE,
-    // Fell Stinger
+    MOVE_FELL_STINGER,
     MOVE_FORESIGHT,
     MOVE_HYDRO_PUMP,
     // Lunge
@@ -5095,7 +5095,7 @@ const u16 gNincadaEggMoves[] = {
     MOVE_BUG_BUZZ,
     MOVE_ENDURE,
     MOVE_FAINT_ATTACK,
-    // Final Gambit,
+    MOVE_FINAL_GAMBIT,
     MOVE_GUST,
     MOVE_NIGHT_SLASH,
     MOVE_SILVER_WIND,
@@ -5107,7 +5107,7 @@ const u16 gNinjaskEggMoves[] = {
     MOVE_BUG_BUZZ,
     MOVE_ENDURE,
     MOVE_FAINT_ATTACK,
-    // Final Gambit,
+    MOVE_FINAL_GAMBIT,
     MOVE_GUST,
     MOVE_NIGHT_SLASH,
     MOVE_SILVER_WIND,
@@ -5119,7 +5119,7 @@ const u16 gShedinjaEggMoves[] = {
     MOVE_BUG_BUZZ,
     MOVE_ENDURE,
     MOVE_FAINT_ATTACK,
-    // Final Gambit,
+    MOVE_FINAL_GAMBIT,
     MOVE_GUST,
     MOVE_NIGHT_SLASH,
     MOVE_SILVER_WIND,
@@ -5127,7 +5127,7 @@ const u16 gShedinjaEggMoves[] = {
 };
 
 const u16 gWhismurEggMoves[] = {
-    // Circle Throw
+    MOVE_CIRCLE_THROW,
     MOVE_DISARM_VOICE,
     MOVE_ENDEAVOR,
     MOVE_EXTRASENSORY,
@@ -5143,7 +5143,7 @@ const u16 gWhismurEggMoves[] = {
 };
 
 const u16 gLoudredEggMoves[] = {
-    // Circle Throw
+    MOVE_CIRCLE_THROW,
     MOVE_DISARM_VOICE,
     MOVE_ENDEAVOR,
     MOVE_EXTRASENSORY,
@@ -5159,7 +5159,7 @@ const u16 gLoudredEggMoves[] = {
 };
 
 const u16 gExploudEggMoves[] = {
-    // Circle Throw
+    MOVE_CIRCLE_THROW,
     MOVE_DISARM_VOICE,
     MOVE_ENDEAVOR,
     MOVE_EXTRASENSORY,
@@ -5241,7 +5241,7 @@ const u16 gSkittyEggMoves[] = {
     MOVE_FAKE_OUT,
     MOVE_FAKE_TEARS,
     MOVE_HELPING_HAND,
-    // Last Resort
+    MOVE_LAST_RESORT,
     MOVE_MUD_BOMB,
     MOVE_PSYCH_UP,
     // Simple Beam
@@ -5261,7 +5261,7 @@ const u16 gDelcattyEggMoves[] = {
     MOVE_FAKE_OUT,
     MOVE_FAKE_TEARS,
     MOVE_HELPING_HAND,
-    // Last Resort
+    MOVE_LAST_RESORT,
     MOVE_MUD_BOMB,
     MOVE_PSYCH_UP,
     // Simple Beam
@@ -5440,7 +5440,7 @@ const u16 gPlusleEggMoves[] = {
     MOVE_SING,
     MOVE_SUBSTITUTE,
     MOVE_SWEET_KISS,
-    // Tearful Look
+    MOVE_TEARFUL_LOOK,
     MOVE_WISH,
     0,
 };
@@ -5453,7 +5453,7 @@ const u16 gMinunEggMoves[] = {
     MOVE_SING,
     MOVE_SUBSTITUTE,
     MOVE_SWEET_KISS,
-    // Tearful Look
+    MOVE_TEARFUL_LOOK,
     MOVE_WISH,
     0,
 };
@@ -5786,7 +5786,7 @@ const u16 gCacneaEggMoves[] = {
     MOVE_COUNTER,
     MOVE_DISABLE,
     MOVE_DYNAMIC_PUNCH,
-    // Fell Stinger
+    MOVE_FELL_STINGER,
     MOVE_GRASS_WHISTLE,
     MOVE_LOW_KICK,
     MOVE_MAGICAL_LEAF,
@@ -5808,7 +5808,7 @@ const u16 gCacturneEggMoves[] = {
     MOVE_COUNTER,
     MOVE_DISABLE,
     MOVE_DYNAMIC_PUNCH,
-    // Fell Stinger
+    MOVE_FELL_STINGER,
     MOVE_GRASS_WHISTLE,
     MOVE_LOW_KICK,
     MOVE_MAGICAL_LEAF,
@@ -5861,7 +5861,7 @@ const u16 gZangooseEggMoves[] = {
     MOVE_DOUBLE_HIT,
     MOVE_DOUBLE_KICK,
     MOVE_FEINT,
-    // Final Gambit,
+    MOVE_FINAL_GAMBIT,
     MOVE_FLAIL,
     MOVE_FURY_SWIPES,
     MOVE_IRON_TAIL,
@@ -5876,7 +5876,7 @@ const u16 gZangooseEggMoves[] = {
 const u16 gSeviperEggMoves[] = {
     // Assurance
     MOVE_BODY_SLAM,
-    // Final Gambit,
+    MOVE_FINAL_GAMBIT,
     MOVE_IRON_TAIL,
     MOVE_NIGHT_SLASH,
     MOVE_PUNISHMENT,
