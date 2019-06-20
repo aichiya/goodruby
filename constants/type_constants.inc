@@ -17,3 +17,4 @@
 	.set TYPE_DRAGON,   0x10
 	.set TYPE_DARK,     0x11
 	.set TYPE_ROOSTING, 0x12
+	.set TYPE_TYPELESS, 0x13

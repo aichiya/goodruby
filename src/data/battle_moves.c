@@ -5986,8 +5986,8 @@ const struct BattleMove gBattleMoves[] = {
     },
 
     [MOVE_GYRO_BALL] = {
-        .effect = EFFECT_GYRO_BALL,
-        .power = 1,
+        .effect = EFFECT_HIT,
+        .power = 2,
         .type = TYPE_STEEL,
         .accuracy = 100,
         .pp = 5,
@@ -6740,7 +6740,7 @@ const struct BattleMove gBattleMoves[] = {
     },
 
     [MOVE_FELL_STINGER] = {
-        .effect = EFFECT_HIT, // :y
+        .effect = EFFECT_ATTACK_UP_HIT,
         .power = 50,
         .type = TYPE_BUG,
         .accuracy = 100,
@@ -6753,7 +6753,7 @@ const struct BattleMove gBattleMoves[] = {
     },
 
     [MOVE_FINAL_GAMBIT] = {
-        .effect = EFFECT_HIT, // :y
+        .effect = EFFECT_FINAL_GAMBIT,
         .power = 1,
         .type = TYPE_FIGHTING,
         .accuracy = 100,
@@ -6844,7 +6844,7 @@ const struct BattleMove gBattleMoves[] = {
     },
 
     [MOVE_BURN_UP] = {
-        .effect = EFFECT_HIT, // :y
+        .effect = EFFECT_BURN_UP,
         .power = 130,
         .type = TYPE_FIRE,
         .accuracy = 100,
@@ -6857,7 +6857,7 @@ const struct BattleMove gBattleMoves[] = {
     },
 
     [MOVE_TEARFUL_LOOK] = {
-        .effect = EFFECT_ATTACK_DOWN, // :y
+        .effect = EFFECT_ATTACK_DOWN,
         .power = 0,
         .type = TYPE_NORMAL,
         .accuracy = 0,
@@ -6870,7 +6870,7 @@ const struct BattleMove gBattleMoves[] = {
     },
 
     [MOVE_TOXIC_THREAD] = {
-        .effect = EFFECT_POISON, // :y
+        .effect = EFFECT_POISON,
         .power = 0,
         .type = TYPE_POISON,
         .accuracy = 100,

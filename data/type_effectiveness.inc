@@ -3,7 +3,7 @@
 @ normal, fighting, flying, poison,   ground
 @ rock,   bug,      ghost,  steel,    fairy
 @ fire,   water,    grass,  electric, psychic
-@ ice,    dragon,   dark,   roosting, --
+@ ice,    dragon,   dark,   roosting, typeless
 @
 @ 0 = ineffective
 @ 1 = ineffective ; neutral if foresight or scrappy
@@ -138,7 +138,7 @@ gTypeEffectiveness:: @ 81F9720
 	.byte 10, 10, 10,  5, 10
 	.byte 10, 10, 10, 10, 10
 
-@ Untype
+@ Typeless (burnt up ; also shouldn't be used)
 	.byte 10, 10, 10, 10, 10
 	.byte 10, 10, 10, 10, 10
 	.byte 10, 10, 10, 10, 10

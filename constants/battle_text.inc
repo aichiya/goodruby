@@ -428,3 +428,4 @@
     enum BATTLE_TEXT_Higher
     enum BATTLE_TEXT_Lower
     enum BATTLE_TEXT_BoostsAttack
+	enum BATTLE_TEXT_BurntUp

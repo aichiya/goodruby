@@ -2096,7 +2096,7 @@ static const u8 MoveDescription_TearfulLook[] = _(
 
 static const u8 MoveDescription_ToxicThread[] = _(
     "Shoots string to poison\n"
-    "and slow the foe.");
+    "and reduce Speed.");
 
 
 const u8 * const gMoveDescriptions[] = {

@@ -120,7 +120,7 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectNightmare
 	.4byte BattleScript_EffectMinimize
 	.4byte BattleScript_EffectCurse
-	.4byte BattleScript_EffectGyroBall
+	.4byte BattleScript_EffectBurnUp
 	.4byte BattleScript_EffectProtect
 	.4byte BattleScript_EffectSpikes
 	.4byte BattleScript_EffectForesight
@@ -206,7 +206,7 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectRefresh
 	.4byte BattleScript_EffectGrudge
 	.4byte BattleScript_EffectSnatch
-	.4byte BattleScript_EffectWeightBased
+	.4byte BattleScript_EffectFinalGambit
 	.4byte BattleScript_EffectSecretPower
 	.4byte BattleScript_EffectDoubleEdge
 	.4byte BattleScript_EffectTeeterDance
@@ -1071,6 +1071,7 @@ BattleScript_PrintReflectLightScreenSafeguardString: @ 81D7786
 	goto BattleScript_MoveEnd
 
 BattleScript_EffectPoison: @ 81D7795
+	jumpifmove MOVE_TOXIC_THREAD, BattleScript_ToxicThread
 	attackcanceler
 	attackstring
 	ppreduce
@@ -1891,6 +1892,7 @@ BattleScript_EffectDefenseUpHit: @ 81D8017
 	goto BattleScript_EffectHit
 
 BattleScript_EffectAttackUpHit: @ 81D8022
+	jumpifmove MOVE_FELL_STINGER, BattleScript_EffectFellStinger
 	setbyte cEFFECT_CHOOSER, 79
 	goto BattleScript_EffectHit
 
@@ -5764,6 +5766,7 @@ BattleScript_EffectTrumpCard:
 
 BattleScript_EffectAttackDown: @ 81D71F5
 	jumpifmove MOVE_NOBLE_ROAR, BattleScript_NobleRoar
+	jumpifmove MOVE_TEARFUL_LOOK, BattleScript_NobleRoar
 	jumpifmove MOVE_PLAY_NICE, BattleScript_PlayNice
 	setstatchanger ATTACK, 1, TRUE
 	goto BattleScript_EffectStatDown
@@ -6643,3 +6646,158 @@ BattleScript_CompetitiveProc::
     printstring BATTLE_TEXT_DefiantProc
 	waitmessage 64
 	return
+
+BattleScript_EffectFellStinger:
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation TARGET
+	waitstate
+	healthbarupdate TARGET
+	datahpupdate TARGET
+	critmessage
+	waitmessage 64
+	resultmessage
+	waitmessage 64
+	seteffectwithchance
+	special 0x45
+	tryfaintmon TARGET, FALSE, 0
+	setbyte sMOVEEND_STATE, 0
+	moveend 0, 0
+	end
+
+BattleScript_FellStingerKills::
+	jumpifstat USER, EQUAL, ATTACK, 12, BattleScript_FellStingerEnd
+	setbyte sFIELD_1B, 0
+	playstatchangeanimation USER, 0x2, 2
+	setstatchanger ATTACK, 3, FALSE
+	statbuffchange AFFECTS_USER | 0x1, BattleScript_FellStingerEnd
+	jumpifbyte EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_FellStingerEnd
+	printfromtable gStatUpStringIds
+BattleScript_FellStingerEnd:
+	tryfaintmon TARGET, FALSE, 0
+	setbyte sMOVEEND_STATE, 0
+	moveend 0, 0
+	end
+
+BattleScript_EffectFinalGambit:
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	typecalc
+	bicbyte gMoveResultFlags, MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE
+	special 0x46
+	setatkhptozero
+	adjustsetdamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation TARGET
+	waitstate
+	healthbarupdate TARGET
+	datahpupdate TARGET
+	critmessage
+	waitmessage 64
+	resultmessage
+	waitmessage 64
+	seteffectwithchance
+	tryfaintmon USER, FALSE, NULL
+	tryfaintmon TARGET, FALSE, 0
+	setbyte sMOVEEND_STATE, 0
+	moveend 0, 0
+	end
+
+BattleScript_EffectBurnUp:
+	attackcanceler
+	jumpiftype USER, TYPE_FIRE, BattleScript_BurnUpGo
+	goto BattleScript_ButItFailedAtkStringPpReduce
+
+BattleScript_BurnUpGo:
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation TARGET
+	waitstate
+	healthbarupdate TARGET
+	datahpupdate TARGET
+	critmessage
+	waitmessage 64
+	resultmessage
+	waitmessage 64
+	seteffectwithchance
+	special 0x47
+	printstring BATTLE_TEXT_BurntUp
+	waitmessage 64
+	tryfaintmon TARGET, FALSE, NULL
+	setbyte sMOVEEND_STATE, 0
+	moveend 0, 0
+	end
+
+BattleScript_ToxicThread:
+	attackcanceler
+	attackstring
+	ppreduce
+	accuracycheck BattleScript_ButItFailed, ACC_CURR_MOVE
+	jumpifstatus2 TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
+	jumpifability TARGET, ABILITY_IMMUNITY, BattleScript_ToxicThreadSlowPermitAnim
+	jumpifstatus TARGET, PSN, BattleScript_ToxicThreadSlowPermitAnim
+	jumpifstatus TARGET, TOX, BattleScript_ToxicThreadSlowPermitAnim
+	jumpiftype TARGET, TYPE_POISON, BattleScript_ToxicThreadSlowPermitAnim
+	jumpiftype TARGET, TYPE_STEEL, BattleScript_ToxicThreadSlowPermitAnim
+	jumpifstatus TARGET, SLP | PSN | BRN | FRZ | PAR | TOX, BattleScript_ToxicThreadSlowPermitAnim
+	jumpifsideaffecting TARGET, SIDE_STATUS_SAFEGUARD, BattleScript_ToxicThreadSlowPermitAnim
+	attackanimation
+	waitanimation
+	setmoveeffect EFFECT_POISON
+	seteffectprimary
+	resultmessage
+	waitmessage 64
+	goto BattleScript_ToxicThreadSlowForbidAnim
+
+BattleScript_ToxicThreadSlowPermitAnim:
+	setstatchanger SPEED, 1, TRUE	
+	statbuffchange 1, BattleScript_ToxicThreadSlowEnd
+	jumpifbyte LESS_THAN, cMULTISTRING_CHOOSER, 2, BattleScript_ToxicThreadSlowDoAnim
+	jumpifbyte EQUAL, cMULTISTRING_CHOOSER, 3, BattleScript_ToxicThreadSlowEnd
+	goto BattleScript_ToxicThreadSlowString
+
+BattleScript_ToxicThreadSlowForbidAnim:
+	setstatchanger SPEED, 1, TRUE	
+	statbuffchange 1, BattleScript_ToxicThreadSlowEnd
+	jumpifbyte LESS_THAN, cMULTISTRING_CHOOSER, 2, BattleScript_ToxicThreadSlowDoStatAnim
+	jumpifbyte EQUAL, cMULTISTRING_CHOOSER, 3, BattleScript_ToxicThreadSlowEnd
+	goto BattleScript_ToxicThreadSlowString
+	
+BattleScript_ToxicThreadSlowDoAnim:
+	attackanimation
+	waitanimation
+BattleScript_ToxicThreadSlowDoStatAnim:
+	setgraphicalstatchangevalues
+	playanimation TARGET, B_ANIM_STATS_CHANGE, sANIM_ARG1
+	goto BattleScript_ToxicThreadSlowString
+
+BattleScript_ToxicThreadSlowString:
+	printfromtable gStatDownStringIds
+	waitmessage 64
+    special 0x41
+	goto BattleScript_ToxicThreadSlowEnd
+
+BattleScript_ToxicThreadSlowEnd:
+	goto BattleScript_MoveEnd
+

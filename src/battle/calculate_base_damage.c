@@ -96,7 +96,7 @@ u16 GetPokedexHeightWeight(u16 national_num, u8 heightweight);
     (var) /= (gStatStageRatios)[statMod][1];                                        \
 }
 
-static void adjustBasePower(struct BattlePokemon *attacker, struct BattlePokemon *defender, u32 move, u8 defenderAbility)
+static void adjustBasePower(struct BattlePokemon *attacker, struct BattlePokemon *defender, u32 move, u8 defenderAbility, u8 bankAtk, u8 bankDef)
 {
     switch (move)
     {
@@ -159,6 +159,19 @@ static void adjustBasePower(struct BattlePokemon *attacker, struct BattlePokemon
             }
         }
         break;
+		
+		case MOVE_GYRO_BALL:
+		{
+			u16 attackerspeed = GetModifiedSpeed(bankAtk);
+			u16 targetspeed = GetModifiedSpeed(bankDef);
+			u32 power = targetspeed * 25 / attackerspeed;
+			if (power > 150)
+				power = 150;
+			if (power < 1)
+				power = 1;
+			gBattleMovePower = power;
+		}
+		break;
     }
 }
 
@@ -223,7 +236,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
 	if (attacker->ability == ABILITY_MOLD_BREAKER)
 		defenderAbility = 0;
 
-    adjustBasePower(attacker, defender, move, defenderAbility);
+    adjustBasePower(attacker, defender, move, defenderAbility, bankAtk, bankDef);
 
     if (attacker->ability == ABILITY_HUGE_POWER || attacker->ability == ABILITY_PURE_POWER)
         attack *= 2;

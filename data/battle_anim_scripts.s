@@ -537,6 +537,17 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_GRASS_KNOT
 	.4byte Move_TRICK_ROOM
 	.4byte PoundCopy
+	.4byte PoundCopy
+	.4byte PoundCopy
+	.4byte PoundCopy
+	.4byte PoundCopy
+	.4byte PoundCopy
+	.4byte PoundCopy
+	.4byte PoundCopy
+	.4byte PoundCopy
+	.4byte PoundCopy
+	.4byte Move_STRING_SHOT
+	.4byte PoundCopy
 
 	.align 2
 gBattleAnims_StatusConditions:: @ 81C76F8

@@ -334,6 +334,7 @@ extern u8 BattleScript_FinishUTurn[];
 extern u8 BattleScript_UseResistBerry[];
 extern u8 BattleScript_DefiantProc[];
 extern u8 BattleScript_CompetitiveProc[];
+extern u8 BattleScript_FellStingerKills[];
 
 extern const u8 gStatusConditionString_PoisonJpn[];
 extern const u8 gStatusConditionString_SleepJpn[];
@@ -718,6 +719,9 @@ static void sp41_checkdefiant(void);
 static void sp42_checkdefiantwebs(void);
 static void sp43_checkdefianttarget(void);
 static void sp44_preparecatchexp(void);
+static void sp45_fellstingercheck(void);
+static void sp46_finalgambit(void);
+static void sp47_burnup(void);
 
 
 void (* const gBattleScriptingCommandsTable[])(void) =
@@ -13304,6 +13308,9 @@ void (* const gBattleScriptingSpecialTable[])(void) =
     sp42_checkdefiantwebs,
     sp43_checkdefianttarget,
     sp44_preparecatchexp,
+	sp45_fellstingercheck,
+	sp46_finalgambit,
+	sp47_burnup,
 };
 
 
@@ -14464,6 +14471,7 @@ static void sp30_clearsmog(void)
 
 static void sp31_gyroball(void)
 {
+	// unused code now
 	u16 attackerspeed = GetModifiedSpeed(gBankAttacker);
 	u16 targetspeed = GetModifiedSpeed(gBankTarget);
 	u32 power = targetspeed * 25 / attackerspeed;
@@ -14851,4 +14859,28 @@ static void sp44_preparecatchexp(void)
     gActiveBattler = 1;
     EmitSpriteInvisibility(0, 1);
     MarkBufferBankForExecution(gActiveBattler);
+}
+
+static void sp45_fellstingercheck(void)
+{
+	if(gBattleMons[gBankTarget].hp == 0)
+		gBattlescriptCurrInstr = BattleScript_FellStingerKills;
+}
+
+static void sp46_finalgambit(void)
+{
+    if (gBattleExecBuffer)
+        return;
+	gActiveBattler = gBankAttacker;
+    gBattleMoveDamage = gBattleMons[gActiveBattler].hp;
+    EmitHealthBarUpdate(0, 0x7FFF);
+    MarkBufferBankForExecution(gActiveBattler);
+}
+
+static void sp47_burnup(void)
+{
+	if (gBattleMons[gBankAttacker].type1 == TYPE_FIRE)
+		gBattleMons[gBankAttacker].type1 = TYPE_TYPELESS;
+	if (gBattleMons[gBankAttacker].type2 == TYPE_FIRE)
+		gBattleMons[gBankAttacker].type2 = TYPE_TYPELESS;
 }
