@@ -722,6 +722,7 @@ static void sp44_preparecatchexp(void);
 static void sp45_fellstingercheck(void);
 static void sp46_finalgambit(void);
 static void sp47_burnup(void);
+static void sp48_lastresort(void);
 
 
 void (* const gBattleScriptingCommandsTable[])(void) =
@@ -2037,6 +2038,7 @@ static void atk03_ppreduce(void)
     if (!(gHitMarker & (HITMARKER_NO_PPDEDUCT | HITMARKER_NO_ATTACKSTRING)) && gBattleMons[gBankAttacker].pp[gCurrMovePos])
     {
         gProtectStructs[gBankAttacker].notFirstStrike = 1;
+		gBattleMons[gBankAttacker].usedMoves |= (0x1 << gCurrMovePos);
 
         if (gBattleMons[gBankAttacker].pp[gCurrMovePos] > ppToDeduct)
             gBattleMons[gBankAttacker].pp[gCurrMovePos] -= ppToDeduct;
@@ -13311,6 +13313,7 @@ void (* const gBattleScriptingSpecialTable[])(void) =
 	sp45_fellstingercheck,
 	sp46_finalgambit,
 	sp47_burnup,
+	sp48_lastresort,
 };
 
 
@@ -14031,6 +14034,7 @@ static void sp18_worryseed(void)
 
 static void sp19_punishment(void)
 {
+	// dead code now
 	u16 power = 20;
 	
 	if (gBattleMons[gBankTarget].statStages[STAT_STAGE_ATK] > 6)
@@ -14883,4 +14887,44 @@ static void sp47_burnup(void)
 		gBattleMons[gBankAttacker].type1 = TYPE_TYPELESS;
 	if (gBattleMons[gBankAttacker].type2 == TYPE_FIRE)
 		gBattleMons[gBankAttacker].type2 = TYPE_TYPELESS;
+}
+
+static void sp48_lastresort(void)
+{
+	// Last Resort can be used if:
+	// - User knows Last Resort
+	// - User knows a move that is not Last Resort or an empty slot
+	// And if, for every move the user knows:
+	// - The move is Last Resort or --
+	// - Or, the move has previously been used
+	
+	u8 hasLastResort = 0;
+	u8 hasRealMove = 0;
+	u8 hasUnusedMove = 0;
+	u8 i = 0;
+	
+	for (i = 0; i < 4 && !hasUnusedMove; i++)
+	{
+		u16 move = gBattleMons[gBankAttacker].moves[i];
+		
+		if (move == MOVE_LAST_RESORT)
+			hasLastResort = 1;
+		else if (move != 0)
+		{
+			if (gBattleMons[gBankAttacker].usedMoves & (0x1 << i))
+			{
+				hasRealMove = 1;
+			}
+			else
+			{
+				hasUnusedMove = 1;
+			}
+		}
+	}
+	
+	if (hasUnusedMove || !hasLastResort || !hasRealMove)
+	{
+		// failure
+		gBattlescriptCurrInstr = BattleScript_ButItFailed;
+	}
 }

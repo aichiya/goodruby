@@ -2,8 +2,6 @@ NEEDS ANIM:
 Infestation
 Focus Blast
 Magic Gleam
-
-TODO PROBABLY:
 Fell Stinger
 Final Gambit
 Last Resort

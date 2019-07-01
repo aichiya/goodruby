@@ -172,6 +172,31 @@ static void adjustBasePower(struct BattlePokemon *attacker, struct BattlePokemon
 			gBattleMovePower = power;
 		}
 		break;
+		
+		case MOVE_PUNISHMENT:
+		{
+			u16 power = 20;
+	
+			if (defender->statStages[STAT_STAGE_ATK] > 6)
+				power += (defender->statStages[STAT_STAGE_ATK] - 6) * 20;
+			if (defender->statStages[STAT_STAGE_DEF] > 6)
+				power += (defender->statStages[STAT_STAGE_DEF] - 6) * 20;
+			if (defender->statStages[STAT_STAGE_SPEED] > 6)
+				power += (defender->statStages[STAT_STAGE_SPEED] - 6) * 20;
+			if (defender->statStages[STAT_STAGE_SPATK] > 6)
+				power += (defender->statStages[STAT_STAGE_SPATK] - 6) * 20;
+			if (defender->statStages[STAT_STAGE_SPDEF] > 6)
+				power += (defender->statStages[STAT_STAGE_SPDEF] - 6) * 20;
+			if (defender->statStages[STAT_STAGE_ACC] > 6)
+				power += (defender->statStages[STAT_STAGE_ACC] - 6) * 20;
+			if (defender->statStages[STAT_STAGE_EVASION] > 6)
+				power += (defender->statStages[STAT_STAGE_EVASION] - 6) * 20;
+			
+			if (power > 200)
+				power = 200;
+			
+			gBattleMovePower = power;
+		}
     }
 }
 

@@ -246,7 +246,7 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectHealingWish
 	.4byte BattleScript_EffectStickyWeb
 	.4byte BattleScript_EffectWorrySeed
-	.4byte BattleScript_EffectPunishment
+	.4byte BattleScript_EffectLastResort
 	.4byte BattleScript_EffectEchoedVoice
 	.4byte BattleScript_EffectWakeUpSlap
 	.4byte BattleScript_EffectCloseCombat
@@ -6801,3 +6801,10 @@ BattleScript_ToxicThreadSlowString:
 BattleScript_ToxicThreadSlowEnd:
 	goto BattleScript_MoveEnd
 
+BattleScript_EffectLastResort:
+	attackcanceler
+	attackstring
+	ppreduce
+	special 0x48
+	accuracycheck BattleScript_MoveMissedPause, ACC_CURR_MOVE
+	goto BattleScript_HitFromCritCalc

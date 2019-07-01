@@ -5323,8 +5323,8 @@ const struct BattleMove gBattleMoves[] = {
     },
 	
 	[MOVE_PUNISHMENT] = {
-        .effect = EFFECT_PUNISHMENT,
-        .power = 60,
+        .effect = EFFECT_HIT,
+        .power = 2,
         .type = TYPE_DARK,
         .accuracy = 100,
         .pp = 5,
@@ -6766,7 +6766,7 @@ const struct BattleMove gBattleMoves[] = {
     },
 
     [MOVE_LAST_RESORT] = {
-        .effect = EFFECT_HIT, // :y
+        .effect = EFFECT_LAST_RESORT,
         .power = 140,
         .type = TYPE_NORMAL,
         .accuracy = 100,
