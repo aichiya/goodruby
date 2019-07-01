@@ -3947,6 +3947,7 @@ void SwitchInClearSetData(void)
         gStatuses3[gActiveBattler] = 0;
     }
 	gBattleMons[gActiveBattler].itemRemoved = 0;
+    gBattleMons[gActiveBattler].usedMoves = 0;
 
     for (i = 0; i < gBattlersCount; i++)
     {
