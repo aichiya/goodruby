@@ -169,7 +169,7 @@ ABILITY, STAT, AND MOVEPOOL CHANGES:
  * Numel's Ability Oblivious replaced with Magma Armor. (It will become Magma Armor on evolving.)
  * Numel's Ability Simple replaced with Oblivious. (It will become Solid Rock on evolving.)
 
-#333 Torkoal
+#324 Torkoal
  * Torkoal's Ability Drought is replaced with Shell Armor.
  * Torkoal's Hidden Ability Shell Armor is replaced with Drought.
 
@@ -177,6 +177,11 @@ ABILITY, STAT, AND MOVEPOOL CHANGES:
  * Spinda's base stats changed: 60/60/60/60/60/60 (360) -> 70/70/70/70/70/70 (420).
  * Spinda now learns Superpower and Overheat by TM.
  * Spinda now learns Hammer Arm by breeding.
+
+#336 Seviper
+ * Seviper's base stats changed: 73/100/60/100/60/65 (458) -> 73/100/60/100/60/75 (468).
+ * Seviper gained secondary ability Infiltrator.
+ * Seviper's Hidden Ability Infiltrator is replaced with Merciless.
 
 #345 Lileep, #346 Cradily
  * Level-up movepool heavily adjusted.

@@ -12841,7 +12841,7 @@ const struct BaseStats gBaseStats[] =
         .baseHP        = 73,
         .baseAttack    = 100,
         .baseDefense   = 60,
-        .baseSpeed     = 65,
+        .baseSpeed     = 75,
         .baseSpAttack  = 100,
         .baseSpDefense = 60,
         .type1 = TYPE_POISON,
@@ -12863,11 +12863,11 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_DRAGON,
         .ability1 = ABILITY_SHED_SKIN,
-        .ability2 = ABILITY_NONE,
+        .ability2 = ABILITY_INFILTRATOR,
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_BLACK,
         .noFlip = TRUE,
-		.hiddenAbility = ABILITY_INFILTRATOR,
+		.hiddenAbility = ABILITY_MERCILESS,
     },
 
     [SPECIES_ZANGOOSE] =

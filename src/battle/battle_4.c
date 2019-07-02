@@ -2089,6 +2089,9 @@ static void atk04_critcalc(void)
 	if (gCurrentMove == MOVE_STORM_THROW || gCurrentMove == MOVE_FROST_BREATH)
 		critChance = 4;
 
+    if (gBattleMons[gBankAttacker].ability == ABILITY_MERCILESS && (gBattleMons[gBankTarget].status1 & (STATUS_POISON | STATUS_TOXIC_POISON)))
+        critChance = 4;
+
     if (critChance > 4)
         critChance = 4;
 

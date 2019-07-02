@@ -448,6 +448,9 @@ gAbilityDescription_Triage:
 gAbilityDescription_StrongJaw:
 	.string "Powers up biting moves.$"
 
+gAbilityDescription_Merciless:
+	.string "Always crits poisoned foes.$"
+
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -606,3 +609,4 @@ gAbilityDescriptions:: @ 81FA110
     .4byte gAbilityDescription_RoughSkin
     .4byte gAbilityDescription_Triage
     .4byte gAbilityDescription_StrongJaw
+    .4byte gAbilityDescription_Merciless
