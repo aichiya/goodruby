@@ -50,6 +50,14 @@ ABILITY, STAT, AND MOVEPOOL CHANGES:
  * Now learns U-Turn by TM.
  * Now learns Slack Off by breeding.
 
+#088 Grimer, #089 Muk
+ * Level-up movepool adjusted.
+ * Now learns Feint Attack, Acid Spray, Toxic, Poison Jab, and Body Slam by level.
+ * No longer learns Sludge Bomb by level.
+ * Entire line's Ability Stench replaced with Poison Touch.
+ * Grimer's Hidden Ability Poison Touch replaced with Stench.
+ * Muk's Hidden Ability Poison Touch replaced with Adaptability.
+
 #098 Krabby, #099 Kingler
  * Level-up movepool heavily adjusted.
  * Now learns Swords Dance, Crush Claw, Knock Off, and Superpower by level.
@@ -164,6 +172,11 @@ ABILITY, STAT, AND MOVEPOOL CHANGES:
  * Budew's Hidden Ability Leaf Guard replaced with Rattled.
  * Roselia's Hidden Ability Leaf Guard replaced with Technician.
  * (Roserade's Hidden Ability Technician remains.)
+
+#316 Gulpin, #317 Swalot
+ * Level-up movepool slightly adjusted.
+ * Entire line now learns Recover by level.
+ * Entire line no longer learns Gastro Acid by level.
 
 #322 Numel, #323 Camerupt
  * Numel's Ability Oblivious replaced with Magma Armor. (It will become Magma Armor on evolving.)

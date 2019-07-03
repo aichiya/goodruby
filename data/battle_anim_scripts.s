@@ -13724,9 +13724,6 @@ Move_STRUGGLE_BUG:
 	waitforvisualfinish
 	end
 
-Move_INFESTATION:
-	end
-
 Move_PETAL_STORM:
 	loadspritegfx 10159
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_BATTLER_ATTACKER, 2, 1, 1, 0, 8, 0x625D
@@ -15728,4 +15725,7 @@ Move_TRICK_ROOM:
 	clearmonbg ANIM_BATTLER_TARGET
 	clearmonbg ANIM_BATTLER_ATK_PARTNER
 	clearmonbg ANIM_BATTLER_DEF_PARTNER
+	end
+
+Move_INFESTATION:
 	end

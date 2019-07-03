@@ -2993,12 +2993,12 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_AMORPHOUS,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
-        .ability1 = ABILITY_STENCH,
+        .ability1 = ABILITY_POISON_TOUCH,
         .ability2 = ABILITY_STICKY_HOLD,
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_PURPLE,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_POISON_TOUCH,
+		.hiddenAbility = ABILITY_STENCH,
     },
 
     [SPECIES_MUK] =
@@ -3027,12 +3027,12 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_AMORPHOUS,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
-        .ability1 = ABILITY_STENCH,
+        .ability1 = ABILITY_POISON_TOUCH,
         .ability2 = ABILITY_STICKY_HOLD,
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_PURPLE,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_POISON_TOUCH,
+		.hiddenAbility = ABILITY_ADAPTABILITY,
     },
 
     [SPECIES_SHELLDER] =
