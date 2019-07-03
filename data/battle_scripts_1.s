@@ -3124,6 +3124,9 @@ BattleScript_LocalBattleLost:: @ 81D8DD1
 	jumpifhalfword EQUAL, gTrainerBattleOpponent, 1024, BattleScript_LocalBattleLostEnd
 	printstring BATTLE_TEXT_OutOfUsablePoke
 	waitmessage 64
+    special 0x49
+    printfromtable gLossMessages
+    waitmessage 64
 	printstring BATTLE_TEXT_WhitedOut
 	waitmessage 64
 
@@ -6808,3 +6811,5 @@ BattleScript_EffectLastResort:
 	special 0x48
 	accuracycheck BattleScript_MoveMissedPause, ACC_CURR_MOVE
 	goto BattleScript_HitFromCritCalc
+
+

@@ -209,7 +209,6 @@ static void (*const gUnknown_082166D8[])(struct LinkPlayerEventObject *, struct 
 static void DoWhiteOut(void)
 {
     ScriptContext2_RunNewScript(S_WhiteOut);
-    gSaveBlock1.money /= 2;
     ScrSpecial_HealPlayerParty();
     Overworld_ResetStateAfterWhiteOut();
     Overworld_SetWarpDestToLastHealLoc();

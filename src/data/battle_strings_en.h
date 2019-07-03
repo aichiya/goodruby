@@ -432,6 +432,8 @@ enum
     BATTLE_TEXT_Lower,
     BATTLE_TEXT_BoostsAttack,
 	BATTLE_TEXT_BurntUp,
+    BATTLE_TEXT_LosingPrize,
+    BATTLE_TEXT_LosingWild,
 };
 
 const u8 BattleText_UnknownString[] = _("{STRING 33}");
@@ -994,6 +996,8 @@ const u8 BattleText_Higher[] = _("higher!");
 const u8 BattleText_Lower[] = _("lower!");
 const u8 BattleText_BoostsAttack[] = _("{STRING 16}'s {STRING 23}\nboosts {DEFENDING_MON}'s Attack!");
 const u8 BattleText_BurntUp[] = _("{ATTACKING_MON} burnt away\nits Fire type!");
+const u8 BattleText_LosingPrize[] = _("{STRING 32} gave ¥{STRING 0}\nto the winner...\p");
+const u8 BattleText_LosingWild[] = _("{STRING 32} panicked and\ndropped ¥{STRING 0}...\p");
 
 
 const u8 *const gUnknown_08400F58[] =
@@ -1449,6 +1453,8 @@ const u8 *const gBattleStringsTable[] =
     BattleText_Lower,
     BattleText_BoostsAttack,
 	BattleText_BurntUp,
+    BattleText_LosingPrize,
+    BattleText_LosingWild,
 };
 
 // below are lists of battle string enums and NOT pointers to the strings.
@@ -1854,4 +1860,10 @@ const u8 *const gUnknown_08401674[] =
     BattleText_Ice,
     BattleText_Dragon,
     BattleText_Dark,
+};
+
+const u16 gLossMessages[] =
+{
+    BATTLE_TEXT_LosingPrize,
+    BATTLE_TEXT_LosingWild,
 };

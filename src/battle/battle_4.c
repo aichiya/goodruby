@@ -7,9 +7,11 @@
 #include "constants/battle_move_effects.h"
 #include "constants/moves.h"
 #include "constants/abilities.h"
+#include "constants/flags.h"
 #include "item.h"
 #include "constants/items.h"
 #include "data2.h"
+#include "event_data.h"
 #include "constants/hold_effects.h"
 #include "random.h"
 #include "rom3.h"
@@ -241,6 +243,7 @@ void nullsub_6(void);
 void ReshowBattleScreenAfterMenu(void);
 void BattleMainCB2(void);
 void AddMoney(u32* moneySaveblock, u32 to_give);
+void RemoveMoney(u32* moneySaveblock, u32 to_take);
 u8 CountAliveMons(u8 caseID);
 void PokemonUseItemEffects(struct Pokemon*, u16 item, u8 partyID, u8 r3, u8 sp);
 u8 CanRunFromBattle(void);
@@ -723,6 +726,7 @@ static void sp45_fellstingercheck(void);
 static void sp46_finalgambit(void);
 static void sp47_burnup(void);
 static void sp48_lastresort(void);
+static void sp49_losemoney(void);
 
 
 void (* const gBattleScriptingCommandsTable[])(void) =
@@ -1623,6 +1627,19 @@ static const u32 sExperienceScalingFactors[] =
     155990,
     157872,
     159767,
+};
+
+static const u16 sPlayerMoneyLossConstants[] =
+{
+    8,
+    16,
+    24,
+    36,
+    48,
+    64,
+    80,
+    100,
+    120,
 };
 
 static void atk00_attackcanceler(void)
@@ -13317,6 +13334,7 @@ void (* const gBattleScriptingSpecialTable[])(void) =
 	sp46_finalgambit,
 	sp47_burnup,
 	sp48_lastresort,
+    sp49_losemoney,
 };
 
 
@@ -14930,4 +14948,46 @@ static void sp48_lastresort(void)
 		// failure
 		gBattlescriptCurrInstr = BattleScript_ButItFailed;
 	}
+}
+
+static void sp49_losemoney(void)
+{
+    // Take away some money and buffer the amount taken as a string.
+    u16 highestLevel = 0;
+    u8 badgeCount = 0;
+    u32 moneyLoss;
+    u8 i;
+    
+    for (i = 0; i < 6; i++)
+    {
+        u8 level = GetMonData(&gPlayerParty[i], MON_DATA_LEVEL, 0);
+        if (level > highestLevel)
+            highestLevel = level;
+    }
+    for (i = 0; i < 8; i++)
+    {
+        if (FlagGet(FLAG_BADGE01_GET + i))
+            badgeCount++;
+    }
+    
+    moneyLoss = highestLevel * sPlayerMoneyLossConstants[badgeCount];
+    
+    if (moneyLoss > gSaveBlock1.money)
+        moneyLoss = gSaveBlock1.money;
+
+    RemoveMoney(&gSaveBlock1.money, moneyLoss);
+    gBattleTextBuff1[0] = 0xFD;
+    gBattleTextBuff1[1] = 1;
+    gBattleTextBuff1[2] = 4;
+    gBattleTextBuff1[3] = 5;
+    gBattleTextBuff1[4] = (u8)(moneyLoss);
+    gBattleTextBuff1[5] = (u8)(moneyLoss >> 8);
+    gBattleTextBuff1[6] = (u8)(moneyLoss >> 16);
+    gBattleTextBuff1[7] = (u8)(moneyLoss >> 24);
+    gBattleTextBuff1[8] = 0xFF;
+ 
+    if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
+        gBattleCommunication[MULTISTRING_CHOOSER] = 0;
+    else
+        gBattleCommunication[MULTISTRING_CHOOSER] = 1;
 }
