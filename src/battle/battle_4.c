@@ -3562,7 +3562,7 @@ void SetMoveEffect(bool8 primary, u8 certainArg)
             }
             break;
         case 32: //escape prevention
-            gBattleMons[gBankTarget].status2 |= STATUS2_RECHARGE;
+            gBattleMons[gBankTarget].status2 |= STATUS2_ESCAPE_PREVENTION;
             gDisableStructs[gBankTarget].bankPreventingEscape = gBankAttacker;
             gBattlescriptCurrInstr++;
             break;
