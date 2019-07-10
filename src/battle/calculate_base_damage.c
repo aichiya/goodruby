@@ -172,6 +172,33 @@ static void adjustBasePower(struct BattlePokemon *attacker, struct BattlePokemon
 			gBattleMovePower = power;
 		}
 		break;
+        
+        case MOVE_ELECTRO_BALL:
+        {
+			u16 attackerspeed = GetModifiedSpeed(bankAtk);
+			u16 targetspeed = GetModifiedSpeed(bankDef);
+	
+            if (targetspeed > attackerspeed)
+            {
+                gBattleMovePower = 40;
+            }
+            else if (targetspeed*2 > attackerspeed)
+            {
+                gBattleMovePower = 60;
+            }
+            else if (targetspeed*3 > attackerspeed)
+            {
+                gBattleMovePower = 80;
+            }
+            else if (targetspeed*4 > attackerspeed)
+            {
+                gBattleMovePower = 120;
+            }
+            else
+            {
+                gBattleMovePower = 150;
+            }
+        }
 		
 		case MOVE_PUNISHMENT:
 		{
@@ -197,6 +224,15 @@ static void adjustBasePower(struct BattlePokemon *attacker, struct BattlePokemon
 			
 			gBattleMovePower = power;
 		}
+        break;
+        
+        case MOVE_ROUND:
+        {
+            gBattleMovePower = 60;
+            if (gBattleStruct->roundMarker)
+                gBattleMovePower *= 2;
+        }
+        break;
     }
 }
 

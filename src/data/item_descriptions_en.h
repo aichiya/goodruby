@@ -1560,14 +1560,14 @@ static const u8 gItemDescription_TM56[] = _(
     ".");
  
 static const u8 gItemDescription_TM57[] = _(
-    "placeholder text\n"
-    "stuff\n"
-    ".");
+    "Attacks with a\n"
+    "focused laser that\n"
+    "may boost Sp. Atk.");
  
 static const u8 gItemDescription_TM58[] = _(
-    "placeholder text\n"
-    "stuff\n"
-    ".");
+    "Endures any\n"
+    "attack, leaving\n"
+    "at least 1 HP.");
  
 static const u8 gItemDescription_TM59[] = _(
     "placeholder text\n"
@@ -1605,9 +1605,9 @@ static const u8 gItemDescription_TM65[] = _(
     ".");
  
 static const u8 gItemDescription_TM66[] = _(
-    "placeholder text\n"
-    "stuff\n"
-    ".");
+    "Doubles in power if\n"
+    "the target moves\n"
+    "before the user.");
  
 static const u8 gItemDescription_TM67[] = _(
     "placeholder text\n"
@@ -1620,9 +1620,9 @@ static const u8 gItemDescription_TM68[] = _(
     ".");
  
 static const u8 gItemDescription_TM69[] = _(
-    "placeholder text\n"
-    "stuff\n"
-    ".");
+    "Polishes the body\n"
+    "to sharply boost\n"
+    "Speed.");
  
 static const u8 gItemDescription_TM70[] = _(
     "placeholder text\n"

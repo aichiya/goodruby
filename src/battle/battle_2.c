@@ -3830,6 +3830,7 @@ void sub_8010874(void)
 	gBattleStruct->echoedVoiceMarker = 0;
 	gBattleStruct->echoedVoiceCounter = 0;
 	gBattleStruct->copycatTracker = 0;
+    gBattleStruct->roundMarker = 0;
 
     MEMSET_ALT(&gWishFutureKnock, 0, 0x2C, i, r4);
 

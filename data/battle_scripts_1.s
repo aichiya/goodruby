@@ -260,7 +260,7 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectWringOut
 	.4byte BattleScript_EffectReflectType
 	.4byte BattleScript_EffectMetalBurst
-	.4byte BattleScript_EffectElectroBall
+	.4byte BattleScript_EffectRound
 	.4byte BattleScript_EffectEntrainment
 	.4byte BattleScript_EffectTrumpCard
 	.4byte BattleScript_EffectVenomDrench
@@ -5742,10 +5742,6 @@ BattleScript_MoveAtkDrain::
 	orbyte gMoveResultFlags, MOVE_RESULT_DOESNT_AFFECT_FOE
 	goto BattleScript_MoveEnd
 
-BattleScript_EffectElectroBall:
-	special 0x2B
-	goto BattleScript_EffectHit
-
 BattleScript_EffectEntrainment:
 	attackcanceler
 	attackstring
@@ -6011,11 +6007,6 @@ BattleScript_IncinerateDestroyBerry::
 	setbyte sMOVEEND_STATE, 0
 	moveend 0, 0
 	end
-
-BattleScript_EffectGyroBall:
-	special 0x31
-	goto BattleScript_EffectHit
-
 
 BattleScript_EffectQuickAttack:
 	jumpifnotmove MOVE_FEINT, BattleScript_HitFromAtkCanceler
@@ -6812,4 +6803,42 @@ BattleScript_EffectLastResort:
 	accuracycheck BattleScript_MoveMissedPause, ACC_CURR_MOVE
 	goto BattleScript_HitFromCritCalc
 
+BattleScript_EffectRound:
+	attackcanceler
+	accuracycheck BattleScript_RoundMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation TARGET
+	waitstate
+	healthbarupdate TARGET
+	datahpupdate TARGET
+	critmessage
+	waitmessage 64
+	resultmessage
+	waitmessage 64
+	seteffectwithchance
+	tryfaintmon TARGET, FALSE, NULL
+	setbyte sMOVEEND_STATE, 0
+	moveend 0, 0
+    special 0x4A
+	end
+
+BattleScript_RoundMissed:
+	attackstring
+	ppreduce
+	pause 32
+	effectivenesssound
+	resultmessage
+	waitmessage 64
+	setbyte sMOVEEND_STATE, 0
+	moveend 0, 0
+    special 0x4A
+	end
 

@@ -2098,6 +2098,10 @@ static const u8 MoveDescription_ToxicThread[] = _(
     "Shoots string to poison\n"
     "and reduce Speed.");
 
+static const u8 MoveDescription_Round[] = _(
+    "Other Round users follow-up\n"
+    "immediately at double power.");
+
 
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
@@ -2628,4 +2632,5 @@ const u8 * const gMoveDescriptions[] = {
     MoveDescription_BurnUp,
     MoveDescription_TearfulLook,
     MoveDescription_ToxicThread,
+    MoveDescription_Round,
 };

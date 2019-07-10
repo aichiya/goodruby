@@ -727,6 +727,7 @@ static void sp46_finalgambit(void);
 static void sp47_burnup(void);
 static void sp48_lastresort(void);
 static void sp49_losemoney(void);
+static void sp4A_round(void);
 
 
 void (* const gBattleScriptingCommandsTable[])(void) =
@@ -13335,6 +13336,7 @@ void (* const gBattleScriptingSpecialTable[])(void) =
 	sp47_burnup,
 	sp48_lastresort,
     sp49_losemoney,
+    sp4A_round,
 };
 
 
@@ -14418,6 +14420,7 @@ static void sp2A_metalburst(void)
 
 static void sp2B_electroball(void)
 {
+    // Now dead code.
 	u16 attackerspeed = GetModifiedSpeed(gBankAttacker);
 	u16 targetspeed = GetModifiedSpeed(gBankTarget);
 	
@@ -14990,4 +14993,39 @@ static void sp49_losemoney(void)
         gBattleCommunication[MULTISTRING_CHOOSER] = 0;
     else
         gBattleCommunication[MULTISTRING_CHOOSER] = 1;
+}
+
+static void sp4A_round(void)
+{
+    u8 roundUsers[4] = {0, 0, 0, 0};
+    u8 i;
+    
+    gBattleStruct->roundMarker = 1;
+    
+    for (i = 0; i < gBattlersCount; i++)
+    {
+        u8 bank = gBanksByTurnOrder[i];
+        
+        if (gActionsByTurnOrder[bank] != ACTION_USE_MOVE)
+            continue;
+        else if (!(gProtectStructs[bank].onlyStruggle) && 
+			gBattleMons[bank].moves[ewram1608Carr(bank)] == MOVE_ROUND)
+            roundUsers[i] = 1;
+    }
+
+    // Attacking mon is always a round user, but may not have selected round
+    roundUsers[gCurrentTurnActionNumber] = 1;
+    
+    // Trawl list of actors.
+    // Every time we find someone who is using Round, move them ahead of everyone who isn't.
+    for (i = gCurrentTurnActionNumber+1; i < gBattlersCount; i++)
+    {
+        while (roundUsers[i] && !roundUsers[i-1])
+        {
+            SwapTurnOrder(i, i-1);
+            roundUsers[i] = 0;
+            roundUsers[i-1] = 1;
+            i--;
+        }
+    }
 }

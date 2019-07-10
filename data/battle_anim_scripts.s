@@ -547,6 +547,7 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte PoundCopy
 	.4byte PoundCopy
 	.4byte Move_STRING_SHOT
+    .4byte Move_ROUND
 	.4byte PoundCopy
 
 	.align 2
@@ -11942,10 +11943,9 @@ Move_DISARM_VOICE:
 	createsprite gBattleAnimSpriteTemplate_8402934, ANIM_BATTLER_ATTACKER, 2, 24, 0, 2
 	createsprite gBattleAnimSpriteTemplate_8402934, ANIM_BATTLER_ATTACKER, 2, 24, 8, 1
     delay 3
+	createsprite gBattleAnimSpriteTemplate_DisarmVoice, ANIM_BATTLER_TARGET, 2, 0, 1, -48, -48, 15
 	createsprite gBattleAnimSpriteTemplate_DisarmVoice, ANIM_BATTLER_TARGET, 2, 0, 1, 48, -48, 15
-	createsprite gBattleAnimSpriteTemplate_DisarmVoice, ANIM_BATTLER_TARGET, 2, 0, 1, 48, -24, 15
-	createsprite gBattleAnimSpriteTemplate_DisarmVoice, ANIM_BATTLER_TARGET, 2, 0, 1, 48, 0, 15
-	createsprite gBattleAnimSpriteTemplate_DisarmVoice, ANIM_BATTLER_TARGET, 2, 0, 1, 48, 24, 15
+	createsprite gBattleAnimSpriteTemplate_DisarmVoice, ANIM_BATTLER_TARGET, 2, 0, 1, -48, 48, 15
 	createsprite gBattleAnimSpriteTemplate_DisarmVoice, ANIM_BATTLER_TARGET, 2, 0, 1, 48, 48, 15
     delay 12
 	createsprite gBattleAnimSpriteTemplate_8402934, ANIM_BATTLER_ATTACKER, 2, 24, -8, 0
@@ -15728,4 +15728,26 @@ Move_TRICK_ROOM:
 	end
 
 Move_INFESTATION:
+	end
+
+Move_ROUND:
+	loadspritegfx ANIM_TAG_MUSIC_NOTES
+	monbg ANIM_BATTLER_DEF_PARTNER
+	createvisualtask sub_80CEA20, 2
+	waitforvisualfinish
+	createvisualtask sub_812B18C, 2, 0, 255
+	createvisualtask sub_80D2CF8, 2, 0
+	createsprite gBattleAnimSpriteTemplate_83D7114, ANIM_BATTLER_TARGET, 2, 7, 0, 12
+	delay 5
+	createsprite gBattleAnimSpriteTemplate_83D7114, ANIM_BATTLER_TARGET, 2, 6, 1, 12
+	delay 5
+	createsprite gBattleAnimSpriteTemplate_83D7114, ANIM_BATTLER_TARGET, 2, 1, 2, 12
+	delay 5
+	createsprite gBattleAnimSpriteTemplate_83D7114, ANIM_BATTLER_TARGET, 2, 2, 3, 12
+	delay 20
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BATTLER_TARGET, 1, 0, 13, 1
+	waitforvisualfinish
+	clearmonbg ANIM_BATTLER_DEF_PARTNER
+	createvisualtask sub_80CEAD8, 2
+	waitforvisualfinish
 	end

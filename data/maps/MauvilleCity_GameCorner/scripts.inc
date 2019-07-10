@@ -675,8 +675,8 @@ MauvilleCity_GameCorner_EventScript_MonPrizes:
     multichoice 12, 0, 73, 0
     switch RESULT
 	case 0, MauvilleCity_GameCorner_EventScript_PikachuConfirm
-	case 1, MauvilleCity_GameCorner_EventScript_CuboneConfirm
-	case 2, MauvilleCity_GameCorner_EventScript_ClefairyConfirm
+	case 1, MauvilleCity_GameCorner_EventScript_MeowthConfirm
+	case 2, MauvilleCity_GameCorner_EventScript_JigglypuffConfirm
 	case 3, MauvilleCity_GameCorner_EventScript_EeveeConfirm
 	case 4, MauvilleCity_GameCorner_EventScript_PorygonConfirm
 	goto MauvilleCity_GameCorner_EventScript_156D0D
@@ -687,14 +687,14 @@ MauvilleCity_GameCorner_EventScript_PikachuConfirm:
     bufferspeciesname 0, SPECIES_PIKACHU
 	goto MauvilleCity_GameCorner_EventScript_MonConfirm
     
-MauvilleCity_GameCorner_EventScript_CuboneConfirm:
+MauvilleCity_GameCorner_EventScript_MeowthConfirm:
 	setvar VAR_TEMP_1, 2
-    bufferspeciesname 0, SPECIES_CUBONE
+    bufferspeciesname 0, SPECIES_MEOWTH
 	goto MauvilleCity_GameCorner_EventScript_MonConfirm
     
-MauvilleCity_GameCorner_EventScript_ClefairyConfirm:
+MauvilleCity_GameCorner_EventScript_JigglypuffConfirm:
 	setvar VAR_TEMP_1, 3
-    bufferspeciesname 0, SPECIES_CLEFAIRY
+    bufferspeciesname 0, SPECIES_JIGGLYPUFF
 	goto MauvilleCity_GameCorner_EventScript_MonConfirm
     
 MauvilleCity_GameCorner_EventScript_EeveeConfirm:
@@ -713,8 +713,8 @@ MauvilleCity_GameCorner_EventScript_MonConfirm:
 	goto_if_eq MauvilleCity_GameCorner_EventScript_156F77
 	switch VAR_TEMP_1
 	case 1, MauvilleCity_GameCorner_EventScript_Pikachu
-	case 2, MauvilleCity_GameCorner_EventScript_Cubone
-	case 3, MauvilleCity_GameCorner_EventScript_Clefairy
+	case 2, MauvilleCity_GameCorner_EventScript_Meowth
+	case 3, MauvilleCity_GameCorner_EventScript_Jigglypuff
 	case 4, MauvilleCity_GameCorner_EventScript_Eevee
 	case 5, MauvilleCity_GameCorner_EventScript_Porygon
 	end
@@ -736,14 +736,14 @@ MauvilleCity_GameCorner_EventScript_Pikachu:
 	message MauvilleCity_GameCorner_Text_GetMon
 	waitfanfare
 	waitmessage
-	givemon SPECIES_PIKACHU, 14, ITEM_NONE, 0x0, 0x0, 0
+	givemon SPECIES_PIKACHU, 17, ITEM_NONE, 0x0, 0x0, 0
 	bufferspeciesname 1, SPECIES_PIKACHU
 	msgbox MossdeepCity_StevensHouse_Text_1A1102, MSGBOX_YESNO
 	compare RESULT, YES
 	call_if_eq MossdeepCity_StevensHouse_EventScript_1A0678
     goto MauvilleCity_GameCorner_EventScript_MonPrizesStartFirst
     
-MauvilleCity_GameCorner_EventScript_Cubone:
+MauvilleCity_GameCorner_EventScript_Meowth:
 	checkcoins VAR_TEMP_2
 	compare VAR_TEMP_2, 520
 	goto_if_lt MauvilleCity_GameCorner_EventScript_NoCoinsForMon
@@ -756,18 +756,18 @@ MauvilleCity_GameCorner_EventScript_Cubone:
 	playse SE_REGI
     waitse
 	playfanfare MUS_FANFA4
-	bufferspeciesname 0, SPECIES_CUBONE
+	bufferspeciesname 0, SPECIES_MEOWTH
 	message MauvilleCity_GameCorner_Text_GetMon
 	waitfanfare
 	waitmessage
-	givemon SPECIES_CUBONE, 14, ITEM_NONE, 0x0, 0x0, 0
-	bufferspeciesname 1, SPECIES_CUBONE
+	givemon SPECIES_MEOWTH, 18, ITEM_NONE, 0x0, 0x0, 0
+	bufferspeciesname 1, SPECIES_MEOWTH
 	msgbox MossdeepCity_StevensHouse_Text_1A1102, MSGBOX_YESNO
 	compare RESULT, YES
 	call_if_eq MossdeepCity_StevensHouse_EventScript_1A0678
     goto MauvilleCity_GameCorner_EventScript_MonPrizesStartFirst
     
-MauvilleCity_GameCorner_EventScript_Clefairy:
+MauvilleCity_GameCorner_EventScript_Jigglypuff:
 	checkcoins VAR_TEMP_2
 	compare VAR_TEMP_2, 1030
 	goto_if_lt MauvilleCity_GameCorner_EventScript_NoCoinsForMon
@@ -780,12 +780,12 @@ MauvilleCity_GameCorner_EventScript_Clefairy:
 	playse SE_REGI
     waitse
 	playfanfare MUS_FANFA4
-	bufferspeciesname 0, SPECIES_CLEFAIRY
+	bufferspeciesname 0, SPECIES_JIGGLYPUFF
 	message MauvilleCity_GameCorner_Text_GetMon
 	waitfanfare
 	waitmessage
-	givemon SPECIES_CLEFAIRY, 14, ITEM_NONE, 0x0, 0x0, 0
-	bufferspeciesname 1, SPECIES_CLEFAIRY
+	givemon SPECIES_JIGGLYPUFF, 20, ITEM_NONE, 0x0, 0x0, 0
+	bufferspeciesname 1, SPECIES_JIGGLYPUFF
 	msgbox MossdeepCity_StevensHouse_Text_1A1102, MSGBOX_YESNO
 	compare RESULT, YES
 	call_if_eq MossdeepCity_StevensHouse_EventScript_1A0678
@@ -808,7 +808,7 @@ MauvilleCity_GameCorner_EventScript_Eevee:
 	message MauvilleCity_GameCorner_Text_GetMon
 	waitfanfare
 	waitmessage
-	givemon SPECIES_EEVEE, 14, ITEM_NONE, 0x0, 0x0, 0
+	givemon SPECIES_EEVEE, 22, ITEM_NONE, 0x0, 0x0, 0
 	bufferspeciesname 1, SPECIES_EEVEE
 	msgbox MossdeepCity_StevensHouse_Text_1A1102, MSGBOX_YESNO
 	compare RESULT, YES
@@ -832,7 +832,7 @@ MauvilleCity_GameCorner_EventScript_Porygon:
 	message MauvilleCity_GameCorner_Text_GetMon
 	waitfanfare
 	waitmessage
-	givemon SPECIES_PORYGON, 14, ITEM_NONE, 0x0, 0x0, 0
+	givemon SPECIES_PORYGON, 25, ITEM_NONE, 0x0, 0x0, 0
 	bufferspeciesname 1, SPECIES_PORYGON
 	msgbox MossdeepCity_StevensHouse_Text_1A1102, MSGBOX_YESNO
 	compare RESULT, YES

@@ -5609,7 +5609,7 @@ const struct BattleMove gBattleMoves[] = {
     },
 
     [MOVE_ACID_SPRAY] = {
-        .effect = EFFECT_SPECIAL_DEFENSE_DOWN2_HIT | F_SHEER_FORCE,
+        .effect = EFFECT_SPECIAL_DEFENSE_DOWN2_HIT,
         .power = 40,
         .type = TYPE_POISON,
         .accuracy = 100,
@@ -5617,7 +5617,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 100,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_SHEER_FORCE,
 		.moveClass = CLASS_SPECIAL,
     },
 
@@ -5804,8 +5804,8 @@ const struct BattleMove gBattleMoves[] = {
     },
 
     [MOVE_ELECTRO_BALL] = {
-        .effect = EFFECT_ELECTRO_BALL,
-        .power = 40,
+        .effect = EFFECT_HIT,
+        .power = 2,
         .type = TYPE_ELECTRIC,
         .accuracy = 100,
         .pp = 10,
@@ -6880,5 +6880,18 @@ const struct BattleMove gBattleMoves[] = {
         .priority = 0,
         .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
 		.moveClass = CLASS_STATUS,
+    },
+
+    [MOVE_ROUND] = {
+        .effect = EFFECT_ROUND,
+        .power = 60,
+        .type = TYPE_NORMAL,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
+		.moveClass = CLASS_SPECIAL,
     },
 };

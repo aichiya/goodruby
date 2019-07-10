@@ -150,7 +150,7 @@ struct BattleStruct /* 0x2000000 */
     /*0x16025*/ u8 echoedVoiceCounter;
     /*0x16026*/ u16 copycatTracker;
     /*0x16028*/ u8 meFirstTracker;
-    /*0x16029*/ u8 unk16029;
+    /*0x16029*/ u8 roundMarker;
     /*0x1602A*/ u8 unk1602A;
     /*0x1602B*/ u8 unk1602B;
     /*0x1602C*/ u8 unk1602C;

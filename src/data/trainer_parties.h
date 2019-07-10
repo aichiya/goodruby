@@ -4156,14 +4156,14 @@ const struct TrainerMonNoItemCustomMoves gTrainerParty_AnnaAndMeg1[] = {
     {
 	.iv = 0,
 	.level = 21,
-	.species = SPECIES_MEOWTH,
-        .moves = MOVE_SCREECH, MOVE_FAKE_OUT, MOVE_FURY_SWIPES, MOVE_BITE
+	.species = SPECIES_SWABLU,
+        .moves = MOVE_ROUND, 0, 0, 0
     },
     {
 	.iv = 0,
 	.level = 20,
 	.species = SPECIES_JIGGLYPUFF,
-        .moves = MOVE_ROLLOUT, MOVE_DISARM_VOICE, MOVE_DISABLE, MOVE_DISARM_VOICE
+        .moves = MOVE_ROUND, 0, 0, 0
     }
 };
 

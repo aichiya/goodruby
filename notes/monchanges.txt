@@ -25,6 +25,13 @@ ABILITY, STAT, AND MOVEPOOL CHANGES:
  * Sandslash gains secondary ability Iron Barbs.
  * Now learns Spikes and Spiky Shield by breeding.
 
+#174 Igglybuff, #039 Jigglypuff, #040 Wigglytuff
+ * Jigglypuff's base stats changed: 115/45/20/45/25/20 (270) -> 115/45/30/45/35/20 (290).
+ * Wigglytuff's base stats changed: 140/70/45/85/50/45 (435) -> 140/70/55/85/60/45 (455).
+ * Level-up movepool heavily adjusted.
+ * No longer learns Stockpile, Swallow, and Spit Up by level.
+ * Jigglypuff and Wigglytuff now learn Moonblast and Boomburst by level.
+
 #046 Paras, #047 Parasect
  * Parasect's base stats changed: 60/95/80/60/80/30 (405) -> 60/105/90/70/90/30 (445).
  * Level-up movepool heavily adjusted.
