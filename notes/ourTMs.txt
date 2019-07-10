@@ -24,7 +24,7 @@
 24 - Thunderbolt    *Game Corner
 25 - Thunder        *Department Store
 26 - Earthquake     *Seafloor Cavern
-27 - Return         *Pacifidlog
+27 - Return         Fallarbor Town (*Pacifidlog)
 28 - Dig            Fossil Maniac
 29 - Psychic        *Victory Road+Game Corner
 30 - Shadow Ball    *Mt. Pyre
