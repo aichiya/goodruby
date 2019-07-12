@@ -329,7 +329,7 @@ static bool8 MapHasMon(const struct WildPokemonHeader *header, u16 mon)
         return TRUE;
     if (MonListHasMon(header->waterMonsInfo, mon, 5))
         return TRUE;
-    if (MonListHasMon(header->fishingMonsInfo, mon, 12))
+    if (MonListHasMon(header->fishingMonsInfo, mon, 23))
         return TRUE;
     if (MonListHasMon(header->rockSmashMonsInfo, mon, 5))
         return TRUE;

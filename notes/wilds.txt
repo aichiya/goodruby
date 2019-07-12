@@ -33,14 +33,71 @@ Celebi
 Jirachi
 Deoxys
 
-FISH:
-Poliwag
-Slowpoke
-Shellder
-Krabby
-Dratini
-Qwilfish
-Remoraid
+
+
+BODIES OF WATER:
+Dewford Sea
+ O: Magikarp (40%), Tentacool (20%), Krabby (20%), Shellder (20%)
+ G: Tentacool (30%), Krabby (20%), Shellder (20%), Wailmer (20%), Chinchou (10%)
+ S: Kingler (40%), Wailord (40%), Lanturn (20%)
+Mauville/Pacifidlog Sea
+ O: Magikarp (40%), Tentacool (20%), Horsea (20%), Luvdisc (20%)
+ G: Tentacool (30%), Horsea (20%), Luvdisc (20%), Wailmer (20%), Clamperl (10%)
+ S: Seadra (40%), Wailord (40%), Clamperl (20%)
+Meteor Falls Area Sea
+ O: Magikarp (40%), Tentacool (20%), Remoraid (20%), Staryu (20%)
+ G: Tentacool (30%), Remoraid (20%), Staryu (20%), Wailmer (20%), Qwilfish (10%)
+ S: Octillery (40%), Wailord (40%), Qwilfish (20%)
+ 
+Petalburg Area Lakes
+ O: Magikarp (40%), Goldeen (20%), Wooper (20%), Grimer (20%)
+ G: Goldeen (30%), Wooper (20%), Grimer (20%), Psyduck (20%), Corphish (10%)
+ S: Seaking (40%), Golduck (40%), Crawdaunt (20%)
+Mauville Area Lakes
+ O: Magikarp (40%), Goldeen (20%), Poliwag (20%), Marill (20%)
+ G: Goldeen (30%), Poliwag (20%), Marill (20%), Psyduck (20%), Magikarp (10%)
+ S: Seaking (40%), Golduck (40%), Gyarados (20%)
+Fallarbor Area Lakes, Fortree Area Lakes
+ O: Magikarp (40%), Goldeen (40%), Barboach (20%)
+ G: Goldeen (30%), Poliwag (30%), Barboach (30%), Magikarp (10%)
+ S: Seaking (60%), Whiscash (20%), Gyarados (20%)
+Jungle River
+ O: Magikarp (40%), Carvanha (40%), Psyduck (20%)
+ G: Carvanha (70%), Psyduck (20%), Feebas (10%)
+ S: Carvanha (50%), Golduck (30%), Feebas (20%)
+
+Lilycove/Mossdeep Sea
+ O: Magikarp (40%), Tentacool (20%), Krabby (20%), Staryu (20%)
+ G: Tentacool (30%), Krabby (20%), Staryu (20%), Wailmer (20%), Corsola (10%)
+ S: Wailord (40%), Staryu (20%), Kingler (20%), Sharpedo (10%), Corsola (10%)
+
+Meteor Falls Interior
+ O: Magikarp (40%), Goldeen (40%), Barboach (20%)
+ G: Goldeen (30%), Poliwag (30%), Barboach (20%), Magikarp (10%), Dratini (10%)
+ S: Seaking (60%), Gyarados (20%), Dratini (10%), Dragonair (10%)
+Deep Granite Cave
+ *: Luvdisc (100%)
+Safari Zone
+ O: Feebas (80%), Magikarp (20%)
+ G: Feebas (60%), Magikarp (25%), Squirtle (5%), Totodile (5%), Mudkip (5%)
+ S: Gyarados (40%), Squirtle (20%), Totodile (20%), Mudkip (20%)
+Seafloor Cavern
+ O: Magikarp (100%)
+ G: Magikarp (60%), Omanyte (10%), Kabuto (10%), Lileep (10%), Anorith (10%)
+ G: Gyarados (20%), Omanyte (20%), Kabuto (20%), Lileep (20%), Anorith (20%)
+Sootopolis City, Route 104
+ *: A whole lotta Magikarp
+
+Fishing tables are now:
+40/20/20/10/10
+20/20/20/10/10/5/5/5/5
+20/20/20/10/10/5/5/5/5
+
+Old Rod produces Lv5-15 fish
+Good Rod produces Lv15-20 fish
+Super Rod produces Lv40 or so fish, will decide when we get there (with exceptions)
+Good Rod is obtained at Mauville now, not post-Norman
+
 
 
 ROUTE 101: Zigzagoon (30%), Wurmple (30%), Ledyba (30%), Poochyena (10%)
