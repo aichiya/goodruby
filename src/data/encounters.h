@@ -1249,18 +1249,18 @@ const struct WildPokemonInfo Route114_RockSmashMonsInfo = {20, Route114_RockSmas
 
 const struct WildPokemon Route115_LandMons [] =
 {
-    {23, 23, SPECIES_SWABLU},
-    {23, 23, SPECIES_TAILLOW},
-    {25, 25, SPECIES_SWABLU},
-    {24, 24, SPECIES_TAILLOW},
-    {25, 25, SPECIES_TAILLOW},
-    {25, 25, SPECIES_SWELLOW},
-    {24, 24, SPECIES_JIGGLYPUFF},
-    {25, 25, SPECIES_JIGGLYPUFF},
-    {24, 24, SPECIES_WINGULL},
-    {24, 24, SPECIES_WINGULL},
-    {26, 26, SPECIES_WINGULL},
-    {25, 25, SPECIES_WINGULL},
+    {24, 28, SPECIES_SWABLU},
+    {24, 28, SPECIES_WINGULL},
+    {24, 28, SPECIES_SWABLU},
+    {24, 28, SPECIES_WINGULL},
+    {24, 28, SPECIES_JIGGLYPUFF},
+    {24, 28, SPECIES_CLEFAIRY},
+    {24, 28, SPECIES_SEVIPER},
+    {24, 28, SPECIES_ZANGOOSE},
+    {24, 28, SPECIES_JIGGLYPUFF},
+    {24, 28, SPECIES_FARFETCHD},
+    {24, 28, SPECIES_JIGGLYPUFF},
+    {24, 28, SPECIES_FARFETCHD},
 };
 const struct WildPokemonInfo Route115_LandMonsInfo = {20, Route115_LandMons};
 

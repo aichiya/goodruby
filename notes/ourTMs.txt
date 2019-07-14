@@ -1,8 +1,8 @@
-01 - Focus Punch    *North of Rustboro, on ground
+01 - Focus Punch    North of Rustboro, on ground
 02 - Dragon Claw    *Meteor Falls
 03 - Psyshock       *Sootopolis Gym
 04 - Calm Mind      *Mossdeep Gym
-05 - Roar           *West of Fallarbor
+05 - Roar           West of Fallarbor
 06 - Toxic          *Fiery Path
 07 - Heal Bell      Slateport Market (*Shoal Cave)
 08 - Bulk Up        Dewford Gym
@@ -45,7 +45,7 @@
 45 - Attract        Verdanturf Contest Hall
 46 - Thief          Slateport Museum
 47 - Steel Wing     Granite Cave from Steven
-48 - Icy Wind       *Mt. Pyre
+48 - Icy Wind       Abandoned Ship (*Mt. Pyre)
 49 - Superpower     *SS Tidal
 50 - Overheat       *Lavaridge Gym
 51 - Roost

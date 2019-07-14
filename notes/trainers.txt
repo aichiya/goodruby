@@ -249,34 +249,42 @@ JODY (Strength): Ursaring@Silk Scarf Lv33 (Swords Dance, Chip Away, Feint Attack
 BERKE (OHKO): Snorlax@Scope Lens Lv33 (SelfDestruct)
 
 ROUTE 105
-DAWN:
-BEVERLY:
-AUSTIN:
-LUIS:
+DAWN: Wigglytuff Lv33
+BEVERLY: Mantine Lv32, Wailmer Lv32
+AUSTIN: Seadra Lv32, Wartortle Lv32
+LUIS: Tentacool Lv32, Azumarill Lv31, Wingull Lv32
 FOSTER: Trapinch Lv33, Linoone Lv33
 
 ROUTE 106
-DOUGLAS:
-NICOLE:
+DOUGLAS: Seadra Lv32, Golduck Lv32
+NICOLE: Mantyke Lv33, Barboach Lv32, Lombre Lv32
 
 ROUTE 107
-BETH:
-DARRIN:
-LISA&RAY:
-TONY:
-DENISE:
+DARRIN: Slowpoke Lv32, Croconaw Lv32, Drowzee Lv32
+LISA&RAY: Eevee Lv32, Vaporeon Lv33
+TONY: Ludicolo Lv33
+DENISE: Hariyama Lv33
 
 ROUTE 108
-JEROME:
-TARA:
-MATTHEW:
-MISSY:
+JEROME: Skiploom Lv33, Tentacruel Lv32
+TARA: Carvanha Lv33, Gorebyss Lv32
+MATTHEW: Linoone Lv32, Pelipper Lv32
+MISSY: Vigoroth Lv32, Marshtomp Lv32
 
 ROUTE 109
-GWEN:
-CARMEN:
-ALICE:
-DAVID:
-MEL&PAUL:
-CARTER:
+GWEN: Nidoqueen Lv33
+CARMEN: Kangaskhan Lv33
+ALICE: Magmar Lv32, Sunflora Lv32
+DAVID: Poliwhirl Lv32, Machoke Lv32
+MEL&PAUL: Nidorino Lv33, Nidorina Lv33
+CARTER: Gyarados Lv33
+
+ABANDONED SHIP
+DUNCAN: Kingler Lv34
+CHARLIE: Meowth Lv33, Aipom Lv33
+LOIS&HAL: Luvdisc Lv34, Luvdisc Lv34
+
+ROUTE 115
+TIMOTHY: Meditite Lv33, Gallade Lv33
+KOICHI: Hitmonchan Lv34, Hitmonlee Lv34
 

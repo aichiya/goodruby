@@ -347,7 +347,7 @@ NewMauville_Inside_EventScript_1B1870:: @ 81B1870
 	end
 
 AbandonedShip_Rooms_1F_EventScript_1B187D:: @ 81B187D
-	giveitem_std ITEM_HARBOR_MAIL, 1, 1
+	giveitem_std ITEM_DIVE_BALL, 1, 1
 	end
 
 AbandonedShip_Rooms_B1F_EventScript_1B188A:: @ 81B188A
@@ -355,11 +355,11 @@ AbandonedShip_Rooms_B1F_EventScript_1B188A:: @ 81B188A
 	end
 
 AbandonedShip_Rooms2_B1F_EventScript_1B1897:: @ 81B1897
-	giveitem_std ITEM_DIVE_BALL, 1, 1
+	giveitem_std ITEM_STAR_PIECE, 1, 1
 	end
 
 AbandonedShip_Room_B1F_EventScript_1B18A4:: @ 81B18A4
-	giveitem_std ITEM_TM13_ICE_BEAM, 1, 1
+	giveitem_std ITEM_TM48_ICY_WIND, 1, 1
 	end
 
 AbandonedShip_Rooms2_1F_EventScript_1B18B1:: @ 81B18B1

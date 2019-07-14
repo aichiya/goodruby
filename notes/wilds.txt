@@ -1,10 +1,6 @@
 WEIRDOS:
-Meowth
-Farfetch'd
 Lapras
 Aerodactyl
-Sunkern
-Wooper
 Murkrow
 Girafarig
 Snubbull
@@ -132,7 +128,8 @@ FALLARBOR: Togepi egg
 DESERT: Sandshrew (25%), Trapinch (25%), Cacnea (15%), Baltoy (10%), Diglett (10%), Gligar (10%), Larvitar (5%)
 ROUTE 109: Wingull, Lickitung, Exeggcute, Skiploom, Krabby, Mantyke
 
-ROUTE 115: Swellow, Wingull, Swablu, Jigglypuff, Clefairy
+ROUTE 115: Wingull (30%), Swablu (30%), Jigglypuff (15%), Clefairy (10%), Zangoose (5%), Seviper (5%), Farfetch'd (5%)
+
 NEW MAUVILLE: Voltorb, Magnemite, Elekid
 ROUTE 118: Raticate, Aipom, Wingull, Manectric, Kecleon
 ROUTE 119: Gloom, Aipom, Kecleon, Tropius, Yanma (e: Castform)
