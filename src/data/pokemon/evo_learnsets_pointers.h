@@ -125,7 +125,7 @@ const u16 *gEvoMoves[] = {
     gDummyEvoMoves, //gHorseaEvoMoves,
     gDummyEvoMoves, //gSeadraEvoMoves,
     gDummyEvoMoves, //gGoldeenEvoMoves,
-    gDummyEvoMoves, //gSeakingEvoMoves,
+    gSeakingEvoMoves,
     gDummyEvoMoves, //gStaryuEvoMoves,
     gDummyEvoMoves, //gStarmieEvoMoves,
     gDummyEvoMoves, //gMrmimeEvoMoves,

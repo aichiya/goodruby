@@ -154,6 +154,11 @@ const u16 gWeezingEvoMoves[] = {
 	0,
 };
 
+const u16 gSeakingEvoMoves[] = {
+	MOVE_CAPTIVATE,
+	0,
+};
+
 const u16 gRhydonEvoMoves[] = {
 	MOVE_HAMMER_ARM,
 	0,

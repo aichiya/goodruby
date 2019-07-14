@@ -4024,11 +4024,11 @@ const struct BaseStats gBaseStats[] =
     [SPECIES_SEAKING] =
     {
         .baseHP        = 80,
-        .baseAttack    = 92,
+        .baseAttack    = 102,
         .baseDefense   = 65,
         .baseSpeed     = 68,
         .baseSpAttack  = 65,
-        .baseSpDefense = 80,
+        .baseSpDefense = 100,
         .type1 = TYPE_WATER,
         .type2 = TYPE_WATER,
         .catchRate = 60,

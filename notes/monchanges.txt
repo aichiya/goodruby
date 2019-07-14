@@ -81,6 +81,14 @@ ABILITY, STAT, AND MOVEPOOL CHANGES:
 #114 Tangela, #465 Tangrowth
  * Entire line's Ability Leaf Guard replaced with Unnerve.
 
+#118 Goldeen, #119 Seaking
+ * Seaking's base stats changed: 80/92/65/65/80/68 (450) -> 80/102/65/65/100/68 (480).
+ * Goldeen now evolves at level 28 instead of 33.
+ * Level-up moveset slightly adjusted.
+ * Now learns Double-Edge by level.
+ * Now learns Captivate on evolution.
+ * Now learns Swords Dance and Rock Smash by TM.
+
 #133 Eevee, #134 Vapreon, #135 Jolteon, #136 Flareon, #196 Espeon, #197 Umbreon, #470 Leafeon, #471 Glaceon, #700 Sylveon
  * Leafeon's Ability Leaf Guard replaced with Sap Sipper.
  
