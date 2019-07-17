@@ -155,4 +155,5 @@ gAbilityNames:: @ 81FA248
     .string "Triage$", 13
     .string "Strong Jaw$", 13
     .string "Merciless$", 13
+    .string "Gale Wings$", 13
 

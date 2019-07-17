@@ -546,10 +546,11 @@ static const struct TextColors sSummaryScreenTextColors[] = {
     {  9,  1, 0,  2 }, // blue
     { 10,  3, 0,  4 }, // pink
     {  8,  5, 0,  6 }, // yellow
-    { 11,  7, 0,  8 }, // blue2
+    { 11,  1, 0,  2 }, // blue2
     { 14,  9, 0, 10 }, // red
     { 12, 11, 0, 12 }, // pink2
     { 13, 13, 0, 14 }, // white
+    { 15,  7, 0, 10 }, // purple
     { -1, 15, 0, 10 }, // black
 };
 
@@ -901,10 +902,10 @@ static void SummaryScreen_LoadPalettes(void)
     LoadPalette(gUnknownPalette_81E6692 + 15, 136, 2);
     LoadPalette(gUnknownPalette_81E6692 + 14, 143, 2);
     LoadPalette(gUnknownPalette_81E6692 + 15, 137, 2);
-    LoadPalette(gUnknownPalette_81E6692 + 6,  209, 4);
+    LoadPalette(gUnknownPalette_81E6692 + 6,  209, 4); // text pallete start
     LoadPalette(gUnknownPalette_81E6692 + 10, 211, 4);
     LoadPalette(gUnknownPalette_81E6692 + 14, 213, 4);
-    LoadPalette(gUnknownPalette_81E6692 + 6,  215, 4);
+    LoadPalette(gUnknownPalette_81E6692 + 16, 215, 4); // redundant blue, now purp
     LoadPalette(gUnknownPalette_81E6692 + 4,  217, 4);
     LoadPalette(gUnknownPalette_81E6692 + 8,  219, 4);
     LoadPalette(gUnknownPalette_81E6692 + 2,  221, 2);
@@ -2398,7 +2399,7 @@ static void SummaryScreen_PrintPokemonInfo(struct Pokemon *mon)
     for (i = 0; i < 5; i++)
         sub_80A1918(i, 1);
 
-    Menu_EraseWindowRect(11, 9, 28, 12);
+    Menu_EraseWindowRect(11, 9, 28, 18);
     if (GetMonData(mon, MON_DATA_IS_EGG))
     {
         buffer = gStringVar1;
@@ -2445,7 +2446,9 @@ static void SummaryScreen_PrintPokemonInfo(struct Pokemon *mon)
         buffer[0] = EXT_CTRL_CODE_BEGIN;
         buffer[1] = 0x13;
         buffer[2] = 0x4E;
-        buffer[3] = EOS;
+        buffer += 3;
+        buffer = SummaryScreen_SetTextColor(buffer, 7);
+        buffer[0] = EOS;
         Menu_PrintText(gStringVar1, 11, 4);
 
         SummaryScreen_PrintColoredIntPixelCoords(GetMonData(mon, MON_DATA_OT_ID) & 0xFFFF, 13, 5, 2, 193, 32, 1);
@@ -2455,11 +2458,17 @@ static void SummaryScreen_PrintPokemonInfo(struct Pokemon *mon)
         if (gBaseStats[species].type1 != gBaseStats[species].type2)
             SummaryScreen_DrawTypeIcon(gBaseStats[species].type2, 160, 48, 1);
 
-        ability = GetMonAbility(mon);
-        SummaryScreen_PrintColoredText(gAbilityNames[ability], 13, 11, 9);
-        Menu_PrintText(gAbilityDescriptions[ability], 11, 11);
+        PokemonSummaryScreen_PrintTrainerMemo(mon, 11, 9);
 
-        PokemonSummaryScreen_PrintTrainerMemo(mon, 11, 14);
+        ability = GetMonAbility(mon);
+        buffer = gStringVar1;
+        buffer = StringCopy(buffer, gOtherText_Ability);
+        if (GetMonData(mon, MON_DATA_HIDDEN_ABILITY))
+            buffer = SummaryScreen_CopyColoredString(buffer, gAbilityNames[ability], 15);
+        else
+            buffer = SummaryScreen_CopyColoredString(buffer, gAbilityNames[ability], 14);
+        Menu_PrintText(gStringVar1, 11, 13);
+        Menu_PrintText(gAbilityDescriptions[ability], 11, 15);
     }
 }
 
@@ -2983,17 +2992,11 @@ static void PokemonSummaryScreen_PrintTrainerMemo(struct Pokemon *mon, u8 left, 
     u8 gameMet;
     u8 *ptr = gStringVar4;
     u8 nature = GetNature(mon);
+    
+    SummaryScreen_SetTextColor(ptr, 0);
 
-#if ENGLISH
     ptr = SummaryScreen_CopyColoredString(ptr, gNatureNames[nature], 14);
-    if (nature != NATURE_BOLD && nature != NATURE_GENTLE)
-        ptr = StringCopy(ptr, gOtherText_Terminator4);
     ptr = StringCopy(ptr, gOtherText_Nature);
-#elif GERMAN
-    ptr = StringCopy(gStringVar4, gOtherText_Nature);
-    ptr = SummaryScreen_CopyColoredString(ptr, gNatureNames[nature], 14);
-    ptr = StringCopy(ptr, gOtherText_Terminator4);
-#endif
 
     if (PokemonSummaryScreen_CheckOT(mon) == TRUE)
     {

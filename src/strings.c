@@ -433,6 +433,7 @@ const u8 gOtherText_Status[] = _("STATUS");
 const u8 gOtherText_ExpPoints[] = _("EXP. POINTS");
 const u8 gOtherText_NextLv[] = _("NEXT LV.");
 const u8 gOtherText_Ribbons00[] = _("RIBBONS: 00");
+const u8 gOtherText_Ability[] = _("Ability: ");
 
 const u8 OtherText_Event[] = _("EVENT");
 const u8 OtherText_Switch[] = _("SWITCH");

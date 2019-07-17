@@ -409,6 +409,7 @@ extern const u8 gOtherText_Status[];
 extern const u8 gOtherText_ExpPoints[];
 extern const u8 gOtherText_NextLv[];
 extern const u8 gOtherText_Ribbons00[];
+extern const u8 gOtherText_Ability[];
 
 extern const u8 OtherText_Event[];
 extern const u8 OtherText_Switch[];

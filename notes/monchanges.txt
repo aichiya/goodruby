@@ -1,19 +1,27 @@
 TYPE CHANGES:
 SUNFLORA: Grass -> Grass/Fire.
-LUVDISC: Water -> Water/Fairy.
 VOLBEAT: Bug -> Bug/Electric.
 ILLUMISE: Bug -> Bug/Fairy.
+BANETTE: Ghost -> Ghost/Dark.
+LUVDISC: Water -> Water/Fairy.
 
 
 ABILITY, STAT, AND MOVEPOOL CHANGES:
 #016 Pidgey, #017 Pidgeotto, #018 Pidgeot
- * Level-up movepool slighlty adjusted.
+ * Level-up movepool adjusted.
  * Now learns Air Cutter by level.
+ * Pidgeot now learns ExtremeSpeed and Brave Bird by level.
+ * No longer learns Agility by level.
+ * Pidgeot now learns Agility by relearner.
 
 #019 Rattata, #020 Raticate
  * Raticate's base stats changed: 55/81/60/50/70/97 (413) -> 55/101/60/50/70/102 (438).
  * Entire line's Hidden Ability Hustle replaced with Strong Jaw.
  * Raticate's Ability Run Away replaced with Gluttony.
+
+#021 Spearow, #022 Fearow
+ * Gains secondary ability Sniper.
+ * Hidden Ability Sniper replaced with Gale Wings.
 
 #023 Ekans, #024 Arbok
  * Level-up movepool heavily adjusted.
@@ -202,14 +210,18 @@ ABILITY, STAT, AND MOVEPOOL CHANGES:
  * Torkoal's Hidden Ability Shell Armor is replaced with Drought.
 
 #327 Spinda
- * Spinda's base stats changed: 60/60/60/60/60/60 (360) -> 70/70/70/70/70/70 (420).
- * Spinda now learns Superpower and Overheat by TM.
- * Spinda now learns Hammer Arm by breeding.
+ * Base stats changed: 60/60/60/60/60/60 (360) -> 70/70/70/70/70/70 (420).
+ * Now learns Superpower and Overheat by TM.
+ * Now learns Hammer Arm by breeding.
 
 #336 Seviper
- * Seviper's base stats changed: 73/100/60/100/60/65 (458) -> 73/100/60/100/60/75 (468).
- * Seviper gained secondary ability Infiltrator.
- * Seviper's Hidden Ability Infiltrator is replaced with Merciless.
+ * Base stats changed: 73/100/60/100/60/65 (458) -> 73/100/60/100/60/75 (468).
+ * Gained secondary ability Infiltrator.
+ * Hidden Ability Infiltrator is replaced with Merciless.
+
+#339 Barboach, #340 Whiscash
+ * Now learns Gunk Shot by breeding.
+ * Entire line's Hidden Ability Hydration replaced with Regenerator.
 
 #345 Lileep, #346 Cradily
  * Level-up movepool heavily adjusted.
@@ -218,6 +230,9 @@ ABILITY, STAT, AND MOVEPOOL CHANGES:
 #347 Anorith, #348 Armaldo
  * Level-up movepool slightly adjusted.
  * Armaldo now learns Aqua Tail on evolution.
+
+#353 Shuppet, #354 Banette
+ * Banette's type changed: Ghost -> Ghost/Dark.
 
 #370 Luvdisc
  * Luvdisc's type changed: Water -> Water/Fairy.

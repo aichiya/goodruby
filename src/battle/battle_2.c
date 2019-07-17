@@ -6288,6 +6288,8 @@ u8 GetWhoStrikesFirst(u8 bank1, u8 bank2, bool8 ignoreMovePriorities)
 		bank1Prio += 2;
 	else if (gBattleMons[bank1].ability == ABILITY_TRIAGE && gBattleMoves[bank1Move].flags & F_HEALING)
 		bank1Prio += 6;
+    else if (gBattleMons[bank1].ability == ABILITY_GALE_WINGS && gBattleMoves[bank1Move].type == TYPE_FLYING && gBattleMons[bank1].hp == gBattleMons[bank1].maxHP)
+        bank1Prio += 2;
 
 	if (gBattleMons[bank2].ability == ABILITY_STALL)
 		bank2Prio -= 1;
@@ -6295,6 +6297,8 @@ u8 GetWhoStrikesFirst(u8 bank1, u8 bank2, bool8 ignoreMovePriorities)
 		bank2Prio += 2;
 	else if (gBattleMons[bank2].ability == ABILITY_TRIAGE && gBattleMoves[bank2Move].flags & F_HEALING)
 		bank1Prio += 6;
+    else if (gBattleMons[bank2].ability == ABILITY_GALE_WINGS && gBattleMoves[bank2Move].type == TYPE_FLYING && gBattleMons[bank2].hp == gBattleMons[bank2].maxHP)
+        bank2Prio += 2;
 
     if (bank1Prio != 0 || bank2Prio != 0)
     {

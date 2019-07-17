@@ -716,11 +716,11 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FLYING,
         .eggGroup2 = EGG_GROUP_FLYING,
         .ability1 = ABILITY_KEEN_EYE,
-        .ability2 = ABILITY_NONE,
+        .ability2 = ABILITY_SNIPER,
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_SNIPER,
+		.hiddenAbility = ABILITY_GALE_WINGS,
     },
 
     [SPECIES_FEAROW] =
@@ -750,11 +750,11 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FLYING,
         .eggGroup2 = EGG_GROUP_FLYING,
         .ability1 = ABILITY_KEEN_EYE,
-        .ability2 = ABILITY_NONE,
+        .ability2 = ABILITY_SNIPER,
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_SNIPER,
+		.hiddenAbility = ABILITY_GALE_WINGS,
     },
 
     [SPECIES_EKANS] =
@@ -10963,7 +10963,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_HYDRATION,
+		.hiddenAbility = ABILITY_REGENERATOR,
     },
 
     [SPECIES_WHISCASH] =
@@ -10997,7 +10997,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_HYDRATION,
+		.hiddenAbility = ABILITY_REGENERATOR,
     },
 
     [SPECIES_LUVDISC] =
@@ -12811,7 +12811,7 @@ const struct BaseStats gBaseStats[] =
         .baseSpAttack  = 83,
         .baseSpDefense = 63,
         .type1 = TYPE_GHOST,
-        .type2 = TYPE_GHOST,
+        .type2 = TYPE_DARK,
         .catchRate = 45,
         .expYield = 159,
         .evYield_HP        = 0,
