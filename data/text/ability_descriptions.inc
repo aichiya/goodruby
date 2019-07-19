@@ -551,6 +551,10 @@ gAbilityDescription_GaleWings:
     .string "When at full HP, Flying\n"
     .string "moves gain +1 priority.$"
 
+gAbilityDescription_FlowerGift:
+    .string "In sun, +50% to own and\n"
+    .string "ally stats except Speed.$"
+
 	.align 2
 gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_None
@@ -710,3 +714,4 @@ gAbilityDescriptions:: @ 81FA110
     .4byte gAbilityDescription_StrongJaw
     .4byte gAbilityDescription_Merciless
     .4byte gAbilityDescription_GaleWings
+    .4byte gAbilityDescription_FlowerGift

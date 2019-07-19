@@ -1509,7 +1509,7 @@ const struct BaseStats gBaseStats[] =
     {
         .baseHP        = 75,
         .baseAttack    = 80,
-        .baseDefense   = 85,
+        .baseDefense   = 95,
         .baseSpeed     = 50,
         .baseSpAttack  = 110,
         .baseSpDefense = 90,
@@ -1536,7 +1536,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_RED,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_EFFECT_SPORE,
+		.hiddenAbility = ABILITY_NO_GUARD,
     },
 
     [SPECIES_PARAS] =
@@ -2394,7 +2394,7 @@ const struct BaseStats gBaseStats[] =
         .baseHP        = 80,
         .baseAttack    = 105,
         .baseDefense   = 65,
-        .baseSpeed     = 70,
+        .baseSpeed     = 80,
         .baseSpAttack  = 100,
         .baseSpDefense = 70,
         .type1 = TYPE_GRASS,
@@ -2799,13 +2799,13 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_FARFETCHD] =
     {
-        .baseHP        = 52,
+        .baseHP        = 62,
         .baseAttack    = 90,
-        .baseDefense   = 55,
-        .baseSpeed     = 60,
-        .baseSpAttack  = 58,
-        .baseSpDefense = 62,
-        .type1 = TYPE_NORMAL,
+        .baseDefense   = 65,
+        .baseSpeed     = 70,
+        .baseSpAttack  = 68,
+        .baseSpDefense = 72,
+        .type1 = TYPE_FIGHTING,
         .type2 = TYPE_FLYING,
         .catchRate = 45,
         .expYield = 132,
@@ -6169,10 +6169,10 @@ const struct BaseStats gBaseStats[] =
         .baseAttack    = 80,
         .baseDefense   = 95,
         .baseSpeed     = 50,
-        .baseSpAttack  = 90,
+        .baseSpAttack  = 100,
         .baseSpDefense = 100,
         .type1 = TYPE_GRASS,
-        .type2 = TYPE_GRASS,
+        .type2 = TYPE_FAIRY,
         .catchRate = 45,
         .expYield = 221,
         .evYield_HP        = 0,
@@ -6194,7 +6194,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_HEALER,
+		.hiddenAbility = ABILITY_FLOWER_GIFT,
     },
 
     [SPECIES_MARILL] =

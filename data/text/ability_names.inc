@@ -156,4 +156,5 @@ gAbilityNames:: @ 81FA248
     .string "Strong Jaw$", 13
     .string "Merciless$", 13
     .string "Gale Wings$", 13
+    .string "Flower Gift$", 13
 

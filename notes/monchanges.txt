@@ -1,4 +1,6 @@
 TYPE CHANGES:
+FARFETCH'D: Normal/Flying -> Fighting/Flying.
+BELLOSSOM: Grass -> Grass/Fairy.
 SUNFLORA: Grass -> Grass/Fire.
 VOLBEAT: Bug -> Bug/Electric.
 ILLUMISE: Bug -> Bug/Fairy.
@@ -33,12 +35,23 @@ ABILITY, STAT, AND MOVEPOOL CHANGES:
  * Sandslash gains secondary ability Iron Barbs.
  * Now learns Spikes and Spiky Shield by breeding.
 
+#037 Vulpix, #038 Ninetales
+ * Ninetales now learns Recover by level.
+
 #174 Igglybuff, #039 Jigglypuff, #040 Wigglytuff
  * Jigglypuff's base stats changed: 115/45/20/45/25/20 (270) -> 115/45/30/45/35/20 (290).
  * Wigglytuff's base stats changed: 140/70/45/85/50/45 (435) -> 140/70/55/85/60/45 (455).
  * Level-up movepool heavily adjusted.
  * No longer learns Stockpile, Swallow, and Spit Up by level.
  * Jigglypuff and Wigglytuff now learn Moonblast and Boomburst by level.
+
+#043 Oddish, #044 Gloom, #045 Vileplume, #182 Bellossom
+ * Bellossom's type changed: Grass -> Grass/Fairy.
+ * Vileplume's base stats changed: 75/80/85/110/90/50 (490) -> 75/80/95/110/90/50 (500).
+ * Bellossom's base stats changed: 75/80/95/90/100/50 (490) -> 75/80/95/100/100/50 (500).
+ * Vileplume's Hidden Ability Effect Spore replaced with No Guard.
+ * Bellossom's Hidden Ability Healer replaced with Flower Gift.
+ * Bellossom now learns Moonblast by level.
 
 #046 Paras, #047 Parasect
  * Parasect's base stats changed: 60/95/80/60/80/30 (405) -> 60/105/90/70/90/30 (445).
@@ -53,8 +66,23 @@ ABILITY, STAT, AND MOVEPOOL CHANGES:
 #054 Psyduck, #055 Golduck
  * Now learns Nasty Plot and Slack Off by breeding.
 
+#060 Poliwag, #061 Poliwhirl, #062 Poliwrath, #186 Politoed
+ * Poliwhirl, Poliwrath, and Politoed now learn Drain Punch by TM.
+
+#069 Bellsprout, #070 Weepinbell, #071 Victreebel
+ * Victreebel's base stats changed: 80/105/65/100/70/70 (490) -> 80/105/65/100/70/80 (500).
+
+#072 Tentacool, #073 Tentacruel
+ * Now learns Power Whip by breeding.
+
 #077 Ponyta, #078 Rapidash
  * Rapidash's base stats changed: 65/100/70/80/80/105 (500) -> 65/100/70/80/80/115 (510).
+
+#083 Farfetch'd
+ * Farfetch'd's type changed: Normal/Flying -> Fighting/Flying.
+ * Farfetch'd base stats changed: 52/90/55/58/62/60 (377) -> 62/90/65/68/72/70 (427).
+ * Level-up movepool adjusted.
+ * Now learns Karate Chop, Sacred Sword, and Close Combat by level.
 
 #086 Seel, #087 Dewgong
  * Seel's base stats changed: 65/45/55/45/70/45 (325) -> 65/45/55/45/70/45 (335).
@@ -72,6 +100,9 @@ ABILITY, STAT, AND MOVEPOOL CHANGES:
  * Entire line's Ability Stench replaced with Poison Touch.
  * Grimer's Hidden Ability Poison Touch replaced with Stench.
  * Muk's Hidden Ability Poison Touch replaced with Adaptability.
+
+#095 Onix, #208 Steelix
+ * Now learns Coil by level.
 
 #098 Krabby, #099 Kingler
  * Level-up movepool heavily adjusted.
@@ -131,6 +162,15 @@ ABILITY, STAT, AND MOVEPOOL CHANGES:
  * Entire line's Ability Swarm replaced with Magic Guard.
  * Level-up movepool slightly adjusted.
  * Now learns Air Cutter and U-Turn by level.
+
+#167 Spinarak, #168 Ariados
+ * Level-up movepool adjusted.
+ * Now learns Poison Fang, Bug Bite, and Leech Life by level.
+ * No longer learns Constrict or Fury Swipes by level.
+
+#438 Bonsly, #185 Sudowoodo
+ * Now learns Recover by breeding.
+ // It is painfully tempting to give this thing Synthesis instead.
 
 #187 Hoppip, #188 Skiploom, #189 Jumpluff
  * Entire line's Ability Leaf Guard replaced with Unburden.
@@ -287,8 +327,17 @@ ILLUMISE: Fluctuating -> Fast
 MOVE CHANGES:
 Crabhammer: Gains 10% chance to lower Defense [todo]
 
+ABILITY CHANGES:
+Flower Gift: Raises Attack, Defense, Special Attack, and Special Defense by 50% (instead of just Attack and Special Defense).
+ * In addition, the ability has no special interaction with Role Play, Entrainment, Trace, etc.
 
 
+
+
+==============
+ANNOYING MONS:
+primeape
+hypno
 
 everything below this point is speculative (and dated!):
 ===============================

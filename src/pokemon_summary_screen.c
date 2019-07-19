@@ -2563,8 +2563,9 @@ static void sub_80A00F4(u8 a)
     {
         if (pssData.page == PSS_PAGE_BATTLE_MOVES)
         {
-            SummaryScreen_PrintColoredText(gOtherText_Power2, 13, 1, 15);
-            SummaryScreen_PrintColoredText(gOtherText_Accuracy2, 13, 1, 17);
+            SummaryScreen_PrintColoredText(gOtherText_PowerShort, 13, 1, 15);
+            SummaryScreen_PrintColoredText(gOtherText_AccShort, 13, 4, 15);
+            SummaryScreen_PrintColoredText(gOtherText_ClassShort, 13, 7, 15);
         }
         else
         {
@@ -2723,30 +2724,44 @@ static void sub_80A04CC(u16 move)
 
     if (move != 0xFFFF)
     {
-        if (gBattleMoves[move].power <= 1)
+        Menu_EraseWindowRect(1, 17, 9, 19);
+        if (gBattleMoves[move].power <= 2)
         {
-            buffer = gStringVar1;
-            buffer = AlignStringInMenuWindow(buffer, gOtherText_ThreeDashes2, 21, 1);
-            Menu_PrintText(gStringVar1, 7, 15);
+            //buffer = gStringVar1;
+            //buffer = AlignStringInMenuWindow(buffer, gOtherText_ThreeDashes2, 8, 1);
+            Menu_PrintText(gOtherText_ThreeDashes2, 1, 17);
         }
         else
         {
             buffer = gStringVar1;
-            buffer = AlignInt1InMenuWindow(buffer, gBattleMoves[move].power, 21, 1);
-            Menu_PrintText(gStringVar1, 7, 15);
+            ConvertIntToDecimalString(buffer, gBattleMoves[move].power);
+            Menu_PrintText(gStringVar1, 1, 17);
         }
 
         if (gBattleMoves[move].accuracy == 0)
         {
-            buffer = gStringVar1;
-            buffer = AlignStringInMenuWindow(buffer, gOtherText_ThreeDashes2, 21, 1);
-            Menu_PrintText(gStringVar1, 7, 17);
+            //buffer = gStringVar1;
+            //buffer = AlignStringInMenuWindow(buffer, gOtherText_ThreeDashes2, 15, 1);
+            Menu_PrintText(gOtherText_ThreeDashes2, 4, 17);
         }
         else
         {
             buffer = gStringVar1;
-            buffer = AlignInt1InMenuWindow(buffer, gBattleMoves[move].accuracy, 21, 1);
-            Menu_PrintText(gStringVar1, 7, 17);
+            ConvertIntToDecimalString(buffer, gBattleMoves[move].accuracy);
+            Menu_PrintText(gStringVar1, 4, 17);
+        }
+        
+        if (gBattleMoves[move].moveClass == 0)
+        {
+            Menu_PrintText(gOtherText_PhysicalShort, 7, 17);
+        }
+        else if (gBattleMoves[move].moveClass == 1)
+        {
+            Menu_PrintText(gOtherText_SpecialShort, 7, 17);
+        }
+        else
+        {
+            Menu_PrintText(gOtherText_ThreeDashes2, 7, 17);
         }
     }
 }

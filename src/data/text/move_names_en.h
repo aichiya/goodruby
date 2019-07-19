@@ -529,4 +529,5 @@ const u8 gMoveNames[][13] = {
     [MOVE_TEARFUL_LOOK] = _("Tearful Look"),
     [MOVE_TOXIC_THREAD] = _("Toxic Thread"),
     [MOVE_ROUND] = _("Round"),
+    [MOVE_SACRED_SWORD] = _("Sacred Sword"),
 };

@@ -545,7 +545,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
 	if (defenderAbility == ABILITY_UNAWARE)
 		attackMod = 6;
 	
-	if (move == MOVE_CHIP_AWAY || attacker->ability == ABILITY_UNAWARE)
+	if (move == MOVE_CHIP_AWAY || move == MOVE_SACRED_SWORD || attacker->ability == ABILITY_UNAWARE)
 		defenseMod = 6;
 
     if (gCritMultiplier == 2)
@@ -610,6 +610,20 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
 			
 			if (attacker->ability == ABILITY_SOLAR_POWER && moveClass == 1)
 				damage = (15 * damage) / 10;
+
+            // Flower Gift
+            for (i = 0; i < gBattlersCount; i++)
+            {
+                if (gBattleMons[i].ability == ABILITY_FLOWER_GIFT && GetBattlerSide(i) == GetBattlerSide(bankAtk))
+                {
+                    damage = (15 * damage) / 10;
+                }
+                if (gBattleMons[i].ability == ABILITY_FLOWER_GIFT && GetBattlerSide(i) == GetBattlerSide(bankDef) && attacker->ability != ABILITY_MOLD_BREAKER)
+                {
+                    damage = (10 * damage) / 15;
+                }
+            }
+
         }
 		
 		// sand force
