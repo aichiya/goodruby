@@ -351,6 +351,4 @@ gSpecials::
 	def_special ScriptRandom
 	def_special sub_80835D8
     def_special PopulateSecretBases
-.ifdef GERMAN
-	def_special nullsub_814B200
-.endif
+    def_special MarkRoamerSeen

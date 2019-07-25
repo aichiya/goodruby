@@ -224,9 +224,9 @@ bool8 DrawAreaGlow(void)
 static void FindMapsWithMon(u16 mon)
 {
     u16 i;
-    struct Roamer *roamer;
+    struct Roamer *roamer = &gSaveBlock1.roamer;
 
-    if (mon != ROAMER_SPECIES)
+    if (mon != roamer->species)
     {
         gPokedexAreaScreenPtr->numOverworldAreas = 0;
         gPokedexAreaScreenPtr->numSpecialAreas = 0;
@@ -271,7 +271,6 @@ static void FindMapsWithMon(u16 mon)
     else
     {
         gPokedexAreaScreenPtr->numSpecialAreas = 0;
-        roamer = &gSaveBlock1.roamer;
         if (roamer->active)
         {
             GetRoamerLocation(&gPokedexAreaScreenPtr->overworldAreasWithMons[0].mapGroup, &gPokedexAreaScreenPtr->overworldAreasWithMons[0].mapNum);

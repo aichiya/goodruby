@@ -1416,6 +1416,23 @@ const struct WildPokemon Route130_LandMons [] =
 };
 const struct WildPokemonInfo Route130_LandMonsInfo = {20, Route130_LandMons};
 
+const struct WildPokemon Route135_LandMons [] =
+{
+    {24, 28, SPECIES_RATICATE},
+    {24, 28, SPECIES_ODDISH},
+    {24, 28, SPECIES_PLUSLE},
+    {24, 28, SPECIES_MINUN},
+    {24, 28, SPECIES_VOLBEAT},
+    {24, 28, SPECIES_ILLUMISE},
+    {24, 28, SPECIES_DROWZEE},
+    {24, 28, SPECIES_MR_MIME},
+    {24, 28, SPECIES_ROSELIA},
+    {24, 28, SPECIES_PINSIR},
+    {24, 28, SPECIES_ROSELIA},
+    {24, 28, SPECIES_PINSIR},
+};
+const struct WildPokemonInfo Route135_LandMonsInfo = {20, Route135_LandMons};
+
 const struct WildPokemon SafariZone_Northwest_LandMons [] =
 {
     {27, 27, SPECIES_RHYHORN},
@@ -2294,6 +2311,14 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .waterMonsInfo = NULL, //&Route134_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &PacifidlogSeaRegion_FishingMonsInfo,
+    },
+    {
+        .mapGroup = MAP_GROUP(ROUTE135),
+        .mapNum = MAP_NUM(ROUTE135),
+        .landMonsInfo = &Route135_LandMonsInfo,
+        .waterMonsInfo = NULL, //&Route134_WaterMonsInfo,
+        .rockSmashMonsInfo = NULL,
+        .fishingMonsInfo = &MauvilleLakeRegion_FishingMonsInfo,
     },
     {
         .mapGroup = MAP_GROUP(SAFARI_ZONE_NORTHWEST),

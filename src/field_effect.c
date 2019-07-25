@@ -546,7 +546,7 @@ u8 CreateMonSprite_PicBox(u16 species, s16 x, s16 y, u8 subpriority)
     DecompressPicFromTable_2(&gMonFrontPicTable[species], gMonFrontPicCoords[species].coords, gMonFrontPicCoords[species].y_offset, gUnknown_081FAF4C[3], gUnknown_081FAF4C[3], species);
     LoadCompressedObjectPalette(&gMonPaletteTable[species]);
     GetMonSpriteTemplate_803C56C(species, 3);
-    gUnknown_02024E8C.paletteTag = gMonPaletteTable[0].tag;
+    gUnknown_02024E8C.paletteTag = gMonPaletteTable[species].tag;
     PreservePaletteInWeather(IndexOfSpritePaletteTag(gMonPaletteTable[0].tag) + 0x10);
     return CreateSprite(&gUnknown_02024E8C, x, y, subpriority);
 }

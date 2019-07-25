@@ -81,7 +81,32 @@ Route118_EventScript_151004:: @ 8151004
 	waitmovement 0
 	delay 30
 	msgbox Route118_Text_170D66, 4
-	closemessage
+    multichoice 27, 8, 82, 1
+    switch RESULT
+	case 0, Route118_EventScript_StevenRed
+	case 1, Route118_EventScript_StevenBlue
+
+Route118_EventScript_StevenRed:
+    setflag FLAG_ROAMER_IS_LATIAS
+	special InitRoamer
+	msgbox Route118_Text_StevenLook, 4
+    drawmonpic SPECIES_LATIAS, 10, 2
+    msgbox Route118_Text_StevenThisIsLatias, 4
+    erasemonpic
+    goto Route118_EventScript_StevenMerge
+
+Route118_EventScript_StevenBlue:
+	special InitRoamer
+	msgbox Route118_Text_StevenLook, 4
+    drawmonpic SPECIES_LATIOS, 10, 2
+    msgbox Route118_Text_StevenThisIsLatios, 4
+    erasemonpic
+    goto Route118_EventScript_StevenMerge
+
+Route118_EventScript_StevenMerge:
+    msgbox Route118_Text_StevenBye, 4
+    closemessage
+    special MarkRoamerSeen
 	compare VAR_SPECIAL_8, 0
 	call_if_eq Route118_EventScript_151048
 	compare VAR_SPECIAL_8, 1

@@ -1,19 +1,37 @@
 Route118_Text_170D66:: @ 8170D66
 	.string "STEVEN: Hi!\p"
-	.string "You're that TRAINER I met in DEWFORD!\p"
+	.string "You're that Trainer I met in Dewford!\p"
 	.string "... ... ... ... ... ... ... ...\n"
 	.string "... ... ... ... ... ... ... ...\p"
 	.string "Oh, okay, you're {PLAYER}{KUN}.\n"
 	.string "I'll remember it.\p"
 	.string "{PLAYER}{KUN}.\p"
 	.string "In this vast world, there are many\n"
-	.string "kinds of POKéMON.\l"
+	.string "kinds of Pokémon.\l"
 	.string "They come in many types.\p"
 	.string "Do you raise different types?\n"
-	.string "Or do you raise only POKéMON of a\l"
+	.string "Or do you raise only Pokémon of a\l"
 	.string "certain type?\p"
-	.string "What do you think as a TRAINER?\p"
+	.string "What do you think as a Trainer?\p"
 	.string "Sorry, it's not my place to ask, is it?\p"
+    .string "Well, I do have an important question\n"
+    .string "for you, though it may seem strange.\p"
+    .string "Would you rather train a red or\n"
+    .string "a blue Pokémon?$"
+
+Route118_Text_StevenLook::
+    .string "Ah, interesting.\n"
+    .string "Here, look at this sketch...$"
+
+Route118_Text_StevenThisIsLatias::
+    .string "This is Latias. It's been seen\n"
+    .string "flying around the Hoenn region.$"
+
+Route118_Text_StevenThisIsLatios::
+    .string "This is Latios. It's been seen\n"
+    .string "flying around the Hoenn region.$"
+
+Route118_Text_StevenBye::
 	.string "Well, anyway, I hope to see you\n"
 	.string "again.$"
 

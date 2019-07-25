@@ -1937,7 +1937,7 @@ static void atk01_accuracycheck(void)
 		evaMod = gBattleMons[gBankTarget].statStages[STAT_STAGE_EVASION];
 		
 		// Chip Away and attacker Unaware ignore all evasion changes.
-		if (gCurrentMove == MOVE_CHIP_AWAY || gBattleMons[gBankAttacker].ability == ABILITY_UNAWARE)
+		if (gCurrentMove == MOVE_CHIP_AWAY || gCurrentMove == MOVE_SACRED_SWORD || gBattleMons[gBankAttacker].ability == ABILITY_UNAWARE)
 			evaMod = 6;
 		
 		// Foresight, Miracle Eye, and Keen Eye ignore positive evasion changes.

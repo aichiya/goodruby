@@ -950,6 +950,9 @@ const u8 OtherText_DomeFossil[] = _("Dome Fossil");
 const u8 OtherText_HelixFossil[] = _("Helix Fossil");
 const u8 OtherText_NoFossil[] = _("No Fossil");
 
+const u8 OtherText_Red[] = _("Red");
+const u8 OtherText_Blue[] = _("Blue");
+
 const u8 gOtherText_GetsAPokeBlock[] = _(" gets a {POKEBLOCK}?");
 
 const u8 OtherText_Coolness[] = _("Coolness ");

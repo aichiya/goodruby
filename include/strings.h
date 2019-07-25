@@ -926,6 +926,9 @@ extern const u8 OtherText_DomeFossil[];
 extern const u8 OtherText_HelixFossil[];
 extern const u8 OtherText_NoFossil[];
 
+extern const u8 OtherText_Red[];
+extern const u8 OtherText_Blue[];
+
 extern const u8 gOtherText_GetsAPokeBlock[];
 
 extern const u8 OtherText_Coolness[];

@@ -1,6 +1,8 @@
 #include "global.h"
 #include "debug.h"
+#include "event_data.h"
 #include "roamer.h"
+#include "pokedex.h"
 #include "pokemon.h"
 #include "random.h"
 #include "region_map.h"
@@ -61,10 +63,11 @@ void ClearRoamerLocationData(void)
 
 void CreateInitialRoamerMon(void)
 {
+    u16 species = FlagGet(FLAG_ROAMER_IS_LATIAS) ? SPECIES_LATIAS : SPECIES_LATIOS;
     struct Roamer *roamer;
-    CreateMon(&gEnemyParty[0], ROAMER_SPECIES, 40, 0x20, 0, 0, 0, 0);
+    CreateMon(&gEnemyParty[0], species, 40, 0x20, 0, 0, 0, 0);
     roamer = &gSaveBlock1.roamer;
-    roamer->species = ROAMER_SPECIES;
+    roamer->species = species;
     roamer->level = 40;
     roamer->status = 0;
     roamer->active = TRUE;
@@ -219,6 +222,14 @@ void GetRoamerLocation(u8 *mapGroup, u8 *mapNum)
 {
     *mapGroup = sRoamerLocation[MAP_GRP];
     *mapNum = sRoamerLocation[MAP_NUM];
+}
+
+void MarkRoamerSeen(void)
+{
+    if (FlagGet(FLAG_ROAMER_IS_LATIAS))
+        GetSetPokedexFlag(NATIONAL_DEX_LATIAS, FLAG_SET_SEEN);
+    else
+        GetSetPokedexFlag(NATIONAL_DEX_LATIOS, FLAG_SET_SEEN);
 }
 
 #if DEBUG
