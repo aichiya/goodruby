@@ -2,6 +2,7 @@ TYPE CHANGES:
 FARFETCH'D: Normal/Flying -> Fighting/Flying.
 BELLOSSOM: Grass -> Grass/Fairy.
 SUNFLORA: Grass -> Grass/Fire.
+MASQUERAIN: Bug/Flying -> Bug/Water.
 VOLBEAT: Bug -> Bug/Electric.
 ILLUMISE: Bug -> Bug/Fairy.
 BANETTE: Ghost -> Ghost/Dark.
@@ -85,7 +86,7 @@ ABILITY, STAT, AND MOVEPOOL CHANGES:
  * Now learns Karate Chop, Sacred Sword, and Close Combat by level.
 
 #086 Seel, #087 Dewgong
- * Seel's base stats changed: 65/45/55/45/70/45 (325) -> 65/45/55/45/70/45 (335).
+ * Seel's base stats changed: 65/45/55/45/70/45 (325) -> 65/45/55/45/70/55 (335).
  * Dewgong's base stats changed: 90/70/80/70/95/70 (475) -> 90/70/80/70/95/90 (495).
  * Level-up movepool heavily adjusted.
  * Now learns Megahorn and Body Slam by level.
@@ -114,8 +115,8 @@ ABILITY, STAT, AND MOVEPOOL CHANGES:
  * No longer learns Gyro Ball by level.
  * Now learns Overheat by TM.
 
-#107 Hitmonchan
- * Now learns Drain Punch by relearner.
+#236 Tyrogue, #106 Hitmonlee, #107 Hitmonchan, #237 Hitmontop
+ * Hitmonchan learns Drain Punch by relearner.
 
 #114 Tangela, #465 Tangrowth
  * Entire line's Ability Leaf Guard replaced with Unnerve.
@@ -127,6 +128,9 @@ ABILITY, STAT, AND MOVEPOOL CHANGES:
  * Now learns Double-Edge by level.
  * Now learns Captivate on evolution.
  * Now learns Swords Dance and Rock Smash by TM.
+
+#238 Smoochum, #124 Jynx
+ * Jynx's base stats changed: 65/50/35/115/95/95 (455) -> 65/50/35/125/95/95 (465).
 
 #133 Eevee, #134 Vapreon, #135 Jolteon, #136 Flareon, #196 Espeon, #197 Umbreon, #470 Leafeon, #471 Glaceon, #700 Sylveon
  * Leafeon's Ability Leaf Guard replaced with Sap Sipper.
@@ -194,6 +198,29 @@ ABILITY, STAT, AND MOVEPOOL CHANGES:
  * Sneasel's Hidden Ability Pickpocket replaced with Early Bird.
  * Weavile's Hidden Ability Pickpocket replaced with Pressure.
 
+#218 Slugma, #219 Magcargo
+ * Slugma now evolves at level 30 instead of 38.
+ * Slugma's base stats changed: 40/40/40/70/40/20 (250) -> 45/45/45/75/45/20 (275).
+ * Magcargo's base stats changed: 60/50/120/90/80/30 (430) -> 70/60/140/100/80/30 (480).
+ * Level-up movepool adjusted.
+ * Now learns Eruption and Burn Up by level.
+ * No longer learns Flamethrower by level.
+ * Magcargo no longer learns Shell Smash by evolution.
+ * Magcargo now learns Shell Smash by level.
+
+#222 Corsola
+ * Corsola's base stats changed: 65/55/95/65/95/35 (410) -> 75/55/105/95/125/35 (490).
+
+#223 Remoraid, #224 Octillery
+ * Octillery's Hidden Ability Moody replaced with Protean.
+ * Now learns Zap Cannon by breeding.
+
+#225 Delibird
+ * Delibird's base stats changed: 45/55/45/65/45/75 (330) -> 45/85/45/105/45/105 (430).
+
+#261 Poochyena, #262 Mightyena
+ * Now learns Close Combat by breeding.
+
 #263 Zigzagoon, #264 Linoone
  * Linoone's base stats changed: 78/70/61/50/61/100 (420) -> 78/70/66/50/66/110 (440).
 
@@ -210,6 +237,7 @@ ABILITY, STAT, AND MOVEPOOL CHANGES:
  * Shiftry's Hidden Ability Pickpocket replaced with Prankster.
  * Shiftry now learns Tailwind by relearner.
  * Nuzleaf and Shiftry now learn Taunt by TM.
+ * Shiftry now learns Heat Wave by TM.
 
 #278 Wingull, #279 Pelipper
  * Wingull's Ability Hydration replaced with Rain Dish.
@@ -217,10 +245,27 @@ ABILITY, STAT, AND MOVEPOOL CHANGES:
  * Wingull's Hidden Ability Rain Dish replaced with Hydration.
  * Pelipper's Hidden Ability Rain Dish replaced with Drizzle.
 
+#283 Surskit, #284 Masquerain
+ * Masquerain's type changed: Bug/Flying -> Bug/Water.
+ * Level-up movepool slightly adjusted.
+ * Masquerain no longer learns Whirlwind, Scary Face, or Silver Wind by level.
+ * Masquerain now learns Scary Face and Silver Wind on evolution.
+ * Masquerain now learns Whirlwind by relearner.
+ * Masquerain now learns Hydro Pump by level.
+
+#287 Slakoth, #288 Vigoroth, #289 Slaking
+ * Slaking now learns U-Turn by TM.
+
+#299 Nosepass, #476 Probopass
+ * Probopass's Hidden Ability Sand Force replaced with Levitate.
+
 #300 Skitty, #301 Delcatty
  * Entire line's Ability Normalize replaced with Wonder Skin.
  * Skitty's Hidden Ability Wonder Skin replaced with Oblivious.
  * Delcatty's Hidden Ability Wonder Skin replaced with Fur Coat.
+
+#303 Mawile
+ * Mawile's base stats changed: 50/85/85/55/55/50 (380) -> 50/95/105/55/75/55 (430).
 
 #313 Volbeat, #314 Illumise
  * Volbeat's type changed: Bug -> Bug/Electric.
@@ -254,6 +299,9 @@ ABILITY, STAT, AND MOVEPOOL CHANGES:
  * Now learns Superpower and Overheat by TM.
  * Now learns Hammer Arm by breeding.
 
+#333 Swablu, #334 Altaria
+ * Altaria's base stats changed: 75/70/90/70/105/80 (490) -> 75/70/90/70/125/80 (510).
+
 #336 Seviper
  * Base stats changed: 73/100/60/100/60/65 (458) -> 73/100/60/100/60/75 (468).
  * Gained secondary ability Infiltrator.
@@ -262,6 +310,9 @@ ABILITY, STAT, AND MOVEPOOL CHANGES:
 #339 Barboach, #340 Whiscash
  * Now learns Gunk Shot by breeding.
  * Entire line's Hidden Ability Hydration replaced with Regenerator.
+
+#343 Baltoy, #344 Claydol
+ * Claydol's base stats changed: 60/70/105/70/120/75 (500) -> 70/70/110/70/125/75 (520).
 
 #345 Lileep, #346 Cradily
  * Level-up movepool heavily adjusted.
@@ -273,6 +324,9 @@ ABILITY, STAT, AND MOVEPOOL CHANGES:
 
 #353 Shuppet, #354 Banette
  * Banette's type changed: Ghost -> Ghost/Dark.
+
+#363 Spheal, #364 Sealeo, #365 Walrein
+ * Walrein's Hidden Ability Oblivious replaced with Intimidate.
 
 #370 Luvdisc
  * Luvdisc's type changed: Water -> Water/Fairy.
@@ -338,6 +392,7 @@ Flower Gift: Raises Attack, Defense, Special Attack, and Special Defense by 50% 
 ANNOYING MONS:
 primeape
 hypno
+wailord (stamina)
 
 everything below this point is speculative (and dated!):
 ===============================

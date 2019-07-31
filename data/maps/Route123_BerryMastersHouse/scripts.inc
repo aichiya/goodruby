@@ -20,9 +20,8 @@ Route123_BerryMastersHouse_EventScript_1639E9:: @ 81639E9
 	goto_if_eq Route123_BerryMastersHouse_EventScript_1A029B
 	setflag FLAG_DAILY_RECEIVED_BERRY_FROM_BERRYMASTER
 	msgbox Route123_BerryMastersHouse_Text_1C5C66, 4
-	random 10
-	addvar RESULT, 20
-	addvar RESULT, 133
+	random 18
+	addvar RESULT, ITEM_OCCA_BERRY
 	giveitem_std RESULT
 	compare RESULT, 0
 	goto_if_eq Route123_BerryMastersHouse_EventScript_1A029B
@@ -59,77 +58,196 @@ Route123_BerryMastersHouse_EventScript_163A9B:: @ 8163A9B
 
 Route123_BerryMastersHouse_EventScript_163AAD:: @ 8163AAD
 	compare VAR_SPECIAL_4, 0
-	goto_if_eq Route123_BerryMastersHouse_EventScript_163AF0
+	goto_if_eq Route123_BerryMastersHouse_EventScript_GiveNormalBerry
 	compare VAR_SPECIAL_4, 1
-	goto_if_eq Route123_BerryMastersHouse_EventScript_163B1E
+	goto_if_eq Route123_BerryMastersHouse_EventScript_GiveFightingBerry
 	compare VAR_SPECIAL_4, 2
-	goto_if_eq Route123_BerryMastersHouse_EventScript_163B4F
+	goto_if_eq Route123_BerryMastersHouse_EventScript_GiveFlyingBerry
 	compare VAR_SPECIAL_4, 3
-	goto_if_eq Route123_BerryMastersHouse_EventScript_163B80
+	goto_if_eq Route123_BerryMastersHouse_EventScript_GivePoisonBerry
 	compare VAR_SPECIAL_4, 4
-	goto_if_eq Route123_BerryMastersHouse_EventScript_163BB1
+	goto_if_eq Route123_BerryMastersHouse_EventScript_GiveGroundBerry
 	compare VAR_SPECIAL_4, 5
-	goto_if_eq Route123_BerryMastersHouse_EventScript_163BE2
+	goto_if_eq Route123_BerryMastersHouse_EventScript_GiveRockBerry
+	compare VAR_SPECIAL_4, 6
+	goto_if_eq Route123_BerryMastersHouse_EventScript_GiveBugBerry
+	compare VAR_SPECIAL_4, 7
+	goto_if_eq Route123_BerryMastersHouse_EventScript_GiveGhostBerry
+	compare VAR_SPECIAL_4, 8
+	goto_if_eq Route123_BerryMastersHouse_EventScript_GiveSteelBerry
+	compare VAR_SPECIAL_4, 9
+	goto_if_eq Route123_BerryMastersHouse_EventScript_GiveFairyBerry
+	compare VAR_SPECIAL_4, 10
+	goto_if_eq Route123_BerryMastersHouse_EventScript_GiveFireBerry
+	compare VAR_SPECIAL_4, 11
+	goto_if_eq Route123_BerryMastersHouse_EventScript_GiveWaterBerry
+	compare VAR_SPECIAL_4, 12
+	goto_if_eq Route123_BerryMastersHouse_EventScript_GiveGrassBerry
+	compare VAR_SPECIAL_4, 13
+	goto_if_eq Route123_BerryMastersHouse_EventScript_GiveElectricBerry
+	compare VAR_SPECIAL_4, 14
+	goto_if_eq Route123_BerryMastersHouse_EventScript_GivePsychicBerry
+	compare VAR_SPECIAL_4, 15
+	goto_if_eq Route123_BerryMastersHouse_EventScript_GiveIceBerry
+	compare VAR_SPECIAL_4, 16
+	goto_if_eq Route123_BerryMastersHouse_EventScript_GiveDragonBerry
+	compare VAR_SPECIAL_4, 17
+	goto_if_eq Route123_BerryMastersHouse_EventScript_GiveDarkBerry
+    compare VAR_SPECIAL_4, 18
+	goto_if_eq Route123_BerryMastersHouse_EventScript_GiveRandomBerry
 	end
 
-Route123_BerryMastersHouse_EventScript_163AF0:: @ 8163AF0
+Route123_BerryMastersHouse_EventScript_GiveNormalBerry::
+	msgbox Route123_BerryMastersHouse_Text_1C5DC1, 4
+	giveitem_std ITEM_CHILAN_BERRY
+	compare RESULT, 0
+	goto_if_eq Route123_BerryMastersHouse_EventScript_1A029B
+	goto Route123_BerryMastersHouse_EventScript_163C1D
+	end
+
+Route123_BerryMastersHouse_EventScript_GiveFightingBerry::
+	msgbox Route123_BerryMastersHouse_Text_1C5DC1, 4
+	giveitem_std ITEM_CHOPLE_BERRY
+	compare RESULT, 0
+	goto_if_eq Route123_BerryMastersHouse_EventScript_1A029B
+	goto Route123_BerryMastersHouse_EventScript_163C1D
+	end
+
+Route123_BerryMastersHouse_EventScript_GiveFlyingBerry::
+	msgbox Route123_BerryMastersHouse_Text_1C5DC1, 4
+	giveitem_std ITEM_COBA_BERRY
+	compare RESULT, 0
+	goto_if_eq Route123_BerryMastersHouse_EventScript_1A029B
+	goto Route123_BerryMastersHouse_EventScript_163C1D
+	end
+
+Route123_BerryMastersHouse_EventScript_GivePoisonBerry::
+	msgbox Route123_BerryMastersHouse_Text_1C5DC1, 4
+	giveitem_std ITEM_KEBIA_BERRY
+	compare RESULT, 0
+	goto_if_eq Route123_BerryMastersHouse_EventScript_1A029B
+	goto Route123_BerryMastersHouse_EventScript_163C1D
+	end
+
+Route123_BerryMastersHouse_EventScript_GiveGroundBerry::
+	msgbox Route123_BerryMastersHouse_Text_1C5DC1, 4
+	giveitem_std ITEM_SHUCA_BERRY
+	compare RESULT, 0
+	goto_if_eq Route123_BerryMastersHouse_EventScript_1A029B
+	goto Route123_BerryMastersHouse_EventScript_163C1D
+	end
+
+Route123_BerryMastersHouse_EventScript_GiveRockBerry::
+	msgbox Route123_BerryMastersHouse_Text_1C5DC1, 4
+	giveitem_std ITEM_CHARTI_BERRY
+	compare RESULT, 0
+	goto_if_eq Route123_BerryMastersHouse_EventScript_1A029B
+	goto Route123_BerryMastersHouse_EventScript_163C1D
+	end
+
+Route123_BerryMastersHouse_EventScript_GiveBugBerry::
+	msgbox Route123_BerryMastersHouse_Text_1C5DC1, 4
+	giveitem_std ITEM_TANGA_BERRY
+	compare RESULT, 0
+	goto_if_eq Route123_BerryMastersHouse_EventScript_1A029B
+	goto Route123_BerryMastersHouse_EventScript_163C1D
+	end
+
+Route123_BerryMastersHouse_EventScript_GiveGhostBerry::
+	msgbox Route123_BerryMastersHouse_Text_1C5DC1, 4
+	giveitem_std ITEM_KASIB_BERRY
+	compare RESULT, 0
+	goto_if_eq Route123_BerryMastersHouse_EventScript_1A029B
+	goto Route123_BerryMastersHouse_EventScript_163C1D
+	end
+
+Route123_BerryMastersHouse_EventScript_GiveSteelBerry::
+	msgbox Route123_BerryMastersHouse_Text_1C5DC1, 4
+	giveitem_std ITEM_BABIRI_BERRY
+	compare RESULT, 0
+	goto_if_eq Route123_BerryMastersHouse_EventScript_1A029B
+	goto Route123_BerryMastersHouse_EventScript_163C1D
+	end
+
+Route123_BerryMastersHouse_EventScript_GiveFairyBerry::
+	msgbox Route123_BerryMastersHouse_Text_1C5DC1, 4
+	giveitem_std ITEM_ROSELI_BERRY
+	compare RESULT, 0
+	goto_if_eq Route123_BerryMastersHouse_EventScript_1A029B
+	goto Route123_BerryMastersHouse_EventScript_163C1D
+	end
+
+Route123_BerryMastersHouse_EventScript_GiveFireBerry::
+	msgbox Route123_BerryMastersHouse_Text_1C5DC1, 4
+	giveitem_std ITEM_OCCA_BERRY
+	compare RESULT, 0
+	goto_if_eq Route123_BerryMastersHouse_EventScript_1A029B
+	goto Route123_BerryMastersHouse_EventScript_163C1D
+	end
+
+Route123_BerryMastersHouse_EventScript_GiveWaterBerry::
+	msgbox Route123_BerryMastersHouse_Text_1C5DC1, 4
+	giveitem_std ITEM_PASSHO_BERRY
+	compare RESULT, 0
+	goto_if_eq Route123_BerryMastersHouse_EventScript_1A029B
+	goto Route123_BerryMastersHouse_EventScript_163C1D
+	end
+
+Route123_BerryMastersHouse_EventScript_GiveGrassBerry::
+	msgbox Route123_BerryMastersHouse_Text_1C5DC1, 4
+	giveitem_std ITEM_RINDO_BERRY
+	compare RESULT, 0
+	goto_if_eq Route123_BerryMastersHouse_EventScript_1A029B
+	goto Route123_BerryMastersHouse_EventScript_163C1D
+	end
+
+Route123_BerryMastersHouse_EventScript_GiveElectricBerry::
+	msgbox Route123_BerryMastersHouse_Text_1C5DC1, 4
+	giveitem_std ITEM_WACAN_BERRY
+	compare RESULT, 0
+	goto_if_eq Route123_BerryMastersHouse_EventScript_1A029B
+	goto Route123_BerryMastersHouse_EventScript_163C1D
+	end
+
+Route123_BerryMastersHouse_EventScript_GivePsychicBerry::
+	msgbox Route123_BerryMastersHouse_Text_1C5DC1, 4
+	giveitem_std ITEM_PAYAPA_BERRY
+	compare RESULT, 0
+	goto_if_eq Route123_BerryMastersHouse_EventScript_1A029B
+	goto Route123_BerryMastersHouse_EventScript_163C1D
+	end
+
+Route123_BerryMastersHouse_EventScript_GiveIceBerry::
+	msgbox Route123_BerryMastersHouse_Text_1C5DC1, 4
+	giveitem_std ITEM_YACHE_BERRY
+	compare RESULT, 0
+	goto_if_eq Route123_BerryMastersHouse_EventScript_1A029B
+	goto Route123_BerryMastersHouse_EventScript_163C1D
+	end
+
+Route123_BerryMastersHouse_EventScript_GiveDragonBerry::
+	msgbox Route123_BerryMastersHouse_Text_1C5DC1, 4
+	giveitem_std ITEM_HABAN_BERRY
+	compare RESULT, 0
+	goto_if_eq Route123_BerryMastersHouse_EventScript_1A029B
+	goto Route123_BerryMastersHouse_EventScript_163C1D
+	end
+
+Route123_BerryMastersHouse_EventScript_GiveDarkBerry::
+	msgbox Route123_BerryMastersHouse_Text_1C5DC1, 4
+	giveitem_std ITEM_COLBUR_BERRY
+	compare RESULT, 0
+	goto_if_eq Route123_BerryMastersHouse_EventScript_1A029B
+	goto Route123_BerryMastersHouse_EventScript_163C1D
+	end
+
+Route123_BerryMastersHouse_EventScript_GiveRandomBerry::
 	msgbox Route123_BerryMastersHouse_Text_1C5E0E, 4
-	random 10
-	addvar RESULT, ITEM_CHERI_BERRY
+    random 18
+    addvar RESULT, ITEM_OCCA_BERRY
 	giveitem_std RESULT
 	compare RESULT, 0
 	goto_if_eq Route123_BerryMastersHouse_EventScript_1A029B
-	goto Route123_BerryMastersHouse_EventScript_163C1D
-	release
-	end
-
-Route123_BerryMastersHouse_EventScript_163B1E:: @ 8163B1E
-	goto_if_set FLAG_RECEIVED_SPELON_BERRY, Route123_BerryMastersHouse_EventScript_163AF0
-	msgbox Route123_BerryMastersHouse_Text_1C5DC1, 4
-	giveitem_std ITEM_SPELON_BERRY
-	compare RESULT, 0
-	goto_if_eq Route123_BerryMastersHouse_EventScript_1A029B
-	setflag FLAG_RECEIVED_SPELON_BERRY
-	goto Route123_BerryMastersHouse_EventScript_163C1D
-	end
-
-Route123_BerryMastersHouse_EventScript_163B4F:: @ 8163B4F
-	goto_if_set FLAG_RECEIVED_PAMTRE_BERRY, Route123_BerryMastersHouse_EventScript_163AF0
-	msgbox Route123_BerryMastersHouse_Text_1C5DC1, 4
-	giveitem_std ITEM_PAMTRE_BERRY
-	compare RESULT, 0
-	goto_if_eq Route123_BerryMastersHouse_EventScript_1A029B
-	setflag FLAG_RECEIVED_PAMTRE_BERRY
-	goto Route123_BerryMastersHouse_EventScript_163C1D
-	end
-
-Route123_BerryMastersHouse_EventScript_163B80:: @ 8163B80
-	goto_if_set FLAG_RECEIVED_WATMEL_BERRY, Route123_BerryMastersHouse_EventScript_163AF0
-	msgbox Route123_BerryMastersHouse_Text_1C5DC1, 4
-	giveitem_std ITEM_WATMEL_BERRY
-	compare RESULT, 0
-	goto_if_eq Route123_BerryMastersHouse_EventScript_1A029B
-	setflag FLAG_RECEIVED_WATMEL_BERRY
-	goto Route123_BerryMastersHouse_EventScript_163C1D
-	end
-
-Route123_BerryMastersHouse_EventScript_163BB1:: @ 8163BB1
-	goto_if_set FLAG_RECEIVED_DURIN_BERRY, Route123_BerryMastersHouse_EventScript_163AF0
-	msgbox Route123_BerryMastersHouse_Text_1C5DC1, 4
-	giveitem_std ITEM_DURIN_BERRY
-	compare RESULT, 0
-	goto_if_eq Route123_BerryMastersHouse_EventScript_1A029B
-	setflag FLAG_RECEIVED_DURIN_BERRY
-	goto Route123_BerryMastersHouse_EventScript_163C1D
-	end
-
-Route123_BerryMastersHouse_EventScript_163BE2:: @ 8163BE2
-	goto_if_set FLAG_RECEIVED_BELUE_BERRY, Route123_BerryMastersHouse_EventScript_163AF0
-	msgbox Route123_BerryMastersHouse_Text_1C5DC1, 4
-	giveitem_std ITEM_BELUE_BERRY
-	compare RESULT, 0
-	goto_if_eq Route123_BerryMastersHouse_EventScript_1A029B
-	setflag FLAG_RECEIVED_BELUE_BERRY
 	goto Route123_BerryMastersHouse_EventScript_163C1D
 	end
 

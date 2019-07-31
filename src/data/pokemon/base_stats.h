@@ -4197,7 +4197,7 @@ const struct BaseStats gBaseStats[] =
         .baseAttack    = 50,
         .baseDefense   = 35,
         .baseSpeed     = 95,
-        .baseSpAttack  = 115,
+        .baseSpAttack  = 125,
         .baseSpDefense = 95,
         .type1 = TYPE_ICE,
         .type2 = TYPE_PSYCHIC,
@@ -7389,12 +7389,12 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_SLUGMA] =
     {
-        .baseHP        = 40,
-        .baseAttack    = 40,
-        .baseDefense   = 40,
+        .baseHP        = 45,
+        .baseAttack    = 45,
+        .baseDefense   = 45,
         .baseSpeed     = 20,
-        .baseSpAttack  = 70,
-        .baseSpDefense = 40,
+        .baseSpAttack  = 75,
+        .baseSpDefense = 45,
         .type1 = TYPE_FIRE,
         .type2 = TYPE_FIRE,
         .catchRate = 190,
@@ -7423,11 +7423,11 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_MAGCARGO] =
     {
-        .baseHP        = 60,
-        .baseAttack    = 50,
-        .baseDefense   = 120,
+        .baseHP        = 70,
+        .baseAttack    = 60,
+        .baseDefense   = 140,
         .baseSpeed     = 30,
-        .baseSpAttack  = 90,
+        .baseSpAttack  = 100,
         .baseSpDefense = 80,
         .type1 = TYPE_FIRE,
         .type2 = TYPE_ROCK,
@@ -7525,12 +7525,12 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_CORSOLA] =
     {
-        .baseHP        = 65,
+        .baseHP        = 75,
         .baseAttack    = 55,
-        .baseDefense   = 95,
+        .baseDefense   = 105,
         .baseSpeed     = 35,
-        .baseSpAttack  = 65,
-        .baseSpDefense = 95,
+        .baseSpAttack  = 85,
+        .baseSpDefense = 125,
         .type1 = TYPE_WATER,
         .type2 = TYPE_ROCK,
         .catchRate = 60,
@@ -7622,16 +7622,16 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_RED,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_MOODY,
+		.hiddenAbility = ABILITY_PROTEAN,
     },
 
     [SPECIES_DELIBIRD] =
     {
         .baseHP        = 45,
-        .baseAttack    = 55,
+        .baseAttack    = 85,
         .baseDefense   = 45,
-        .baseSpeed     = 75,
-        .baseSpAttack  = 65,
+        .baseSpeed     = 105,
+        .baseSpAttack  = 105,
         .baseSpDefense = 45,
         .type1 = TYPE_ICE,
         .type2 = TYPE_FLYING,
@@ -10567,7 +10567,7 @@ const struct BaseStats gBaseStats[] =
         .baseSpAttack  = 100,
         .baseSpDefense = 82,
         .type1 = TYPE_BUG,
-        .type2 = TYPE_FLYING,
+        .type2 = TYPE_WATER,
         .catchRate = 75,
         .expYield = 159,
         .evYield_HP        = 0,
@@ -10798,12 +10798,12 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_CLAYDOL] =
     {
-        .baseHP        = 60,
+        .baseHP        = 70,
         .baseAttack    = 70,
-        .baseDefense   = 105,
+        .baseDefense   = 110,
         .baseSpeed     = 75,
         .baseSpAttack  = 70,
-        .baseSpDefense = 120,
+        .baseSpDefense = 125,
         .type1 = TYPE_GROUND,
         .type2 = TYPE_PSYCHIC,
         .catchRate = 90,
@@ -11643,7 +11643,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_OBLIVIOUS,
+		.hiddenAbility = ABILITY_INTIMIDATE,
     },
 
     [SPECIES_CACNEA] =
@@ -12163,7 +12163,7 @@ const struct BaseStats gBaseStats[] =
         .baseDefense   = 90,
         .baseSpeed     = 80,
         .baseSpAttack  = 70,
-        .baseSpDefense = 105,
+        .baseSpDefense = 125,
         .type1 = TYPE_DRAGON,
         .type2 = TYPE_FLYING,
         .catchRate = 45,
@@ -14907,7 +14907,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_SAND_FORCE,
+		.hiddenAbility = ABILITY_LEVITATE,
     },
 
     [SPECIES_DUSKNOIR] =

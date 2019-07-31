@@ -884,18 +884,18 @@ const struct WildPokemonInfo NewMauville_Entrance_LandMonsInfo = {10, NewMauvill
 
 const struct WildPokemon NewMauville_Inside_LandMons [] =
 {
-    {24, 24, SPECIES_VOLTORB},
-    {24, 24, SPECIES_MAGNEMITE},
-    {25, 25, SPECIES_VOLTORB},
-    {25, 25, SPECIES_MAGNEMITE},
-    {23, 23, SPECIES_VOLTORB},
-    {23, 23, SPECIES_MAGNEMITE},
-    {26, 26, SPECIES_VOLTORB},
-    {26, 26, SPECIES_MAGNEMITE},
-    {22, 22, SPECIES_VOLTORB},
-    {22, 22, SPECIES_MAGNEMITE},
-    {26, 26, SPECIES_ELECTRODE},
-    {26, 26, SPECIES_MAGNETON},
+    {26, 28, SPECIES_VOLTORB},
+    {26, 28, SPECIES_MAGNEMITE},
+    {26, 28, SPECIES_VOLTORB},
+    {26, 28, SPECIES_MAGNEMITE},
+    {26, 28, SPECIES_SHUPPET},
+    {26, 28, SPECIES_SHUPPET},
+    {26, 28, SPECIES_ELEKID},
+    {26, 28, SPECIES_ELEKID},
+    {26, 28, SPECIES_VOLTORB},
+    {26, 28, SPECIES_MAGNEMITE},
+    {26, 28, SPECIES_ELECTRODE},
+    {26, 28, SPECIES_MAGNETON},
 };
 const struct WildPokemonInfo NewMauville_Inside_LandMonsInfo = {10, NewMauville_Inside_LandMons};
 
@@ -1300,35 +1300,35 @@ const struct WildPokemonInfo Route117_LandMonsInfo = {20, Route117_LandMons};
 
 const struct WildPokemon Route118_LandMons [] =
 {
-    {24, 24, SPECIES_ZIGZAGOON},
-    {24, 24, SPECIES_ELECTRIKE},
-    {26, 26, SPECIES_ZIGZAGOON},
-    {26, 26, SPECIES_ELECTRIKE},
-    {26, 26, SPECIES_LINOONE},
-    {26, 26, SPECIES_MANECTRIC},
-    {25, 25, SPECIES_WINGULL},
-    {25, 25, SPECIES_WINGULL},
-    {26, 26, SPECIES_WINGULL},
-    {26, 26, SPECIES_WINGULL},
-    {27, 27, SPECIES_WINGULL},
-    {25, 25, SPECIES_KECLEON},
+    {26, 28, SPECIES_RATICATE},
+    {26, 28, SPECIES_AIPOM},
+    {26, 28, SPECIES_YANMA},
+    {26, 28, SPECIES_WINGULL},
+    {26, 28, SPECIES_GLOOM},
+    {26, 28, SPECIES_MANECTRIC},
+    {26, 28, SPECIES_RATICATE},
+    {26, 28, SPECIES_AIPOM},
+    {26, 28, SPECIES_YANMA},
+    {26, 28, SPECIES_KECLEON},
+    {26, 28, SPECIES_YANMA},
+    {26, 28, SPECIES_KECLEON},
 };
 const struct WildPokemonInfo Route118_LandMonsInfo = {20, Route118_LandMons};
 
 const struct WildPokemon Route119_LandMons [] =
 {
-    {25, 25, SPECIES_ZIGZAGOON},
-    {25, 25, SPECIES_LINOONE},
-    {27, 27, SPECIES_ZIGZAGOON},
-    {25, 25, SPECIES_ODDISH},
-    {27, 27, SPECIES_LINOONE},
-    {26, 26, SPECIES_ODDISH},
-    {27, 27, SPECIES_ODDISH},
-    {24, 24, SPECIES_ODDISH},
-    {25, 25, SPECIES_TROPIUS},
-    {26, 26, SPECIES_TROPIUS},
-    {27, 27, SPECIES_TROPIUS},
-    {25, 25, SPECIES_KECLEON},
+    {27, 29, SPECIES_YANMA},
+    {27, 29, SPECIES_AIPOM},
+    {27, 29, SPECIES_YANMA},
+    {27, 29, SPECIES_AIPOM},
+    {27, 29, SPECIES_GLOOM},
+    {27, 29, SPECIES_PERSIAN},
+    {27, 29, SPECIES_TROPIUS},
+    {27, 29, SPECIES_TROPIUS},
+    {27, 29, SPECIES_GLOOM},
+    {27, 29, SPECIES_KECLEON},
+    {27, 29, SPECIES_GLOOM},
+    {27, 29, SPECIES_KECLEON},
 };
 const struct WildPokemonInfo Route119_LandMonsInfo = {15, Route119_LandMons};
 

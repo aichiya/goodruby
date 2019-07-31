@@ -89,20 +89,20 @@ MauvilleCity_Text_1661C1:: @ 81661C1
 	.string "That's a good thing, wahahahaha!\p"
 	.string "Fine! I've decided!\n"
 	.string "I need a favor, {PLAYER}{KUN}!\p"
-	.string "MAUVILLE CITY has an underground\n"
-	.string "sector called NEW MAUVILLE.\p"
+	.string "Mauville City has an underground\n"
+	.string "sector called New Mauville.\p"
 	.string "{PLAYER}{KUN}, I'd like you to go there and\n"
-	.string "switch off the GENERATOR.\p"
-	.string "The GENERATOR has been running a bit\n"
+	.string "switch off the Generator.\p"
+	.string "The Generator has been running a bit\n"
 	.string "haywire. It's getting unsafe.\p"
-	.string "Here, this is the KEY to get into NEW\n"
-	.string "MAUVILLE.$"
+	.string "Here, this is the key to get into New\n"
+	.string "Mauville.$"
 
 MauvilleCity_Text_166331:: @ 8166331
 	.string "WATTSON: Don't you worry about it.\n"
 	.string "It won't be a challenge to you.\p"
-	.string "The entrance to NEW MAUVILLE is just\n"
-	.string "a short SURF away from ROUTE 110.\p"
+	.string "The entrance to New Mauville is just\n"
+	.string "a short stroll away from Route 110.\p"
 	.string "That's it, then, you have my trust!\n"
 	.string "Wahahahaha!$"
 
@@ -111,7 +111,7 @@ MauvilleCity_Text_1663EB:: @ 81663EB
 	.string "I knew it, {PLAYER}{KUN}! I knew I'd made\n"
 	.string "the right choice asking you!\p"
 	.string "This is my thanks - a TM containing\n"
-	.string "THUNDERBOLT!\p"
+	.string "Thunder Wave!\p"
 	.string "Go on, you've earned it!$"
 
 MauvilleCity_Text_166488:: @ 8166488

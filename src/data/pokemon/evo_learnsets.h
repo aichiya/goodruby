@@ -267,11 +267,6 @@ const u16 gForretressEvoMoves[] = {
 	0,
 };
 
-const u16 gMagcargoEvoMoves[] = {
-	MOVE_SHELL_SMASH,
-	0,
-};
-
 const u16 gPiloswineEvoMoves[] = {
 	MOVE_FURY_ATTACK,
 	0,
@@ -361,6 +356,12 @@ const u16 gBreloomEvoMoves[] = {
 
 const u16 gPelipperEvoMoves[] = {
 	MOVE_PROTECT,
+	0,
+};
+
+const u16 gMasquerainEvoMoves[] = {
+	MOVE_SCARY_FACE,
+	MOVE_SILVER_WIND,
 	0,
 };
 

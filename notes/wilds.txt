@@ -127,12 +127,11 @@ JAGGED PASS: Machop (20%), Numel (20%), Mankey (15%), Spoink (10%), Pineco (10%)
 FALLARBOR: Togepi egg
 DESERT: Sandshrew (25%), Trapinch (25%), Cacnea (15%), Baltoy (10%), Diglett (10%), Gligar (10%), Larvitar (5%)
 ROUTE 109: Wingull, Lickitung, Exeggcute, Skiploom, Krabby, Mantyke
-
 ROUTE 115: Wingull (30%), Swablu (30%), Jigglypuff (15%), Clefairy (10%), Zangoose (5%), Seviper (5%), Farfetch'd (5%)
+NEW MAUVILLE: Voltorb (34%), Magnemite (34%), Shuppet (20%), Elekid (10%), Magneton (1%), Elecrode (1%)
+ROUTE 118: Raticate (25%), Aipom (25%), Yanma (15%), Wingull (10%), Gloom (10%), Manectric (10%), Kecleon (5%)
+ROUTE 119: Aipom (30%), Yanma (30%), Gloom (15%), Persian (10%), Tropius (10%), Kecleon (5%) (e: Castform)
 
-NEW MAUVILLE: Voltorb, Magnemite, Elekid
-ROUTE 118: Raticate, Aipom, Wingull, Manectric, Kecleon
-ROUTE 119: Gloom, Aipom, Kecleon, Tropius, Yanma (e: Castform)
 ROUTE 120: Gloom, Aipom, Kecleon, Absol, Yanma
 SCORCHED SLAB:
 ROUTE 121: Gloom, Shuppet, Aipom, Kecleon, Scyther

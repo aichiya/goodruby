@@ -111,6 +111,7 @@ u8 gEasyChatGroupWords_Status[] = _(
                                     "CHLOROPHYLL$"
                                     "PURE POWER$"
                                     "SHIELD DUST$"
+                                    "FAIRY$"
                                     );
 #elif GERMAN
 u8 gEasyChatGroupWords_Status[] = _(

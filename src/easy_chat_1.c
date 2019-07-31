@@ -10,6 +10,7 @@
 #include "main.h"
 #include "menu.h"
 #include "palette.h"
+#include "random.h"
 #include "sound.h"
 #include "sprite.h"
 #include "string_util.h"
@@ -1699,30 +1700,63 @@ u8 sub_80E810C(void)
 {
     u16 i;
 
-    for (i = 0; i < 5; i++)
+    for (i = 0; i < 2; i++)
     {
-        u8 *ptr;
-        u8 *r3;
-
-        ptr = sub_80EB218(gEasyChatStruct->unk9E6E, gEasyChatStruct->unkC[0], 0);
-        *ptr++ = CHAR_SPACE;
-        sub_80EB218(ptr, gEasyChatStruct->unkC[1], 0);
-
-        ptr = sub_80EB218(gEasyChatStruct->unk9EEE, gBerryMasterWifePhrases[i][0], 0);
-        *ptr++ = CHAR_SPACE;
-        sub_80EB218(ptr, gBerryMasterWifePhrases[i][1], 0);
-
-        ptr = gEasyChatStruct->unk9E6E;
-        r3 = gEasyChatStruct->unk9EEE;
-        while (*ptr != EOS && *r3 != EOS)
+        u16 word = gEasyChatStruct->unkC[i];
+        switch (word)
         {
-            if (*ptr++ != *r3++)
-                break;
+            case EC_WORD_ROCK:
+                return TYPE_ROCK;
+            case EC_WORD_WATER:
+                return TYPE_WATER;
+            case EC_WORD_ELECTRIC:
+                return TYPE_ELECTRIC;
+            case EC_WORD_GRASS:
+                return TYPE_GRASS;
+            case EC_WORD_POISON:
+                return TYPE_POISON;
+            case EC_WORD_PSYCHIC:
+                return TYPE_PSYCHIC;
+            case EC_WORD_FIRE:
+                return TYPE_FIRE;
+            case EC_WORD_GROUND:
+                return TYPE_GROUND;
+            case EC_WORD_FLYING:
+                return TYPE_FLYING;
+            case EC_WORD_BUG:
+                return TYPE_BUG;
+            case EC_WORD_NORMAL:
+                return TYPE_NORMAL;
+            case EC_WORD_GHOST:
+                return TYPE_GHOST;
+            case EC_WORD_FIGHTING:
+                return TYPE_FIGHTING;
+            case EC_WORD_STEEL:
+                return TYPE_STEEL;
+            case EC_WORD_ICE:
+                return TYPE_ICE;
+            case EC_WORD_DRAGON:
+                return TYPE_DRAGON;
+            case EC_WORD_DARK:
+                return TYPE_DARK;
+            case EC_WORD_FAIRY:
+                return TYPE_FAIRY;
         }
-        if (*ptr == EOS && *r3 == EOS)
-            return i + 1;
     }
-    return 0;
+    for (i = 0; i < 2; i++)
+    {
+        u16 word = gEasyChatStruct->unkC[i];
+        if (EC_GROUP(word) == EC_GROUP_POKEMON_1 || EC_GROUP(word) == EC_GROUP_POKEMON_2)
+        {
+            u16 species = EC_INDEX(word);
+            if (Random() % 2)
+                return gBaseStats[species].type1;
+            else
+                return gBaseStats[species].type2;
+        }
+    }
+    
+    return 18;
 }
 
 void sub_80E81C0(void)

@@ -30,6 +30,7 @@ u16 gEasyChatGroupOrder_Status[] = {
     72,
     88,
     57,
+    109,
     16,
     90,
     91,

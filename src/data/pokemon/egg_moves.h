@@ -4217,6 +4217,7 @@ const u16 gRemoraidEggMoves[] = {
     MOVE_THUNDER_WAVE,
     MOVE_WATER_PULSE,
     MOVE_WATER_SPOUT,
+    MOVE_ZAP_CANNON,
     0,
 };
 
@@ -4236,6 +4237,7 @@ const u16 gOctilleryEggMoves[] = {
     MOVE_THUNDER_WAVE,
     MOVE_WATER_PULSE,
     MOVE_WATER_SPOUT,
+    MOVE_ZAP_CANNON,
     0,
 };
 
@@ -4675,6 +4677,7 @@ const u16 gSwampertEggMoves[] = {
 
 const u16 gPoochyenaEggMoves[] = {
     MOVE_ASTONISH,
+    MOVE_CLOSE_COMBAT,
     MOVE_COVET,
     MOVE_FIRE_FANG,
     MOVE_ICE_FANG,
@@ -4692,6 +4695,7 @@ const u16 gPoochyenaEggMoves[] = {
 
 const u16 gMightyenaEggMoves[] = {
     MOVE_ASTONISH,
+    MOVE_CLOSE_COMBAT,
     MOVE_COVET,
     MOVE_FIRE_FANG,
     MOVE_ICE_FANG,

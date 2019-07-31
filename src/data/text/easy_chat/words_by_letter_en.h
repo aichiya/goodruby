@@ -502,6 +502,7 @@ u16 gEasyChatWordsByLetter_F[] = {
     EC_WORD_FAINT,
     EC_MOVE2(FAINT_ATTACK),
     EC_WORD_FAINTED,
+    EC_WORD_FAIRY,
     EC_MOVE2(FAKE_OUT),
     EC_MOVE(FAKE_TEARS),
     EC_WORD_FALL,

@@ -4,7 +4,7 @@
 u8 gEasyChatGroupSizes[] = {
     202, // POKEMON
      19, // TRAINER
-    109, // STATUS
+    110, // STATUS
      63, // BATTLE
      42, // GREETINGS
      75, // PEOPLE

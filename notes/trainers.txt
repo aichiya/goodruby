@@ -33,7 +33,7 @@ Geodude Lv11, Anorith Lv11
 ROXANNE:
 Nosepass Lv14 Tackle, Rock Throw, Thunder Wave, Stealth Rock
 Baltoy Lv15 Confusion, Rock Tomb, Mud-Slap, Stealth Rock
-Lileep@Sitrus Lv15 Acid, Rock Tomb, Mega Drain, Ingrain
+Lileep@Sitrus Lv15 Acid, Mega Drain, Ingrain, Sandstorm
 
 RUSTURF TUNNEL
 GRUNT: Koffing Lv13, Houndour Lv14
@@ -287,4 +287,52 @@ LOIS&HAL: Luvdisc Lv34, Luvdisc Lv34
 ROUTE 115
 TIMOTHY: Meditite Lv33, Gallade Lv33
 KOICHI: Hitmonchan Lv34, Hitmonlee Lv34
+
+ROUTE 118
+GABBY&TY: Minun Lv34, Espeon Lv34
+BARNY: Wailmer Lv33, Gyarados Lv33
+CHESTER: Pidgeotto Lv33, Noctowl Lv33
+PERRY: Fearow Lv34
+
+ROUTE 123
+MIU&YUKI: Flaaffy Lv34, Snorunt Lv34
+VIOLET: Gloom Lv35, Ivysaur Lv34
+
+ROUTE 119
+KENT: Pineco Lv35, Venomoth Lv34
+DONALD: Metapod Lv35, Silcoon Lv35, Shuckle Lv34, Masquerain Lv34
+GREG: Weedle Lv35, Beedrill Lv34, Pinsir Lv34
+TAYLOR: Kakuna Lv35, Ledian Lv35, Beautifly Lv34, Ninjask Lv34
+DOUG: Ledyba Lv35, Cascoon Lv35, Surskit Lv35, Volbeat Lv34
+BRENT: Spinarak Lv35, Parasect Lv34, Yanma Lv35, Dustox Lv34, Illumise Lv34
+
+EUGENE: Carvanha Lv36, Feebas Lv36, Carvanha Lv36
+CATHERINE: Manectric Lv36, Jumpluff Lv36
+JACKSON: Linoone Lv37, Machoke Lv36
+PHIL: Pidgeot Lv37
+HUGH: Fearow Lv36, Skarmory Lv36
+TAKASHI: Koffing Lv36, Koffing Lv36, Koffing Lv36, Shedinja Lv36
+
+
+WEATHER INSTITUTE:
+GRUNT: Baltoy Lv36, Charmeleon Lv37
+GRUNT: Poochyena Lv36, Arbok Lv37,
+GRUNT: Koffing Lv37, Camerupt Lv37, Cacturne Lv37
+GRUNT: Rhyhorn Lv37, Magcargo Lv37, Golbat Lv37
+COURTNEY:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

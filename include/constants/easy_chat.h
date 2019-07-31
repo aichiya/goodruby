@@ -155,6 +155,7 @@
 #define EC_WORD_CHLOROPHYLL   (EC_GROUP_STATUS << 9) | 0x6a
 #define EC_WORD_PURE_POWER    (EC_GROUP_STATUS << 9) | 0x6b
 #define EC_WORD_SHIELD_DUST   (EC_GROUP_STATUS << 9) | 0x6c
+#define EC_WORD_FAIRY         (EC_GROUP_STATUS << 9) | 0x6d
 
 // BATTLE
 #define EC_WORD_MATCH_UP     (EC_GROUP_BATTLE << 9) | 0x0

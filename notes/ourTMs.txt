@@ -70,7 +70,7 @@
 70 - Foul Play
 71 - Stone Edge
 72 - Volt Switch    Mauville Gym
-73 - Thunder Wave
+73 - Thunder Wave   Wattson after New Mauville
 74 - Wild Charge
 75 - Swords Dance
 76 - Stealth Rock   Rustboro Gym
