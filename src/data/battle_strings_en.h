@@ -434,6 +434,7 @@ enum
 	BATTLE_TEXT_BurntUp,
     BATTLE_TEXT_LosingPrize,
     BATTLE_TEXT_LosingWild,
+    BATTLE_TEXT_HailWhippedUp,
 };
 
 const u8 BattleText_UnknownString[] = _("{STRING 33}");
@@ -998,6 +999,7 @@ const u8 BattleText_BoostsAttack[] = _("{STRING 16}'s {STRING 23}\nboosts {DEFEN
 const u8 BattleText_BurntUp[] = _("{ATTACKING_MON} burnt away\nits Fire type!");
 const u8 BattleText_LosingPrize[] = _("{STRING 32} gave ¥{STRING 0}\nto the winner...\p");
 const u8 BattleText_LosingWild[] = _("{STRING 32} panicked and\ndropped ¥{STRING 0}...\p");
+const u8 BattleText_HailWhippedUp[] = _("{STRING 16}'s {STRING 23}\nwhipped up a hailstorm!");
 
 
 const u8 *const gUnknown_08400F58[] =
@@ -1455,6 +1457,7 @@ const u8 *const gBattleStringsTable[] =
 	BattleText_BurntUp,
     BattleText_LosingPrize,
     BattleText_LosingWild,
+    BattleText_HailWhippedUp,
 };
 
 // below are lists of battle string enums and NOT pointers to the strings.

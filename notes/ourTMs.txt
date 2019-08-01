@@ -47,8 +47,8 @@
 47 - Steel Wing     Granite Cave from Steven
 48 - Icy Wind       Abandoned Ship (*Mt. Pyre)
 49 - Superpower     *SS Tidal
-50 - Overheat       *Lavaridge Gym
-51 - Roost
+50 - Overheat       Lavaridge Gym
+51 - Roost          Fortree Gym
 52 - Focus Blast
 53 - Energy Ball
 54 - Fire Punch     Game Corner

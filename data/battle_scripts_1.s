@@ -6842,3 +6842,26 @@ BattleScript_RoundMissed:
     special 0x4A
 	end
 
+BattleScript_ForecastSun::
+    setsunny
+	printstring BATTLE_TEXT_SunIntensified
+	waitstate
+	playanimation 7, B_ANIM_SUN_CONTINUES, NULL
+	call BattleScript_WeatherFormChanges
+	return
+
+BattleScript_ForecastRain::
+    setrain
+	printstring BATTLE_TEXT_RainMade
+	waitstate
+	playanimation 7, B_ANIM_RAIN_CONTINUES, NULL
+	call BattleScript_WeatherFormChanges
+	return
+
+BattleScript_ForecastHail::
+    sethail
+	printstring BATTLE_TEXT_HailWhippedUp
+	waitstate
+	playanimation 7, B_ANIM_HAIL_CONTINUES, NULL
+	call BattleScript_WeatherFormChanges
+	return

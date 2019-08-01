@@ -62,7 +62,7 @@ Route119_WeatherInstitute_2F_EventScript_163D7A:: @ 8163D7A
 	message Route119_WeatherInstitute_2F_Text_19F267
 	waitfanfare
 	waitmessage
-	givemon SPECIES_CASTFORM, 25, ITEM_MYSTIC_WATER, 0x0, 0x0, 0
+	givemon SPECIES_CASTFORM, 30, ITEM_MYSTIC_WATER, 0x0, 0x0, 0
 	setflag FLAG_RECEIVED_CASTFORM
 	msgbox Route119_WeatherInstitute_2F_Text_19F27D, 4
 	release

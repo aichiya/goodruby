@@ -322,6 +322,12 @@ ABILITY, STAT, AND MOVEPOOL CHANGES:
  * Level-up movepool slightly adjusted.
  * Armaldo now learns Aqua Tail on evolution.
 
+#351 Castform
+ * Castform's base stats changed: 70/70/70/70/70/70 (420) -> 70/70/70/80/80/70 (440).
+ * Level-up movepool slightly adjusted.
+ * Now learns Water Pulse, Flame Burst, and Icy Wind by level.
+ * Now learns Heat Wave by TM.
+
 #353 Shuppet, #354 Banette
  * Banette's type changed: Ghost -> Ghost/Dark.
 
@@ -385,6 +391,12 @@ ABILITY CHANGES:
 Flower Gift: Raises Attack, Defense, Special Attack, and Special Defense by 50% (instead of just Attack and Special Defense).
  * In addition, the ability has no special interaction with Role Play, Entrainment, Trace, etc.
 
+Forecast: When using certain moves, changes the weather before attacking.
+ * Fire-type moves, Solarbeam, Synthesis, Morning Sun, Moonlight, and Growth set sun for 5 turns.
+ * Water-type moves, Thunder, and Hurricane set rain for 5 turns.
+ * Ice-type moves set hail for 5 turns.
+ * Castform will transform with the weather before attacking.
+ * The weather changes occur even if the Pokemon with Forecast is not Castform.
 
 
 

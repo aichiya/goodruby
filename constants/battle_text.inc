@@ -429,3 +429,6 @@
     enum BATTLE_TEXT_Lower
     enum BATTLE_TEXT_BoostsAttack
 	enum BATTLE_TEXT_BurntUp
+    enum BATTLE_TEXT_LosingPrize
+    enum BATTLE_TEXT_LosingWild
+    enum BATTLE_TEXT_HailWhippedUp

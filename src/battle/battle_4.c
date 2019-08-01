@@ -338,6 +338,9 @@ extern u8 BattleScript_UseResistBerry[];
 extern u8 BattleScript_DefiantProc[];
 extern u8 BattleScript_CompetitiveProc[];
 extern u8 BattleScript_FellStingerKills[];
+extern u8 BattleScript_ForecastSun[];
+extern u8 BattleScript_ForecastRain[];
+extern u8 BattleScript_ForecastHail[];
 
 extern const u8 gStatusConditionString_PoisonJpn[];
 extern const u8 gStatusConditionString_SleepJpn[];
@@ -1714,6 +1717,39 @@ static void atk00_attackcanceler(void)
 			return;
 		}
 	}
+    
+    if (gBattleMons[gBankAttacker].ability == ABILITY_FORECAST)
+    {
+        u8 moveType = gBattleMoves[gCurrentMove].type;
+        
+        if ((moveType == TYPE_FIRE || gCurrentMove == MOVE_SOLAR_BEAM || gCurrentMove == MOVE_SYNTHESIS
+            || gCurrentMove == MOVE_MOONLIGHT || gCurrentMove == MOVE_MORNING_SUN || gCurrentMove == MOVE_GROWTH)
+            && !(gBattleWeather & WEATHER_SUN_ANY))
+        {
+            // set sun
+			BattleScriptPushCursor();
+			gBattlescriptCurrInstr = BattleScript_ForecastSun;
+            gBattleStruct->scriptingActive = gBankAttacker;
+			return;
+        }
+        else if ((moveType == TYPE_WATER || gCurrentMove == MOVE_THUNDER || gCurrentMove == MOVE_HURRICANE)
+                && !(gBattleWeather & WEATHER_RAIN_ANY))
+        {
+            // set rain
+			BattleScriptPushCursor();
+			gBattlescriptCurrInstr = BattleScript_ForecastRain;
+            gBattleStruct->scriptingActive = gBankAttacker;
+            return;
+        }
+        else if ((moveType == TYPE_ICE) && !(gBattleWeather & WEATHER_HAIL))
+        {
+            // set hail
+			BattleScriptPushCursor();
+			gBattlescriptCurrInstr = BattleScript_ForecastHail;
+            gBattleStruct->scriptingActive = gBankAttacker;
+            return;
+        }
+    }
 
     if (gProtectStructs[gBankTarget].bounceMove && !(gWishFutureKnock.reflected) && gBattleMoves[gCurrentMove].flags & F_AFFECTED_BY_MAGIC_COAT)
     {

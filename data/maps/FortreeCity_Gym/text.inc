@@ -69,43 +69,43 @@ FortreeCity_Gym_Text_185C8C:: @ 8185C8C
 	.string "FORTREE can live without fear.$"
 
 FortreeCity_Gym_Text_185CCB:: @ 8185CCB
-	.string "I am WINONA. I am the LEADER of the\n"
-	.string "FORTREE POKéMON GYM.\p"
-	.string "I have become one with BIRD POKéMON\n"
+	.string "I am Winona. I am the Leader of the\n"
+	.string "Fortree Pokémon Gym.\p"
+	.string "I have become one with Bird Pokémon\n"
 	.string "and have soared the skies...\p"
 	.string "However grueling the battle, we have\n"
 	.string "triumphed with grace...\p"
 	.string "Witness the elegant choreography\n"
-	.string "of BIRD POKéMON and I!$"
+	.string "of Bird Pokémon and I!$"
 
 FortreeCity_Gym_Text_185DBA:: @ 8185DBA
-	.string "Never before have I seen a TRAINER\n"
-	.string "command POKéMON with more grace\l"
+	.string "Never before have I seen a Trainer\n"
+	.string "command Pokémon with more grace\l"
 	.string "than I...\p"
 	.string "In recognition of your prowess,\n"
-	.string "I present to you this GYM BADGE.$"
+	.string "I present to you this Gym Badge.$"
 
 FortreeCity_Gym_Text_185E48:: @ 8185E48
-	.string "{PLAYER} received the FEATHER BADGE\n"
-	.string "from WINONA.$"
+	.string "{PLAYER} received the Feather Badge\n"
+	.string "from Winona.$"
 
 FortreeCity_Gym_Text_185E73:: @ 8185E73
-	.string "With the FEATHER BADGE, all POKéMON up\n"
+	.string "With the Feather Badge, all Pokémon up\n"
 	.string "to LV 70, even those received through\l"
 	.string "trades, will obey your every command.\p"
 	.string "You will also be able to use the\n"
-	.string "HM move FLY outside of battle.\p"
+	.string "HM move Fly outside of battle.\p"
 	.string "And this...\n"
 	.string "This is a gift from me.$"
 
 FortreeCity_Gym_Text_185F4A:: @ 8185F4A
-	.string "TM40 contains AERIAL ACE.\p"
-	.string "Its speed...\n"
-	.string "No POKéMON should be able to avoid it.$"
+	.string "TM51 contains Roost.\p"
+	.string "Even Bird Pokémon cannot stay\n"
+	.string "in the air forever.$"
 
 FortreeCity_Gym_Text_185F98:: @ 8185F98
 	.string "Though I fell to you, I will remain\n"
-	.string "devoted to BIRD POKéMON.$"
+	.string "devoted to BIRD Pokémon.$"
 
 FortreeCity_Gym_Text_185FD5:: @ 8185FD5
 	.string "FORTREE CITY POKéMON GYM$"

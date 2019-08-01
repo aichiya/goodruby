@@ -313,7 +313,6 @@ PHIL: Pidgeot Lv37
 HUGH: Fearow Lv36, Skarmory Lv36
 TAKASHI: Koffing Lv36, Koffing Lv36, Koffing Lv36, Shedinja Lv36
 
-
 WEATHER INSTITUTE:
 GRUNT: Baltoy Lv36, Charmeleon Lv37
 GRUNT: Poochyena Lv36, Arbok Lv37,
@@ -321,16 +320,26 @@ GRUNT: Koffing Lv37, Camerupt Lv37, Cacturne Lv37
 GRUNT: Rhyhorn Lv37, Magcargo Lv37, Golbat Lv37
 COURTNEY:
 
+ROUTE 119:
+YASU: Trapinch Lv37, Kecleon Lv37
+HIDEO: Golbat Lv37, Sudowoodo Lv37
 
+ROUTE 120:
+CLARISSA: Parasect Lv37, Jynx Lv37
+ROBERT: Dodrio Lv37
 
+FORTREE GYM:
+JARED: Pidgeot Lv38, Fearow Lv38
+KYLEE: Gyarados Lv38, Tropius Lv38
+TERELL: Pelipper Lv38, Noctowl Lv38
+WILL: Xatu Lv38, Swellow Lv38, Dodrio Lv38
 
-
-
-
-
-
-
-
+WINONA:
+Altaria
+Dragonair
+Mantine
+Swellow
+Togekiss
 
 
 
