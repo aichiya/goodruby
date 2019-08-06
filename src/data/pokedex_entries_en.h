@@ -5403,9 +5403,9 @@ static const u8 DexDescription_Roserade_1[] = _(
   "different toxins, but it can jab with\n"
   "near-fatal using both.");
 static const u8 DexDescription_Roserade_2[] = _(
-  "It attracts prey with a sweet aroma, then\n"
-  "downs it with thorny whips hidden in its\n"
-  "arms.");
+  "It attracts prey with a sweet aroma,\n"
+  "then downs it with thorny whips hidden\n"
+  "in its arms.");
 
 static const u8 DexDescription_Ambipom_1[] = _(
   "They work in large colonies and make\n"
@@ -5413,8 +5413,251 @@ static const u8 DexDescription_Ambipom_1[] = _(
   "apparently in friendship.");
 static const u8 DexDescription_Ambipom_2[] = _(
   "Its two tails are very adept at handling\n"
-  "objects; it rarely uses its hands.\n"
+  "objects, so it rarely uses its hands.\n"
   "");
+
+static const u8 DexDescription_Mismagius_1[] = _(
+  "Its cries sound like incantations,\n"
+  "and torment those who hear them\n"
+  "with headaches and hallucinations.");
+static const u8 DexDescription_Mismagius_2[] = _(
+  "Rumors hold it can cast spells that\n"
+  "make people fall in love, so some\n"
+  "search for it desperately.");
+
+static const u8 DexDescription_Honchkrow_1[] = _(
+  "Sometimes called the Summoner of Night,\n"
+  "many Murkrow gather quickly when it\n"
+  "utters its deep cry.");
+static const u8 DexDescription_Honchkrow_2[] = _(
+  "Merciless by nature, it relentlessly\n"
+  "punishes its Murkrow cronies that fail\n"
+  "it, or that it feels betrayed it.");
+
+static const u8 DexDescription_Chingling_1[] = _(
+  "Each time it hops, it makes a ringing\n"
+  "sound with the orb in its mouth.\n"
+  "When excited, it hops all over.");
+static const u8 DexDescription_Chingling_2[] = _(
+  "Its cries, however, are high-frequency\n"
+  "sounds that people can't hear. As pets,\n"
+  "they often cry for long periods of time.");
+
+static const u8 DexDescription_Bonsly_1[] = _(
+  "It prefers arid environments.\n"
+  "It expels excess moisture from\n"
+  "its eyes to regulate its fluid levels.");
+static const u8 DexDescription_Bonsly_2[] = _(
+  "This makes it look like it's crying,\n"
+  "tricking its enemies into lowering\n"
+  "their guard.");
+
+static const u8 DexDescription_MimeJr_1[] = _(
+  "It habitually mimics the expressions\n"
+  "and motions of those around it, even\n"
+  "though it isn't very good at it.");
+static const u8 DexDescription_MimeJr_2[] = _(
+  "It even mimics its enemy's movements in\n"
+  "battle in an attempt to confuse the\n"
+  "enemy before making a getaway.");
+
+static const u8 DexDescription_Happiny_1[] = _(
+  "It loves round white things.\n"
+  "It carries an egg-shaped rock\n"
+  "around in imitation of Chansey.");
+static const u8 DexDescription_Happiny_2[] = _(
+  "Usually it's quite well-behaved, but\n"
+  "if you take its round rock away, it\n"
+  "will cry and fuss and throw a tantrum.");
+
+static const u8 DexDescription_Munchlax_1[] = _(
+  "It wolfs down its weight in food\n"
+  "once a day, swallowing food whole\n"
+  "with almost no chewing.");
+static const u8 DexDescription_Munchlax_2[] = _(
+  "It hides food under its long fur,\n"
+  "but sometimes it forgets about it\n"
+  "and causes a stinky disturbance.");
+
+static const u8 DexDescription_Mantyke_1[] = _(
+  "It's highly friendly and easily\n"
+  "tamed. Tours to swim with them are\n"
+  "quite popular beach activities.");
+static const u8 DexDescription_Mantyke_2[] = _(
+  "Scientists discovered that the\n"
+  "distinctive patterns on its back\n"
+  "differ by region.");
+
+static const u8 DexDescription_Weavile_1[] = _(
+  "They dwell in snowy regions, forming\n"
+  "groups of four or five that hunt\n"
+  "prey with impressive coordination.");
+static const u8 DexDescription_Weavile_2[] = _(
+  "They carve patterns in trees with\n"
+  "their claws as a signal to others.\n"
+  "");
+
+static const u8 DexDescription_Magnezone_1[] = _(
+  "It evolved from exposure to a\n"
+  "special magnetic field. Its three\n"
+  "units generate magnetism.");
+static const u8 DexDescription_Magnezone_2[] = _(
+  "Sometimes the magnetism they\n"
+  "emit is too strong, causing them\n"
+  "to get stuck to each other.");
+
+static const u8 DexDescription_Lickilicky_1[] = _(
+  "The long tongue is always soggy\n"
+  "slobber. The saliva contains a\n"
+  "solvent that causes numbness.");
+static const u8 DexDescription_Lickilicky_2[] = _(
+  "A contest is under way to determine\n"
+  "which can stick its tongue out the\n"
+  "farthest. The record is over 82 feet.");
+
+static const u8 DexDescription_Rhyperior_1[] = _(
+  "It puts rocks in the holes in its\n"
+  "palms and uses its muscles to shoot\n"
+  "them. Rarely, it fires Geodude.");
+static const u8 DexDescription_Rhyperior_2[] = _(
+  "Its carapace is extremely durable.\n"
+  "There are records of it withstanding\n"
+  "volcanic eruptions.");
+
+static const u8 DexDescription_Tangrowth_1[] = _(
+  "It ensnares prey by extending arms\n"
+  "made of vines. Losing arms to\n"
+  "predators does not trouble it.");
+static const u8 DexDescription_Tangrowth_2[] = _(
+  "Its vines grow so profusely that,\n"
+  "in the warm season, you can't even\n"
+  "see its eyes.");
+
+static const u8 DexDescription_Electivire_1[] = _(
+  "It fights by gripping its electricity-\n"
+  "spewing tail, then beating down\n"
+  "foes with its electrified fist.");
+static const u8 DexDescription_Electivire_2[] = _(
+  "When it gets excited, it thumps its\n"
+  "chest. With every thud, thunder roars\n"
+  "and electric sparks shower all around.");
+
+static const u8 DexDescription_Magmortar_1[] = _(
+  "From its arm, it launches fireballs\n"
+  "hotter than 3500 degrees Fahrenheit.\n"
+  "A whole barrage starts to melt its arm.");
+static const u8 DexDescription_Magmortar_2[] = _(
+  "There are still quite a few factories\n"
+  "that rely on the flames provided\n"
+  "by Magmortar to process metals.");
+
+static const u8 DexDescription_Togekiss_1[] = _(
+  "It shares many blessings with people\n"
+  "who respect one another's rights and\n"
+  "avoid needless conflict.");
+static const u8 DexDescription_Togekiss_2[] = _(
+  "It will never appear where there is\n"
+  "strife. Sightings have become\n"
+  "rare recently.");
+
+static const u8 DexDescription_Yanmega_1[] = _(
+  "Its jaw power is incredible. It is\n"
+  "adept at biting apart foes while\n"
+  "flying by at high speed.");
+static const u8 DexDescription_Yanmega_2[] = _(
+  "By churning its wings, it creates\n"
+  "shock waves that inflict internal\n"
+  "injuries to foes.");
+
+static const u8 DexDescription_Leafeon_1[] = _(
+  "Just like a plant, it uses\n"
+  "photosynthesis. As a result, it is\n"
+  "always enveloped in clear air.");
+static const u8 DexDescription_Leafeon_2[] = _(
+  "The younger they are, the more they\n"
+  "smell like fresh grass. With age, its\n"
+  "fragrance becomes more like fallen leaves.");
+
+static const u8 DexDescription_Glaceon_1[] = _(
+  "By controlling its body heat, it can\n"
+  "freeze the atmosphere around it to\n"
+  "make a diamond dust flurry.");
+static const u8 DexDescription_Glaceon_2[] = _(
+  "This also freezes its fur into spiky,\n"
+  "sharp needles to protect itself with.\n"
+  "");
+
+static const u8 DexDescription_Sylveon_1[] = _(
+  "It sends a soothing aura from its\n"
+  "ribbonlike feelers to calm fights.\n"
+  "");
+static const u8 DexDescription_Sylveon_2[] = _(
+  "If that fails, it will unflinchingly\n"
+  "pounce into fights against dragon\n"
+  "Pokémon much larger than itself.");
+
+static const u8 DexDescription_Gliscor_1[] = _(
+  "It observes prey while hanging inverted\n"
+  "from tall branches. When the chance\n"
+  "presents itself, it swoops in.");
+static const u8 DexDescription_Gliscor_2[] = _(
+  "Its flight is soundless. It uses its\n"
+  "lengthy tail to carry off its prey...\n"
+  "Then its elongated fangs do the rest.");
+
+static const u8 DexDescription_Mamoswine_1[] = _(
+  "Its impresive tusks are made of ice.\n"
+  "The population thinned when it turned\n"
+  "warm after the ice age.");
+static const u8 DexDescription_Mamoswine_2[] = _(
+  "A frozen one was dug up from soil\n"
+  "dating back 10,000 years.\n"
+  "It woke up to much amazement.");
+
+static const u8 DexDescription_PorygonZ_1[] = _(
+  "Its program was modified to facilitate\n"
+  "extra-dimensional activities and\n"
+  "make it a better Pokémon.");
+static const u8 DexDescription_PorygonZ_2[] = _(
+  "Its behavior is noticably unstable,\n"
+  "apparently due to various glitches\n"
+  "caused by incompetent engineering.");
+
+static const u8 DexDescription_Gallade_1[] = _(
+  "A master of courtesy and,\n"
+  "swordsmanship, it fights using \n"
+  "extended swords on its elbows.");
+static const u8 DexDescription_Gallade_2[] = _(
+  "Because it can sense what its foe is\n"
+  "thinking, its attacks burst out first,\n"
+  "fast, and furious.");
+
+static const u8 DexDescription_Probopass_1[] = _(
+  "The main body controls three mobile\n"
+  "units called Mini-Noses, which it,\n"
+  "maneuvers to catch prey.");
+static const u8 DexDescription_Probopass_2[] = _(
+  "Sometimes, its strong magnetism fails\n"
+  "to bring a Mini-Nose back and it\n"
+  "gets lost.");
+
+static const u8 DexDescription_Dusknoir_1[] = _(
+  "Widely feared, it is said to take\n"
+  "lost spirits into its pliant body\n"
+  "and guide them home.");
+static const u8 DexDescription_Dusknoir_2[] = _(
+  "A popular novel spread the belief that\n"
+  "the antenna on its head captures radio\n"
+  "waves from the world of spirits.");
+
+static const u8 DexDescription_Froslass_1[] = _(
+  "Believed to be the soul of a woman lost\n"
+  "on a snowy mountain that possessed an\n"
+  "icicle, becoming this Pokémon.");
+static const u8 DexDescription_Froslass_2[] = _(
+  "It freezes prey by blowing its -58\n"
+  "degrees F breath. It is said to then\n"
+  "secretly display its prey.");
 
 
 
@@ -9714,8 +9957,8 @@ const struct PokedexEntry gPokedexEntries[] =
         .categoryName = _("Magical"),
         .height = 9,
         .weight = 44,
-        .descriptionPage1 = DexDescription_Dummy_1,
-        .descriptionPage2 = DexDescription_Dummy_2,
+        .descriptionPage1 = DexDescription_Mismagius_1,
+        .descriptionPage2 = DexDescription_Mismagius_2,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
@@ -9725,8 +9968,8 @@ const struct PokedexEntry gPokedexEntries[] =
         .categoryName = _("Big Boss"),
         .height = 9,
         .weight = 273,
-        .descriptionPage1 = DexDescription_Dummy_1,
-        .descriptionPage2 = DexDescription_Dummy_2,
+        .descriptionPage1 = DexDescription_Honchkrow_1,
+        .descriptionPage2 = DexDescription_Honchkrow_2,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
@@ -9736,8 +9979,8 @@ const struct PokedexEntry gPokedexEntries[] =
         .categoryName = _("Bell"),
         .height = 2,
         .weight = 6,
-        .descriptionPage1 = DexDescription_Dummy_1,
-        .descriptionPage2 = DexDescription_Dummy_2,
+        .descriptionPage1 = DexDescription_Chingling_1,
+        .descriptionPage2 = DexDescription_Chingling_2,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
@@ -9747,8 +9990,8 @@ const struct PokedexEntry gPokedexEntries[] =
         .categoryName = _("Bonsai"),
         .height = 5,
         .weight = 150,
-        .descriptionPage1 = DexDescription_Dummy_1,
-        .descriptionPage2 = DexDescription_Dummy_2,
+        .descriptionPage1 = DexDescription_Bonsly_1,
+        .descriptionPage2 = DexDescription_Bonsly_2,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
@@ -9758,8 +10001,8 @@ const struct PokedexEntry gPokedexEntries[] =
         .categoryName = _("Mime"),
         .height = 6,
         .weight = 130,
-        .descriptionPage1 = DexDescription_Dummy_1,
-        .descriptionPage2 = DexDescription_Dummy_2,
+        .descriptionPage1 = DexDescription_MimeJr_1,
+        .descriptionPage2 = DexDescription_MimeJr_2,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
@@ -9769,8 +10012,8 @@ const struct PokedexEntry gPokedexEntries[] =
         .categoryName = _("Playhouse"),
         .height = 6,
         .weight = 244,
-        .descriptionPage1 = DexDescription_Dummy_1,
-        .descriptionPage2 = DexDescription_Dummy_2,
+        .descriptionPage1 = DexDescription_Happiny_1,
+        .descriptionPage2 = DexDescription_Happiny_2,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
@@ -9780,8 +10023,8 @@ const struct PokedexEntry gPokedexEntries[] =
         .categoryName = _("Big Eater"),
         .height = 6,
         .weight = 1050,
-        .descriptionPage1 = DexDescription_Dummy_1,
-        .descriptionPage2 = DexDescription_Dummy_2,
+        .descriptionPage1 = DexDescription_Munchlax_1,
+        .descriptionPage2 = DexDescription_Munchlax_2,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
@@ -9791,8 +10034,8 @@ const struct PokedexEntry gPokedexEntries[] =
         .categoryName = _("Kite"),
         .height = 10,
         .weight = 650,
-        .descriptionPage1 = DexDescription_Dummy_1,
-        .descriptionPage2 = DexDescription_Dummy_2,
+        .descriptionPage1 = DexDescription_Mantyke_1,
+        .descriptionPage2 = DexDescription_Mantyke_2,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
@@ -9802,8 +10045,8 @@ const struct PokedexEntry gPokedexEntries[] =
         .categoryName = _("Sharp Claw"),
         .height = 11,
         .weight = 340,
-        .descriptionPage1 = DexDescription_Dummy_1,
-        .descriptionPage2 = DexDescription_Dummy_2,
+        .descriptionPage1 = DexDescription_Weavile_1,
+        .descriptionPage2 = DexDescription_Weavile_2,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
@@ -9813,8 +10056,8 @@ const struct PokedexEntry gPokedexEntries[] =
         .categoryName = _("Magnet Area"),
         .height = 12,
         .weight = 1800,
-        .descriptionPage1 = DexDescription_Dummy_1,
-        .descriptionPage2 = DexDescription_Dummy_2,
+        .descriptionPage1 = DexDescription_Magnezone_1,
+        .descriptionPage2 = DexDescription_Magnezone_2,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
@@ -9824,8 +10067,8 @@ const struct PokedexEntry gPokedexEntries[] =
         .categoryName = _("Licking"),
         .height = 17,
         .weight = 1400,
-        .descriptionPage1 = DexDescription_Dummy_1,
-        .descriptionPage2 = DexDescription_Dummy_2,
+        .descriptionPage1 = DexDescription_Lickilicky_1,
+        .descriptionPage2 = DexDescription_Lickilicky_2,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
@@ -9835,8 +10078,8 @@ const struct PokedexEntry gPokedexEntries[] =
         .categoryName = _("Drill"),
         .height = 24,
         .weight = 2828,
-        .descriptionPage1 = DexDescription_Dummy_1,
-        .descriptionPage2 = DexDescription_Dummy_2,
+        .descriptionPage1 = DexDescription_Rhyperior_1,
+        .descriptionPage2 = DexDescription_Rhyperior_2,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
@@ -9846,8 +10089,8 @@ const struct PokedexEntry gPokedexEntries[] =
         .categoryName = _("Vine"),
         .height = 20,
         .weight = 1286,
-        .descriptionPage1 = DexDescription_Dummy_1,
-        .descriptionPage2 = DexDescription_Dummy_2,
+        .descriptionPage1 = DexDescription_Tangrowth_1,
+        .descriptionPage2 = DexDescription_Tangrowth_2,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
@@ -9857,8 +10100,8 @@ const struct PokedexEntry gPokedexEntries[] =
         .categoryName = _("Thunderbolt"),
         .height = 18,
         .weight = 1386,
-        .descriptionPage1 = DexDescription_Dummy_1,
-        .descriptionPage2 = DexDescription_Dummy_2,
+        .descriptionPage1 = DexDescription_Electivire_1,
+        .descriptionPage2 = DexDescription_Electivire_2,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
@@ -9868,8 +10111,8 @@ const struct PokedexEntry gPokedexEntries[] =
         .categoryName = _("Blast"),
         .height = 16,
         .weight = 680,
-        .descriptionPage1 = DexDescription_Dummy_1,
-        .descriptionPage2 = DexDescription_Dummy_2,
+        .descriptionPage1 = DexDescription_Magmortar_1,
+        .descriptionPage2 = DexDescription_Magmortar_2,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
@@ -9879,8 +10122,8 @@ const struct PokedexEntry gPokedexEntries[] =
         .categoryName = _("Jubilee"),
         .height = 15,
         .weight = 380,
-        .descriptionPage1 = DexDescription_Dummy_1,
-        .descriptionPage2 = DexDescription_Dummy_2,
+        .descriptionPage1 = DexDescription_Togekiss_1,
+        .descriptionPage2 = DexDescription_Togekiss_2,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
@@ -9890,8 +10133,8 @@ const struct PokedexEntry gPokedexEntries[] =
         .categoryName = _("Ogre Darner"),
         .height = 19,
         .weight = 515,
-        .descriptionPage1 = DexDescription_Dummy_1,
-        .descriptionPage2 = DexDescription_Dummy_2,
+        .descriptionPage1 = DexDescription_Yanmega_1,
+        .descriptionPage2 = DexDescription_Yanmega_2,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
@@ -9901,8 +10144,8 @@ const struct PokedexEntry gPokedexEntries[] =
         .categoryName = _("Verdant"),
         .height = 10,
         .weight = 255,
-        .descriptionPage1 = DexDescription_Dummy_1,
-        .descriptionPage2 = DexDescription_Dummy_2,
+        .descriptionPage1 = DexDescription_Leafeon_1,
+        .descriptionPage2 = DexDescription_Leafeon_2,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
@@ -9912,8 +10155,8 @@ const struct PokedexEntry gPokedexEntries[] =
         .categoryName = _("Fresh Snow"),
         .height = 8,
         .weight = 259,
-        .descriptionPage1 = DexDescription_Dummy_1,
-        .descriptionPage2 = DexDescription_Dummy_2,
+        .descriptionPage1 = DexDescription_Glaceon_1,
+        .descriptionPage2 = DexDescription_Glaceon_2,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
@@ -9923,8 +10166,8 @@ const struct PokedexEntry gPokedexEntries[] =
         .categoryName = _("Intertwine"),
         .height = 10,
         .weight = 235,
-        .descriptionPage1 = DexDescription_Dummy_1,
-        .descriptionPage2 = DexDescription_Dummy_2,
+        .descriptionPage1 = DexDescription_Sylveon_1,
+        .descriptionPage2 = DexDescription_Sylveon_2,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
@@ -9934,8 +10177,8 @@ const struct PokedexEntry gPokedexEntries[] =
         .categoryName = _("Fang Scorp"),
         .height = 20,
         .weight = 425,
-        .descriptionPage1 = DexDescription_Dummy_1,
-        .descriptionPage2 = DexDescription_Dummy_2,
+        .descriptionPage1 = DexDescription_Gliscor_1,
+        .descriptionPage2 = DexDescription_Gliscor_2,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
@@ -9945,8 +10188,8 @@ const struct PokedexEntry gPokedexEntries[] =
         .categoryName = _("Twin Tusk"),
         .height = 25,
         .weight = 2910,
-        .descriptionPage1 = DexDescription_Dummy_1,
-        .descriptionPage2 = DexDescription_Dummy_2,
+        .descriptionPage1 = DexDescription_Mamoswine_1,
+        .descriptionPage2 = DexDescription_Mamoswine_2,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
@@ -9956,8 +10199,8 @@ const struct PokedexEntry gPokedexEntries[] =
         .categoryName = _("Virtual"),
         .height = 9,
         .weight = 340,
-        .descriptionPage1 = DexDescription_Dummy_1,
-        .descriptionPage2 = DexDescription_Dummy_2,
+        .descriptionPage1 = DexDescription_PorygonZ_1,
+        .descriptionPage2 = DexDescription_PorygonZ_2,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
@@ -9967,8 +10210,8 @@ const struct PokedexEntry gPokedexEntries[] =
         .categoryName = _("Blade"),
         .height = 16,
         .weight = 520,
-        .descriptionPage1 = DexDescription_Dummy_1,
-        .descriptionPage2 = DexDescription_Dummy_2,
+        .descriptionPage1 = DexDescription_Gallade_1,
+        .descriptionPage2 = DexDescription_Gallade_2,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
@@ -9978,8 +10221,8 @@ const struct PokedexEntry gPokedexEntries[] =
         .categoryName = _("Compass"),
         .height = 14,
         .weight = 3400,
-        .descriptionPage1 = DexDescription_Dummy_1,
-        .descriptionPage2 = DexDescription_Dummy_2,
+        .descriptionPage1 = DexDescription_Probopass_1,
+        .descriptionPage2 = DexDescription_Probopass_2,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
@@ -9989,8 +10232,8 @@ const struct PokedexEntry gPokedexEntries[] =
         .categoryName = _("Gripper"),
         .height = 22,
         .weight = 1066,
-        .descriptionPage1 = DexDescription_Dummy_1,
-        .descriptionPage2 = DexDescription_Dummy_2,
+        .descriptionPage1 = DexDescription_Dusknoir_1,
+        .descriptionPage2 = DexDescription_Dusknoir_2,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
@@ -10000,8 +10243,8 @@ const struct PokedexEntry gPokedexEntries[] =
         .categoryName = _("Snow Land"),
         .height = 13,
         .weight = 266,
-        .descriptionPage1 = DexDescription_Dummy_1,
-        .descriptionPage2 = DexDescription_Dummy_2,
+        .descriptionPage1 = DexDescription_Froslass_1,
+        .descriptionPage2 = DexDescription_Froslass_2,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
