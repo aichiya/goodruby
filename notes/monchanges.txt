@@ -347,6 +347,17 @@ ABILITY, STAT, AND MOVEPOOL CHANGES:
 
 
 EVOLUTION CHANGES:
+GOLBAT: Evolves to Crobat at level 36 or by friendship.
+CHANSEY: Evolves to Blissey at level 55 or by friendship.
+PICHU: Evolves to Pikachu at level 20 or by friendship.
+CLEFFA: Evolves to Clefairy at level 20 or by friendship.
+IGGLYBUFF: Evolves to Jigglypuff at level 20 or by friendship.
+TOGEPI: Evolves to Togetic at level 20 or by friendship.
+AZURILL: Evolves to Marill at level 20 or by friendship.
+BUDEW: Evolves to Roselia at level 20 or by friendship.
+CHINGLING: Evolves to Chimecho at level 20 or by friendship.
+MUNCHLAX: Evolves to Snorlax at level 40 or by friendship.
+
 KADABRA: Evolves to Alakazam at level 35.
 MACHOKE: Evolves to Machamp at level 40.
 GRAVELER: Evolves to Golem at level 38.
@@ -359,9 +370,9 @@ SCYTHER: Evolves to Scizor using a Dawn Stone.
 EEVEE: Evolves to Leafeon using a Leaf Stone. Evolves to Glaceon using an Ice Stone.
        Evolves to Espeon using a Sun Stone. Evolves to Umbreon using a Moon Stone.
        Evolves to Sylveon using a Shiny Stone.
-PORYGON: ?????
-PORYGON2: ?????
-CLAMPERL: ?????
+CLAMPERL: Evolves to Gorebyss using a Shiny Stone. Evolves to Huntail using a Dusk Stone.
+
+CURRENTLY UNIMPLEMENTED EVOS: Sneasel, Rhydon, Electabuzz, Magmar, Gligar, Porygon, Porygon2, Dusclops
 
 
 

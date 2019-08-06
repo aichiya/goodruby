@@ -1,6 +1,7 @@
 #include "global.h"
 #include "constants/hold_effects.h"
 #include "constants/items.h"
+#include "constants/maps.h"
 #include "constants/moves.h"
 #include "battle.h"
 #include "battle_message.h"
@@ -346,6 +347,35 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
                 break;
             case EVO_BEAUTY:
                 if (gEvolutionTable[species][i].param <= beauty)
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_MOVE:
+                {
+                    u16 move = gEvolutionTable[species][i].param;
+                    u8 j;
+                    for (j = 0; j < 4; j++)
+                        if (GetMonData(mon, MON_DATA_MOVE1 + j, 0) == move)
+                        {
+                            targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                            break;
+                        }
+                }
+                break;
+            case EVO_PARTY_MEMBER:
+                {
+                    u16 species = gEvolutionTable[species][i].param;
+                    u8 j;
+                    for (j = 0; j < 6; j++)
+                        if (GetMonData(&gPlayerParty[j], MON_DATA_SPECIES2, 0) == species)
+                        {
+                            targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                            break;
+                        }
+                }
+                break;
+            case EVO_MAGNETISM:
+                if (gSaveBlock1.location.mapGroup == MAP_GROUP(NEW_MAUVILLE_INSIDE) && 
+                    gSaveBlock1.location.mapNum == MAP_NUM(NEW_MAUVILLE_INSIDE))
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
             }

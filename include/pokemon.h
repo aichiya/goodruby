@@ -511,6 +511,9 @@ enum {
 #define EVO_BEAUTY           0x000f // Pokémon levels up with beauty ≥ specified value
 #define EVO_ITEM_MALE        0x0010 // Pokemon evolves by item if male (Kirlia->Gallade)
 #define EVO_ITEM_FEMALE      0x0011 // Pokemon evolves by item if female (Snorunt->Froslass)
+#define EVO_MOVE             0x0012 // Pokemon levels up while knowing the specified move
+#define EVO_PARTY_MEMBER     0x0013 // Pokemon levels up with the specified species in the party
+#define EVO_MAGNETISM        0x0014 // Pokemon levels up while in New Mauville interior
 
 struct Evolution
 {
