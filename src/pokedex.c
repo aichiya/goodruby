@@ -4633,7 +4633,7 @@ void sub_8091738(u16 num, u16 b, u16 c)
     u16 r7;
     u8 r3;
 
-    r12 = sMonFootprintTable[NationalPokedexNumToSpecies(num)];
+    r12 = sMonFootprintTable[NationalPokedexNumToSpecies(SPECIES_METAPOD)]; // trash hack to remove footprints
     for (r7 = 0, i = 0; i < 32; i++)
     {
         r3 = r12[i];
