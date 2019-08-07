@@ -105,10 +105,32 @@ const struct SpriteTemplate gBattleAnimSpriteTemplate_83DAB28 =
     .callback = sub_80DC9A0,
 };
 
+const struct SpriteTemplate gBattleAnimSpriteTemplate_ToxicThread1 =
+{
+    .tileTag = ANIM_TAG_STRING_DOT,
+    .paletteTag = ANIM_TAG_PURPLE_HAND_OUTLINE,
+    .oam = &gOamData_837DF24,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = sub_80DC9A0,
+};
+
 const struct SpriteTemplate gBattleAnimSpriteTemplate_83DAB40 =
 {
     .tileTag = ANIM_TAG_STRING,
     .paletteTag = ANIM_TAG_STRING,
+    .oam = &gOamData_837DF5C,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = sub_80DCA70,
+};
+
+const struct SpriteTemplate gBattleAnimSpriteTemplate_ToxicThread2 =
+{
+    .tileTag = ANIM_TAG_STRING,
+    .paletteTag = ANIM_TAG_PURPLE_HAND_OUTLINE,
     .oam = &gOamData_837DF5C,
     .anims = gDummySpriteAnimTable,
     .images = NULL,

@@ -17,6 +17,7 @@
 #include "trig.h"
 #include "util.h"
 #include "constants/items.h"
+#include "constants/moves.h"
 #include "constants/songs.h"
 
 extern int gUnknown_03005F0C;
@@ -2386,6 +2387,8 @@ void sub_8141DAC(u8 taskId)
         gBattleAnimArgs[0] = 3;
     else if (ewram17840.unk0 == 328)
         gBattleAnimArgs[0] = 4;
+    else if (ewram17840.unk0 == MOVE_INFESTATION)
+        gBattleAnimArgs[0] = 5;
     else
         gBattleAnimArgs[0] = 0;
 

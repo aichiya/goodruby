@@ -536,18 +536,19 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_MAGIC_GLEAM
 	.4byte Move_GRASS_KNOT
 	.4byte Move_TRICK_ROOM
-	.4byte PoundCopy
-	.4byte PoundCopy
-	.4byte PoundCopy
-	.4byte PoundCopy
-	.4byte PoundCopy
-	.4byte PoundCopy
-	.4byte PoundCopy
-	.4byte PoundCopy
-	.4byte PoundCopy
-	.4byte PoundCopy
-	.4byte Move_STRING_SHOT
+	.4byte Move_FELL_STINGER
+	.4byte Move_FINAL_GAMBIT
+	.4byte Move_LAST_RESORT
+	.4byte Move_CIRCLE_THROW
+	.4byte Move_MYSTIC_FIRE
+	.4byte Move_ROCK_WRECKER
+	.4byte Move_HORSEPOWER
+	.4byte Move_RAGE_POWDER
+	.4byte Move_BURN_UP
+	.4byte Move_TEARFUL_LOOK
+	.4byte Move_TOXIC_THREAD
     .4byte Move_ROUND
+	.4byte Move_SACRED_SWORD
 	.4byte PoundCopy
 
 	.align 2
@@ -10434,6 +10435,7 @@ General_TurnTrap: @ 81D6489
 	jumpargeq 0, 2, WhirlpoolHit
 	jumpargeq 0, 3, ClampHit
 	jumpargeq 0, 4, SandTombHit
+    jumpargeq 0, 5, SandTombHit
 	goto WrapHit
 WrapHit:
 	loadspritegfx ANIM_TAG_TENDRILS
@@ -11330,6 +11332,7 @@ Move_ICE_FANG:
 	end
 
 Move_PUPPY_EYES:
+Move_TEARFUL_LOOK:
 	loadspritegfx 10027
 	loadspritegfx 10084
 	monbg ANIM_BATTLER_ATTACKER
@@ -15727,9 +15730,6 @@ Move_TRICK_ROOM:
 	clearmonbg ANIM_BATTLER_DEF_PARTNER
 	end
 
-Move_INFESTATION:
-	end
-
 Move_ROUND:
 	loadspritegfx ANIM_TAG_MUSIC_NOTES
 	monbg ANIM_BATTLER_DEF_PARTNER
@@ -15751,3 +15751,112 @@ Move_ROUND:
 	createvisualtask sub_80CEAD8, 2
 	waitforvisualfinish
 	end
+
+Move_TOXIC_THREAD:
+	loadspritegfx ANIM_TAG_STRING
+	loadspritegfx ANIM_TAG_STRING_DOT
+    loadspritegfx ANIM_TAG_PURPLE_HAND_OUTLINE
+	monbg ANIM_BATTLER_DEF_PARTNER
+	delay 0
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_BATTLER_ATTACKER, 5, 1, 2, 0, 9, rgb(0, 0, 0)
+	waitforvisualfinish
+	loopsewithpan SE_W081, SOUND_PAN_ATTACKER, 9, 6
+	call _ToxicThreadSub
+	call _ToxicThreadSub
+	call _ToxicThreadSub
+	call _ToxicThreadSub
+	call _ToxicThreadSub
+	call _ToxicThreadSub
+	call _ToxicThreadSub
+	call _ToxicThreadSub
+	call _ToxicThreadSub
+	call _ToxicThreadSub
+	call _ToxicThreadSub
+	call _ToxicThreadSub
+	call _ToxicThreadSub
+	call _ToxicThreadSub
+	call _ToxicThreadSub
+	call _ToxicThreadSub
+	call _ToxicThreadSub
+	call _ToxicThreadSub
+	waitforvisualfinish
+	playsewithpan SE_W081B, SOUND_PAN_TARGET
+	createsprite gBattleAnimSpriteTemplate_ToxicThread2, ANIM_BATTLER_TARGET, 2, 0, 10
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_ToxicThread2, ANIM_BATTLER_TARGET, 2, 0, -2
+	delay 4
+	createsprite gBattleAnimSpriteTemplate_ToxicThread2, ANIM_BATTLER_TARGET, 2, 0, 22
+	waitforvisualfinish
+	clearmonbg ANIM_BATTLER_DEF_PARTNER
+	delay 1
+	waitforvisualfinish
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_BATTLER_ATTACKER, 5, 1, 2, 9, 0, rgb(0, 0, 0)
+	end
+_ToxicThreadSub:
+	createsprite gBattleAnimSpriteTemplate_ToxicThread1, ANIM_BATTLER_TARGET, 2, 20, 0, 512, 20, 1
+	delay 1
+	return
+
+Move_RAGE_POWDER:
+	loadspritegfx ANIM_TAG_POISON_POWDER
+	loadspritegfx ANIM_TAG_UNUSED_TONGUE
+	loopsewithpan SE_W077, SOUND_PAN_TARGET, 10, 6
+	createsprite gRagePowderParticleSpriteTemplate, ANIM_BATTLER_TARGET, 2, -30, -22, 117, 80, 5, 1
+	createsprite gRagePowderParticleSpriteTemplate, ANIM_BATTLER_TARGET, 2, 10, -22, 117, 80, -5, 1
+	createsprite gRagePowderParticleSpriteTemplate, ANIM_BATTLER_TARGET, 2, -25, -22, 117, 112, 5, 3
+	delay 15
+	createsprite gRagePowderParticleSpriteTemplate, ANIM_BATTLER_TARGET, 2, -5, -22, 117, 80, -5, 1
+	createsprite gRagePowderParticleSpriteTemplate, ANIM_BATTLER_TARGET, 2, 5, -22, 117, 96, 5, 1
+	createsprite gRagePowderParticleSpriteTemplate, ANIM_BATTLER_TARGET, 2, 0, -22, 117, 69, -5, 1
+	createsprite gRagePowderParticleSpriteTemplate, ANIM_BATTLER_TARGET, 2, -15, -22, 117, 112, 5, 2
+	delay 30
+	createsprite gRagePowderParticleSpriteTemplate, ANIM_BATTLER_TARGET, 2, -15, -22, 117, 112, 5, 2
+	createsprite gRagePowderParticleSpriteTemplate, ANIM_BATTLER_TARGET, 2, 15, -22, 117, 80, -5, 1
+	createsprite gRagePowderParticleSpriteTemplate, ANIM_BATTLER_TARGET, 2, -10, -22, 117, 96, 7, 2
+	createsprite gRagePowderParticleSpriteTemplate, ANIM_BATTLER_TARGET, 2, -5, -22, 117, 90, -8, 0
+	delay 20
+	createsprite gRagePowderParticleSpriteTemplate, ANIM_BATTLER_TARGET, 2, -10, -22, 117, 80, -5, 1
+	createsprite gRagePowderParticleSpriteTemplate, ANIM_BATTLER_TARGET, 2, 0, -22, 117, 89, 5, 2
+	createsprite gRagePowderParticleSpriteTemplate, ANIM_BATTLER_TARGET, 2, 20, -22, 117, 112, -8, 2
+	createsprite gRagePowderParticleSpriteTemplate, ANIM_BATTLER_TARGET, 2, 5, -22, 117, 80, 5, 1
+	waitforvisualfinish
+	end
+
+Move_INFESTATION:
+	loadspritegfx ANIM_TAG_MUD_SAND
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_BATTLER_ATTACKER, 0, 4, 2, 0, 7, rgb(19, 17, 0)
+	createvisualtask AnimTask_ShakeMon, 5, 1, 0, 2, 43, 1
+	playsewithpan SE_W328, SOUND_PAN_TARGET
+	call _InfestationSub
+	call _InfestationSub
+	call _InfestationSub
+	delay 22
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_BATTLER_ATTACKER, 0, 4, 2, 7, 0, rgb(19, 17, 0)
+	waitforvisualfinish
+	end
+_InfestationSub:
+	createsprite gBattleAnimSpriteTemplate_83DAC7C, ANIM_BATTLER_TARGET, 2, 0, 32, 528, 30, 10, 50, 1
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83DAC7C, ANIM_BATTLER_TARGET, 2, 0, 36, 480, 20, 13, -46, 1
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83DAC7C, ANIM_BATTLER_TARGET, 2, 0, 37, 576, 20, 5, 42, 1
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83DAC7C, ANIM_BATTLER_TARGET, 2, 0, 35, 400, 25, 8, -42, 1
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83DAC7C, ANIM_BATTLER_TARGET, 2, 0, 32, 512, 25, 13, 46, 1
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83DAC7C, ANIM_BATTLER_TARGET, 2, 0, 37, 464, 30, 12, -50, 1
+	delay 2
+	return
+
+Move_LAST_RESORT:
+Move_FELL_STINGER:
+Move_FINAL_GAMBIT:
+Move_CIRCLE_THROW:
+Move_MYSTIC_FIRE:
+Move_ROCK_WRECKER:
+Move_HORSEPOWER:
+Move_BURN_UP:
+Move_SACRED_SWORD:
+    goto Move_TACKLE
+    end

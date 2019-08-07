@@ -3491,7 +3491,7 @@ void SetMoveEffect(bool8 primary, u8 certainArg)
             BattleScriptPush(gBattlescriptCurrInstr + 1);
             gBattlescriptCurrInstr = gMoveEffectBS_Ptrs[gBattleCommunication[MOVE_EFFECT_BYTE]];
             gBattleCommunication[MULTISTRING_CHOOSER] = 0;
-            while (gBattleCommunication[MULTISTRING_CHOOSER] <= 4
+            while (gBattleCommunication[MULTISTRING_CHOOSER] <= 5
              && gCurrentMove != gTrappingMoves[gBattleCommunication[MULTISTRING_CHOOSER]])
                 gBattleCommunication[MULTISTRING_CHOOSER]++;
             break;

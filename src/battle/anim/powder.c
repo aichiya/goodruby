@@ -60,6 +60,17 @@ const struct SpriteTemplate gPoisonPowderParticleSpriteTemplate =
     .callback = AnimMovePowderParticle,
 };
 
+const struct SpriteTemplate gRagePowderParticleSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_POISON_POWDER,
+    .paletteTag = ANIM_TAG_UNUSED_TONGUE,
+    .oam = &gOamData_837DF64,
+    .anims = gSpriteAnimTable_83D6220,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimMovePowderParticle,
+};
+
 // Animates the falling particles that horizontally wave back and forth.
 // Used by Sleep Powder, Stun Spore, and Poison Powder.
 // arg 0: initial x pixel offset
