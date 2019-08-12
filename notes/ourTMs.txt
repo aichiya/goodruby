@@ -60,7 +60,7 @@
 60 - Hyper Voice
 61 - Will-o-Wisp
 62 - Acrobatics
-63 - Aqua Tail
+63 - Aqua Tail      Route 119
 64 - Explosion
 65 - Shadow Claw
 66 - Payback
@@ -84,7 +84,7 @@
 84 - Poison Jab
 85 - Dazzling Gleam
 86 - Grass Knot     Boy South of Rustboro
-87 - Signal Beam
+87 - Signal Beam    New Mauville
 88 - Sleep Talk
 89 - U-Turn
 90 - Substitute     Game Corner

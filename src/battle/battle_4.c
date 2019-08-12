@@ -731,6 +731,7 @@ static void sp47_burnup(void);
 static void sp48_lastresort(void);
 static void sp49_losemoney(void);
 static void sp4A_round(void);
+static void sp4B_jumpkickrecoil(void);
 
 
 void (* const gBattleScriptingCommandsTable[])(void) =
@@ -13373,6 +13374,7 @@ void (* const gBattleScriptingSpecialTable[])(void) =
 	sp48_lastresort,
     sp49_losemoney,
     sp4A_round,
+    sp4B_jumpkickrecoil,
 };
 
 
@@ -15064,4 +15066,9 @@ static void sp4A_round(void)
             i--;
         }
     }
+}
+
+static void sp4B_jumpkickrecoil(void)
+{
+    gBattleMoveDamage = gBattleMons[gBankAttacker].maxHP / 2;
 }

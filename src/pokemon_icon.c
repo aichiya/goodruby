@@ -908,19 +908,19 @@ const u8 gMonIconPaletteIndices[] =
     1, // Budew
     0, // Roserade
     2, // Ambipom
-    2, // Mismagius
-    2, // Honchkrow
-    1, // Chingling
+    0, // Mismagius
+    1, // Honchkrow
+    0, // Chingling
     1, // Bonsly
     0, // Mime Jr.
     0, // Happiny
-    0, // Munchlax
+    2, // Munchlax
     0, // Mantyke
     0, // Weavile
     0, // Magnezone
     1, // Lickilicky
     0, // Rhyperior
-    0, // Tangrowth
+    2, // Tangrowth
     1, // Electivire
     0, // Magmortar
     2, // Togekiss
@@ -933,8 +933,8 @@ const u8 gMonIconPaletteIndices[] =
     0, // Porygon-Z
     1, // Gallade
     0, // Probopass
-    1, // Dusknoir
-    0, // Froslass
+    2, // Dusknoir
+    2, // Froslass
     1, // Egg
     
     0, // Unown B

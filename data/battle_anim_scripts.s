@@ -13196,11 +13196,17 @@ Move_ACID_SPRAY:
 Move_HEX:
 	loadspritegfx 10221
 	loadspritegfx 10232
-	fadetobg 2
-	waitbgfadein
-	createsprite gBattleAnimSpriteTemplate_83D7C00, ANIM_BATTLER_TARGET, 2, 0, -24
+	loadspritegfx 10027
+	loadspritegfx 10084
+    
+	monbg ANIM_BATTLER_ATTACKER
+	monbgprio_28 0
+	setalpha 8, 8
 	playsewithpan SE_W060B, 63
+	createsprite gBattleAnimSpriteTemplate_PuppyEyes, ANIM_BATTLER_ATTACKER, 2, 24, -12
+	createvisualtask AnimTask_ScaleMonAndRestore, 5, -5, -5, 10, ANIM_BATTLER_ATTACKER, 1
 	waitforvisualfinish
+    
 	playsewithpan SE_W172B, 63
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BATTLER_TARGET, 4, 0, 13, 1
 	createsprite gBattleAnimSpriteTemplate_83D977C, ANIM_BATTLER_ATTACKER, 2, 0
@@ -13210,8 +13216,8 @@ Move_HEX:
 	createsprite gBattleAnimSpriteTemplate_83D977C, ANIM_BATTLER_ATTACKER, 2, 168
 	createsprite gBattleAnimSpriteTemplate_83D977C, ANIM_BATTLER_ATTACKER, 2, 210
 	waitforvisualfinish
-	restorebg
-	waitbgfadein
+	clearmonbg ANIM_BATTLER_ATTACKER
+	blendoff
 	end
 
 Move_SLUDGE_WAVE:
@@ -15849,11 +15855,46 @@ _InfestationSub:
 	delay 2
 	return
 
+Move_MYSTIC_FIRE:
+	loadspritegfx ANIM_TAG_SMALL_EMBER
+	loadspritegfx ANIM_TAG_MUD_SAND
+	monbg ANIM_BATTLER_DEF_PARTNER
+	monbgprio_28 1
+	setalpha 12, 8
+	createvisualtask AnimTask_ShakeMon, 5, 0, 0, 2, 46, 1
+	delay 6
+	createvisualtask shimmerFlexible, 5, ANIM_TAG_SMALL_EMBER, ANIM_TAG_MUD_SAND
+	panse_1B SE_W053, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, 2, 0
+	call _MysticFireSub
+	call _MysticFireSub
+	call _MysticFireSub
+	createvisualtask AnimTask_ShakeMon, 5, 1, 3, 0, 43, 1
+	call _MysticFireSub
+	call _MysticFireSub
+	call _MysticFireSub
+	call _MysticFireSub
+	call _MysticFireSub
+	call _MysticFireSub
+	call _MysticFireSub
+	call _MysticFireSub
+    delay 40
+	setarg 7, -1
+	waitforvisualfinish
+	clearmonbg ANIM_BATTLER_DEF_PARTNER
+	blendoff
+	end
+_MysticFireSub:
+	createsprite gBattleAnimSpriteTemplate_83D9268, ANIM_BATTLER_ATTACKER, 3, 10, 10, 0, 16
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83D9268, ANIM_BATTLER_ATTACKER, 3, 10, 10, 0, 16
+	delay 2
+	return
+    
+
 Move_LAST_RESORT:
 Move_FELL_STINGER:
 Move_FINAL_GAMBIT:
 Move_CIRCLE_THROW:
-Move_MYSTIC_FIRE:
 Move_ROCK_WRECKER:
 Move_HORSEPOWER:
 Move_BURN_UP:

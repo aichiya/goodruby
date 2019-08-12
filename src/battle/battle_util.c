@@ -3101,7 +3101,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 							}
 						}
 					}
-					if (gBattleMons[target2].hp != 0 && !bestMove)
+					if (gBattleMons[target2].hp != 0 && !bestMove && (gBattleTypeFlags & BATTLE_TYPE_DOUBLE))
 					{
 						for (j = 0; j < 4 && !bestMove; j++)
 						{

@@ -8911,16 +8911,18 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Haley5[] = {
     }
 };
 
-const struct TrainerMonNoItemDefaultMoves gTrainerParty_Sally[] = {
+const struct TrainerMonNoItemCustomMoves gTrainerParty_Sally[] = {
     {
 	.iv = 0,
 	.level = 17,
-	.species = SPECIES_SKITTY
+	.species = SPECIES_SKITTY,
+        .moves = MOVE_DOUBLE_SLAP, MOVE_DISARM_VOICE, MOVE_ATTRACT, MOVE_SING
     },
     {
 	.iv = 0,
 	.level = 17,
-	.species = SPECIES_BELLSPROUT
+	.species = SPECIES_BELLSPROUT,
+        .moves = MOVE_CUT, MOVE_VINE_WHIP, MOVE_WRAP, MOVE_SLEEP_POWDER
     }
 };
 

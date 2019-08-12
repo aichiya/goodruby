@@ -289,12 +289,12 @@ MauvilleCity_GameCorner_EventScript_156DEC:: @ 8156DEC
 
 MauvilleCity_GameCorner_EventScript_156E3C:: @ 8156E3C
 	checkcoins VAR_TEMP_2
-	compare VAR_TEMP_2, 3500
+	compare VAR_TEMP_2, 2500
 	goto_if_lt MauvilleCity_GameCorner_EventScript_156F5E
 	checkitemspace ITEM_TM32_DRAIN_PUNCH, 1
 	compare RESULT, 0
 	goto_if_eq MauvilleCity_GameCorner_EventScript_156F6C
-	takecoins 3500
+	takecoins 2500
 	giveitem ITEM_TM32_DRAIN_PUNCH, 1
 	updatecoinsbox 0, 0
 	playse SE_REGI
@@ -304,12 +304,12 @@ MauvilleCity_GameCorner_EventScript_156E3C:: @ 8156E3C
 
 MauvilleCity_GameCorner_EventScript_156E76:: @ 8156E76
 	checkcoins VAR_TEMP_2
-	compare VAR_TEMP_2, 3500
+	compare VAR_TEMP_2, 2500
 	goto_if_lt MauvilleCity_GameCorner_EventScript_156F5E
 	checkitemspace ITEM_TM54_FIRE_PUNCH, 1
 	compare RESULT, 0
 	goto_if_eq MauvilleCity_GameCorner_EventScript_156F6C
-	takecoins 3500
+	takecoins 2500
 	giveitem ITEM_TM54_FIRE_PUNCH, 1
 	updatecoinsbox 0, 0
 	playse SE_REGI
@@ -319,12 +319,12 @@ MauvilleCity_GameCorner_EventScript_156E76:: @ 8156E76
 
 MauvilleCity_GameCorner_EventScript_156EB0:: @ 8156EB0
 	checkcoins VAR_TEMP_2
-	compare VAR_TEMP_2, 3500
+	compare VAR_TEMP_2, 2500
 	goto_if_lt MauvilleCity_GameCorner_EventScript_156F5E
 	checkitemspace ITEM_TM55_ICE_PUNCH, 1
 	compare RESULT, 0
 	goto_if_eq MauvilleCity_GameCorner_EventScript_156F6C
-	takecoins 3500
+	takecoins 2500
 	giveitem ITEM_TM55_ICE_PUNCH, 1
 	updatecoinsbox 0, 0
 	playse SE_REGI
@@ -334,12 +334,12 @@ MauvilleCity_GameCorner_EventScript_156EB0:: @ 8156EB0
 
 MauvilleCity_GameCorner_EventScript_156EEA:: @ 8156EEA
 	checkcoins VAR_TEMP_2
-	compare VAR_TEMP_2, 3500
+	compare VAR_TEMP_2, 2500
 	goto_if_lt MauvilleCity_GameCorner_EventScript_156F5E
 	checkitemspace ITEM_TM56_THUNDER_PUNCH, 1
 	compare RESULT, 0
 	goto_if_eq MauvilleCity_GameCorner_EventScript_156F6C
-	takecoins 3500
+	takecoins 2500
 	giveitem ITEM_TM56_THUNDER_PUNCH, 1
 	updatecoinsbox 0, 0
 	playse SE_REGI

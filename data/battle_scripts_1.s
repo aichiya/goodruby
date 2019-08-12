@@ -929,7 +929,30 @@ BattleScript_EffectRecoilIfMiss: @ 81D7625
 	jumpifability USER, ABILITY_MAGIC_GUARD, BattleScript_EffectHit
 	attackcanceler
 	accuracycheck BattleScript_MoveMissedDoDamage, ACC_CURR_MOVE
-	goto BattleScript_HitFromAtkString
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation TARGET
+	waitstate
+	healthbarupdate TARGET
+	datahpupdate TARGET
+	critmessage
+	waitmessage 64
+	resultmessage
+	waitmessage 64
+	jumpifbyte COMMON_BITS, gMoveResultFlags, MOVE_RESULT_DOESNT_AFFECT_FOE, BattleScript_JumpKickCrash
+    
+	seteffectwithchance
+	tryfaintmon TARGET, FALSE, NULL
+	setbyte sMOVEEND_STATE, 0
+	moveend 0, 0
+	end
 
 BattleScript_MoveMissedDoDamage: @ 81D7632
 	attackstring
@@ -937,14 +960,13 @@ BattleScript_MoveMissedDoDamage: @ 81D7632
 	pause 64
 	resultmessage
 	waitmessage 64
-	jumpifbyte COMMON_BITS, gMoveResultFlags, MOVE_RESULT_DOESNT_AFFECT_FOE, BattleScript_MoveEnd
+
+BattleScript_JumpKickCrash:
 	printstring BATTLE_TEXT_KeptGoingCrash
 	waitmessage 64
-	damagecalc
-	typecalc
-	adjustnormaldamage
-	manipulatedamage 1
+    special 0x4B
 	bicbyte gMoveResultFlags, MOVE_RESULT_MISSED
+    bicbyte gMoveResultFlags, MOVE_RESULT_DOESNT_AFFECT_FOE
 	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
 	healthbarupdate USER
 	datahpupdate USER

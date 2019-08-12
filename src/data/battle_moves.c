@@ -964,7 +964,7 @@ const struct BattleMove gBattleMoves[] = {
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
         .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
-		.moveClass = CLASS_SPECIAL,
+		.moveClass = CLASS_STATUS,
     },
 
     [MOVE_GROWTH] = {

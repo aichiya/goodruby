@@ -22,7 +22,9 @@ LittlerootTown_Text_16A8FD:: @ 816A8FD
 	.string "You look good together with POKéMON!\p"
 	.string "Here, honey! If you're going out on an\n"
 	.string "adventure, wear these RUNNING SHOES.\p"
-	.string "They'll put a zip in your step!$"
+	.string "They'll put a zip in your step!\p"
+    .string "Oh? Wait, the box is empty.\n"
+    .string "You were already wearing them, huh?$"
 
 LittlerootTown_Text_16AA32:: @ 816AA32
 	.string "{PLAYER} switched shoes with the\n"

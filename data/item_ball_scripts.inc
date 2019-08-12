@@ -3,7 +3,7 @@ Route102_EventScript_1B1439:: @ 81B1439
 	end
 
 Route103_EventScript_1B1446:: @ 81B1446
-	giveitem_std ITEM_GUARD_SPEC, 1, 1
+	giveitem_std ITEM_SUPER_POTION, 1, 1
 	end
 
 Route104_EventScript_1B1453:: @ 81B1453
@@ -15,7 +15,7 @@ Route104_EventScript_1B1460:: @ 81B1460
 	end
 
 Route104_EventScript_1B146D:: @ 81B146D
-	giveitem_std ITEM_X_ACCURACY, 1, 1
+	giveitem_std ITEM_SUPER_POTION, 1, 1
 	end
 
 Route104_EventScript_1B147A:: @ 81B147A
@@ -39,7 +39,7 @@ Route110_EventScript_1B14AE:: @ 81B14AE
 	end
 
 Route110_EventScript_1B14BB:: @ 81B14BB
-	giveitem_std ITEM_DIRE_HIT, 1, 1
+	giveitem_std ITEM_SUPER_POTION, 1, 1
 	end
 
 Route111_EventScript_1B14C8:: @ 81B14C8
@@ -91,7 +91,7 @@ Route115_EventScript_1B1557:: @ 81B1557
 	end
 
 Route116_EventScript_1B1564:: @ 81B1564
-	giveitem_std ITEM_X_SPECIAL, 1, 1
+	giveitem_std ITEM_SUPER_POTION, 1, 1
 	end
 
 Route116_EventScript_1B1571:: @ 81B1571
@@ -131,7 +131,7 @@ Route119_EventScript_1B15D9:: @ 81B15D9
 	end
 
 Route119_EventScript_1B15E6:: @ 81B15E6
-	giveitem_std ITEM_LEAF_STONE, 1, 1
+	giveitem_std ITEM_TM63_AQUA_TAIL, 1, 1
 	end
 
 Route119_EventScript_1B15F3:: @ 81B15F3
@@ -227,11 +227,11 @@ PetalburgCity_EventScript_1B1711:: @ 81B1711
 	end
 
 MauvilleCity_EventScript_1B171E:: @ 81B171E
-	giveitem_std ITEM_X_SPEED, 1, 1
+	giveitem_std ITEM_SUPER_POTION, 1, 1
 	end
 
 RustboroCity_EventScript_1B172B:: @ 81B172B
-	giveitem_std ITEM_X_DEFEND, 1, 1
+	giveitem_std ITEM_SUPER_POTION, 1, 1
 	end
 
 LilycoveCity_EventScript_1B1738:: @ 81B1738
@@ -243,7 +243,7 @@ MossdeepCity_EventScript_1B1745:: @ 81B1745
 	end
 
 PetalburgWoods_EventScript_1B1752:: @ 81B1752
-	giveitem_std ITEM_X_ATTACK, 1, 1
+	giveitem_std ITEM_SUPER_POTION, 1, 1
 	end
 
 PetalburgWoods_EventScript_1B175F:: @ 81B175F
@@ -335,7 +335,7 @@ NewMauville_Inside_EventScript_1B1849:: @ 81B1849
 	end
 
 NewMauville_Inside_EventScript_1B1856:: @ 81B1856
-	giveitem_std ITEM_THUNDER_STONE, 1, 1
+	giveitem_std ITEM_TM87_SIGNAL_BEAM, 1, 1
 	end
 
 NewMauville_Inside_EventScript_1B1863:: @ 81B1863

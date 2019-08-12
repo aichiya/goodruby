@@ -7,4 +7,5 @@ OldaleTown_House1_Text_17476D:: @ 817476D
 	.string "It could give you an advantage.$"
 
 OldaleTown_House1_Text_chet:
-	.string "now cheating.$"
+	.string "CHOOSE THE NATURE OF\n"
+    .string "YOUR DESTRUCTOR$"
