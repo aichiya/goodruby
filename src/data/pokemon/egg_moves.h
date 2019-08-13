@@ -5805,6 +5805,7 @@ const u16 gCacneaEggMoves[] = {
     MOVE_SMELLING_SALT,
     MOVE_SWITCHEROO,
     MOVE_TEETER_DANCE,
+    MOVE_WEATHER_BALL,
     MOVE_WORRY_SEED,
     0,
 };
@@ -5827,6 +5828,7 @@ const u16 gCacturneEggMoves[] = {
     MOVE_SMELLING_SALT,
     MOVE_SWITCHEROO,
     MOVE_TEETER_DANCE,
+    MOVE_WEATHER_BALL,
     MOVE_WORRY_SEED,
     0,
 };

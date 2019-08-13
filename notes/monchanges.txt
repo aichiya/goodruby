@@ -299,6 +299,11 @@ ABILITY, STAT, AND MOVEPOOL CHANGES:
  * Now learns Superpower and Overheat by TM.
  * Now learns Hammer Arm by breeding.
 
+#331 Cacnea, #332 Cacturne
+ * Gained secondary ability Water Absorb.
+ * Hidden Ability Dry Skin replaced with Sand Stream.
+ * Now learns Weather Ball by breeding.
+
 #333 Swablu, #334 Altaria
  * Altaria's base stats changed: 75/70/90/70/105/80 (490) -> 75/70/90/70/125/80 (510).
 
@@ -409,6 +414,7 @@ Forecast: When using certain moves, changes the weather before attacking.
  * Castform will transform with the weather before attacking.
  * The weather changes occur even if the Pokemon with Forecast is not Castform.
 
+Sand Veil: Pokemon with this ability do not take damage from Sandstorm, regardless of type.
 
 
 ==============

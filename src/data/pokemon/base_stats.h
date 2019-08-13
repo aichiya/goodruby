@@ -11673,11 +11673,11 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_GRASS,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .ability1 = ABILITY_SAND_VEIL,
-        .ability2 = ABILITY_NONE,
+        .ability2 = ABILITY_WATER_ABSORB,
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_WATER_ABSORB,
+		.hiddenAbility = ABILITY_SAND_STREAM,
     },
 
     [SPECIES_CACTURNE] =
@@ -11707,11 +11707,11 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_GRASS,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .ability1 = ABILITY_SAND_VEIL,
-        .ability2 = ABILITY_NONE,
+        .ability2 = ABILITY_WATER_ABSORB,
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_WATER_ABSORB,
+		.hiddenAbility = ABILITY_SAND_STREAM,
     },
 
     [SPECIES_SNORUNT] =

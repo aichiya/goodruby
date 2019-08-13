@@ -553,3 +553,7 @@ VictoryRoad_B2F_EventScript_1B1AFA:: @ 81B1AFA
 GnarledRidge_EventScript_Item1::
 	giveitem_std ITEM_RARE_CANDY, 1, 1
 	end
+
+Route135_EventScript_Item1::
+    giveitem_std ITEM_TM81_X_SCISSOR, 1, 1
+    end
