@@ -858,23 +858,23 @@ const union AffineAnimCmd *const gSpriteAffineAnimTable_8215AC0[] = {
 const struct InGameTrade gIngameTrades[] = {
 #if ENGLISH
     {
-        _("MAKIT"), SPECIES_MAKUHITA,
-        5, 5, 4, 4, 4, 4,
+        _("Rita"), SPECIES_SMOOCHUM,
+        20, 10, 20, 20, 20, 20,
         TRUE, 49562,
-        5, 5, 5, 5, 30,
-        0x9C40,
-        ITEM_X_ATTACK, -1,
-        _("ELYSSA"), MALE, 10,
+        0, 0, 0, 0, 0,
+        0x12345678,
+        ITEM_CHARTI_BERRY, -1,
+        _("Darrell"), MALE, 0,
         SPECIES_SLAKOTH
     }, {
-        _("SKITIT"), SPECIES_SKITTY,
-        5, 4, 4, 5, 4, 4,
+        _("Prius"), SPECIES_TAUROS,
+        20, 20, 20, 10, 20, 20,
         FALSE, 2259,
-        5, 5, 30, 5, 5,
+        0, 0, 0, 0, 0,
         0x498A2E17,
-        ITEM_GLITTER_MAIL, 0,
-        _("DARRELL"), FEMALE, 10,
-        SPECIES_PIKACHU
+        ITEM_WHITE_HERB, -1,
+        _("Elyssa"), FEMALE, 0,
+        SPECIES_STARYU
     }, {
         _("COROSO"),
         SPECIES_CORSOLA,
