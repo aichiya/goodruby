@@ -401,7 +401,7 @@ ILLUMISE: Fluctuating -> Fast
 
 
 MOVE CHANGES:
-Crabhammer: Gains 10% chance to lower Defense [todo]
+Crabhammer: Gains 10% chance to lower Defense.
 
 ABILITY CHANGES:
 Flower Gift: Raises Attack, Defense, Special Attack, and Special Defense by 50% (instead of just Attack and Special Defense).

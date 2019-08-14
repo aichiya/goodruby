@@ -67,3 +67,7 @@ Route120_Text_171C5E:: @ 8171C5E
 Route120_Text_171C77:: @ 8171C77
 	.string "{0x7C} ROUTE 121\n"
 	.string "{0x7B} ROUTE 120$"
+
+Route120_Text_EndOfBeta::
+    .string "hey beta's over here, rest is\n"
+    .string "under construction, go home$"

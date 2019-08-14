@@ -225,6 +225,7 @@
 #define F_PUNCH                   (1 << 7)
 #define F_HEALING                 (1 << 8)
 #define F_BITING                  (1 << 9)
+#define F_CRITTY                  (1 << 10)
 
 #define CLASS_PHYSICAL 0
 #define CLASS_SPECIAL 1

@@ -349,3 +349,8 @@ Route120_EventScript_151AE7:: @ 8151AE7
 	trainerbattle 0, TRAINER_TSUNAO, 0, Route120_Text_1BF8C5, Route120_Text_1BF920
 	msgbox Route120_Text_1BF946, 6
 	end
+
+Route120_EventScript_BetaEnd::
+	msgbox Route120_Text_EndOfBeta, 4
+	release
+	end

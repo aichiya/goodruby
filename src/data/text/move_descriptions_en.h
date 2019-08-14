@@ -603,8 +603,8 @@ static const u8 MoveDescription_AcidArmor[] = _(
     "to sharply raise Defense.");
 
 static const u8 MoveDescription_Crabhammer[] = _(
-    "Hammers with a pincer. Has a\n"
-    "high critical-hit ratio.");
+    "May lower foe's Defense.\n"
+    "High critical-hit ratio.");
 
 static const u8 MoveDescription_Explosion[] = _(
     "Inflicts severe damage but\n"

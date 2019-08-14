@@ -5868,16 +5868,16 @@ BattleScript_EffectAllHitStart:
 	attackstring
 	ppreduce
 	selectfirstvalidtarget
-	attackanimation
-	waitanimation
 
 _AllHitDoStuff:
 	movevaluescleanup
+	accuracycheck _AllHitMissed, ACC_CURR_MOVE
 	critcalc
 	damagecalc
 	typecalc
 	adjustnormaldamage
-	accuracycheck _AllHitMissed, ACC_CURR_MOVE
+	attackanimation
+	waitanimation
 	effectivenesssound
 	hitanimation TARGET
 	waitstate
