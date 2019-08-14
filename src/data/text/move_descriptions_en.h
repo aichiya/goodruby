@@ -1023,7 +1023,7 @@ static const u8 MoveDescription_Swallow[] = _(
     "and restores HP.");
 
 static const u8 MoveDescription_HeatWave[] = _(
-    "Exhales a hot breath on the\n"
+    "Blows hot air at the\n"
     "foe. May inflict a burn.");
 
 static const u8 MoveDescription_Hail[] = _(
@@ -1099,8 +1099,8 @@ static const u8 MoveDescription_Ingrain[] = _(
     "The user can't switch out.");
 
 static const u8 MoveDescription_Superpower[] = _(
-    "Boosts strength sharply,\n"
-    "but lowers abilities.");
+    "Attacks at full strength, but\n"
+    "lowers Attack and Defense.");
 
 static const u8 MoveDescription_MagicCoat[] = _(
     "Reflects special effects\n"
@@ -1740,7 +1740,7 @@ static const u8 MoveDescription_ReflectType[] = _(
 
 static const u8 MoveDescription_ShadowClaw[] = _(
     "Slashes with sharp claws.\n"
-    "High critical-hit ratio.");
+    "High critical hit rate.");
 
 static const u8 MoveDescription_FoulPlay[] = _(
     "Uses the Attack stat of\n"
@@ -2064,7 +2064,7 @@ static const u8 MoveDescription_GrassKnot[] = _(
 
 static const u8 MoveDescription_TrickRoom[] = _(
     "Slow Pokémon move before\n"
-    "fast Pokémon for 4 turns.");
+    "fast Pokémon for 5 turns.");
 
 static const u8 MoveDescription_FellStinger[] = _(
     "Drastically raises Attack\n"

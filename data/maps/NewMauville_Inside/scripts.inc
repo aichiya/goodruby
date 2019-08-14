@@ -163,9 +163,9 @@ NewMauville_Inside_EventScript_15E8F6:: @ 815E8F6
 NewMauville_Inside_EventScript_15E900:: @ 815E900
 	lock
 	faceplayer
-	setwildbattle SPECIES_VOLTORB, 25, ITEM_NONE
+	setwildbattle SPECIES_ELECTRODE, 30, ITEM_NONE
 	waitse
-	playmoncry SPECIES_VOLTORB, 2
+	playmoncry SPECIES_ELECTRODE, 2
 	delay 40
 	waitmoncry
 	setflag FLAG_HIDE_VOLTORB_1_NEW_MAUVILLE
@@ -178,9 +178,9 @@ NewMauville_Inside_EventScript_15E900:: @ 815E900
 NewMauville_Inside_EventScript_15E91E:: @ 815E91E
 	lock
 	faceplayer
-	setwildbattle SPECIES_VOLTORB, 25, ITEM_NONE
+	setwildbattle SPECIES_ELECTRODE, 30, ITEM_NONE
 	waitse
-	playmoncry SPECIES_VOLTORB, 2
+	playmoncry SPECIES_ELECTRODE, 2
 	delay 40
 	waitmoncry
 	setflag FLAG_HIDE_VOLTORB_2_NEW_MAUVILLE
@@ -193,9 +193,9 @@ NewMauville_Inside_EventScript_15E91E:: @ 815E91E
 NewMauville_Inside_EventScript_15E93C:: @ 815E93C
 	lock
 	faceplayer
-	setwildbattle SPECIES_VOLTORB, 25, ITEM_NONE
+	setwildbattle SPECIES_ELECTRODE, 30, ITEM_NONE
 	waitse
-	playmoncry SPECIES_VOLTORB, 2
+	playmoncry SPECIES_ELECTRODE, 2
 	delay 40
 	waitmoncry
 	setflag FLAG_HIDE_VOLTORB_3_NEW_MAUVILLE
