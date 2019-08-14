@@ -1,7 +1,7 @@
 OldaleTown_House1_MapScripts:: @ 8152EEB
 	.byte 0
 
-OldaleTown_House1_EventScript_152EEC:: @ 8152EEC
+OldaleTown_House1_EventScript_Debug:: @ 8152EEC
 	lock
 	msgbox OldaleTown_House1_Text_chet, 2
     multichoice 12, 0, 73, 0
@@ -40,6 +40,6 @@ OldaleTown_House1_EventScript_End:
     release
     end
 
-Vanilla:
+OldaleTown_House1_EventScript_Vanilla::
 	msgbox OldaleTown_House1_Text_17476D, 2
 	end
