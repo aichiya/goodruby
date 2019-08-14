@@ -1108,6 +1108,24 @@ const struct WildPokemon Route107_LandMons [] =
 };
 const struct WildPokemonInfo Route107_LandMonsInfo = {20, Route107_LandMons};
 
+const struct WildPokemon Route109_LandMons [] =
+{
+    {24, 28, SPECIES_WINGULL},
+    {24, 28, SPECIES_EXEGGCUTE},
+    {24, 28, SPECIES_KRABBY},
+    {24, 28, SPECIES_MANTYKE},
+    {24, 28, SPECIES_LICKITUNG},
+    {24, 28, SPECIES_SKIPLOOM},
+    {24, 28, SPECIES_WINGULL},
+    {24, 28, SPECIES_EXEGGCUTE},
+    {24, 28, SPECIES_KRABBY},
+    {24, 28, SPECIES_MANTYKE},
+    {24, 28, SPECIES_KRABBY},
+    {24, 28, SPECIES_MANTYKE},
+};
+
+const struct WildPokemonInfo Route109_LandMonsInfo = {20, Route109_LandMons};
+
 const struct WildPokemon Route110_AltLandMons [] =
 {
     {12, 15, SPECIES_WINGULL},
@@ -2097,7 +2115,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
     {
         .mapGroup = MAP_GROUP(ROUTE109),
         .mapNum = MAP_NUM(ROUTE109),
-        .landMonsInfo = NULL,
+        .landMonsInfo = &Route109_LandMonsInfo,
         .waterMonsInfo = NULL, //&Route109_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &DewfordSeaRegion_FishingMonsInfo,
