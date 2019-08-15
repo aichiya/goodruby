@@ -2014,7 +2014,7 @@ static void atk01_accuracycheck(void)
             calc = (calc * 80) / 100; // 0.8 sand veil loss;
         if (WEATHER_HAS_EFFECT && targetAbility == ABILITY_SNOW_CLOAK && gBattleWeather & WEATHER_HAIL)
             calc = (calc * 80) / 100; // 0.8 snow cloak loss
-        if (gBattleMons[gBankAttacker].ability == ABILITY_HUSTLE && type < 9)
+        if (gBattleMons[gBankAttacker].ability == ABILITY_HUSTLE && gBattleMoves[move].moveClass == CLASS_PHYSICAL)
             calc = (calc * 80) / 100; // 1.2 hustle loss;
 		if (targetAbility == ABILITY_TANGLED_FEET && gBattleMons[gBankTarget].status2 & STATUS2_CONFUSION)
 			calc = (calc * 50) / 100; // 0.5 tangled feet loss
@@ -2289,6 +2289,9 @@ static void atk06_typecalc(void)
         else
             move_type = gBattleMoves[gCurrentMove].type;
 
+        if (gBattleMons[gBankAttacker].ability == ABILITY_PIXILATE && move_type == TYPE_NORMAL)
+            move_type = TYPE_FAIRY;
+
         //check stab
         if (gBattleMons[gBankAttacker].type1 == move_type || gBattleMons[gBankAttacker].type2 == move_type)
         {
@@ -2510,6 +2513,9 @@ u8 TypeCalc(u16 move, u8 bank_atk, u8 bank_def)
         return 0;
 
     move_type = gBattleMoves[move].type;
+
+    if (gBattleMons[bank_atk].ability == ABILITY_PIXILATE && move_type == TYPE_NORMAL)
+        move_type = TYPE_FAIRY;
 
     //check stab
     if (gBattleMons[bank_atk].type1 == move_type || gBattleMons[bank_atk].type2 == move_type)

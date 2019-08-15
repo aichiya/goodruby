@@ -555,6 +555,10 @@ gAbilityDescription_FlowerGift:
     .string "In sun, +50% to own and\n"
     .string "ally stats except Speed.$"
 
+gAbilityDescription_Pixilate:
+    .string "Normal moves become Fairy\n"
+    .string "and are 20% stronger.$"
+
 	.align 2
 gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_None
@@ -706,7 +710,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_ToxicBoost
 	.4byte gAbilityDescription_HeavyMetal
 	.4byte gAbilityDescription_StormDrain
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_Pixilate
 	.4byte gAbilityDescription_Unimplemented
     .4byte gAbilityDescription_FurCoat
     .4byte gAbilityDescription_RoughSkin

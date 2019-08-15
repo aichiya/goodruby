@@ -299,6 +299,13 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
 
     adjustBasePower(attacker, defender, move, defenderAbility, bankAtk, bankDef);
 
+    if (attacker->ability == ABILITY_PIXILATE && type == TYPE_NORMAL)
+    {
+        type = TYPE_FAIRY;
+        attack = (attack * 12) / 10;
+        spAttack = (spAttack * 12) / 10;
+    }
+
     if (attacker->ability == ABILITY_HUGE_POWER || attacker->ability == ABILITY_PURE_POWER)
         attack *= 2;
 
