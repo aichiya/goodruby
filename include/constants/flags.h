@@ -756,6 +756,11 @@
 #define FLAG_ITEM_GRANITE_CAVE_B3F_2        0x472
 #define FLAG_ITEM_GRANITE_CAVE_B3F_3        0x473
 #define FLAG_ITEM_ROUTE135_0                0x474
+#define FLAG_ROUTE_111_ROCK_1               0x475
+#define FLAG_ROUTE_111_ROCK_2               0x476
+#define FLAG_ROUTE_135_ROCK_1               0x477
+#define FLAG_ROUTE_135_ROCK_2               0x478
+#define FLAG_ROUTE_135_ROCK_3               0x479
 
 #define FLAG_DEFEATED_RUSTBORO_GYM          0x4B1
 
