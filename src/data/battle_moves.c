@@ -4539,7 +4539,7 @@ const struct BattleMove gBattleMoves[] = {
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
         .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT | F_CRITTY,
-		.moveClass = CLASS_SPECIAL,
+		.moveClass = CLASS_PHYSICAL,
     },
 
     [MOVE_DRAGON_DANCE] = {

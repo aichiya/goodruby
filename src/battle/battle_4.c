@@ -2131,12 +2131,20 @@ static void atk04_critcalc(void)
 
     gStringBank = gBankAttacker;
 
-    critChance  = 2 * ((gBattleMons[gBankAttacker].status2 & STATUS2_FOCUS_ENERGY) != 0)
-                + (gBattleMoves[gCurrentMove].flags & F_CRITTY)
-                + (gBattleMons[gBankAttacker].ability == ABILITY_SUPER_LUCK)
-                + (holdEffect == HOLD_EFFECT_SCOPE_LENS)
-                + 2 * (holdEffect == HOLD_EFFECT_LUCKY_PUNCH && gBattleMons[gBankAttacker].species == SPECIES_CHANSEY)
-                + 2 * (holdEffect == HOLD_EFFECT_STICK && gBattleMons[gBankAttacker].species == SPECIES_FARFETCHD);
+    critChance = 0;
+    
+    if (gBattleMons[gBankAttacker].status2 & STATUS2_FOCUS_ENERGY)
+        critChance += 2;
+    if (gBattleMoves[gCurrentMove].flags & F_CRITTY)
+        critChance++;
+    if (gBattleMons[gBankAttacker].ability == ABILITY_SUPER_LUCK)
+        critChance++;
+    if (holdEffect == HOLD_EFFECT_SCOPE_LENS)
+        critChance++;
+    if (holdEffect == HOLD_EFFECT_LUCKY_PUNCH && gBattleMons[gBankAttacker].species == SPECIES_CHANSEY)
+        critChance += 2;
+    if (holdEffect == HOLD_EFFECT_STICK && gBattleMons[gBankAttacker].species == SPECIES_FARFETCHD)
+        critChance += 2;
 	
 	if (gCurrentMove == MOVE_STORM_THROW || gCurrentMove == MOVE_FROST_BREATH)
 		critChance = 4;
