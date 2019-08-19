@@ -176,18 +176,18 @@ Route114_EventScript_StoneManiacFireStone::
 	goto_if_eq Route114_EventScript_StoneManiacCantCarry
     goto Route114_EventScript_StoneManiacConfirm
 
-Route114_EventScript_StoneManiacThunderStone::
+Route114_EventScript_StoneManiacWaterStone::
 	setvar VAR_TEMP_1, 2
-	bufferitemname 0, ITEM_THUNDER_STONE
-	checkitemspace ITEM_THUNDER_STONE, 1
+	bufferitemname 0, ITEM_WATER_STONE
+	checkitemspace ITEM_WATER_STONE, 1
 	compare RESULT, 0
 	goto_if_eq Route114_EventScript_StoneManiacCantCarry
     goto Route114_EventScript_StoneManiacConfirm
 
-Route114_EventScript_StoneManiacWaterStone::
+Route114_EventScript_StoneManiacThunderStone::
 	setvar VAR_TEMP_1, 3
-	bufferitemname 0, ITEM_WATER_STONE
-	checkitemspace ITEM_WATER_STONE, 1
+	bufferitemname 0, ITEM_THUNDER_STONE
+	checkitemspace ITEM_THUNDER_STONE, 1
 	compare RESULT, 0
 	goto_if_eq Route114_EventScript_StoneManiacCantCarry
     goto Route114_EventScript_StoneManiacConfirm

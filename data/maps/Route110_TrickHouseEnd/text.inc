@@ -21,14 +21,14 @@ Route110_TrickHouseEnd_Text_19C3A7:: @ 819C3A7
 	.string "one, two, three, four places!$"
 
 Route110_TrickHouseEnd_Text_19C41F:: @ 819C41F
-	.string "It took me all night to shove in those\n"
-	.string "boulders...\p"
+	.string "It took me all night to make MECHADOLLS\n"
+	.string "and another to think up the quiz...\p"
 	.string "You're almost my equal in greatness by\n"
 	.string "one, two, three places!$"
 
 Route110_TrickHouseEnd_Text_19C491:: @ 819C491
-	.string "It took me all night to make MECHADOLLS\n"
-	.string "and another to think up the quiz...\p"
+	.string "It took me all night to shove in those\n"
+	.string "boulders...\p"
 	.string "You're almost my equal in greatness by\n"
 	.string "one, two places!$"
 

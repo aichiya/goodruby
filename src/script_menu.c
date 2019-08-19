@@ -141,107 +141,110 @@ const struct MenuAction MultichoiceList_24[] =
 
 const struct MenuAction MultichoiceList_25[] =
 {
-    {OtherText_Zigzagoon, NULL},
-    {OtherText_Nincada, NULL},
-    {OtherText_Poochyena, NULL},
+    {OtherText_Quiz111, NULL},
+    {OtherText_Quiz112, NULL},
+    {OtherText_Quiz113, NULL},
 };
 
 const struct MenuAction MultichoiceList_26[] =
 {
-    {OtherText_Nincada2, NULL},
-    {OtherText_Lotad, NULL},
-    {OtherText_Roselia, NULL},
+    {OtherText_Quiz121, NULL},
+    {OtherText_Quiz122, NULL},
+    {OtherText_Quiz123, NULL},
 };
 
 const struct MenuAction MultichoiceList_27[] =
 {
-    {OtherText_Shroomish, NULL},
-    {OtherText_Nincada3, NULL},
-    {OtherText_Surskit, NULL},
+    {OtherText_Quiz131, NULL},
+    {OtherText_Quiz132, NULL},
+    {OtherText_Quiz133, NULL},
 };
 
 const struct MenuAction MultichoiceList_28[] =
 {
-    {OtherText_Treecko, NULL},
-    {OtherText_Torchic, NULL},
-    {OtherText_Mudkip, NULL},
+    {OtherText_Quiz211, NULL},
+    {OtherText_Quiz212, NULL},
+    {OtherText_Quiz213, NULL},
 };
 
 const struct MenuAction MultichoiceList_29[] =
 {
-    {OtherText_Seedot, NULL},
-    {OtherText_Shroomish2, NULL},
-    {OtherText_Spinda, NULL},
+    {OtherText_Quiz221, NULL},
+    {OtherText_Quiz222, NULL},
+    {OtherText_Quiz223, NULL},
 };
 
 const struct MenuAction MultichoiceList_30[] =
 {
-    {OtherText_Shroomish3, NULL},
-    {OtherText_Zigzagoon2, NULL},
-    {OtherText_Wurmple, NULL},
+    {OtherText_Quiz231, NULL},
+    {OtherText_Quiz232, NULL},
+    {OtherText_Quiz233, NULL},
 };
 
 const struct MenuAction MultichoiceList_31[] =
 {
-    {OtherText_PokeBall, NULL},
-    {OtherText_SuperPotion, NULL},
-    {OtherText_SamePrice, NULL},
+    {OtherText_Quiz311, NULL},
+    {OtherText_Quiz312, NULL},
+    {OtherText_Quiz313, NULL},
 };
 
 const struct MenuAction MultichoiceList_32[] =
 {
-    {OtherText_Yen135, NULL},
-    {OtherText_Yen155, NULL},
-    {OtherText_Yen175, NULL},
+    {OtherText_Quiz321, NULL},
+    {OtherText_Quiz322, NULL},
+    {OtherText_Quiz323, NULL},
 };
 
 const struct MenuAction MultichoiceList_33[] =
 {
-    {OtherText_CostMore, NULL},
-    {OtherText_CostLess, NULL},
-    {OtherText_SamePrice2, NULL},
+    {OtherText_Quiz331, NULL},
+    {OtherText_Quiz332, NULL},
+    {OtherText_Quiz333, NULL},
 };
 
 const struct MenuAction MultichoiceList_34[] =
 {
-    {OtherText_MaleSymbol, NULL},
-    {OtherText_FemaleSymbol, NULL},
-    {OtherText_Neither, NULL},
+    {OtherText_Quiz411, NULL},
+    {OtherText_Quiz412, NULL},
+    {OtherText_Quiz413, NULL},
 };
 
 const struct MenuAction MultichoiceList_35[] =
 {
-    {OtherText_Males, NULL},
-    {OtherText_Females, NULL},
-    {OtherText_SameNumber, NULL},
+    {OtherText_Quiz421, NULL},
+    {OtherText_Quiz422, NULL},
+    {OtherText_Quiz423, NULL},
 };
 
 const struct MenuAction MultichoiceList_36[] =
 {
-    {OtherText_Male, NULL},
-    {OtherText_Female, NULL},
-    {OtherText_ItDepends, NULL},
+    {OtherText_Quiz431, NULL},
+    {OtherText_Quiz432, NULL},
+    {OtherText_Quiz433, NULL},
 };
 
 const struct MenuAction MultichoiceList_37[] =
 {
-    {OtherText_Six2, NULL},
-    {OtherText_Eight2, NULL},
-    {OtherText_Ten, NULL},
+    {OtherText_Quiz511, NULL},
+    {OtherText_Quiz512, NULL},
+    {OtherText_Quiz513, NULL},
+    {OtherText_Quiz514, NULL},
 };
 
 const struct MenuAction MultichoiceList_38[] =
 {
-    {OtherText_One, NULL},
-    {OtherText_Two, NULL},
-    {OtherText_Three, NULL},
+    {OtherText_Quiz521, NULL},
+    {OtherText_Quiz522, NULL},
+    {OtherText_Quiz523, NULL},
+    {OtherText_Quiz524, NULL},
 };
 
 const struct MenuAction MultichoiceList_39[] =
 {
-    {OtherText_Six, NULL},
-    {OtherText_Seven, NULL},
-    {OtherText_Eight, NULL},
+    {OtherText_Quiz531, NULL},
+    {OtherText_Quiz532, NULL},
+    {OtherText_Quiz533, NULL},
+    {OtherText_Quiz534, NULL},
 };
 
 const struct MenuAction MultichoiceList_42[] =
