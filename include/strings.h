@@ -397,6 +397,7 @@ extern const u8 gOtherText_Defense[];
 extern const u8 gOtherText_SpAtk[];
 extern const u8 gOtherText_SpDef[];
 extern const u8 gOtherText_Speed[];
+extern const u8 gOtherText_Balance[];
 extern const u8 gOtherText_HP[];
 extern const u8 gOtherText_Terminator18[];
 extern const u8 gOtherText_OriginalTrainer[];

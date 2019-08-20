@@ -548,6 +548,56 @@ const struct MenuAction MultichoiceList_82[] =
     {OtherText_Blue, NULL},
 };
 
+const struct MenuAction MultichoiceList_83[] = 
+{
+    {gOtherText_Attack, NULL},
+    {gOtherText_Defense, NULL},
+    {gOtherText_SpAtk, NULL},
+    {gOtherText_SpDef, NULL},
+    {gOtherText_Speed, NULL},
+    {gOtherText_Balance, NULL},
+};
+
+const struct MenuAction MultichoiceList_84[] = 
+{
+    {gOtherText_Defense, NULL},
+    {gOtherText_SpAtk, NULL},
+    {gOtherText_SpDef, NULL},
+    {gOtherText_Speed, NULL},
+};
+
+const struct MenuAction MultichoiceList_85[] = 
+{
+    {gOtherText_Attack, NULL},
+    {gOtherText_SpAtk, NULL},
+    {gOtherText_SpDef, NULL},
+    {gOtherText_Speed, NULL},
+};
+
+const struct MenuAction MultichoiceList_86[] = 
+{
+    {gOtherText_Attack, NULL},
+    {gOtherText_Defense, NULL},
+    {gOtherText_SpDef, NULL},
+    {gOtherText_Speed, NULL},
+};
+
+const struct MenuAction MultichoiceList_87[] = 
+{
+    {gOtherText_Attack, NULL},
+    {gOtherText_Defense, NULL},
+    {gOtherText_SpAtk, NULL},
+    {gOtherText_Speed, NULL},
+};
+
+const struct MenuAction MultichoiceList_88[] = 
+{
+    {gOtherText_Attack, NULL},
+    {gOtherText_Defense, NULL},
+    {gOtherText_SpAtk, NULL},
+    {gOtherText_SpDef, NULL},
+};
+
 const struct MenuAction MultichoiceList_01[] =
 {
     {gOtherText_CancelNoTerminator, NULL},
@@ -644,6 +694,12 @@ const struct MultichoiceListStruct gMultichoiceLists[] =
     {MultichoiceList_80, ARRAY_COUNT(MultichoiceList_80)},
     {MultichoiceList_81, ARRAY_COUNT(MultichoiceList_81)},
     {MultichoiceList_82, ARRAY_COUNT(MultichoiceList_82)},
+    {MultichoiceList_83, ARRAY_COUNT(MultichoiceList_83)},
+    {MultichoiceList_84, ARRAY_COUNT(MultichoiceList_84)},
+    {MultichoiceList_85, ARRAY_COUNT(MultichoiceList_85)},
+    {MultichoiceList_86, ARRAY_COUNT(MultichoiceList_86)},
+    {MultichoiceList_87, ARRAY_COUNT(MultichoiceList_87)},
+    {MultichoiceList_88, ARRAY_COUNT(MultichoiceList_88)},
 };
 
 const u8 *const gUnknown_083CE048[] =

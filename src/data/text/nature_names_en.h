@@ -24,6 +24,32 @@ static const u8 NatureName_Sassy[]   = _("Sassy");
 static const u8 NatureName_Careful[] = _("Careful");
 static const u8 NatureName_Quirky[]  = _("Quirky");
 
+static const u8 AltNatureName_Hardy[]   = _("Balanced");
+static const u8 AltNatureName_Lonely[]  = _("+Atk/-Def");
+static const u8 AltNatureName_Brave[]   = _("+Atk/-Spe");
+static const u8 AltNatureName_Adamant[] = _("+Atk/-SpA");
+static const u8 AltNatureName_Naughty[] = _("+Atk/-SpD");
+static const u8 AltNatureName_Bold[]    = _("+Def/-Atk");
+static const u8 AltNatureName_Docile[]  = _("Balanced");
+static const u8 AltNatureName_Relaxed[] = _("+Def/-Spe");
+static const u8 AltNatureName_Impish[]  = _("+Def/-SpA");
+static const u8 AltNatureName_Lax[]     = _("+Def/-SpD");
+static const u8 AltNatureName_Timid[]   = _("+Spe/-Atk");
+static const u8 AltNatureName_Hasty[]   = _("+Spe/-Def");
+static const u8 AltNatureName_Serious[] = _("Balanced");
+static const u8 AltNatureName_Jolly[]   = _("+Spe/-SpA");
+static const u8 AltNatureName_Naive[]   = _("+Spe/-SpD");
+static const u8 AltNatureName_Modest[]  = _("+SpA/-Atk");
+static const u8 AltNatureName_Mild[]    = _("+SpA/-Def");
+static const u8 AltNatureName_Quiet[]   = _("+SpA/-Spe");
+static const u8 AltNatureName_Bashful[] = _("Balanced");
+static const u8 AltNatureName_Rash[]    = _("+SpA/-SpD");
+static const u8 AltNatureName_Calm[]    = _("+SpD/-Atk");
+static const u8 AltNatureName_Gentle[]  = _("+SpD/-Def");
+static const u8 AltNatureName_Sassy[]   = _("+SpD/-Spe");
+static const u8 AltNatureName_Careful[] = _("+SpD/-SpA");
+static const u8 AltNatureName_Quirky[]  = _("Balanced");
+
 const u8 * const gNatureNames[] = {
     NatureName_Hardy,
     NatureName_Lonely,
@@ -50,4 +76,29 @@ const u8 * const gNatureNames[] = {
     NatureName_Sassy,
     NatureName_Careful,
     NatureName_Quirky,
+    AltNatureName_Hardy,
+    AltNatureName_Lonely,
+    AltNatureName_Brave,
+    AltNatureName_Adamant,
+    AltNatureName_Naughty,
+    AltNatureName_Bold,
+    AltNatureName_Docile,
+    AltNatureName_Relaxed,
+    AltNatureName_Impish,
+    AltNatureName_Lax,
+    AltNatureName_Timid,
+    AltNatureName_Hasty,
+    AltNatureName_Serious,
+    AltNatureName_Jolly,
+    AltNatureName_Naive,
+    AltNatureName_Modest,
+    AltNatureName_Mild,
+    AltNatureName_Quiet,
+    AltNatureName_Bashful,
+    AltNatureName_Rash,
+    AltNatureName_Calm,
+    AltNatureName_Gentle,
+    AltNatureName_Sassy,
+    AltNatureName_Careful,
+    AltNatureName_Quirky,
 };

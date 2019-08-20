@@ -131,6 +131,7 @@
 #define FRIENDSHIP_EVENT_FAINT_SMALL          0x6
 #define FRIENDSHIP_EVENT_FAINT_OUTSIDE_BATTLE 0x7
 #define FRIENDSHIP_EVENT_FAINT_LARGE          0x8
+#define FRIENDSHIP_EVENT_NATURE_CHANGE        0x9
 
 #define STATUS_PRIMARY_NONE      0x0
 #define STATUS_PRIMARY_POISON    0x1
@@ -613,6 +614,7 @@ void RemoveBattleMonPPBonus(struct BattlePokemon *mon, u8 moveIndex);
 void CopyPlayerPartyMonToBattleData(u8 battleIndex, u8 partyIndex);
 
 u8 GetNature(struct Pokemon *mon);
+u8 GetNatureStringIndex(struct Pokemon *mon);
 u8 GetNatureFromPersonality(u32 personality);
 
 u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem);

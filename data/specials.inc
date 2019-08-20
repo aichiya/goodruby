@@ -355,3 +355,4 @@ gSpecials::
     def_special CheckSurfBulldoze
     def_special CheckSixFlatLevels
     def_special CheckPoisonedPoison
+    def_special SetNatureOverride

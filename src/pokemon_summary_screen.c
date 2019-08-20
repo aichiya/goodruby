@@ -3006,12 +3006,20 @@ static void PokemonSummaryScreen_PrintTrainerMemo(struct Pokemon *mon, u8 left, 
     u8 locationMet;
     u8 gameMet;
     u8 *ptr = gStringVar4;
-    u8 nature = GetNature(mon);
+    u8 nature = GetNatureStringIndex(mon);
     
     SummaryScreen_SetTextColor(ptr, 0);
 
-    ptr = SummaryScreen_CopyColoredString(ptr, gNatureNames[nature], 14);
-    ptr = StringCopy(ptr, gOtherText_Nature);
+    if (nature < 25)
+    {
+        ptr = SummaryScreen_CopyColoredString(ptr, gNatureNames[nature], 14);
+        ptr = StringCopy(ptr, gOtherText_Nature);
+    }
+    else
+    {
+        ptr = SummaryScreen_CopyColoredString(ptr, gNatureNames[nature], 15);
+        ptr = StringCopy(ptr, gOtherText_Training);
+    }
 
     if (PokemonSummaryScreen_CheckOT(mon) == TRUE)
     {

@@ -423,6 +423,9 @@ gOtherText_Terminator4:: @ 842D0E6
 gOtherText_Nature:: @ 842D0E7
 	.string " nature, $"
 
+gOtherText_Training::
+	.string " training, $"
+
 gOtherText_Comma:: @ 842D0F1
 	.string ",$"
 

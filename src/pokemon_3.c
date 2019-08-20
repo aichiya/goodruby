@@ -263,6 +263,14 @@ u8 GetNature(struct Pokemon *mon)
     return GetMonData(mon, MON_DATA_PERSONALITY, 0) % 25;
 }
 
+u8 GetNatureStringIndex(struct Pokemon *mon)
+{
+    u32 nature = GetMonData(mon, MON_DATA_NATURE_OVERRIDE, 0);
+    if (nature)
+        return nature + 25;
+    return GetMonData(mon, MON_DATA_PERSONALITY, 0) % 25;
+}
+
 u8 GetNatureFromPersonality(u32 personality)
 {
     return personality % 25;
@@ -705,6 +713,7 @@ static const s8 sFriendshipEventDeltas[][3] = {
     {-1, -1,  -1}, // FRIENDSHIP_EVENT_FAINT_SMALL
     {-5, -5, -10}, // FRIENDSHIP_EVENT_FAINT_OUTSIDE_BATTLE
     {-5, -5, -10}, // FRIENDSHIP_EVENT_FAINT_LARGE
+    {-20, -20, -30}, // FRIENDSHIP_EVENT_NATURE_CHANGE
 };
 
 void AdjustFriendship(struct Pokemon *mon, u8 event)
@@ -1505,4 +1514,17 @@ bool32 unref_sub_8040DAC(struct Pokemon *mon)
     u8 language = GetMonData(mon, MON_DATA_LANGUAGE, 0);
     GetMonData(mon, MON_DATA_NICKNAME, name);
     return ShouldHideGenderIconForLanguage(species, name, language);
+}
+
+void SetNatureOverride(void)
+{
+    if (gSpecialVar_0x8001 != GetNature(&gPlayerParty[gSpecialVar_0x8004]))
+    {
+        SetMonData(&(gPlayerParty[gSpecialVar_0x8004]), MON_DATA_NATURE_OVERRIDE, &gSpecialVar_0x8001);
+        CalculateMonStats(&(gPlayerParty[gSpecialVar_0x8004]));
+        gSpecialVar_Result = 1;
+        AdjustFriendship(&(gPlayerParty[gSpecialVar_0x8004]), FRIENDSHIP_EVENT_NATURE_CHANGE);
+    }
+    else
+        gSpecialVar_Result = 0;
 }

@@ -263,6 +263,7 @@ extern const u8 gLandmarkName_HuntersHouse[];
 // pokemon_summary_screen
 extern const u8 gOtherText_Terminator4[];
 extern const u8 gOtherText_Nature[];
+extern const u8 gOtherText_Training[];
 extern const u8 gOtherText_Comma[];
 extern const u8 gOtherText_Met[];
 extern const u8 gOtherText_Egg2[];
