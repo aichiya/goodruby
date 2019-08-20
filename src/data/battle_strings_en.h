@@ -435,6 +435,11 @@ enum
     BATTLE_TEXT_LosingPrize,
     BATTLE_TEXT_LosingWild,
     BATTLE_TEXT_HailWhippedUp,
+    BATTLE_TEXT_AuraDefSharply,
+    BATTLE_TEXT_AuraOne,
+    BATTLE_TEXT_AuraTwo,
+    BATTLE_TEXT_AuraOneSharply,
+    BATTLE_TEXT_AuraTwoSharply,
 };
 
 const u8 BattleText_UnknownString[] = _("{STRING 33}");
@@ -763,7 +768,7 @@ const u8 BattleText_IgnoredThing[] = _("{STRING 3} completely ignored\nthe {STRI
 const u8 BattleText_ThrewBlock[] = _("{STRING 32} threw a {POKEBLOCK}\nat the {STRING 3}!");
 const u8 BattleText_SafariOver[] = _("{PLAY_SE SE_PINPON}ANNOUNCER: You're out of\nSafari Balls! Game over!\p");
 const u8 BattleText_WildAppeared1[] = _("Wild {STRING 3} appeared!\p");
-const u8 BattleText_WildAppeared2[] = _("Wild {STRING 3} appeared!\p");
+const u8 BattleText_WildAppeared2[] = _("{STRING 3} appeared!\p");
 const u8 BattleText_WildAppeared3[] = _("Wild {STRING 3} appeared!{PAUSE 127}");
 const u8 BattleText_WildDoubleAppeared[] = _("Wild {STRING 5} and\n{STRING 3} appeared!\p");
 const u8 BattleText_SingleWantToBattle1[] = _("{STRING 25} {STRING 26}\nwould like to battle!\p");
@@ -1000,6 +1005,10 @@ const u8 BattleText_BurntUp[] = _("{ATTACKING_MON} burnt away\nits Fire type!");
 const u8 BattleText_LosingPrize[] = _("{STRING 32} gave ¥{STRING 0}\nto the winner...\p");
 const u8 BattleText_LosingWild[] = _("{STRING 32} panicked and\ndropped ¥{STRING 0}...\p");
 const u8 BattleText_HailWhippedUp[] = _("{STRING 16}'s {STRING 23}\nwhipped up a hailstorm!");
+const u8 BattleText_AuraOne[] = _("{STRING 3}'s aura flared to life!\nIts {STRING 0} rose!\p");
+const u8 BattleText_AuraTwo[] = _("{STRING 3}'s aura flared to life!\nIts {STRING 0} and {STRING 1} rose!\p");
+const u8 BattleText_AuraOneSharply[] = _("{STRING 3}'s aura flared to life!\nIts {STRING 0} rose sharply!\p");
+const u8 BattleText_AuraTwoSharply[] = _("{STRING 3}'s aura flared to life!\nIts {STRING 0} and {STRING 1} rose sharply!\p");
 
 
 const u8 *const gUnknown_08400F58[] =
@@ -1458,6 +1467,10 @@ const u8 *const gBattleStringsTable[] =
     BattleText_LosingPrize,
     BattleText_LosingWild,
     BattleText_HailWhippedUp,
+    BattleText_AuraOne,
+    BattleText_AuraTwo,
+    BattleText_AuraOneSharply,
+    BattleText_AuraTwoSharply,
 };
 
 // below are lists of battle string enums and NOT pointers to the strings.

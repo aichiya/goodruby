@@ -99,7 +99,7 @@ Route110_TrickHouseEnd_EventScript_161ABF:: @ 8161ABF
 	msgbox Route110_TrickHouseEnd_Text_19C41F, 4
 	msgbox Route110_TrickHouseEnd_Text_19C90B, 4
 	setvar VAR_TRICK_HOUSE_PRIZE_PICKUP, 0
-	giveitem_std ITEM_SMOKE_BALL
+	giveitem_std ITEM_TM64_EXPLOSION
 	compare RESULT, 0
 	call_if_eq Route110_TrickHouseEnd_EventScript_161C4E
 	msgbox Route110_TrickHouseEnd_Text_19C9BD, 4

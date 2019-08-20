@@ -41,32 +41,35 @@ S_OpenRegiceChamber:: @ 815EF19
 	setflag FLAG_SYS_BRAILLE_WAIT
 	end
 
-IslandCave_EventScript_15EF59:: @ 815EF59
+IslandCave_EventScript_BrailleWall:: @ 815EF59
 	lockall
 	goto_if_set FLAG_SYS_BRAILLE_WAIT, IslandCave_EventScript_15EF72
 	braillemessage IslandCave_Braille_1C54FC
-	special DoBrailleWait
-	waitstate
-	goto IslandCave_EventScript_15EF95
+    waitbuttonpress
+	erasebox 0, 0, 29, 19
+    
+	specialvar RESULT, CheckSixFlatLevels
+	compare RESULT, 0
+    goto_if_eq IslandCave_EventScript_BrailleWallEnd
+    
+    setflag FLAG_SYS_BRAILLE_WAIT
+	setmetatile 7, 19, 554, 1
+	setmetatile 8, 19, 555, 1
+	setmetatile 9, 19, 556, 1
+	setmetatile 7, 20, 3634, 1
+	setmetatile 8, 20, 563, 0
+	setmetatile 9, 20, 3636, 1
+	special DrawWholeMapView
+    playse SE_BAN
+    releaseall
+    end
+
+IslandCave_EventScript_BrailleWallEnd:
+	releaseall
 	end
 
 IslandCave_EventScript_15EF72:: @ 815EF72
 	msgbox IslandCave_Text_1A13BE, 4
-	releaseall
-	end
-
-IslandCave_EventScript_15EF7C:: @ 815EF7C
-	lockall
-	braillemessage IslandCave_Braille_1C54FC
-	goto_if_set FLAG_SYS_BRAILLE_WAIT, IslandCave_EventScript_15EF95
-	special DoBrailleWait
-	waitstate
-	goto IslandCave_EventScript_15EF95
-	end
-
-IslandCave_EventScript_15EF95:: @ 815EF95
-	waitbuttonpress
-	erasebox 0, 0, 29, 19
 	releaseall
 	end
 

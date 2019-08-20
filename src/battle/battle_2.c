@@ -4309,6 +4309,52 @@ void sub_8011970(void)
 {
     if (gBattleExecBuffer == 0)
     {
+        if (gBattleTypeFlags & BATTLE_TYPE_LEGENDARY)
+        {
+            gActiveBattler = 1;
+            EmitBattleAnimation(0, B_ANIM_AURA_FLARE, 0);
+            MarkBufferBankForExecution(gActiveBattler);
+            gBattleMainFunc = bc_aura_message;
+        }
+        else
+        {
+            gBattleMainFunc = actual_sub_8011970;
+            actual_sub_8011970();
+        }
+    }
+}
+
+void bc_aura_message(void)
+{
+    u8 statId;
+    if (gBattleExecBuffer == 0)
+    {
+        switch (gBattleMons[1].species)
+        {
+            case SPECIES_REGIROCK: // def+2
+                statId = 2;
+                gBattleMons[1].statStages[statId] += 2;
+                PREPARE_STAT_BUFFER(gBattleTextBuff1, statId)
+                gActiveBattler = 1;
+                PrepareStringBattle(447, 1);
+                break;
+            case SPECIES_REGICE: // sdef+2
+                statId = 5;
+                gBattleMons[1].statStages[statId] += 2;
+                PREPARE_STAT_BUFFER(gBattleTextBuff1, statId)
+                gActiveBattler = 1;
+                PrepareStringBattle(447, 1);
+                break;
+        }
+        gBattleMainFunc = actual_sub_8011970;
+    }
+}
+
+void actual_sub_8011970(void)
+{
+    // display the "Go X" message at start of fight
+    if (gBattleExecBuffer == 0)
+    {
         if (!(gBattleTypeFlags & BATTLE_TYPE_SAFARI))
             PrepareStringBattle(1, GetBattlerAtPosition(0));
         gBattleMainFunc = sub_80119B4;

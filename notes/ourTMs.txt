@@ -61,7 +61,7 @@
 61 - Will-o-Wisp
 62 - Acrobatics
 63 - Aqua Tail      Route 119
-64 - Explosion
+64 - Explosion      Trick House
 65 - Shadow Claw
 66 - Payback        Slateport Market
 67 - Knock Off

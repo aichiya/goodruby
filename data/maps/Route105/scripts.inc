@@ -3,7 +3,6 @@ Route105_MapScripts:: @ 814F298
 	.byte 0
 
 Route105_MapScript1_14F29E:: @ 814F29E
-	call_if_unset FLAG_REGI_DOORS_OPENED, Route105_EventScript_14F2A8
 	end
 
 Route105_EventScript_14F2A8:: @ 814F2A8

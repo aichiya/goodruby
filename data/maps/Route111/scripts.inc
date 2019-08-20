@@ -4,7 +4,6 @@ Route111_MapScripts:: @ 814FF91
 	.byte 0
 
 Route111_MapScript1_14FF9C:: @ 814FF9C
-	call_if_unset FLAG_REGI_DOORS_OPENED, Route111_EventScript_14FFA6
 	end
 
 Route111_EventScript_14FFA6:: @ 814FFA6

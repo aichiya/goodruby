@@ -374,6 +374,10 @@
 #define B_ANIM_FOCUS_PUNCH_SETUP        0x14
 #define B_ANIM_INGRAIN_HEAL             0x15
 #define B_ANIM_WISH_HEAL                0x16
+#define B_ANIM_KNOCKED_AWAY             0x17
+#define B_ANIM_IMPOSTER                 0x18
+#define B_ANIM_RETURN_TO_TRAINER        0x19
+#define B_ANIM_AURA_FLARE               0x1A
 
 // special animations table
 #define B_ANIM_LVL_UP                   0x0

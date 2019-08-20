@@ -591,6 +591,7 @@ gBattleAnims_General:: @ 81C771C
 	.4byte General_KnockedAway
 	.4byte General_Imposter
 	.4byte General_ReturnToTrainer
+    .4byte General_AuraFlare
 
 	.align 2
 gBattleAnims_Special:: @ 81C7778
@@ -15901,3 +15902,23 @@ Move_BURN_UP:
 Move_SACRED_SWORD:
     goto Move_TACKLE
     end
+
+General_AuraFlare:
+	monbg ANIM_BATTLER_DEF_PARTNER
+	setalpha 12, 11
+	createvisualtask sub_80E3BA4, 5, 7
+	createvisualtask sub_80E2A38, 10, 27, 1, 0, 12, 0
+	waitforvisualfinish
+	delay 12
+	createvisualtask sub_80E2A38, 10, 2, 1, 8, 0, 0
+	createvisualtask sub_80E1864, 5, 0, 2, 16
+	loopsewithpan SE_W287, SOUND_PAN_ATTACKER, 4, 8
+	createvisualtask sub_80E2A38, 10, 2, 1, 0, 15, rgb(31, 31, 0)
+	delay 20
+	createvisualtask sub_80E2A38, 10, 2, 1, 15, 0, rgb(31, 31, 0)
+	waitforvisualfinish
+	createvisualtask sub_80E2A38, 10, 25, 1, 8, 0, 0
+	waitforvisualfinish
+	clearmonbg ANIM_BATTLER_DEF_PARTNER
+	blendoff
+	end

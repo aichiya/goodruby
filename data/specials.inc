@@ -352,3 +352,6 @@ gSpecials::
 	def_special sub_80835D8
     def_special PopulateSecretBases
     def_special MarkRoamerSeen
+    def_special CheckSurfBulldoze
+    def_special CheckSixFlatLevels
+    def_special CheckPoisonedPoison

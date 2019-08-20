@@ -35,6 +35,24 @@ DesertRuins_EventScript_15CB56:: @ 815CB56
 	braillemessage DesertRuins_Braille_1C54C8
 	waitbuttonpress
 	erasebox 0, 0, 29, 19
+    
+    specialvar RESULT, CheckSurfBulldoze
+	compare RESULT, 0
+    goto_if_eq DesertRuins_EventScript_End
+    
+    setflag FLAG_SYS_BRAILLE_STRENGTH
+	setmetatile 7, 19, 554, 1
+	setmetatile 8, 19, 555, 1
+	setmetatile 9, 19, 556, 1
+	setmetatile 7, 20, 3634, 1
+	setmetatile 8, 20, 563, 0
+	setmetatile 9, 20, 3636, 1
+	special DrawWholeMapView
+    playse SE_BAN
+    releaseall
+    end
+
+DesertRuins_EventScript_End:
 	releaseall
 	end
 

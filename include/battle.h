@@ -770,6 +770,8 @@ void sub_8011800(void);
 void sub_8011834(void);
 void bc_801362C(void);
 void sub_8011970(void);
+void bc_aura_message(void);
+void actual_sub_8011970(void);
 void sub_80119B4(void);
 void BattleBeginFirstTurn(void);
 void BattleTurnPassed(void);

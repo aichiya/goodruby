@@ -193,22 +193,22 @@ DesertRuins_Braille_1C54C8:: @ 81C54C8
 	.byte 19
 	.byte 2
 	.byte 3
-	.braille "RIGHT, RIGHT,\n"
-	.braille "DOWN, DOWN.\n"
-	.braille "THEN, USE\n"
-	.braille "STRENGTH.$"
+    .braille "SURF IN FIRST\n"
+    .braille "OF FIRST.\n"
+    .braille "FOUR OF FOUR\n"
+    .braille "IS BULLDOZE.$"
 
 IslandCave_Braille_1C54FC:: @ 81C54FC
-	.byte 3
 	.byte 0
-	.byte 27
+	.byte 0
+	.byte 29
 	.byte 19
-	.byte 5
+	.byte 2
 	.byte 3
-	.braille "STOP AND\n"
-	.braille "WAIT. WAIT\n"
-	.braille "FOR TIME TO\n"
-	.braille "PASS TWICE.$"
+    .braille "I OPEN ONLY\n"
+    .braille "FOR SIX WITH\n"
+    .braille "ALL THE SAME\n"
+    .braille "POWER.$"
 
 AncientTomb_Braille_1C552E:: @ 81C552E
 	.byte 0

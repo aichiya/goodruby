@@ -432,3 +432,7 @@
     enum BATTLE_TEXT_LosingPrize
     enum BATTLE_TEXT_LosingWild
     enum BATTLE_TEXT_HailWhippedUp
+    enum BATTLE_TEXT_AuraOne
+    enum BATTLE_TEXT_AuraTwo
+    enum BATTLE_TEXT_AuraOneSharply
+    enum BATTLE_TEXT_AuraTwoSharply

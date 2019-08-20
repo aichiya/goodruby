@@ -352,6 +352,7 @@
 #define B_ANIM_KNOCKED_AWAY             0x17
 #define B_ANIM_IMPOSTER                 0x18
 #define B_ANIM_RETURN_TO_TRAINER        0x19
+#define B_ANIM_AURA_FLARE               0x1A
 
 // special animation table
 #define B_ANIM_LVL_UP                   0x0

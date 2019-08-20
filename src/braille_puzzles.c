@@ -7,6 +7,8 @@
 #include "main.h"
 #include "event_obj_lock.h"
 #include "menu.h"
+#include "pokemon.h"
+#include "pokemon_summary_screen.h"
 #include "rom6.h"
 #include "script.h"
 #include "sound.h"
@@ -17,6 +19,7 @@
 #include "constants/maps.h"
 #include "constants/songs.h"
 #include "constants/species.h"
+#include "constants/moves.h"
 
 extern u8 gPlayerPartyCount;
 extern u8 gLastFieldPokeMenuOpened;
@@ -67,8 +70,51 @@ bool8 CheckRelicanthWailord(void)
     return FALSE;
 }
 
+bool8 CheckSurfBulldoze(void)
+{
+    // First of First is Surf.
+    // Fourth of Fourth is Bulldoze.
+
+    if (GetMonData(&gPlayerParty[0], MON_DATA_MOVE1, 0) == MOVE_SURF
+     && GetMonData(&gPlayerParty[3], MON_DATA_MOVE4, 0) == MOVE_BULLDOZE)
+        return TRUE;
+    return FALSE;
+}
+
+bool8 CheckSixFlatLevels(void)
+{
+    u8 i, level;
+    CalculatePlayerPartyCount();
+    if (gPlayerPartyCount != 6)
+        return FALSE;
+    level = GetMonData(&gPlayerParty[0], MON_DATA_LEVEL, 0);
+    for (i = 1; i < 6; i++)
+    {
+        if (level != GetMonData(&gPlayerParty[i], MON_DATA_LEVEL, 0))
+            return FALSE;
+    }
+    return TRUE;
+}
+
+bool8 CheckPoisonedPoison(void)
+{
+    u8 i;
+    CalculatePlayerPartyCount();
+    for (i = 0; i < gPlayerPartyCount; i++)
+    {
+        u8 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES2, 0);
+        if ((gBaseStats[species].type1 == TYPE_POISON || gBaseStats[species].type2 == TYPE_POISON) &&
+            GetPrimaryStatus(GetMonData(&gPlayerParty[i], MON_DATA_STATUS, 0)) == STATUS_PRIMARY_POISON)
+        {
+            return TRUE;
+        }
+    }
+    return FALSE;
+}
+
 bool8 ShouldDoBrailleStrengthEffect(void)
 {
+    /*
     if (!FlagGet(FLAG_SYS_BRAILLE_STRENGTH) && (gSaveBlock1.location.mapGroup == MAP_GROUP(DESERT_RUINS) && gSaveBlock1.location.mapNum == MAP_NUM(DESERT_RUINS)))
     {
         if (gSaveBlock1.pos.x == 10 && gSaveBlock1.pos.y == 23)
@@ -78,6 +124,7 @@ bool8 ShouldDoBrailleStrengthEffect(void)
         else if (gSaveBlock1.pos.x == 11 && gSaveBlock1.pos.y == 23)
             return TRUE;
     }
+    */
 
     return FALSE;
 }
