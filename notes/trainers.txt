@@ -343,8 +343,8 @@ Swellow
 Togekiss
 
 ROUTE 120:
-COLIN:
-ANGELICA:
+COLIN: Togetic Lv38, Fearow Lv38
+ANGELICA: 
 TSUNAO:
 JENNIFER:
 JENNA:

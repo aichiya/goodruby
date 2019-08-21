@@ -146,6 +146,10 @@ Route119_EventScript_1B160D:: @ 81B160D
 	giveitem_std ITEM_HYPER_POTION, 1, 1
 	end
 
+Route119_EventScript_SeedBomb::
+	giveitem_std ITEM_TM21_SEED_BOMB, 1, 1
+	end
+
 Route120_EventScript_1B161A:: @ 81B161A
 	giveitem_std ITEM_NUGGET, 1, 1
 	end

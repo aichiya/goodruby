@@ -18,7 +18,7 @@
 18 - Rain Dance     *Abandoned Ship
 19 - Giga Drain     *South of Mt. Pyre
 20 - Safeguard      *Department Store
-21 - Seed Bomb      *Pacifidlog (replacing Frustration)
+21 - Seed Bomb      Route 119 (*Pacifidlog (replacing Frustration))
 22 - Solar Beam     *Safari Zone
 23 - Iron Tail      *Meteor Falls
 24 - Thunderbolt    *Game Corner

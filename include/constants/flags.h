@@ -761,6 +761,7 @@
 #define FLAG_ROUTE_135_ROCK_1               0x477
 #define FLAG_ROUTE_135_ROCK_2               0x478
 #define FLAG_ROUTE_135_ROCK_3               0x479
+#define FLAG_ITEM_ROUTE119_8                0x47A
 
 #define FLAG_DEFEATED_RUSTBORO_GYM          0x4B1
 
