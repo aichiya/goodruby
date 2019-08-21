@@ -761,13 +761,13 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_GabbyAndTy2[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_GabbyAndTy3[] = {
     {
 	.iv = 150,
-	.level = 30,
-	.species = SPECIES_MAGNETON
+	.level = 37,
+	.species = SPECIES_MINUN
     },
     {
 	.iv = 150,
-	.level = 30,
-	.species = SPECIES_LOUDRED
+	.level = 37,
+	.species = SPECIES_ESPEON
     }
 };
 

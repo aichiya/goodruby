@@ -132,7 +132,6 @@ ROUTE 118: Raticate (25%), Aipom (25%), Yanma (15%), Wingull (10%), Gloom (10%),
 ROUTE 119: Aipom (30%), Yanma (30%), Gloom (15%), Persian (10%), Tropius (10%), Kecleon (5%) (e: Castform)
 ROUTE 120: Aipom (30%), Yanma (30%), Gloom (15%), Absol (10%), Persian (5%), Scyther (5%), Kecleon (5%)
 
-ROUTE 120: Gloom, Aipom, Kecleon, Absol, Yanma
 SCORCHED SLAB:
 ROUTE 121: Gloom, Shuppet, Aipom, Kecleon, Scyther
 SAFARI: Chansey, Tauros, Ditto

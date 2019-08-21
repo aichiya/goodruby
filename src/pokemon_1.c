@@ -2064,6 +2064,7 @@ u16 MonTryLearningEvoMove(struct Pokemon *mon, bool8 firstMove)
 {
     u32 retVal = 0;
     u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
+    u8 level = GetMonData(mon, MON_DATA_LEVEL, NULL);
 	u8 index = 0;
 
     // since you can learn more than one move per level
@@ -2090,6 +2091,8 @@ u16 MonTryLearningEvoMove(struct Pokemon *mon, bool8 firstMove)
 	else
 	{
 		sLearningMoveTableID = 0;
+        while ((gLevelUpLearnsets[species][sLearningMoveTableID] >> 16) < level)
+            sLearningMoveTableID++;
 		retVal = MonTryLearningNewMove(mon, firstMove);
 	}
 

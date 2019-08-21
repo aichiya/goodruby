@@ -327,6 +327,7 @@ HIDEO: Golbat Lv37, Sudowoodo Lv37
 ROUTE 120:
 CLARISSA: Parasect Lv37, Jynx Lv37
 ROBERT: Dodrio Lv37
+GABBY & TY: Minun Lv37, Espeon Lv37
 
 FORTREE GYM:
 JARED: Pidgeot Lv38, Fearow Lv38
@@ -341,7 +342,15 @@ Mantine
 Swellow
 Togekiss
 
-
-
+ROUTE 120:
+COLIN:
+ANGELICA:
+TSUNAO:
+JENNIFER:
+JENNA:
+CARLOS:
+BRANDON:
+KEIGO:
+CHIP:
 
 
