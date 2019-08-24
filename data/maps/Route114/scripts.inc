@@ -8,8 +8,7 @@ Route114_EventScript_150733:: @ 8150733
 	goto_if_set FLAG_DAILY_RECEIVED_BERRY_ROUTE114, Route114_EventScript_150778
 	msgbox Route114_Text_1C5803, 4
 	random 5
-	addvar RESULT, 15
-	addvar RESULT, 133
+	addvar RESULT, ITEM_RAZZ_BERRY
 	giveitem_std RESULT
 	compare RESULT, 0
 	goto_if_eq Route114_EventScript_1A029B

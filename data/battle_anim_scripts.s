@@ -11579,7 +11579,7 @@ Move_ZEN_HEADBUTT:
 
 Move_NASTY_PLOT:
 	loadspritegfx 10093
-	loadspritegfx 10291
+	loadspritegfx 10292
 	loadspritegfx 10087
 	loadspritegfx 10209
 	monbg ANIM_BATTLER_DEF_PARTNER
