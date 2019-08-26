@@ -218,6 +218,11 @@ ABILITY, STAT, AND MOVEPOOL CHANGES:
 #225 Delibird
  * Delibird's base stats changed: 45/55/45/65/45/75 (330) -> 45/85/45/105/45/105 (430).
 
+#228 Houndour, #229 Houndoom
+ * Level-up movepool adjusted.
+ * Now learns Snarl, Incinerate, Taunt, and Pursuit by level.
+ * No longer learns Embargo or Beat Up by level.
+
 #261 Poochyena, #262 Mightyena
  * Now learns Close Combat by breeding.
 
