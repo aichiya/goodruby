@@ -6,7 +6,7 @@ PetalburgWoods_MapBlockdata:: @ 82D91C4
 
 	.align 2
 PetalburgWoods_Layout:: @ 82DA244
-	.4byte 0x30
+	.4byte 0x38
 	.4byte 0x2c
 	.4byte PetalburgWoods_MapBorder
 	.4byte PetalburgWoods_MapBlockdata

@@ -335,3 +335,4 @@
 	.include "data/layouts/SkyPillar_Top/layout.inc"
     .include "data/layouts/GnarledRidge/layout.inc"
     .include "data/layouts/Route135/layout.inc"
+    .include "data/layouts/TracklessForest/layout.inc"

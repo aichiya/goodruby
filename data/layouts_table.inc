@@ -337,3 +337,4 @@ gMapLayouts:: @ 8304F18
     .4byte GraniteCave_B3F_Layout
     .4byte GraniteCave_B4F_Layout
     .4byte GraniteCave_Stairs_Layout
+    .4byte TracklessForest_Layout

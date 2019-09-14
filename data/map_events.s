@@ -412,3 +412,4 @@
 	.include "data/maps/Route119_House/events.inc"
 	.include "data/maps/Route124_DivingTreasureHuntersHouse/events.inc"
     .include "data/maps/GnarledRidge/events.inc"
+    .include "data/maps/TracklessForest/events.inc"
