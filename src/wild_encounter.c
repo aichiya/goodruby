@@ -213,11 +213,11 @@ static u8 ChooseWildMonIndex_Fishing(u8 rod)
     case OLD_ROD:
         if (rand < 40)  //40% chance
             wildMonIndex = 0;
-        if (rand >= 40 && rand < 60)    //20% chance
+        else if (rand >= 40 && rand < 60)    //20% chance
             wildMonIndex = 1;
-        if (rand >= 60 && rand < 80)    //20% chance
+        else if (rand >= 60 && rand < 80)    //20% chance
             wildMonIndex = 2;
-        if (rand >= 80 && rand < 90)    //10% chance
+        else if (rand >= 80 && rand < 90)    //10% chance
             wildMonIndex = 3;
         else            //10% chance
             wildMonIndex = 4;
@@ -225,41 +225,41 @@ static u8 ChooseWildMonIndex_Fishing(u8 rod)
     case GOOD_ROD:
         if (rand < 20)                  //20% chance
             wildMonIndex = 5;
-        if (rand >= 20 && rand < 40)    //20% chance
+        else if (rand >= 20 && rand < 40)    //20% chance
             wildMonIndex = 6;
-        if (rand >= 40 && rand < 60)    //20% chance
+        else if (rand >= 40 && rand < 60)    //20% chance
             wildMonIndex = 7;
-        if (rand >= 60 && rand < 70)    //10% chance
+        else if (rand >= 60 && rand < 70)    //10% chance
             wildMonIndex = 8;
-        if (rand >= 70 && rand < 80)    //10% chance
+        else if (rand >= 70 && rand < 80)    //10% chance
             wildMonIndex = 9;
-        if (rand >= 80 && rand < 85)    //5% chance
+        else if (rand >= 80 && rand < 85)    //5% chance
             wildMonIndex = 10;
-        if (rand >= 85 && rand < 90)    //5% chance
+        else if (rand >= 85 && rand < 90)    //5% chance
             wildMonIndex = 11;
-        if (rand >= 90 && rand < 95)    //5% chance
+        else if (rand >= 90 && rand < 95)    //5% chance
             wildMonIndex = 12;
-        if (rand >= 95 && rand < 100)    //5% chance
+        else    //5% chance
             wildMonIndex = 13;
         break;
     case SUPER_ROD:
         if (rand < 20)                  //20% chance
             wildMonIndex = 14;
-        if (rand >= 20 && rand < 40)    //20% chance
+        else if (rand >= 20 && rand < 40)    //20% chance
             wildMonIndex = 15;
-        if (rand >= 40 && rand < 60)    //20% chance
+        else if (rand >= 40 && rand < 60)    //20% chance
             wildMonIndex = 16;
-        if (rand >= 60 && rand < 70)    //10% chance
+        else if (rand >= 60 && rand < 70)    //10% chance
             wildMonIndex = 17;
-        if (rand >= 70 && rand < 80)    //10% chance
+        else if (rand >= 70 && rand < 80)    //10% chance
             wildMonIndex = 18;
-        if (rand >= 80 && rand < 85)    //5% chance
+        else if (rand >= 80 && rand < 85)    //5% chance
             wildMonIndex = 19;
-        if (rand >= 85 && rand < 90)    //5% chance
+        else if (rand >= 85 && rand < 90)    //5% chance
             wildMonIndex = 20;
-        if (rand >= 90 && rand < 95)    //5% chance
+        else if (rand >= 90 && rand < 95)    //5% chance
             wildMonIndex = 21;
-        if (rand >= 95 && rand < 100)    //5% chance
+        else    //5% chance
             wildMonIndex = 22;
         break;
     }
