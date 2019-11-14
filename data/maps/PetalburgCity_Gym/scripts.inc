@@ -146,6 +146,11 @@ PetalburgCity_Gym_EventScript_154669:: @ 8154669
 	call_if_eq PetalburgCity_Gym_EventScript_15481C
 	msgbox PetalburgCity_Gym_Text_179F07, 4
 	msgbox PetalburgCity_Gym_Text_179F37, 4
+    
+	msgbox PetalburgCity_Gym_Text_ThisLooksBoring, MSGBOX_YESNO
+    compare RESULT, NO
+    goto_if_eq PetalburgCity_Gym_EventScript_SkipWally
+    
 	msgbox PetalburgCity_Gym_Text_179F70, 4
 	msgbox PetalburgCity_Gym_Text_17A03A, 4
 	compare VAR_SPECIAL_8, 0
@@ -207,6 +212,15 @@ PetalburgCity_Gym_EventScript_154669:: @ 8154669
 	warp MAP_PETALBURG_CITY, 255, 15, 8
 	waitstate
 	release
+	end
+
+PetalburgCity_Gym_EventScript_SkipWally::
+	clearflag FLAG_HIDE_WALLY_PETALBURG_GYM
+	setvar VAR_PETALBURG_GYM_STATE, 1
+	setvar VAR_PETALBURG_STATE, 3
+	warp MAP_PETALBURG_CITY_GYM, 255, 4, 108
+	waitstate
+	releaseall
 	end
 
 PetalburgCity_Gym_EventScript_1547EE:: @ 81547EE

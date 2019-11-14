@@ -19,6 +19,10 @@ PetalburgCity_Gym_Text_179F37:: @ 8179F37
 	.string "DAD: Hm? You're... Uh... Oh, right.\n"
 	.string "You're Wally, right?$"
 
+PetalburgCity_Gym_Text_ThisLooksBoring::
+    .string "(This looks boring...)\n"
+    .string "(Pay attention?)$"
+
 PetalburgCity_Gym_Text_179F70:: @ 8179F70
 	.string "WALLY: I'm going to go stay with my\n"
 	.string "relatives in Verdanturf Town.\p"

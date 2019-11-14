@@ -344,13 +344,18 @@ Togekiss
 
 ROUTE 120:
 COLIN: Togetic Lv38, Delibird Lv38
-ANGELICA: 
-TSUNAO:
-JENNIFER:
-JENNA:
-CARLOS:
-BRANDON:
-KEIGO:
-CHIP:
+ANGELICA: Vileplume Lv40
+TSUNAO: Kecleon Lv38, Hypno Lv38, Golbat Lv38
+JENNIFER: Milotic Lv39, Lanturn Lv39, Magneton Lv39
+JENNA: Lombre Lv38, Nuzleaf Lv38
+CARLOS: Rhyhorn Lv38, Chimecho Lv38
+BRANDON: Dustox Lv38, Heracross Lv38
+KEIGO: Ninjask Lv39, Electrode Lv39
+CHIP: Golduck Lv39, Arbok Lv38, Claydol Lv38
 
-
+ROUTE 121:
+TAMMY: Shuppet Lv40, Duskull Lv40, Gastly Lv40
+JESSICA: Seaking Lv40, Magmar Lv40, Froslass Lv41
+KATE & JOY: Donphan Lv40, Slaking Lv40
+WALTER: Tauros Lv42
+VANESSA: Pikachu Lv45

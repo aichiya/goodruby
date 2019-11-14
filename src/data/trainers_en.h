@@ -1331,7 +1331,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_JENNIFER] =
     {
-        .partyFlags = 0,
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
         .trainerClass = TRAINER_CLASS_COOL_TRAINER,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_COOL,
         .trainerPic = TRAINER_PIC_COOL_TRAINER_F,
@@ -1339,8 +1339,8 @@ const struct Trainer gTrainers[] = {
         .items = {0, 0, 0, 0}, //{ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = 0x7,
-        .partySize = 1,
-        .party = {.NoItemDefaultMoves = gTrainerParty_Jennifer }
+        .partySize = 3,
+        .party = {.NoItemCustomMoves = gTrainerParty_Jennifer }
     },
 
     [TRAINER_HOPE] =
@@ -1507,7 +1507,7 @@ const struct Trainer gTrainers[] = {
         .items = {0, 0, 0, 0}, //{ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = 0x1,
-        .partySize = 2,
+        .partySize = 3,
         .party = {.NoItemDefaultMoves = gTrainerParty_Tammy }
     },
 
@@ -1786,8 +1786,8 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Jessica"),
         .items = {0, 0, 0, 0}, //{ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
-        .aiFlags = 0x1,
-        .partySize = 2,
+        .aiFlags = 0x7,
+        .partySize = 3,
         .party = {.NoItemCustomMoves = gTrainerParty_Jessica1 }
     },
 
@@ -3173,7 +3173,7 @@ const struct Trainer gTrainers[] = {
         .items = {0, 0, 0, 0}, //{ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = 0x1,
-        .partySize = 3,
+        .partySize = 2,
         .party = {.NoItemDefaultMoves = gTrainerParty_Brandon1 }
     },
 
@@ -6105,7 +6105,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_ANGELICA] =
     {
-        .partyFlags = 0,
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
         .trainerClass = TRAINER_CLASS_PARASOL_LADY,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
         .trainerPic = TRAINER_PIC_PARASOL_LADY,
@@ -6114,7 +6114,7 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = 0x1,
         .partySize = 1,
-        .party = {.NoItemDefaultMoves = gTrainerParty_Angelica }
+        .party = {.NoItemCustomMoves = gTrainerParty_Angelica }
     },
 
     [TRAINER_MADELINE_2] =
@@ -7751,7 +7751,7 @@ const struct Trainer gTrainers[] = {
         .items = {0, 0, 0, 0}, //{ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = 0x7,
-        .partySize = 3,
+        .partySize = 2,
         .party = {.NoItemDefaultMoves = gTrainerParty_Carlos }
     },
 
@@ -7849,7 +7849,7 @@ const struct Trainer gTrainers[] = {
         .items = {0, 0, 0, 0}, //{ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = 0xb,
-        .partySize = 3,
+        .partySize = 2,
         .party = {.NoItemDefaultMoves = gTrainerParty_Jenna }
     },
 
@@ -9143,7 +9143,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_TSUNAO] =
     {
-        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .partyFlags = 0,
         .trainerClass = TRAINER_CLASS_NINJA_BOY,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
         .trainerPic = TRAINER_PIC_NINJA_BOY,
@@ -9152,7 +9152,7 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = 0x3,
         .partySize = 3,
-        .party = {.NoItemCustomMoves = gTrainerParty_Tsunao }
+        .party = {.NoItemDefaultMoves = gTrainerParty_Tsunao }
     },
 
     [TRAINER_TERRELL] =
