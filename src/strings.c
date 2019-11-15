@@ -781,6 +781,8 @@ const u8 OtherText_TMsHMs[] = _("TMs & HMs");
 const u8 OtherText_Berries[] = _("BERRIES");
 const u8 OtherText_More[] = _("More");
 const u8 OtherText_Previous[] = _("Previous");
+const u8 OtherText_BuyOne[] = _("Buy one");
+const u8 OtherText_BuyADozen[] = _("Buy a dozen");
 
 const u8 gPCText_SomeonesPC[] = _("SOMEONE'S PC");
 const u8 gPCText_LanettesPC[] = _("LANETTE'S PC");

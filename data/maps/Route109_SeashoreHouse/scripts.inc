@@ -39,10 +39,13 @@ Route109_SeashoreHouse_EventScript_160E2C:: @ 8160E2C
 Route109_SeashoreHouse_EventScript_160E36:: @ 8160E36
 	showmoneybox 0, 0
 	nop
-	msgbox Route109_SeashoreHouse_Text_19B702, MSGBOX_YESNO
-	compare RESULT, YES
-	goto_if_eq Route109_SeashoreHouse_EventScript_160E5A
-	msgbox Route109_SeashoreHouse_Text_19B773, 4
+	msgbox Route109_SeashoreHouse_Text_19B702, 4
+    
+	multichoice 20, 6, 89, 0
+	switch RESULT
+	case 0, Route109_SeashoreHouse_EventScript_160E5A
+    case 1, Route109_SeashoreHouse_EventScript_BuyDozen
+    msgbox Route109_SeashoreHouse_Text_19B773, 4
 	hidemoneybox 0, 0
 	release
 	end
@@ -59,6 +62,22 @@ Route109_SeashoreHouse_EventScript_160E5A:: @ 8160E5A
 	updatemoneybox 0, 0
 	nop
 	giveitem_std ITEM_SODA_POP
+	hidemoneybox 0, 0
+	release
+	end
+
+Route109_SeashoreHouse_EventScript_BuyDozen:: @ 8160E5A
+	checkmoney 3600, 0
+	compare RESULT, 0
+	goto_if_eq Route109_SeashoreHouse_EventScript_160E9E
+	checkitemspace ITEM_SODA_POP, 12
+	compare RESULT, 0
+	goto_if_eq Route109_SeashoreHouse_EventScript_160EAB
+	msgbox Route109_SeashoreHouse_Text_19B74C, 4
+	takemoney 3600, 0
+	updatemoneybox 0, 0
+	nop
+	giveitem_std ITEM_SODA_POP, 12
 	hidemoneybox 0, 0
 	release
 	end

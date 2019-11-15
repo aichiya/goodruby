@@ -757,6 +757,8 @@ extern const u8 OtherText_TMsHMs[];
 extern const u8 OtherText_Berries[];
 extern const u8 OtherText_More[];
 extern const u8 OtherText_Previous[];
+extern const u8 OtherText_BuyOne[];
+extern const u8 OtherText_BuyADozen[];
 
 extern const u8 gPCText_SomeonesPC[];
 extern const u8 gPCText_LanettesPC[];

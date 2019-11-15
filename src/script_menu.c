@@ -598,6 +598,13 @@ const struct MenuAction MultichoiceList_88[] =
     {gOtherText_SpDef, NULL},
 };
 
+const struct MenuAction MultichoiceList_89[] = 
+{
+    {OtherText_BuyOne, NULL},
+    {OtherText_BuyADozen, NULL},
+    {gOtherText_CancelNoTerminator, NULL},
+};
+
 const struct MenuAction MultichoiceList_01[] =
 {
     {gOtherText_CancelNoTerminator, NULL},
@@ -700,6 +707,7 @@ const struct MultichoiceListStruct gMultichoiceLists[] =
     {MultichoiceList_86, ARRAY_COUNT(MultichoiceList_86)},
     {MultichoiceList_87, ARRAY_COUNT(MultichoiceList_87)},
     {MultichoiceList_88, ARRAY_COUNT(MultichoiceList_88)},
+    {MultichoiceList_89, ARRAY_COUNT(MultichoiceList_89)},
 };
 
 const u8 *const gUnknown_083CE048[] =
