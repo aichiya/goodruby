@@ -344,7 +344,11 @@ ABILITY, STAT, AND MOVEPOOL CHANGES:
  * Banette's type changed: Ghost -> Ghost/Dark.
 
 #363 Spheal, #364 Sealeo, #365 Walrein
+ * Spheal now evolves at level 21 instead of 32.
+ * Sealeo now evolves at level 37 instead of 44.
  * Walrein's Hidden Ability Oblivious replaced with Intimidate.
+ * Level-up movepool slightly adjusted.
+ * Now learns Avalanche, Ice Beam, and Super Fang by level.
 
 #370 Luvdisc
  * Luvdisc's type changed: Water -> Water/Fairy.

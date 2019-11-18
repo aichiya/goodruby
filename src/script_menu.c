@@ -472,8 +472,8 @@ const struct MenuAction MultichoiceList_72[] =
 
 const struct MenuAction MultichoiceList_73[] =
 {
-    {OtherText_Pikachu, NULL},
     {OtherText_Meowth, NULL},
+    {OtherText_Spheal, NULL},
     {OtherText_Jigglypuff, NULL},
     {OtherText_Eevee, NULL},
     {OtherText_Porygon, NULL},
