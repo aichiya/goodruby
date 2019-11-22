@@ -165,3 +165,29 @@ DewfordTown_Text_16BD37:: @ 816BD37
 DewfordTown_Text_16BD79: @ 816BD79
 	.string "“{STR_VAR_2}” is at\n"
 	.string "the pinnacle of cool right now.$"
+
+DewfordTown_Text_BrawlyWifeIntro:
+    .string "The gym leader here, Brawly,\n"
+    .string "is very strong.$"
+
+DewfordTown_Text_BrawlyWifeNoBadge:
+    .string "If you manage to beat him,\n"
+    .string "come show me his badge.$"
+
+DewfordTown_Text_BrawlyWifeHaveBadge:
+    .string "Oh, that's the Knuckle Badge.\n"
+    .string "That means you've defeated Brawly.\p"
+    .string "I think you should be fit to\n"
+    .string "take care of this Pokémon.$"
+
+DewfordTown_Text_BrawlyWifePartyFull:
+	.string "Oh...you don't have any room for\n"
+	.string "this POKéMON.$"
+
+DewfordTown_Text_BrawlyWifeGotPokemon:
+	.string "{PLAYER} received {STR_VAR_1}!$"
+
+DewfordTown_Text_BrawlyWifeGavePokemon:
+    .string "That Pokémon came from far away.\p"
+    .string "I think it'd like to see more of\n"
+    .string "the world than this small island.$"

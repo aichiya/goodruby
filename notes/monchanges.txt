@@ -10,6 +10,20 @@ LUVDISC: Water -> Water/Fairy.
 
 
 ABILITY, STAT, AND MOVEPOOL CHANGES:
+#001 Bulbasaur, #002 Ivysaur, #003 Venusaur
+ * Level-up movepool adjusted.
+ * Ivysaur now evolves at level 36 instead of 32.
+
+#004 Charmander, #005 Charmelon, #006 Charizard
+ * Level-up movepool adjusted.
+ * No longer learns Dragon Rage, Slash, or Heat Wave by level.
+ * Now learns Metal Claw, DragonBreath, Dragon Claw, and Outrage by level.
+
+#007 Squirtle, #008 Wartortle, #009 Blastoise
+ * Level-up movepool adjusted.
+ * No longer learns Water Gun by level.
+ * Now learns Crunch, Ice Beam, and Shell Smash by level.
+
 #016 Pidgey, #017 Pidgeotto, #018 Pidgeot
  * Level-up movepool adjusted.
  * Now learns Air Cutter by level.
@@ -146,6 +160,24 @@ ABILITY, STAT, AND MOVEPOOL CHANGES:
  
 #152 Chikorita, #153 Bayleef, #154 Meganium
  * Entire line's Hidden Ability Leaf Guard replaced with Thick Fat.
+ * Bayleef now evolves at level 36 instead of 32.
+ * Level-up movepool adjusted.
+ * Meganium now learns Earthquake by level.
+
+#155 Cyndaquil, #156 Quilava, #157 Typhlosion
+ * Cyndaquil's base stats changed: 39/52/43/60/50/65 (309) -> 39/60/35/60/50/65 (309).
+ * Quilava's base stats changed: 58/64/58/80/65/80 (405) -> 58/80/42/80/65/80 (405).
+ * Typhlosion's base stats changed: 78/85/78/109/85/100 (534) -> 78/105/58/109/85/100 (534).
+ * Cyndaquil now evolves at level 16 instead of 14.
+ * Level-up movepool adjusted.
+ * Now learns Work Up, Flame Burst, Play Rough, and ExtremeSpeed by level.
+ * No longer learns Leer, Flamethrower, Inferno, Gyro Ball, or Double-Edge by level.
+ * TYphlosion now learns Earth Power on evolution.
+
+#158 Totodile, #159 Croconaw, #160 Feraligatr
+ * Totodile now evolves at level 16 instead of 18.
+ * Feraligatr now evolves at level 36 instead of 30.
+ * Level-up movepool adjusted.
 
 #161 Sentret, #162 Furret
  * Sentret's base stats changed: 35/46/34/35/45/20 (215) -> 45/46/44/35/45/20 (235).
@@ -222,6 +254,15 @@ ABILITY, STAT, AND MOVEPOOL CHANGES:
  * Level-up movepool adjusted.
  * Now learns Snarl, Incinerate, Taunt, and Pursuit by level.
  * No longer learns Embargo or Beat Up by level.
+
+#252 Treecko, #253 Grovyle, #254 Sceptile
+ * Level-up movepool adjusted.
+
+#255 Torchic, #256 Combusken, #257 Blaziken
+ * Level-up movepool adjusted.
+
+#258 Mudkip, #259 Marshtomp, #260 Swampert
+ * Level-up movepool adjusted.
 
 #261 Poochyena, #262 Mightyena
  * Now learns Close Combat by breeding.

@@ -9,13 +9,33 @@ const u16 gDummyEvoMoves[] = {
 	0,
 };
 
+const u16 gIvysaurEvoMoves[] = {
+	MOVE_SWEET_SCENT,
+	0,
+};
+
 const u16 gVenusaurEvoMoves[] = {
 	MOVE_PETAL_DANCE,
 	0,
 };
 
+const u16 gCharmeleonEvoMoves[] = {
+	MOVE_SCARY_FACE,
+	0,
+};
+
 const u16 gCharizardEvoMoves[] = {
 	MOVE_WING_ATTACK,
+	0,
+};
+
+const u16 gWartortleEvoMoves[] = {
+	MOVE_PROTECT,
+	0,
+};
+
+const u16 gBlastoiseEvoMoves[] = {
+	MOVE_FLASH_CANNON,
 	0,
 };
 
@@ -199,8 +219,33 @@ const u16 gDragoniteEvoMoves[] = {
 	0,
 };
 
+const u16 gBayleefEvoMoves[] = {
+	MOVE_AROMATHERAPY,
+	0,
+};
+
 const u16 gMeganiumEvoMoves[] = {
 	MOVE_PETAL_DANCE,
+	0,
+};
+
+const u16 gQuilavaEvoMoves[] = {
+	MOVE_SWIFT,
+	0,
+};
+
+const u16 gTyphlosionEvoMoves[] = {
+	MOVE_EARTH_POWER,
+	0,
+};
+
+const u16 gCroconawEvoMoves[] = {
+	MOVE_FLAIL,
+	0,
+};
+
+const u16 gFeraligatrEvoMoves[] = {
+	MOVE_AGILITY,
 	0,
 };
 
@@ -309,6 +354,11 @@ const u16 gBlazikenEvoMoves[] = {
 
 const u16 gMarshtompEvoMoves[] = {
 	MOVE_MUD_SHOT,
+	0,
+};
+
+const u16 gSwampertEvoMoves[] = {
+	MOVE_MUDDY_WATER,
 	0,
 };
 

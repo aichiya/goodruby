@@ -872,6 +872,13 @@ void ScrSpecial_ChooseStarter(void)
     gMain.savedCallback = CB2_GiveStarter;
 }
 
+static const u16 foreignStarters[][4] =
+{
+    { SPECIES_CHARMANDER, SPECIES_CYNDAQUIL, SPECIES_SQUIRTLE, SPECIES_TOTODILE },
+    { SPECIES_BULBASAUR, SPECIES_CHIKORITA, SPECIES_SQUIRTLE, SPECIES_TOTODILE },
+    { SPECIES_BULBASAUR, SPECIES_CHIKORITA, SPECIES_CHARMANDER, SPECIES_CYNDAQUIL },
+};
+
 static void CB2_GiveStarter(void)
 {
     u16 starterPoke;
@@ -881,6 +888,7 @@ static void CB2_GiveStarter(void)
     starterPoke = GetStarterPokemon(gSpecialVar_Result);
     ScriptGiveMon(starterPoke, 5, 0, 0, 0, 0);
 	SetMonData(&gPlayerParty[0], MON_DATA_HIDDEN_ABILITY, &zero);
+    *GetVarPointer(VAR_SECOND_STARTER) = foreignStarters[gSpecialVar_Result][Random() % 4];
     ResetTasks();
     sub_80408BC();
     SetMainCallback2(CB2_StartFirstBattle);

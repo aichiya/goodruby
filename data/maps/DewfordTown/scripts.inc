@@ -640,3 +640,104 @@ DewfordTown_EventScript_14E48F:: @ 814E48F
 	msgbox DewfordTown_Text_16BD79, 4
 	release
 	end
+
+DewfordTown_EventScript_BrawlyWifeIntro::
+    lock
+    faceplayer
+    goto_if_set FLAG_RECIEVED_SECOND_STARTER, DewfordTown_EventScript_BrawlyWifeAlreadyGaveStarter
+	msgbox DewfordTown_Text_BrawlyWifeIntro, 4
+	goto_if_set FLAG_BADGE02_GET, DewfordTown_EventScript_BrawlyWifeGiveStarter
+    msgbox DewfordTown_Text_BrawlyWifeNoBadge, 4
+	release
+	end
+
+DewfordTown_EventScript_BrawlyWifeGiveStarter:
+	msgbox DewfordTown_Text_BrawlyWifeHaveBadge, 4
+    getpartysize
+	compare RESULT, 6
+	goto_if_eq DewfordTown_EventScript_BrawlyWifeFullParty
+	playfanfare MUS_FANFA4
+    switch VAR_SECOND_STARTER
+    case SPECIES_BULBASAUR, DewfordTown_EventScript_BrawlyWifeBulbasaur
+    case SPECIES_CHARMANDER, DewfordTown_EventScript_BrawlyWifeCharmander
+    case SPECIES_SQUIRTLE, DewfordTown_EventScript_BrawlyWifeSquirtle
+    case SPECIES_CHIKORITA, DewfordTown_EventScript_BrawlyWifeChikorita
+    case SPECIES_CYNDAQUIL, DewfordTown_EventScript_BrawlyWifeCyndaquil
+    case SPECIES_TOTODILE, DewfordTown_EventScript_BrawlyWifeTotodile
+    goto DewfordTown_EventScript_BrawlyWifeBulbasaur
+
+DewfordTown_EventScript_BrawlyWifeAlreadyGaveStarter:
+	msgbox DewfordTown_Text_BrawlyWifeGavePokemon, 4
+	release
+	end
+
+DewfordTown_EventScript_BrawlyWifeFullParty:
+    msgbox DewfordTown_Text_BrawlyWifePartyFull, 4
+    release
+    end
+
+DewfordTown_EventScript_BrawlyWifeBulbasaur:
+    bufferspeciesname 0, SPECIES_BULBASAUR
+	message DewfordTown_Text_BrawlyWifeGotPokemon
+	waitfanfare
+	waitmessage
+	givemon SPECIES_BULBASAUR, 14, 0x0, 0x0, 0x0, 0
+	setflag FLAG_RECIEVED_SECOND_STARTER
+	msgbox DewfordTown_Text_BrawlyWifeGavePokemon, 4
+	release
+	end
+
+DewfordTown_EventScript_BrawlyWifeCharmander:
+    bufferspeciesname 0, SPECIES_CHARMANDER
+	message DewfordTown_Text_BrawlyWifeGotPokemon
+	waitfanfare
+	waitmessage
+	givemon SPECIES_CHARMANDER, 14, 0x0, 0x0, 0x0, 0
+	setflag FLAG_RECIEVED_SECOND_STARTER
+	msgbox DewfordTown_Text_BrawlyWifeGavePokemon, 4
+	release
+	end
+
+DewfordTown_EventScript_BrawlyWifeSquirtle:
+    bufferspeciesname 0, SPECIES_SQUIRTLE
+	message DewfordTown_Text_BrawlyWifeGotPokemon
+	waitfanfare
+	waitmessage
+	givemon SPECIES_SQUIRTLE, 14, 0x0, 0x0, 0x0, 0
+	setflag FLAG_RECIEVED_SECOND_STARTER
+	msgbox DewfordTown_Text_BrawlyWifeGavePokemon, 4
+	release
+	end
+
+DewfordTown_EventScript_BrawlyWifeChikorita:
+    bufferspeciesname 0, SPECIES_CHIKORITA
+	message DewfordTown_Text_BrawlyWifeGotPokemon
+	waitfanfare
+	waitmessage
+	givemon SPECIES_CHIKORITA, 14, 0x0, 0x0, 0x0, 0
+	setflag FLAG_RECIEVED_SECOND_STARTER
+	msgbox DewfordTown_Text_BrawlyWifeGavePokemon, 4
+	release
+	end
+
+DewfordTown_EventScript_BrawlyWifeCyndaquil:
+    bufferspeciesname 0, SPECIES_CYNDAQUIL
+	message DewfordTown_Text_BrawlyWifeGotPokemon
+	waitfanfare
+	waitmessage
+	givemon SPECIES_CYNDAQUIL, 14, 0x0, 0x0, 0x0, 0
+	setflag FLAG_RECIEVED_SECOND_STARTER
+	msgbox DewfordTown_Text_BrawlyWifeGavePokemon, 4
+	release
+	end
+
+DewfordTown_EventScript_BrawlyWifeTotodile:
+    bufferspeciesname 0, SPECIES_TOTODILE
+	message DewfordTown_Text_BrawlyWifeGotPokemon
+	waitfanfare
+	waitmessage
+	givemon SPECIES_TOTODILE, 14, 0x0, 0x0, 0x0, 0
+	setflag FLAG_RECIEVED_SECOND_STARTER
+	msgbox DewfordTown_Text_BrawlyWifeGavePokemon, 4
+	release
+	end

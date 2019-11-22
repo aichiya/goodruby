@@ -60,6 +60,7 @@
 #define VAR_POISON_STEP_COUNTER    0x402B
 #define VAR_RESET_RTC_ENABLE       0x402C
 #define VAR_ENIGMA_BERRY_AVAILABLE 0x402D
+#define VAR_SECOND_STARTER         0x402E
 
 #define VAR_DAYS                   0x4040
 #define VAR_FANCLUB_UNKNOWN_1      0x4041 // TODO: document these two fanclub vars
