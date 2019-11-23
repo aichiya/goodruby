@@ -1696,28 +1696,6 @@ static void atk00_attackcanceler(void)
     }
 
     gHitMarker |= HITMARKER_OBEYS;
-	
-	if (gBattleMons[gBankAttacker].ability == ABILITY_PROTEAN)
-	{
-		u8 moveType = gBattleMoves[gCurrentMove].type;
-		if (gBattleStruct->dynamicMoveType & 0x3F)
-			moveType = gBattleStruct->dynamicMoveType & 0x3F;
-		
-		if (gBattleMons[gBankAttacker].type1 != moveType || gBattleMons[gBankAttacker].type2 != moveType)
-		{
-			gBattleMons[gBankAttacker].type1 = moveType;
-			gBattleMons[gBankAttacker].type2 = moveType;
-			
-			gBattleTextBuff1[0] = 0xFD;
-			gBattleTextBuff1[1] = 3;
-			gBattleTextBuff1[2] = moveType;
-			gBattleTextBuff1[3] = 0xFF;
-			
-			BattleScriptPushCursor();
-			gBattlescriptCurrInstr = BattleScript_Protean;
-			return;
-		}
-	}
     
     if (gBattleMons[gBankAttacker].ability == ABILITY_FORECAST)
     {
@@ -2054,6 +2032,29 @@ static void atk02_attackstring(void)
 {
     if (gBattleExecBuffer)
          return;
+
+	if (gBattleMons[gBankAttacker].ability == ABILITY_PROTEAN)
+	{
+		u8 moveType = gBattleMoves[gCurrentMove].type;
+		if (gBattleStruct->dynamicMoveType & 0x3F)
+			moveType = gBattleStruct->dynamicMoveType & 0x3F;
+		
+		if (gBattleMons[gBankAttacker].type1 != moveType || gBattleMons[gBankAttacker].type2 != moveType)
+		{
+			gBattleMons[gBankAttacker].type1 = moveType;
+			gBattleMons[gBankAttacker].type2 = moveType;
+			
+			gBattleTextBuff1[0] = 0xFD;
+			gBattleTextBuff1[1] = 3;
+			gBattleTextBuff1[2] = moveType;
+			gBattleTextBuff1[3] = 0xFF;
+			
+			BattleScriptPushCursor();
+			gBattlescriptCurrInstr = BattleScript_Protean;
+			return;
+		}
+	}
+
     if (!(gHitMarker & (HITMARKER_NO_ATTACKSTRING | HITMARKER_ATTACKSTRING_PRINTED)))
     {
         PrepareStringBattle(4, gBankAttacker);
@@ -2061,6 +2062,7 @@ static void atk02_attackstring(void)
     }
 	if (gCurrentMove != MOVE_COPYCAT)
 		gBattleStruct->copycatTracker = gCurrentMove;
+
     gBattlescriptCurrInstr++;
     gBattleCommunication[MSG_DISPLAY] = 0;
 }

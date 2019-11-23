@@ -253,27 +253,46 @@ MauvilleCity_GameCorner_EventScript_156D54:: @ 8156D54
 MauvilleCity_GameCorner_EventScript_156DA6:: @ 8156DA6
 	setvar VAR_TEMP_1, 1
 	bufferitemname 0, ITEM_TM32_DRAIN_PUNCH
-	goto MauvilleCity_GameCorner_EventScript_156DEC
+    checkitem ITEM_TM32_DRAIN_PUNCH, 1
+	compare RESULT, 0
+	goto_if_eq MauvilleCity_GameCorner_EventScript_156DEC
+    goto MauvilleCity_GameCorner_EventScript_AlreadyHaveTM
 
 MauvilleCity_GameCorner_EventScript_156DB4:: @ 8156DB4
 	setvar VAR_TEMP_1, 2
 	bufferitemname 0, ITEM_TM54_FIRE_PUNCH
-	goto MauvilleCity_GameCorner_EventScript_156DEC
+    checkitem ITEM_TM54_FIRE_PUNCH, 1
+	compare RESULT, 0
+	goto_if_eq MauvilleCity_GameCorner_EventScript_156DEC
+    goto MauvilleCity_GameCorner_EventScript_AlreadyHaveTM
 
 MauvilleCity_GameCorner_EventScript_156DC2:: @ 8156DC2
 	setvar VAR_TEMP_1, 3
 	bufferitemname 0, ITEM_TM55_ICE_PUNCH
-	goto MauvilleCity_GameCorner_EventScript_156DEC
+    checkitem ITEM_TM55_ICE_PUNCH, 1
+	compare RESULT, 0
+	goto_if_eq MauvilleCity_GameCorner_EventScript_156DEC
+    goto MauvilleCity_GameCorner_EventScript_AlreadyHaveTM
 
 MauvilleCity_GameCorner_EventScript_156DD0:: @ 8156DD0
 	setvar VAR_TEMP_1, 4
 	bufferitemname 0, ITEM_TM56_THUNDER_PUNCH
-	goto MauvilleCity_GameCorner_EventScript_156DEC
+    checkitem ITEM_TM56_THUNDER_PUNCH, 1
+	compare RESULT, 0
+	goto_if_eq MauvilleCity_GameCorner_EventScript_156DEC
+    goto MauvilleCity_GameCorner_EventScript_AlreadyHaveTM
 
 MauvilleCity_GameCorner_EventScript_156DDE:: @ 8156DDE
 	setvar VAR_TEMP_1, 5
 	bufferitemname 0, ITEM_TM90_SUBSTITUTE
-	goto MauvilleCity_GameCorner_EventScript_156DEC
+    checkitem ITEM_TM90_SUBSTITUTE, 1
+	compare RESULT, 0
+	goto_if_eq MauvilleCity_GameCorner_EventScript_156DEC
+    goto MauvilleCity_GameCorner_EventScript_AlreadyHaveTM
+
+MauvilleCity_GameCorner_EventScript_AlreadyHaveTM::
+    msgbox MauvilleCity_GameCorner_Text_AlreadyHaveTM, 4
+    goto MauvilleCity_GameCorner_EventScript_156D49
 
 MauvilleCity_GameCorner_EventScript_156DEC:: @ 8156DEC
 	msgbox MauvilleCity_GameCorner_Text_181E33, MSGBOX_YESNO

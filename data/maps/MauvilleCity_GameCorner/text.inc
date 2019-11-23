@@ -151,3 +151,6 @@ MauvilleCity_GameCorner_Text_GetMon::
 
 MauvilleCity_GameCorner_Text_NoRoom::
     .string "Your party is full.$"
+
+MauvilleCity_GameCorner_Text_AlreadyHaveTM::
+    .string "You already have that TM.$"
