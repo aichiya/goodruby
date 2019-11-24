@@ -28,6 +28,7 @@ struct Item
 	u8 flingPower;
 	u8 natGiftType;
 	u8 natGiftPower;
+    u8 expensive;
 };
 
 extern u8 gCurSelectedItemSlotIndex;
@@ -560,4 +561,9 @@ u8 ItemId_GetNatGiftType(u16 itemId)
 u8 ItemId_GetNatGiftPower(u16 itemId)
 {
 	return gItems[SanitizeItemId(itemId)].natGiftPower;
+}
+
+u8 ItemId_GetExpensive(u16 itemId)
+{
+	return gItems[SanitizeItemId(itemId)].expensive;
 }

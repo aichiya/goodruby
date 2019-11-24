@@ -6294,7 +6294,7 @@ const struct Item gItems[] =
     {
         .name = _("TM13"),
         .itemId = ITEM_TM13_ICE_BEAM,
-        .price = 0,
+        .price = 75,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM13,
@@ -6307,6 +6307,7 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+        .expensive = 1,
     },
     {
         .name = _("TM14"),
@@ -6345,7 +6346,7 @@ const struct Item gItems[] =
     {
         .name = _("TM16"),
         .itemId = ITEM_TM16_LIGHT_SCREEN,
-        .price = 3000,
+        .price = 45,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM16,
@@ -6358,11 +6359,12 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+        .expensive = 1,
     },
     {
         .name = _("TM17"),
         .itemId = ITEM_TM17_PROTECT,
-        .price = 3000,
+        .price = 20,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM17,
@@ -6375,6 +6377,7 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+        .expensive = 1,
     },
     {
         .name = _("TM18"),
@@ -6413,7 +6416,7 @@ const struct Item gItems[] =
     {
         .name = _("TM20"),
         .itemId = ITEM_TM20_SAFEGUARD,
-        .price = 3000,
+        .price = 25,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM20,
@@ -6426,6 +6429,7 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+        .expensive = 1,
     },
     {
         .name = _("TM21"),
@@ -6481,7 +6485,7 @@ const struct Item gItems[] =
     {
         .name = _("TM24"),
         .itemId = ITEM_TM24_THUNDERBOLT,
-        .price = 0,
+        .price = 75,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM24,
@@ -6494,6 +6498,7 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+        .expensive = 1,
     },
     {
         .name = _("TM25"),
@@ -6566,7 +6571,7 @@ const struct Item gItems[] =
     {
         .name = _("TM29"),
         .itemId = ITEM_TM29_PSYCHIC,
-        .price = 0,
+        .price = 75,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM29,
@@ -6579,6 +6584,7 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+        .expensive = 1,
     },
     {
         .name = _("TM30"),
@@ -6634,7 +6640,7 @@ const struct Item gItems[] =
     {
         .name = _("TM33"),
         .itemId = ITEM_TM33_REFLECT,
-        .price = 3000,
+        .price = 45,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM33,
@@ -6647,6 +6653,7 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+        .expensive = 1,
     },
     {
         .name = _("TM34"),
@@ -6668,7 +6675,7 @@ const struct Item gItems[] =
     {
         .name = _("TM35"),
         .itemId = ITEM_TM35_FLAMETHROWER,
-        .price = 0,
+        .price = 75,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM35,
@@ -6681,6 +6688,7 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+        .expensive = 1,
     },
     {
         .name = _("TM36"),
@@ -6974,7 +6982,7 @@ const struct Item gItems[] =
     {
         .name = _("TM53"),
         .itemId = ITEM_TM53_ENERGY_BALL,
-        .price = 0,
+        .price = 60,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM53,
@@ -6987,6 +6995,7 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
         .flingPower = 0,
+        .expensive = 1,
     },
     {
         .name = _("TM54"),
@@ -7229,7 +7238,7 @@ const struct Item gItems[] =
     {
         .name = _("TM68"),
         .itemId = ITEM_TM68_GIGA_IMPACT,
-        .price = 0,
+        .price = 99,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM68,
@@ -7242,6 +7251,7 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
         .flingPower = 0,
+        .expensive = 1,
     },
     {
         .name = _("TM69"),
@@ -7484,7 +7494,7 @@ const struct Item gItems[] =
     {
         .name = _("TM83"),
         .itemId = ITEM_TM83_NATURAL_GIFT,
-        .price = 0,
+        .price = 20,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM83,
@@ -7497,6 +7507,7 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
         .flingPower = 0,
+        .expensive = 1,
     },
     {
         .name = _("TM84"),
@@ -7518,7 +7529,7 @@ const struct Item gItems[] =
     {
         .name = _("TM85"),
         .itemId = ITEM_TM85_MAGIC_GLEAM,
-        .price = 0,
+        .price = 50,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM85,
@@ -7531,6 +7542,7 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
         .flingPower = 0,
+        .expensive = 1,
     },
     {
         .name = _("TM86"),
@@ -7586,7 +7598,7 @@ const struct Item gItems[] =
     {
         .name = _("TM89"),
         .itemId = ITEM_TM89_U_TURN,
-        .price = 0,
+        .price = 60,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM89,
@@ -7599,6 +7611,7 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
         .flingPower = 0,
+        .expensive = 1,
     },
     {
         .name = _("TM90"),

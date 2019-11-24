@@ -25,10 +25,14 @@ LilycoveCity_DepartmentStore_4F_EventScript_15A019:: @ 815A019
 
 	.align 2
 LilycoveCity_DepartmentStore_4F_Items1:: @ 815A030
-	.2byte ITEM_TM38_FIRE_BLAST
-	.2byte ITEM_TM25_THUNDER
-	.2byte ITEM_TM14_BLIZZARD
-	.2byte ITEM_TM15_HYPER_BEAM
+    .2byte ITEM_TM85_MAGIC_GLEAM
+    .2byte ITEM_TM53_ENERGY_BALL
+    .2byte ITEM_TM89_U_TURN
+	.2byte ITEM_TM35_FLAMETHROWER
+	.2byte ITEM_TM24_THUNDERBOLT
+	.2byte ITEM_TM13_ICE_BEAM
+    .2byte ITEM_TM29_PSYCHIC
+	.2byte ITEM_TM68_GIGA_IMPACT
 	.2byte ITEM_NONE
 	release
 	end
@@ -45,6 +49,7 @@ LilycoveCity_DepartmentStore_4F_EventScript_15A03C:: @ 815A03C
 
 	.align 2
 LilycoveCity_DepartmentStore_4F_Items2:: @ 815A054
+    .2byte ITEM_TM83_NATURAL_GIFT
 	.2byte ITEM_TM17_PROTECT
 	.2byte ITEM_TM20_SAFEGUARD
 	.2byte ITEM_TM33_REFLECT

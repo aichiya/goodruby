@@ -5,6 +5,7 @@ LilycoveCity_DepartmentStore_1F_EventObjects:: @ 838A218
 	object_event 4, EVENT_OBJ_GFX_LITTLE_GIRL_2, 0, 4, 4, 3, MOVEMENT_TYPE_WANDER_AROUND, 1, 1, 0, 0, LilycoveCity_DepartmentStore_1F_EventScript_159EE0, 0
 	object_event 5, EVENT_OBJ_GFX_MAN_3, 0, 3, 6, 3, MOVEMENT_TYPE_WANDER_AROUND, 1, 1, 0, 0, LilycoveCity_DepartmentStore_1F_EventScript_159EE9, 0
 	object_event 6, EVENT_OBJ_GFX_AZUMARILL, 0, 2, 6, 3, MOVEMENT_TYPE_LOOK_AROUND, 1, 1, 0, 0, LilycoveCity_DepartmentStore_1F_EventScript_159EF2, 0
+	object_event 7, EVENT_OBJ_GFX_MAN_1, 0, 2, 2, 3, MOVEMENT_TYPE_FACE_UP, 1, 1, 0, 0, LilycoveCity_DepartmentStore_1F_EventScript_ElevatorOutOfOrder, FLAG_BADGE06_GET
 
 LilycoveCity_DepartmentStore_1F_MapWarps:: @ 838A2A8
 	warp_def 8, 7, 0, 0, MAP_LILYCOVE_CITY

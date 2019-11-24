@@ -5,6 +5,10 @@ LilycoveCity_DepartmentStore_1F_EventScript_159D55:: @ 8159D55
 	msgbox LilycoveCity_DepartmentStore_1F_Text_18BFB5, 2
 	end
 
+LilycoveCity_DepartmentStore_1F_EventScript_ElevatorOutOfOrder::
+	msgbox LilycoveCity_DepartmentStore_1F_Text_ElevatorOutOfOrder, 2
+	end
+
 LilycoveCity_DepartmentStore_1F_EventScript_159D5E:: @ 8159D5E
 	lock
 	faceplayer

@@ -1,6 +1,10 @@
 LilycoveCity_DepartmentStore_2F_MapScripts:: @ 8159F0E
 	.byte 0
 
+LilycoveCity_DepartmentStore_2F_EventScript_StairsOutOfOrder::
+	msgbox LilycoveCity_DepartmentStore_2F_Text_StairsOutOfOrder, 2
+	end
+
 LilycoveCity_DepartmentStore_2F_EventScript_159F0F:: @ 8159F0F
 	msgbox LilycoveCity_DepartmentStore_2F_Text_18C162, 2
 	end

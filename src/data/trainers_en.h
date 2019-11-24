@@ -5671,16 +5671,16 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_COLIN] =
     {
-        .partyFlags = 0,
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
         .trainerClass = TRAINER_CLASS_BIRD_KEEPER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
         .trainerPic = TRAINER_PIC_BIRD_KEEPER,
         .trainerName = _("Colin"),
         .items = {0, 0, 0, 0}, //{ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
-        .aiFlags = 0x1,
+        .aiFlags = 0x7,
         .partySize = 2,
-        .party = {.NoItemDefaultMoves = gTrainerParty_Colin }
+        .party = {.NoItemCustomMoves = gTrainerParty_Colin }
     },
 
     [TRAINER_ROBERT_1] =
@@ -7849,7 +7849,7 @@ const struct Trainer gTrainers[] = {
         .items = {0, 0, 0, 0}, //{ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = 0xb,
-        .partySize = 2,
+        .partySize = 1,
         .party = {.NoItemDefaultMoves = gTrainerParty_Jenna }
     },
 

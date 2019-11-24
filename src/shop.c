@@ -534,7 +534,10 @@ static void Shop_DisplayPriceInCheckoutWindow(u8 taskId)
     u16 itemListIndex = gMartInfo.choicesAbove + gMartInfo.cursor;
     u16 itemId = gMartInfo.itemList[itemListIndex];
     u32 price = (ItemId_GetPrice(itemId) >> GetPriceReduction(1));
+    u8 expensive = ItemId_GetExpensive(itemId);
 
+    if (expensive)
+        price *= 1000;
     PrintMoneyAmount(gTasks[taskId].tItemCount * price, 6, 6, 11);
     gStringVar1[0] = EXT_CTRL_CODE_BEGIN;
     gStringVar1[1] = 0x14;
@@ -542,12 +545,13 @@ static void Shop_DisplayPriceInCheckoutWindow(u8 taskId)
     ConvertIntToDecimalStringN(&gStringVar1[3], gTasks[taskId].tItemCount, 1, 2);
     Menu_PrintText(gOtherText_xString1, 1, 11);
     sub_80A3FA0(gBGTilemapBuffers[1], 1, 11, 12, 2, 0xC3E1);
+    
 }
 
 static void Shop_DisplayNormalPriceInList(u16 itemId, u8 var2, bool32 hasControlCode)
 {
     u8 *stringPtr = gStringVar1;
-	u8 width = 0x58;
+	u8 width = 0x68;
 
     if (hasControlCode)
     {
@@ -589,8 +593,22 @@ static void Shop_DisplayNormalPriceInList(u16 itemId, u8 var2, bool32 hasControl
 
 	if (itemId != 0)
 	{
-	    GetMoneyAmountText(stringPtr, (ItemId_GetPrice(itemId) >> GetPriceReduction(1)), 0x4);
-        Menu_PrintTextPixelCoords(&gStringVar1[0], 0xCA, var2 << 3, 1);
+        u32 price = ItemId_GetPrice(itemId) >> GetPriceReduction(1);
+        if (ItemId_GetExpensive(itemId))
+        {
+            u8* buffer;
+            GetMoneyAmountText(stringPtr, price * 10, 0x3);
+            buffer = stringPtr;
+            while (buffer[0] != EOS)
+                buffer++;
+            buffer[-4] = CHAR_K;
+            Menu_PrintTextPixelCoords(&gStringVar1[0], 0xD0, var2 << 3, 1);
+        }
+        else
+        {
+            GetMoneyAmountText(stringPtr, price, 0x4);
+            Menu_PrintTextPixelCoords(&gStringVar1[0], 0xCA, var2 << 3, 1);
+        }
     }
 }
 
@@ -763,7 +781,10 @@ static void Shop_PrintPrice(u8 taskId)
 
     if (gMain.newKeys & A_BUTTON)
     {
-        gMartTotalCost = (ItemId_GetPrice(gMartInfo.itemList[gMartInfo.choicesAbove + gMartInfo.cursor]) >> GetPriceReduction(1)) * gTasks[taskId].tItemCount; // set total cost of your purchase.
+        u16 itemId = gMartInfo.itemList[gMartInfo.choicesAbove + gMartInfo.cursor];
+        gMartTotalCost = (ItemId_GetPrice(itemId) >> GetPriceReduction(1)) 
+            * gTasks[taskId].tItemCount * (ItemId_GetExpensive(itemId) ? 1000 : 1); // set total cost of your purchase.
+        
         Menu_EraseWindowRect(0, 0xA, 0xD, 0xD);
         sub_80A3FA0(gBGTilemapBuffers[1], 0x1, 0xB, 0xC, 0x2, 0);
         BuyMenuDrawTextboxBG_Restore();

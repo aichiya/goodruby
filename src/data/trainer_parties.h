@@ -5782,12 +5782,12 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Jared[] = {
     {
 	.iv = 0,
 	.level = 38,
-	.species = SPECIES_PIDGEOT
+	.species = SPECIES_TOGETIC
     },
     {
 	.iv = 0,
 	.level = 38,
-	.species = SPECIES_FEAROW
+	.species = SPECIES_DELIBIRD
     },
 };
 
@@ -5850,16 +5850,18 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Will[] = {
     }
 };
 
-const struct TrainerMonNoItemDefaultMoves gTrainerParty_Colin[] = {
+const struct TrainerMonNoItemCustomMoves gTrainerParty_Colin[] = {
     {
 	.iv = 0,
 	.level = 38,
-	.species = SPECIES_TOGETIC
+	.species = SPECIES_FEAROW,
+        .moves = MOVE_FLY, MOVE_FAINT_ATTACK, MOVE_AERIAL_ACE, MOVE_PURSUIT
     },
     {
 	.iv = 0,
 	.level = 38,
-	.species = SPECIES_DELIBIRD
+	.species = SPECIES_PIDGEOT,
+        .moves = MOVE_FLY, MOVE_WING_ATTACK, 0, 0
     }
 };
 
@@ -8190,13 +8192,8 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Catherine1[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Jenna[] = {
     {
 	.iv = 50,
-	.level = 38,
-	.species = SPECIES_LOMBRE
-    },
-    {
-	.iv = 50,
-	.level = 38,
-	.species = SPECIES_NUZLEAF
+	.level = 40,
+	.species = SPECIES_SNORLAX
     }
 };
 

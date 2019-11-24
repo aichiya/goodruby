@@ -10,6 +10,14 @@ LilycoveCity_DepartmentStore_2F_Text_18C1D9:: @ 818C1D9
 	.string "I'm leaving on a long journey soon.\n"
 	.string "I need to stock up on items.$"
 
+LilycoveCity_DepartmentStore_2F_Text_StairsOutOfOrder::
+	.string "Stairs are out of order, sorry.\n"
+    .string "No, really, you can't go up now.\p"
+    .string "You're a trainer, right? Maybe stop\n"
+    .string "by again after beating Fortree's Gym.\p"
+    .string "We should have the place fixed up by\n"
+    .string "the time you get back.$"
+
 UnknownString_818C21A: @ 818C21A
 	.string "FOR YOUR TRAVELING COMPANIONS\n"
 	.string "2F: TRAINER'S ZONE$"

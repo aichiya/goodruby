@@ -25,3 +25,11 @@ LilycoveCity_DepartmentStore_1F_Text_18C0D9:: @ 818C0D9
 	.string "4F: TM CORNER\p"
 	.string "5F: POKé DOLL FLOOR\p"
 	.string "ROOFTOP: ROOFTOP PLAZA$"
+
+LilycoveCity_DepartmentStore_1F_Text_ElevatorOutOfOrder::
+	.string "Elevator's out of order, sorry.\n"
+    .string "It'll be a while before it's working.\p"
+    .string "You're a trainer, right? Maybe stop\n"
+    .string "by again after beating Fortree's Gym.\p"
+    .string "We should have the place fixed up by\n"
+    .string "the time you get back.$"

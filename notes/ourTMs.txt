@@ -7,17 +7,17 @@
 07 - Heal Bell      Slateport Market (*Shoal Cave)
 08 - Bulk Up        Dewford Gym
 09 - Venoshock      Route 113, hidden
-10 - Hidden Power   *Slateport shop + Fortree Town
+10 - Hidden Power   Fortree Town
 11 - Sunny Day      *Scorched Slab
 12 - Taunt          *Trick House
 13 - Ice Beam       *Abandoned Ship + Game Corner
 14 - Blizzard       *Department Store
 15 - Hyper Beam     Petalburg Gym
-16 - Light Screen   *Department Store
-17 - Protect        *Department Store
+16 - Light Screen   Department Store
+17 - Protect        Department Store
 18 - Rain Dance     *Abandoned Ship
 19 - Giga Drain     *South of Mt. Pyre
-20 - Safeguard      *Department Store
+20 - Safeguard      Department Store
 21 - Seed Bomb      Route 119 (*Pacifidlog (replacing Frustration))
 22 - Solar Beam     *Safari Zone
 23 - Iron Tail      *Meteor Falls
@@ -26,11 +26,11 @@
 26 - Earthquake     *Seafloor Cavern
 27 - Return         Fallarbor Town (*Pacifidlog)
 28 - Dig            Fossil Maniac
-29 - Psychic        *Victory Road+Game Corner
+29 - Psychic        Department Store (*Victory Road+Game Corner)
 30 - Shadow Ball    *Mt. Pyre
 31 - Brick Break    *Sootopolis
 32 - Drain Punch    Game Corner
-33 - Reflect        *Department Store
+33 - Reflect        Department Store
 34 - Sludge Wave    *Mauville Gym
 35 - Flamethrower   *Game Corner
 36 - Sludge Bomb    *Dewford Town (later)
@@ -80,7 +80,7 @@
 80 - Rock Slide     Route 111 Desert
 81 - X-Scissor      Route 135
 82 - Dragon Tail
-83 - Natural Gift
+83 - Natural Gift   Deparment Store
 84 - Poison Jab
 85 - Dazzling Gleam
 86 - Grass Knot     Boy South of Rustboro

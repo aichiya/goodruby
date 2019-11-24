@@ -330,7 +330,7 @@ ROBERT: Dodrio Lv37
 GABBY & TY: Minun Lv37, Espeon Lv37
 
 FORTREE GYM:
-JARED: Pidgeot Lv38, Fearow Lv38
+JARED: Togetic Lv38, Delibird Lv38
 KYLEE: Gyarados Lv38, Tropius Lv38
 TERELL: Pelipper Lv38, Noctowl Lv38
 WILL: Xatu Lv38, Swellow Lv38, Dodrio Lv38
@@ -343,11 +343,11 @@ Swellow
 Togekiss
 
 ROUTE 120:
-COLIN: Togetic Lv38, Delibird Lv38
+COLIN: Pidgeot Lv38, Fearow Lv38
 ANGELICA: Vileplume Lv40
 TSUNAO: Kecleon Lv38, Hypno Lv38, Golbat Lv38
 JENNIFER: Milotic Lv39, Lanturn Lv39, Magneton Lv39
-JENNA: Lombre Lv38, Nuzleaf Lv38
+JENNA: Snorlax Lv40
 CARLOS: Rhyhorn Lv38, Chimecho Lv38
 BRANDON: Dustox Lv38, Heracross Lv38
 KEIGO: Ninjask Lv39, Electrode Lv39

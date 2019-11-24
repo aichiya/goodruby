@@ -15,7 +15,6 @@ LilycoveCity_EventObjects:: @ 838016C
 	object_event 14, EVENT_OBJ_GFX_VAR_1, 0, 45, 12, 3, MOVEMENT_TYPE_FACE_RIGHT, 0, 0, 0, 0, LilycoveCity_EventScript_14CD2B, FLAG_HIDE_GRUNTS_LILYCOVE
 	object_event 15, EVENT_OBJ_GFX_VAR_1, 0, 38, 9, 5, MOVEMENT_TYPE_FACE_LEFT, 0, 0, 0, 0, LilycoveCity_EventScript_14CD34, FLAG_HIDE_GRUNTS_LILYCOVE
 	object_event 16, EVENT_OBJ_GFX_GENTLEMAN, 0, 50, 7, 5, MOVEMENT_TYPE_WANDER_AROUND, 1, 1, 0, 0, LilycoveCity_EventScript_14CB74, 0
-	object_event 17, EVENT_OBJ_GFX_VAR_0, 0, 27, 7, 5, MOVEMENT_TYPE_FACE_DOWN, 1, 1, 0, 0, LilycoveCity_EventScript_14CD46, FLAG_HIDE_RIVAL_LILYCOVE_MART
 
 LilycoveCity_MapWarps:: @ 8380304
 	warp_def 27, 6, 0, 0, MAP_LILYCOVE_CITY_DEPARTMENT_STORE_1F

@@ -49,15 +49,9 @@ Route120_EventScript_151682:: @ 8151682
 	return
 
 Route120_MapScript1_151686:: @ 8151686
-	call_if_unset FLAG_REGI_DOORS_OPENED, Route120_EventScript_1516A2
 	call_if_set FLAG_RECEIVED_DEVON_SCOPE, Route120_EventScript_1516B5
 	call_if_unset FLAG_RECEIVED_DEVON_SCOPE, Route120_EventScript_1516DA
 	end
-
-Route120_EventScript_1516A2:: @ 81516A2
-	setmetatile 7, 54, 124, 1
-	setmetatile 7, 55, 145, 1
-	return
 
 Route120_EventScript_1516B5:: @ 81516B5
 	setmetatile 13, 15, 663, 0
