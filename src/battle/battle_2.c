@@ -3857,7 +3857,7 @@ void sub_8010874(void)
     ewram16086 = 0;
     ewram16087 = 0;
     ewram16089 = gBaseStats[GetMonData(&gEnemyParty[0], MON_DATA_SPECIES)].catchRate * 100 / 1275;
-    ewram16088 = 3;
+    gBattleStruct->safariFleeRate = gBaseStats[GetMonData(&gEnemyParty[0], MON_DATA_SPECIES)].safariZoneFleeRate;
     ewram1601B = 0;
     ewram16056 = 1;
 
@@ -7236,12 +7236,12 @@ void HandleAction_ThrowPokeblock(void)
 
     if (ewram16087 < 3)
         ewram16087++;
-    if (ewram16088 > 1)
+    if (gBattleStruct->safariFleeRate > 1)
     {
-        if (ewram16088 < gUnknown_081FA70C[ewram16087][gBattleCommunication[MULTISTRING_CHOOSER]])
-            ewram16088 = 1;
+        if (gBattleStruct->safariFleeRate <= gUnknown_081FA70C[ewram16087][gBattleCommunication[MULTISTRING_CHOOSER]])
+            gBattleStruct->safariFleeRate = 1;
         else
-            ewram16088 -= gUnknown_081FA70C[ewram16087][gBattleCommunication[MULTISTRING_CHOOSER]];
+            gBattleStruct->safariFleeRate -= gUnknown_081FA70C[ewram16087][gBattleCommunication[MULTISTRING_CHOOSER]];
     }
 
     gBattlescriptCurrInstr = gBattlescriptsForSafariActions[2];
@@ -7258,9 +7258,9 @@ void HandleAction_GoNear(void)
     if (ewram16089 > 20)
         ewram16089 = 20;
 
-    ewram16088 += gUnknown_081FA71F[ewram16086];
-    if (ewram16088 > 20)
-        ewram16088 = 20;
+    gBattleStruct->safariFleeRate += gUnknown_081FA71F[ewram16086];
+    if (gBattleStruct->safariFleeRate > 20)
+        gBattleStruct->safariFleeRate = 20;
 
     if (ewram16086 < 3)
     {

@@ -1369,26 +1369,18 @@ const struct WildPokemonInfo Route120_LandMonsInfo = {20, Route120_LandMons};
 
 const struct WildPokemon Route121_LandMons [] =
 {
-    {26, 26, SPECIES_ZIGZAGOON},
-#ifdef SAPPHIRE
-    {26, 26, SPECIES_SHUPPET},
-#else
-    {26, 26, SPECIES_DUSKULL},
-#endif
-    {26, 26, SPECIES_LINOONE},
-#ifdef SAPPHIRE
-    {28, 28, SPECIES_SHUPPET},
-#else
-    {28, 28, SPECIES_DUSKULL},
-#endif
-    {28, 28, SPECIES_LINOONE},
-    {26, 26, SPECIES_ODDISH},
-    {28, 28, SPECIES_ODDISH},
-    {28, 28, SPECIES_GLOOM},
-    {26, 26, SPECIES_WINGULL},
-    {27, 27, SPECIES_WINGULL},
-    {28, 28, SPECIES_WINGULL},
-    {25, 25, SPECIES_KECLEON},
+    {31, 34, SPECIES_GLOOM},
+    {31, 34, SPECIES_AIPOM},
+    {31, 34, SPECIES_GLOOM},
+    {31, 34, SPECIES_SHUPPET},
+    {31, 34, SPECIES_XATU},
+    {31, 34, SPECIES_GROWLITHE},
+    {31, 34, SPECIES_SHUPPET},
+    {31, 34, SPECIES_HYPNO},
+    {31, 34, SPECIES_SCYTHER},
+    {31, 34, SPECIES_KECLEON},
+    {31, 34, SPECIES_SCYTHER},
+    {31, 34, SPECIES_KECLEON},
 };
 const struct WildPokemonInfo Route121_LandMonsInfo = {20, Route121_LandMons};
 
@@ -1453,35 +1445,35 @@ const struct WildPokemonInfo Route135_LandMonsInfo = {20, Route135_LandMons};
 
 const struct WildPokemon SafariZone_Northwest_LandMons [] =
 {
-    {27, 27, SPECIES_RHYHORN},
-    {27, 27, SPECIES_ODDISH},
-    {29, 29, SPECIES_RHYHORN},
-    {29, 29, SPECIES_ODDISH},
-    {27, 27, SPECIES_DODUO},
-    {29, 29, SPECIES_GLOOM},
-    {31, 31, SPECIES_GLOOM},
-    {29, 29, SPECIES_DODUO},
-    {29, 29, SPECIES_DODRIO},
-    {27, 27, SPECIES_PINSIR},
-    {31, 31, SPECIES_DODRIO},
-    {29, 29, SPECIES_PINSIR},
+    {31, 34, SPECIES_RHYHORN},
+    {31, 34, SPECIES_DODUO},
+    {31, 34, SPECIES_KANGASKHAN},
+    {31, 34, SPECIES_QUAGSIRE},
+    {31, 34, SPECIES_LICKITUNG},
+    {31, 34, SPECIES_PINSIR},
+    {31, 34, SPECIES_TAUROS},
+    {31, 34, SPECIES_CHANSEY},
+    {10, 15, SPECIES_CHARMANDER},
+    {10, 15, SPECIES_CYNDAQUIL},
+    {10, 15, SPECIES_CHARMANDER},
+    {10, 15, SPECIES_CYNDAQUIL},
 };
 const struct WildPokemonInfo SafariZone_Northwest_LandMonsInfo = {25, SafariZone_Northwest_LandMons};
 
 const struct WildPokemon SafariZone_Northeast_LandMons [] =
 {
-    {27, 27, SPECIES_PHANPY},
-    {27, 27, SPECIES_ODDISH},
-    {29, 29, SPECIES_PHANPY},
-    {29, 29, SPECIES_ODDISH},
-    {27, 27, SPECIES_NATU},
-    {29, 29, SPECIES_GLOOM},
-    {31, 31, SPECIES_GLOOM},
-    {29, 29, SPECIES_NATU},
-    {29, 29, SPECIES_XATU},
-    {27, 27, SPECIES_HERACROSS},
-    {31, 31, SPECIES_XATU},
-    {29, 29, SPECIES_HERACROSS},
+    {31, 34, SPECIES_NIDORINO},
+    {31, 34, SPECIES_NIDORINA},
+    {31, 34, SPECIES_KANGASKHAN},
+    {31, 34, SPECIES_HERACROSS},
+    {31, 34, SPECIES_DONPHAN},
+    {31, 34, SPECIES_PONYTA},
+    {31, 34, SPECIES_TAUROS},
+    {31, 34, SPECIES_CHANSEY},
+    {10, 15, SPECIES_BULBASAUR},
+    {10, 15, SPECIES_DITTO},
+    {10, 15, SPECIES_BULBASAUR},
+    {10, 15, SPECIES_DITTO},
 };
 const struct WildPokemonInfo SafariZone_Northeast_LandMonsInfo = {25, SafariZone_Northeast_LandMons};
 
@@ -1497,35 +1489,35 @@ const struct WildPokemonInfo SafariZone_Northeast_RockSmashMonsInfo = {25, Safar
 
 const struct WildPokemon SafariZone_Southwest_LandMons [] =
 {
-    {25, 25, SPECIES_ODDISH},
-    {27, 27, SPECIES_ODDISH},
-    {25, 25, SPECIES_GIRAFARIG},
-    {27, 27, SPECIES_GIRAFARIG},
-    {25, 25, SPECIES_NATU},
-    {25, 27, SPECIES_DODUO},
-    {25, 25, SPECIES_GLOOM},
-    {27, 27, SPECIES_WOBBUFFET},
-    {25, 25, SPECIES_PIKACHU},
-    {27, 27, SPECIES_WOBBUFFET},
-    {27, 27, SPECIES_PIKACHU},
-    {29, 29, SPECIES_WOBBUFFET},
+    {31, 34, SPECIES_BEEDRILL},
+    {31, 34, SPECIES_TANGELA},
+    {31, 34, SPECIES_KANGASKHAN},
+    {31, 34, SPECIES_VENOMOTH},
+    {31, 34, SPECIES_GOLDUCK},
+    {31, 34, SPECIES_MR_MIME},
+    {31, 34, SPECIES_TAUROS},
+    {31, 34, SPECIES_CHANSEY},
+    {10, 15, SPECIES_CHIKORITA},
+    {10, 15, SPECIES_DITTO},
+    {10, 15, SPECIES_CHIKORITA},
+    {10, 15, SPECIES_DITTO},
 };
 const struct WildPokemonInfo SafariZone_Southwest_LandMonsInfo = {25, SafariZone_Southwest_LandMons};
 
 const struct WildPokemon SafariZone_Southeast_LandMons [] =
 {
-    {25, 25, SPECIES_ODDISH},
-    {27, 27, SPECIES_ODDISH},
-    {25, 25, SPECIES_GIRAFARIG},
-    {27, 27, SPECIES_GIRAFARIG},
-    {25, 25, SPECIES_NATU},
-    {25, 25, SPECIES_DODUO},
-    {25, 25, SPECIES_GLOOM},
-    {27, 27, SPECIES_WOBBUFFET},
-    {25, 25, SPECIES_PIKACHU},
-    {27, 27, SPECIES_WOBBUFFET},
-    {27, 27, SPECIES_PIKACHU},
-    {29, 29, SPECIES_WOBBUFFET},
+    {31, 34, SPECIES_PIKACHU},
+    {31, 34, SPECIES_EXEGGCUTE},
+    {31, 34, SPECIES_KANGASKHAN},
+    {31, 34, SPECIES_GIRAFARIG},
+    {31, 34, SPECIES_WOBBUFFET},
+    {31, 34, SPECIES_SMEARGLE},
+    {31, 34, SPECIES_TAUROS},
+    {31, 34, SPECIES_CHANSEY},
+    {10, 15, SPECIES_TORCHIC},
+    {10, 15, SPECIES_TREECKO},
+    {10, 15, SPECIES_TORCHIC},
+    {10, 15, SPECIES_TREECKO},
 };
 const struct WildPokemonInfo SafariZone_Southeast_LandMonsInfo = {25, SafariZone_Southeast_LandMons};
 

@@ -133,7 +133,7 @@ ROUTE 119: Aipom (30%), Yanma (30%), Gloom (15%), Persian (10%), Tropius (10%), 
 ROUTE 120: Aipom (30%), Yanma (30%), Gloom (15%), Absol (10%), Persian (5%), Scyther (5%), Kecleon (5%)
 
 SCORCHED SLAB:
-ROUTE 121: Gloom, Shuppet, Aipom, Kecleon, Scyther
+ROUTE 121: Gloom (30%), Aipom (20%), Shuppet (15%), Growlithe (10%), Xatu (10%), Hypno (5%), Kecleon (5%), Scyther (5%)
 SAFARI: Chansey, Tauros, Ditto
 MT. PYRE TOWER: Shuppet, Duskull, Haunter
 MT. PYRE GRASS: Shuppet, Vulpix, Growlithe, Meditite

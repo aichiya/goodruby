@@ -59,13 +59,16 @@ Route121_SafariZoneEntrance_EventScript_15C383:: @ 815C383
 	end
 
 Route121_SafariZoneEntrance_EventScript_15C3B3:: @ 815C3B3
-	checkitem ITEM_POKEBLOCK_CASE, 1
-	compare RESULT, 0
-	goto_if_eq Route121_SafariZoneEntrance_EventScript_15C450
 	call Route121_SafariZoneEntrance_EventScript_15C425
 	checkmoney 0x1f4, 0
 	compare RESULT, 0
 	goto_if_eq Route121_SafariZoneEntrance_EventScript_15C45E
+
+	checkitem ITEM_POKEBLOCK_CASE, 1
+	compare RESULT, 0
+	goto_if_eq Route121_SafariZoneEntrance_EventScript_15C450
+
+Route121_SafariZoneEntrance_EventScript_GoOnIn::
 	msgbox Route121_SafariZoneEntrance_Text_1C38D9, 4
 	takemoney 0x1f4, 0
 	updatemoneybox 0, 0
@@ -101,7 +104,15 @@ Route121_SafariZoneEntrance_EventScript_15C44F:: @ 815C44F
 	return
 
 Route121_SafariZoneEntrance_EventScript_15C450:: @ 815C450
+    goto_if_set FLAG_RECEIVED_POKEBLOCK_CASE, Route121_SafariZoneEntrance_EventScript_BoxedPokeblockCase
 	msgbox Route121_SafariZoneEntrance_Text_1C39C3, 4
+	giveitem_std ITEM_POKEBLOCK_CASE
+	setflag FLAG_RECEIVED_POKEBLOCK_CASE
+	goto Route121_SafariZoneEntrance_EventScript_GoOnIn
+	end
+
+Route121_SafariZoneEntrance_EventScript_BoxedPokeblockCase::
+	msgbox Route121_SafariZoneEntrance_Text_BoxedCase, 4
 	goto Route121_SafariZoneEntrance_EventScript_15C46C
 	end
 
