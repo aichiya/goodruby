@@ -19,6 +19,8 @@ LilycoveCity_DepartmentStore_3F_Items1:: @ 8159FA8
 	.2byte ITEM_ZINC
 	.2byte ITEM_CARBOS
 	.2byte ITEM_HP_UP
+	.2byte ITEM_ABILICAPSULE
+    .2byte ITEM_DREAMCAPSULE
 	.2byte ITEM_NONE
 	release
 	end

@@ -9501,7 +9501,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 7,
         .bodyColor = BODY_COLOR_RED,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_SPEED_BOOST,
+		.hiddenAbility = ABILITY_EARLY_BIRD,
     },
 
     [SPECIES_COMBUSKEN] =
@@ -9535,7 +9535,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_RED,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_SPEED_BOOST,
+		.hiddenAbility = ABILITY_MOLD_BREAKER,
     },
 
     [SPECIES_BLAZIKEN] =
@@ -9569,7 +9569,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_RED,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_SPEED_BOOST,
+		.hiddenAbility = ABILITY_MOLD_BREAKER,
     },
 
     [SPECIES_MUDKIP] =

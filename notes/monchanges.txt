@@ -259,6 +259,9 @@ ABILITY, STAT, AND MOVEPOOL CHANGES:
  * Level-up movepool adjusted.
 
 #255 Torchic, #256 Combusken, #257 Blaziken
+ * Torchic's Hidden Ability Speed Boost replaced with Early Bird.
+ * Combusken's Hidden Ability Speed Boost replaced with Mold Breaker.
+ * Blaziken's Hidden Ability Speed Boost replaced with Mold Breaker.
  * Level-up movepool adjusted.
 
 #258 Mudkip, #259 Marshtomp, #260 Swampert

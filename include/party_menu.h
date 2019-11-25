@@ -198,6 +198,7 @@ void sub_80701DC(u8 taskId);
 void DoPPRecoveryItemEffect(u8, u16, TaskFunc);
 void DoRecoverPP(u8);
 void DoPPUpItemEffect(u8, u16, TaskFunc);
+void DoAbilityCapsuleItemEffect(u8, u16, TaskFunc);
 void DoRareCandyItemEffect(u8, u16, TaskFunc);
 void Task_RareCandy1(u8);
 void Task_RareCandy2(u8);

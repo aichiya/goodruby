@@ -310,6 +310,16 @@ static const u8 gItemDescription_GreenShard[] = _(
     "ancient item.\n"
     "Can be sold cheaply.");
 
+static const u8 gItemDescription_AbiliCapsule[] = _(
+    "Changes the\n"
+    "Ability of one\n"
+    "Pokémon.");
+
+static const u8 gItemDescription_DreamCapsule[] = _(
+    "Unlocks a hidden\n"
+    "Ability for one\n"
+    "Pokémon.");
+
 static const u8 gItemDescription_HPUp[] = _(
     "Raises the HP of\n"
     "one POKéMON.");

@@ -875,6 +875,12 @@ void ItemUseOutOfBattle_PPUp(u8 taskId)
     SetPokemonItemUseAndFadeOut(taskId);
 }
 
+void ItemUseOutOfBattle_AbilityCapsule(u8 taskId)
+{
+    gPokemonItemUseCallback = DoAbilityCapsuleItemEffect;
+    SetPokemonItemUseAndFadeOut(taskId);
+}
+
 void ItemUseOutOfBattle_RareCandy(u8 taskId)
 {
     gPokemonItemUseCallback = DoRareCandyItemEffect;

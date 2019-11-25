@@ -195,6 +195,7 @@ static const u8 *const PartyMenuPromptTexts[] = {
     OtherText_PokeCantBeSame,
     OtherText_NoIdenticalHoldItems,
     OtherText_TeachWhichPoke,
+    OtherText_SwitchAbility,
 };
 
 static const struct Coords8 gUnknown_08376678[8][6] = {
@@ -4524,6 +4525,111 @@ void DoPPUpItemEffect(u8 taskId, u16 b, TaskFunc c)
     CreateItemUseMoveMenu(ewram1C000.primarySelectedMonIndex);
     CreateTask(Task_HandleItemUseMoveMenuInput, 5);
     gMain.newKeys = 0;
+}
+
+static void TaskPartyMenuResolveCapsule(u8 taskId)
+{
+    u16 item = ewram1C000.secondarySelectedIndex;
+    s8 selection = Menu_ProcessInputNoWrap_();
+
+    if (selection == 0)
+    {
+        u8 ability;
+        u8 value;
+        if (item == ITEM_ABILICAPSULE)
+        {
+            if (GetMonData(ewram1C000.pokemon, MON_DATA_HIDDEN_ABILITY))
+            {
+                value = 0;
+                SetMonData(ewram1C000.pokemon, MON_DATA_HIDDEN_ABILITY, &value);
+            }
+            else
+            {
+                value = !GetMonData(ewram1C000.pokemon, MON_DATA_ALT_ABILITY);
+                SetMonData(ewram1C000.pokemon, MON_DATA_ALT_ABILITY, &value);
+            }
+        }
+        else if (item == ITEM_DREAMCAPSULE)
+        {
+            value = 1;
+            SetMonData(ewram1C000.pokemon, MON_DATA_HIDDEN_ABILITY, &value);
+        }
+        ability = GetMonAbility(ewram1C000.pokemon);
+        RemoveBagItem(item, 1);
+        
+        GetMonData(ewram1C000.pokemon, MON_DATA_NICKNAME, gStringVar1);
+        StringCopy(gStringVar2, gAbilityNames[ability]);
+        StringExpandPlaceholders(gStringVar4, OtherText_AbilityBecame);
+        
+        Menu_EraseWindowRect(23, 8, 29, 13);
+        PlaySE(SE_KAIFUKU);
+        sub_806E834(gStringVar4, 1);
+        
+        gTasks[taskId].func = sub_806FB0C;
+    }
+    else if (selection == 1 || selection == -1)
+    {
+        PlaySE(SE_SELECT);
+        sub_8070D90(taskId);
+    }
+}
+
+static void TaskPartyMenuConfirmCapsule(u8 taskId)
+{
+    if (gUnknown_0202E8F6 == 0)
+    {
+        DisplayYesNoMenu(23, 8, 1);
+        gTasks[taskId].func = TaskPartyMenuResolveCapsule;
+    }
+}
+
+void DoAbilityCapsuleItemEffect(u8 taskId, u16 item, TaskFunc c)
+{
+    u16 species;
+    u8 baseability, newability;
+    u8 hashiddenabil, hasaltabil;
+    
+    gTasks[taskId].func = TaskDummy;
+    sub_806E8D0(taskId, item, c);
+    PlaySE(SE_SELECT);
+
+    species = GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES);
+    baseability = GetMonAbility(ewram1C000.pokemon);
+    hashiddenabil = GetMonData(ewram1C000.pokemon, MON_DATA_HIDDEN_ABILITY);
+    hasaltabil = GetMonData(ewram1C000.pokemon, MON_DATA_ALT_ABILITY);
+    
+    if (item == ITEM_ABILICAPSULE)
+    {
+        if (hashiddenabil && hasaltabil)
+            newability = GetAbilityBySpecies(species, 1);
+        else if (hashiddenabil)
+            newability = GetAbilityBySpecies(species, 0);
+        else if (hasaltabil)
+            newability = GetAbilityBySpecies(species, 0);
+        else
+            newability = GetAbilityBySpecies(species, 1);
+    }
+    else // if (item == ITEM_DREAMCAPSULE)
+    {
+        if (hashiddenabil)
+            newability = 0;
+        else
+            newability = GetAbilityBySpecies(species, 2);
+    }
+    
+    if (baseability == newability || !newability)
+    {
+        sub_806E834(gOtherText_WontHaveAnyEffect, 1);
+        CreateTask(sub_806FB0C, 5);
+    }
+    else
+    {
+        StringCopy(gStringVar1, gAbilityNames[baseability]);
+        StringCopy(gStringVar2, gAbilityNames[newability]);
+        StringExpandPlaceholders(gStringVar4, OtherText_SwitchAbility);
+        sub_806E834(gStringVar4, 1);
+        CreateTask(TaskPartyMenuConfirmCapsule, 5);
+    }
 }
 
 static const u8 *const StatNames[] =

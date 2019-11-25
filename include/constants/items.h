@@ -86,8 +86,8 @@
 #define ITEM_03A 78
 #define ITEM_03B 79
 #define ITEM_03C 80
-#define ITEM_03D 81
-#define ITEM_03E 82
+#define ITEM_ABILICAPSULE 81
+#define ITEM_DREAMCAPSULE 82
 #define ITEM_HP_UP 83
 #define ITEM_PROTEIN 84
 #define ITEM_IRON 85
