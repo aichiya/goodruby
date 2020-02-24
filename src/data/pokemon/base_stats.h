@@ -4902,7 +4902,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_SNOW_CLOAK,
+		.hiddenAbility = ABILITY_SNOW_WARNING,
     },
 
     [SPECIES_ZAPDOS] =
@@ -14698,12 +14698,12 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FIELD,
-        .ability1 = ABILITY_SNOW_CLOAK,
-        .ability2 = ABILITY_SNOW_CLOAK,
+        .ability1 = ABILITY_ICE_BODY,
+        .ability2 = ABILITY_ICE_BODY,
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_ICE_BODY,
+		.hiddenAbility = ABILITY_SLUSH_RUSH,
     },
 
     [SPECIES_SYLVEON] =
@@ -14971,11 +14971,11 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FAIRY,
         .eggGroup2 = EGG_GROUP_MINERAL,
         .ability1 = ABILITY_SNOW_CLOAK,
-        .ability2 = ABILITY_SNOW_CLOAK,
+        .ability2 = ABILITY_CURSED_BODY,
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_CURSED_BODY,
+		.hiddenAbility = ABILITY_SNOW_WARNING,
     },
 };
 

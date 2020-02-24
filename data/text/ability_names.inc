@@ -157,4 +157,6 @@ gAbilityNames:: @ 81FA248
     .string "Merciless$", 13
     .string "Gale Wings$", 13
     .string "Flower Gift$", 13
+    .string "Slush Rush$", 13
+    .string "Snow Warning$", 13
 

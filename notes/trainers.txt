@@ -359,3 +359,47 @@ JESSICA: Seaking Lv40, Magmar Lv40, Froslass Lv41
 KATE & JOY: Donphan Lv40, Slaking Lv40
 WALTER: Tauros Lv42
 VANESSA: Pikachu Lv45
+
+ROUTE 123:
+KINDRA: Noctowl Lv40, Haunter Lv40, Hypno Lv40
+WENDY: Illumise Lv41, Sableye Lv41, Electrode Lv41
+CLYDE: Pelipper Lv41, Magcargo Lv41, Breloom Lv41
+JACKI: Metang Lv41, Gardevoir Lv41
+CAMERON: Grumpig Lv41, Mr. Mime Lv41
+
+MT. PYRE:
+MARK: Zangoose Lv43
+DEZ & LUKE: Nidoqueen Lv42, Minun Lv42
+KAYLA: Exeggutor Lv42, Claydol Lv42
+WILLIAM: Solrock Lv42, Dusclops Lv42
+ATSUSHI: Hitmonlee Lv42, Poliwrath Lv42
+TASHA: Misdreavus Lv43
+VALERIE: Haunter Lv43
+
+GRUNT: Golem Lv42, Weezing Lv42
+GRUNT: Houndour Lv42, Vibrava Lv42, Sudowoodo Lv42
+GRUNT: Golbat Lv42, Sandslash Lv42
+
+MAGMA HIDEOUT:
+F1:
+AQUA GRUNT:
+MAGMA GRUNT:
+
+BF2:
+MAGMA GRUNT:
+
+BF1:
+AQUA GRUNT:
+MAGMA GRUNT:
+MAGMA GRUNT:
+
+MAXIE'S ROOM:
+AQUA GRUNT:
+AQUA GRUNT:
+SHELLY:
+
+BF2:
+AQUA GRUNT:
+MAGMA GRUNT:
+MAGMA GRUNT:
+TABITHA:

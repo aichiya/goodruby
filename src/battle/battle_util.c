@@ -162,6 +162,7 @@ extern u8 BattleScript_MoldBreakerAnnouncement[];
 extern u8 BattleScript_UnnerveAnnouncement[];
 extern u8 BattleScript_SandstreamActivates[];
 extern u8 BattleScript_DroughtActivates[];
+extern u8 BattleScript_SnowWarningActivates[];
 extern u8 BattleScript_CastformChange[];
 extern u8 BattleScript_RainDishActivates[];
 extern u8 BattleScript_ShedSkinActivates[];
@@ -1987,6 +1988,16 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
                     gBattleWeather = (WEATHER_SUN_TEMPORARY);
 					gWishFutureKnock.weatherDuration = 5;
                     BattleScriptPushCursorAndCallback(BattleScript_DroughtActivates);
+                    gBattleStruct->scriptingActive = bank;
+                    effect++;
+                }
+                break;
+            case ABILITY_SNOW_WARNING:
+                if (!(gBattleWeather & WEATHER_HAIL))
+                {
+                    gBattleWeather = (WEATHER_HAIL);
+					gWishFutureKnock.weatherDuration = 5;
+                    BattleScriptPushCursorAndCallback(BattleScript_SnowWarningActivates);
                     gBattleStruct->scriptingActive = bank;
                     effect++;
                 }

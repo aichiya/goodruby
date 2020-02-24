@@ -6204,6 +6204,8 @@ u32 GetModifiedSpeed(u8 bank)
 			speed *= 2;
 		else if (gBattleMons[bank].ability == ABILITY_SAND_RUSH && (gBattleWeather & WEATHER_SANDSTORM_ANY))
 			speed *= 2;
+		else if (gBattleMons[bank].ability == ABILITY_SLUSH_RUSH && (gBattleWeather & WEATHER_HAIL))
+			speed *= 2;
 	}
 	
 	if (gBattleMons[bank].ability == ABILITY_UNBURDEN && gBattleMons[bank].item == 0 && gBattleMons[bank].itemRemoved)

@@ -131,13 +131,15 @@ NEW MAUVILLE: Voltorb (34%), Magnemite (34%), Shuppet (20%), Elekid (10%), Magne
 ROUTE 118: Raticate (25%), Aipom (25%), Yanma (15%), Wingull (10%), Gloom (10%), Manectric (10%), Kecleon (5%)
 ROUTE 119: Aipom (30%), Yanma (30%), Gloom (15%), Persian (10%), Tropius (10%), Kecleon (5%) (e: Castform)
 ROUTE 120: Aipom (30%), Yanma (30%), Gloom (15%), Absol (10%), Persian (5%), Scyther (5%), Kecleon (5%)
-
 SCORCHED SLAB:
 ROUTE 121: Gloom (30%), Aipom (20%), Shuppet (15%), Growlithe (10%), Xatu (10%), Hypno (5%), Kecleon (5%), Scyther (5%)
-SAFARI: Chansey, Tauros, Ditto
-MT. PYRE TOWER: Shuppet, Duskull, Haunter
-MT. PYRE GRASS: Shuppet, Vulpix, Growlithe, Meditite
-MT. PYRE PEAK:  Shuppet, Duskull, Chimecho
+SAFARI ZONE SOUTH-EAST: Pikachu (20%), Exeggcute (20%), Kangaskhan (10%), Girafarig (10%), Wobbuffet (10%), Smeargle (10%), Tauros (5%), Chansey (5%), Torchic (5%), Treecko (5%)
+SAFARI ZONE SOUTH-WEST: Beedrill (20%), Tangela (20%), Kangaskhan (10%), Venomoth (10%), Golduck (10%), Mr. Mime (10%), Tauros (5%), Chansey (5%), Chikorita (5%), Ditto (5%)
+SAFARI ZONE NORTH-WEST: Rhyhorn (20%), Doduo (20%), Kangaskhan (10%), Quagsire (10%), Lickitung (10%), Pinsir (10%), Tauros (5%), Chansey (5%), Cyndaquil (5%), Charmander (5%)
+SAFARI ZONE NORTH-EAST: Nidorina (20%), Nidorino (20%), Kangaskhan (10%), Heracross (10%), Donphan (10%), Ponyta (10%), Tauros (5%), Chansey (5%), Bulbasaur (5%), Ditto (5%)
+MT. PYRE TOWER: Shuppet (40%), Duskull (30%), Haunter (20%), Snorunt (10%)
+MT. PYRE GRASS: Shuppet (40%), Vulpix (20%), Growlithe (20%), Meditite (15%), Absol (5%)
+MT. PYRE PEAK:  Shuppet (40%), Duskull (40%), Chimecho (15%), Absol (5%)
 ROUTE 122: Gloom, Shuppet, Aipom, Kecleon
 SHOAL CAVE: Golbat, Spheal, Seel, Snorunt, Smoochum, Delibird
 SHOAL DEPTHS: Golbat, Snorunt, Smoochum, Sneasel

@@ -303,162 +303,137 @@ const struct WildPokemonInfo FieryPath_LandMonsInfo = {10, FieryPath_LandMons};
 
 const struct WildPokemon MtPyre_1F_LandMons [] =
 {
-    {27, 28, SPECIES_SHUPPET},
-    {27, 28, SPECIES_DUSKULL},
-    {25, 26, SPECIES_SHUPPET},
-    {25, 26, SPECIES_DUSKULL},
-    {24, 29, SPECIES_SHUPPET},
-    {24, 29, SPECIES_DUSKULL},
-    {22, 23, SPECIES_SHUPPET},
-    {22, 23, SPECIES_DUSKULL},
-    {24, 29, SPECIES_SHUPPET},
-    {24, 29, SPECIES_DUSKULL},
-    {24, 29, SPECIES_SHUPPET},
-    {24, 29, SPECIES_DUSKULL},
+    {32, 35, SPECIES_SHUPPET},
+    {32, 35, SPECIES_SHUPPET},
+    {32, 35, SPECIES_DUSKULL},
+    {32, 35, SPECIES_DUSKULL},
+    {32, 35, SPECIES_DUSKULL},
+    {32, 35, SPECIES_HAUNTER},
+    {32, 35, SPECIES_HAUNTER},
+    {32, 35, SPECIES_HAUNTER},
+    {32, 35, SPECIES_SNORUNT},
+    {32, 35, SPECIES_SNORUNT},
+    {32, 35, SPECIES_SNORUNT},
+    {32, 35, SPECIES_SNORUNT},
 };
 const struct WildPokemonInfo MtPyre_1F_LandMonsInfo = {10, MtPyre_1F_LandMons};
 
 const struct WildPokemon MtPyre_2F_LandMons [] =
 {
-    {27, 28, SPECIES_SHUPPET},
-    {27, 28, SPECIES_DUSKULL},
-    {25, 26, SPECIES_SHUPPET},
-    {25, 26, SPECIES_DUSKULL},
-    {24, 29, SPECIES_SHUPPET},
-    {24, 29, SPECIES_DUSKULL},
-    {22, 23, SPECIES_SHUPPET},
-    {22, 23, SPECIES_DUSKULL},
-    {24, 29, SPECIES_SHUPPET},
-    {24, 29, SPECIES_DUSKULL},
-    {24, 29, SPECIES_SHUPPET},
-    {24, 29, SPECIES_DUSKULL},
+    {32, 35, SPECIES_SHUPPET},
+    {32, 35, SPECIES_SHUPPET},
+    {32, 35, SPECIES_DUSKULL},
+    {32, 35, SPECIES_DUSKULL},
+    {32, 35, SPECIES_DUSKULL},
+    {32, 35, SPECIES_HAUNTER},
+    {32, 35, SPECIES_HAUNTER},
+    {32, 35, SPECIES_HAUNTER},
+    {32, 35, SPECIES_SNORUNT},
+    {32, 35, SPECIES_SNORUNT},
+    {32, 35, SPECIES_SNORUNT},
+    {32, 35, SPECIES_SNORUNT},
 };
 const struct WildPokemonInfo MtPyre_2F_LandMonsInfo = {10, MtPyre_2F_LandMons};
 
 const struct WildPokemon MtPyre_3F_LandMons [] =
 {
-    {27, 28, SPECIES_SHUPPET},
-    {27, 28, SPECIES_DUSKULL},
-    {25, 26, SPECIES_SHUPPET},
-    {25, 26, SPECIES_DUSKULL},
-    {24, 29, SPECIES_SHUPPET},
-    {24, 29, SPECIES_DUSKULL},
-    {22, 23, SPECIES_SHUPPET},
-    {22, 23, SPECIES_DUSKULL},
-    {24, 29, SPECIES_SHUPPET},
-    {24, 29, SPECIES_DUSKULL},
-    {24, 29, SPECIES_SHUPPET},
-    {24, 29, SPECIES_DUSKULL},
+    {32, 35, SPECIES_SHUPPET},
+    {32, 35, SPECIES_SHUPPET},
+    {32, 35, SPECIES_DUSKULL},
+    {32, 35, SPECIES_DUSKULL},
+    {32, 35, SPECIES_DUSKULL},
+    {32, 35, SPECIES_HAUNTER},
+    {32, 35, SPECIES_HAUNTER},
+    {32, 35, SPECIES_HAUNTER},
+    {32, 35, SPECIES_SNORUNT},
+    {32, 35, SPECIES_SNORUNT},
+    {32, 35, SPECIES_SNORUNT},
+    {32, 35, SPECIES_SNORUNT},
 };
 const struct WildPokemonInfo MtPyre_3F_LandMonsInfo = {10, MtPyre_3F_LandMons};
 
 const struct WildPokemon MtPyre_4F_LandMons [] =
 {
-    {27, 28, SPECIES_SHUPPET},
-    {27, 28, SPECIES_DUSKULL},
-    {25, 26, SPECIES_SHUPPET},
-    {25, 26, SPECIES_DUSKULL},
-    {24, 29, SPECIES_SHUPPET},
-    {24, 29, SPECIES_DUSKULL},
-    {22, 23, SPECIES_SHUPPET},
-    {22, 23, SPECIES_DUSKULL},
-    {24, 29, SPECIES_SHUPPET},
-    {24, 29, SPECIES_DUSKULL},
-    {24, 29, SPECIES_SHUPPET},
-    {24, 29, SPECIES_DUSKULL},
+    {33, 35, SPECIES_SHUPPET},
+    {33, 35, SPECIES_SHUPPET},
+    {33, 35, SPECIES_DUSKULL},
+    {33, 35, SPECIES_DUSKULL},
+    {33, 35, SPECIES_DUSKULL},
+    {33, 35, SPECIES_HAUNTER},
+    {33, 35, SPECIES_HAUNTER},
+    {33, 35, SPECIES_HAUNTER},
+    {33, 35, SPECIES_SNORUNT},
+    {33, 35, SPECIES_SNORUNT},
+    {33, 35, SPECIES_SNORUNT},
+    {33, 35, SPECIES_SNORUNT},
 };
 const struct WildPokemonInfo MtPyre_4F_LandMonsInfo = {10, MtPyre_4F_LandMons};
 
 const struct WildPokemon MtPyre_5F_LandMons [] =
 {
-    {27, 28, SPECIES_SHUPPET},
-    {27, 28, SPECIES_DUSKULL},
-    {25, 26, SPECIES_SHUPPET},
-    {25, 26, SPECIES_DUSKULL},
-    {24, 29, SPECIES_SHUPPET},
-    {24, 29, SPECIES_DUSKULL},
-    {22, 23, SPECIES_SHUPPET},
-    {22, 23, SPECIES_DUSKULL},
-    {24, 29, SPECIES_SHUPPET},
-    {24, 29, SPECIES_DUSKULL},
-    {24, 29, SPECIES_SHUPPET},
-    {24, 29, SPECIES_DUSKULL},
+    {33, 35, SPECIES_SHUPPET},
+    {33, 35, SPECIES_SHUPPET},
+    {33, 35, SPECIES_DUSKULL},
+    {33, 35, SPECIES_DUSKULL},
+    {33, 35, SPECIES_DUSKULL},
+    {33, 35, SPECIES_HAUNTER},
+    {33, 35, SPECIES_HAUNTER},
+    {33, 35, SPECIES_HAUNTER},
+    {33, 35, SPECIES_SNORUNT},
+    {33, 35, SPECIES_SNORUNT},
+    {33, 35, SPECIES_SNORUNT},
+    {33, 35, SPECIES_SNORUNT},
 };
 const struct WildPokemonInfo MtPyre_5F_LandMonsInfo = {10, MtPyre_5F_LandMons};
 
 const struct WildPokemon MtPyre_6F_LandMons [] =
 {
-    {27, 28, SPECIES_SHUPPET},
-    {27, 28, SPECIES_DUSKULL},
-    {25, 26, SPECIES_SHUPPET},
-    {25, 26, SPECIES_DUSKULL},
-    {24, 29, SPECIES_SHUPPET},
-    {24, 29, SPECIES_DUSKULL},
-    {22, 23, SPECIES_SHUPPET},
-    {22, 23, SPECIES_DUSKULL},
-    {24, 29, SPECIES_SHUPPET},
-    {24, 29, SPECIES_DUSKULL},
-    {24, 29, SPECIES_SHUPPET},
-    {24, 29, SPECIES_DUSKULL},
+    {34, 35, SPECIES_SHUPPET},
+    {34, 35, SPECIES_SHUPPET},
+    {34, 35, SPECIES_DUSKULL},
+    {34, 35, SPECIES_DUSKULL},
+    {34, 35, SPECIES_DUSKULL},
+    {34, 35, SPECIES_HAUNTER},
+    {34, 35, SPECIES_HAUNTER},
+    {34, 35, SPECIES_HAUNTER},
+    {34, 35, SPECIES_SNORUNT},
+    {34, 35, SPECIES_SNORUNT},
+    {34, 35, SPECIES_SNORUNT},
+    {34, 35, SPECIES_SNORUNT},
 };
 const struct WildPokemonInfo MtPyre_6F_LandMonsInfo = {10, MtPyre_6F_LandMons};
 
 const struct WildPokemon MtPyre_Exterior_LandMons [] =
 {
-#ifdef SAPPHIRE
-    {27, 27, SPECIES_SHUPPET},
-#else
-    {27, 27, SPECIES_DUSKULL},
-#endif
-    {27, 27, SPECIES_MEDITITE},
-#ifdef SAPPHIRE
-    {28, 28, SPECIES_SHUPPET},
-#else
-    {28, 28, SPECIES_DUSKULL},
-#endif
-    {29, 29, SPECIES_MEDITITE},
-#ifdef SAPPHIRE
-    {29, 29, SPECIES_SHUPPET},
-#else
-    {29, 29, SPECIES_DUSKULL},
-#endif
-    {27, 27, SPECIES_VULPIX},
-    {29, 29, SPECIES_VULPIX},
-    {25, 25, SPECIES_VULPIX},
-    {27, 27, SPECIES_WINGULL},
-    {27, 27, SPECIES_WINGULL},
-    {26, 26, SPECIES_WINGULL},
-    {28, 28, SPECIES_WINGULL},
+    {33, 35, SPECIES_SHUPPET},
+    {33, 35, SPECIES_SHUPPET},
+    {33, 35, SPECIES_VULPIX},
+    {33, 35, SPECIES_VULPIX},
+    {33, 35, SPECIES_GROWLITHE},
+    {33, 35, SPECIES_GROWLITHE},
+    {33, 35, SPECIES_MEDITITE},
+    {33, 35, SPECIES_MEDITITE},
+    {33, 35, SPECIES_MEDITITE},
+    {33, 35, SPECIES_ABSOL},
+    {33, 35, SPECIES_MEDITITE},
+    {33, 35, SPECIES_ABSOL},
 };
 const struct WildPokemonInfo MtPyre_Exterior_LandMonsInfo = {10, MtPyre_Exterior_LandMons};
 
 const struct WildPokemon MtPyre_Summit_LandMons [] =
 {
-#ifdef SAPPHIRE
-    {28, 28, SPECIES_SHUPPET},
-    {29, 29, SPECIES_SHUPPET},
-    {27, 27, SPECIES_SHUPPET},
-    {26, 26, SPECIES_SHUPPET},
-    {30, 30, SPECIES_SHUPPET},
-    {25, 25, SPECIES_SHUPPET},
-    {24, 24, SPECIES_SHUPPET},
-    {28, 28, SPECIES_DUSKULL},
-    {26, 26, SPECIES_DUSKULL},
-    {30, 30, SPECIES_DUSKULL},
-#else
-    {28, 28, SPECIES_DUSKULL},
-    {29, 29, SPECIES_DUSKULL},
-    {27, 27, SPECIES_DUSKULL},
-    {26, 26, SPECIES_DUSKULL},
-    {30, 30, SPECIES_DUSKULL},
-    {25, 25, SPECIES_DUSKULL},
-    {24, 24, SPECIES_DUSKULL},
-    {28, 28, SPECIES_SHUPPET},
-    {26, 26, SPECIES_SHUPPET},
-    {30, 30, SPECIES_SHUPPET},
-#endif
-    {28, 28, SPECIES_CHIMECHO},
-    {28, 28, SPECIES_CHIMECHO},
+    {33, 35, SPECIES_SHUPPET},
+    {33, 35, SPECIES_SHUPPET},
+    {33, 35, SPECIES_DUSKULL},
+    {33, 35, SPECIES_DUSKULL},
+    {33, 35, SPECIES_DUSKULL},
+    {33, 35, SPECIES_DUSKULL},
+    {33, 35, SPECIES_CHIMECHO},
+    {33, 35, SPECIES_CHIMECHO},
+    {33, 35, SPECIES_CHIMECHO},
+    {33, 35, SPECIES_ABSOL},
+    {33, 35, SPECIES_CHIMECHO},
+    {33, 35, SPECIES_ABSOL},
 };
 const struct WildPokemonInfo MtPyre_Summit_LandMonsInfo = {10, MtPyre_Summit_LandMons};
 

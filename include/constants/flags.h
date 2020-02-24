@@ -763,6 +763,8 @@
 #define FLAG_ROUTE_135_ROCK_2               0x478
 #define FLAG_ROUTE_135_ROCK_3               0x479
 #define FLAG_ITEM_ROUTE119_8                0x47A
+#define FLAG_ITEM_ABANDONED_SHIP_ROOM_B1F_2 0x47B
+#define FLAG_ITEM_ABANDONED_SHIP_ROOM_B1F_3 0x47C
 
 #define FLAG_DEFEATED_RUSTBORO_GYM          0x4B1
 

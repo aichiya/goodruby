@@ -11,6 +11,15 @@ gAbilityDescription_Stench: @ 81F99E0
 gAbilityDescription_Drizzle: @ 81F99FA
 	.string "Summons rain for 5 turns\n"
 	.string "upon entering battle.$"
+gAbilityDescription_Drought: @ 81FA05D
+	.string "Summons sunlight for 5\n"
+	.string "turns upon entering battle.$"
+gAbilityDescription_SandStream: @ 81F9DED
+	.string "Summons a sandstorm for 5\n"
+	.string "turns upon entering battle.$"
+gAbilityDescription_SnowWarning:
+	.string "Summons a hailstorm for 5\n"
+	.string "turns upon entering battle.$"
 
 gAbilityDescription_SpeedBoost: @ 81F9A12
 	.string "Raises Speed at the end\n"
@@ -145,6 +154,8 @@ gAbilityDescription_Chlorophyll: @ 81F9CF3
 	.string "Doubles Speed in sunshine.$"
 gAbilityDescription_SandRush:
 	.string "Doubles Speed in sandstorms.$"
+gAbilityDescription_SlushRush:
+    .string "Doubles Speed in hail.$"
 
 gAbilityDescription_Illuminate: @ 81F9D0D
 	.string "Encounter rate increases.\n"
@@ -186,10 +197,6 @@ gAbilityDescription_RainDish: @ 81F9DD1
 gAbilityDescription_IceBody:
 	.string "Recovers 1/16 max HP at\n"
 	.string "end of turn in hail.$"
-
-gAbilityDescription_SandStream: @ 81F9DED
-	.string "Summons a sandstorm for 5\n"
-	.string "turns upon entering battle.$"
 
 gAbilityDescription_Pressure: @ 81F9E02
 	.string "Raises the foe's PP usage.$"
@@ -292,10 +299,6 @@ gAbilityDescription_Swarm: @ 81FA02B
 gAbilityDescription_RockHead: @ 81FA045
 	.string "Protects from recoil\n"
     .string "damage (except Struggle).$"
-
-gAbilityDescription_Drought: @ 81FA05D
-	.string "Summons sunlight for 5\n"
-	.string "turns upon entering battle.$"
 
 gAbilityDescription_ArenaTrap: @ 81FA079
 	.string "Prevents grounded foes\n"
@@ -719,3 +722,5 @@ gAbilityDescriptions:: @ 81FA110
     .4byte gAbilityDescription_Merciless
     .4byte gAbilityDescription_GaleWings
     .4byte gAbilityDescription_FlowerGift
+    .4byte gAbilityDescription_SlushRush
+    .4byte gAbilityDescription_SnowWarning

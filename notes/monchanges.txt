@@ -10,6 +10,10 @@ LUVDISC: Water -> Water/Fairy.
 
 
 ABILITY, STAT, AND MOVEPOOL CHANGES:
+
+IN GENERAL:
+ * Stone evolutions learn level-up moves that prior stages do.
+
 #001 Bulbasaur, #002 Ivysaur, #003 Venusaur
  * Level-up movepool adjusted.
  * Ivysaur now evolves at level 36 instead of 32.
@@ -148,6 +152,9 @@ ABILITY, STAT, AND MOVEPOOL CHANGES:
 
 #133 Eevee, #134 Vapreon, #135 Jolteon, #136 Flareon, #196 Espeon, #197 Umbreon, #470 Leafeon, #471 Glaceon, #700 Sylveon
  * Leafeon's Ability Leaf Guard replaced with Sap Sipper.
+ * Glaceon's Ability Snow Cloak replaced with Ice Body.
+ * Glaceon's Hidden Ability Ice Body replaced with Slush Rush.
+ * Glaceon now learns Surf by HM.
  
 #138 Omanyte, #139 Omastar
  * Level-up movepool heavily adjusted.
@@ -157,6 +164,9 @@ ABILITY, STAT, AND MOVEPOOL CHANGES:
  * Level-up movepool heavily adjusted.
  * Now learns Giga Drain, Leech Life, and Swords Dance by level.
  * No longer learns Absorb or Endure by level.
+
+#144 Articuno
+ * Articuno's Hidden Ability Snow Cloak replaced with Snow Warning.
  
 #152 Chikorita, #153 Bayleef, #154 Meganium
  * Entire line's Hidden Ability Leaf Guard replaced with Thick Fat.
@@ -305,6 +315,10 @@ ABILITY, STAT, AND MOVEPOOL CHANGES:
 #287 Slakoth, #288 Vigoroth, #289 Slaking
  * Slaking now learns U-Turn by TM.
 
+#290 Nincada, #291 Ninjask, #292 Shedinja
+ * Shedinja now learns Pain Split by level.
+ * Shedinja now learns U-Turn by TM.
+
 #299 Nosepass, #476 Probopass
  * Probopass's Hidden Ability Sand Force replaced with Levitate.
 
@@ -386,6 +400,10 @@ ABILITY, STAT, AND MOVEPOOL CHANGES:
 
 #353 Shuppet, #354 Banette
  * Banette's type changed: Ghost -> Ghost/Dark.
+
+#361 Snorunt, #362 Glalie, #478 Froslass
+ * Froslass's primary Ability Snow Cloak replaced with Cursed Body. (It occupies the same slot as Snorunt's Inner Focus.)
+ * Froslass's Hidden Ability Cursed Body replaced with Snow Warning.
 
 #363 Spheal, #364 Sealeo, #365 Walrein
  * Spheal now evolves at level 21 instead of 32.

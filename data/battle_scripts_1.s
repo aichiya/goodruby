@@ -4307,6 +4307,14 @@ BattleScript_DroughtActivates:: @ 81D97FE
 	call BattleScript_WeatherFormChanges
 	end3
 
+BattleScript_SnowWarningActivates::
+	pause 32
+	printstring BATTLE_TEXT_HailWhippedUp
+	waitstate
+	playanimation 7, B_ANIM_HAIL_CONTINUES, NULL
+	call BattleScript_WeatherFormChanges
+	end3
+
 BattleScript_TookAttack:: @ 81D9812
 	attackstring
 	pause 32

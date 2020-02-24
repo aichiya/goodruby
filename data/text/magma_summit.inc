@@ -23,7 +23,7 @@ MtPyre_Summit_Text_1B5DF1:: @ 81B5DF1
 	.string "Quit messing around with us!$"
 
 MtPyre_Summit_Text_1B5E27:: @ 81B5E27
-	.string "Hey, I remember you from MT. CHIMNEY!\n"
+	.string "Hey, I remember you from Slateport!\n"
 	.string "It's payback time!$"
 
 MtPyre_Summit_Text_1B5E60:: @ 81B5E60

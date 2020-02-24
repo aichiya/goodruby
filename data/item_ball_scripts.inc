@@ -366,6 +366,14 @@ AbandonedShip_Room_B1F_EventScript_1B18A4:: @ 81B18A4
 	giveitem_std ITEM_TM48_ICY_WIND, 1, 1
 	end
 
+AbandonedShip_Rooms2_B1F_EventScript_FirstStarPiece::
+	giveitem_std ITEM_STAR_PIECE, 1, 1
+	end
+
+AbandonedShip_Rooms2_B1F_EventScript_PPUp::
+	giveitem_std ITEM_PP_UP, 1, 1
+	end
+
 AbandonedShip_Rooms2_1F_EventScript_1B18B1:: @ 81B18B1
 	giveitem_std ITEM_REVIVE, 1, 1
 	end
@@ -431,7 +439,7 @@ MtPyre_Exterior_EventScript_1B1974:: @ 81B1974
 	end
 
 MtPyre_Exterior_EventScript_1B1981:: @ 81B1981
-	giveitem_std ITEM_TM48_ICY_WIND, 1, 1
+	giveitem_std ITEM_TM61_WILL_O_WISP, 1, 1
 	end
 
 AquaHideout_B1F_EventScript_1B198E:: @ 81B198E
