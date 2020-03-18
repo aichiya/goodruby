@@ -187,6 +187,7 @@ extern u8 BattleScript_ApplySecondaryEffect[];
 extern u8 BattleScript_CuteCharmActivates[];
 extern u8 BattleScript_AngerPointActivates[];
 extern u8 BattleScript_JustifiedActivates[];
+extern u8 BattleScript_StaminaActivates[];
 extern u8 BattleScript_CursedBodyActivates[];
 extern u8 BattleScript_WeakArmorActivates[];
 extern u8 BattleScript_RattledActivates[];
@@ -2665,6 +2666,21 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 					gBattleStruct->animArg2 = 0;
 					BattleScriptPushCursor();
 					gBattlescriptCurrInstr = BattleScript_JustifiedActivates;
+					effect++;
+				}
+				break;
+			case ABILITY_STAMINA:
+				if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+				 && !gProtectStructs[gBankAttacker].confusionSelfDmg
+				 && gBattleMons[gBankTarget].statStages[STAT_STAGE_DEF] < 12
+				 && gBattleMons[gBankTarget].hp != 0
+				 && (gSpecialStatuses[gBankTarget].moveturnLostHP_physical || gSpecialStatuses[gBankTarget].moveturnLostHP_special))
+				{
+					gBattleMons[gBankTarget].statStages[STAT_STAGE_DEF]++;
+					gBattleStruct->animArg1 = 0x10;
+					gBattleStruct->animArg2 = 0;
+					BattleScriptPushCursor();
+					gBattlescriptCurrInstr = BattleScript_StaminaActivates;
 					effect++;
 				}
 				break;

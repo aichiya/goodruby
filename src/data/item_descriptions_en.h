@@ -429,6 +429,11 @@ static const u8 gItemDescription_Repel[] = _(
     "POKéMON for 100\n"
     "steps.");
 
+static const u8 gItemDescription_Honey[] = _(
+    "Use to attract a\n"
+    "wild POKéMON with\n"
+    "its lush aroma.");
+
 static const u8 gItemDescription_SunStone[] = _(
     "Makes certain\n"
     "species of POKéMON\n"

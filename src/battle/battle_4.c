@@ -12587,11 +12587,7 @@ static void atkE5_pickup(void)
         u16 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES2);
         u16 held_item = GetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM);
 		u8 level = (GetMonData(&gPlayerParty[i], MON_DATA_LEVEL) - 1) / 10;
-        u8 ability;
-        if (GetMonData(&gPlayerParty[i], MON_DATA_ALT_ABILITY))
-            ability = gBaseStats[species].ability2;
-        else
-            ability = gBaseStats[species].ability1;
+        u8 ability = GetMonAbility(&gPlayerParty[i]);
 
         if (ability == ABILITY_PICKUP && species != 0 && species != SPECIES_EGG && held_item == 0 && (Random() % 10) == 0)
         {
@@ -12603,6 +12599,15 @@ static void atkE5_pickup(void)
                     break;
             }
             SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, (const void*) &((sPickupTables[level])[j]));
+        }
+        else if (ability == ABILITY_HONEY_GATHER && species != 0 && species != SPECIES_EGG && held_item == 0)
+        {
+            u16 item = ITEM_HONEY;
+            u8 chance = 5 * ((level+9)/10);
+            if (Random() % 100 < chance)
+            {
+                SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &item);
+            }
         }
     }
     gBattlescriptCurrInstr++;

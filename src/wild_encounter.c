@@ -586,6 +586,34 @@ void ScrSpecial_RockSmashWildEncounter(void)
     return;
 }
 
+bool8 TestSweetScentWildEncounter(void)
+{
+    s16 x;
+    s16 y;
+    u16 headerNum;
+    const struct WildPokemonInfo *wildPokemonInfo;
+
+    PlayerGetDestCoords(&x, &y);
+    if ((headerNum = GetCurrentMapWildMonHeader()) != 0xFFFF)
+    {
+        if (MetatileBehavior_IsLandWildEncounter(MapGridGetMetatileBehaviorAt(x, y)) == 1)
+        {
+            wildPokemonInfo = gWildMonHeaders[headerNum].landMonsInfo;
+            if (wildPokemonInfo == NULL)
+                return FALSE;
+            return TRUE;
+        }
+        else if (MetatileBehavior_IsWaterWildEncounter(MapGridGetMetatileBehaviorAt(x, y)) == 1)
+        {
+            wildPokemonInfo = gWildMonHeaders[headerNum].waterMonsInfo;
+            if (wildPokemonInfo == NULL)
+                return FALSE;
+            return TRUE;
+        }
+    }
+    return FALSE;
+}
+
 bool8 SweetScentWildEncounter(void)
 {
     s16 x;

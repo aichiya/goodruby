@@ -441,6 +441,10 @@ gAbilityDescription_WeakArmor:
 	.string "Physical hits shed\n"
     .string "Defense for Speed.$"
 
+gAbilityDescription_Stamina:
+	.string "Raises Defense if hit\n"
+    .string "by a damaging attack.$"
+
 gAbilityDescription_Aftermath:
 	.string "Inflicts damage when\n"
 	.string "fainting by contact.$"
@@ -519,6 +523,9 @@ gAbilityDescription_Telepathy:
 gAbilityDescription_Contrary:
 	.string "Makes stat changes have\n"
     .string "the opposite effect.$"
+
+gAbilityDescription_HoneyGather:
+    .string "May pick up honey.$"
 
 gAbilityDescription_Moody:
 	.string "Raises and lowers stats\n"
@@ -706,7 +713,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Telepathy
 	.4byte gAbilityDescription_Contrary
 	.4byte gAbilityDescription_Unimplemented
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_HoneyGather
 	.4byte gAbilityDescription_Moody
 	.4byte gAbilityDescription_LightMetal
 	.4byte gAbilityDescription_Protean
@@ -724,3 +731,4 @@ gAbilityDescriptions:: @ 81FA110
     .4byte gAbilityDescription_FlowerGift
     .4byte gAbilityDescription_SlushRush
     .4byte gAbilityDescription_SnowWarning
+    .4byte gAbilityDescription_Stamina

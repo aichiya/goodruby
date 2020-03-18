@@ -141,7 +141,7 @@ gAbilityNames:: @ 81FA248
 	.string "Telepathy$", 13
 	.string "Contrary$", 13
 	.string "PICKPOCKET$", 13
-	.string "HONEY GATHER$", 13
+	.string "Honey Gather$", 13
 	.string "Moody$", 13
 	.string "Light Metal$", 13
 	.string "Protean$", 13
@@ -159,4 +159,5 @@ gAbilityNames:: @ 81FA248
     .string "Flower Gift$", 13
     .string "Slush Rush$", 13
     .string "Snow Warning$", 13
+    .string "Stamina$", 13
 

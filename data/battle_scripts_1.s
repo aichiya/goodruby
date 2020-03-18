@@ -4470,6 +4470,12 @@ BattleScript_JustifiedActivates::
 	waitmessage 64
 	return
 
+BattleScript_StaminaActivates::
+	playanimation TARGET, B_ANIM_STATS_CHANGE, sANIM_ARG1
+	printstring BATTLE_TEXT_Stamina
+	waitmessage 64
+	return
+
 BattleScript_CursedBodyActivates::
 	printstring BATTLE_TEXT_CursedBody
 	waitmessage 64

@@ -34,6 +34,7 @@
 #include "string_util.h"
 #include "strings.h"
 #include "task.h"
+#include "wild_encounter.h"
 #include "constants/bg_event_constants.h"
 #include "constants/map_types.h"
 #include "constants/species.h"
@@ -42,6 +43,8 @@
 extern void (*gFieldItemUseCallback)(u8);
 extern void (*gFieldCallback)(void);
 extern void (*gPokemonItemUseCallback)(u8, u16, TaskFunc);
+
+bool8 SetUpFieldMove_SweetScent(void);
 
 extern u8 gPokemonItemUseType;
 extern u8 gLastFieldPokeMenuOpened;
@@ -946,6 +949,31 @@ void ItemUseOutOfBattle_Repel(u8 taskId)
     {
         DisplayItemMessageOnField(taskId, gOtherText_RepelLingers, CleanUpItemMenuMessage, 1);
     }
+}
+
+static void ItemUseOnFieldCB_Honey2(u8 taskId)
+{
+    StartSweetScentFieldEffect();
+    DestroyTask(taskId);
+}
+
+static void ItemUseOnFieldCB_Honey(u8 taskId)
+{
+    sub_80A3E0C();
+    CopyItemName(gSpecialVar_ItemId, gStringVar2);
+    StringExpandPlaceholders(gStringVar4, gOtherText_UsedItem);
+    if (TestSweetScentWildEncounter())
+    {
+        RemoveBagItem(gSpecialVar_ItemId, 1);
+    }
+    gTasks[taskId].data[0] = 0;
+    DisplayItemMessageOnField(taskId, gStringVar4, ItemUseOnFieldCB_Honey2, 0);
+}
+
+void ItemUseOutOfBattle_Honey(u8 taskId)
+{
+    gFieldItemUseCallback = ItemUseOnFieldCB_Honey;
+    SetUpItemUseOnFieldCallback(taskId);
 }
 
 static void sub_80CA07C(void)

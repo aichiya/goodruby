@@ -15,9 +15,9 @@ MagmaHideout_1F_Text_AquaGruntSee::
 	.string "Suspicious red character spotted!$"
 
 MagmaHideout_1F_Text_AquaGruntFight::
-	.string "Grrrrr...\n"
+	.string "Gaaahhh...\n"
 	.string "I lost it!$"
 
 MagmaHideout_1F_Text_AquaGruntPost::
-	.string "I took the loss for the Team, but\n"
-	.string "I did my job...$"
+	.string "Some other members of Team Aqua\n"
+	.string "went deeper into the Hideout.$"

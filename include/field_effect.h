@@ -173,6 +173,7 @@ u8 CreateBirchSprite(s16 x, s16 y, u8 subpriority);
 u8 CreateMonSprite_PicBox(u16, s16, s16, u8);
 void FreeResourcesAndDestroySprite(struct Sprite *sprite);
 void MultiplyInvertedPaletteRGBComponents(u16, u8, u8, u8);
+void StartSweetScentFieldEffect(void);
 void StartEscapeRopeFieldEffect(void);
 void CreateTeleportFieldEffectTask(void);
 void MultiplyPaletteRGBComponents(u16 i, u8 r, u8 g, u8 b);

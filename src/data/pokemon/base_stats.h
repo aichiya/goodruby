@@ -4302,7 +4302,7 @@ const struct BaseStats gBaseStats[] =
         .baseSpAttack  = 55,
         .baseSpDefense = 70,
         .type1 = TYPE_BUG,
-        .type2 = TYPE_BUG,
+        .type2 = TYPE_GROUND,
         .catchRate = 45,
         .expYield = 175,
         .evYield_HP        = 0,
@@ -10623,7 +10623,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_PRESSURE,
+		.hiddenAbility = ABILITY_STAMINA,
     },
 
     [SPECIES_WAILORD] =
@@ -10657,7 +10657,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_PRESSURE,
+		.hiddenAbility = ABILITY_STAMINA,
     },
 
     [SPECIES_SKITTY] =
@@ -13037,7 +13037,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_HEAVY_METAL,
+		.hiddenAbility = ABILITY_SOLID_ROCK,
     },
 
     [SPECIES_CASTFORM] =

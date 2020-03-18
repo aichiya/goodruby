@@ -436,3 +436,4 @@
     enum BATTLE_TEXT_AuraTwo
     enum BATTLE_TEXT_AuraOneSharply
     enum BATTLE_TEXT_AuraTwoSharply
+    enum BATTLE_TEXT_Stamina

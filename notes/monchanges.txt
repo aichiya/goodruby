@@ -1,5 +1,6 @@
 TYPE CHANGES:
 FARFETCH'D: Normal/Flying -> Fighting/Flying.
+PINSIR: Bug -> Bug/Ground.
 BELLOSSOM: Grass -> Grass/Fairy.
 SUNFLORA: Grass -> Grass/Fire.
 MASQUERAIN: Bug/Flying -> Bug/Water.
@@ -13,6 +14,8 @@ ABILITY, STAT, AND MOVEPOOL CHANGES:
 
 IN GENERAL:
  * Stone evolutions learn level-up moves that prior stages do.
+ * Helping Hand, Follow Me, and Rage Powder have been moved to level 1.
+ * Level-up movepools have been frequently adjusted. This list is not comprehensive.
 
 #001 Bulbasaur, #002 Ivysaur, #003 Venusaur
  * Level-up movepool adjusted.
@@ -54,6 +57,11 @@ IN GENERAL:
  * Sandslash gains secondary ability Iron Barbs.
  * Now learns Spikes and Spiky Shield by breeding.
 
+#029 Nidoran (F), #030 Nidorina, #031 Nidoqueen, #032 Nidoran (M), #033 Nidorino, #034 Nidoking
+ * Level-up movepool slightly adjusted.
+ * Entire line now learns both Poison Fang and Poison Jab by level.
+ // Previously the females got Fang and the males got Jab.
+
 #037 Vulpix, #038 Ninetales
  * Ninetales now learns Recover by level.
 
@@ -84,6 +92,9 @@ IN GENERAL:
 
 #054 Psyduck, #055 Golduck
  * Now learns Nasty Plot and Slack Off by breeding.
+
+#058 Growlithe, #059 Arcanine
+ * Now learns Howl by level.
 
 #060 Poliwag, #061 Poliwhirl, #062 Poliwrath, #186 Politoed
  * Poliwhirl, Poliwrath, and Politoed now learn Drain Punch by TM.
@@ -123,6 +134,11 @@ IN GENERAL:
 #095 Onix, #208 Steelix
  * Now learns Coil by level.
 
+#096 Drowzee, #097 Hypno
+ * Level-up movepool heavily adjusted.
+ * Now learns Yawn, Dream Eater, and Encore by level.
+ * No longer learns Poison Gas or Meditate by level.
+
 #098 Krabby, #099 Kingler
  * Level-up movepool heavily adjusted.
  * Now learns Swords Dance, Crush Claw, Knock Off, and Superpower by level.
@@ -135,6 +151,9 @@ IN GENERAL:
 
 #236 Tyrogue, #106 Hitmonlee, #107 Hitmonchan, #237 Hitmontop
  * Hitmonchan learns Drain Punch by relearner.
+
+#440 Happiny, #113 Chansey, #242 Blissey
+ * Chansey and Blissey now learn Body Slam by level.
 
 #114 Tangela, #465 Tangrowth
  * Entire line's Ability Leaf Guard replaced with Unnerve.
@@ -149,6 +168,11 @@ IN GENERAL:
 
 #238 Smoochum, #124 Jynx
  * Jynx's base stats changed: 65/50/35/115/95/95 (455) -> 65/50/35/125/95/95 (465).
+
+#127 Pinsir
+ * Pinsir's type changed: Bug -> Bug/Ground.
+ * Now learns Megahorn by level.
+ * Now learns Magnitude, Mud Shot, and Mud Bomb by breeding.
 
 #133 Eevee, #134 Vapreon, #135 Jolteon, #136 Flareon, #196 Espeon, #197 Umbreon, #470 Leafeon, #471 Glaceon, #700 Sylveon
  * Leafeon's Ability Leaf Guard replaced with Sap Sipper.
@@ -195,7 +219,7 @@ IN GENERAL:
  * Furret's Ability Run Away replaced with Frisk.
  * Entire line's Hidden Ability Frisk replaced with Hustle.
  * Level-up movepool slightly adjusted.
- * Now learns Hone Claws and Focus Punch by level.
+ * Now learns Slash, U-Turn, Hone Claws, Focus Punch by level.
 
 #163 Hoothoot, #164 Noctowl
  * Level-up movepool heavily adjusted.
@@ -332,6 +356,9 @@ IN GENERAL:
 #303 Mawile
  * Mawile's base stats changed: 50/85/85/55/55/50 (380) -> 50/95/105/55/75/55 (430).
 
+#304 Aron, #305 Lairon, #306 Aggron
+ * Aggron's Hidden Ability Heavy Metal replaced with Solid Rock.
+
 #313 Volbeat, #314 Illumise
  * Volbeat's type changed: Bug -> Bug/Electric.
  * Illumise's type changed: Bug -> Bug/Fairy.
@@ -350,6 +377,9 @@ IN GENERAL:
  * Level-up movepool slightly adjusted.
  * Entire line now learns Recover by level.
  * Entire line no longer learns Gastro Acid by level.
+
+#320 Wailmer, #321 Wailord
+ * Entire line's Hidden Ability Pressure replaced with Stamina.
 
 #322 Numel, #323 Camerupt
  * Numel's Ability Oblivious replaced with Magma Armor. (It will become Magma Armor on evolving.)
