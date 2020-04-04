@@ -140,7 +140,7 @@ SAFARI ZONE NORTH-EAST: Nidorina (20%), Nidorino (20%), Kangaskhan (10%), Heracr
 MT. PYRE TOWER: Shuppet (40%), Duskull (30%), Haunter (20%), Snorunt (10%)
 MT. PYRE GRASS: Shuppet (40%), Vulpix (20%), Growlithe (20%), Meditite (15%), Absol (5%)
 MT. PYRE PEAK:  Shuppet (40%), Duskull (40%), Chimecho (15%), Absol (5%)
-ROUTE 122: Gloom, Shuppet, Aipom, Kecleon
+ROUTE 123: Gloom, Shuppet, Aipom, Kecleon
 SHOAL CAVE: Golbat, Spheal, Seel, Snorunt, Smoochum, Delibird
 SHOAL DEPTHS: Golbat, Snorunt, Smoochum, Sneasel
 UNDERWATER: Chinchou, Clamperl, Relicanth

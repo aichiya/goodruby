@@ -1199,7 +1199,7 @@ static const u8 sTerrainToType[] =
 
 static const u8 sBallCatchBonuses[] =
 {
-    20, 15, 10, 15 // Ultra, Great, Poke, Safari
+    20, 15, 10, 20 // Ultra, Great, Poke, Safari
 };
 
 // Note: only contains abilities bypassed by jumpifability
@@ -13888,7 +13888,7 @@ static void sp0C_payback(void)
 	
 	gBattleStruct->animTurn = 0;
 	
-	if (gActionsByTurnOrder[gBankTarget] == ACTION_USE_MOVE)
+	if (gActionForBanks[gBankTarget] == ACTION_USE_MOVE)
 	{
 		for (i = 0; i < 4; i++)
 		{

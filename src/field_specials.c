@@ -1,4 +1,5 @@
 #include "global.h"
+#include "data2.h"
 #include "field_specials.h"
 #include "diploma.h"
 #include "fieldmap.h"
@@ -695,6 +696,30 @@ void GetRivalSonDaughterString(void)
     {
         StringCopy(gStringVar1, gOtherText_Son);
     }
+}
+
+void GetHiddenPowerString(void)
+{
+    struct Pokemon *pokemon = &gPlayerParty[GetLeadMonIndex()];
+    u8 hp_IV = GetMonData(pokemon, MON_DATA_HP_IV);
+    u8 atk_IV = GetMonData(pokemon, MON_DATA_ATK_IV);
+    u8 def_IV = GetMonData(pokemon, MON_DATA_DEF_IV);
+    u8 speed_IV = GetMonData(pokemon, MON_DATA_SPEED_IV);
+    u8 spatk_IV = GetMonData(pokemon, MON_DATA_SPATK_IV);
+    u8 spdef_IV = GetMonData(pokemon, MON_DATA_SPDEF_IV);
+	u8 type = ((hp_IV & 1)) |
+	          ((atk_IV & 1) << 1) |
+	          ((def_IV & 1) << 2) |
+	          ((speed_IV & 1) << 3) |
+	          ((spatk_IV & 1) << 4) |
+	          ((spdef_IV & 1) << 5);
+
+	type = ((type * 15) / 63) + 1;
+	if (type >= TYPE_FAIRY)
+		type++;
+    
+    GetMonData(pokemon, MON_DATA_NICKNAME, gStringVar1);
+    StringCopy(gStringVar2, gTypeNames[type]);
 }
 
 u8 GetBattleOutcome(void)

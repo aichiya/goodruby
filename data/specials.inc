@@ -356,3 +356,4 @@ gSpecials::
     def_special CheckSixFlatLevels
     def_special CheckPoisonedPoison
     def_special SetNatureOverride
+    def_special GetHiddenPowerString

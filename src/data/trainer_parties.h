@@ -542,11 +542,12 @@ const struct TrainerMonFullControl gTrainerParty_Archie3[] = {
     },
 };
 
-const struct TrainerMonNoItemDefaultMoves gTrainerParty_Daisy[] = {
+const struct TrainerMonNoItemCustomMoves gTrainerParty_Daisy[] = {
     {
 	.iv = 0,
 	.level = 20,
-	.species = SPECIES_BAYLEEF
+	.species = SPECIES_BAYLEEF,
+        .moves = {MOVE_POISON_POWDER, MOVE_SYNTHESIS, MOVE_REFLECT, MOVE_RAZOR_LEAF}
     }
 };
 
@@ -3943,7 +3944,7 @@ const struct TrainerMonFullControl gTrainerParty_Norman[] = {
 	.species = SPECIES_MEDICHAM,
 	.heldItem = ITEM_LUM_BERRY,
 	.ability = 0, // Pure Power
-	.moves = {MOVE_DRAIN_PUNCH, MOVE_ICE_PUNCH, MOVE_THUNDER_PUNCH, MOVE_FAKE_OUT},
+	.moves = {MOVE_BRICK_BREAK, MOVE_ICE_PUNCH, MOVE_THUNDER_PUNCH, MOVE_FAKE_OUT},
 		.evs = {124, 0, 64, 124, 0, 64},
 		.nature = NATURE_ADAMANT,
 		.gender = MON_MALE,

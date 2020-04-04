@@ -23,6 +23,7 @@ FortreeCity_House2_EventScript_1580B4:: @ 81580B4
 	compare RESULT, 0
 	goto_if_eq FortreeCity_House2_EventScript_1A029B
 	setflag FLAG_RECEIVED_TM10
+    special GetHiddenPowerString
 	msgbox FortreeCity_House2_Text_18652F, 4
 	release
 	end
@@ -33,6 +34,7 @@ FortreeCity_House2_EventScript_15814B:: @ 815814B
 	return
 
 FortreeCity_House2_EventScript_158157:: @ 8158157
+    special GetHiddenPowerString
 	msgbox FortreeCity_House2_Text_18652F, 4
 	release
 	end

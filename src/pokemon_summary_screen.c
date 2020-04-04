@@ -22,6 +22,7 @@
 #include "pokemon.h"
 #include "pokemon_summary_screen.h"
 #include "region_map.h"
+#include "constants/region_map_sections.h"
 #include "scanline_effect.h"
 #include "sound.h"
 #include "sprite.h"
@@ -3035,7 +3036,7 @@ static void PokemonSummaryScreen_PrintTrainerMemo(struct Pokemon *mon, u8 left, 
             ptr = SummaryScreen_CopyColoredString(ptr, gStringVar1, 14);
             StringCopy(ptr, gOtherText_Egg2);
         }
-        else if (locationMet >= 88)
+        else if (locationMet >= MAPSEC_NOTHING)
         {
             *ptr = CHAR_NEWLINE;
             ptr++;
@@ -3079,7 +3080,7 @@ static void PokemonSummaryScreen_PrintTrainerMemo(struct Pokemon *mon, u8 left, 
 
                 StringCopy(ptr, gOtherText_FatefulEncounter);
             }
-            else if (locationMet >= 88)
+            else if (locationMet >= MAPSEC_NOTHING)
             {
                 *ptr = CHAR_NEWLINE;
                 ptr++;

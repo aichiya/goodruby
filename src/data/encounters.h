@@ -1361,26 +1361,18 @@ const struct WildPokemonInfo Route121_LandMonsInfo = {20, Route121_LandMons};
 
 const struct WildPokemon Route123_LandMons [] =
 {
-    {26, 26, SPECIES_ZIGZAGOON},
-#ifdef SAPPHIRE
-    {26, 26, SPECIES_SHUPPET},
-#else
-    {26, 26, SPECIES_DUSKULL},
-#endif
-    {26, 26, SPECIES_LINOONE},
-#ifdef SAPPHIRE
-    {28, 28, SPECIES_SHUPPET},
-#else
-    {28, 28, SPECIES_DUSKULL},
-#endif
-    {28, 28, SPECIES_LINOONE},
-    {26, 26, SPECIES_ODDISH},
-    {28, 28, SPECIES_ODDISH},
-    {28, 28, SPECIES_GLOOM},
-    {26, 26, SPECIES_WINGULL},
-    {27, 27, SPECIES_WINGULL},
-    {28, 28, SPECIES_WINGULL},
-    {25, 25, SPECIES_KECLEON},
+    {31, 34, SPECIES_GLOOM},
+    {31, 34, SPECIES_AIPOM},
+    {31, 34, SPECIES_GLOOM},
+    {31, 34, SPECIES_SHUPPET},
+    {31, 34, SPECIES_XATU},
+    {31, 34, SPECIES_MANECTRIC},
+    {31, 34, SPECIES_SHUPPET},
+    {31, 34, SPECIES_HYPNO},
+    {31, 34, SPECIES_YANMA},
+    {31, 34, SPECIES_KECLEON},
+    {31, 34, SPECIES_YANMA},
+    {31, 34, SPECIES_KECLEON},
 };
 const struct WildPokemonInfo Route123_LandMonsInfo = {20, Route123_LandMons};
 

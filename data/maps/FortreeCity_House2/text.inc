@@ -29,8 +29,10 @@ FortreeCity_House2_Text_1864C6:: @ 81864C6
 	.string "power of your POKéMON.$"
 
 FortreeCity_House2_Text_18652F:: @ 818652F
-	.string "HIDDEN POWER is a move that changes\n"
-	.string "with the POKéMON.$"
+	.string "Hidden Power is a move that changes\n"
+	.string "with the Pokémon.\p"
+    .string "Your {STR_VAR_1}...\n"
+    .string "Its Hidden Power is {STR_VAR_2}.$"
 
 FortreeCity_House2_Text_186565:: @ 8186565
 	.string "No, too bad.\n"

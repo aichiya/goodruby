@@ -6101,6 +6101,7 @@ BattleScript_EffectDragonTail:
 	jumpifability TARGET, ABILITY_SUCTION_CUPS, BattleScript_AbilityPreventsPhasingOut
 	jumpifstatus3 TARGET, STATUS3_ROOTED, BattleScript_PrintMonIsRooted
 	jumpifstatus2 TARGET, STATUS2_SUBSTITUTE, BattleScript_DragonTailEnd
+	jumpifmovehadnoeffect BattleScript_DragonTailEnd
 	forcerandomswitch BattleScript_DragonTailEnd
 	
 BattleScript_DragonTailEnd:
