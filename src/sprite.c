@@ -1663,6 +1663,19 @@ static void DoLoadSpritePalette(const u16 *src, u16 paletteOffset)
     LoadPalette(src, paletteOffset + 0x100, 32);
 }
 
+u8 CloneSpritePalette(u16 tag, u16 newtag)
+{
+    u8 newindex = 0;
+    u32 index = IndexOfSpritePaletteTag(tag);
+    
+    if (index == 0xFF) // Does not exist
+        return index;
+    
+    newindex = AllocSpritePalette(newtag);
+    DoLoadSpritePalette((u16*)((index * 16) + 0x100 + gPlttBufferUnfaded), newindex * 16);
+    return newindex;
+}
+
 u8 AllocSpritePalette(u16 tag)
 {
     u8 index = IndexOfSpritePaletteTag(0xFFFF);

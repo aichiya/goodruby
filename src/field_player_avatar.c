@@ -1031,6 +1031,11 @@ u8 GetPlayerAvatarObjectId(void)
     return gPlayerAvatar.spriteId;
 }
 
+u8 getPlayerAvatarPaletteIndex(void)
+{
+    return gSprites[GetPlayerAvatarObjectId()].oam.paletteNum;
+}
+
 void sub_80597E8(void)
 {
     ForcedMovement_None();

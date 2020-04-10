@@ -196,17 +196,17 @@ static const u8 sBasePaletteGammaTypes[32] =
     GAMMA_NONE,
     GAMMA_NONE,
     // sprite palettes
-    GAMMA_ALT,
-    GAMMA_NORMAL,
-    GAMMA_ALT,
-    GAMMA_ALT,
-    GAMMA_ALT,
-    GAMMA_ALT,
     GAMMA_NORMAL,
     GAMMA_NORMAL,
     GAMMA_NORMAL,
     GAMMA_NORMAL,
-    GAMMA_ALT,
+    GAMMA_NORMAL,
+    GAMMA_NORMAL,
+    GAMMA_NORMAL,
+    GAMMA_NORMAL,
+    GAMMA_NORMAL,
+    GAMMA_NORMAL,
+    GAMMA_NORMAL,
     GAMMA_NORMAL,
     GAMMA_NORMAL,
     GAMMA_NORMAL,
@@ -967,7 +967,7 @@ void UpdateSpritePaletteWithWeather(u8 spritePaletteIndex)
         {
             ApplyGammaShift(paletteIndex, 1, gWeatherPtr->gammaIndex);
         }
-        else
+        else if (paletteIndex < 16)
         {
             paletteIndex *= 16;
             BlendPalette(paletteIndex, 16, 12, RGB(28, 31, 28));

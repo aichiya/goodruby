@@ -365,7 +365,7 @@ void sub_805BCF0(u8, u8, u8, u8);
 void sub_805BD48(u8, u8, u8);
 void sub_805BD90(u8 localId, u8 mapNum, u8 mapGroup, s16 x, s16 y);
 void FreeAndReserveObjectSpritePalettes(void);
-void sub_805BDF8(u16);
+u8 LoadEventObjectPalette(u16);
 void PatchObjectPalette(u16, u8);
 void LoadPlayerObjectReflectionPalette(u16, u8);
 void LoadSpecialObjectReflectionPalette(u16, u8);

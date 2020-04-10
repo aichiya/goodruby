@@ -185,11 +185,11 @@ gFieldEffectScript_UseSecretPowerShrub: @ 81D9D1F
 	end
 
 gFieldEffectScript_TreeDisguise: @ 81D9D25
-	callnative FldEff_TreeDisguise
+	loadfadedpal_callnative gFieldEffectObjectPaletteInfo11 FldEff_TreeDisguise
 	end
 
 gFieldEffectScript_MountainDisguise: @ 81D9D2B
-	callnative FldEff_MountainDisguise
+	loadfadedpal_callnative gFieldEffectObjectPaletteInfo12 FldEff_MountainDisguise
 	end
 
 gFieldEffectScript_NPCFlyOut: @ 81D9D31

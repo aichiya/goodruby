@@ -631,6 +631,8 @@ const union AffineAnimCmd *const gFieldEffectAffineAnimTable_Reflection[] = {
     gFieldEffectAffineAnim_WavyReflectionFlipped
 };
 
+const struct SpritePalette gFieldEffectObjectPaletteInfoTallBridge = {gEventObjectPalette10, 0x1010};
+
 const struct SpriteTemplate gFieldEffectSpriteTemplate_Reflection = {0x0, 0xFFFF, &gDummyOamData, gDummySpriteAnimTable, NULL, gFieldEffectAffineAnimTable_Reflection, SpriteCallbackDummy};
 
 const struct SpriteFrameImage gFieldEffectPicTable_BerryTreeGrowthSparkle[] = {
@@ -703,7 +705,9 @@ const union AnimCmd *const gFieldEffectAnimTable_TreeDisguise[] = {
     gFieldEffectAnim_8374EE8
 };
 
-const struct SpriteTemplate gFieldEffectSpriteTemplate_TreeDisguise = {0xFFFF, 0xFFFF, &gFieldOamData_16x32, gFieldEffectAnimTable_TreeDisguise, gFieldEffectPicTable_TreeDisguise, gDummySpriteAffineAnimTable, UpdateDisguiseFieldEffect};
+const struct SpritePalette gFieldEffectObjectPaletteInfo11 = {gFieldEffectObjectPalette11, 0x100F};
+
+const struct SpriteTemplate gFieldEffectSpriteTemplate_TreeDisguise = {0xFFFF, 0x100F, &gFieldOamData_16x32, gFieldEffectAnimTable_TreeDisguise, gFieldEffectPicTable_TreeDisguise, gDummySpriteAffineAnimTable, UpdateDisguiseFieldEffect};
 
 const struct SpriteFrameImage gFieldEffectPicTable_MountainDisguise[] = {
     overworld_frame(gFieldEffectPic_MountainDisguise, 2, 4, 0),
@@ -736,7 +740,9 @@ const union AnimCmd *const gFieldEffectAnimTable_MountainDisguise[] = {
     gFieldEffectAnim_8374F68
 };
 
-const struct SpriteTemplate gFieldEffectSpriteTemplate_MountainDisguise = {0xFFFF, 0xFFFF, &gFieldOamData_16x32, gFieldEffectAnimTable_MountainDisguise, gFieldEffectPicTable_MountainDisguise, gDummySpriteAffineAnimTable, UpdateDisguiseFieldEffect};
+const struct SpritePalette gFieldEffectObjectPaletteInfo12 = {gFieldEffectObjectPalette12, 0x100F};
+
+const struct SpriteTemplate gFieldEffectSpriteTemplate_MountainDisguise = {0xFFFF, 0x100F, &gFieldOamData_16x32, gFieldEffectAnimTable_MountainDisguise, gFieldEffectPicTable_MountainDisguise, gDummySpriteAffineAnimTable, UpdateDisguiseFieldEffect};
 
 const struct SpriteFrameImage gFieldEffectPicTable_SandDisguise[] = {
     overworld_frame(gFieldEffectPic_SandDisguise, 2, 4, 0),

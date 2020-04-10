@@ -47,6 +47,7 @@ u8 PlayerGetZCoord(void);
 u8 TestPlayerAvatarFlags(u8);
 u8 sub_80597D0(void);
 u8 GetPlayerAvatarObjectId(void);
+u8 getPlayerAvatarPaletteIndex(void);
 void sub_80597E8(void);
 void sub_80597F4(void);
 u8 GetRivalAvatarGraphicsIdByStateIdAndGender(u8 a, u8 b);

@@ -531,6 +531,7 @@ static void sub_8084894(struct Sprite *sprite, u16 a2, u8 a3)
     sprite->data[2] = gFieldEffectArguments[2];
     sprite->data[3] = -5;
     sprite->data[7] = a2;
+    sprite->oam.paletteNum = getPlayerAvatarPaletteIndex();
 
     StartSpriteAnim(sprite, a3);
 }

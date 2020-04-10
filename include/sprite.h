@@ -300,6 +300,7 @@ u16 LoadSpriteSheetDeferred(const struct SpriteSheet *sheet);
 void FreeAllSpritePalettes(void);
 u8 LoadSpritePalette(const struct SpritePalette *palette);
 void LoadSpritePalettes(const struct SpritePalette *palettes);
+u8 CloneSpritePalette(u16 tag, u16 newtag);
 u8 AllocSpritePalette(u16 tag);
 u8 IndexOfSpritePaletteTag(u16 tag);
 u16 GetSpritePaletteTagByPaletteNum(u8 paletteNum);

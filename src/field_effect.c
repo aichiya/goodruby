@@ -2904,7 +2904,7 @@ u8 FldEff_NPCFlyOut(void)
     struct Sprite *sprite;
     spriteId = CreateSprite(gFieldEffectObjectTemplatePointers[26], 0x78, 0, 1);
     sprite = &gSprites[spriteId];
-    sprite->oam.paletteNum = 0;
+    //sprite->oam.paletteNum = 0;
     sprite->oam.priority = 1;
     sprite->callback = sub_8088BC4;
     sprite->data[1] = gFieldEffectArguments[0];
@@ -3091,7 +3091,7 @@ u8 sub_8088F60(void)
     struct Sprite *sprite;
     spriteId = CreateSprite(gFieldEffectObjectTemplatePointers[26], 0xff, 0xb4, 0x1);
     sprite = &gSprites[spriteId];
-    sprite->oam.paletteNum = 0;
+    sprite->oam.paletteNum = getPlayerAvatarPaletteIndex();
     sprite->oam.priority = 1;
     sprite->callback = sub_8089018;
     return spriteId;

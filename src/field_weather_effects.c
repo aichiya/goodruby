@@ -65,8 +65,8 @@ static const union AnimCmd *const gSpriteAnimTable_839A9EC[] =
 void sub_807E0F4(struct Sprite *);
 static const struct SpriteTemplate sCloudSpriteTemplate =
 {
-    .tileTag = 4608,
-    .paletteTag = 4609,
+    .tileTag = 0x1200,
+    .paletteTag = 0x1201,
     .oam = &gOamData_839A9DC,
     .anims = gSpriteAnimTable_839A9EC,
     .images = NULL,
@@ -627,8 +627,8 @@ static const union AnimCmd *const gSpriteAnimTable_839AA98[] =
 
 static const struct SpriteTemplate sRainSpriteTemplate =
 {
-    .tileTag = 4614,
-    .paletteTag = 4608,
+    .tileTag = 0x1206,
+    .paletteTag = 0x1200,
     .oam = &gOamData_839AA68,
     .anims = gSpriteAnimTable_839AA98,
     .images = NULL,
