@@ -292,5 +292,6 @@ const u32 gFieldEffectPic_SurfBlob[] = INCBIN_U32("graphics/field_effect_objects
 const u32 gEventObjectPic_QuintyPlump[] = INCBIN_U32("graphics/event_objects/pics/people/quinty_plump.4bpp");
 const u16 gEventObjectPalette12[] = INCBIN_U16("graphics/event_objects/palettes/12.gbapal");
 const u16 gEventObjectPalette13[] = INCBIN_U16("graphics/event_objects/palettes/13.gbapal");
+const u16 gEventObjectPalette27[] = INCBIN_U16("graphics/event_objects/palettes/27.gbapal");
 
 #endif //POKERUBY_EVENT_OBJECT_GFX_H

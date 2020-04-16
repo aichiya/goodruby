@@ -8,32 +8,32 @@
 08 - Bulk Up        Dewford Gym
 09 - Venoshock      Route 113, hidden
 10 - Hidden Power   Fortree Town
-11 - Sunny Day      *Scorched Slab
+11 - Sunny Day      Scorched Slab
 12 - Taunt          *Trick House
-13 - Ice Beam       *Abandoned Ship + Game Corner
+13 - Ice Beam       Department Store
 14 - Blizzard       *Department Store
 15 - Hyper Beam     Petalburg Gym
 16 - Light Screen   Department Store
 17 - Protect        Department Store
 18 - Rain Dance     *Abandoned Ship
-19 - Giga Drain     *South of Mt. Pyre
+19 - Giga Drain     South of Mt. Pyre
 20 - Safeguard      Department Store
 21 - Seed Bomb      Route 119 (*Pacifidlog (replacing Frustration))
-22 - Solar Beam     *Safari Zone
+22 - Solar Beam     Safari Zone
 23 - Iron Tail      *Meteor Falls
-24 - Thunderbolt    *Game Corner
+24 - Thunderbolt    Department Store
 25 - Thunder        *Department Store
 26 - Earthquake     *Seafloor Cavern
 27 - Return         Fallarbor Town (*Pacifidlog)
 28 - Dig            Fossil Maniac
 29 - Psychic        Department Store (*Victory Road+Game Corner)
-30 - Shadow Ball    *Mt. Pyre
+30 - Shadow Ball    Mt. Pyre
 31 - Brick Break    *Sootopolis
 32 - Drain Punch    Game Corner
 33 - Reflect        Department Store
 34 - Sludge Wave    *Mauville Gym
-35 - Flamethrower   *Game Corner
-36 - Sludge Bomb    *Dewford Town (later)
+35 - Flamethrower   Department Store
+36 - Sludge Bomb    Dewford Town (later)
 37 - Heat Wave      *Desert
 38 - Fire Blast     *Department Store
 39 - Rock Tomb      Slateport Market
@@ -58,7 +58,7 @@
 58 - Endure         Slateport Market
 59 - Dragon Pulse
 60 - Hyper Voice
-61 - Will-o-Wisp
+61 - Will-o-Wisp    Mt. Pyre
 62 - Acrobatics
 63 - Aqua Tail      Route 119
 64 - Explosion      Trick House
