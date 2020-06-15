@@ -6180,10 +6180,12 @@ const u16 gDusknoirEggMoves[] = {
 };
 
 const u16 gTropiusEggMoves[] = {
+    MOVE_AIR_SLASH,
     MOVE_BULLET_SEED,
     MOVE_CURSE,
     MOVE_DRAGON_DANCE,
     // Dragon Hammer,
+    MOVE_GUST,
     MOVE_HEADBUTT,
     MOVE_LEAF_BLADE,
     MOVE_LEAF_STORM,
@@ -6193,6 +6195,7 @@ const u16 gTropiusEggMoves[] = {
     MOVE_RAZOR_WIND,
     MOVE_SLAM,
     MOVE_SYNTHESIS,
+    MOVE_WHIRLWIND,
     0,
 };
 

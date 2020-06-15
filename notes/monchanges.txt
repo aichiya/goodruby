@@ -7,6 +7,7 @@ MASQUERAIN: Bug/Flying -> Bug/Water.
 VOLBEAT: Bug -> Bug/Electric.
 ILLUMISE: Bug -> Bug/Fairy.
 BANETTE: Ghost -> Ghost/Dark.
+TROPIUS: Grass/Flying -> Grass/Dragon.
 LUVDISC: Water -> Water/Fairy.
 
 
@@ -20,6 +21,8 @@ IN GENERAL:
 #001 Bulbasaur, #002 Ivysaur, #003 Venusaur
  * Level-up movepool adjusted.
  * Ivysaur now evolves at level 36 instead of 32.
+ | This is one of the best lines for in-game play. The evolution change is just to standardize.
+ | It learns Sleep Powder notably later now, but not by too much.
 
 #004 Charmander, #005 Charmelon, #006 Charizard
  * Level-up movepool adjusted.
@@ -280,6 +283,7 @@ IN GENERAL:
 #223 Remoraid, #224 Octillery
  * Octillery's Hidden Ability Moody replaced with Protean.
  * Now learns Zap Cannon by breeding.
+ | Octopi are known for their camoflauge.
 
 #225 Delibird
  * Delibird's base stats changed: 45/55/45/65/45/75 (330) -> 45/85/45/105/45/105 (430).
@@ -427,9 +431,28 @@ IN GENERAL:
  * Level-up movepool slightly adjusted.
  * Now learns Water Pulse, Flame Burst, and Icy Wind by level.
  * Now learns Heat Wave by TM.
+ // Forecast has been significantly improved as well.
 
 #353 Shuppet, #354 Banette
  * Banette's type changed: Ghost -> Ghost/Dark.
+
+#357 Tropius
+ * Tropius's type changed: Grass/Flying -> Grass/Dragon.
+ * Base stats changed: 99/68/83/72/87/51 (460) -> 99/73/83/87/87/51 (480).
+ * Level-up movepool slightly adjusted.
+ * Now learns Twister, DragonBreath, Dragon Pulse, Outrage, and Hurricane by level.
+ * Now learns Dragon Claw and Heat Wave by TM.
+ * Now learns Gust, Air Slash, and Whirlwind by breeding.
+ | These changes are fairly drastic, but Tropius was in a very painful spot.
+ | It joins late, at a point in the game where you probably have a Grass-type.
+ | The bosses immediately after it abuse it horribly.
+ | Making matters worse, Grass is a competitive type and it can't even learn Sleep Powder.
+ | It's really bad when your mon is outclassed hard by Jumpluff for utility.
+ | Dragon is a rare type and very reasonable for it, so it gains that and some power.
+ | It's quite similar to Appletun now, but with aggressive Abilities and Harvest.
+
+#359 Absol
+ * Base stats changed: 65/130/60/75/60/75 (465) -> 65/130/60/90/60/85 (490).
 
 #361 Snorunt, #362 Glalie, #478 Froslass
  * Froslass's primary Ability Snow Cloak replaced with Cursed Body. (It occupies the same slot as Snorunt's Inner Focus.)

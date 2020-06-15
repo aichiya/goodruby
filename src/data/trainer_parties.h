@@ -9610,7 +9610,7 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Kylee[] = {
     {
 	.iv = 0,
 	.level = 38,
-	.species = SPECIES_TROPIUS
+	.species = SPECIES_JUMPLUFF
     },
 };
 
