@@ -23,6 +23,7 @@
 // The exact purposes of these are unclear
 #define B_ACTION_UNKNOWN9               9
 #define B_ACTION_EXEC_SCRIPT            10 // when executing an action
+#define B_ACTION_MOVE_FINISHED          11
 #define B_ACTION_CANCEL_PARTNER         12 // when choosing an action
 #define B_ACTION_FINISHED               12 // when executing an action
 #define B_ACTION_NOTHING_FAINTED        13 // when choosing an action
@@ -791,7 +792,7 @@ void debug_sub_8010800(void);
 u8 CheckMoveLimitations(u8 bank, u8 unusableMoves, u8 check);
 u8 UpdateTurnCounters(void);
 u8 TurnBasedEffects(void);
-u8 HandleFaintedMonActions();
+u8 HandleFaintedMonActions(u8 replace);
 u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 move);
 u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn);
 u8 GetMoveTarget(u16 move, u8 useMoveTarget);

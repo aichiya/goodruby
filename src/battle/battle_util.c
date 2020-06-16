@@ -135,6 +135,7 @@ extern u8 BattleScript_PerishSongHits[];
 extern u8 BattleScript_PerishSongTimerGoesDown[];
 extern u8 BattleScript_GiveExp[];
 extern u8 BattleScript_HandleFaintedMon[];
+extern u8 BattleScript_HandleFaintedMonMidTurn[];
 
 extern u8 BattleScript_MoveUsedIsAsleep[];
 extern u8 BattleScript_MoveUsedWokeUp[];
@@ -1396,7 +1397,7 @@ bool8 HandleWishPerishSongOnTurnEnd(void)
 
 #define HandleFaintedMonActions_MAX_CASE 7
 
-bool8 HandleFaintedMonActions(void)
+bool8 HandleFaintedMonActions(u8 replace)
 {
     if (gBattleTypeFlags & BATTLE_TYPE_SAFARI)
         return 0;
@@ -1442,7 +1443,10 @@ bool8 HandleFaintedMonActions(void)
                 gBank1 = gBankTarget = gBattleStruct->unk1605A; //or should banks be switched?
                 if (gBattleMons[gBattleStruct->unk1605A].hp == 0 && !(gAbsentBattlerFlags & gBitTable[gBattleStruct->unk1605A]))
                 {
-                    BattleScriptExecute(BattleScript_HandleFaintedMon);
+                    if (!replace)
+                        BattleScriptExecute(BattleScript_HandleFaintedMonMidTurn);
+                    else
+                        BattleScriptExecute(BattleScript_HandleFaintedMon);
                     gBattleStruct->sub80173A4_Tracker = 5;
                     return 1;
                 }

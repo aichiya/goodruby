@@ -262,6 +262,7 @@ s8 GetPokeFlavourRelation(u32 pid, u8 flavor);
 //extern BattleScripts
 extern u8 BattleScript_MoveEnd[];
 extern u8 BattleScript_NoPPForMove[];
+extern u8 BattleScript_NoTarget[];
 extern u8 BattleScript_Protean[];
 extern u8 BattleScript_MagicCoatBounce[];
 extern u8 BattleScript_MagicBounceBounce[];
@@ -1670,6 +1671,12 @@ static void atk00_attackcanceler(void)
      && !(gBattleMons[gBankAttacker].status2 & STATUS2_MULTIPLETURNS))
     {
         gBattlescriptCurrInstr = BattleScript_NoPPForMove;
+        gMoveResultFlags |= MOVE_RESULT_MISSED;
+        return;
+    }
+    if (gBattleMons[gBankTarget].hp == 0 && gCurrentMove != MOVE_EXPLOSION && gCurrentMove != MOVE_SELF_DESTRUCT)
+    {
+        gBattlescriptCurrInstr = BattleScript_NoTarget;
         gMoveResultFlags |= MOVE_RESULT_MISSED;
         return;
     }

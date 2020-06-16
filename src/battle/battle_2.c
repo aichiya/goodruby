@@ -4517,7 +4517,7 @@ void BattleTurnPassed(void)
         if (TurnBasedEffects() != 0)
             return;
     }
-    if (HandleFaintedMonActions() != 0)
+    if (HandleFaintedMonActions(1) != 0)
         return;
     ewram16059 = 0;
     if (HandleWishPerishSongOnTurnEnd() != 0)
@@ -7300,7 +7300,7 @@ void HandleAction_Action9(void)
 
 void HandleAction_Action11(void)
 {
-    if (!HandleFaintedMonActions())
+    if (!HandleFaintedMonActions(0))
     {
         ewram16059 = 0;
         gCurrentActionFuncId = ACTION_FINISHED;

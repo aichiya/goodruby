@@ -3037,6 +3037,11 @@ BattleScript_GiveExp:: @ 81D8C72
 	getexp TARGET
 	end2
 
+BattleScript_HandleFaintedMonMidTurn::
+	atk24 BattleScript_1D8D87
+	jumpifbyte NOT_EQUAL, gBattleOutcome, 0, BattleScript_FaintedMonEnd
+    end2
+
 BattleScript_HandleFaintedMon:: @ 81D8C7B
 	atk24 BattleScript_1D8D87
 	jumpifbyte NOT_EQUAL, gBattleOutcome, 0, BattleScript_FaintedMonEnd
@@ -6902,3 +6907,10 @@ BattleScript_ForecastHail::
 	playanimation 7, B_ANIM_HAIL_CONTINUES, NULL
 	call BattleScript_WeatherFormChanges
 	return
+    
+BattleScript_NoTarget::
+	attackstring
+	pause 32
+	printstring BATTLE_TEXT_NoTarget
+	waitmessage 64
+	goto BattleScript_MoveEnd
