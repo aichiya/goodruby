@@ -39,7 +39,7 @@ Route114_MapBGEvents:: @ 8382E88
 	bg_secret_base_event 11, 27, 0, SECRET_BASE_TREE3_2
 	bg_secret_base_event 12, 27, 0, SECRET_BASE_TREE4_2
 	bg_event 25, 38, 3, BG_EVENT_PLAYER_FACING_ANY, Route114_EventScript_1507E8
-	bg_hidden_item_event 20, 57, 3, ITEM_CARBOS, FLAG_HIDDEN_ITEM_4
+	bg_hidden_item_event 20, 57, 3, ITEM_HEART_SCALE, FLAG_HIDDEN_ITEM_4
 	bg_secret_base_event 32, 57, 0, SECRET_BASE_BROWN_CAVE4_3
 	bg_hidden_item_event 7, 30, 3, ITEM_REVIVE, FLAG_HIDDEN_ITEM_2A
 
