@@ -458,6 +458,7 @@ BattleScript_1D70A5: @ 81D70A5
 	waitanimation
 
 BattleScript_1D70A7: @ 81D70A7
+    special 0x4c
 	movevaluescleanup
 	critcalc
 	damagecalc
@@ -476,6 +477,7 @@ BattleScript_1D70A7: @ 81D70A7
 	tryfaintmon TARGET, FALSE, NULL
 	setbyte sMOVEEND_STATE, 0
 	moveend 2, 16
+BattleScript_ExplosionLoop::
 	jumpifnexttargetvalid BattleScript_1D70A7
 	tryfaintmon USER, FALSE, NULL
 	end

@@ -342,6 +342,7 @@ extern u8 BattleScript_FellStingerKills[];
 extern u8 BattleScript_ForecastSun[];
 extern u8 BattleScript_ForecastRain[];
 extern u8 BattleScript_ForecastHail[];
+extern u8 BattleScript_ExplosionLoop[];
 
 extern const u8 gStatusConditionString_PoisonJpn[];
 extern const u8 gStatusConditionString_SleepJpn[];
@@ -733,6 +734,7 @@ static void sp48_lastresort(void);
 static void sp49_losemoney(void);
 static void sp4A_round(void);
 static void sp4B_jumpkickrecoil(void);
+static void sp4C_checkexplosiontargetvalidity(void);
 
 
 void (* const gBattleScriptingCommandsTable[])(void) =
@@ -13401,6 +13403,7 @@ void (* const gBattleScriptingSpecialTable[])(void) =
     sp49_losemoney,
     sp4A_round,
     sp4B_jumpkickrecoil,
+    sp4C_checkexplosiontargetvalidity,
 };
 
 
@@ -15097,4 +15100,12 @@ static void sp4A_round(void)
 static void sp4B_jumpkickrecoil(void)
 {
     gBattleMoveDamage = gBattleMons[gBankAttacker].maxHP / 2;
+}
+
+static void sp4C_checkexplosiontargetvalidity(void)
+{
+    // For explosion and self-destruct
+    if (!(gAbsentBattlerFlags & gBitTable[gBankTarget]))
+        gBattlescriptCurrInstr = BattleScript_ExplosionLoop;
+    
 }
