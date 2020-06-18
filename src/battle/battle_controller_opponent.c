@@ -1241,7 +1241,7 @@ void OpponentHandleTrainerThrow(void)
       40 + 4 * (8 - gTrainerFrontPicCoords[trainerPicIndex].coords),
       GetBattlerSubpriority(gActiveBattler));
     gSprites[gBankSpriteIds[gActiveBattler]].pos2.x = -240;
-    gSprites[gBankSpriteIds[gActiveBattler]].data[0] = 2;
+    gSprites[gBankSpriteIds[gActiveBattler]].data[0] = 3;
     gSprites[gBankSpriteIds[gActiveBattler]].oam.paletteNum = IndexOfSpritePaletteTag(gTrainerFrontPicPaletteTable[trainerPicIndex].tag);
     gSprites[gBankSpriteIds[gActiveBattler]].data[5] = gSprites[gBankSpriteIds[gActiveBattler]].oam.tileNum;
     gSprites[gBankSpriteIds[gActiveBattler]].oam.tileNum = GetSpriteTileStartByTag(gTrainerFrontPicTable[trainerPicIndex].tag);

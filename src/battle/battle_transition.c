@@ -614,7 +614,7 @@ static void Phase1Task_TransitionAll(u8 taskID)
     if (gTasks[taskID].tState == 0)
     {
         gTasks[taskID].tState++;
-        CreatePhase1Task(0, 0, 3, 2, 2);
+        CreatePhase1Task(0, 0, 1, 2, 2);
     }
     else if (sub_811D52C())
         DestroyTask(taskID);

@@ -2433,7 +2433,7 @@ void PlayerHandleTrainerThrow(void)
       GetBattlerSubpriority(gActiveBattler));
     gSprites[gBankSpriteIds[gActiveBattler]].oam.paletteNum = gActiveBattler;
     gSprites[gBankSpriteIds[gActiveBattler]].pos2.x = 240;
-    gSprites[gBankSpriteIds[gActiveBattler]].data[0] = -2;
+    gSprites[gBankSpriteIds[gActiveBattler]].data[0] = -3;
     gSprites[gBankSpriteIds[gActiveBattler]].callback = sub_80313A0;
     gBattleBankFunc[gActiveBattler] = sub_802D204;
 }

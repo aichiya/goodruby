@@ -3460,7 +3460,7 @@ void sub_8010278(struct Sprite *sprite)
 {
     if ((gUnknown_02024DE8 & 1) == 0)
     {
-        sprite->pos2.x += 2;
+        sprite->pos2.x += 3;
         if (sprite->pos2.x == 0)
         {
             sprite->callback = sub_80102AC;

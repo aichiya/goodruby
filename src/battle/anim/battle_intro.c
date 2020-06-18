@@ -117,7 +117,7 @@ static void BattleIntroTask_ScrollScenery(u8 taskId)
         {
             gTasks[taskId].tState++;
             gTasks[taskId].tBgXOffset = DISPLAY_WIDTH;
-            gTasks[taskId].tFramesUntilBg1Slide = 32;
+            gTasks[taskId].tFramesUntilBg1Slide = 24;
             gUnknown_02024DE8 &= ~1;
         }
         break;
@@ -144,7 +144,7 @@ static void BattleIntroTask_ScrollScenery(u8 taskId)
             gBattle_WIN0V -= 1020;
 
         if (gTasks[taskId].tBgXOffset != 0)
-            gTasks[taskId].tBgXOffset -= 2;
+            gTasks[taskId].tBgXOffset -= 3;
 
         // Slide in the top half of the BG from the left
         for (i = 0; i < DISPLAY_HEIGHT / 2; i++)
@@ -225,7 +225,7 @@ static void BattleIntroTask_FadeScenery(u8 taskId)
         {
             gTasks[taskId].tState++;
             gTasks[taskId].tBgXOffset = DISPLAY_WIDTH;
-            gTasks[taskId].tFramesUntilBg1Slide = 32;
+            gTasks[taskId].tFramesUntilBg1Slide = 24;
             gTasks[taskId].data[5] = 1;
             gUnknown_02024DE8 &= ~1;
         }
@@ -254,7 +254,7 @@ static void BattleIntroTask_FadeScenery(u8 taskId)
             gBattle_WIN0V -= 1020;
 
         if (gTasks[taskId].tBgXOffset != 0)
-            gTasks[taskId].tBgXOffset -= 2;
+            gTasks[taskId].tBgXOffset -= 3;
 
         // Slide in the top half of the BG from the left
         for (i = 0; i < DISPLAY_HEIGHT / 2; i++)
@@ -321,7 +321,7 @@ static void BattleIntroTask_ScrollAndFadeScenery(u8 taskId)
         {
             gTasks[taskId].tState++;
             gTasks[taskId].tBgXOffset = DISPLAY_WIDTH;
-            gTasks[taskId].tFramesUntilBg1Slide = 32;
+            gTasks[taskId].tFramesUntilBg1Slide = 24;
             gTasks[taskId].data[5] = 1;
             gUnknown_02024DE8 &= ~1;
         }
@@ -344,7 +344,7 @@ static void BattleIntroTask_ScrollAndFadeScenery(u8 taskId)
             gBattle_WIN0V -= 1020;
 
         if (gTasks[taskId].tBgXOffset != 0)
-            gTasks[taskId].tBgXOffset -= 2;
+            gTasks[taskId].tBgXOffset -= 3;
 
         // Slide in the top half of the BG from the left
         for (i = 0; i < DISPLAY_HEIGHT / 2; i++)
