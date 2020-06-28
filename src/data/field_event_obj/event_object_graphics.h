@@ -293,5 +293,6 @@ const u32 gEventObjectPic_QuintyPlump[] = INCBIN_U32("graphics/event_objects/pic
 const u16 gEventObjectPalette12[] = INCBIN_U16("graphics/event_objects/palettes/12.gbapal");
 const u16 gEventObjectPalette13[] = INCBIN_U16("graphics/event_objects/palettes/13.gbapal");
 const u16 gEventObjectPalette27[] = INCBIN_U16("graphics/event_objects/palettes/27.gbapal");
+const u32 gEventObjectPic_Sudowoodo[] = INCBIN_U32("graphics/event_objects/pics/pokemon/sudowoodo.4bpp");
 
 #endif //POKERUBY_EVENT_OBJECT_GFX_H

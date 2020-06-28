@@ -615,6 +615,7 @@
 #define FLAG_HIDE_VOLTORB_ROUTE110          0x3E0
 #define FLAG_HIDE_DOME_FOSSIL               0x3E1
 #define FLAG_HIDE_HELIX_FOSSIL              0x3E2
+#define FLAG_HIDE_SUDOWOODO                 0x3E3
 
 #define FLAG_ITEM_ROUTE102_1                0x3E8
 #define FLAG_ITEM_ROUTE116_1                0x3E9

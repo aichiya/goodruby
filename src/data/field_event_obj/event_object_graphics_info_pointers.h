@@ -224,6 +224,7 @@ const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_Mom;
 const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_LinkBrendan;
 const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_LinkMay;
 const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_GoldBall;
+const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_Sudowoodo;
 
 const struct EventObjectGraphicsInfo *const gEventObjectGraphicsInfoPointers[] = {
     &gEventObjectGraphicsInfo_BrendanNormal,
@@ -445,6 +446,7 @@ const struct EventObjectGraphicsInfo *const gEventObjectGraphicsInfoPointers[] =
     &gEventObjectGraphicsInfo_LinkBrendan,
     &gEventObjectGraphicsInfo_LinkMay,
     &gEventObjectGraphicsInfo_GoldBall,
+    &gEventObjectGraphicsInfo_Sudowoodo,
 };
 
 #endif //POKERUBY_EVENT_OBJECT_GRAPHICS_INFO_POINTERS_H

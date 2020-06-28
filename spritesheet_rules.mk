@@ -512,6 +512,9 @@ $(EVENTOBJGFXDIR)/pokemon/rayquaza.4bpp: %.4bpp: %.png
 $(EVENTOBJGFXDIR)/pokemon/skitty.4bpp: %.4bpp: %.png
 	$(GBAGFX) $< $@ -mwidth 2 -mheight 2
 
+$(EVENTOBJGFXDIR)/pokemon/sudowoodo.4bpp: %.4bpp: %.png
+	$(GBAGFX) $< $@ -mwidth 2 -mheight 4
+
 $(EVENTOBJGFXDIR)/pokemon/wingull.4bpp: %.4bpp: %.png
 	$(GBAGFX) $< $@ -mwidth 2 -mheight 2
 

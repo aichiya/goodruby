@@ -1876,4 +1876,16 @@ const struct SpriteFrameImage gEventObjectPicTable_Mom[] = {
     overworld_frame(gEventObjectPic_Mom, 2, 4, 8),
 };
 
+const struct SpriteFrameImage gEventObjectPicTable_Sudowoodo[] = {
+    overworld_frame(gEventObjectPic_Sudowoodo, 2, 4, 0),
+    overworld_frame(gEventObjectPic_Sudowoodo, 2, 4, 1),
+    overworld_frame(gEventObjectPic_Sudowoodo, 2, 4, 2),
+    overworld_frame(gEventObjectPic_Sudowoodo, 2, 4, 0),
+    overworld_frame(gEventObjectPic_Sudowoodo, 2, 4, 0),
+    overworld_frame(gEventObjectPic_Sudowoodo, 2, 4, 1),
+    overworld_frame(gEventObjectPic_Sudowoodo, 2, 4, 1),
+    overworld_frame(gEventObjectPic_Sudowoodo, 2, 4, 2),
+    overworld_frame(gEventObjectPic_Sudowoodo, 2, 4, 2)
+};
+
 #endif //POKERUBY_EVENT_OBJECT_PIC_TABLES_H

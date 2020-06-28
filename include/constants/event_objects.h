@@ -220,6 +220,7 @@
 #define EVENT_OBJ_GFX_LINK_BRENDAN 216
 #define EVENT_OBJ_GFX_LINK_MAY 217
 #define EVENT_OBJ_GFX_GOLD_BALL 218
+#define EVENT_OBJ_GFX_SUDOWOODO 219
 
 // These are dynamic object gfx ids.
 // They correspond with the values of the VAR_OBJ_GFX_ID_X vars.
@@ -241,7 +242,7 @@
 #define EVENT_OBJ_GFX_VAR_E 254
 #define EVENT_OBJ_GFX_VAR_F 255
 
-#define NUM_OBJECT_GRAPHICS_INFO 218
+#define NUM_OBJECT_GRAPHICS_INFO 219
 #define SPRITE_VAR 239
 
 #define SHADOW_SIZE_S 0

@@ -873,6 +873,7 @@ EventScript_15F573:
 	.include "data/maps/Route104_PrototypePrettyPetalFlowerShop/text.inc"
 	.include "data/maps/Route109_SeashoreHouse/text.inc"
 	.include "data/maps/Route110_TrickHouseEntrance/text.inc"
+    .include "data/maps/TracklessForest/text.inc"
 
 Route110_TrickHousePuzzle1_Text_19C1B8:: @ 819C1B8
 	.string "{PLAYER} found a scroll.$"
