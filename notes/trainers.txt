@@ -125,7 +125,7 @@ CYCLING ROAD
 JACLYN: Drowzee Lv22
 ABIGAIL: Magnemite Lv22
 ANTHONY: Aron Lv21, Furret Lv21
-BENJAMIN: Voltorb Lv18, Voltorb Lv19, Voltorb Lv20, Voltorb Lv21
+BENNY: Voltorb Lv18, Voltorb Lv19, Voltorb Lv20, Voltorb Lv21
 JASMINE: Poliwag Lv21, Voltorb Lv21
 JACOB: Pikachu Lv22
 
@@ -238,6 +238,11 @@ HEIDI: Sandslash Lv31, Munchlax Lv31
 DREW: Trapinch Lv31, Venomoth Lv31
 BECKY: Sandshrew Lv31, Gloom Lv32
 DUSTY: Relicanth Lv33
+
+TRACKLESS FOREST:
+ROCKER BENJAMIN: Electrode Lv31, Swellow Lv31
+HEX MANIAC LEAH: Gastly Lv32, Kirlia Lv32, Duskull Lv32
+POKEMANIAC HARRISON: Poliwhirl Lv31, Kabuto Lv31, Politoed Lv31
 
 PETALBURG GYM:
 RANDALL (Speed): Swellow@Liechi Lv33 (Aerial Ace, Quick Attack, Agility, Endeavor)

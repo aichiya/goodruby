@@ -569,3 +569,11 @@ GnarledRidge_EventScript_Item1::
 Route135_EventScript_Item1::
     giveitem_std ITEM_TM81_X_SCISSOR, 1, 1
     end
+
+TracklessForest_EventScript_Item1::
+	giveitem_std ITEM_TM65_SHADOW_CLAW, 1, 1
+	end
+
+TracklessForest_EventScript_Item2::
+	giveitem_std ITEM_MAX_POTION, 1, 1
+	end

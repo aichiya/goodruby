@@ -62,37 +62,52 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Brady[] = {
     }
 };
 
-const struct TrainerMonNoItemDefaultMoves gTrainerParty_Grunt3[] = {
+const struct TrainerMonNoItemDefaultMoves gTrainerParty_Benjamin[] = {
+    {
+	.iv = 0,
+	.level = 31,
+	.species = SPECIES_ELECTRODE
+    },
+    {
+	.iv = 0,
+	.level = 31,
+	.species = SPECIES_SWELLOW
+    }
+};
+
+const struct TrainerMonNoItemDefaultMoves gTrainerParty_Leah[] = {
     {
 	.iv = 0,
 	.level = 32,
-	.species = SPECIES_CARVANHA
+	.species = SPECIES_GASTLY
     },
     {
 	.iv = 0,
 	.level = 32,
-	.species = SPECIES_ZUBAT
-    }
-};
-
-const struct TrainerMonNoItemDefaultMoves gTrainerParty_Grunt4[] = {
-    {
-	.iv = 0,
-	.level = 33,
-	.species = SPECIES_CARVANHA
-    }
-};
-
-const struct TrainerMonNoItemDefaultMoves gTrainerParty_Grunt5[] = {
-    {
-	.iv = 0,
-	.level = 37,
-	.species = SPECIES_POOCHYENA
+	.species = SPECIES_KIRLIA
     },
     {
 	.iv = 0,
-	.level = 37,
-	.species = SPECIES_CARVANHA
+	.level = 32,
+	.species = SPECIES_DUSKULL
+    },
+};
+
+const struct TrainerMonNoItemDefaultMoves gTrainerParty_Harrison[] = {
+    {
+	.iv = 0,
+	.level = 31,
+	.species = SPECIES_POLIWHIRL
+    },
+    {
+	.iv = 0,
+	.level = 31,
+	.species = SPECIES_KABUTO
+    },
+    {
+	.iv = 0,
+	.level = 31,
+	.species = SPECIES_POLITOED
     }
 };
 

@@ -66,6 +66,21 @@ TracklessForest_EventScript_NoGoggles:
     release
     end
 
+TracklessForest_EventScript_Benjamin::
+	trainerbattle 0, TRAINER_BENJAMIN, 0, TracklessForest_Text_BenjaminSpot, TracklessForest_Text_BenjaminDefeat
+	msgbox TracklessForest_Text_BenjaminFollowup, 6
+	end
+
+TracklessForest_EventScript_Leah::
+	trainerbattle 0, TRAINER_LEAH, 0, TracklessForest_Text_LeahSpot, TracklessForest_Text_LeahDefeat
+	msgbox TracklessForest_Text_LeahFollowup, 6
+	end
+
+TracklessForest_EventScript_Harrison::
+	trainerbattle 0, TRAINER_HARRISON, 0, TracklessForest_Text_HarrisonSpot, TracklessForest_Text_HarrisonDefeat
+	msgbox TracklessForest_Text_HarrisonFollowup, 6
+	end
+
 TracklessForest_Movement_SudowoodoShake:
 	face_right
 	delay_8

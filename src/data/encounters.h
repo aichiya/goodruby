@@ -278,9 +278,9 @@ const struct WildPokemon JaggedPass_LandMons [] =
     {20, 23, SPECIES_PONYTA},
     {20, 23, SPECIES_PONYTA},
     {20, 23, SPECIES_MURKROW},
-    {20, 23, SPECIES_SUDOWOODO},
+    {20, 23, SPECIES_BONSLY},
     {20, 23, SPECIES_MURKROW},
-    {20, 23, SPECIES_SUDOWOODO},
+    {20, 23, SPECIES_BONSLY},
 };
 const struct WildPokemonInfo JaggedPass_LandMonsInfo = {20, JaggedPass_LandMons};
 
@@ -1404,9 +1404,9 @@ const struct WildPokemon Route135_LandMons [] =
     {24, 28, SPECIES_DROWZEE},
     {24, 28, SPECIES_MR_MIME},
     {24, 28, SPECIES_ROSELIA},
-    {24, 28, SPECIES_PINSIR},
+    {24, 28, SPECIES_MILTANK},
     {24, 28, SPECIES_ROSELIA},
-    {24, 28, SPECIES_PINSIR},
+    {24, 28, SPECIES_MILTANK},
 };
 const struct WildPokemonInfo Route135_LandMonsInfo = {20, Route135_LandMons};
 
@@ -1524,6 +1524,23 @@ const struct WildPokemon GnarledRidge_LandMons [] =
     {10, 11, SPECIES_NIDORAN_F},
 };
 const struct WildPokemonInfo GnarledRidge_LandMonsInfo = {20, GnarledRidge_LandMons};
+
+const struct WildPokemon TracklessForest_LandMons [] =
+{
+    {22, 25, SPECIES_NOSEPASS},
+    {22, 25, SPECIES_NATU},
+    {22, 25, SPECIES_RHYHORN},
+    {22, 25, SPECIES_WEEPINBELL},
+    {22, 25, SPECIES_NOCTOWL},
+    {22, 25, SPECIES_DUSKULL},
+    {22, 25, SPECIES_WEEPINBELL},
+    {22, 25, SPECIES_GIRAFARIG},
+    {22, 25, SPECIES_BONSLY},
+    {22, 25, SPECIES_PINSIR},
+    {22, 25, SPECIES_BONSLY},
+    {22, 25, SPECIES_PINSIR},
+};
+const struct WildPokemonInfo TracklessForest_LandMonsInfo = {20, TracklessForest_LandMons};
 
 
 const struct WildPokemonHeader gWildMonHeaders[] =
@@ -2365,6 +2382,14 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(GNARLED_RIDGE),
         .mapNum = MAP_NUM(GNARLED_RIDGE),
         .landMonsInfo = &GnarledRidge_LandMonsInfo,
+        .waterMonsInfo = NULL,
+        .rockSmashMonsInfo = NULL,
+        .fishingMonsInfo = NULL,
+    },
+    {
+        .mapGroup = MAP_GROUP(TRACKLESS_FOREST),
+        .mapNum = MAP_NUM(TRACKLESS_FOREST),
+        .landMonsInfo = &TracklessForest_LandMonsInfo,
         .waterMonsInfo = NULL,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = NULL,
