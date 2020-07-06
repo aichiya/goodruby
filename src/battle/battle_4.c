@@ -15105,7 +15105,7 @@ static void sp4B_jumpkickrecoil(void)
 static void sp4C_checkexplosiontargetvalidity(void)
 {
     // For explosion and self-destruct
-    if (!(gAbsentBattlerFlags & gBitTable[gBankTarget]))
+    if (gBattleMons[gBankTarget].hp == 0)
         gBattlescriptCurrInstr = BattleScript_ExplosionLoop;
     
 }

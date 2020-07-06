@@ -412,10 +412,9 @@ gMonBackPicCoords:: @ 81E9114
 	.byte 136,  3, 0, 0
 	.byte 135,  5, 0, 0
 	.byte 134,  9, 0, 0
-	.byte  71,  7, 0, 0
-	.byte  54, 10, 0, 0
+	.byte  71,  7, 0, 0 @ chimecho
 
-	.byte 136, 11, 0, 0
+	.byte 136, 11, 0, 0 @ new mons
 	.byte 136,  6, 0, 0
 	.byte 136,  3, 0, 0
 	.byte 136,  3, 0, 0
@@ -447,7 +446,7 @@ gMonBackPicCoords:: @ 81E9114
 	.byte 136,  3, 0, 0
 
 
-	.byte  86,  9, 0, 0
+	.byte  86,  9, 0, 0 @ various flavors of unown
 	.byte 103,  6, 0, 0
 	.byte  86,  8, 0, 0
 	.byte  86, 10, 0, 0
@@ -474,3 +473,5 @@ gMonBackPicCoords:: @ 81E9114
 	.byte  70, 10, 0, 0
 	.byte  55,  6, 0, 0
 	.byte  71,  6, 0, 0
+
+	.byte  54, 10, 0, 0 @ egg
