@@ -9572,7 +9572,7 @@ static void atk96_weatherdamage(void)
     else
         gBattleMoveDamage = 0;
 
-    if (gAbsentBattlerFlags & gBitTable[gBankAttacker])
+    if (gAbsentBattlerFlags & gBitTable[gBankAttacker] || gBattleMons[gBankAttacker].hp == 0)
         gBattleMoveDamage = 0;
 
     gBattlescriptCurrInstr++;
