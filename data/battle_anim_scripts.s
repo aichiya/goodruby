@@ -10516,12 +10516,6 @@ General_ItemEffect: @ 81D661C
 	playsewithpan SE_W036, SOUND_PAN_ATTACKER
 	createvisualtask sub_80A8EFC, 2, 16, 128, 0, 2
 	waitforvisualfinish
-	playsewithpan SE_W036, SOUND_PAN_ATTACKER
-	createvisualtask sub_80A8EFC, 2, 16, 128, 0, 2
-	waitforvisualfinish
-	playsewithpan SE_W234, SOUND_PAN_ATTACKER
-	call Unknown_81D5ECA
-	waitforvisualfinish
 	playsewithpan SE_REAPOKE, SOUND_PAN_ATTACKER
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_BATTLER_ATTACKER, 2, 2, 3, 7, 0, rgb(17, 31, 25)
 	createsprite gBattleAnimSpriteTemplate_83D7928, ANIM_BATTLER_ATTACKER, 3, 0, 0, 0, 0
