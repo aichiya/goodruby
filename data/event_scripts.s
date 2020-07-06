@@ -1544,6 +1544,7 @@ GetItem_HandlePocket_PokeBalls:
 	return
 
 GetItem_HandlePocket_TMsHMs:
+    special BufferTMMoveString
 	bufferstdstring 2, 0x11
 	compare VAR_SPECIAL_7, 1
 	call_if_eq PlayGetTMHMFanfare
@@ -1609,8 +1610,12 @@ Std_FindItem: @ 819FF21
 	giveitem VAR_SPECIAL_0, VAR_SPECIAL_1
 	copyvar VAR_SPECIAL_7, RESULT
 	bufferitemname 1, VAR_SPECIAL_0
+    copyvar VAR_SPECIAL_2, VAR_SPECIAL_0
 	checkitemtype VAR_SPECIAL_0
+    copyvar VAR_SPECIAL_3, RESULT
 	call GetItem_HandlePocket
+    compare VAR_SPECIAL_3, POCKET_TM_HM
+    goto_if_eq Std_FindItem_TM_HM
 	compare VAR_SPECIAL_7, 1
 	call_if_eq Std_FindItem_Success
 	compare VAR_SPECIAL_7, 0
@@ -1631,6 +1636,16 @@ Std_FindItem_Fail: @ 819FF65
 	msgbox Message_BagFull
 	setvar RESULT, 0
 	return
+
+Std_FindItem_TM_HM:
+	removeobject LAST_TALKED
+	message Message_FoundOneTM
+	waitfanfare
+	waitmessage
+	msgbox Message_PutAwayItem
+	release
+	return
+    
 
 HiddenItemScript:: @ 819FF7B
 	lockall
@@ -3083,6 +3098,10 @@ Message_PutAwayItem:
 
 Message_FoundOneItem:
 	.string "{PLAYER} found one {STR_VAR_2}!$"
+
+Message_FoundOneTM:
+    .string "{PLAYER} found one {STR_VAR_2}!\n"
+    .string "It contains {STR_VAR_1}.$"
 
 MauvilleCity_GameCorner_Text_1A0CC2:: @ 81A0CC2
 MauvilleCity_Text_1A0CC2:: @ 81A0CC2

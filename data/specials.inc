@@ -357,3 +357,4 @@ gSpecials::
     def_special CheckPoisonedPoison
     def_special SetNatureOverride
     def_special GetHiddenPowerString
+    def_special BufferTMMoveString

@@ -3760,7 +3760,9 @@ void Task_ConfirmTakeHeldMail(u8 taskId)
 u16 ItemIdToBattleMoveId(u16 item)
 {
     u16 machineNumber = item - ITEM_TM01_FOCUS_PUNCH;
-    return gTMHMMoves[machineNumber];
+    if (machineNumber < 100)
+        return gTMHMMoves[machineNumber];
+    return 0;
 }
 
 bool8 pokemon_has_move(struct Pokemon *pkmn, u16 move)

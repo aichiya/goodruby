@@ -33,6 +33,7 @@
 #include "field_weather.h"
 #include "pokemon_summary_screen.h"
 #include "random.h"
+#include "party_menu.h"
 #include "constants/abilities.h"
 #include "constants/event_object_movement_constants.h"
 #include "constants/moves.h"
@@ -720,6 +721,14 @@ void GetHiddenPowerString(void)
     
     GetMonData(pokemon, MON_DATA_NICKNAME, gStringVar1);
     StringCopy(gStringVar2, gTypeNames[type]);
+}
+
+void BufferTMMoveString(void)
+{
+    u16 itemId = VarGet(VAR_SPECIAL_2);
+    u16 moveId = ItemIdToBattleMoveId(itemId);
+    
+    StringCopy(gStringVar1, gMoveNames[moveId]);
 }
 
 u8 GetBattleOutcome(void)
