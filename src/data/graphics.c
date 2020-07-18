@@ -334,6 +334,7 @@ const u8 unused_gfx_ball_display_unused_extra[] = INCBIN_U8("graphics/battle_int
 const u8 unused_gfx_status2[] = INCBIN_U8("graphics/battle_interface/status2.4bpp");// these three duplicate sets of graphics are for the opponent pokemon and are also for use in double battles. they use dynamic palettes so coloring them is an extreme headache and wont be done for now.
 const u8 unused_gfx_status3[] = INCBIN_U8("graphics/battle_interface/status3.4bpp");
 const u8 unused_gfx_status4[] = INCBIN_U8("graphics/battle_interface/status4.4bpp");
+const u8 gHealthboxElementsGfxTable_StatusTox[] = INCBIN_U8("graphics/battle_interface/status_tox.4bpp");
 const u8 unused_gfx_unknown_D12FEC[] = INCBIN_U8("graphics/unknown/unknown_D12FEC.4bpp");
 const u8 unused_gfx_unknown_D1300C[] = INCBIN_U8("graphics/unknown/unknown_D1300C.4bpp");
 

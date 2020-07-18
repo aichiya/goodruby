@@ -462,6 +462,10 @@ static const union AnimCmd sSpriteAnim_StatusFaint[] = {
     ANIMCMD_FRAME(24, 0, FALSE, FALSE),
     ANIMCMD_END
 };
+static const union AnimCmd sSpriteAnim_StatusToxic[] = {
+    ANIMCMD_FRAME(28, 0, FALSE, FALSE),
+    ANIMCMD_END
+};
 
 static const union AnimCmd *const sSpriteAnimTable_StatusCondition[] =
 {
@@ -472,12 +476,13 @@ static const union AnimCmd *const sSpriteAnimTable_StatusCondition[] =
     sSpriteAnim_StatusBurn,
     sSpriteAnim_StatusPokerus,
     sSpriteAnim_StatusFaint,
+    sSpriteAnim_StatusToxic,
 };
 
 static const struct CompressedSpriteSheet sUnknown_083C12F4 =
 {
     .data = gStatusGfx_Icons,
-    .size = 0x380,
+    .size = 0x400,
     .tag = 30001
 };
 
@@ -4801,8 +4806,10 @@ void sub_80A1C30(u8 a)
 
 u8 GetPrimaryStatus(u32 status)
 {
-    if (status & (STATUS_POISON | STATUS_TOXIC_POISON))
+    if (status & STATUS_POISON)
         return STATUS_PRIMARY_POISON;
+    if (status & STATUS_TOXIC_POISON)
+        return STATUS_PRIMARY_TOXIC;
     if (status & STATUS_PARALYSIS)
         return STATUS_PRIMARY_PARALYSIS;
     if (status & STATUS_SLEEP)

@@ -2903,10 +2903,15 @@ static void sub_8045458(u8 a, u8 b)
         r4 = GetMonData(&gEnemyParty[gBattlerPartyIndexes[r7]], MON_DATA_STATUS);
         r8 = 0x11;
     }
-    if (r4 & 7)
+    if (r4 & 7) // sleep
     {
         r6 = sub_8043CDC(sub_80457E8(0x1B, r7));
         r0 = 2;
+    }
+    else if (r4 & 0x80) // toxic
+    {
+        r6 = sub_8043CDC(sub_80457E8(0x24, r7));
+        r0 = 0;
     }
     else if (r4 & 0x88)
     {
@@ -2923,7 +2928,7 @@ static void sub_8045458(u8 a, u8 b)
         r6 = sub_8043CDC(sub_80457E8(0x1E, r7));
         r0 = 3;
     }
-    else if (r4 & 0x40)
+    else if (r4 & 0x40) // para...
     {
         r6 = sub_8043CDC(sub_80457E8(0x18, r7));
         r0 = 1;
@@ -2944,8 +2949,7 @@ static void sub_8045458(u8 a, u8 b)
 
     r4_2 = gSprites[a].oam.paletteNum * 16;
     r4_2 += r7 + 12;
-    // I don't like writing the array index like this, but I can't get it to match otherwise.
-    FillPalette(r0[gBattleInterfaceStatusIcons_DynPal], r4_2 + 0x100, 2);
+    FillPalette(gBattleInterfaceStatusIcons_DynPal[r0], r4_2 + 0x100, 2);
     CpuCopy16(gPlttBufferUnfaded + 0x100 + r4_2, (void *)(OBJ_PLTT + r4_2 * 2), 2);
     CpuCopy32(r6, OBJ_VRAM0 + (gSprites[a].oam.tileNum + r8) * 32, 96);
     if (IsDoubleBattle() == TRUE || GetBattlerSide(r7) == TRUE)
@@ -2965,15 +2969,15 @@ static u8 sub_80457E8(u8 a, u8 b)
 
     switch (a)
     {
-    case 21:
+    case 21: // poison
         if (b == 0)
             ret = 21;
         else if (b == 1)
             ret = 71;
         else if (b == 2)
-            ret = 86;
+            ret = 89;
         else
-            ret = 101;
+            ret = 107;
         break;
     case 24:
         if (b == 0)
@@ -2981,9 +2985,9 @@ static u8 sub_80457E8(u8 a, u8 b)
         else if (b == 1)
             ret = 74;
         else if (b == 2)
-            ret = 89;
+            ret = 92;
         else
-            ret = 104;
+            ret = 110;
         break;
     case 27:
         if (b == 0)
@@ -2991,9 +2995,9 @@ static u8 sub_80457E8(u8 a, u8 b)
         else if (b == 1)
             ret = 77;
         else if (b == 2)
-            ret = 92;
+            ret = 95;
         else
-            ret = 107;
+            ret = 113;
         break;
     case 30:
         if (b == 0)
@@ -3001,9 +3005,9 @@ static u8 sub_80457E8(u8 a, u8 b)
         else if (b == 1)
             ret = 80;
         else if (b == 2)
-            ret = 95;
+            ret = 98;
         else
-            ret = 110;
+            ret = 116;
         break;
     case 33:
         if (b == 0)
@@ -3011,10 +3015,19 @@ static u8 sub_80457E8(u8 a, u8 b)
         else if (b == 1)
             ret = 83;
         else if (b == 2)
-            ret = 98;
+            ret = 101;
         else
-            ret = 113;
+            ret = 119;
         break;
+    case 36: // toxic. why are we using these constants?
+        if (b == 0)
+            ret = 125;
+        else if (b == 1)
+            ret = 86;
+        else if (b == 2)
+            ret = 104;
+        else
+            ret = 122;
     }
     return ret;
 }
