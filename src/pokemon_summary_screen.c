@@ -4943,8 +4943,16 @@ static void sub_80A1D84(struct Pokemon *mon)
 
 static void sub_80A1DCC(struct Pokemon *mon)
 {
-    DestroySprite(gUnknown_020384F4);
-    sub_80A1D84(mon);
+    if (gUnknown_020384F4 == NULL)
+    {
+        DestroySprite(gUnknown_020384F4);
+        sub_80A1D84(mon);
+    }
+    else
+    {
+        u8 markings = GetMonData(mon, MON_DATA_MARKINGS);
+        StartSpriteAnim(gUnknown_020384F4, markings);
+    }
 }
 
 static void sub_80A1DE8(struct Pokemon *mon)
