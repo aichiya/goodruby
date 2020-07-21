@@ -5771,6 +5771,20 @@ BattleScript_MoveSAtkDrain::
 	orbyte gMoveResultFlags, MOVE_RESULT_DOESNT_AFFECT_FOE
 	goto BattleScript_MoveEnd
 
+BattleScript_MoveSpeedDrain_PPLoss::
+	ppreduce
+
+BattleScript_MoveSpeedDrain::
+	attackstring
+	pause 32
+	
+	playanimation TARGET, B_ANIM_STATS_CHANGE, sANIM_ARG1
+	
+	printstring BATTLE_TEXT_SpeedRisen2
+	waitmessage 64
+	orbyte gMoveResultFlags, MOVE_RESULT_DOESNT_AFFECT_FOE
+	goto BattleScript_MoveEnd
+
 BattleScript_MoveAtkDrain_PPLoss::
 	ppreduce
 

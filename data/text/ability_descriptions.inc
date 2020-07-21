@@ -508,6 +508,9 @@ gAbilityDescription_MagicBounce:
 gAbilityDescription_SapSipper:
 	.string "Absorbs Grass moves to\n"
     .string "boost Attack.$"
+gAbilityDescription_MotorDrive:
+	.string "Absorbs Electric moves to\n"
+    .string "boost Speed.$"
 
 gAbilityDescription_Prankster:
 	.string "Status moves gain\n"
@@ -721,7 +724,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_HeavyMetal
 	.4byte gAbilityDescription_StormDrain
 	.4byte gAbilityDescription_Pixilate
-	.4byte gAbilityDescription_Unimplemented
+	.4byte gAbilityDescription_MotorDrive
     .4byte gAbilityDescription_FurCoat
     .4byte gAbilityDescription_RoughSkin
     .4byte gAbilityDescription_Triage

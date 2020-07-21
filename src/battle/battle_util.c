@@ -178,6 +178,8 @@ extern u8 BattleScript_MoveSAtkDrain[];
 extern u8 BattleScript_MoveSAtkDrain_PPLoss[];
 extern u8 BattleScript_MoveAtkDrain[];
 extern u8 BattleScript_MoveAtkDrain_PPLoss[];
+extern u8 BattleScript_MoveSpeedDrain[];
+extern u8 BattleScript_MoveSpeedDrain_PPLoss[];
 extern u8 BattleScript_FlashFireBoost[];
 extern u8 BattleScript_FlashFireBoost_PPLoss[];
 extern u8 BattleScript_MoveHPDrain_FullHP[];
@@ -2326,6 +2328,29 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 								gBattlescriptCurrInstr = BattleScript_MoveSAtkDrain;
 							else
 								gBattlescriptCurrInstr = BattleScript_MoveSAtkDrain_PPLoss;
+						}
+                        effect = 2;
+					}
+					break;
+				case ABILITY_MOTOR_DRIVE:
+					if (moveType == TYPE_ELECTRIC)
+					{
+						if (gBattleMons[bank].statStages[STAT_STAGE_SPEED] == 12)
+						{
+							if ((gProtectStructs[gBankAttacker].notFirstStrike))
+								gBattlescriptCurrInstr = BattleScript_MoveHPDrain_FullHP;
+							else
+								gBattlescriptCurrInstr = BattleScript_MoveHPDrain_FullHP_PPLoss;
+						}
+						else
+						{
+							gBattleMons[bank].statStages[STAT_STAGE_SPEED]++;
+							gBattleStruct->animArg1 = 0xE + STAT_STAGE_SPEED;
+							gBattleStruct->animArg2 = 0;
+							if (gProtectStructs[gBankAttacker].notFirstStrike)
+								gBattlescriptCurrInstr = BattleScript_MoveSpeedDrain;
+							else
+								gBattlescriptCurrInstr = BattleScript_MoveSpeedDrain_PPLoss;
 						}
                         effect = 2;
 					}

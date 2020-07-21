@@ -438,3 +438,4 @@
     enum BATTLE_TEXT_AuraTwoSharply
     enum BATTLE_TEXT_Stamina
     enum BATTLE_TEXT_NoTarget
+    enum BATTLE_TEXT_SpeedRisen2
