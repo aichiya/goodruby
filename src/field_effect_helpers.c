@@ -80,8 +80,13 @@ static void LoadObjectRegularReflectionPalette(struct EventObject *eventObject, 
     const struct EventObjectGraphicsInfo *graphicsInfo = GetEventObjectGraphicsInfo(eventObject->graphicsId);
     u16 reflectionTag = graphicsInfo->paletteTag + 0x80;
     
-    u8 reflectionPaletteIndex = CloneSpritePalette(graphicsInfo->paletteTag, reflectionTag);
-    FullBlendPalette(0x100 + (16 * reflectionPaletteIndex), 16, 8, RGB(0, 0, 31));
+    
+    u8 reflectionPaletteIndex = IndexOfSpritePaletteTag(reflectionTag);
+    if (reflectionPaletteIndex == 0xFF)
+    {
+        reflectionPaletteIndex = CloneSpritePalette(graphicsInfo->paletteTag, reflectionTag);
+        FullBlendPalette(0x100 + (16 * reflectionPaletteIndex), 16, 8, RGB(0, 0, 31));
+    }
     sprite->oam.paletteNum = reflectionPaletteIndex;
 }
 

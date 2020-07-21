@@ -2,6 +2,7 @@
 #include "bike.h"
 #include "event_data.h"
 #include "event_object_movement.h"
+#include "field_player_avatar.h"
 #include "fieldmap.h"
 #include "constants/maps.h"
 #include "constants/songs.h"
@@ -764,6 +765,7 @@ static u8 RotatingGate_CreateGate(u8 gateId, s16 deltaX, s16 deltaY)
     sprite = &gSprites[spriteId];
     sprite->data[0] = gateId;
     sprite->coordOffsetEnabled = 1;
+    sprite->oam.paletteNum = getPlayerAvatarPaletteIndex();
 
     sub_8060388(x + deltaX, y + deltaY, &sprite->pos1.x, &sprite->pos1.y);
     RotatingGate_HideGatesOutsideViewport(sprite);
