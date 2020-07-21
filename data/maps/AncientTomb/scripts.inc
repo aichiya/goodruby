@@ -29,12 +29,30 @@ AncientTomb_EventScript_15EFEA:: @ 815EFEA
 	setmetatile 9, 20, 565, 1
 	return
 
-AncientTomb_EventScript_15F021:: @ 815F021
+AncientTomb_BrailleWall:: @ 815F021
 	lockall
 	goto_if_set FLAG_SYS_BRAILLE_FLY, AncientTomb_EventScript_15F038
 	braillemessage AncientTomb_Braille_1C552E
 	waitbuttonpress
 	erasebox 0, 0, 29, 19
+
+	specialvar RESULT, CheckPoisonedPoison
+	compare RESULT, 0
+    goto_if_eq AncientTomb_EventScript_BrailleWallEnd
+    
+    setflag FLAG_SYS_BRAILLE_FLY
+	setmetatile 7, 19, 554, 1
+	setmetatile 8, 19, 555, 1
+	setmetatile 9, 19, 556, 1
+	setmetatile 7, 20, 3634, 1
+	setmetatile 8, 20, 563, 0
+	setmetatile 9, 20, 3636, 1
+	special DrawWholeMapView
+    playse SE_BAN
+    releaseall
+    end
+
+AncientTomb_EventScript_BrailleWallEnd:
 	releaseall
 	end
 

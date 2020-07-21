@@ -217,10 +217,10 @@ AncientTomb_Braille_1C552E:: @ 81C552E
 	.byte 19
 	.byte 1
 	.byte 3
-	.braille "WITH NEW TIME,\n"
-	.braille "HOPE AND LOVE,\n"
-	.braille "AIM TO THE SKY\n"
-	.braille "IN THE MIDDLE.$"
+    .braille "BRING ONE OF\n"
+    .braille "POISON BEARING\n"
+    .braille "ANOTHER POISON\n"
+    .braille "INSIDE OF IT.$"
 
 GraniteCave_B3F_Braille::
 	.byte 0

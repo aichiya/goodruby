@@ -4345,6 +4345,14 @@ void bc_aura_message(void)
                 gActiveBattler = 1;
                 PrepareStringBattle(447, 1);
                 break;
+            case SPECIES_REGISTEEL: // def+1, sdef+1
+                gBattleMons[1].statStages[STAT_STAGE_DEF] += 1;
+                gBattleMons[1].statStages[STAT_STAGE_SPDEF] += 1;
+                gActiveBattler = 1;
+                PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_STAGE_DEF)
+                PREPARE_STAT_BUFFER(gBattleTextBuff2, STAT_STAGE_SPDEF)
+                PrepareStringBattle(446, 1);
+                break;
         }
         gBattleMainFunc = actual_sub_8011970;
     }

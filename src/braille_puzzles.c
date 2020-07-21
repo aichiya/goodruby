@@ -103,8 +103,9 @@ bool8 CheckPoisonedPoison(void)
     for (i = 0; i < gPlayerPartyCount; i++)
     {
         u8 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES2, 0);
+        u8 status = GetPrimaryStatus(GetMonData(&gPlayerParty[i], MON_DATA_STATUS, 0));
         if ((gBaseStats[species].type1 == TYPE_POISON || gBaseStats[species].type2 == TYPE_POISON) &&
-            GetPrimaryStatus(GetMonData(&gPlayerParty[i], MON_DATA_STATUS, 0)) == STATUS_PRIMARY_POISON)
+            (status == STATUS_PRIMARY_POISON || status == STATUS_PRIMARY_TOXIC))
         {
             return TRUE;
         }

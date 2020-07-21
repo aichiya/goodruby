@@ -53,10 +53,11 @@ static void FaintFromFieldPoison(u8 monIndex)
 static bool32 MonFaintedFromPoison(u8 monIndex)
 {
     struct Pokemon *mon = &gPlayerParty[monIndex];
+    u8 status = GetPrimaryStatus(GetMonData(mon, MON_DATA_STATUS));
 
     // UB: Too few arguments for function 'GetMonData'
     if (IsMonValidSpecies(mon) && GetMonData(mon, MON_DATA_HP) == 0
-     && GetPrimaryStatus(GetMonData(mon, MON_DATA_STATUS)) == STATUS_PRIMARY_POISON)
+     && (status == STATUS_PRIMARY_POISON || status == STATUS_PRIMARY_TOXIC))
         return TRUE;
     else
         return FALSE;
@@ -123,9 +124,10 @@ s32 DoPoisonFieldEffect(void)
     for (i = 0; i < PARTY_SIZE; i++)
     {
         u32 hp;
+        u8 status = GetPrimaryStatus(GetMonData(mon, MON_DATA_STATUS));
 
         if (GetMonData(mon, MON_DATA_SANITY_BIT2) != 0
-         && GetPrimaryStatus(GetMonData(mon, MON_DATA_STATUS)) == STATUS_PRIMARY_POISON
+         && (status == STATUS_PRIMARY_POISON || status == STATUS_PRIMARY_TOXIC)
 		 && GetMonAbility(mon) != ABILITY_POISON_HEAL
          && GetMonAbility(mon) != ABILITY_MAGIC_GUARD)
         {
