@@ -488,6 +488,7 @@ AZURILL: Evolves to Marill at level 20 or by friendship.
 BUDEW: Evolves to Roselia at level 20 or by friendship.
 CHINGLING: Evolves to Chimecho at level 20 or by friendship.
 MUNCHLAX: Evolves to Snorlax at level 40 or by friendship.
+HAPPINY: Evolves to Chansey at level 15 or by friendship.
 
 KADABRA: Evolves to Alakazam at level 35.
 MACHOKE: Evolves to Machamp at level 40.
@@ -498,10 +499,19 @@ SLOWPOKE: Evolves to Slowbro by level. Evolves to Slowking using a Shiny Stone.
 ONIX: Evolves to Steelix using a Dawn Stone.
 SEADRA: Evolves to Kingler using a Water Stone.
 SCYTHER: Evolves to Scizor using a Dawn Stone.
+PORYGON: Evolves to Porygon2 using a Thunder Stone.
 EEVEE: Evolves to Leafeon using a Leaf Stone. Evolves to Glaceon using an Ice Stone.
        Evolves to Espeon using a Sun Stone. Evolves to Umbreon using a Moon Stone.
        Evolves to Sylveon using a Shiny Stone.
 CLAMPERL: Evolves to Gorebyss using a Shiny Stone. Evolves to Huntail using a Dusk Stone.
+
+SNEASEL: Evolves to Weavile using a Noble Stone.
+RHYDON: Evolves to Rhyperior using a Noble Stone.
+ELECTABUZZ: Evolves to Electivire using a Noble Stone.
+MAGMAR: Evolves to Magmortar using a Noble Stone.
+GLIGAR: Evolves to Gliscor using a Noble Stone.
+DUSCLOPS: Evolves to Dusknoir using a Noble Stone.
+PORYGON2: Evolves to Porygon-Z using a Noble Stone.
 
 CURRENTLY UNIMPLEMENTED EVOS: Sneasel, Rhydon, Electabuzz, Magmar, Gligar, Porygon, Porygon2, Dusclops
 
