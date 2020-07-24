@@ -459,19 +459,19 @@ AquaHideout_B2F_EventScript_1B19B5:: @ 81B19B5
 	end
 
 MagmaHideout_B1F_EventScript_1B19C2:: @ 81B19C2
-	giveitem_std ITEM_MASTER_BALL, 1, 1
+	giveitem_std ITEM_TM37_HEAT_WAVE, 1, 1
 	end
 
 MagmaHideout_B1F_EventScript_1B19CF:: @ 81B19CF
-	giveitem_std ITEM_NUGGET, 1, 1
+	giveitem_std ITEM_LEFTOVERS, 1, 1
 	end
 
 MagmaHideout_B1F_EventScript_1B19DC:: @ 81B19DC
-	giveitem_std ITEM_MAX_ELIXIR, 1, 1
+	giveitem_std ITEM_FLAME_ORB, 1, 1
 	end
 
 MagmaHideout_B2F_EventScript_1B19E9:: @ 81B19E9
-	giveitem_std ITEM_NEST_BALL, 1, 1
+	giveitem_std ITEM_MAGMA_BALL, 1, 1
 	end
 
 ShoalCave_LowTideEntranceRoom_EventScript_1B19F6:: @ 81B19F6

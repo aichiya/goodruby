@@ -1129,7 +1129,22 @@ static const u8 gItemDescription_Stick[] = _(
 static const u8 gItemDescription_Eviolite[] = _(
     "A hold item that\n"
     "raises Defense for\n"
-    "unevolved POKéMON.");
+    "unevolved Pokémon.");
+
+static const u8 gItemDescription_ToxicOrb[] = _(
+    "A hold item that\n"
+    "badly poisons the\n"
+    "Pokémon holding it.");
+
+static const u8 gItemDescription_FlameOrb[] = _(
+    "A hold item that\n"
+    "burns the Pokémon\n"
+    "holding it.");
+
+static const u8 gItemDescription_BlackSludge[] = _(
+    "A hold item that\n"
+    "gradually heals Poison-\n"
+    "types in battle.");
 
 static const u8 gItemDescription_RedScarf[] = _(
     "A hold item that\n"

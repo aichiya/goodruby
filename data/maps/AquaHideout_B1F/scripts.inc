@@ -15,16 +15,9 @@ AquaHideout_B1F_MapScript1_15D84A:: @ 815D84A
 	call AquaHideout_B1F_EventScript_1A0196
 	end
 
-AquaHideout_B1F_EventScript_15D850:: @ 815D850
-MagmaHideout_B1F_EventScript_15D850:: @ 815D850
-	trainerbattle 2, TRAINER_HIDEOUT_B1F_GRUNT_1, 0, AquaHideout_B1F_Text_196E6F, AquaHideout_B1F_Text_196EB6, AquaHideout_B1F_EventScript_15D86B
-	msgbox AquaHideout_B1F_Text_196ECC, 6
-	end
 
-AquaHideout_B1F_EventScript_15D86B:: @ 815D86B
-	msgbox AquaHideout_B1F_Text_196ECC, 4
-	release
-	end
+
+
 
 AquaHideout_B1F_EventScript_15D875:: @ 815D875
 MagmaHideout_B1F_EventScript_15D875:: @ 815D875

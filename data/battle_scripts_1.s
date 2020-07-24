@@ -5534,7 +5534,7 @@ BattleScript_EffectCloseCombat:
 	resultmessage
 	waitmessage 64
 	jumpifstat USER, GREATER_THAN, DEFENSE, 0, BattleScript_CloseCombatStartDrops
-	jumpifstat USER, EQUAL, SPEED, 0, BattleScript_CloseCombatFinish
+	jumpifstat USER, EQUAL, SP_DEFENSE, 0, BattleScript_CloseCombatFinish
 BattleScript_CloseCombatStartDrops:
 	jumpifmovehadnoeffect BattleScript_CloseCombatFinish
 	setbyte sFIELD_1B, 0
@@ -6930,3 +6930,27 @@ BattleScript_NoTarget::
 	printstring BATTLE_TEXT_NoTarget
 	waitmessage 64
 	goto BattleScript_MoveEnd
+
+BattleScript_ToxicOrb::
+	playanimation 10, B_ANIM_ITEM_EFFECT, NULL
+	printstring BATTLE_TEXT_ToxicOrb
+	waitmessage 64
+	updatestatusicon SCRIPTING_BANK
+    end2
+
+BattleScript_FlameOrb::
+	playanimation 10, B_ANIM_ITEM_EFFECT, NULL
+	printstring BATTLE_TEXT_FlameOrb
+	waitmessage 64
+	updatestatusicon SCRIPTING_BANK
+    end2
+
+BattleScript_ItemHurtHP::
+	playanimation USER, B_ANIM_ITEM_EFFECT, NULL
+	printstring BATTLE_TEXT_RestoredHPLittle
+	waitmessage 64
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
+	healthbarupdate USER
+	datahpupdate USER
+	tryfaintmon USER, FALSE, NULL
+	end2

@@ -272,9 +272,9 @@
 #define ITEM_THICK_CLUB 262
 #define ITEM_STICK 263
 #define ITEM_EVIOLITE 264
-#define ITEM_0E3 265
-#define ITEM_0E4 266
-#define ITEM_0E5 267
+#define ITEM_TOXIC_ORB 265
+#define ITEM_FLAME_ORB 266
+#define ITEM_BLACK_SLUDGE 267
 #define ITEM_0E6 268
 #define ITEM_0E7 269
 #define ITEM_0E8 270

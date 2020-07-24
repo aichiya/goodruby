@@ -208,6 +208,9 @@ extern u8 BattleScript_WhiteHerbRet[];
 extern u8 BattleScript_ItemHealHP_RemoveItem[];
 extern u8 BattleScript_BerryPPHealEnd2[];
 extern u8 BattleScript_ItemHealHP_End2[];
+extern u8 BattleScript_ItemHurtHP[];
+extern u8 BattleScript_ToxicOrb[];
+extern u8 BattleScript_FlameOrb[];
 extern u8 BattleScript_BerryConfuseHealEnd2[];
 extern u8 BattleScript_BerryStatRaiseEnd2[];
 extern u8 BattleScript_BerryFocusEnergyEnd2[];
@@ -3671,6 +3674,52 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                     BattleScriptExecute(BattleScript_ItemHealHP_End2);
                     effect = ITEM_HP_CHANGE;
                     RecordItemBattle(bank, bankHoldEffect);
+                }
+                break;
+            case HOLD_EFFECT_BLACK_SLUDGE:
+                if (gBattleMons[bank].hp < gBattleMons[bank].maxHP && !moveTurn && 
+                (gBattleMons[bank].type1 == TYPE_POISON || gBattleMons[bank].type2 == TYPE_POISON))
+                {
+                    gBattleMoveDamage = gBattleMons[bank].maxHP / 16;
+                    if (gBattleMoveDamage == 0)
+                        gBattleMoveDamage = 1;
+                    if (gBattleMons[bank].hp + gBattleMoveDamage > gBattleMons[bank].maxHP)
+                        gBattleMoveDamage = gBattleMons[bank].maxHP - gBattleMons[bank].hp;
+                    gBattleMoveDamage *= -1;
+                    BattleScriptExecute(BattleScript_ItemHealHP_End2);
+                    effect = ITEM_HP_CHANGE;
+                    RecordItemBattle(bank, bankHoldEffect);
+                }
+                else if (!moveTurn && 
+                gBattleMons[bank].type1 != TYPE_POISON && gBattleMons[bank].type2 != TYPE_POISON)
+                {
+                    gBattleMoveDamage = gBattleMons[bank].maxHP / 8;
+                    if (gBattleMoveDamage == 0)
+                        gBattleMoveDamage = 1;
+                    BattleScriptExecute(BattleScript_ItemHurtHP);
+                    effect = ITEM_HP_CHANGE;
+                }
+            case HOLD_EFFECT_TOXIC_ORB:
+                if (gBattleMons[bank].status1 == 0 && !moveTurn &&
+                gBattleMons[bank].type1 != TYPE_POISON && gBattleMons[bank].type2 != TYPE_POISON &&
+                gBattleMons[bank].type1 != TYPE_STEEL && gBattleMons[bank].type2 != TYPE_STEEL &&
+                gBattleMons[bank].ability != ABILITY_IMMUNITY)
+                {
+                    
+                    gBattleMons[bank].status1 |= (STATUS_TOXIC_POISON);
+                    BattleScriptExecute(BattleScript_ToxicOrb);
+                    effect = ITEM_STATUS_CHANGE;
+                }
+                break;
+            case HOLD_EFFECT_FLAME_ORB:
+                if (gBattleMons[bank].status1 == 0 && !moveTurn &&
+                gBattleMons[bank].type1 != TYPE_FIRE && gBattleMons[bank].type2 != TYPE_FIRE &&
+                gBattleMons[bank].ability != ABILITY_WATER_VEIL)
+                {
+                    
+                    gBattleMons[bank].status1 |= (STATUS_BURN);
+                    BattleScriptExecute(BattleScript_FlameOrb);
+                    effect = ITEM_STATUS_CHANGE;
                 }
                 break;
             // nice copy/paste there gamefreak, making a function for confuse berries was too much eh?

@@ -1263,7 +1263,7 @@ u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
 				const struct TrainerMonFullControl *partyData = gTrainers[trainerNum].party.FullControl;
 				u8 ability;
 
-                fixedIV = partyData[i].iv * 31 / 255;
+                fixedIV = partyData[i].iv;
                 if (partyData[i].gender == MON_MALE)
                     personalityValue |= 0x80;
                 else if (partyData[i].gender == MON_FEMALE)

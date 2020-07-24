@@ -5174,7 +5174,7 @@ static void atk48_playstatchangeanimation(void)
                     u8 ability = gBattleMons[gActiveBattler].ability;
                     if (!gSideTimers[GetBattlerPosition(gActiveBattler) & 1].mistTimer)
                     {
-                        if (ability != ABILITY_CLEAR_BODY && ability == ABILITY_WHITE_SMOKE &&
+                        if (ability != ABILITY_CLEAR_BODY && ability != ABILITY_WHITE_SMOKE &&
                            !(ability == ABILITY_KEEN_EYE && curr_stat == 6) && !(ability == ABILITY_HYPER_CUTTER && curr_stat == 1) &&
                            !(ability == ABILITY_BIG_PECKS && curr_stat == 2))
                         {

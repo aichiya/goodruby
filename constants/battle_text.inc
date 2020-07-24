@@ -439,3 +439,5 @@
     enum BATTLE_TEXT_Stamina
     enum BATTLE_TEXT_NoTarget
     enum BATTLE_TEXT_SpeedRisen2
+    enum BATTLE_TEXT_ToxicOrb
+    enum BATTLE_TEXT_FlameOrb
