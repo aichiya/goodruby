@@ -4338,6 +4338,14 @@ void bc_aura_message(void)
                 gActiveBattler = 1;
                 PrepareStringBattle(447, 1);
                 break;
+            case SPECIES_ENTEI: // atk+1, satk+1
+                gBattleMons[1].statStages[STAT_STAGE_ATK] += 1;
+                gBattleMons[1].statStages[STAT_STAGE_SPATK] += 1;
+                gActiveBattler = 1;
+                PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_STAGE_ATK)
+                PREPARE_STAT_BUFFER(gBattleTextBuff2, STAT_STAGE_SPATK)
+                PrepareStringBattle(446, 1);
+                break;
             case SPECIES_REGIROCK: // def+2
                 statId = 2;
                 gBattleMons[1].statStages[statId] += 2;
