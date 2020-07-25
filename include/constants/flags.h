@@ -797,6 +797,8 @@
 #define FLAG_HIDE_RAIKOU                    0x4E4
 #define FLAG_HIDE_ENTEI                     0x4E5
 #define FLAG_HIDE_SUICUNE                   0x4E6
+#define FLAG_HIDE_LAPRAS                    0x4E7
+#define FLAG_FOUGHT_LAPRAS                  0x4E8
 
 
 #define TRAINER_FLAG_START 0x500

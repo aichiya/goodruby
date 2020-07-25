@@ -1146,6 +1146,11 @@ static const u8 gItemDescription_BlackSludge[] = _(
     "gradually heals Poison-\n"
     "types in battle.");
 
+static const u8 gItemDescription_AssaultVest[] = _(
+    "A hold item that\n"
+    "boosts Sp. Def but\n"
+    "forces attacking.");
+
 static const u8 gItemDescription_RedScarf[] = _(
     "A hold item that\n"
     "raises COOL in\n"

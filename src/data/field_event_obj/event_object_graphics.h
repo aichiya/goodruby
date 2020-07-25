@@ -311,5 +311,7 @@ const u16 gEventObjectPalette33[] = INCBIN_U16("graphics/event_objects/palettes/
 const u16 gEventObjectPalette34[] = INCBIN_U16("graphics/event_objects/palettes/34.gbapal");
 const u16 gEventObjectPalette35[] = INCBIN_U16("graphics/event_objects/palettes/35.gbapal");
 const u16 gEventObjectPalette36[] = INCBIN_U16("graphics/event_objects/palettes/36.gbapal");
+const u32 gEventObjectPic_Lapras[] = INCBIN_U32("graphics/event_objects/pics/pokemon/lapras.4bpp");
+const u16 gEventObjectPalette37[] = INCBIN_U16("graphics/event_objects/palettes/37.gbapal");
 
 #endif //POKERUBY_EVENT_OBJECT_GFX_H

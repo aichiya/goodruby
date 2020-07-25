@@ -139,8 +139,8 @@ MT. PYRE TOWER: Shuppet (40%), Duskull (30%), Haunter (20%), Snorunt (10%)
 MT. PYRE GRASS: Shuppet (40%), Vulpix (20%), Growlithe (20%), Meditite (15%), Absol (5%)
 MT. PYRE PEAK:  Shuppet (40%), Duskull (40%), Chimecho (15%), Absol (5%)
 ROUTE 123: Gloom, Shuppet, Aipom, Kecleon
-SHOAL CAVE: Golbat, Spheal, Seel, Snorunt, Smoochum, Delibird
-SHOAL DEPTHS: Golbat, Snorunt, Smoochum, Sneasel
+SHOAL CAVE: Sealeo (30%), Golbat (20%), Snorunt (15%), Piloswine (15%), Delibird (10%), Mawile (5%), Sableye (5%) (e: Lapras)
+SHOAL DEPTHS: Golbat (25%), Snorunt (25%), Piloswine (10%), Jynx (10%), Mawile (10%), Sableye (10%), Sneasel (10%)
 UNDERWATER: Chinchou, Clamperl, Relicanth
 SEAFLOOR: Kabuto, Omanyte, Lileep, Anorith
 MIRAGE ISLAND: Wynaut, Tangela, Venomoth, Munchlax

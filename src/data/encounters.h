@@ -757,86 +757,41 @@ const struct WildPokemonInfo VictoryRoad_B2F_LandMonsInfo = {10, VictoryRoad_B2F
 
 const struct WildPokemon ShoalCave_LowTideEntranceRoom_LandMons [] =
 {
-    {26, 26, SPECIES_ZUBAT},
-    {26, 26, SPECIES_SPHEAL},
-    {28, 28, SPECIES_ZUBAT},
-    {28, 28, SPECIES_SPHEAL},
-    {30, 30, SPECIES_ZUBAT},
-    {30, 30, SPECIES_SPHEAL},
-    {32, 32, SPECIES_ZUBAT},
-    {32, 32, SPECIES_SPHEAL},
-    {32, 32, SPECIES_GOLBAT},
-    {32, 32, SPECIES_SPHEAL},
-    {32, 32, SPECIES_GOLBAT},
-    {32, 32, SPECIES_SPHEAL},
+    {35, 38, SPECIES_GOLBAT},
+    {35, 38, SPECIES_SEALEO},
+    {35, 38, SPECIES_SNORUNT},
+    {35, 38, SPECIES_PILOSWINE},
+    {35, 38, SPECIES_DELIBIRD},
+    {35, 38, SPECIES_SEALEO},
+    {35, 38, SPECIES_SNORUNT},
+    {35, 38, SPECIES_PILOSWINE},
+    {35, 38, SPECIES_MAWILE},
+    {35, 38, SPECIES_SABLEYE},
+    {35, 38, SPECIES_MAWILE},
+    {35, 38, SPECIES_SABLEYE},
 };
 const struct WildPokemonInfo ShoalCave_LowTideEntranceRoom_LandMonsInfo = {10, ShoalCave_LowTideEntranceRoom_LandMons};
 
-const struct WildPokemon ShoalCave_LowTideInnerRoom_LandMons [] =
-{
-    {26, 26, SPECIES_ZUBAT},
-    {26, 26, SPECIES_SPHEAL},
-    {28, 28, SPECIES_ZUBAT},
-    {28, 28, SPECIES_SPHEAL},
-    {30, 30, SPECIES_ZUBAT},
-    {30, 30, SPECIES_SPHEAL},
-    {32, 32, SPECIES_ZUBAT},
-    {32, 32, SPECIES_SPHEAL},
-    {32, 32, SPECIES_GOLBAT},
-    {32, 32, SPECIES_SPHEAL},
-    {32, 32, SPECIES_GOLBAT},
-    {32, 32, SPECIES_SPHEAL},
-};
-const struct WildPokemonInfo ShoalCave_LowTideInnerRoom_LandMonsInfo = {10, ShoalCave_LowTideInnerRoom_LandMons};
+const struct WildPokemonInfo ShoalCave_LowTideInnerRoom_LandMonsInfo = {10, ShoalCave_LowTideEntranceRoom_LandMons};
 
-const struct WildPokemon ShoalCave_LowTideStairsRoom_LandMons [] =
-{
-    {26, 26, SPECIES_ZUBAT},
-    {26, 26, SPECIES_SPHEAL},
-    {28, 28, SPECIES_ZUBAT},
-    {28, 28, SPECIES_SPHEAL},
-    {30, 30, SPECIES_ZUBAT},
-    {30, 30, SPECIES_SPHEAL},
-    {32, 32, SPECIES_ZUBAT},
-    {32, 32, SPECIES_SPHEAL},
-    {32, 32, SPECIES_GOLBAT},
-    {32, 32, SPECIES_SPHEAL},
-    {32, 32, SPECIES_GOLBAT},
-    {32, 32, SPECIES_SPHEAL},
-};
-const struct WildPokemonInfo ShoalCave_LowTideStairsRoom_LandMonsInfo = {10, ShoalCave_LowTideStairsRoom_LandMons};
+const struct WildPokemonInfo ShoalCave_LowTideStairsRoom_LandMonsInfo = {10, ShoalCave_LowTideEntranceRoom_LandMons};
 
-const struct WildPokemon ShoalCave_LowTideLowerRoom_LandMons [] =
-{
-    {26, 26, SPECIES_ZUBAT},
-    {26, 26, SPECIES_SPHEAL},
-    {28, 28, SPECIES_ZUBAT},
-    {28, 28, SPECIES_SPHEAL},
-    {30, 30, SPECIES_ZUBAT},
-    {30, 30, SPECIES_SPHEAL},
-    {32, 32, SPECIES_ZUBAT},
-    {32, 32, SPECIES_SPHEAL},
-    {32, 32, SPECIES_GOLBAT},
-    {32, 32, SPECIES_SPHEAL},
-    {32, 32, SPECIES_GOLBAT},
-    {32, 32, SPECIES_SPHEAL},
-};
-const struct WildPokemonInfo ShoalCave_LowTideLowerRoom_LandMonsInfo = {10, ShoalCave_LowTideLowerRoom_LandMons};
+const struct WildPokemonInfo ShoalCave_LowTideLowerRoom_LandMonsInfo = {10, ShoalCave_LowTideEntranceRoom_LandMons};
 
 const struct WildPokemon ShoalCave_LowTideIceRoom_LandMons [] =
 {
-    {26, 26, SPECIES_ZUBAT},
-    {26, 26, SPECIES_SPHEAL},
-    {28, 28, SPECIES_ZUBAT},
-    {28, 28, SPECIES_SPHEAL},
-    {30, 30, SPECIES_ZUBAT},
-    {30, 30, SPECIES_SPHEAL},
-    {26, 26, SPECIES_SNORUNT},
-    {32, 32, SPECIES_SPHEAL},
-    {30, 30, SPECIES_GOLBAT},
-    {28, 28, SPECIES_SNORUNT},
-    {32, 32, SPECIES_GOLBAT},
-    {30, 30, SPECIES_SNORUNT},
+    {35, 38, SPECIES_GOLBAT},
+    {35, 38, SPECIES_SNORUNT},
+    {35, 38, SPECIES_PILOSWINE},
+    {35, 38, SPECIES_JYNX},
+    {35, 38, SPECIES_MAWILE},
+    {35, 38, SPECIES_SABLEYE},
+    {35, 38, SPECIES_GOLBAT},
+    {35, 38, SPECIES_SNORUNT},
+    {35, 38, SPECIES_SNEASEL},
+    {35, 38, SPECIES_SNEASEL},
+    {35, 38, SPECIES_SNEASEL},
+    {35, 38, SPECIES_SNEASEL},
 };
 const struct WildPokemonInfo ShoalCave_LowTideIceRoom_LandMonsInfo = {10, ShoalCave_LowTideIceRoom_LandMons};
 

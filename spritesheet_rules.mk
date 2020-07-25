@@ -491,6 +491,9 @@ $(EVENTOBJGFXDIR)/pokemon/kecleon.4bpp: %.4bpp: %.png
 $(EVENTOBJGFXDIR)/pokemon/kyogre.4bpp: %.4bpp: %.png
 	$(GBAGFX) $< $@ -mwidth 4 -mheight 4
 
+$(EVENTOBJGFXDIR)/pokemon/lapras.4bpp: %.4bpp: %.png
+	$(GBAGFX) $< $@ -mwidth 4 -mheight 4
+
 $(EVENTOBJGFXDIR)/pokemon/latias_latios.4bpp: %.4bpp: %.png
 	$(GBAGFX) $< $@ -mwidth 4 -mheight 4
 

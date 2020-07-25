@@ -441,3 +441,4 @@
     enum BATTLE_TEXT_SpeedRisen2
     enum BATTLE_TEXT_ToxicOrb
     enum BATTLE_TEXT_FlameOrb
+    enum BATTLE_TEXT_AssaultVest

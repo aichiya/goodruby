@@ -1984,4 +1984,16 @@ const struct SpriteFrameImage gEventObjectPicTable_Suicune[] = {
     overworld_frame(gEventObjectPic_Suicune, 4, 4, 0)
 };
 
+const struct SpriteFrameImage gEventObjectPicTable_Lapras[] = {
+    overworld_frame(gEventObjectPic_Lapras, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Lapras, 4, 4, 1),
+    overworld_frame(gEventObjectPic_Lapras, 4, 4, 2),
+    overworld_frame(gEventObjectPic_Lapras, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Lapras, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Lapras, 4, 4, 1),
+    overworld_frame(gEventObjectPic_Lapras, 4, 4, 1),
+    overworld_frame(gEventObjectPic_Lapras, 4, 4, 2),
+    overworld_frame(gEventObjectPic_Lapras, 4, 4, 2)
+};
+
 #endif //POKERUBY_EVENT_OBJECT_PIC_TABLES_H

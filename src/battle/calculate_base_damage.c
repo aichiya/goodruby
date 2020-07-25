@@ -391,6 +391,10 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         defense = (defense * 3) / 2;
         spDefense = (spDefense * 3) / 2;
     }
+    if (defenderHoldEffect == HOLD_EFFECT_ASSAULT_VEST)
+    {
+        spDefense = (spDefense * 3) / 2;
+    }
     if (defenderAbility == ABILITY_THICK_FAT && (type == TYPE_FIRE || type == TYPE_ICE))
     {
         attack /= 2;

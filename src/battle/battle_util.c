@@ -99,6 +99,7 @@ extern u8 BattleScript_MoveSelectionTormented[];
 extern u8 BattleScript_MoveSelectionTaunted[];
 extern u8 BattleScript_MoveSelectionImprisoned[];
 extern u8 BattleScript_MoveSelectionChoiceBanded[];
+extern u8 BattleScript_MoveSelectionAssaultVest[];
 extern u8 BattleScript_MoveSelectionNoPP[];
 extern u8 BattleScript_MoveSelectionCantBelch[];
 extern u8 BattleScript_NoMovesLeft[];
@@ -564,6 +565,12 @@ u8 TrySetCantSelectMoveBattleScript(void) //msg can't select a move
         gUnknown_02024C1C[gActiveBattler] = BattleScript_MoveSelectionCantBelch;
         limitations++;
     }
+    if (gBattleMoves[move].moveClass == 2 && holdEffect == HOLD_EFFECT_ASSAULT_VEST)
+    {
+        gLastUsedItem = gBattleMons[gActiveBattler].item;
+        gUnknown_02024C1C[gActiveBattler] = BattleScript_MoveSelectionAssaultVest;
+        limitations++;
+    }
     return limitations;
 }
 
@@ -573,6 +580,7 @@ u8 TrySetCantSelectMoveBattleScript(void) //msg can't select a move
 #define MOVE_LIMITATION_TORMENTED   (1 << 3)
 #define MOVE_LIMITATION_TAUNT       (1 << 4)
 #define MOVE_LIMITATION_IMPRISION   (1 << 5)
+#define MOVE_LIMITATION_VEST        (1 << 6)
 
 u8 CheckMoveLimitations(u8 bank, u8 unusableMoves, u8 check)
 {
@@ -604,7 +612,8 @@ u8 CheckMoveLimitations(u8 bank, u8 unusableMoves, u8 check)
             unusableMoves |= gBitTable[i];
 		if (gBattleMons[bank].moves[i] == MOVE_BELCH && !(gWishFutureKnock.berryEatenPokes[GetBattlerSide(bank)] & gBitTable[gBattlerPartyIndexes[bank]]))
 			unusableMoves |= gBitTable[i];
-		
+		if (gBattleMoves[gBattleMons[bank].moves[i]].moveClass == 2 && holdEffect == HOLD_EFFECT_ASSAULT_VEST)
+            unusableMoves |= gBitTable[i];
     }
     return unusableMoves;
 }

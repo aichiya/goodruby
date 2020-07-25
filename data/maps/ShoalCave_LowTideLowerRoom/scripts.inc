@@ -36,7 +36,7 @@ ShoalCave_LowTideLowerRoom_EventScript_15E44F:: @ 815E44F
 	faceplayer
 	goto_if_set FLAG_RECEIVED_FOCUS_BAND, ShoalCave_LowTideLowerRoom_EventScript_15E47E
 	msgbox ShoalCave_LowTideLowerRoom_Text_198200, 4
-	giveitem_std ITEM_FOCUS_BAND
+	giveitem_std ITEM_ASSAULT_VEST
 	compare RESULT, 0
 	goto_if_eq ShoalCave_LowTideLowerRoom_EventScript_1A029B
 	setflag FLAG_RECEIVED_FOCUS_BAND

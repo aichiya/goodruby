@@ -1,6 +1,7 @@
 ShoalCave_LowTideInnerRoom_MapScripts:: @ 815E192
 	map_script 1, ShoalCave_LowTideInnerRoom_MapScript1_15E1B3
 	map_script 3, ShoalCave_LowTideInnerRoom_MapScript1_15E19D
+	map_script 5, ShoalCave_LowTideInnerRoom_MapScriptLaprasHandling
 	.byte 0
 
 ShoalCave_LowTideInnerRoom_MapScript1_15E19D:: @ 815E19D
@@ -58,6 +59,25 @@ ShoalCave_LowTideInnerRoom_EventScript_15E243:: @ 815E243
 
 ShoalCave_LowTideInnerRoom_EventScript_15E256:: @ 815E256
 	return
+
+ShoalCave_LowTideInnerRoom_MapScriptLaprasHandling:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, ShoalCave_LowTideInnerRoom_EventScriptSnipLapras
+    call_if_unset FLAG_FOUGHT_LAPRAS, ShoalCave_LowTideInnerRoom_EventScriptShowLapras
+    call_if_unset FLAG_SYS_SHOAL_TIDE, ShoalCave_LowTideInnerRoom_EventScriptHideLapras
+    call_if_set FLAG_FOUGHT_LAPRAS, ShoalCave_LowTideInnerRoom_EventScriptHideLapras
+	end
+
+ShoalCave_LowTideInnerRoom_EventScriptSnipLapras:
+    removeobject 2
+    return
+
+ShoalCave_LowTideInnerRoom_EventScriptShowLapras:
+    clearflag FLAG_HIDE_LAPRAS
+    return
+
+ShoalCave_LowTideInnerRoom_EventScriptHideLapras:
+    setflag FLAG_HIDE_LAPRAS
+    return
 
 ShoalCave_LowTideInnerRoom_EventScript_15E257:: @ 815E257
 	lockall
@@ -140,3 +160,21 @@ ShoalCave_LowTideInnerRoom_EventScript_15E365:: @ 815E365
 	setflag FLAG_HIDE_TOOK_SHOAL_SALT_2
 	releaseall
 	end
+
+ShoalCave_LowTideInnerRoom_Lapras::
+	lock
+    faceplayer
+	waitse
+	playmoncry SPECIES_LAPRAS, 2
+	delay 40
+	waitmoncry
+    setvar VAR_SPECIAL_4, 1
+	setwildbattle SPECIES_LAPRAS, 40, ITEM_NONE
+	setflag FLAG_HIDE_LAPRAS
+    setflag FLAG_FOUGHT_LAPRAS
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	dowildbattle
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	release
+	end
+

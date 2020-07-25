@@ -487,7 +487,7 @@ ShoalCave_LowTideStairsRoom_EventScript_1B1A10:: @ 81B1A10
 	end
 
 ShoalCave_LowTideIceRoom_EventScript_1B1A1D:: @ 81B1A1D
-	giveitem_std ITEM_TM07_HEAL_BELL, 1, 1
+	giveitem_std ITEM_TM14_BLIZZARD, 1, 1
 	end
 
 ShoalCave_LowTideIceRoom_EventScript_1B1A2A:: @ 81B1A2A
