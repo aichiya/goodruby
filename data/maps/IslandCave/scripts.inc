@@ -75,7 +75,6 @@ IslandCave_EventScript_15EF72:: @ 815EF72
 
 IslandCave_EventScript_15EF9D:: @ 815EF9D
 	lock
-	faceplayer
 	waitse
 	playmoncry SPECIES_REGICE, 2
 	delay 40

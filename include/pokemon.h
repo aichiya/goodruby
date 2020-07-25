@@ -667,6 +667,7 @@ u32 GetColoration(u32 otId, u32 personality);
 u32 GetColorationFromMon(struct Pokemon *mon);
 void RandomlyGivePartyPokerus(struct Pokemon *party);
 void PartySpreadPokerus(struct Pokemon *party);
+u16 GetMUS_ForBattle();
 
 struct Sprite *sub_80F7920(u16, u16, const u16 *);
 void BoxMonRestorePP(struct BoxPokemon *);

@@ -611,7 +611,7 @@ void ScrSpecial_StartRegiBattle(void)
     ScriptContext2_Enable();
     gMain.savedCallback = CB2_EndScriptedWildBattle;
     gBattleTypeFlags = BATTLE_TYPE_LEGENDARY | BATTLE_TYPE_REGI;
-    CreateBattleStartTask(B_TRANSITION_GRID_SQUARES, MUS_BATTLE36);
+    CreateBattleStartTask(B_TRANSITION_GRID_SQUARES, GetMUS_ForBattle());
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
 }

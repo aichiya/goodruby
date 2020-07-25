@@ -221,6 +221,12 @@
 #define EVENT_OBJ_GFX_LINK_MAY 217
 #define EVENT_OBJ_GFX_GOLD_BALL 218
 #define EVENT_OBJ_GFX_SUDOWOODO 219
+#define EVENT_OBJ_GFX_ARTICUNO 220
+#define EVENT_OBJ_GFX_ZAPDOS 221
+#define EVENT_OBJ_GFX_MOLTRES 222
+#define EVENT_OBJ_GFX_RAIKOU 223
+#define EVENT_OBJ_GFX_ENTEI 224
+#define EVENT_OBJ_GFX_SUICUNE 225
 
 // These are dynamic object gfx ids.
 // They correspond with the values of the VAR_OBJ_GFX_ID_X vars.
@@ -242,7 +248,7 @@
 #define EVENT_OBJ_GFX_VAR_E 254
 #define EVENT_OBJ_GFX_VAR_F 255
 
-#define NUM_OBJECT_GRAPHICS_INFO 219
+#define NUM_OBJECT_GRAPHICS_INFO 225
 #define SPRITE_VAR 239
 
 #define SHADOW_SIZE_S 0

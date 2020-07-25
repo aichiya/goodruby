@@ -1212,7 +1212,12 @@ u16 GetMUS_ForBattle(void)
     if (gBattleTypeFlags & BATTLE_TYPE_KYOGRE_GROUDON)
         return MUS_BATTLE34;
     if (gBattleTypeFlags & BATTLE_TYPE_REGI)
+    {
+        u16 species = GetMonData(&gEnemyParty[0], MON_DATA_SPECIES);
+        if (species == SPECIES_RAIKOU || species == SPECIES_ENTEI || species == SPECIES_SUICUNE)
+            return MUS_SUIKUN;
         return MUS_BATTLE36;
+    }
     if (gBattleTypeFlags & BATTLE_TYPE_LINK)
         return MUS_BATTLE20;
     if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)

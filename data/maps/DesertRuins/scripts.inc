@@ -71,7 +71,6 @@ DesertRuins_EventScript_15CB77:: @ 815CB77
 
 DesertRuins_EventScript_15CB85:: @ 815CB85
 	lock
-	faceplayer
 	waitse
 	playmoncry SPECIES_REGIROCK, 2
 	delay 40

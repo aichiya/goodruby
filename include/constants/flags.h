@@ -791,6 +791,13 @@
 #define FLAG_DEFEATED_ELITE_4_GLACIA        0x4DF
 #define FLAG_DEFEATED_ELITE_4_DRAKE         0x4E0
 
+#define FLAG_HIDE_ARTICUNO                  0x4E1
+#define FLAG_HIDE_ZAPDOS                    0x4E2
+#define FLAG_HIDE_MOLTRES                   0x4E3
+#define FLAG_HIDE_RAIKOU                    0x4E4
+#define FLAG_HIDE_ENTEI                     0x4E5
+#define FLAG_HIDE_SUICUNE                   0x4E6
+
 
 #define TRAINER_FLAG_START 0x500
 

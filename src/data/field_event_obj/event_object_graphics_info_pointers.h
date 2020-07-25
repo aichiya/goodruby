@@ -225,6 +225,12 @@ const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_LinkBrendan;
 const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_LinkMay;
 const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_GoldBall;
 const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_Sudowoodo;
+const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_Articuno;
+const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_Zapdos;
+const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_Moltres;
+const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_Raikou;
+const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_Entei;
+const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_Suicune;
 
 const struct EventObjectGraphicsInfo *const gEventObjectGraphicsInfoPointers[] = {
     &gEventObjectGraphicsInfo_BrendanNormal,
@@ -447,6 +453,12 @@ const struct EventObjectGraphicsInfo *const gEventObjectGraphicsInfoPointers[] =
     &gEventObjectGraphicsInfo_LinkMay,
     &gEventObjectGraphicsInfo_GoldBall,
     &gEventObjectGraphicsInfo_Sudowoodo,
+    &gEventObjectGraphicsInfo_Articuno,
+    &gEventObjectGraphicsInfo_Zapdos,
+    &gEventObjectGraphicsInfo_Moltres,
+    &gEventObjectGraphicsInfo_Raikou,
+    &gEventObjectGraphicsInfo_Entei,
+    &gEventObjectGraphicsInfo_Suicune,
 };
 
 #endif //POKERUBY_EVENT_OBJECT_GRAPHICS_INFO_POINTERS_H

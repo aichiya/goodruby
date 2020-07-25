@@ -3,11 +3,22 @@ TracklessForest_MapScripts::
     .byte 0
 
 TracklessForest_MapScript:
-	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, TracklessForest_EventScriptSnipSudowoodo
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, TracklessForest_EventScriptSnipSomething
 	end
+
+TracklessForest_EventScriptSnipSomething:
+    compare VAR_SPECIAL_4, 0
+    call_if_eq TracklessForest_EventScriptSnipSudowoodo
+    compare VAR_SPECIAL_4, 1
+    call_if_eq TracklessForest_EventScriptSnipRaikou
+    return
 
 TracklessForest_EventScriptSnipSudowoodo:
     removeobject 1
+    return
+
+TracklessForest_EventScriptSnipRaikou:
+    removeobject 9
     return
 
 TracklessForest_EventScript_Sudowoodo::
@@ -42,6 +53,7 @@ TracklessForest_EventScript_WaterSudowoodo:
 	playmoncry SPECIES_SUDOWOODO, 2
 	delay 40
 	waitmoncry
+    setvar VAR_SPECIAL_4, 0
 	setflag FLAG_HIDE_SUDOWOODO
 	setwildbattle SPECIES_SUDOWOODO, 30, ITEM_NONE
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
@@ -103,3 +115,19 @@ TracklessForest_Movement_WalkAway:
     walk_down
     walk_down
     end_movement
+
+TracklessForest_EventScript_Raikou::
+	lock
+	waitse
+	playmoncry SPECIES_RAIKOU, 2
+	delay 40
+	waitmoncry
+    setvar VAR_SPECIAL_4, 1
+	setwildbattle SPECIES_RAIKOU, 50, ITEM_NONE
+	setflag FLAG_HIDE_RAIKOU
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	special ScrSpecial_StartRegiBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	release
+	end

@@ -377,6 +377,15 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define EVENT_OBJ_PAL_TAG_25 0x1119
 #define EVENT_OBJ_PAL_TAG_26 0x111A
 #define EVENT_OBJ_PAL_TAG_27 0x111B
+#define EVENT_OBJ_PAL_TAG_28 0x111C
+#define EVENT_OBJ_PAL_TAG_29 0x111D
+#define EVENT_OBJ_PAL_TAG_30 0x111E
+#define EVENT_OBJ_PAL_TAG_31 0x111F
+#define EVENT_OBJ_PAL_TAG_32 0x1120
+#define EVENT_OBJ_PAL_TAG_33 0x1121
+#define EVENT_OBJ_PAL_TAG_34 0x1122
+#define EVENT_OBJ_PAL_TAG_35 0x1123
+#define EVENT_OBJ_PAL_TAG_36 0x1124
 
 #define EVENT_OBJ_PAL_TAG_NONE 0x11FF
 
@@ -417,6 +426,15 @@ const struct SpritePalette sEventObjectSpritePalettes[] = {
     {gEventObjectPalette25, EVENT_OBJ_PAL_TAG_25},
     {gEventObjectPalette26, EVENT_OBJ_PAL_TAG_26},
     {gEventObjectPalette27, EVENT_OBJ_PAL_TAG_27},
+    {gEventObjectPalette28, EVENT_OBJ_PAL_TAG_28},
+    {gEventObjectPalette29, EVENT_OBJ_PAL_TAG_29},
+    {gEventObjectPalette30, EVENT_OBJ_PAL_TAG_30},
+    {gEventObjectPalette31, EVENT_OBJ_PAL_TAG_31},
+    {gEventObjectPalette32, EVENT_OBJ_PAL_TAG_32},
+    {gEventObjectPalette33, EVENT_OBJ_PAL_TAG_33},
+    {gEventObjectPalette34, EVENT_OBJ_PAL_TAG_34},
+    {gEventObjectPalette35, EVENT_OBJ_PAL_TAG_35},
+    {gEventObjectPalette36, EVENT_OBJ_PAL_TAG_36},
     {NULL,                  0x0000},
 };
 

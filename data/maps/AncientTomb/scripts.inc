@@ -71,7 +71,6 @@ AncientTomb_EventScript_15F042:: @ 815F042
 
 AncientTomb_EventScript_15F050:: @ 815F050
 	lock
-	faceplayer
 	waitse
 	playmoncry SPECIES_REGISTEEL, 2
 	delay 40
