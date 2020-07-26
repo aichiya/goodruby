@@ -4331,6 +4331,14 @@ void bc_aura_message(void)
     {
         switch (gBattleMons[1].species)
         {
+            case SPECIES_ARTICUNO: // satk+1, sdef+1
+                gBattleMons[1].statStages[STAT_STAGE_SPATK] += 1;
+                gBattleMons[1].statStages[STAT_STAGE_SPDEF] += 1;
+                gActiveBattler = 1;
+                PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_STAGE_SPATK)
+                PREPARE_STAT_BUFFER(gBattleTextBuff2, STAT_STAGE_SPDEF)
+                PrepareStringBattle(446, 1);
+                break;
             case SPECIES_RAIKOU: // eva+2
                 statId = 7;
                 gBattleMons[1].statStages[statId] += 2;

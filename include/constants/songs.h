@@ -367,6 +367,8 @@
 #define MUS_BATTLE35 464        // Battle! Rival
 #define MUS_BATTLE38 465        // Battle! Elite Four
 #define MUS_BATTLE30 466        // Battle! Archie/Maxie
+#define MUS_RADIO_TOWER 467
+#define MUS_KANTO_LEGEND 468    // (FR) VS Articuno, Zapdos, Moltres
 
 #define MUS_ROUTE_118 0x7FFF  // What is this for?
 
