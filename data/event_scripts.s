@@ -401,7 +401,9 @@ gStdScripts_End::
 	.include "data/maps/SecretBase_YellowCave3/scripts.inc"
 	.include "data/maps/SecretBase_YellowCave4/scripts.inc"
     .include "data/maps/GnarledRidge/scripts.inc"
-    .include "data/maps/TracklessFOrest/scripts.inc"
+    .include "data/maps/TracklessForest/scripts.inc"
+	.include "data/maps/FieryPath_B1F/scripts.inc"
+	.include "data/maps/FieryPath_B2F/scripts.inc"
 
 gUnknown_0815F36C:: @ 815F36C
 	lockall

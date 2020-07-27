@@ -394,6 +394,8 @@ gMapGroup24:: @ 83082F8
 	.4byte GraniteCave_B4F
 	.4byte GraniteCave_Stairs
     .4byte TracklessForest
+    .4byte FieryPath_B1F
+    .4byte FieryPath_B2F
 
 	.align 2
 gMapGroup25:: @ 8308450

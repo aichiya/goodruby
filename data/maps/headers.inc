@@ -398,3 +398,5 @@
 	.include "data/maps/Route124_DivingTreasureHuntersHouse/header.inc"
     .include "data/maps/GnarledRidge/header.inc"
     .include "data/maps/TracklessForest/header.inc"
+    .include "data/maps/FieryPath_B1F/header.inc"
+    .include "data/maps/FieryPath_B2F/header.inc"

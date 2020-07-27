@@ -302,12 +302,20 @@ JaggedPass_EventScript_1B17D4:: @ 81B17D4
 	giveitem_std ITEM_BURN_HEAL, 1, 1
 	end
 
-FieryPath_EventScript_1B17E1:: @ 81B17E1
-	giveitem_std ITEM_FIRE_STONE, 1, 1
+FieryPath_EventScript_Item1:: @ 81B17E1
+	giveitem_std ITEM_BURN_HEAL, 1, 1
 	end
 
-FieryPath_EventScript_1B17EE:: @ 81B17EE
-	giveitem_std ITEM_TM06_TOXIC, 1, 1
+FieryPath_EventScript_Item2:: @ 81B17EE
+	giveitem_std ITEM_TOXIC_ORB, 1, 1
+	end
+
+FieryPath_EventScript_Item3::
+	giveitem_std ITEM_RARE_CANDY, 1, 1
+	end
+
+FieryPath_EventScript_Item4::
+	giveitem_std ITEM_TM38_FIRE_BLAST, 1, 1
 	end
 
 MeteorFalls_1F_1R_EventScript_1B17FB:: @ 81B17FB

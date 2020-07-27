@@ -1,5 +1,4 @@
 WEIRDOS:
-Lapras
 Aerodactyl
 Snubbull
 Swinub
@@ -129,7 +128,6 @@ NEW MAUVILLE: Voltorb (34%), Magnemite (34%), Shuppet (20%), Elekid (10%), Magne
 ROUTE 118: Raticate (25%), Aipom (25%), Yanma (15%), Wingull (10%), Gloom (10%), Manectric (10%), Kecleon (5%)
 ROUTE 119: Aipom (30%), Yanma (30%), Gloom (15%), Persian (10%), Tropius (10%), Kecleon (5%) (e: Castform)
 ROUTE 120: Aipom (30%), Yanma (30%), Gloom (15%), Absol (10%), Persian (5%), Scyther (5%), Kecleon (5%)
-SCORCHED SLAB:
 ROUTE 121: Gloom (30%), Aipom (20%), Shuppet (15%), Growlithe (10%), Xatu (10%), Hypno (5%), Kecleon (5%), Scyther (5%)
 SAFARI ZONE SOUTH-EAST: Pikachu (20%), Exeggcute (20%), Kangaskhan (10%), Girafarig (10%), Wobbuffet (10%), Smeargle (10%), Tauros (5%), Chansey (5%), Torchic (5%), Treecko (5%)
 SAFARI ZONE SOUTH-WEST: Beedrill (20%), Tangela (20%), Kangaskhan (10%), Venomoth (10%), Golduck (10%), Mr. Mime (10%), Tauros (5%), Chansey (5%), Chikorita (5%), Ditto (5%)
@@ -141,6 +139,7 @@ MT. PYRE PEAK:  Shuppet (40%), Duskull (40%), Chimecho (15%), Absol (5%)
 ROUTE 123: Gloom, Shuppet, Aipom, Kecleon
 SHOAL CAVE: Sealeo (30%), Golbat (20%), Snorunt (15%), Piloswine (15%), Delibird (10%), Mawile (5%), Sableye (5%) (e: Lapras)
 SHOAL DEPTHS: Golbat (25%), Snorunt (25%), Piloswine (10%), Jynx (10%), Mawile (10%), Sableye (10%), Sneasel (10%)
+DEEP FIERY PATH: Magcargo (20%), Graveler (20%), Camerupt (15%), Machoke (15%), Weezing (10%), Torkoal (10%), Magmar (10%)
 UNDERWATER: Chinchou, Clamperl, Relicanth
 SEAFLOOR: Kabuto, Omanyte, Lileep, Anorith
 MIRAGE ISLAND: Wynaut, Tangela, Venomoth, Munchlax

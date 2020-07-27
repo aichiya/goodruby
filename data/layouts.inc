@@ -336,3 +336,5 @@
     .include "data/layouts/GnarledRidge/layout.inc"
     .include "data/layouts/Route135/layout.inc"
     .include "data/layouts/TracklessForest/layout.inc"
+    .include "data/layouts/FieryPath_B1F/layout.inc"
+    .include "data/layouts/FieryPath_B2F/layout.inc"

@@ -4339,6 +4339,13 @@ void bc_aura_message(void)
                 PREPARE_STAT_BUFFER(gBattleTextBuff2, STAT_STAGE_SPDEF)
                 PrepareStringBattle(446, 1);
                 break;
+            case SPECIES_MOLTRES: // satk+2
+                statId = 4;
+                gBattleMons[1].statStages[statId] += 2;
+                PREPARE_STAT_BUFFER(gBattleTextBuff1, statId)
+                gActiveBattler = 1;
+                PrepareStringBattle(447, 1);
+                break;
             case SPECIES_RAIKOU: // eva+2
                 statId = 7;
                 gBattleMons[1].statStages[statId] += 2;

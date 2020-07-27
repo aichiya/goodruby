@@ -301,6 +301,26 @@ const struct WildPokemon FieryPath_LandMons [] =
 };
 const struct WildPokemonInfo FieryPath_LandMonsInfo = {10, FieryPath_LandMons};
 
+const struct WildPokemon FieryPath_B1F_LandMons [] =
+{
+    {35, 38, SPECIES_MAGCARGO},
+    {35, 38, SPECIES_GRAVELER},
+    {35, 38, SPECIES_CAMERUPT},
+    {35, 38, SPECIES_MACHOKE},
+    {35, 38, SPECIES_WEEZING},
+    {35, 38, SPECIES_TORKOAL},
+    {35, 38, SPECIES_MAGMAR},
+    {35, 38, SPECIES_MAGMAR},
+    {35, 38, SPECIES_CAMERUPT},
+    {35, 38, SPECIES_MACHOKE},
+    {35, 38, SPECIES_CAMERUPT},
+    {35, 38, SPECIES_MACHOKE},
+};
+
+const struct WildPokemonInfo FieryPath_B1F_LandMonsInfo = {10, FieryPath_B1F_LandMons};
+
+const struct WildPokemonInfo FieryPath_B2F_LandMonsInfo = {10, FieryPath_B1F_LandMons};
+
 const struct WildPokemon MtPyre_1F_LandMons [] =
 {
     {32, 35, SPECIES_SHUPPET},
@@ -2345,6 +2365,22 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(TRACKLESS_FOREST),
         .mapNum = MAP_NUM(TRACKLESS_FOREST),
         .landMonsInfo = &TracklessForest_LandMonsInfo,
+        .waterMonsInfo = NULL,
+        .rockSmashMonsInfo = NULL,
+        .fishingMonsInfo = NULL,
+    },
+    {
+        .mapGroup = MAP_GROUP(FIERY_PATH_B1F),
+        .mapNum = MAP_NUM(FIERY_PATH_B1F),
+        .landMonsInfo = &FieryPath_B1F_LandMonsInfo,
+        .waterMonsInfo = NULL,
+        .rockSmashMonsInfo = NULL,
+        .fishingMonsInfo = NULL,
+    },
+    {
+        .mapGroup = MAP_GROUP(FIERY_PATH_B2F),
+        .mapNum = MAP_NUM(FIERY_PATH_B2F),
+        .landMonsInfo = &FieryPath_B2F_LandMonsInfo,
         .waterMonsInfo = NULL,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = NULL,

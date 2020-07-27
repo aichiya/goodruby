@@ -413,3 +413,5 @@
 	.include "data/maps/Route124_DivingTreasureHuntersHouse/events.inc"
     .include "data/maps/GnarledRidge/events.inc"
     .include "data/maps/TracklessForest/events.inc"
+    .include "data/maps/FieryPath_B1F/events.inc"
+    .include "data/maps/FieryPath_B2F/events.inc"

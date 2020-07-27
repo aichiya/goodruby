@@ -372,6 +372,8 @@
 #define MAP_GRANITE_CAVE_B4F                      (87 | (24 << 8))
 #define MAP_GRANITE_CAVE_STAIRS                   (88 | (24 << 8))
 #define MAP_TRACKLESS_FOREST                      (89 | (24 << 8))
+#define MAP_FIERY_PATH_B1F                        (90 | (24 << 8))
+#define MAP_FIERY_PATH_B2F                        (91 | (24 << 8))
 
 // Map Group 25
 #define MAP_SECRET_BASE_RED_CAVE1    (0 | (25 << 8))
