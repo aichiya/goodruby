@@ -10,6 +10,7 @@ NewMauville_Inside_EventObjects:: @ 838DF08
 
 NewMauville_Inside_MapWarps:: @ 838DFC8
 	warp_def 32, 33, 3, 1, MAP_NEW_MAUVILLE_ENTRANCE
+	warp_def 31, 15, 3, 0, MAP_NEW_MAUVILLE_INSIDE_B2F
 
 NewMauville_Inside_MapCoordEvents:: @ 838DFD0
 	coord_event 30, 38, 3, VAR_TEMP_1, 0, NewMauville_Inside_EventScript_15E5AA

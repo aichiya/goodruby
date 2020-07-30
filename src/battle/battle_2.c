@@ -4339,6 +4339,14 @@ void bc_aura_message(void)
                 PREPARE_STAT_BUFFER(gBattleTextBuff2, STAT_STAGE_SPDEF)
                 PrepareStringBattle(446, 1);
                 break;
+            case SPECIES_ZAPDOS: // satk+1, speed+1
+                gBattleMons[1].statStages[STAT_STAGE_SPATK] += 1;
+                gBattleMons[1].statStages[STAT_STAGE_SPEED] += 1;
+                gActiveBattler = 1;
+                PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_STAGE_SPATK)
+                PREPARE_STAT_BUFFER(gBattleTextBuff2, STAT_STAGE_SPEED)
+                PrepareStringBattle(446, 1);
+                break;
             case SPECIES_MOLTRES: // satk+2
                 statId = 4;
                 gBattleMons[1].statStages[statId] += 2;

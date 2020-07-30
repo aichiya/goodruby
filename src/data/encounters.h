@@ -849,6 +849,27 @@ const struct WildPokemon NewMauville_Inside_LandMons [] =
 };
 const struct WildPokemonInfo NewMauville_Inside_LandMonsInfo = {10, NewMauville_Inside_LandMons};
 
+const struct WildPokemonInfo NewMauville_Inside_B2F_AltLandMonsInfo = {10, NewMauville_Inside_LandMons};
+
+const struct WildPokemon NewMauville_Inside_B2F_LandMons [] =
+{
+    {35, 38, SPECIES_ELECTRODE},
+    {35, 38, SPECIES_MAGNETON},
+    {35, 38, SPECIES_LAIRON},
+    {35, 38, SPECIES_HYPNO},
+    {35, 38, SPECIES_SHUPPET},
+    {35, 38, SPECIES_SHUPPET},
+    {35, 38, SPECIES_ELECTABUZZ},
+    {35, 38, SPECIES_ELECTABUZZ},
+    {35, 38, SPECIES_ELECTRODE},
+    {35, 38, SPECIES_MAGNETON},
+    {35, 38, SPECIES_ELECTRODE},
+    {35, 38, SPECIES_MAGNETON},
+};
+const struct WildPokemonInfo NewMauville_Inside_B2F_LandMonsInfo = {10, NewMauville_Inside_B2F_LandMons};
+
+const struct WildPokemonInfo NewMauville_Inside_B3F_LandMonsInfo = {10, NewMauville_Inside_B2F_LandMons};
+
 const struct WildPokemon SkyPillar_1F_LandMons [] =
 {
 #ifdef SAPPHIRE
@@ -2381,6 +2402,27 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(FIERY_PATH_B2F),
         .mapNum = MAP_NUM(FIERY_PATH_B2F),
         .landMonsInfo = &FieryPath_B2F_LandMonsInfo,
+        .waterMonsInfo = NULL,
+        .rockSmashMonsInfo = NULL,
+        .fishingMonsInfo = NULL,
+    },
+    {
+        .mapGroup = MAP_GROUP(NEW_MAUVILLE_INSIDE_B2F),
+        .mapNum = MAP_NUM(NEW_MAUVILLE_INSIDE_B2F),
+        .landMonsInfo = &NewMauville_Inside_B2F_LandMonsInfo,
+        .waterMonsInfo = NULL,
+        .rockSmashMonsInfo = NULL,
+        .fishingMonsInfo = NULL,
+        .altXLow = 28,
+        .altYLow = 28,
+        .altXHigh = 36,
+        .altYHigh = 31,
+        .altLandMonsInfo = &NewMauville_Inside_B2F_AltLandMonsInfo,
+    },
+    {
+        .mapGroup = MAP_GROUP(NEW_MAUVILLE_INSIDE_B3F),
+        .mapNum = MAP_NUM(NEW_MAUVILLE_INSIDE_B3F),
+        .landMonsInfo = &NewMauville_Inside_B3F_LandMonsInfo,
         .waterMonsInfo = NULL,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = NULL,

@@ -585,3 +585,28 @@ TracklessForest_EventScript_Item1::
 TracklessForest_EventScript_Item2::
 	giveitem_std ITEM_MAX_POTION, 1, 1
 	end
+
+NewMauville_Inside_B2F_EventScript_Item1::
+	giveitem_std ITEM_REVIVE, 1, 1
+	end
+
+NewMauville_Inside_B2F_EventScript_Item2::
+	giveitem_std ITEM_METAL_COAT, 1, 1
+	end
+
+NewMauville_Inside_B2F_EventScript_Item3::
+	giveitem_std ITEM_RARE_CANDY, 1, 1
+	end
+
+NewMauville_Inside_B2F_EventScript_Item4::
+	giveitem_std ITEM_NUGGET, 1, 1
+	end
+
+NewMauville_Inside_B2F_EventScript_Item5::
+	giveitem_std ITEM_SCOPE_LENS, 1, 1
+	end
+	end
+
+NewMauville_Inside_B3F_EventScript_Item::
+	giveitem_std ITEM_TM25_THUNDER, 1, 1
+	end

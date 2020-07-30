@@ -124,7 +124,7 @@ TRACKLESS FOREST: Nosepass (20%), Natu (20%), Weepinbell (15%), Noctowl (10%), R
 ROUTE 109: Wingull (25%), Exeggcute (25%), Krabby (15%), Mantyke (15%), Lickitung (10%), Skiploom (10%)
 ROUTE 115: Wingull (30%), Swablu (30%), Jigglypuff (15%), Clefairy (10%), Zangoose (5%), Seviper (5%), Farfetch'd (5%)
 ROUTE 135: Raticate (20%), Oddish (20%), Plusle (10%), Minun (10%), Volbeat (10%), Illumise (10%), Drowzee (5%), Roselia (5%), Mr. Mime (5%), Miltank (5%)
-NEW MAUVILLE: Voltorb (34%), Magnemite (34%), Shuppet (20%), Elekid (10%), Magneton (1%), Elecrode (1%)
+NEW MAUVILLE: Voltorb (34%), Magnemite (34%), Shuppet (20%), Elekid (10%), Magneton (1%), Electrode (1%)
 ROUTE 118: Raticate (25%), Aipom (25%), Yanma (15%), Wingull (10%), Gloom (10%), Manectric (10%), Kecleon (5%)
 ROUTE 119: Aipom (30%), Yanma (30%), Gloom (15%), Persian (10%), Tropius (10%), Kecleon (5%) (e: Castform)
 ROUTE 120: Aipom (30%), Yanma (30%), Gloom (15%), Absol (10%), Persian (5%), Scyther (5%), Kecleon (5%)
@@ -139,6 +139,7 @@ MT. PYRE PEAK:  Shuppet (40%), Duskull (40%), Chimecho (15%), Absol (5%)
 ROUTE 123: Gloom, Shuppet, Aipom, Kecleon
 SHOAL CAVE: Sealeo (30%), Golbat (20%), Snorunt (15%), Piloswine (15%), Delibird (10%), Mawile (5%), Sableye (5%) (e: Lapras)
 SHOAL DEPTHS: Golbat (25%), Snorunt (25%), Piloswine (10%), Jynx (10%), Mawile (10%), Sableye (10%), Sneasel (10%)
+NEW MAUVILLE BASEMENT: Electrode (25%), Magneton (25%), Shuppet (20%), Electabuzz (10%), Lairon (10%), Hypno (10%)
 DEEP FIERY PATH: Magcargo (20%), Graveler (20%), Camerupt (15%), Machoke (15%), Weezing (10%), Torkoal (10%), Magmar (10%)
 UNDERWATER: Chinchou, Clamperl, Relicanth
 SEAFLOOR: Kabuto, Omanyte, Lileep, Anorith

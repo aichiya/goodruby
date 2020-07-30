@@ -415,3 +415,5 @@
     .include "data/maps/TracklessForest/events.inc"
     .include "data/maps/FieryPath_B1F/events.inc"
     .include "data/maps/FieryPath_B2F/events.inc"
+    .include "data/maps/NewMauville_Inside_B2F/events.inc"
+    .include "data/maps/NewMauville_Inside_B3F/events.inc"

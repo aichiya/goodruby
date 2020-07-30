@@ -340,3 +340,5 @@ gMapLayouts:: @ 8304F18
     .4byte TracklessForest_Layout
     .4byte FieryPath_B1F_Layout
     .4byte FieryPath_B2F_Layout
+    .4byte NewMauville_Inside_B2F_Layout
+    .4byte NewMauville_Inside_B3F_Layout
