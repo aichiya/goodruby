@@ -402,3 +402,9 @@ LEFT-FACING MAGMA GRUNT (29): Ninetales Lv42, Machoke Lv42, Probopass Lv42
 BF2:
 PATROLLING MAGMA GRUNT (31): Raticate Lv43, Torkoal Lv43
 TABITHA:
+
+TRICK HOUSE 5
+YUJI: Machamp Lv44
+CORA: Heracross Lv43, Hitmonchan Lv43
+JILL: Ambipom Lv43, Primeape Lv43
+

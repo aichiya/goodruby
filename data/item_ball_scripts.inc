@@ -531,7 +531,7 @@ Route110_TrickHousePuzzle3_EventScript_1B1A85:: @ 81B1A85
 	end
 
 Route110_TrickHousePuzzle4_EventScript_1B1A92:: @ 81B1A92
-	giveitem_std ITEM_MECH_MAIL, 1, 1
+	giveitem_std ITEM_PP_UP, 1, 1
 	end
 
 Route110_TrickHousePuzzle6_EventScript_1B1A9F:: @ 81B1A9F

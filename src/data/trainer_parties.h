@@ -2610,14 +2610,9 @@ const struct TrainerMonItemDefaultMoves gTrainerParty_Nob5[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Yuji[] = {
     {
 	.iv = 100,
-	.level = 26,
-	.species = SPECIES_MAKUHITA
+	.level = 44,
+	.species = SPECIES_MACHAMP
     },
-    {
-	.iv = 100,
-	.level = 26,
-	.species = SPECIES_MACHOKE
-    }
 };
 
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Daisuke[] = {
@@ -6304,17 +6299,27 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Cyndy1[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Cora[] = {
     {
 	.iv = 100,
-	.level = 27,
-	.species = SPECIES_MEDITITE
+	.level = 43,
+	.species = SPECIES_HERACROSS
+    },
+    {
+	.iv = 100,
+	.level = 43,
+	.species = SPECIES_HITMONCHAN
     }
 };
 
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Jill[] = {
     {
 	.iv = 100,
-	.level = 27,
-	.species = SPECIES_BRELOOM
-    }
+	.level = 43,
+	.species = SPECIES_AMBIPOM
+    },
+    {
+	.iv = 100,
+	.level = 43,
+	.species = SPECIES_PRIMEAPE
+    },
 };
 
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Cyndy2[] = {
