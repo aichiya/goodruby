@@ -408,3 +408,65 @@ YUJI: Machamp Lv44
 CORA: Heracross Lv43, Hitmonchan Lv43
 JILL: Ambipom Lv43, Primeape Lv43
 
+ROUTE 124: (lilycove)
+JENNY: Huntail Lv43, Magmar Lv43
+GRACE: Beautifly Lv43, Seaking Lv43
+ROLAND: Qwilfish Lv44
+RITA&SAM: Feebas Lv44, Starmie Lv44
+SPENCER: Pelipper Lv43, Flaaffy Lv43
+CHAD: Dewgong Lv43, Lanturn Lv43
+
+ROUTE 125: (shoal cave)
+TANYA: Lombre Lv44, Golduck Lv44
+SHARON: Wartortle Lv44, Croconaw Lv44, Marshtomp Lv44
+CODY: Mantine Lv44, Cloyster Lv44
+ERNEST: Pelipper Lv43, Primeape Lv44, Seadra Lv44
+KIM&IRIS: Plusle Lv45, Minun Lv45
+STAN: Horsea Lv44, Horsea Lv44, Horsea Lv44, Rapidash Lv44
+
+ROUTE 126: (sootopolis)
+BARRY: Machamp Lv45
+DEAN: Jumpluff Lv44, Pelipper Lv44
+BRENDA: Clamperl Lv44, Wailmer Lv44, Sealeo Lv44
+
+ROUTE 127: (deep sea trench)
+BYRON: Noctowl Lv45, Swellow Lv45
+CONNOR: Dodrio Lv45, Sharpedo Lv45
+JONAH: Wailord Lv45, Medicham Lv45
+ROGER: Luvdisc Lv44, Octillery Lv44, Dragonair Lv44, Wailord Lv44, Magikarp Lv70
+HENRY: Arbok Lv45, Poliwhirl Lv45
+CALEB: Raichu Lv45, Tentacruel Lv45
+KOJI: Blastoise Lv45, Hitmonchan Lv45
+
+ROUTE 128: (seafloor cavern, evergrande)
+WAYNE: Seaking Lv45, Gyarados Lv45 (waterfall)
+ISAIAH: Starmie Lv46
+KATELYN: Whiscash Lv45, Electrode Lv45, Growlithe Lv45
+ALEXA: Ninetales Lv45, Bellossom Lv45, Lapras Lv45
+RUBEN: Tropius Lv45, Clefable Lv45, Aggron Lv45
+
+ROUTE 129: (bend, now requires dive to pass)
+ALLISON: Munchlax Lv45, Pelipper Lv45
+
+
+
+waul
+
+ROUTE 126:
+NIKKI:
+
+ROUTE 129:
+CHASE:
+REED:
+TISHA:
+
+ROUTE 130: (mirage island)
+KATIE:
+RODNEY:
+
+ROUTE 131: (sky pillar)
+KARA:
+HERMAN:
+SUSIE:
+RICHARD:
+RELI&IAN:

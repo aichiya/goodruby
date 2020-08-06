@@ -4369,6 +4369,10 @@ void bc_aura_message(void)
                 PREPARE_STAT_BUFFER(gBattleTextBuff2, STAT_STAGE_SPATK)
                 PrepareStringBattle(446, 1);
                 break;
+            case SPECIES_SUICUNE: // aqua ring
+                gStatuses3[1] |= STATUS3_AQUA_RING;
+                PrepareStringBattle(455, 1);
+                break;
             case SPECIES_REGIROCK: // def+2
                 statId = 2;
                 gBattleMons[1].statStages[statId] += 2;

@@ -1,6 +1,7 @@
 Route128_MapScripts:: @ 815211B
 	map_script 3, Route128_MapScript1_152126
 	map_script 2, Route128_MapScript2_152135
+	map_script 5, Route128_MapScript3
 	.byte 0
 
 Route128_MapScript1_152126:: @ 8152126
@@ -11,6 +12,14 @@ Route128_MapScript1_152126:: @ 8152126
 Route128_MapScript2_152135:: @ 8152135
 	map_script_2 VAR_ROUTE128_STATE, 1, Route128_EventScript_15213F
 	.2byte 0
+
+Route128_MapScript3:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, Route128_EventScriptSnipSomething
+	end
+
+Route128_EventScriptSnipSomething:
+    removeobject 9
+    return
 
 Route128_EventScript_15213F:: @ 815213F
 	lockall
@@ -218,4 +227,20 @@ Route128_EventScript_152337:: @ 8152337
 Route128_EventScript_15234E:: @ 815234E
 	trainerbattle 0, TRAINER_WAYNE, 0, Route128_Text_1C2090, Route128_Text_1C20FC
 	msgbox Route128_Text_1C210D, 6
+	end
+
+Route128_EventScript_Suicune::
+	lock
+	waitse
+	playmoncry SPECIES_SUICUNE, 2
+	delay 40
+	waitmoncry
+    setvar VAR_SPECIAL_4, 1
+	setwildbattle SPECIES_SUICUNE, 50, ITEM_NONE
+	setflag FLAG_HIDE_SUICUNE
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	special ScrSpecial_StartRegiBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	release
 	end

@@ -7,6 +7,7 @@ Route128_EventObjects:: @ 83850D0
 	object_event 6, EVENT_OBJ_GFX_FISHERMAN, 0, 63, 28, 3, MOVEMENT_TYPE_FACE_UP, 1, 1, 1, 0, Route128_EventScript_15234E, 0
 	object_event 7, EVENT_OBJ_GFX_MAN_4, 0, 24, 8, 3, MOVEMENT_TYPE_FACE_DOWN_AND_LEFT, 1, 1, 1, 2, Route128_EventScript_152337, 0
 	object_event 8, EVENT_OBJ_GFX_WOMAN_7, 0, 47, 9, 3, MOVEMENT_TYPE_FACE_RIGHT, 1, 1, 1, 3, Route128_EventScript_152320, 0
+	object_event 9, EVENT_OBJ_GFX_SUICUNE, 0, 94, 5, 3, MOVEMENT_TYPE_FACE_DOWN, 0, 0, 0, 0, Route128_EventScript_Suicune, FLAG_HIDE_SUICUNE
 
 Route128_MapBGEvents:: @ 8385190
 	bg_hidden_item_event 49, 9, 3, ITEM_HEART_SCALE, FLAG_HIDDEN_ITEM_5C

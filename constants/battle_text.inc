@@ -442,3 +442,4 @@
     enum BATTLE_TEXT_ToxicOrb
     enum BATTLE_TEXT_FlameOrb
     enum BATTLE_TEXT_AssaultVest
+    enum BATTLE_TEXT_AuraAquaRing

@@ -446,6 +446,7 @@ enum
     BATTLE_TEXT_ToxicOrb,
     BATTLE_TEXT_FlameOrb,
     BATTLE_TEXT_AssaultVest,
+    BATTLE_TEXT_AuraAquaRing,
 };
 
 const u8 BattleText_UnknownString[] = _("{STRING 33}");
@@ -1021,6 +1022,8 @@ const u8 BattleText_SpeedRisen2[] = _("{DEFENDING_MON}'s {STRING 22}\nraised its
 const u8 BattleText_ToxicOrb[] = _("{STRING 16} was badly poisoned\nby its {STRING 19}!");
 const u8 BattleText_FlameOrb[] = _("{STRING 16} was burned\nby its {STRING 19}!");
 const u8 BattleText_AssaultVest[] = _("{STRING 19} prevents the\nuse of status moves!\p");
+const u8 BattleText_AuraAquaRing[] = _("{STRING 3}'s aura flared to life!\nA veil of water surrounds it!\p");
+
 
 
 const u8 *const gUnknown_08400F58[] =
@@ -1489,6 +1492,7 @@ const u8 *const gBattleStringsTable[] =
     BattleText_ToxicOrb,
     BattleText_FlameOrb,
     BattleText_AssaultVest,
+    BattleText_AuraAquaRing,
 };
 
 // below are lists of battle string enums and NOT pointers to the strings.
