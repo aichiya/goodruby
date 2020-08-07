@@ -1,8 +1,8 @@
 LilycoveCity_Text_1679BF:: @ 81679BF
 	.string "MAY: Oh, hey?\n"
-	.string "{PLAYER}{KUN}, are you shopping, too?\p"
-	.string "I bought a whole bunch of DOLLS and\n"
-	.string "POSTERS.\p"
+	.string "{PLAYER}{KUN}, are you sightseeing, too?\p"
+    .string "I went exploring in the island cave\n"
+    .string "to the north.\p"
 	.string "Of course, I've also caught a lot of\n"
 	.string "POKéMON, and I'm raising them\l"
 	.string "properly, too.\p"
@@ -70,8 +70,9 @@ LilycoveCity_Text_167EAA:: @ 8167EAA
 
 LilycoveCity_Text_167F75:: @ 8167F75
 	.string "BRENDAN: Oh, hey, it's {PLAYER}.\p"
-	.string "I'm running an errand for my dad.\n"
-	.string "No, I'm not buying any DOLLS.\p"
+	.string "I'm running an errand for my dad.\p"
+	.string "No, I'm not sightseeing at the\n"
+    .string "Space Center.\p"
 	.string "Anyways, it's been a while.\p"
 	.string "Want to have a battle to see who's been\n"
 	.string "raising POKéMON better?$"

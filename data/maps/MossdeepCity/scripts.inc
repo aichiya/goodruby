@@ -8,6 +8,7 @@ MossdeepCity_MapScript1_14CF98:: @ 814CF98
 	clearflag FLAG_MOSSDEEP_GYM_SWITCH_3
 	clearflag FLAG_MOSSDEEP_GYM_SWITCH_4
 	call_if_set FLAG_SYS_WEATHER_CTRL, MossdeepCity_EventScript_1A02C1
+    call LilycoveCity_EventScript_1A014E
 	end
 
 MossdeepCity_EventScript_14CFAE:: @ 814CFAE

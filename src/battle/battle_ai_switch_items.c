@@ -705,32 +705,26 @@ void AI_TrySwitchOrUseItem(void)
 
 static void ModulateByTypeEffectiveness(u8 attackType, u8 defenseType1, u8 defenseType2, u8 *var)
 {
-    s32 i = 0;
-
-    while (TYPE_EFFECT_ATK_TYPE(i) != TYPE_ENDTABLE)
+    u8 eff;
+    
+    eff = gTypeEffectiveness[attackType * 20 + defenseType1];
+    if (eff == 1 || eff == 2)
+        eff = 0;
+    *var = (*var * eff) / 10;
+    
+    if (defenseType1 != defenseType2)
     {
-        if (TYPE_EFFECT_ATK_TYPE(i) == TYPE_FORESIGHT)
-        {
-            i += 3;
-            continue;
-        }
-        else if (TYPE_EFFECT_ATK_TYPE(i) == attackType)
-        {
-            // check type1
-            if (TYPE_EFFECT_DEF_TYPE(i) == defenseType1)
-                *var = (*var * TYPE_EFFECT_MULTIPLIER(i)) / 10;
-            // check type2
-            if (TYPE_EFFECT_DEF_TYPE(i) == defenseType2 && defenseType1 != defenseType2)
-                *var = (*var * TYPE_EFFECT_MULTIPLIER(i)) / 10;
-        }
-        i += 3;
+        eff = gTypeEffectiveness[attackType * 20 + defenseType1];
+        if (eff == 1 || eff == 2)
+            eff = 0;
+        *var = (*var * eff) / 10;
     }
 }
 
 u8 GetMostSuitableMonToSwitchInto(void)
 {
     u8 opposingBattler;
-    u8 bestDmg; // note : should be changed to s32
+    s32 bestDmg; // note : should be changed to s32
     u8 bestMonId;
     u8 battlerIn1, battlerIn2;
     s32 i, j;
@@ -761,7 +755,7 @@ u8 GetMostSuitableMonToSwitchInto(void)
 
     while (invalidMons != 0x3F) // all mons are invalid
     {
-        bestDmg = 0;
+        bestDmg = 255;
         bestMonId = 6;
         // find the mon which type is the most suitable offensively
         for (i = 0; i < 6; i++)
@@ -777,12 +771,18 @@ u8 GetMostSuitableMonToSwitchInto(void)
             {
                 u8 type1 = gBaseStats[species].type1;
                 u8 type2 = gBaseStats[species].type2;
-                u8 typeDmg = 10;
-                ModulateByTypeEffectiveness(gBattleMons[opposingBattler].type1, type1, type2, &typeDmg);
-                ModulateByTypeEffectiveness(gBattleMons[opposingBattler].type2, type1, type2, &typeDmg);
-                if (bestDmg < typeDmg)
+                u8 typeDmg1 = 10;
+                u8 typeDmg2 = 10;
+                ModulateByTypeEffectiveness(gBattleMons[opposingBattler].type1, type1, type2, &typeDmg1);
+                ModulateByTypeEffectiveness(gBattleMons[opposingBattler].type2, type1, type2, &typeDmg2);
+                if (typeDmg2 >= typeDmg1)
+                    typeDmg2 *= 2;
+                if (typeDmg1 > typeDmg2)
+                    typeDmg1 *= 2;
+                typeDmg1 += typeDmg2;
+                if (bestDmg > typeDmg1)
                 {
-                    bestDmg = typeDmg;
+                    bestDmg = typeDmg1;
                     bestMonId = i;
                 }
             }
@@ -798,7 +798,7 @@ u8 GetMostSuitableMonToSwitchInto(void)
             for (i = 0; i < 4; i++)
             {
                 move = GetMonData(&gEnemyParty[bestMonId], MON_DATA_MOVE1 + i);
-                if (move != MOVE_NONE && TypeCalc(move, gActiveBattler, opposingBattler) & MOVE_RESULT_SUPER_EFFECTIVE)
+                if (move != MOVE_NONE && TypeCalc(move, gActiveBattler, opposingBattler) & MOVE_RESULT_SUPER_EFFECTIVE && gBattleMoves[move].power != 0)
                     break;
             }
 

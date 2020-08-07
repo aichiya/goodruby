@@ -8,6 +8,7 @@ MossdeepCity_EventObjects:: @ 838042C
 	object_event 7, EVENT_OBJ_GFX_MAN_1, 0, 53, 5, 7, MOVEMENT_TYPE_FACE_UP, 0, 0, 0, 0, MossdeepCity_EventScript_14D011, 0
 	object_event 8, EVENT_OBJ_GFX_GIRL_1, 0, 56, 21, 7, MOVEMENT_TYPE_FACE_RIGHT, 1, 1, 0, 0, MossdeepCity_EventScript_14CFDB, 0
 	object_event 9, EVENT_OBJ_GFX_BOY_2, 0, 23, 13, 5, MOVEMENT_TYPE_WANDER_AROUND, 1, 1, 0, 0, MossdeepCity_EventScript_14D027, 0
+    object_event 10, EVENT_OBJ_GFX_VAR_0, 0, 38, 10, 5, MOVEMENT_TYPE_FACE_DOWN, 1, 1, 0, 0, LilycoveCity_EventScript_14CD46, FLAG_MET_RIVAL_LILYCOVE
 
 MossdeepCity_MapWarps:: @ 8380504
 	warp_def 28, 9, 0, 0, MAP_MOSSDEEP_CITY_HOUSE1

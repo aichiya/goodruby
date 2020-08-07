@@ -10731,7 +10731,7 @@ const struct TrainerMonFullControl gTrainerParty_Rival3Swampert[] = {
 	.heldItem = 0,
 	.ability = 0, // Torrent
 	.moves = {MOVE_SURF, MOVE_BULLDOZE, MOVE_ICE_PUNCH, MOVE_STEALTH_ROCK},
-		.evs = {252, 124, 0, 124, 0, 0},
+		.evs = {252, 124, 0, 0, 124, 0},
 		.nature = NATURE_RELAXED,
 		.gender = MON_MALE,
 		.ball = ITEM_POKE_BALL,
@@ -10806,7 +10806,232 @@ const struct TrainerMonFullControl gTrainerParty_Rival3Sceptile[] = {
 	.heldItem = 0,
 	.ability = 0, // Overgrow
 	.moves = {MOVE_LEAF_BLADE, MOVE_ROCK_TOMB, MOVE_CRUNCH, MOVE_DRAIN_PUNCH},
-		.evs = {0, 0, 0, 0, 124, 0},
+		.evs = {124, 124, 0, 124, 124, 0},
+		.nature = NATURE_NAIVE,
+		.gender = MON_MALE,
+		.ball = ITEM_POKE_BALL,
+    },
+};
+
+const struct TrainerMonFullControl gTrainerParty_Rival4Blaziken[] = {
+    {
+	.iv = 4,
+	.level = 46,
+	.species = SPECIES_FLYGON,
+	.heldItem = 0,
+	.ability = 0, // Levitate
+	.moves = {MOVE_EARTHQUAKE, MOVE_DRAGON_CLAW, MOVE_ROCK_TOMB, MOVE_U_TURN},
+		.evs = {252, 128, 64, 0, 0, 64},
+		.nature = NATURE_ADAMANT,
+		.gender = MON_MALE,
+		.ball = ITEM_GREAT_BALL,
+    },
+    {
+	.iv = 4,
+	.level = 46,
+	.species = SPECIES_ESPEON,
+	.heldItem = 0,
+	.ability = 2, // Magic Bounce
+	.moves = {MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_SIGNAL_BEAM, MOVE_YAWN},
+		.evs = {0, 0, 0, 252, 252, 0},
+		.nature = NATURE_MODEST,
+		.gender = MON_MALE,
+		.ball = ITEM_POKE_BALL,
+    },
+    {
+	.iv = 4,
+	.level = 47,
+	.species = SPECIES_ROSERADE,
+	.heldItem = ITEM_BLACK_SLUDGE,
+	.ability = 1, // Poison Point
+	.moves = {MOVE_GIGA_DRAIN, MOVE_LEECH_SEED, MOVE_TOXIC_SPIKES, MOVE_SLUDGE_BOMB},
+		.evs = {124, 0, 0, 124, 124, 124},
+		.nature = NATURE_CALM,
+		.gender = MON_FEMALE,
+		.ball = ITEM_GREAT_BALL,
+    },
+    {
+	.iv = 4,
+	.level = 47,
+	.species = SPECIES_AZUMARILL,
+	.heldItem = ITEM_ASSAULT_VEST,
+	.ability = 1, // Huge Power
+	.moves = {MOVE_AQUA_TAIL, MOVE_PLAY_ROUGH, MOVE_DOUBLE_EDGE, MOVE_AQUA_JET},
+		.evs = {0, 252, 124, 0, 124, 0},
+		.nature = NATURE_SASSY,
+		.gender = MON_FEMALE,
+		.ball = ITEM_GREAT_BALL,
+    },
+    {
+	.iv = 4,
+	.level = 46,
+	.species = SPECIES_LINOONE,
+	.heldItem = ITEM_FIGY_BERRY,
+	.ability = 1, // Gluttony
+	.moves = {MOVE_BELLY_DRUM, MOVE_EXTREME_SPEED, MOVE_SHADOW_CLAW, MOVE_PLAY_ROUGH},
+		.evs = {4, 252, 0, 252, 0, 0},
+		.nature = NATURE_ADAMANT,
+		.gender = MON_FEMALE,
+		.ball = ITEM_POKE_BALL,
+    },
+    {
+	.iv = 4,
+	.level = 48,
+	.species = SPECIES_BLAZIKEN,
+	.heldItem = ITEM_SALAC_BERRY,
+	.ability = 0, // Blaze
+	.moves = {MOVE_FIRE_BLAST, MOVE_SKY_UPPERCUT, MOVE_ROCK_SLIDE, MOVE_THUNDER_PUNCH},
+		.evs = {0, 124, 0, 252, 124, 0},
+		.nature = NATURE_NAUGHTY,
+		.gender = MON_MALE,
+		.ball = ITEM_POKE_BALL,
+    },
+};
+
+const struct TrainerMonFullControl gTrainerParty_Rival4Swampert[] = {
+    {
+	.iv = 4,
+	.level = 46,
+	.species = SPECIES_FLYGON,
+	.heldItem = 0,
+	.ability = 0, // Levitate
+	.moves = {MOVE_EARTHQUAKE, MOVE_DRAGON_CLAW, MOVE_ROCK_TOMB, MOVE_U_TURN},
+		.evs = {252, 128, 64, 0, 0, 64},
+		.nature = NATURE_ADAMANT,
+		.gender = MON_MALE,
+		.ball = ITEM_GREAT_BALL,
+    },
+    {
+	.iv = 4,
+	.level = 46,
+	.species = SPECIES_ESPEON,
+	.heldItem = 0,
+	.ability = 2, // Magic Bounce
+	.moves = {MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_SIGNAL_BEAM, MOVE_YAWN},
+		.evs = {0, 0, 0, 252, 252, 0},
+		.nature = NATURE_MODEST,
+		.gender = MON_MALE,
+		.ball = ITEM_POKE_BALL,
+    },
+    {
+	.iv = 4,
+	.level = 47,
+	.species = SPECIES_ROSERADE,
+	.heldItem = ITEM_BLACK_SLUDGE,
+	.ability = 1, // Poison Point
+	.moves = {MOVE_GIGA_DRAIN, MOVE_LEECH_SEED, MOVE_TOXIC_SPIKES, MOVE_SLUDGE_BOMB},
+		.evs = {124, 0, 0, 124, 124, 124},
+		.nature = NATURE_CALM,
+		.gender = MON_FEMALE,
+		.ball = ITEM_GREAT_BALL,
+    },
+    {
+	.iv = 4,
+	.level = 47,
+	.species = SPECIES_RAPIDASH,
+	.heldItem = ITEM_CHARCOAL,
+	.ability = 1, // Flash Fire
+	.moves = {MOVE_FLARE_BLITZ, MOVE_MEGAHORN, MOVE_POISON_JAB, MOVE_WILL_O_WISP},
+		.evs = {0, 252, 124, 0, 124, 0},
+		.nature = NATURE_JOLLY,
+		.gender = MON_FEMALE,
+		.ball = ITEM_GREAT_BALL,
+    },
+    {
+	.iv = 4,
+	.level = 46,
+	.species = SPECIES_LINOONE,
+	.heldItem = ITEM_FIGY_BERRY,
+	.ability = 1, // Gluttony
+	.moves = {MOVE_BELLY_DRUM, MOVE_EXTREME_SPEED, MOVE_SHADOW_CLAW, MOVE_PLAY_ROUGH},
+		.evs = {4, 252, 0, 252, 0, 0},
+		.nature = NATURE_ADAMANT,
+		.gender = MON_FEMALE,
+		.ball = ITEM_POKE_BALL,
+    },
+    {
+	.iv = 4,
+	.level = 48,
+	.species = SPECIES_SWAMPERT,
+	.heldItem = ITEM_RINDO_BERRY,
+	.ability = 0, // Torrent
+	.moves = {MOVE_SURF, MOVE_BULLDOZE, MOVE_ICE_PUNCH, MOVE_ROCK_TOMB},
+		.evs = {252, 124, 0, 0, 124, 0},
+		.nature = NATURE_RELAXED,
+		.gender = MON_MALE,
+		.ball = ITEM_POKE_BALL,
+    },
+};
+
+const struct TrainerMonFullControl gTrainerParty_Rival4Sceptile[] = {
+    {
+	.iv = 4,
+	.level = 46,
+	.species = SPECIES_FLYGON,
+	.heldItem = 0,
+	.ability = 0, // Levitate
+	.moves = {MOVE_EARTHQUAKE, MOVE_DRAGON_CLAW, MOVE_ROCK_TOMB, MOVE_U_TURN},
+		.evs = {252, 128, 64, 0, 0, 64},
+		.nature = NATURE_ADAMANT,
+		.gender = MON_MALE,
+		.ball = ITEM_GREAT_BALL,
+    },
+    {
+	.iv = 4,
+	.level = 46,
+	.species = SPECIES_ESPEON,
+	.heldItem = 0,
+	.ability = 2, // Magic Bounce
+	.moves = {MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_SIGNAL_BEAM, MOVE_YAWN},
+		.evs = {0, 0, 0, 252, 252, 0},
+		.nature = NATURE_MODEST,
+		.gender = MON_MALE,
+		.ball = ITEM_POKE_BALL,
+    },
+    {
+	.iv = 4,
+	.level = 47,
+	.species = SPECIES_ROSERADE,
+	.heldItem = ITEM_BLACK_SLUDGE,
+	.ability = 1, // Poison Point
+	.moves = {MOVE_GIGA_DRAIN, MOVE_LEECH_SEED, MOVE_TOXIC_SPIKES, MOVE_SLUDGE_BOMB},
+		.evs = {124, 0, 0, 124, 124, 124},
+		.nature = NATURE_CALM,
+		.gender = MON_FEMALE,
+		.ball = ITEM_GREAT_BALL,
+    },
+    {
+	.iv = 4,
+	.level = 47,
+	.species = SPECIES_AZUMARILL,
+	.heldItem = ITEM_ASSAULT_VEST,
+	.ability = 1, // Huge Power
+	.moves = {MOVE_AQUA_TAIL, MOVE_PLAY_ROUGH, MOVE_DOUBLE_EDGE, MOVE_AQUA_JET},
+		.evs = {0, 252, 124, 0, 124, 0},
+		.nature = NATURE_SASSY,
+		.gender = MON_FEMALE,
+		.ball = ITEM_GREAT_BALL,
+    },
+    {
+	.iv = 4,
+	.level = 46,
+	.species = SPECIES_LINOONE,
+	.heldItem = ITEM_FIGY_BERRY,
+	.ability = 1, // Gluttony
+	.moves = {MOVE_BELLY_DRUM, MOVE_EXTREME_SPEED, MOVE_SHADOW_CLAW, MOVE_PLAY_ROUGH},
+		.evs = {4, 252, 0, 252, 0, 0},
+		.nature = NATURE_ADAMANT,
+		.gender = MON_FEMALE,
+		.ball = ITEM_POKE_BALL,
+    },
+    {
+	.iv = 0,
+	.level = 48,
+	.species = SPECIES_SCEPTILE,
+	.heldItem = ITEM_PETAYA_BERRY,
+	.ability = 0, // Overgrow
+	.moves = {MOVE_ENERGY_BALL, MOVE_X_SCISSOR, MOVE_SUBSTITUTE, MOVE_LEECH_SEED},
+		.evs = {124, 124, 0, 124, 124, 0},
 		.nature = NATURE_NAIVE,
 		.gender = MON_MALE,
 		.ball = ITEM_POKE_BALL,
