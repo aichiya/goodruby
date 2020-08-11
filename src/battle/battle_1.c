@@ -72,6 +72,7 @@ const u8 gEnemyMonElevation[] = {
     [SPECIES_MISDREAVUS] = 8,
     [SPECIES_UNOWN] = 8,
     [SPECIES_GLIGAR] = 6,
+    [SPECIES_MANTINE] = 6,
     [SPECIES_LUGIA] = 6,
     [SPECIES_HO_OH] = 6,
     [SPECIES_CELEBI] = 15,

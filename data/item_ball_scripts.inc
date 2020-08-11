@@ -605,8 +605,11 @@ NewMauville_Inside_B2F_EventScript_Item4::
 NewMauville_Inside_B2F_EventScript_Item5::
 	giveitem_std ITEM_SCOPE_LENS, 1, 1
 	end
-	end
 
 NewMauville_Inside_B3F_EventScript_Item::
 	giveitem_std ITEM_TM25_THUNDER, 1, 1
+	end
+
+NamelessCavern_EventScript_Item::
+	giveitem_std ITEM_TM03_PSYSHOCK, 1, 1
 	end

@@ -1372,6 +1372,23 @@ const struct WildPokemon Route123_LandMons [] =
 };
 const struct WildPokemonInfo Route123_LandMonsInfo = {20, Route123_LandMons};
 
+const struct WildPokemon Route124_LandMons [] =
+{
+    {34, 37, SPECIES_SEALEO},
+    {34, 37, SPECIES_XATU},
+    {34, 37, SPECIES_VENOMOTH},
+    {34, 37, SPECIES_EXEGGCUTE},
+    {34, 37, SPECIES_TANGELA},
+    {34, 37, SPECIES_MANTINE},
+    {34, 37, SPECIES_VENOMOTH},
+    {34, 37, SPECIES_EXEGGCUTE},
+    {34, 37, SPECIES_TANGELA},
+    {34, 37, SPECIES_MUNCHLAX},
+    {34, 37, SPECIES_TANGELA},
+    {34, 37, SPECIES_MUNCHLAX},
+};
+const struct WildPokemonInfo Route124_LandMonsInfo = {20, Route124_LandMons};
+
 const struct WildPokemon Route130_LandMons [] =
 {
     {30, 30, SPECIES_WYNAUT},
@@ -2217,7 +2234,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
     {
         .mapGroup = MAP_GROUP(ROUTE124),
         .mapNum = MAP_NUM(ROUTE124),
-        .landMonsInfo = NULL,
+        .landMonsInfo = &Route124_LandMonsInfo,
         .waterMonsInfo = NULL, //&Route124_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &LilycoveSeaRegion_FishingMonsInfo,

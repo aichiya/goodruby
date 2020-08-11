@@ -54,6 +54,7 @@ LilycoveCity_DepartmentStore_4F_Items2:: @ 815A054
 	.2byte ITEM_TM20_SAFEGUARD
 	.2byte ITEM_TM33_REFLECT
 	.2byte ITEM_TM16_LIGHT_SCREEN
+	.2byte ITEM_TM06_TOXIC
 	.2byte ITEM_NONE
 	release
 	end

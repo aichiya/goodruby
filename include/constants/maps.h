@@ -376,6 +376,7 @@
 #define MAP_FIERY_PATH_B2F                        (91 | (24 << 8))
 #define MAP_NEW_MAUVILLE_INSIDE_B2F               (92 | (24 << 8))
 #define MAP_NEW_MAUVILLE_INSIDE_B3F               (93 | (24 << 8))
+#define MAP_NAMELESS_CAVERN                       (94 | (24 << 8))
 
 // Map Group 25
 #define MAP_SECRET_BASE_RED_CAVE1    (0 | (25 << 8))

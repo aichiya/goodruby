@@ -6185,7 +6185,7 @@ const struct Item gItems[] =
     {
         .name = _("TM06"),
         .itemId = ITEM_TM06_TOXIC,
-        .price = 0,
+        .price = 50,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM06,
@@ -6198,6 +6198,7 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
 		.flingPower = 0,
+        .expensive = 1,
     },
     {
         .name = _("TM07"),

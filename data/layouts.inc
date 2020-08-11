@@ -340,3 +340,4 @@
     .include "data/layouts/FieryPath_B2F/layout.inc"
 	.include "data/layouts/NewMauville_Inside_B2F/layout.inc"
 	.include "data/layouts/NewMauville_Inside_B3F/layout.inc"
+    .include "data/layouts/NamelessCavern/layout.inc"

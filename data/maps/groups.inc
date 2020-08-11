@@ -398,6 +398,7 @@ gMapGroup24:: @ 83082F8
     .4byte FieryPath_B2F
     .4byte NewMauville_Inside_B2F
     .4byte NewMauville_Inside_B3F
+    .4byte NamelessCavern
 
 	.align 2
 gMapGroup25:: @ 8308450

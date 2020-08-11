@@ -153,6 +153,7 @@ const struct RegionMapLocation gRegionMapLocations[] =
     { 1,  3, 1, 2, gMapName_GnarledRidge},
     { 4,  7, 1, 1, gMapName_Route135},
     { 0,  8, 1, 1, gMapName_TracklessForest},
+    {22,  6, 1, 1, gMapName_NamelessCavern},
     { 0,  0, 1, 1, gMapName_None},
 };
 

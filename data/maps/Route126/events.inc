@@ -5,5 +5,9 @@ Route126_EventObjects:: @ 8384F1C
 	object_event 4, EVENT_OBJ_GFX_SWIMMER_F, 0, 64, 44, 1, MOVEMENT_TYPE_ROTATE_CLOCKWISE, 0, 0, 1, 3, Route126_EventScript_152053, 0
 	object_event 5, EVENT_OBJ_GFX_ITEM_BALL, 0, 14, 1, 3, MOVEMENT_TYPE_LOOK_AROUND, 1, 1, 0, 0, Route126_EventScript_1B16B6, FLAG_ITEM_ROUTE126_1
 
+Route126_MapWarps:
+	warp_def 76, 13, 0, 0, MAP_NAMELESS_CAVERN
+    
+
 Route126_MapEvents:: @ 8384F94
-	map_events Route126_EventObjects, 0x0, 0x0, 0x0
+	map_events Route126_EventObjects, Route126_MapWarps, 0x0, 0x0

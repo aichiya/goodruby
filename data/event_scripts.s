@@ -406,6 +406,7 @@ gStdScripts_End::
 	.include "data/maps/FieryPath_B2F/scripts.inc"
 	.include "data/maps/NewMauville_Inside_B2F/scripts.inc"
 	.include "data/maps/NewMauville_Inside_B3F/scripts.inc"
+	.include "data/maps/NamelessCavern/scripts.inc"
 
 gUnknown_0815F36C:: @ 815F36C
 	lockall

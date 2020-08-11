@@ -402,3 +402,4 @@
     .include "data/maps/FieryPath_B2F/header.inc"
     .include "data/maps/NewMauville_Inside_B2F/header.inc"
     .include "data/maps/NewMauville_Inside_B3F/header.inc"
+    .include "data/maps/NamelessCavern/header.inc"
