@@ -311,55 +311,19 @@ SlateportCity_Harbor_EventScript_15629D:: @ 815629D
 	end
 
 SlateportCity_Harbor_EventScript_1562A7:: @ 81562A7
-	message SlateportCity_Harbor_Text_18028B
-	waitmessage
-	goto SlateportCity_Harbor_EventScript_1562B3
-	end
-
-SlateportCity_Harbor_EventScript_1562B3:: @ 81562B3
-	multichoice 0, 0, 46, 0
-	switch RESULT
-	case 0, SlateportCity_Harbor_EventScript_1562EA
-	case 1, SlateportCity_Harbor_EventScript_15632A
-	case 2, SlateportCity_Harbor_EventScript_15636A
-	case 127, SlateportCity_Harbor_EventScript_15636A
-	end
-
-SlateportCity_Harbor_EventScript_1562EA:: @ 81562EA
-	msgbox SlateportCity_Harbor_Text_1803DD, MSGBOX_YESNO
+	msgbox SlateportCity_Harbor_Text_18028B, MSGBOX_YESNO
 	compare RESULT, NO
-	goto_if_eq SlateportCity_Harbor_EventScript_156374
-	giveitem_std ITEM_DEEP_SEA_TOOTH
-	compare RESULT, 0
-	goto_if_eq SlateportCity_Harbor_EventScript_1A029B
+	goto_if_eq SlateportCity_Harbor_EventScript_15636A
 	takeitem ITEM_SCANNER, 1
 	msgbox SlateportCity_Harbor_Text_18046B, 4
-	setflag FLAG_EXCHANGED_SCANNER
-	goto SlateportCity_Harbor_EventScript_156380
-	end
-
-SlateportCity_Harbor_EventScript_15632A:: @ 815632A
-	msgbox SlateportCity_Harbor_Text_180412, MSGBOX_YESNO
-	compare RESULT, NO
-	goto_if_eq SlateportCity_Harbor_EventScript_156374
-	giveitem_std ITEM_DEEP_SEA_SCALE
-	compare RESULT, 0
-	goto_if_eq SlateportCity_Harbor_EventScript_1A029B
-	takeitem ITEM_SCANNER, 1
-	msgbox SlateportCity_Harbor_Text_18046B, 4
-	setflag FLAG_EXCHANGED_SCANNER
-	goto SlateportCity_Harbor_EventScript_156380
+	giveitem_std ITEM_GS_BALL
+    setflag FLAG_EXCHANGED_SCANNER
+    goto SlateportCity_Harbor_EventScript_156380
 	end
 
 SlateportCity_Harbor_EventScript_15636A:: @ 815636A
 	msgbox SlateportCity_Harbor_Text_180360, 4
 	release
-	end
-
-SlateportCity_Harbor_EventScript_156374:: @ 8156374
-	message SlateportCity_Harbor_Text_180447
-	waitmessage
-	goto SlateportCity_Harbor_EventScript_1562B3
 	end
 
 SlateportCity_Harbor_EventScript_156380:: @ 8156380

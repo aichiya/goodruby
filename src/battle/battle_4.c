@@ -271,6 +271,7 @@ extern u8 BattleScript_SnatchedMove[];
 extern u8 BattleScript_Pausex20[];
 extern u8 BattleScript_SubstituteFade[];
 extern u8 BattleScript_HangedOnMsg[];
+extern u8 BattleScript_HangedOnMsgDestroyItem[];
 extern u8 BattleScript_OneHitKOMsg[];
 extern u8 BattleScript_EnduredMsg[];
 extern u8 BattleScript_SturdyMsg[];
@@ -2677,6 +2678,12 @@ static void atk07_adjustnormaldamage(void)
 			gBattleMoveDamage = gBattleMons[gBankTarget].hp - 1;
 			gMoveResultFlags |= MOVE_RESULT_STURDY;
 		}
+        else if (hold_effect == HOLD_EFFECT_FOCUS_SASH && gBattleMons[gBankTarget].hp == gBattleMons[gBankTarget].maxHP)
+        {
+			gBattleMoveDamage = gBattleMons[gBankTarget].hp - 1;
+			gMoveResultFlags |= MOVE_RESULT_FOE_HUNG_ON;
+			gLastUsedItem = gBattleMons[gBankTarget].item;
+        }
 		else if (gSpecialStatuses[gBankTarget].focusBanded)
 		{
 			gBattleMoveDamage = gBattleMons[gBankTarget].hp - 1;
@@ -3066,7 +3073,10 @@ static void atk0F_resultmessage(void)
             gStringBank = gBankTarget;
             gMoveResultFlags &= ~(MOVE_RESULT_FOE_ENDURED | MOVE_RESULT_FOE_HUNG_ON);
             BattleScriptPushCursor();
-            gBattlescriptCurrInstr = BattleScript_HangedOnMsg;
+            if (ItemId_GetHoldEffect(gLastUsedItem) == HOLD_EFFECT_FOCUS_SASH)
+                gBattlescriptCurrInstr = BattleScript_HangedOnMsgDestroyItem;
+            else
+                gBattlescriptCurrInstr = BattleScript_HangedOnMsg;
             return;
         default:
             if (gMoveResultFlags & MOVE_RESULT_DOESNT_AFFECT_FOE)

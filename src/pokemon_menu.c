@@ -110,7 +110,6 @@ static void PokemonMenu_FieldMove(u8 taskID);
 static bool8 SetUpFieldMove_Waterfall(void);
 static bool8 SetUpFieldMove_Surf(void);
 static bool8 SetUpFieldMove_Fly(void);
-static bool8 SetUpFieldMove_Dive(void);
 
 // ewram data
 
@@ -142,7 +141,6 @@ static const struct MenuAction2 sPokemonMenuActions[] =
     {gMoveNames[MOVE_STRENGTH],     PokemonMenu_FieldMove},
     {gMoveNames[MOVE_SURF],         PokemonMenu_FieldMove},
     {gMoveNames[MOVE_FLY],          PokemonMenu_FieldMove},
-    {gMoveNames[MOVE_DIVE],         PokemonMenu_FieldMove},
     {gMoveNames[MOVE_WATERFALL],    PokemonMenu_FieldMove},
     {gMoveNames[MOVE_TELEPORT],     PokemonMenu_FieldMove},
     {gMoveNames[MOVE_DIG],          PokemonMenu_FieldMove},
@@ -155,7 +153,7 @@ static const struct MenuAction2 sPokemonMenuActions[] =
 static const u16 sPokeMenuFieldMoves[] =
 {
     MOVE_CUT, MOVE_FLASH, MOVE_ROCK_SMASH, MOVE_STRENGTH,
-    MOVE_SURF, MOVE_FLY, MOVE_DIVE, MOVE_WATERFALL,
+    MOVE_SURF, MOVE_FLY, MOVE_WATERFALL,
     MOVE_TELEPORT, MOVE_DIG, MOVE_SECRET_POWER, MOVE_MILK_DRINK,
     MOVE_SOFT_BOILED, MOVE_SWEET_SCENT, sFieldMovesTerminator,
 };
@@ -174,7 +172,6 @@ static const struct PokeMenuFieldMoveFunc sFieldMoveFuncs[] =
     {SetUpFieldMove_Strength,       0x9},
     {SetUpFieldMove_Surf,           0x7},
     {SetUpFieldMove_Fly,            0x9},
-    {SetUpFieldMove_Dive,           0x9},
     {SetUpFieldMove_Waterfall,      0x9},
     {SetUpFieldMove_Teleport,       0x9},
     {SetUpFieldMove_Dig,            0x9},
@@ -874,25 +871,6 @@ void sub_808AD58(void)
 u16 unref_sub_808AD88(void)
 {
     return GetMonData(&gPlayerParty[gLastFieldPokeMenuOpened], MON_DATA_SPECIES);
-}
-
-static void sub_808ADAC(void)
-{
-    gFieldEffectArguments[0] = gLastFieldPokeMenuOpened;
-    FieldEffectStart(FLDEFF_USE_DIVE);
-}
-
-static bool8 SetUpFieldMove_Dive(void)
-{
-    gFieldEffectArguments[1] = TrySetDiveWarp();
-    if (gFieldEffectArguments[1])
-    {
-        gFieldCallback = FieldCallback_PrepareFadeInFromMenu;
-        gPostMenuFieldCallback = sub_808ADAC;
-        return TRUE;
-    }
-    else
-        return FALSE;
 }
 
 static void sub_808AE08(void)

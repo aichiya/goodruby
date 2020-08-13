@@ -68,6 +68,7 @@
 	.include "data/maps/Underwater2/events.inc"
 	.include "data/maps/Underwater3/events.inc"
 	.include "data/maps/Underwater4/events.inc"
+	.include "data/maps/Underwater5/events.inc"
 	.include "data/maps/LittlerootTown_BrendansHouse_1F/events.inc"
 	.include "data/maps/LittlerootTown_BrendansHouse_2F/events.inc"
 	.include "data/maps/LittlerootTown_MaysHouse_1F/events.inc"

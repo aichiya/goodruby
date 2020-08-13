@@ -27,6 +27,7 @@ u16 GetNationalPokedexCount(u8);
 u16 GetHoennPokedexCount(u8);
 bool8 CompletedHoennPokedex(void);
 bool16 CompletedNationalPokedex(void);
+u16 CountLegendariesSeen();
 
 extern bool8 gUnknown_03005CE8;
 

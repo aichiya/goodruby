@@ -11,4 +11,4 @@ UnreferencedMap_Layout:: @ 82BF1E4
 	.4byte UnreferencedMap_MapBorder
 	.4byte UnreferencedMap_MapBlockdata
 	.4byte gTileset_General
-	.4byte gTileset_Cave
+	.4byte gTileset_Pacifidlog

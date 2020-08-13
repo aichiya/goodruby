@@ -53,6 +53,7 @@
 	.include "data/maps/Underwater2/connections.inc"
 	.include "data/maps/Underwater3/connections.inc"
 	.include "data/maps/Underwater4/connections.inc"
+	.include "data/maps/Underwater5/connections.inc"
 	.include "data/maps/SafariZone_Northwest/connections.inc"
 	.include "data/maps/SafariZone_Northeast/connections.inc"
 	.include "data/maps/SafariZone_Southwest/connections.inc"

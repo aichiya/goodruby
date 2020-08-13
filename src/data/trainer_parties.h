@@ -3291,39 +3291,34 @@ const struct TrainerMonNoItemCustomMoves gTrainerParty_Edward[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Preston[] = {
     {
 	.iv = 100,
-	.level = 37,
+	.level = 46,
 	.species = SPECIES_KIRLIA
-    }
+    },
+    {
+	.iv = 100,
+	.level = 46,
+	.species = SPECIES_SNORUNT
+    },
 };
 
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Virgil[] = {
     {
 	.iv = 100,
-	.level = 36,
-	.species = SPECIES_RALTS
+	.level = 46,
+	.species = SPECIES_DUSCLOPS
     },
     {
 	.iv = 100,
-	.level = 36,
-	.species = SPECIES_KADABRA
+	.level = 46,
+	.species = SPECIES_MR_MIME
     }
 };
 
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Fritz[] = {
     {
 	.iv = 100,
-	.level = 35,
-	.species = SPECIES_NATU
-    },
-    {
-	.iv = 100,
-	.level = 35,
-	.species = SPECIES_GIRAFARIG
-    },
-    {
-	.iv = 100,
-	.level = 35,
-	.species = SPECIES_KADABRA
+	.level = 46,
+	.species = SPECIES_MEDICHAM
     }
 };
 
@@ -3430,20 +3425,20 @@ const struct TrainerMonNoItemCustomMoves gTrainerParty_Jaclyn[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Hannah[] = {
     {
 	.iv = 100,
-	.level = 36,
-	.species = SPECIES_RALTS
+	.level = 46,
+	.species = SPECIES_EXEGGUTOR
     },
     {
 	.iv = 100,
-	.level = 36,
-	.species = SPECIES_KIRLIA
+	.level = 46,
+	.species = SPECIES_GIRAFARIG
     }
 };
 
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Samantha[] = {
     {
 	.iv = 100,
-	.level = 37,
+	.level = 46,
 	.species = SPECIES_XATU
     }
 };
@@ -3451,14 +3446,19 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Samantha[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Maura[] = {
     {
 	.iv = 100,
-	.level = 36,
+	.level = 46,
 	.species = SPECIES_KADABRA
     },
     {
 	.iv = 100,
-	.level = 36,
-	.species = SPECIES_KIRLIA
-    }
+	.level = 46,
+	.species = SPECIES_METANG
+    },
+    {
+	.iv = 100,
+	.level = 46,
+	.species = SPECIES_WOBBUFFET
+    },
 };
 
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Kayla[] = {
@@ -4092,21 +4092,67 @@ const struct TrainerMonFullControl gTrainerParty_Winona[] = {
     },
 };
 
-const struct TrainerMonItemCustomMoves gTrainerParty_TateAndLiza[] = {
+const struct TrainerMonFullControl gTrainerParty_TateAndLiza[] = {
     {
-	.iv = 250,
-	.level = 42,
+	.iv = 8,
+	.level = 47,
 	.species = SPECIES_LUNATONE,
-        .heldItem = ITEM_NONE,
-        .moves = MOVE_LIGHT_SCREEN, MOVE_PSYCHIC, MOVE_HYPNOSIS, MOVE_CALM_MIND
+	.heldItem = 0,
+	.ability = 0, // Levitate
+	.moves = {MOVE_PSYCHIC, MOVE_ICE_BEAM, MOVE_EARTH_POWER, MOVE_STEALTH_ROCK},
+		.evs = {0, 0, 0, 128, 252, 128},
+		.nature = NATURE_MODEST,
+		.gender = MON_GENDERLESS,
+		.ball = ITEM_ULTRA_BALL,
     },
     {
-	.iv = 250,
-	.level = 42,
-	.species = SPECIES_SOLROCK,
-        .heldItem = ITEM_NONE,
-        .moves = MOVE_SUNNY_DAY, MOVE_SOLAR_BEAM, MOVE_PSYCHIC, MOVE_FLAMETHROWER
-    }
+	.iv = 8,
+	.level = 48,
+	.species = SPECIES_SLOWBRO,
+	.heldItem = ITEM_ASSAULT_VEST,
+	.ability = 1, // Own Tempo
+	.moves = {MOVE_SURF, MOVE_PSYSHOCK, MOVE_GRASS_KNOT, MOVE_ICE_BEAM},
+		.evs = {124, 0, 128, 0, 252, 0},
+		.nature = NATURE_QUIET,
+		.gender = MON_FEMALE,
+		.ball = ITEM_NET_BALL,
+    },
+    {
+	.iv = 8,
+	.level = 48,
+	.species = SPECIES_XATU,
+	.heldItem = ITEM_COLBUR_BERRY,
+	.ability = 2, // Magic Bounce
+	.moves = {MOVE_PSYCHIC, MOVE_HEAT_WAVE, MOVE_CALM_MIND, MOVE_ROOST},
+		.evs = {128, 0, 128, 252, 0, 0},
+		.nature = NATURE_TIMID,
+		.gender = MON_FEMALE,
+		.ball = ITEM_GREAT_BALL,
+    },
+    {
+	.iv = 8,
+	.level = 48,
+	.species = SPECIES_ABSOL,
+	.heldItem = ITEM_TANGA_BERRY,
+	.ability = 0, // Pressure
+	.moves = {MOVE_KNOCK_OFF, MOVE_MEGAHORN, MOVE_PLAY_ROUGH, MOVE_SWORDS_DANCE},
+		.evs = {0, 252, 0, 252, 0, 0},
+		.nature = NATURE_ADAMANT,
+		.gender = MON_FEMALE,
+		.ball = ITEM_QUICK_BALL,
+    },
+    {
+	.iv = 8,
+	.level = 50,
+	.species = SPECIES_ALAKAZAM,
+	.heldItem = ITEM_FOCUS_SASH,
+	.ability = 2, // Magic Guard
+	.moves = {MOVE_PSYCHIC, MOVE_MAGIC_GLEAM, MOVE_ENERGY_BALL, MOVE_SHADOW_BALL},
+		.evs = {0, 0, 0, 252, 0, 252},
+		.nature = NATURE_MODEST,
+		.gender = MON_MALE,
+		.ball = ITEM_PREMIER_BALL,
+    },
 };
 
 const struct TrainerMonNoItemCustomMoves gTrainerParty_Wallace[] = {

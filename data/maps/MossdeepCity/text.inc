@@ -82,3 +82,18 @@ MossdeepCity_Text_16962F:: @ 816962F
 MossdeepCity_Text_16965C:: @ 816965C
 	.string "MOSSDEEP SPACE CENTER\n"
 	.string "“The closest place to space.”$"
+
+MossdeepCity_Text_AquaGruntMeet::
+    .string "Hey, you!\n"
+    .string "{PLAYER}, right?\p"
+    .string "I got something for you, courtesy\n"
+    .string "of Archie himself!$"
+
+MossdeepCity_Text_AquaGruntExplain::
+    .string "That's state of the art stuff!\n"
+    .string "Devon tech, plus Team Aqua's science!\p"
+    .string "It'll get you underwater even if none\n"
+    .string "of your Pokémon know how to use Dive!\p"
+    .string "Archie said he wants you to go down\n"
+    .string "into the sea, after Team Magma.\p"
+    .string "So you better get on it!$"

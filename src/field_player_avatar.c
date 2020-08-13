@@ -748,10 +748,15 @@ static void PlayerAvatarTransition_Surfing(struct EventObject *eventObj)
 
 static void PlayerAvatarTransition_Underwater(struct EventObject *eventObj)
 {
+    struct Sprite *sprite;
+    
     EventObjectSetGraphicsId(eventObj, GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_STATE_UNDERWATER));
     EventObjectTurn(eventObj, eventObj->movementDirection);
     SetPlayerAvatarStateMask(PLAYER_AVATAR_FLAG_UNDERWATER);
     eventObj->fieldEffectSpriteId = sub_8128124(eventObj->spriteId);
+    
+    sprite = &gSprites[eventObj->spriteId];
+    sprite->oam.paletteNum = LoadEventObjectPalette(0x1115);
 }
 
 static void PlayerAvatarTransition_ReturnToField(struct EventObject *eventObj)

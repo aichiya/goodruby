@@ -448,12 +448,19 @@ RUBEN: Tropius Lv45, Clefable Lv45, Aggron Lv45
 ROUTE 129: (bend, now requires dive to pass)
 ALLISON: Munchlax Lv45, Pelipper Lv45
 
+MOSSDEEP GYM:
+PRESTON: Kirlia Lv46, Snorunt Lv46
+MAURA: Kadabra Lv46, Metang Lv46, Wobbuffet Lv46
+SAMANTHA: Xatu Lv46
+FRITZ: Medicham Lv46
+VIRGIL: Dusclops Lv46, Mr. Mime Lv46
+HANNAH: Exeggutor Lv46, Girafarig Lv46
 
 
-waul
+
 
 ROUTE 126:
-NIKKI:
+NIKKI: Chansey Lv47
 
 ROUTE 129:
 CHASE:
@@ -470,3 +477,23 @@ HERMAN:
 SUSIE:
 RICHARD:
 RELI&IAN:
+
+ROUTE 132: (east currents)
+DANA:
+GILBERT:
+KIYO:
+RONALD:
+
+ROUTE 133: (more currents)
+FRANKLIN:
+WARREN:
+BECK:
+DEBRA:
+LINDA:
+
+ROUTE 134: (west currents)
+JACK:
+LAUREL:
+HITOSHI:
+AARON:
+ALEX:

@@ -12,12 +12,14 @@
 #include "field_specials.h"
 #include "fieldmap.h"
 #include "constants/flags.h"
+#include "item.h"
 #include "item_menu.h"
 #include "metatile_behavior.h"
 #include "overworld.h"
 #include "safari_zone.h"
 #include "script.h"
 #include "secret_base.h"
+#include "constants/items.h"
 #include "constants/songs.h"
 #include "sound.h"
 #include "start_menu.h"
@@ -519,7 +521,7 @@ static u8 *GetInteractedWaterScript(struct MapPosition *unused1, u8 metatileBeha
 
 static bool32 TrySetupDiveDownScript(void)
 {
-    if (FlagGet(FLAG_BADGE07_GET) && TrySetDiveWarp() == 2)
+    if (CheckBagHasItem(ITEM_DIVING_GEAR, 1) && TrySetDiveWarp() == 2)
     {
         ScriptContext1_SetupScript(UseDiveScript);
         return TRUE;
@@ -529,7 +531,7 @@ static bool32 TrySetupDiveDownScript(void)
 
 static bool32 TrySetupDiveEmergeScript(void)
 {
-    if (FlagGet(FLAG_BADGE07_GET) && gMapHeader.mapType == MAP_TYPE_UNDERWATER && TrySetDiveWarp() == 1)
+    if (CheckBagHasItem(ITEM_DIVING_GEAR, 1) && gMapHeader.mapType == MAP_TYPE_UNDERWATER && TrySetDiveWarp() == 1)
     {
         ScriptContext1_SetupScript(S_UseDiveUnderwater);
         return TRUE;

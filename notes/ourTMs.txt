@@ -15,7 +15,7 @@
 15 - Hyper Beam     Petalburg Gym
 16 - Light Screen   Department Store
 17 - Protect        Department Store
-18 - Rain Dance     *Abandoned Ship
+18 - Rain Dance     Abandoned Ship
 19 - Giga Drain     South of Mt. Pyre
 20 - Safeguard      Department Store
 21 - Seed Bomb      Route 119 (*Pacifidlog (replacing Frustration))
@@ -38,7 +38,7 @@
 38 - Fire Blast     Fiery Path
 39 - Rock Tomb      Slateport Market
 40 - Aerial Ace     Granite Cave
-41 - Torment        *Slateport Contest Hall
+41 - Torment        Slateport Contest Hall
 42 - Facade         [Gone]
 43 - Secret Power   North of Desert
 44 - Rest           Lilycove City

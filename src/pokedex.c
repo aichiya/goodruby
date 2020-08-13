@@ -4310,6 +4310,37 @@ bool16 CompletedNationalPokedex(void)
     return TRUE;
 }
 
+u16 CountLegendariesSeen()
+{
+    u16 count = 0;
+    
+    count += GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_ARTICUNO), FLAG_GET_SEEN);
+    count += GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_ZAPDOS), FLAG_GET_SEEN);
+    count += GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_MOLTRES), FLAG_GET_SEEN);
+    count += GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_MEWTWO), FLAG_GET_SEEN);
+    count += GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_MEW), FLAG_GET_SEEN);
+    
+    count += GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_ENTEI), FLAG_GET_SEEN);
+    count += GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_RAIKOU), FLAG_GET_SEEN);
+    count += GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_SUICUNE), FLAG_GET_SEEN);
+    count += GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_HO_OH), FLAG_GET_SEEN);
+    count += GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_LUGIA), FLAG_GET_SEEN);
+    count += GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_CELEBI), FLAG_GET_SEEN);
+    
+    count += GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_REGIROCK), FLAG_GET_SEEN);
+    count += GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_REGICE), FLAG_GET_SEEN);
+    count += GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_REGISTEEL), FLAG_GET_SEEN);
+    count += GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_LATIAS), FLAG_GET_SEEN);
+    count += GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_LATIOS), FLAG_GET_SEEN);
+    count += GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_KYOGRE), FLAG_GET_SEEN);
+    count += GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_GROUDON), FLAG_GET_SEEN);
+    count += GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_RAYQUAZA), FLAG_GET_SEEN);
+    count += GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_JIRACHI), FLAG_GET_SEEN);
+    count += GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_DEOXYS), FLAG_GET_SEEN);
+    
+    return count;
+}
+
 static void sub_8091060(u16 a)
 {
     if (!(a & 0x100))

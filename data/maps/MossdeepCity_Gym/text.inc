@@ -105,64 +105,43 @@ MossdeepCity_Gym_Text_18CE6C:: @ 818CE6C
 	.string "What goes around comes around...$"
 
 MossdeepCity_Gym_Text_18CF02:: @ 818CF02
-	.string "TATE: Hehehe... Were you surprised?\p"
-	.string "LIZA: Fufufu... Were you surprised?\p"
-	.string "TATE: That there are two GYM LEADERS?\n"
-	.string "LIZA: That there are two GYM LEADERS?\p"
-	.string "TATE: We're twins!\n"
-	.string "LIZA: We're twins!\p"
-	.string "TATE: We don't need to talk because...\n"
-	.string "LIZA: We can each determine what...\p"
-	.string "TATE: The other is thinking...\n"
-	.string "LIZA: All in our minds!\p"
-	.string "TATE: This combination of ours...\n"
-	.string "LIZA: Can you beat it?$"
+    .string "Fufufu...Were you surprised?\p"
+    .string "I'm Liza, the Gym Leader here.\n"
+    .string "My twin brother used to...well...\p"
+    .string "Even though I'm battling alone,\n"
+    .string "don't take me lightly.\p"
+    .string "My Psychic Pokémon and I can\n"
+    .string "communicate all in our minds.\p"
+    .string "This combination...\n"
+    .string "Can you beat it?$"
 
 MossdeepCity_Gym_Text_18D077:: @ 818D077
-	.string "TATE: What?! Our combination...\n"
-	.string "LIZA: Was shattered!\p"
-	.string "TATE: It can't be helped. You've won...\n"
-	.string "LIZA: So, in recognition, take this.$"
+    .string "The combination...was shattered.\p"
+    .string "You've won.\p"
+    .string "So, take this in recognition.$"
 
 MossdeepCity_Gym_Text_18D0F9:: @ 818D0F9
-	.string "{PLAYER} received the MIND BADGE\n"
-	.string "from LIZA and TATE.$"
+	.string "{PLAYER} received the Mind Badge\n"
+	.string "from Liza.$"
 
 MossdeepCity_Gym_Text_18D128:: @ 818D128
-	.string "TATE: The MIND BADGE enhances the\n"
-	.string "SP. ATK and SP. DEF of POKéMON.\p"
-	.string "LIZA: It also lets you use the HM move\n"
-	.string "DIVE outside of battle.\p"
-	.string "TATE: You should also take this, too.$"
+    .string "You should take this, too.$"
 
 MossdeepCity_Gym_Text_18D1CF:: @ 818D1CF
-	.string "TATE: That TM04 contains...\n"
-	.string "LIZA: CALM MIND!\p"
-	.string "TATE: It raises SP. ATK and...\n"
-	.string "LIZA: It raises SP. DEF!\p"
-	.string "TATE: It's a move that's perfect...\n"
-	.string "LIZA: For PSYCHIC POKéMON!$"
+    .string "TM04 contains Calm Mind.\n"
+    .string "Its power comes from concentration.\p"
+    .string "It raises Sp. Atk and Sp. Def.\n"
+    .string "It's a perfect move for Psychic Pokémon!$"
 
 MossdeepCity_Gym_Text_18D273:: @ 818D273
-	.string "TATE: Looks like the bond between you\n"
-	.string "and your POKéMON is far stronger than\l"
-	.string "the bond that we share as twins.\p"
-	.string "LIZA: You will become even stronger!\n"
-	.string "We've battled you, so we know.$"
-
-MossdeepCity_Gym_Text_18D324:: @ 818D324
-	.string "TATE: Hehehe... Were you surprised?\p"
-	.string "LIZA: That there are two GYM LEADERS?\p"
-	.string "TATE: Oops, you have only one...\n"
-	.string "LIZA: POKéMON that can battle.\p"
-	.string "TATE: We can't battle that way!\p"
-	.string "LIZA: If you want to challenge us,\n"
-	.string "bring some more POKéMON.$"
+    .string "It looks like the bond between you\n"
+    .string "and your Pokémon is stronger than mine.\p"
+    .string "And, it'll go stronger. I can tell!$"
 
 MossdeepCity_Gym_Text_18D40A:: @ 818D40A
 	.string "MOSSDEEP CITY POKéMON GYM$"
 
 MossdeepCity_Gym_Text_18D424:: @ 818D424
 	.string "MOSSDEEP CITY POKéMON GYM\p"
-	.string "LIZA AND TATE'S CERTIFIED TRAINERS:\n"
+	.string "LIZA'S CERTIFIED TRAINERS:\n"
 	.string "{PLAYER}$"

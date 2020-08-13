@@ -51,6 +51,7 @@
 	.include "data/layouts/Underwater2/layout.inc"
 	.include "data/layouts/Underwater3/layout.inc"
 	.include "data/layouts/Underwater4/layout.inc"
+	.include "data/layouts/Underwater5/layout.inc"
 	.include "data/layouts/LittlerootTown_BrendansHouse_1F/layout.inc"
 	.include "data/layouts/LittlerootTown_BrendansHouse_2F/layout.inc"
 	.include "data/layouts/LittlerootTown_MaysHouse_1F/layout.inc"

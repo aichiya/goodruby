@@ -115,18 +115,18 @@ SlateportCity_Harbor_Text_1801EA:: @ 81801EA
 SlateportCity_Harbor_Text_18028B:: @ 818028B
 	.string "CAPT. STERN: Oh?\n"
 	.string "{PLAYER}{KUN}, that item you have...\p"
-	.string "That's a SCANNER! That would sure\n"
+	.string "That's a Scanner! That would sure\n"
 	.string "help us on our explorations.\p"
 	.string "{PLAYER}{KUN}, would you trade your\n"
 	.string "SCANNER for something?\p"
-	.string "Like say a DEEPSEATOOTH or a\n"
-	.string "DEEPSEASCALE that I have?$"
+	.string "Like say this GS Ball that\n"
+	.string "I have?$"
 
 SlateportCity_Harbor_Text_180360:: @ 8180360
 	.string "CAPT. STERN: Are you certain?\n"
 	.string "It's useless to you, {PLAYER}{KUN}...\p"
 	.string "Well, okay, then. If you want to trade\n"
-	.string "your SCANNER, let me know.$"
+	.string "your Scanner, let me know.$"
 
 SlateportCity_Harbor_Text_1803DD:: @ 81803DD
 	.string "CAPT. STERN: So you'll trade it for\n"
@@ -140,8 +140,8 @@ SlateportCity_Harbor_Text_180447:: @ 8180447
 	.string "CAPT. STERN: Which one do you want?$"
 
 SlateportCity_Harbor_Text_18046B:: @ 818046B
-	.string "{PLAYER} handed the SCANNER to\n"
-	.string "CAPT. STERN.$"
+	.string "{PLAYER} handed the Scanner to\n"
+	.string "Capt. Stern.$"
 
 SlateportCity_Harbor_Text_180491:: @ 8180491
 	.string "CAPT. STERN: Thanks, {PLAYER}{KUN}!\n"

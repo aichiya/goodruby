@@ -399,7 +399,7 @@ AbandonedShip_HiddenFloorRooms_EventScript_1B18D8:: @ 81B18D8
 	end
 
 AbandonedShip_HiddenFloorRooms_EventScript_1B18E5:: @ 81B18E5
-	giveitem_std ITEM_WATER_STONE, 1, 1
+	giveitem_std ITEM_NUGGET, 1, 1
 	end
 
 AbandonedShip_HiddenFloorRooms_EventScript_1B18F2:: @ 81B18F2

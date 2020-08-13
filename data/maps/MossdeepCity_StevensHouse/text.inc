@@ -2,19 +2,21 @@ MossdeepCity_StevensHouse_Text_18DA77:: @ 818DA77
 	.string "STEVEN: {PLAYER}{KUN}?\p"
 	.string "Yes, this is my place. It's a little\n"
 	.string "embarrassing how empty it is here.\p"
-	.string "Oh, here, you should take this HM.\p"
-	.string "It contains DIVE.\n"
-	.string "I've already taught my POKéMON.$"
+	.string "Oh, here, you should take this TM.\p"
+	.string "It contains Flash Cannon.\n"
+	.string "I've already taught my Pokémon.$"
 
 MossdeepCity_StevensHouse_Text_18DB22:: @ 818DB22
-	.string "STEVEN: While you're using SURF, you\n"
+	.string "STEVEN: While you're using Surf, you\n"
 	.string "should notice dark patches of water.\p"
-	.string "Use DIVE if you come to deep water\n"
-	.string "like it. You'll drop to the seafloor.\p"
-	.string "When you want to come back up, use\n"
-	.string "DIVE again.\p"
-	.string "In some places, it won't be possible\n"
-	.string "for you to surface, though.$"
+    .string "With proper gear, one could go down\n"
+    .string "to the seafloor there.\p"
+    .string "Devon used to make diving suits, but\n"
+    .string "Team Aqua bought them all up, I hear.\p"
+    .string "Oh, unrelatedly, have you been to the\n"
+    .string "Mossdeep Gym yet?\p"
+    .string "I trained there many years ago.\n"
+    .string "You should pay it a visit if you haven't.$"
 
 MossdeepCity_StevensHouse_Text_18DC25:: @ 818DC25
 	.string "STEVEN: Apparently, there's an\n"
@@ -24,7 +26,7 @@ MossdeepCity_StevensHouse_Text_18DC25:: @ 818DC25
 	.string "found in his submarine.\p"
 	.string "An underwater cavern...\p"
 	.string "There might be some rare stones down\n"
-	.string "there... I should go for a DIVE...$"
+	.string "there... I should go for a Dive...$"
 
 MossdeepCity_StevensHouse_Text_18DD12:: @ 818DD12
 	.string "{PLAYER} checked the POKé BALL.\p"

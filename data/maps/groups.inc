@@ -56,6 +56,7 @@ gMapGroup0:: @ 8307F60
 	.4byte Underwater4
     .4byte GnarledRidge
     .4byte Route135
+    .4byte Underwater5
 
 	.align 2
 gMapGroup1:: @ 8308038

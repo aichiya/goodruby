@@ -4692,6 +4692,13 @@ BattleScript_HangedOnMsg:: @ 81D9AC6
 	waitmessage 64
 	return
 
+BattleScript_HangedOnMsgDestroyItem::
+	playanimation TARGET, B_ANIM_HANGED_ON, NULL
+	printstring BATTLE_TEXT_FocusSash
+	waitmessage 64
+    removeitem TARGET
+	return
+
 BattleScript_BerryConfuseHealEnd2:: @ 81D9AD4
 	playanimation USER, B_ANIM_ITEM_EFFECT, NULL
 	printstring BATTLE_TEXT_RestoredHealth

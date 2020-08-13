@@ -102,7 +102,7 @@ const u16 gTMHMMoves[] =
     MOVE_FLASH,
     MOVE_ROCK_SMASH,
     MOVE_WATERFALL,
-    MOVE_DIVE,
+    MOVE_WATERFALL,
 };
 
 #endif //GUARD_DATA_TM_MOVES_H

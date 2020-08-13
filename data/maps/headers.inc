@@ -53,6 +53,7 @@
 	.include "data/maps/Underwater2/header.inc"
 	.include "data/maps/Underwater3/header.inc"
 	.include "data/maps/Underwater4/header.inc"
+	.include "data/maps/Underwater5/header.inc"
 	.include "data/maps/LittlerootTown_BrendansHouse_1F/header.inc"
 	.include "data/maps/LittlerootTown_BrendansHouse_2F/header.inc"
 	.include "data/maps/LittlerootTown_MaysHouse_1F/header.inc"

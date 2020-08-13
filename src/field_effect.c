@@ -279,7 +279,6 @@ bool8 (*const gUnknown_0839F31C[])(struct Task *, struct EventObject *) = {
 
 bool8 (*const gUnknown_0839F330[])(struct Task *) = {
     sub_8087124,
-    dive_2_unknown,
     dive_3_unknown
 };
 

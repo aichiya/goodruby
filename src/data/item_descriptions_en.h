@@ -1151,6 +1151,16 @@ static const u8 gItemDescription_AssaultVest[] = _(
     "boosts Sp. Def but\n"
     "forces attacking.");
 
+static const u8 gItemDescription_FocusSash[] = _(
+    "A hold item that\n"
+    "prevents fainting\n"
+    "at full HP, once.");
+
+static const u8 gItemDescription_GSBall[] = _(
+    "A mysterious gold\n"
+    "and silver colored\n"
+    "Ball. Won't open.");
+
 static const u8 gItemDescription_RedScarf[] = _(
     "A hold item that\n"
     "raises COOL in\n"
@@ -1214,6 +1224,11 @@ static const u8 gItemDescription_ContestPass[] = _(
     "The pass required\n"
     "for entering\n"
     "POKéMON CONTESTS.");
+
+static const u8 gItemDescription_DivingGear[] = _(
+    "Scuba equipment\n"
+    "used to dive\n"
+    "under the sea.");
 
 static const u8 gItemDescription_WailmerPail[] = _(
     "A tool used for\n"

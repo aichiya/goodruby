@@ -45,7 +45,7 @@ MossdeepCity_Gym_EventScript_15A558:: @ 815A558
 	end
 
 MossdeepCity_Gym_EventScript_15A56B:: @ 815A56B
-	trainerbattle 8, TRAINER_TATE_AND_LIZA, 0, MossdeepCity_Gym_Text_18CF02, MossdeepCity_Gym_Text_18D077, MossdeepCity_Gym_Text_18D324, MossdeepCity_Gym_EventScript_15A594
+	trainerbattle 1, TRAINER_TATE_AND_LIZA, 0, MossdeepCity_Gym_Text_18CF02, MossdeepCity_Gym_Text_18D077, MossdeepCity_Gym_EventScript_15A594
 	goto_if_unset FLAG_RECEIVED_TM04, MossdeepCity_Gym_EventScript_15A5C6
 	msgbox MossdeepCity_Gym_Text_18D273, 4
 	release
@@ -63,6 +63,7 @@ MossdeepCity_Gym_EventScript_15A594:: @ 815A594
 	setvar VAR_SPECIAL_8, 7
 	call MossdeepCity_Gym_EventScript_1A01C0
 	clearflag FLAG_HIDE_WORKERS_SLATEPORT_HARBOR
+    clearflag FLAG_HIDE_MOSSDEEP_AQUA_GRUNT
 	goto MossdeepCity_Gym_EventScript_15A5C6
 	end
 

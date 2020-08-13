@@ -219,12 +219,6 @@ UsedWaterfallText: @ 81B120D
 
 UseDiveScript:: @ 81B1220
 	lockall
-	checkpartymove MOVE_DIVE
-	compare RESULT, 6
-	goto_if_eq CannotUseDive
-	bufferpartymonnick 0, RESULT
-	setfieldeffectargument 0, RESULT
-	setfieldeffectargument 1, 1
 	msgbox UseDivePromptText, MSGBOX_YESNO
 	compare RESULT, NO
 	goto_if_eq Dive_Done
@@ -242,12 +236,6 @@ Dive_Done: @ 81B1267
 
 S_UseDiveUnderwater:: @ 81B1269
 	lockall
-	checkpartymove MOVE_DIVE
-	compare RESULT, 6
-	goto_if_eq UnderwaterCannotUseDive
-	bufferpartymonnick 0, RESULT
-	setfieldeffectargument 0, RESULT
-	setfieldeffectargument 1, 1
 	msgbox UnderwaterUseDivePromptText, MSGBOX_YESNO
 	compare RESULT, NO
 	goto_if_eq UnderwaterDive_Done
@@ -270,15 +258,15 @@ UnderwaterDive_Done: @ 81B12BE
 	end
 
 CannotUseDiveText: @ 81B12C0
-	.string "The sea is deep here. A POKéMON may be\n"
-	.string "able to go underwater here.$"
+	.string "The sea is deep here. It might\n"
+	.string "be possible to go underwater here.$"
 
 UseDivePromptText: @ 81B1303
 	.string "The sea is deep here.\n"
-	.string "Would you like to use DIVE?$"
+	.string "Would you like to use the Diving Gear?$"
 
 UsedDiveText: @ 81B1335
-	.string "{STR_VAR_1} used DIVE.$"
+	.string "{PLAYER} used the Diving Gear.$"
 
 UnderwaterCannotUseDiveText: @ 81B1343
 	.string "Light is filtering down from above.\n"
@@ -286,11 +274,11 @@ UnderwaterCannotUseDiveText: @ 81B1343
 
 UnderwaterUseDivePromptText: @ 81B138E
 	.string "Light is filtering down from above.\n"
-	.string "Would you like to use DIVE?$"
+	.string "Would you like to use the Diving Gear?$"
 
 SurfacingBlockedText: @ 81B13CE
 	.string "There is something in the way above.\n"
-	.string "DIVE can't be used here.$"
+	.string "The Diving Gear can't be used here.$"
 
 SweetScentNothingHereScript:: @ 81B140C
 	msgbox SweetScentNothingHereText, 3

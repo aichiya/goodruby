@@ -154,6 +154,7 @@ const struct RegionMapLocation gRegionMapLocations[] =
     { 4,  7, 1, 1, gMapName_Route135},
     { 0,  8, 1, 1, gMapName_TracklessForest},
     {22,  6, 1, 1, gMapName_NamelessCavern},
+    {24, 10, 2, 1, gMapName_Underwater},
     { 0,  0, 1, 1, gMapName_None},
 };
 
@@ -165,6 +166,7 @@ static const u16 sUnderwaterMaps[][2] =
     {MAPSEC_UNDERWATER_127,       MAPSEC_ROUTE_128},
     {MAPSEC_UNDERWATER_SOOTOPOLIS,       MAPSEC_SOOTOPOLIS_CITY},
     {MAPSEC_UNDERWATER_128,       MAPSEC_ROUTE_128},
+    {MAPSEC_UNDERWATER_129,       MAPSEC_ROUTE_129},
     {MAPSEC_EVIL_TEAM_HIDEOUT, MAPSEC_LILYCOVE_CITY},
     {MAPSEC_UNDERWATER_SEALED_CHAMBER,       MAPSEC_ROUTE_134},
     {MAPSEC_PETALBURG_WOODS,   MAPSEC_ROUTE_104},

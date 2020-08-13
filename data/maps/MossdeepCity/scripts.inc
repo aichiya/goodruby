@@ -8,8 +8,13 @@ MossdeepCity_MapScript1_14CF98:: @ 814CF98
 	clearflag FLAG_MOSSDEEP_GYM_SWITCH_3
 	clearflag FLAG_MOSSDEEP_GYM_SWITCH_4
 	call_if_set FLAG_SYS_WEATHER_CTRL, MossdeepCity_EventScript_1A02C1
+    call_if_unset FLAG_BADGE07_GET, MossdeepCity_EventScript_HideAquaGrunt
     call LilycoveCity_EventScript_1A014E
 	end
+
+MossdeepCity_EventScript_HideAquaGrunt:
+    setflag FLAG_HIDE_MOSSDEEP_AQUA_GRUNT
+    return
 
 MossdeepCity_EventScript_14CFAE:: @ 814CFAE
 	msgbox MossdeepCity_Text_169266, 2
@@ -89,3 +94,61 @@ MossdeepCity_EventScript_14D073:: @ 814D073
 	msgbox MossdeepCity_Text_1691A7, 4
 	release
 	end
+
+MossdeepCity_EventScript_AquaGrunt::
+    lock
+    faceplayer
+	msgbox MossdeepCity_Text_AquaGruntMeet, 4
+	giveitem_std ITEM_DIVING_GEAR
+	setflag FLAG_RECIEVED_DIVING_GEAR
+	msgbox MossdeepCity_Text_AquaGruntExplain, 4
+    closemessage
+    compare FACING, 1
+    call_if_eq MossdeepCity_EventScript_AquaGruntLeaveA
+    compare FACING, 2
+    call_if_eq MossdeepCity_EventScript_AquaGruntLeaveA
+    compare FACING, 3
+    call_if_eq MossdeepCity_EventScript_AquaGruntLeaveA
+    compare FACING, 4
+    call_if_eq MossdeepCity_EventScript_AquaGruntLeaveB
+    setflag FLAG_HIDE_MOSSDEEP_AQUA_GRUNT
+    removeobject LAST_TALKED
+    release
+    end
+
+MossdeepCity_EventScript_AquaGruntLeaveA:
+    applymovement 11, MossdeepCity_AquaGruntMovementA
+    waitmovement 0
+    return
+
+MossdeepCity_EventScript_AquaGruntLeaveB:
+    applymovement 11, MossdeepCity_AquaGruntMovementB
+    waitmovement 0
+    return
+
+MossdeepCity_AquaGruntMovementA:
+    walk_left
+    walk_left
+    walk_left
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+	end_movement
+
+MossdeepCity_AquaGruntMovementB:
+    walk_down
+    walk_left
+    walk_left
+    walk_left
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+	end_movement
+
