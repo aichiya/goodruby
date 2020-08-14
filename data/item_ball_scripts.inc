@@ -613,3 +613,7 @@ NewMauville_Inside_B3F_EventScript_Item::
 NamelessCavern_EventScript_Item::
 	giveitem_std ITEM_TM03_PSYSHOCK, 1, 1
 	end
+
+Route134_EventScript_Item::
+    giveitem_std ITEM_TM02_DRAGON_CLAW, 1, 1
+    end

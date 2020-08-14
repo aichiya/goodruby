@@ -1171,7 +1171,7 @@ Event_ResetBerryTrees: @ 19F940
 	setberrytree 87, 3, 5
 	setberrytree 88, 10, 5
 	setberrytree 89, 4, 5
-	setberrytree 82, 36, 5
+	setberrytree 82, 53, 5
 	return
 
 gUnknown_0819FA81:: @ 819FA81
