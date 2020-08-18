@@ -15,7 +15,32 @@ SeafloorCavern_Room9_Text_1B4897:: @ 81B4897
 SeafloorCavern_Room9_Text_1B491F:: @ 81B491F
 	.string "MAXIE: It surprises me, how you've\n"
 	.string "managed to chase me here.\p"
-	.string "But that's all over now.\p"
+	.string "But that's all over now...$"
+
+SeafloorCavern_Room9_Text_GruntsAppear::
+    .string "Sir Maxie!\n"
+    .string "Let us handle this trash!$"
+
+SeafloorCavern_Room9_Text_GruntBeaten::
+    .string "Tch...\n"
+    .string "I was just softening you up!$"
+
+SeafloorCavern_Room9_Text_CourtneyFight::
+    .string "What an impressive child!\p"
+    .string "But, I do want payback for what\n"
+    .string "happened at the Weather Institute...\p"
+    .string "I'm going to give you a little taste\n"
+    .string "of pain! Resign yourself to it!$"
+
+SeafloorCavern_Room9_Text_CourtneyBeaten::	
+    .string "It's terribly disappointing that you're\n"
+    .string "not a Team Magma member.\p"
+    .string "You could have enjoyed the fabulous\n"
+    .string "world Maxie has promised to one\l"
+    .string "of our own...$"
+
+SeafloorCavern_Room9_Text_MaxieFight::
+    .string "MAXIE: Such a farce...\p"
 	.string "For the realization of my dream,\n"
 	.string "you must disappear now!$"
 

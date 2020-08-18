@@ -162,10 +162,10 @@ SootopolisCity_Gym_1F_Text_18F36B:: @ 818F36B
 	.string "battle we shared, take this...$"
 
 SootopolisCity_Gym_1F_Text_18F466:: @ 818F466
-	.string "The TM I handed you contains\n"
-	.string "WATER PULSE.\p"
-	.string "In use, it will occasionally confuse\n"
-	.string "the target with ultrasonic waves.$"
+	.string "The HM I handed you contains\n"
+	.string "that same move, Waterfall.\p"
+	.string "Using it, you should be able to\n"
+	.string "scale the walls of Evergrande City.$"
 
 SootopolisCity_Gym_1F_Text_18F4D7:: @ 818F4D7
 	.string "TRAINERS who have gathered all the\n"

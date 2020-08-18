@@ -1406,6 +1406,7 @@ const u16 gGeodudeEggMoves[] = {
     MOVE_MEGA_PUNCH,
     // Rock Climb
     MOVE_ROCK_SLIDE,
+    MOVE_SUCKER_PUNCH,
     // Wide Guard
     0,
 };
@@ -1421,6 +1422,7 @@ const u16 gGravelerEggMoves[] = {
     MOVE_MEGA_PUNCH,
     // Rock Climb
     MOVE_ROCK_SLIDE,
+    MOVE_SUCKER_PUNCH,
     // Wide Guard
     0,
 };
@@ -1436,6 +1438,7 @@ const u16 gGolemEggMoves[] = {
     MOVE_MEGA_PUNCH,
     // Rock Climb
     MOVE_ROCK_SLIDE,
+    MOVE_SUCKER_PUNCH,
     // Wide Guard
     0,
 };

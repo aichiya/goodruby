@@ -4678,6 +4678,15 @@ BattleScript_ItemHealHP_Ret:: @ 81D9AA7
 	datahpupdate USER
 	return
 
+BattleScript_ItemHurtHP_Ret::
+	printstring BATTLE_TEXT_LifeOrb
+	waitmessage 64
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
+	healthbarupdate USER
+	datahpupdate USER
+	tryfaintmon USER, FALSE, NULL
+	return
+
 BattleScript_MoveSelectionChoiceBanded:: @ 81D9AC2
 	printselectionstring BATTLE_TEXT_ChoiceBand
 	endselectionscript

@@ -5261,7 +5261,7 @@ static void atk48_playstatchangeanimation(void)
 }
 
 
-#define ATK49_LAST_CASE 19
+#define ATK49_LAST_CASE 20
 
 static void atk49_moveend(void)
 {
@@ -5489,7 +5489,7 @@ static void atk49_moveend(void)
 			}
 			gBattleStruct->cmd49StateTracker++;
 			break;
-		case 17:
+		case 17: // loop back around for spread moves, maybe
 			if (!(gHitMarker & HITMARKER_UNABLE_TO_USE_MOVE) && gBattleTypeFlags & BATTLE_TYPE_DOUBLE
 			&& !gProtectStructs[gBankAttacker].chargingTurn && gBattleMoves[gCurrentMove].target == TARGET_BOTH_ENEMIES
 			&& !(gHitMarker & HITMARKER_NO_ATTACKSTRING))
@@ -5512,7 +5512,12 @@ static void atk49_moveend(void)
 			}
 			gBattleStruct->cmd49StateTracker++;
 			break;
-		case 18:
+        case 18: // life orb
+			if (ItemBattleEffects(5, 0, FALSE))
+				effect = TRUE;
+			gBattleStruct->cmd49StateTracker++;
+			break;
+		case 19:
 			gWishFutureKnock.reflected = 0;
 			gWishFutureKnock.pranksterBoosted = 0;
 			gBattleStruct->cmd49StateTracker++;

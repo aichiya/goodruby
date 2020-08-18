@@ -1156,6 +1156,11 @@ static const u8 gItemDescription_FocusSash[] = _(
     "prevents fainting\n"
     "at full HP, once.");
 
+static const u8 gItemDescription_LifeOrb[] = _(
+    "A hold item that\n"
+    "uses some HP to\n"
+    "power up moves.");
+
 static const u8 gItemDescription_GSBall[] = _(
     "A mysterious gold\n"
     "and silver colored\n"

@@ -507,7 +507,7 @@ SeafloorCavern_Room9_EventScript_1B1A37:: @ 81B1A37
 	end
 
 CaveOfOrigin_B3F_EventScript_1B1A44:: @ 81B1A44
-	giveitem_std ITEM_HM07_WATERFALL, 1, 1
+	giveitem_std ITEM_TM88_SLEEP_TALK, 1, 1
 	end
 
 Route110_TrickHousePuzzle1_EventScript_1B1A51:: @ 81B1A51

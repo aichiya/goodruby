@@ -54,7 +54,7 @@ CaveOfOrigin_B4F_EventScript_15DDD7:: @ 815DDD7
 	applymovement 1, CaveOfOrigin_B4F_Movement_15DE7D
 	waitmovement 0
 	delay 60
-	setwildbattle SPECIES_GROUDON_OR_KYOGRE, 45, ITEM_NONE
+	setwildbattle SPECIES_GROUDON_OR_KYOGRE, 55, ITEM_NONE
 	waitse
 	playmoncry SPECIES_GROUDON_OR_KYOGRE, 2
 	delay 40

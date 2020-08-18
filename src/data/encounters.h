@@ -457,250 +457,39 @@ const struct WildPokemon MtPyre_Summit_LandMons [] =
 };
 const struct WildPokemonInfo MtPyre_Summit_LandMonsInfo = {10, MtPyre_Summit_LandMons};
 
-const struct WildPokemon SeafloorCavern_Room1_LandMons [] =
+const struct WildPokemon SeafloorCavern_Room_LandMons [] =
 {
-    {30, 30, SPECIES_ZUBAT},
-    {31, 31, SPECIES_ZUBAT},
-    {32, 32, SPECIES_ZUBAT},
-    {33, 33, SPECIES_ZUBAT},
-    {28, 28, SPECIES_ZUBAT},
-    {29, 29, SPECIES_ZUBAT},
-    {34, 34, SPECIES_ZUBAT},
-    {35, 35, SPECIES_ZUBAT},
-    {34, 34, SPECIES_GOLBAT},
-    {35, 35, SPECIES_GOLBAT},
-    {33, 33, SPECIES_GOLBAT},
-    {36, 36, SPECIES_GOLBAT},
+    {37, 39, SPECIES_GOLBAT},
+    {37, 39, SPECIES_KINGLER},
+    {37, 39, SPECIES_KABUTO},
+    {37, 39, SPECIES_OMANYTE},
+    {37, 39, SPECIES_LILEEP},
+    {37, 39, SPECIES_ANORITH},
+    {37, 39, SPECIES_PARASECT},
+    {37, 39, SPECIES_AERODACTYL},
+    {37, 39, SPECIES_PARASECT},
+    {37, 39, SPECIES_PARASECT},
+    {37, 39, SPECIES_PARASECT},
+    {37, 39, SPECIES_PARASECT},
 };
-const struct WildPokemonInfo SeafloorCavern_Room1_LandMonsInfo = {4, SeafloorCavern_Room1_LandMons};
+const struct WildPokemonInfo SeafloorCavern_Room_LandMonsInfo = {4, SeafloorCavern_Room_LandMons};
 
-const struct WildPokemon SeafloorCavern_Room2_LandMons [] =
+const struct WildPokemon CaveOfOrigin_LandMons [] =
 {
-    {30, 30, SPECIES_ZUBAT},
-    {31, 31, SPECIES_ZUBAT},
-    {32, 32, SPECIES_ZUBAT},
-    {33, 33, SPECIES_ZUBAT},
-    {28, 28, SPECIES_ZUBAT},
-    {29, 29, SPECIES_ZUBAT},
-    {34, 34, SPECIES_ZUBAT},
-    {35, 35, SPECIES_ZUBAT},
-    {34, 34, SPECIES_GOLBAT},
-    {35, 35, SPECIES_GOLBAT},
-    {33, 33, SPECIES_GOLBAT},
-    {36, 36, SPECIES_GOLBAT},
+    {50, 50, SPECIES_UNOWN},
+    {50, 50, SPECIES_UNOWN},
+    {50, 50, SPECIES_UNOWN},
+    {50, 50, SPECIES_UNOWN},
+    {50, 50, SPECIES_UNOWN},
+    {50, 50, SPECIES_UNOWN},
+    {39, 41, SPECIES_MAWILE},
+    {39, 41, SPECIES_SABLEYE},
+    {39, 41, SPECIES_WOBBUFFET},
+    {39, 41, SPECIES_GOLBAT},
+    {39, 41, SPECIES_WOBBUFFET},
+    {39, 41, SPECIES_GOLBAT},
 };
-const struct WildPokemonInfo SeafloorCavern_Room2_LandMonsInfo = {4, SeafloorCavern_Room2_LandMons};
-
-const struct WildPokemon SeafloorCavern_Room3_LandMons [] =
-{
-    {30, 30, SPECIES_ZUBAT},
-    {31, 31, SPECIES_ZUBAT},
-    {32, 32, SPECIES_ZUBAT},
-    {33, 33, SPECIES_ZUBAT},
-    {28, 28, SPECIES_ZUBAT},
-    {29, 29, SPECIES_ZUBAT},
-    {34, 34, SPECIES_ZUBAT},
-    {35, 35, SPECIES_ZUBAT},
-    {34, 34, SPECIES_GOLBAT},
-    {35, 35, SPECIES_GOLBAT},
-    {33, 33, SPECIES_GOLBAT},
-    {36, 36, SPECIES_GOLBAT},
-};
-const struct WildPokemonInfo SeafloorCavern_Room3_LandMonsInfo = {4, SeafloorCavern_Room3_LandMons};
-
-const struct WildPokemon SeafloorCavern_Room4_LandMons [] =
-{
-    {30, 30, SPECIES_ZUBAT},
-    {31, 31, SPECIES_ZUBAT},
-    {32, 32, SPECIES_ZUBAT},
-    {33, 33, SPECIES_ZUBAT},
-    {28, 28, SPECIES_ZUBAT},
-    {29, 29, SPECIES_ZUBAT},
-    {34, 34, SPECIES_ZUBAT},
-    {35, 35, SPECIES_ZUBAT},
-    {34, 34, SPECIES_GOLBAT},
-    {35, 35, SPECIES_GOLBAT},
-    {33, 33, SPECIES_GOLBAT},
-    {36, 36, SPECIES_GOLBAT},
-};
-const struct WildPokemonInfo SeafloorCavern_Room4_LandMonsInfo = {4, SeafloorCavern_Room4_LandMons};
-
-const struct WildPokemon SeafloorCavern_Room5_LandMons [] =
-{
-    {30, 30, SPECIES_ZUBAT},
-    {31, 31, SPECIES_ZUBAT},
-    {32, 32, SPECIES_ZUBAT},
-    {33, 33, SPECIES_ZUBAT},
-    {28, 28, SPECIES_ZUBAT},
-    {29, 29, SPECIES_ZUBAT},
-    {34, 34, SPECIES_ZUBAT},
-    {35, 35, SPECIES_ZUBAT},
-    {34, 34, SPECIES_GOLBAT},
-    {35, 35, SPECIES_GOLBAT},
-    {33, 33, SPECIES_GOLBAT},
-    {36, 36, SPECIES_GOLBAT},
-};
-const struct WildPokemonInfo SeafloorCavern_Room5_LandMonsInfo = {4, SeafloorCavern_Room5_LandMons};
-
-const struct WildPokemon SeafloorCavern_Room6_LandMons [] =
-{
-    {30, 30, SPECIES_ZUBAT},
-    {31, 31, SPECIES_ZUBAT},
-    {32, 32, SPECIES_ZUBAT},
-    {33, 33, SPECIES_ZUBAT},
-    {28, 28, SPECIES_ZUBAT},
-    {29, 29, SPECIES_ZUBAT},
-    {34, 34, SPECIES_ZUBAT},
-    {35, 35, SPECIES_ZUBAT},
-    {34, 34, SPECIES_GOLBAT},
-    {35, 35, SPECIES_GOLBAT},
-    {33, 33, SPECIES_GOLBAT},
-    {36, 36, SPECIES_GOLBAT},
-};
-const struct WildPokemonInfo SeafloorCavern_Room6_LandMonsInfo = {4, SeafloorCavern_Room6_LandMons};
-
-const struct WildPokemon SeafloorCavern_Room7_LandMons [] =
-{
-    {30, 30, SPECIES_ZUBAT},
-    {31, 31, SPECIES_ZUBAT},
-    {32, 32, SPECIES_ZUBAT},
-    {33, 33, SPECIES_ZUBAT},
-    {28, 28, SPECIES_ZUBAT},
-    {29, 29, SPECIES_ZUBAT},
-    {34, 34, SPECIES_ZUBAT},
-    {35, 35, SPECIES_ZUBAT},
-    {34, 34, SPECIES_GOLBAT},
-    {35, 35, SPECIES_GOLBAT},
-    {33, 33, SPECIES_GOLBAT},
-    {36, 36, SPECIES_GOLBAT},
-};
-const struct WildPokemonInfo SeafloorCavern_Room7_LandMonsInfo = {4, SeafloorCavern_Room7_LandMons};
-
-const struct WildPokemon SeafloorCavern_Room8_LandMons [] =
-{
-    {30, 30, SPECIES_ZUBAT},
-    {31, 31, SPECIES_ZUBAT},
-    {32, 32, SPECIES_ZUBAT},
-    {33, 33, SPECIES_ZUBAT},
-    {28, 28, SPECIES_ZUBAT},
-    {29, 29, SPECIES_ZUBAT},
-    {34, 34, SPECIES_ZUBAT},
-    {35, 35, SPECIES_ZUBAT},
-    {34, 34, SPECIES_GOLBAT},
-    {35, 35, SPECIES_GOLBAT},
-    {33, 33, SPECIES_GOLBAT},
-    {36, 36, SPECIES_GOLBAT},
-};
-const struct WildPokemonInfo SeafloorCavern_Room8_LandMonsInfo = {4, SeafloorCavern_Room8_LandMons};
-
-const struct WildPokemon CaveOfOrigin_Entrance_LandMons [] =
-{
-    {30, 30, SPECIES_ZUBAT},
-    {31, 31, SPECIES_ZUBAT},
-    {32, 32, SPECIES_ZUBAT},
-    {33, 33, SPECIES_ZUBAT},
-    {28, 28, SPECIES_ZUBAT},
-    {29, 29, SPECIES_ZUBAT},
-    {34, 34, SPECIES_ZUBAT},
-    {35, 35, SPECIES_ZUBAT},
-    {34, 34, SPECIES_GOLBAT},
-    {35, 35, SPECIES_GOLBAT},
-    {33, 33, SPECIES_GOLBAT},
-    {36, 36, SPECIES_GOLBAT},
-};
-const struct WildPokemonInfo CaveOfOrigin_Entrance_LandMonsInfo = {4, CaveOfOrigin_Entrance_LandMons};
-
-const struct WildPokemon CaveOfOrigin_1F_LandMons [] =
-{
-    {30, 30, SPECIES_ZUBAT},
-    {31, 31, SPECIES_ZUBAT},
-    {32, 32, SPECIES_ZUBAT},
-#ifdef SAPPHIRE
-    {30, 30, SPECIES_SABLEYE},
-    {32, 32, SPECIES_SABLEYE},
-    {34, 34, SPECIES_SABLEYE},
-#else
-    {30, 30, SPECIES_MAWILE},
-    {32, 32, SPECIES_MAWILE},
-    {34, 34, SPECIES_MAWILE},
-#endif
-    {33, 33, SPECIES_ZUBAT},
-    {34, 34, SPECIES_ZUBAT},
-    {34, 34, SPECIES_GOLBAT},
-    {35, 35, SPECIES_GOLBAT},
-    {33, 33, SPECIES_GOLBAT},
-    {36, 36, SPECIES_GOLBAT},
-};
-const struct WildPokemonInfo CaveOfOrigin_1F_LandMonsInfo = {4, CaveOfOrigin_1F_LandMons};
-
-const struct WildPokemon CaveOfOrigin_B1F_LandMons [] =
-{
-    {30, 30, SPECIES_ZUBAT},
-    {31, 31, SPECIES_ZUBAT},
-    {32, 32, SPECIES_ZUBAT},
-#ifdef SAPPHIRE
-    {30, 30, SPECIES_SABLEYE},
-    {32, 32, SPECIES_SABLEYE},
-    {34, 34, SPECIES_SABLEYE},
-#else
-    {30, 30, SPECIES_MAWILE},
-    {32, 32, SPECIES_MAWILE},
-    {34, 34, SPECIES_MAWILE},
-#endif
-    {33, 33, SPECIES_ZUBAT},
-    {34, 34, SPECIES_ZUBAT},
-    {34, 34, SPECIES_GOLBAT},
-    {35, 35, SPECIES_GOLBAT},
-    {33, 33, SPECIES_GOLBAT},
-    {36, 36, SPECIES_GOLBAT},
-};
-const struct WildPokemonInfo CaveOfOrigin_B1F_LandMonsInfo = {4, CaveOfOrigin_B1F_LandMons};
-
-const struct WildPokemon CaveOfOrigin_B2F_LandMons [] =
-{
-    {30, 30, SPECIES_ZUBAT},
-    {31, 31, SPECIES_ZUBAT},
-    {32, 32, SPECIES_ZUBAT},
-#ifdef SAPPHIRE
-    {30, 30, SPECIES_SABLEYE},
-    {32, 32, SPECIES_SABLEYE},
-    {34, 34, SPECIES_SABLEYE},
-#else
-    {30, 30, SPECIES_MAWILE},
-    {32, 32, SPECIES_MAWILE},
-    {34, 34, SPECIES_MAWILE},
-#endif
-    {33, 33, SPECIES_ZUBAT},
-    {34, 34, SPECIES_ZUBAT},
-    {34, 34, SPECIES_GOLBAT},
-    {35, 35, SPECIES_GOLBAT},
-    {33, 33, SPECIES_GOLBAT},
-    {36, 36, SPECIES_GOLBAT},
-};
-const struct WildPokemonInfo CaveOfOrigin_B2F_LandMonsInfo = {4, CaveOfOrigin_B2F_LandMons};
-
-const struct WildPokemon CaveOfOrigin_B3F_LandMons [] =
-{
-    {30, 30, SPECIES_ZUBAT},
-    {31, 31, SPECIES_ZUBAT},
-    {32, 32, SPECIES_ZUBAT},
-#ifdef SAPPHIRE
-    {30, 30, SPECIES_SABLEYE},
-    {32, 32, SPECIES_SABLEYE},
-    {34, 34, SPECIES_SABLEYE},
-#else
-    {30, 30, SPECIES_MAWILE},
-    {32, 32, SPECIES_MAWILE},
-    {34, 34, SPECIES_MAWILE},
-#endif
-    {33, 33, SPECIES_ZUBAT},
-    {34, 34, SPECIES_ZUBAT},
-    {34, 34, SPECIES_GOLBAT},
-    {35, 35, SPECIES_GOLBAT},
-    {33, 33, SPECIES_GOLBAT},
-    {36, 36, SPECIES_GOLBAT},
-};
-const struct WildPokemonInfo CaveOfOrigin_B3F_LandMonsInfo = {4, CaveOfOrigin_B3F_LandMons};
+const struct WildPokemonInfo CaveOfOrigin_LandMonsInfo = {4, CaveOfOrigin_LandMons};
 
 const struct WildPokemon VictoryRoad_1F_LandMons [] =
 {
@@ -1501,25 +1290,16 @@ const struct WildPokemon SafariZone_Southeast_LandMons [] =
 };
 const struct WildPokemonInfo SafariZone_Southeast_LandMonsInfo = {25, SafariZone_Southeast_LandMons};
 
-const struct WildPokemon Underwater1_WaterMons [] =
+const struct WildPokemon Underwater_WaterMons [] =
 {
-    {20, 30, SPECIES_CLAMPERL},
-    {20, 30, SPECIES_CHINCHOU},
-    {30, 35, SPECIES_CLAMPERL},
-    {30, 35, SPECIES_RELICANTH},
-    {30, 35, SPECIES_RELICANTH},
+    {37, 39, SPECIES_LANTURN},
+    {37, 39, SPECIES_HUNTAIL},
+    {37, 39, SPECIES_GOREBYSS},
+    {37, 39, SPECIES_OCTILLERY},
+    {37, 39, SPECIES_RELICANTH},
+    {37, 39, SPECIES_CORSOLA},
 };
-const struct WildPokemonInfo Underwater1_WaterMonsInfo = {4, Underwater1_WaterMons};
-
-const struct WildPokemon Underwater2_WaterMons [] =
-{
-    {20, 30, SPECIES_CLAMPERL},
-    {20, 30, SPECIES_CHINCHOU},
-    {30, 35, SPECIES_CLAMPERL},
-    {30, 35, SPECIES_RELICANTH},
-    {30, 35, SPECIES_RELICANTH},
-};
-const struct WildPokemonInfo Underwater2_WaterMonsInfo = {4, Underwater2_WaterMons};
+const struct WildPokemonInfo Underwater_WaterMonsInfo = {4, Underwater_WaterMons};
 
 const struct WildPokemon GnarledRidge_LandMons [] =
 {
@@ -1806,7 +1586,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
     {
         .mapGroup = MAP_GROUP(SEAFLOOR_CAVERN_ROOM1),
         .mapNum = MAP_NUM(SEAFLOOR_CAVERN_ROOM1),
-        .landMonsInfo = &SeafloorCavern_Room1_LandMonsInfo,
+        .landMonsInfo = &SeafloorCavern_Room_LandMonsInfo,
         .waterMonsInfo = NULL,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = NULL,
@@ -1814,7 +1594,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
     {
         .mapGroup = MAP_GROUP(SEAFLOOR_CAVERN_ROOM2),
         .mapNum = MAP_NUM(SEAFLOOR_CAVERN_ROOM2),
-        .landMonsInfo = &SeafloorCavern_Room2_LandMonsInfo,
+        .landMonsInfo = &SeafloorCavern_Room_LandMonsInfo,
         .waterMonsInfo = NULL,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = NULL,
@@ -1822,7 +1602,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
     {
         .mapGroup = MAP_GROUP(SEAFLOOR_CAVERN_ROOM3),
         .mapNum = MAP_NUM(SEAFLOOR_CAVERN_ROOM3),
-        .landMonsInfo = &SeafloorCavern_Room3_LandMonsInfo,
+        .landMonsInfo = &SeafloorCavern_Room_LandMonsInfo,
         .waterMonsInfo = NULL,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = NULL,
@@ -1830,7 +1610,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
     {
         .mapGroup = MAP_GROUP(SEAFLOOR_CAVERN_ROOM4),
         .mapNum = MAP_NUM(SEAFLOOR_CAVERN_ROOM4),
-        .landMonsInfo = &SeafloorCavern_Room4_LandMonsInfo,
+        .landMonsInfo = &SeafloorCavern_Room_LandMonsInfo,
         .waterMonsInfo = NULL,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = NULL,
@@ -1838,7 +1618,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
     {
         .mapGroup = MAP_GROUP(SEAFLOOR_CAVERN_ROOM5),
         .mapNum = MAP_NUM(SEAFLOOR_CAVERN_ROOM5),
-        .landMonsInfo = &SeafloorCavern_Room5_LandMonsInfo,
+        .landMonsInfo = &SeafloorCavern_Room_LandMonsInfo,
         .waterMonsInfo = NULL,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = NULL,
@@ -1846,7 +1626,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
     {
         .mapGroup = MAP_GROUP(SEAFLOOR_CAVERN_ROOM6),
         .mapNum = MAP_NUM(SEAFLOOR_CAVERN_ROOM6),
-        .landMonsInfo = &SeafloorCavern_Room6_LandMonsInfo,
+        .landMonsInfo = &SeafloorCavern_Room_LandMonsInfo,
         .waterMonsInfo = NULL, //&SeafloorCavern_Room6_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &SeafloorCavern_FishingMonsInfo,
@@ -1854,7 +1634,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
     {
         .mapGroup = MAP_GROUP(SEAFLOOR_CAVERN_ROOM7),
         .mapNum = MAP_NUM(SEAFLOOR_CAVERN_ROOM7),
-        .landMonsInfo = &SeafloorCavern_Room7_LandMonsInfo,
+        .landMonsInfo = &SeafloorCavern_Room_LandMonsInfo,
         .waterMonsInfo = NULL, //&SeafloorCavern_Room7_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &SeafloorCavern_FishingMonsInfo,
@@ -1862,7 +1642,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
     {
         .mapGroup = MAP_GROUP(SEAFLOOR_CAVERN_ROOM8),
         .mapNum = MAP_NUM(SEAFLOOR_CAVERN_ROOM8),
-        .landMonsInfo = &SeafloorCavern_Room8_LandMonsInfo,
+        .landMonsInfo = &SeafloorCavern_Room_LandMonsInfo,
         .waterMonsInfo = NULL,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = NULL,
@@ -1870,7 +1650,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
     {
         .mapGroup = MAP_GROUP(CAVE_OF_ORIGIN_ENTRANCE),
         .mapNum = MAP_NUM(CAVE_OF_ORIGIN_ENTRANCE),
-        .landMonsInfo = &CaveOfOrigin_Entrance_LandMonsInfo,
+        .landMonsInfo = &CaveOfOrigin_LandMonsInfo,
         .waterMonsInfo = NULL,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = NULL,
@@ -1878,7 +1658,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
     {
         .mapGroup = MAP_GROUP(CAVE_OF_ORIGIN_1F),
         .mapNum = MAP_NUM(CAVE_OF_ORIGIN_1F),
-        .landMonsInfo = &CaveOfOrigin_1F_LandMonsInfo,
+        .landMonsInfo = &CaveOfOrigin_LandMonsInfo,
         .waterMonsInfo = NULL,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = NULL,
@@ -1886,7 +1666,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
     {
         .mapGroup = MAP_GROUP(CAVE_OF_ORIGIN_B1F),
         .mapNum = MAP_NUM(CAVE_OF_ORIGIN_B1F),
-        .landMonsInfo = &CaveOfOrigin_B1F_LandMonsInfo,
+        .landMonsInfo = &CaveOfOrigin_LandMonsInfo,
         .waterMonsInfo = NULL,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = NULL,
@@ -1894,7 +1674,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
     {
         .mapGroup = MAP_GROUP(CAVE_OF_ORIGIN_B2F),
         .mapNum = MAP_NUM(CAVE_OF_ORIGIN_B2F),
-        .landMonsInfo = &CaveOfOrigin_B2F_LandMonsInfo,
+        .landMonsInfo = &CaveOfOrigin_LandMonsInfo,
         .waterMonsInfo = NULL,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = NULL,
@@ -1902,7 +1682,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
     {
         .mapGroup = MAP_GROUP(CAVE_OF_ORIGIN_B3F),
         .mapNum = MAP_NUM(CAVE_OF_ORIGIN_B3F),
-        .landMonsInfo = &CaveOfOrigin_B3F_LandMonsInfo,
+        .landMonsInfo = &CaveOfOrigin_LandMonsInfo,
         .waterMonsInfo = NULL,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = NULL,
@@ -2379,7 +2159,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(UNDERWATER1),
         .mapNum = MAP_NUM(UNDERWATER1),
         .landMonsInfo = NULL,
-        .waterMonsInfo = NULL, //&Underwater1_WaterMonsInfo,
+        .waterMonsInfo = &Underwater_WaterMonsInfo, //&Underwater1_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = NULL,
     },
@@ -2387,7 +2167,15 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(UNDERWATER2),
         .mapNum = MAP_NUM(UNDERWATER2),
         .landMonsInfo = NULL,
-        .waterMonsInfo = NULL, //&Underwater2_WaterMonsInfo,
+        .waterMonsInfo = &Underwater_WaterMonsInfo, //&Underwater2_WaterMonsInfo,
+        .rockSmashMonsInfo = NULL,
+        .fishingMonsInfo = NULL,
+    },
+    {
+        .mapGroup = MAP_GROUP(UNDERWATER5),
+        .mapNum = MAP_NUM(UNDERWATER5),
+        .landMonsInfo = NULL,
+        .waterMonsInfo = &Underwater_WaterMonsInfo, //&Underwater2_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = NULL,
     },

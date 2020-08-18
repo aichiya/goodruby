@@ -108,6 +108,9 @@ IN GENERAL:
 #072 Tentacool, #073 Tentacruel
  * Now learns Power Whip by breeding.
 
+#074 Geodude, #075 Graveler, #076 Golem
+ * Now learns Sucker Punch by breeding.
+
 #077 Ponyta, #078 Rapidash
  * Rapidash's base stats changed: 65/100/70/80/80/105 (500) -> 65/100/70/80/80/115 (510).
 

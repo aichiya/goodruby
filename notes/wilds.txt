@@ -1,5 +1,4 @@
 WEIRDOS:
-Aerodactyl
 Snubbull
 Swinub
 Stantler
@@ -142,10 +141,10 @@ SHOAL CAVE: Sealeo (30%), Golbat (20%), Snorunt (15%), Piloswine (15%), Delibird
 SHOAL DEPTHS: Golbat (25%), Snorunt (25%), Piloswine (10%), Jynx (10%), Mawile (10%), Sableye (10%), Sneasel (10%)
 NEW MAUVILLE BASEMENT: Electrode (25%), Magneton (25%), Shuppet (20%), Electabuzz (10%), Lairon (10%), Hypno (10%)
 DEEP FIERY PATH: Magcargo (20%), Graveler (20%), Camerupt (15%), Machoke (15%), Weezing (10%), Torkoal (10%), Magmar (10%)
-UNDERWATER: Chinchou, Clamperl, Relicanth
-SEAFLOOR: Kabuto, Omanyte, Lileep, Anorith
+UNDERWATER: Lanturn (30%) Huntail (20%), Gorebyss (20%), Octillery (20%) Relicanth (5%), Corsola (5%)
+SEAFLOOR CAVERN:  Golbat (20%), Kingler (20%), Parasect (15%), Kabuto (10%), Omanyte (10%), Lileep (10%), Anorith (10%), Aerodactyl (5%)
 MIRAGE ISLAND: Wynaut, Tangela, Venomoth, Munchlax
-CAVE OF ORIGIN: Unown
+CAVE OF ORIGIN: Unown (80%), Mawile (5%), Sableye (5%), Wobbuffet (5%), Golbat (5%)
 SEALED CHAMBER:
 
 GNARLED DEN: Kangaskhan

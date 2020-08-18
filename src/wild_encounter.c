@@ -184,16 +184,18 @@ static u8 ChooseWildMonIndex_Water(void)
 {
     u8 rand = Random() % 100;
 
-    if (rand < 50)                  //50% chance
+    if (rand < 30)                  //30% chance
         return 0;
-    if (rand >= 50 && rand < 90)    //40% chance
+    if (rand >= 30 && rand < 50)    //20% chance
         return 1;
-    if (rand >= 90 && rand < 95)    //5% chance
+    if (rand >= 50 && rand < 70)    //20% chance
         return 2;
-    if (rand >= 95 && rand < 99)    //4% chance
+    if (rand >= 70 && rand < 90)    //20% chance
         return 3;
-    else                            //1% chance
+    if (rand >= 90 && rand < 95)    //5% chance
         return 4;
+    else                            //5% chance
+        return 5;
 }
 
 enum

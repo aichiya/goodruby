@@ -85,7 +85,7 @@
 85 - Dazzling Gleam Department Store
 86 - Grass Knot     Boy South of Rustboro
 87 - Signal Beam    New Mauville
-88 - Sleep Talk
+88 - Sleep Talk     Cave of Origin
 89 - U-Turn         Department Store
 90 - Substitute     Game Corner
 91 - Flash Cannon

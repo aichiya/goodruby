@@ -503,8 +503,24 @@ AARON: Altaria Lv50
 ALEX: Xatu Lv48, Dodrio Lv48, Honchkrow Lv48
 
 SEAFLOOR CAVERN:
+GRUNT (32): Magcargo Lv49, Dugtrio Lv49
+GRUNT (33): Snorlax Lv49, Steelix Lv49
+"GRUNT" (6): Claydol Lv49, Combusken Lv49, Shuckle Lv49
+GRUNT (34): Granbull Lv50
 
+GRUNT (7): Weezing Lv49, Raticate Lv49
+Courtney: Houndoom Lv50, Gengar Lv50, Seviper Lv50
 
-Grunt: Weezing, Raticate
-Courtney: Houndoom, Gengar, Seviper
+SOOTOPOLIS GYM:
+ANDREA: Omastar Lv50, Vileplume Lv50
+CONNIE: Glalie Lv50, Dragonair Lv49, Vaporeon Lv49
+
+BRIDGET: Lapras Lv50, Shelgon Lv50
+BRIANNA: Pidgeot Lv50, Umbreon Lv50
+
+CRISSY: Glaceon Lv50, Seaking Lv50
+OLIVIA: Jynx Lv50, Lanturn Lv50
+MARISSA: Azumarill Lv49, Persian Lv50, Quagsire Lv50
+TIFFANY: Roserade Lv50, Ninetales Lv50
+
 

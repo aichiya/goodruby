@@ -370,6 +370,8 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
 	if (attacker->ability == ABILITY_TECHNICIAN && (gBattleMovePower <= 60))
 		gBattleMovePower = (gBattleMovePower * 15) / 10;
 
+    if (attackerHoldEffect == HOLD_EFFECT_LIFE_ORB && move)
+        gBattleMovePower = (gBattleMovePower * 13) / 10;
     if (attackerHoldEffect == HOLD_EFFECT_CHOICE_BAND)
         attack = (150 * attack) / 100;
     if (attackerHoldEffect == HOLD_EFFECT_SOUL_DEW && !(gBattleTypeFlags & BATTLE_TYPE_BATTLE_TOWER) && (attacker->species == SPECIES_LATIAS || attacker->species == SPECIES_LATIOS))

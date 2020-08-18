@@ -22,46 +22,51 @@ SeafloorCavern_Room9_EventScript_15DAFA:: @ 815DAFA
 	waitmovement 0
 	applymovement 255, SeafloorCavern_Room9_Movement_15DD68
 	waitmovement 0
-	.ifdef SAPPHIRE
-	msgbox UnknownString_81B41B8, 4
-	.else
 	msgbox SeafloorCavern_Room9_Text_1B4850, 4
-	.endif
 	closemessage
 	addobject VAR_SPECIAL_4
 	applymovement 255, SeafloorCavern_Room9_Movement_1A083F
 	waitmovement 0
 	applymovement VAR_SPECIAL_4, SeafloorCavern_Room9_Movement_15DD36
 	waitmovement 0
-	.ifdef SAPPHIRE
-	msgbox UnknownString_81B41D5, 4
-	.else
 	msgbox SeafloorCavern_Room9_Text_1B486C, 4
-	.endif
 	applymovement VAR_SPECIAL_4, SeafloorCavern_Room9_Movement_1A0841
 	waitmovement 0
-	.ifdef SAPPHIRE
-	msgbox UnknownString_81B4201, 4
-	.else
 	msgbox SeafloorCavern_Room9_Text_1B4897, 4
-	.endif
 	applymovement VAR_SPECIAL_4, SeafloorCavern_Room9_Movement_1A0839
 	waitmovement 0
-	.ifdef SAPPHIRE
-	msgbox UnknownString_81B4289, 4
-	.else
 	msgbox SeafloorCavern_Room9_Text_1B491F, 4
-	.endif
-	.ifdef SAPPHIRE
-	trainerbattle 3, TRAINER_SEAFLOOR_CAVERN_GRUNT_5, 0, UnknownString_81B4319
-	.else
-	trainerbattle 3, TRAINER_SEAFLOOR_CAVERN_GRUNT_5, 0, SeafloorCavern_Room9_Text_1B49AE
-	.endif
-	.ifdef SAPPHIRE
-	msgbox UnknownString_81B432C, 4
-	.else
+    
+    closemessage
+	playse SE_PIN
+    applymovement 2, SeafloorCavern_Room9_Movement_1A0833
+    waitmovement 0
+    delay 40
+    
+    addobject 8
+    addobject 9
+    applymovement 8, SeafloorCavern_Room9_Movement_GruntEnter
+    applymovement 9, SeafloorCavern_Room9_Movement_CourtneyEnter
+    waitmovement 0
+    applymovement 255, SeafloorCavern_Room9_Movement_FaceDown
+    waitmovement 0
+    
+    msgbox SeafloorCavern_Room9_Text_GruntsAppear, 4
+	trainerbattle 3, TRAINER_GRUNT_7, 0, SeafloorCavern_Room9_Text_GruntBeaten
+    
+    applymovement 8, SeafloorCavern_Room9_Movement_GruntShift
+    applymovement 9, SeafloorCavern_Room9_Movement_CourtneyShift
+    waitmovement 0
+    
+    msgbox SeafloorCavern_Room9_Text_CourtneyFight, 4
+	trainerbattle 3, TRAINER_COURTNEY_2, 0, SeafloorCavern_Room9_Text_CourtneyBeaten
+   
+    applymovement 255, SeafloorCavern_Room9_Movement_FaceLeft
+    waitmovement 0
+    msgbox SeafloorCavern_Room9_Text_MaxieFight, 4
+    
+	trainerbattle 3, TRAINER_MAXIE_2, 0, SeafloorCavern_Room9_Text_1B49AE
 	msgbox SeafloorCavern_Room9_Text_1B49C1, 4
-	.endif
 	setweather WEATHER_NONE
 	doweather
 	special sub_8081924
@@ -128,6 +133,8 @@ SeafloorCavern_Room9_EventScript_15DAFA:: @ 815DAFA
 	.endif
 	playse SE_PC_LOGON
 	applymovement 255, SeafloorCavern_Room9_Movement_1A083F
+	applymovement 8, SeafloorCavern_Room9_Movement_1A083F
+	applymovement 9, SeafloorCavern_Room9_Movement_1A083F
 	waitmovement 0
 	.ifdef SAPPHIRE
 	msgbox UnknownString_81B4443, 4
@@ -289,3 +296,47 @@ SeafloorCavern_Room9_Movement_15DD68:: @ 815DD68
 	delay_16
 	delay_16
 	end_movement
+
+SeafloorCavern_Room9_Movement_GruntEnter:
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+    walk_fast_down
+	walk_fast_right
+	walk_fast_right
+    face_up
+	end_movement
+
+SeafloorCavern_Room9_Movement_CourtneyEnter:
+    delay_16
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+    walk_fast_down
+	walk_fast_right
+	end_movement
+
+SeafloorCavern_Room9_Movement_GruntShift:
+    walk_right
+    face_up
+    end_movement
+
+SeafloorCavern_Room9_Movement_CourtneyShift:
+    delay_16
+    walk_right
+    face_up
+    end_movement
+
+SeafloorCavern_Room9_Movement_FaceDown:
+    face_down
+    end_movement
+    
+SeafloorCavern_Room9_Movement_FaceLeft:
+    face_left
+    end_movement

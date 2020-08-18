@@ -231,6 +231,7 @@ extern u8 BattleScript_BerryCureConfusionRet[];
 extern u8 BattleScript_BerryCureChosenStatusRet[]; //berry cure any status return
 
 extern u8 BattleScript_ItemHealHP_Ret[];
+extern u8 BattleScript_ItemHurtHP_Ret[];
 extern u8 BattleScript_AnticipationShudder[];
 extern u8 BattleScript_Forewarn[];
 extern u8 BattleScript_Imposter[];
@@ -4303,9 +4304,34 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                     effect++;
                 }
                 break;
-            }
+            }                
         }
         break;
+    case 5:
+        if (gBattleMoveDamage)
+        {
+            switch (atkHoldEffect)
+            {
+            case HOLD_EFFECT_LIFE_ORB:
+                if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+                    && (gSpecialStatuses[gBankTarget].moveturnLostHP_physical
+                     || gSpecialStatuses[gBankTarget].moveturnLostHP_special)
+                    && gBankAttacker != gBankTarget
+                    && gBattleMons[gBankAttacker].hp != 0)
+                {
+                    gLastUsedItem = atkItem;
+                    gStringBank = gBankAttacker;
+                    gBattleStruct->scriptingActive = gBankAttacker;
+                    gBattleMoveDamage = (gBattleMons[gBankAttacker].maxHP / 10);
+                    if (gBattleMoveDamage == 0)
+                        gBattleMoveDamage = 1;
+                    BattleScriptPushCursor();
+                    gBattlescriptCurrInstr = BattleScript_ItemHurtHP_Ret;
+                    effect++;
+                }
+                break;
+            }
+        }
     }
 
     return effect;

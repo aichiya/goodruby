@@ -5,8 +5,8 @@
 #define OLD_MAX 15
 #define GOOD_MIN 15
 #define GOOD_MAX 20
-#define SUPER_MIN 30
-#define SUPER_MAX 45
+#define SUPER_MIN 35
+#define SUPER_MAX 40
 
 const struct WildPokemon DewfordSeaRegion_FishingMons[] = 
 {
