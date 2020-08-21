@@ -444,3 +444,5 @@
     enum BATTLE_TEXT_AssaultVest
     enum BATTLE_TEXT_AuraAquaRing
     enum BATTLE_TEXT_LifeOrb
+    enum BATTLE_TEXT_AuraAll
+    enum BATTLE_TEXT_AuraAllSharply

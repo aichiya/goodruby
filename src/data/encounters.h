@@ -1180,18 +1180,18 @@ const struct WildPokemonInfo Route124_LandMonsInfo = {20, Route124_LandMons};
 
 const struct WildPokemon Route130_LandMons [] =
 {
-    {30, 30, SPECIES_WYNAUT},
-    {35, 35, SPECIES_WYNAUT},
-    {25, 25, SPECIES_WYNAUT},
-    {40, 40, SPECIES_WYNAUT},
-    {20, 20, SPECIES_WYNAUT},
-    {45, 45, SPECIES_WYNAUT},
-    {15, 15, SPECIES_WYNAUT},
-    {50, 50, SPECIES_WYNAUT},
-    {10, 10, SPECIES_WYNAUT},
-    {5, 5, SPECIES_WYNAUT},
-    {10, 10, SPECIES_WYNAUT},
-    {5, 5, SPECIES_WYNAUT},
+    {37, 39, SPECIES_WYNAUT},
+    {37, 39, SPECIES_XATU},
+    {37, 39, SPECIES_VENOMOTH},
+    {37, 39, SPECIES_EXEGGCUTE},
+    {37, 39, SPECIES_TANGELA},
+    {37, 39, SPECIES_MANTINE},
+    {37, 39, SPECIES_VENOMOTH},
+    {37, 39, SPECIES_EXEGGCUTE},
+    {37, 39, SPECIES_TANGELA},
+    {37, 39, SPECIES_MUNCHLAX},
+    {37, 39, SPECIES_TANGELA},
+    {37, 39, SPECIES_MUNCHLAX},
 };
 const struct WildPokemonInfo Route130_LandMonsInfo = {20, Route130_LandMons};
 

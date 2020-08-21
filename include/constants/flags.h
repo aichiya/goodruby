@@ -258,6 +258,8 @@
 #define FLAG_HIDE_MOSSDEEP_AQUA_GRUNT       0x130
 #define FLAG_RECIEVED_DIVING_GEAR           0x131
 #define FLAG_MANIAC_EXAMINED_GS_BALL        0x132
+#define FLAG_GS_BALL_OPENED                 0x133
+#define FLAG_FOUGHT_CELEBI                  0x134
 
 // hidden item flags
 #define FLAG_HIDDEN_ITEMS_START  0x258
@@ -823,6 +825,7 @@
 #define FLAG_HIDE_SUICUNE                   0x4E6
 #define FLAG_HIDE_LAPRAS                    0x4E7
 #define FLAG_FOUGHT_LAPRAS                  0x4E8
+#define FLAG_HIDE_CELEBI                    0x4E9
 
 
 #define TRAINER_FLAG_START 0x500

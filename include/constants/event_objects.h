@@ -228,6 +228,10 @@
 #define EVENT_OBJ_GFX_ENTEI 224
 #define EVENT_OBJ_GFX_SUICUNE 225
 #define EVENT_OBJ_GFX_LAPRAS 226
+#define EVENT_OBJ_GFX_MEW 227
+#define EVENT_OBJ_GFX_CELEBI 228
+#define EVENT_OBJ_GFX_JIRACHI 229
+#define EVENT_OBJ_GFX_MEWTWO 230
 
 // These are dynamic object gfx ids.
 // They correspond with the values of the VAR_OBJ_GFX_ID_X vars.
@@ -249,7 +253,7 @@
 #define EVENT_OBJ_GFX_VAR_E 254
 #define EVENT_OBJ_GFX_VAR_F 255
 
-#define NUM_OBJECT_GRAPHICS_INFO 226
+#define NUM_OBJECT_GRAPHICS_INFO 230
 #define SPRITE_VAR 239
 
 #define SHADOW_SIZE_S 0

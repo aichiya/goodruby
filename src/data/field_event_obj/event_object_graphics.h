@@ -168,6 +168,10 @@ const u32 gEventObjectPic_Moltres[] = INCBIN_U32("graphics/event_objects/pics/po
 const u32 gEventObjectPic_Raikou[] = INCBIN_U32("graphics/event_objects/pics/pokemon/raikou.4bpp");
 const u32 gEventObjectPic_Entei[] = INCBIN_U32("graphics/event_objects/pics/pokemon/entei.4bpp");
 const u32 gEventObjectPic_Suicune[] = INCBIN_U32("graphics/event_objects/pics/pokemon/suicune.4bpp");
+const u32 gEventObjectPic_Mew[] = INCBIN_U32("graphics/event_objects/pics/pokemon/mew.4bpp");
+const u32 gEventObjectPic_Celebi[] = INCBIN_U32("graphics/event_objects/pics/pokemon/celebi.4bpp");
+const u32 gEventObjectPic_Jirachi[] = INCBIN_U32("graphics/event_objects/pics/pokemon/jirachi.4bpp");
+const u32 gEventObjectPic_Mewtwo[] = INCBIN_U32("graphics/event_objects/pics/pokemon/mewtwo.4bpp");
 const u32 gEventObjectPic_Skitty[] = INCBIN_U32("graphics/event_objects/pics/pokemon/skitty.4bpp");
 const u32 gEventObjectPic_Kecleon[] = INCBIN_U32("graphics/event_objects/pics/pokemon/kecleon.4bpp");
 const u32 gEventObjectPic_Rayquaza[] = INCBIN_U32("graphics/event_objects/pics/pokemon/rayquaza.4bpp");
@@ -313,5 +317,9 @@ const u16 gEventObjectPalette35[] = INCBIN_U16("graphics/event_objects/palettes/
 const u16 gEventObjectPalette36[] = INCBIN_U16("graphics/event_objects/palettes/36.gbapal");
 const u32 gEventObjectPic_Lapras[] = INCBIN_U32("graphics/event_objects/pics/pokemon/lapras.4bpp");
 const u16 gEventObjectPalette37[] = INCBIN_U16("graphics/event_objects/palettes/37.gbapal");
+const u16 gEventObjectPalette38[] = INCBIN_U16("graphics/event_objects/palettes/38.gbapal");
+const u16 gEventObjectPalette39[] = INCBIN_U16("graphics/event_objects/palettes/39.gbapal");
+const u16 gEventObjectPalette40[] = INCBIN_U16("graphics/event_objects/palettes/40.gbapal");
+const u16 gEventObjectPalette41[] = INCBIN_U16("graphics/event_objects/palettes/41.gbapal");
 
 #endif //POKERUBY_EVENT_OBJECT_GFX_H

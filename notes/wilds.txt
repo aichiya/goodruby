@@ -143,7 +143,7 @@ NEW MAUVILLE BASEMENT: Electrode (25%), Magneton (25%), Shuppet (20%), Electabuz
 DEEP FIERY PATH: Magcargo (20%), Graveler (20%), Camerupt (15%), Machoke (15%), Weezing (10%), Torkoal (10%), Magmar (10%)
 UNDERWATER: Lanturn (30%) Huntail (20%), Gorebyss (20%), Octillery (20%) Relicanth (5%), Corsola (5%)
 SEAFLOOR CAVERN:  Golbat (20%), Kingler (20%), Parasect (15%), Kabuto (10%), Omanyte (10%), Lileep (10%), Anorith (10%), Aerodactyl (5%)
-MIRAGE ISLAND: Wynaut, Tangela, Venomoth, Munchlax
+MIRAGE ISLAND: Wynaut (20%), Xatu (20%), Venomoth (15%), Exeggcute (15%), Tangela (15%), Mantine (10%), Munchlax (5%)
 CAVE OF ORIGIN: Unown (80%), Mawile (5%), Sableye (5%), Wobbuffet (5%), Golbat (5%)
 SEALED CHAMBER:
 

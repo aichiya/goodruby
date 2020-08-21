@@ -1214,10 +1214,13 @@ u16 GetMUS_ForBattle(void)
     if (gBattleTypeFlags & BATTLE_TYPE_REGI)
     {
         u16 species = GetMonData(&gEnemyParty[0], MON_DATA_SPECIES);
-        if (species == SPECIES_ARTICUNO || species == SPECIES_ZAPDOS || species == SPECIES_MOLTRES)
+        if (species == SPECIES_ARTICUNO || species == SPECIES_ZAPDOS || species == SPECIES_MOLTRES
+            || species == SPECIES_MEW || species == SPECIES_MEWTWO)
             return MUS_KANTO_LEGEND;
         if (species == SPECIES_RAIKOU || species == SPECIES_ENTEI || species == SPECIES_SUICUNE)
             return MUS_SUIKUN;
+        if (species == SPECIES_CELEBI) // ???
+            return MUS_KANTO_LEGEND;
         return MUS_BATTLE36;
     }
     if (gBattleTypeFlags & BATTLE_TYPE_LINK)

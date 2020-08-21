@@ -1996,4 +1996,52 @@ const struct SpriteFrameImage gEventObjectPicTable_Lapras[] = {
     overworld_frame(gEventObjectPic_Lapras, 4, 4, 2)
 };
 
+const struct SpriteFrameImage gEventObjectPicTable_Mew[] = {
+    overworld_frame(gEventObjectPic_Mew, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Mew, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Mew, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Mew, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Mew, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Mew, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Mew, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Mew, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Mew, 4, 4, 0)
+};
+
+const struct SpriteFrameImage gEventObjectPicTable_Celebi[] = {
+    overworld_frame(gEventObjectPic_Celebi, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Celebi, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Celebi, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Celebi, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Celebi, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Celebi, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Celebi, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Celebi, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Celebi, 4, 4, 0)
+};
+
+const struct SpriteFrameImage gEventObjectPicTable_Jirachi[] = {
+    overworld_frame(gEventObjectPic_Jirachi, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Jirachi, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Jirachi, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Jirachi, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Jirachi, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Jirachi, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Jirachi, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Jirachi, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Jirachi, 4, 4, 0)
+};
+
+const struct SpriteFrameImage gEventObjectPicTable_Mewtwo[] = {
+    overworld_frame(gEventObjectPic_Mewtwo, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Mewtwo, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Mewtwo, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Mewtwo, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Mewtwo, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Mewtwo, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Mewtwo, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Mewtwo, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Mewtwo, 4, 4, 0)
+};
+
 #endif //POKERUBY_EVENT_OBJECT_PIC_TABLES_H

@@ -671,6 +671,7 @@ EventScript_15F573:
 	.include "data/maps/Route123/text.inc"
 	.include "data/maps/Route124/text.inc"
 	.include "data/maps/Route128/text.inc"
+    .include "data/maps/Route130/text.inc"
 	.include "data/maps/Route135/text.inc"
 	.include "data/maps/LittlerootTown_BrendansHouse_1F/text.inc"
 	.include "data/maps/LittlerootTown_BrendansHouse_2F/text.inc"

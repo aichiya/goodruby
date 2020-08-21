@@ -4354,6 +4354,18 @@ void bc_aura_message(void)
                 gActiveBattler = 1;
                 PrepareStringBattle(447, 1);
                 break;
+            case SPECIES_MEW:
+            case SPECIES_CELEBI:
+            case SPECIES_JIRACHI: // +1 all
+                gBattleMons[1].statStages[STAT_STAGE_ATK] += 1;
+                gBattleMons[1].statStages[STAT_STAGE_DEF] += 1;
+                gBattleMons[1].statStages[STAT_STAGE_SPATK] += 1;
+                gBattleMons[1].statStages[STAT_STAGE_SPATK] += 1;
+                gBattleMons[1].statStages[STAT_STAGE_SPEED] += 1;
+                gActiveBattler = 1;
+                PrepareStringBattle(458, 1);
+                break;
+            
             case SPECIES_RAIKOU: // eva+2
                 statId = 7;
                 gBattleMons[1].statStages[statId] += 2;
