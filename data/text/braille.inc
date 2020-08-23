@@ -98,13 +98,15 @@ SealedChamber_OuterRoom_Braille_1C53A9:: @ 81C53A9
 	.braille ",$"
 
 SealedChamber_OuterRoom_Braille_1C53B1:: @ 81C53B1
+	.byte 2
+	.byte 2
+	.byte 28
+	.byte 17
+	.byte 4
 	.byte 5
-	.byte 6
-	.byte 25
-	.byte 13
-	.byte 7
-	.byte 9
-	.braille "DIG HERE.$"
+	.braille "I AM THE\n"
+    .braille "THRONE. HEED\n"
+    .braille "STEEL LAST.$"
 
 SealedChamber_InnerRoom_Braille_1C53C1:: @ 81C53C1
 	.byte 3
@@ -221,6 +223,39 @@ AncientTomb_Braille_1C552E:: @ 81C552E
     .braille "POISON BEARING\n"
     .braille "ANOTHER POISON\n"
     .braille "INSIDE OF IT.$"
+
+DesertRuins_Braille_BackWall::
+	.byte 0
+	.byte 2
+	.byte 29
+	.byte 17
+	.byte 1
+	.byte 5
+    .braille "AT THE THRONE\n"
+    .braille "SIX MUST BEAR\n"
+    .braille "THAWING FRUIT.$"
+
+IslandCave_Braille_BackWall::
+	.byte 0
+	.byte 2
+	.byte 29
+	.byte 17
+	.byte 1
+	.byte 5
+    .braille "AT THE THRONE\n"
+    .braille "PREPARE TO\n"
+    .braille "USE A WALLET.$"
+
+AncientTomb_Braille_BackWall::
+	.byte 0
+	.byte 2
+	.byte 29
+	.byte 17
+	.byte 1
+	.byte 5
+    .braille "AT THE THRONE\n"
+    .braille "CAST AWAY A\n"
+    .braille "MORNING SIGIL.$"
 
 GraniteCave_B3F_Braille::
 	.byte 0

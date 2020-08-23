@@ -10,6 +10,9 @@ AncientTomb_MapBGEvents:: @ 838E70C
 	bg_event 8, 20, 0, BG_EVENT_PLAYER_FACING_ANY, AncientTomb_BrailleWall
 	bg_event 7, 20, 0, BG_EVENT_PLAYER_FACING_ANY, AncientTomb_BrailleWall
 	bg_event 9, 20, 0, BG_EVENT_PLAYER_FACING_ANY, AncientTomb_BrailleWall
+	bg_event 7, 2, 0, BG_EVENT_PLAYER_FACING_ANY, AncientTomb_EventScript_BackWall
+	bg_event 8, 2, 0, BG_EVENT_PLAYER_FACING_ANY, AncientTomb_EventScript_BackWall
+	bg_event 9, 2, 0, BG_EVENT_PLAYER_FACING_ANY, AncientTomb_EventScript_BackWall
 
 AncientTomb_MapEvents:: @ 838E730
 	map_events AncientTomb_EventObjects, AncientTomb_MapWarps, 0x0, AncientTomb_MapBGEvents

@@ -10,6 +10,9 @@ IslandCave_MapBGEvents:: @ 838E6A4
 	bg_event 8, 20, 0, BG_EVENT_PLAYER_FACING_ANY, IslandCave_EventScript_BrailleWall
 	bg_event 7, 20, 0, BG_EVENT_PLAYER_FACING_ANY, IslandCave_EventScript_BrailleWall
 	bg_event 9, 20, 0, BG_EVENT_PLAYER_FACING_ANY, IslandCave_EventScript_BrailleWall
+	bg_event 7, 2, 0, BG_EVENT_PLAYER_FACING_ANY, IslandCave_EventScript_BackWall
+	bg_event 8, 2, 0, BG_EVENT_PLAYER_FACING_ANY, IslandCave_EventScript_BackWall
+	bg_event 9, 2, 0, BG_EVENT_PLAYER_FACING_ANY, IslandCave_EventScript_BackWall
 
 IslandCave_MapEvents:: @ 838E6C8
 	map_events IslandCave_EventObjects, IslandCave_MapWarps, 0x0, IslandCave_MapBGEvents

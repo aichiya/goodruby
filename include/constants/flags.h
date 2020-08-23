@@ -826,6 +826,7 @@
 #define FLAG_HIDE_LAPRAS                    0x4E7
 #define FLAG_FOUGHT_LAPRAS                  0x4E8
 #define FLAG_HIDE_CELEBI                    0x4E9
+#define FLAG_HIDE_MEW                       0x4EA
 
 
 #define TRAINER_FLAG_START 0x500

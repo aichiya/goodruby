@@ -87,3 +87,11 @@ IslandCave_EventScript_15EF9D:: @ 815EF9D
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	release
 	end
+
+IslandCave_EventScript_BackWall::
+	lockall
+	braillemessage IslandCave_Braille_BackWall
+	waitbuttonpress
+	erasebox 0, 0, 29, 19
+	releaseall
+	end

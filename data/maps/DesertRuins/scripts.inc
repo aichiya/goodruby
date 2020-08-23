@@ -83,3 +83,11 @@ DesertRuins_EventScript_15CB85:: @ 815CB85
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	release
 	end
+
+DesertRuins_EventScript_BackWall::
+	lockall
+	braillemessage DesertRuins_Braille_BackWall
+	waitbuttonpress
+	erasebox 0, 0, 29, 19
+	releaseall
+	end

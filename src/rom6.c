@@ -199,8 +199,7 @@ int FldEff_UseDig(void)
 
     gTasks[taskId].data[8] = (u32)sub_810B634 >> 16;
     gTasks[taskId].data[9] = (u32)sub_810B634;
-    if (!ShouldDoBrailleDigEffect())
-        SetPlayerAvatarTransitionFlags(PLAYER_AVATAR_FLAG_ON_FOOT);
+    SetPlayerAvatarTransitionFlags(PLAYER_AVATAR_FLAG_ON_FOOT);
     return 0;
 }
 
@@ -209,13 +208,6 @@ static void sub_810B634(void)
     u8 taskId;
 
     FieldEffectActiveListRemove(FLDEFF_USE_DIG);
-    if (ShouldDoBrailleDigEffect())
-    {
-        DoBrailleDigEffect();
-    }
-    else
-    {
-        taskId = CreateTask(task08_080A1C44, 8);
-        gTasks[taskId].data[0] = 0;
-    }
+    taskId = CreateTask(task08_080A1C44, 8);
+    gTasks[taskId].data[0] = 0;
 }

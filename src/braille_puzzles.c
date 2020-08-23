@@ -16,6 +16,7 @@
 #include "text.h"
 #include "constants/field_effects.h"
 #include "constants/flags.h"
+#include "constants/items.h"
 #include "constants/maps.h"
 #include "constants/songs.h"
 #include "constants/species.h"
@@ -26,12 +27,21 @@ extern u8 gLastFieldPokeMenuOpened;
 
 extern u8 S_OpenRegiceChamber[]; // regiice event script
 
-bool8 ShouldDoBrailleDigEffect(void)
+bool8 ShouldDoBrailleSealedChamberEffect(void)
 {
+    u8 i;
     if (!FlagGet(FLAG_SYS_BRAILLE_DIG)
      && (gSaveBlock1.location.mapGroup == MAP_GROUP(SEALED_CHAMBER_OUTER_ROOM)
      && gSaveBlock1.location.mapNum == MAP_NUM(SEALED_CHAMBER_OUTER_ROOM)))
     {
+        for (i = 0; i < 6; i++)
+        {
+            u16 item = GetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM);
+            if (item != ITEM_ASPEAR_BERRY && item != ITEM_LUM_BERRY)
+                return FALSE;
+        }
+        if (gSaveBlock1.registeredItem != ITEM_COIN_CASE)
+            return FALSE;
         if (gSaveBlock1.pos.x == 10 && gSaveBlock1.pos.y == 3)
             return TRUE;
         else if (gSaveBlock1.pos.x == 9 && gSaveBlock1.pos.y == 3)
@@ -43,7 +53,7 @@ bool8 ShouldDoBrailleDigEffect(void)
     return FALSE;
 }
 
-void DoBrailleDigEffect(void)
+void DoBrailleSealedChamberEffect(void)
 {
     MapGridSetMetatileIdAt(16, 8, 554);
     MapGridSetMetatileIdAt(17, 8, 555);
@@ -51,10 +61,10 @@ void DoBrailleDigEffect(void)
     MapGridSetMetatileIdAt(16, 9, 3634);
     MapGridSetMetatileIdAt(17, 9, 563);
     MapGridSetMetatileIdAt(18, 9, 3636);
-    DrawWholeMapView();
+    //DrawWholeMapView();
     PlaySE(SE_BAN);
     FlagSet(FLAG_SYS_BRAILLE_DIG);
-    ScriptContext2_Disable();
+    //ScriptContext2_Disable();
 }
 
 bool8 CheckRelicanthWailord(void)

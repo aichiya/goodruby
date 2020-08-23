@@ -1,5 +1,14 @@
 SealedChamber_InnerRoom_MapScripts:: @ 815F1E7
+	map_script 5, SealedChamber_InnerRoom_MapScript
 	.byte 0
+
+SealedChamber_InnerRoom_MapScript::
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, SealedChamber_InnerRoom_EventScript_SnipSomething
+	end
+
+SealedChamber_InnerRoom_EventScript_SnipSomething:
+    removeobject LAST_TALKED
+    return
 
 SealedChamber_InnerRoom_EventScript_15F1E8:: @ 815F1E8
 	lockall
@@ -84,4 +93,19 @@ SealedChamber_InnerRoom_EventScript_15F28F:: @ 815F28F
 	waitbuttonpress
 	erasebox 0, 0, 29, 19
 	releaseall
+	end
+
+SealedChamber_InnerRoom_EventScript_Mew::
+	lock
+	waitse
+	playmoncry SPECIES_MEW, 2
+	delay 40
+	waitmoncry
+	setwildbattle SPECIES_MEW, 50, ITEM_NONE
+	setflag FLAG_HIDE_MEW
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	special ScrSpecial_StartRegiBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	release
 	end

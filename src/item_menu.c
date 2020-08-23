@@ -1,6 +1,7 @@
 #include "global.h"
 #include "berry.h"
 #include "berry_tag_screen.h"
+#include "braille_puzzles.h"
 #include "data2.h"
 #include "decompress.h"
 #include "field_effect.h"
@@ -907,15 +908,20 @@ static void sub_80A3D40(void)
         sub_80A3D24(i);
 }
 
+// Adjust quantity of selected item, maybe re-adjust inventory
 static void sub_80A3D5C(u8 taskId)
 {
     u32 index = gBagPocketScrollStates[sCurrentBagPocket].scrollTop + gBagPocketScrollStates[sCurrentBagPocket].cursorPos;
+    u16 item = gCurrentBagPocketItemSlots[index].itemId;
+    
+    if (item == ITEM_DAWN_STONE && ShouldDoBrailleSealedChamberEffect())
+        DoBrailleSealedChamberEffect();
 
     gCurrentBagPocketItemSlots[index].quantity -= gTasks[taskId].data[1];
     if (gCurrentBagPocketItemSlots[index].quantity == 0)  // item slot will be removed if the quantity is zero
     {
         // Un-register the item if registered
-        if (gSaveBlock1.registeredItem == gCurrentBagPocketItemSlots[index].itemId)
+        if (gSaveBlock1.registeredItem == item)
         {
             RemoveSelectIconFromRegisteredItem();
             gSaveBlock1.registeredItem = ITEM_NONE;

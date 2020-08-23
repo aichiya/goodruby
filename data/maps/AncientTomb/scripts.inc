@@ -83,3 +83,11 @@ AncientTomb_EventScript_15F050:: @ 815F050
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	release
 	end
+
+AncientTomb_EventScript_BackWall::
+	lockall
+	braillemessage AncientTomb_Braille_BackWall
+	waitbuttonpress
+	erasebox 0, 0, 29, 19
+	releaseall
+	end

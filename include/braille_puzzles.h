@@ -11,8 +11,8 @@ bool32 BrailleWait_CheckButtonPress(void);
 bool8 ShouldDoBrailleCutEffect(void);
 void DoBrailleCutEffect(void);
 void SealedChamberShakingEffect(u8 taskId);
-bool8 ShouldDoBrailleDigEffect(void);
-void DoBrailleDigEffect(void);
+bool8 ShouldDoBrailleSealedChamberEffect(void);
+void DoBrailleSealedChamberEffect(void);
 void DoBrailleFlyEffect(void);
 
 #endif
