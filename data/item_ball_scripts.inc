@@ -171,7 +171,7 @@ Route121_EventScript_1B164E:: @ 81B164E
 	end
 
 Route123_EventScript_1B165B:: @ 81B165B
-	giveitem_std ITEM_CALCIUM, 1, 1
+	giveitem_std ITEM_TM74_WILD_CHARGE, 1, 1
 	end
 
 Route123_EventScript_1B1668:: @ 81B1668
@@ -208,6 +208,10 @@ Route127_EventScript_1B16C3:: @ 81B16C3
 
 Route127_EventScript_1B16D0:: @ 81B16D0
 	giveitem_std ITEM_CARBOS, 1, 1
+	end
+
+Route130_EventScript_TM59::
+	giveitem_std ITEM_TM59_DRAGON_PULSE, 1, 1
 	end
 
 Route132_EventScript_1B16DD:: @ 81B16DD
@@ -415,7 +419,7 @@ SafariZone_Northwest_EventScript_1B190C:: @ 81B190C
 	end
 
 SafariZone_Northeast_EventScript_1B1919:: @ 81B1919
-	giveitem_std ITEM_CALCIUM, 1, 1
+	giveitem_std ITEM_TM23_IRON_TAIL, 1, 1
 	end
 
 SafariZone_Southwest_EventScript_1B1926:: @ 81B1926

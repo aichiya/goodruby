@@ -31,3 +31,17 @@ MauvilleCity_PokemonCenter_1F_EventScript_157380:: @ 8157380
 MauvilleCity_PokemonCenter_1F_EventScript_157389:: @ 8157389
 	msgbox MauvilleCity_PokemonCenter_1F_Text_1826A6, 2
 	end
+
+MauvilleCity_PokemonCenter_1F_EventScript_Man::
+    lock
+    faceplayer
+    msgbox MauvilleCity_PokemonCenter_1F_Text_Man, 4
+	giveitem_std ITEM_TM42_FACADE
+	msgbox MauvilleCity_PokemonCenter_1F_Text_Man2, 4
+    closemessage
+    fadescreen 0x1
+    setflag FLAG_GOT_MAUVILLE_TM
+    removeobject 2
+    fadescreen 0x0
+	release
+	end

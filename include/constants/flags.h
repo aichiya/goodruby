@@ -232,7 +232,7 @@
 #define FLAG_RECEIVED_SOOTHE_BELL           0x116
 #define FLAG_RECEIVED_WHITE_HERB            0x117
 #define FLAG_RECEIVED_SOFT_SAND             0x118
-
+#define FLAG_RECIEVED_BRICK_BREAK_TM        0x119
 #define FLAG_RECEIVED_CLEANSE_TAG           0x11A
 #define FLAG_RECEIVED_FOCUS_BAND            0x11B
 #define FLAG_DECLINED_WALLY_BATTLE_MAUVILLE 0x11C
@@ -260,6 +260,8 @@
 #define FLAG_MANIAC_EXAMINED_GS_BALL        0x132
 #define FLAG_GS_BALL_OPENED                 0x133
 #define FLAG_FOUGHT_CELEBI                  0x134
+#define FLAG_GOT_MAUVILLE_TM                0x135
+#define FLAG_GOT_RETURN_TM                  0x136
 
 // hidden item flags
 #define FLAG_HIDDEN_ITEMS_START  0x258
@@ -795,6 +797,7 @@
 #define FLAG_HIDE_MAUVILLEBF3_ITEM          0x491
 #define FLAG_HIDE_NAMELESS_CAVERN_ITEM      0x492
 #define FLAG_ITEM_ROUTE134                  0x493
+#define FLAG_ITEM_ROUTE130                  0x494
 
 #define FLAG_DEFEATED_RUSTBORO_GYM          0x4B1
 

@@ -1,10 +1,10 @@
 01 - Focus Punch    North of Rustboro, on ground
 02 - Dragon Claw    Route 134 (*Meteor Falls)
 03 - Psyshock       Nameless Cavern
-04 - Calm Mind      *Mossdeep Gym
+04 - Calm Mind      Mossdeep Gym
 05 - Roar           West of Fallarbor
 06 - Toxic          Department Store
-07 - Heal Bell      Slateport Market (*Shoal Cave)
+07 - Heal Bell      Slateport Market
 08 - Bulk Up        Dewford Gym
 09 - Venoshock      Route 113, hidden
 10 - Hidden Power   Fortree Town
@@ -20,18 +20,18 @@
 20 - Safeguard      Department Store
 21 - Seed Bomb      Route 119 (*Pacifidlog (replacing Frustration))
 22 - Solar Beam     Safari Zone
-23 - Iron Tail      *Meteor Falls
+23 - Iron Tail      Safari Zone (*Meteor Falls)
 24 - Thunderbolt    Department Store
 25 - Thunder        New Mauville Basement
-26 - Earthquake     *Seafloor Cavern
-27 - Return         Fallarbor Town (*Pacifidlog)
+26 - Earthquake     Seafloor Cavern
+27 - Return         Pacifidlog Town
 28 - Dig            Fossil Maniac
 29 - Psychic        Department Store (*Victory Road+Game Corner)
 30 - Shadow Ball    Mt. Pyre
-31 - Brick Break    *Sootopolis
+31 - Brick Break    Route 111
 32 - Drain Punch    Game Corner
 33 - Reflect        Department Store
-34 - Sludge Wave    *Mauville Gym
+34 - Sludge Wave    
 35 - Flamethrower   Department Store
 36 - Sludge Bomb    Dewford Town (later)
 37 - Heat Wave      Magma Hideout
@@ -39,14 +39,14 @@
 39 - Rock Tomb      Slateport Market
 40 - Aerial Ace     Granite Cave
 41 - Torment        Slateport Contest Hall
-42 - Facade         [Gone]
+42 - Facade         Mauville City
 43 - Secret Power   North of Desert
 44 - Rest           Lilycove City
 45 - Attract        Verdanturf Contest Hall
 46 - Thief          Slateport Museum
 47 - Steel Wing     Granite Cave from Steven
 48 - Icy Wind       Abandoned Ship (*Mt. Pyre)
-49 - Superpower     *SS Tidal
+49 - Superpower     Sootopolis City (*SS Tidal)
 50 - Overheat       Lavaridge Gym
 51 - Roost          Fortree Gym
 52 - Focus Blast
@@ -56,7 +56,7 @@
 56 - ThunderPunch   Game Corner
 57 - Charge Beam    Slateport Market
 58 - Endure         Slateport Market
-59 - Dragon Pulse
+59 - Dragon Pulse   Route 130
 60 - Hyper Voice
 61 - Will-o-Wisp    Mt. Pyre
 62 - Acrobatics
@@ -88,7 +88,7 @@
 88 - Sleep Talk     Cave of Origin
 89 - U-Turn         Department Store
 90 - Substitute     Game Corner
-91 - Flash Cannon
+91 - Flash Cannon   Mossdeep City
 92 - Trick Room     Trick House Round 3
 H1 - Cut
 H2 - Fly

@@ -16,3 +16,15 @@ MauvilleCity_PokemonCenter_1F_Text_1826A6:: @ 81826A6
 	.string "the POKéMON CENTER.\p"
 	.string "I don't know what it's about, but it\n"
 	.string "sounds fun. I'll go check it out!$"
+
+MauvilleCity_PokemonCenter_1F_Text_Man::
+    .string "Hm!\n"
+    .string "This world has been doctored.\p"
+    .string "In another reality, I would provide\n"
+    .string "a bothersome, pointless service.\p"
+    .string "A strange power is at work here.\n"
+    .string "Take this. Trust no one.$"
+
+MauvilleCity_PokemonCenter_1F_Text_Man2::
+    .string "Now, I must return to my own world.\n"
+    .string "Let us never meet again.$"

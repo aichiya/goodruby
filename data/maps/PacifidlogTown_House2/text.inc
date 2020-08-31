@@ -13,7 +13,7 @@ PacifidlogTown_House2_Text_179155:: @ 8179155
 PacifidlogTown_House2_Text_179169:: @ 8179169
 	.string "It clearly likes you very much.\p"
 	.string "A POKéMON that adoring and adorable\n"
-	.string "deserves a TM like this, no?$"
+	.string "deserves an item like this, no?$"
 
 PacifidlogTown_House2_Text_1791CA:: @ 81791CA
 	.string "Hmm...\n"
@@ -22,15 +22,12 @@ PacifidlogTown_House2_Text_1791CA:: @ 81791CA
 	.string "some more effort.$"
 
 PacifidlogTown_House2_Text_17922D:: @ 817922D
-	.string "It has a vicious look to it.\p"
-	.string "A frightening POKéMON like that\n"
-	.string "deserves a TM like this.$"
+	.string "It has a vicious look to it...\p"
+	.string "Treat this Pokémon better!$"
 
 PacifidlogTown_House2_Text_179283:: @ 8179283
 	.string "If a POKéMON likes you a lot, RETURN's\n"
-	.string "power is enhanced.\p"
-	.string "If it doesn't like you, FRUSTRATION's\n"
-	.string "power goes up.$"
+	.string "power is enhanced.$"
 
 PacifidlogTown_House2_Text_1792F2:: @ 81792F2
 	.string "Oh, yes. In about {STR_VAR_1} or so days,\n"

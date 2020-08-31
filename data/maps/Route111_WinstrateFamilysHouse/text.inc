@@ -36,6 +36,12 @@ Route111_WinstrateFamilysHouse_Text_192219:: @ 8192219
 	.string "Knowing my grandson, he could be the\n"
 	.string "CHAMPION already!$"
 
+Route111_WinstrateFamilysHouse_Text_GiveBrickBreak::
+	.string "There's no question that you're strong.\n"
+    .string "But, you've room to grow stronger.\p"
+    .string "This TM contains Brick Break.\n"
+    .string "Remember us when you use it.$"
+
 Route111_WinstrateFamilysHouse_Text_192334:: @ 8192334
 	.string "My grandson must be challenging the\n"
 	.string "POKéMON LEAGUE CHAMPION by now.\p"

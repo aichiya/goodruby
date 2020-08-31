@@ -41,7 +41,19 @@ PacifidlogTown_House2_EventScript_1541E8:: @ 81541E8
 
 PacifidlogTown_House2_EventScript_1541EC:: @ 81541EC
 	msgbox PacifidlogTown_House2_Text_179169, 4
+    goto_if_set FLAG_GOT_RETURN_TM, PacifidlogTown_House2_EventScript_GiveCandy
 	giveitem_std ITEM_TM27_RETURN
+	compare RESULT, 0
+	goto_if_eq PacifidlogTown_House2_EventScript_1A029B
+    setflag FLAG_GOT_RETURN_TM
+	setflag FLAG_RECEIVED_FANCLUB_TM_THIS_WEEK
+	special SetPacifidlogTMReceivedDay
+	msgbox PacifidlogTown_House2_Text_179283, 4
+	release
+	end
+
+PacifidlogTown_House2_EventScript_GiveCandy::
+	giveitem_std ITEM_RARE_CANDY
 	compare RESULT, 0
 	goto_if_eq PacifidlogTown_House2_EventScript_1A029B
 	setflag FLAG_RECEIVED_FANCLUB_TM_THIS_WEEK
@@ -57,12 +69,7 @@ PacifidlogTown_House2_EventScript_15421B:: @ 815421B
 
 PacifidlogTown_House2_EventScript_154225:: @ 8154225
 	msgbox PacifidlogTown_House2_Text_17922D, 4
-	giveitem_std ITEM_TM21_SEED_BOMB
-	compare RESULT, 0
-	goto_if_eq PacifidlogTown_House2_EventScript_1A029B
-	setflag FLAG_RECEIVED_FANCLUB_TM_THIS_WEEK
 	special SetPacifidlogTMReceivedDay
-	msgbox PacifidlogTown_House2_Text_179283, 4
 	release
 	end
 
