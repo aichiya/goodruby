@@ -1,6 +1,6 @@
 Route110_TrickHousePuzzle1_Text_19CB4F:: @ 819CB4F
 	.string "I'll hack and slash my way to victory\n"
-	.string "with the CUT we just learned!$"
+	.string "with the Cut we just learned!$"
 
 Route110_TrickHousePuzzle1_Text_19CB93:: @ 819CB93
 	.string "Why are you so serious?$"
@@ -21,7 +21,7 @@ Route110_TrickHousePuzzle1_Text_19CC1B:: @ 819CC1B
 	.string "even more lost... I can't get out...$"
 
 Route110_TrickHousePuzzle1_Text_19CC68:: @ 819CC68
-	.string "Just who is the TRICK MASTER?$"
+	.string "Just who is the Trick Master?$"
 
 Route110_TrickHousePuzzle1_Text_19CC86:: @ 819CC86
 	.string "I lost while I was lost in thought!$"
@@ -33,6 +33,6 @@ Route110_TrickHousePuzzle1_Text_19CCAA:: @ 819CCAA
 UnknownString_819CCCB: @ 819CCCB
 	.string "{PLAYER} wrote down the secret code\n"
 	.string "on the door.\p"
-	.string "“TRICK MASTER is smart.”\n"
+	.string "“Trick Master is smart.”\n"
 	.string "... ... ... ... ... ... ... ...\p"
 	.string "The lock clicked open!$"

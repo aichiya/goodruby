@@ -1,5 +1,5 @@
 DewfordTown_Text_16B23B:: @ 816B23B
-	.string "DEWFORD TOWN is a tiny island community.\n"
+	.string "Dewford Town is a tiny island community.\n"
 	.string "If something gets trendy here,\l"
 	.string "everyone picks up on it right away.$"
 
@@ -18,29 +18,29 @@ DewfordTown_Text_16B317:: @ 816B317
 
 Route104_Text_16B347:: @ 816B347
 	.string "MR. BRINEY: Ahoy!\n"
-	.string "We've hit land in DEWFORD.\p"
+	.string "We've hit land in Dewford.\p"
 	.string "I suppose you're off to deliver that\n"
-	.string "LETTER to, who was it now, STEVEN!$"
+	.string "Letter to, who was it now, Steven!$"
 
 DewfordTown_Text_16B3BC:: @ 816B3BC
 	.string "MR. BRINEY: Have you delivered your\n"
-	.string "LETTER?\p"
+	.string "Letter?\p"
 	.string "Or were you meaning to sail back to\n"
-	.string "PETALBURG?$"
+	.string "Petalburg?$"
 
 DewfordTown_Text_16B417:: @ 816B417
-	.string "MR. BRINEY: PETALBURG it is, then!\p"
+	.string "MR. BRINEY: Petalburg it is, then!\p"
 	.string "Anchors aweigh!\n"
-	.string "PEEKO, we're setting sail, my darling!$"
+	.string "Peeko, we're setting sail, my darling!$"
 
 DewfordTown_Text_16B471:: @ 816B471
 	.string "MR. BRINEY: Then you go on and deliver\n"
-	.string "the LETTER. I'll be waiting.$"
+	.string "the Letter. I'll be waiting.$"
 
 Route104_Text_16B4B5:: @ 816B4B5
 Route109_Text_16B4B5:: @ 816B4B5
 	.string "MR. BRINEY: Ahoy!\n"
-	.string "We've hit land in DEWFORD!\p"
+	.string "We've hit land in Dewford!\p"
 	.string "You just go on and tell me whenever\n"
 	.string "you want to set sail again!$"
 
@@ -50,14 +50,14 @@ DewfordTown_Text_16B522:: @ 816B522
 	.string "Now, my friend, where are we bound?$"
 
 DewfordTown_Text_16B57D:: @ 816B57D
-	.string "MR. BRINEY: PETALBURG, is it?\p"
+	.string "MR. BRINEY: Petalburg, is it?\p"
 	.string "Anchors aweigh!\n"
-	.string "PEEKO, we're setting sail, my darling!$"
+	.string "Peeko, we're setting sail, my darling!$"
 
 DewfordTown_Text_16B5D2:: @ 816B5D2
-	.string "MR. BRINEY: SLATEPORT, is it?\p"
+	.string "MR. BRINEY: Slateport, is it?\p"
 	.string "Anchors aweigh!\n"
-	.string "PEEKO, we're setting sail, my darling!$"
+	.string "Peeko, we're setting sail, my darling!$"
 
 DewfordTown_Text_16B627:: @ 816B627
 	.string "MR. BRINEY: Just tell me whenever you\n"
@@ -70,18 +70,18 @@ DewfordTown_Text_16B665:: @ 816B665
 DewfordTown_Text_16B6A8:: @ 816B6A8
 	.string "I hear you, and I like what\n"
 	.string "you're saying!\p"
-	.string "I'll give you one of my fishing RODS.$"
+	.string "I'll give you one of my fishing Rods.$"
 
 DewfordTown_Text_16B6F9:: @ 816B6F9
 	.string "And, as an added bonus, I'll even throw\n"
 	.string "in a little fishing advice!\p"
 	.string "First, you want to face the water,\n"
-	.string "then use the ROD.\p"
+	.string "then use the Rod.\p"
 	.string "Focus your mind...\n"
-	.string "If you get a bite, pull on the ROD.\p"
+	.string "If you get a bite, pull on the Rod.\p"
 	.string "Sometimes you can snag something\n"
 	.string "immediately, but with bigger catches,\l"
-	.string "you need to time the pulls on your ROD\l"
+	.string "you need to time the pulls on your Rod\l"
 	.string "to haul them in.$"
 
 DewfordTown_Text_16B828:: @ 816B828
@@ -100,12 +100,12 @@ DewfordTown_Text_16B89A:: @ 816B89A
 	.string "Oh, hey, don't get down on yourself!\n"
 	.string "I'll give you a little fishing advice.\p"
 	.string "First, you want to face the water,\n"
-	.string "then use the ROD.\p"
+	.string "then use the Rod.\p"
 	.string "Focus your mind...\n"
-	.string "If you get a bite, pull the ROD.\p"
+	.string "If you get a bite, pull the Rod.\p"
 	.string "Sometimes you can snag something\n"
 	.string "immediately, but with bigger catches,\l"
-	.string "you need to time the pulls on your ROD\l"
+	.string "you need to time the pulls on your Rod\l"
 	.string "to haul them in.$"
 
 DewfordTown_Text_16B9CE:: @ 816B9CE
@@ -182,7 +182,7 @@ DewfordTown_Text_BrawlyWifeHaveBadge:
 
 DewfordTown_Text_BrawlyWifePartyFull:
 	.string "Oh...you don't have any room for\n"
-	.string "this POKéMON.$"
+	.string "this Pokémon.$"
 
 DewfordTown_Text_BrawlyWifeGotPokemon:
 	.string "{PLAYER} received {STR_VAR_1}!$"

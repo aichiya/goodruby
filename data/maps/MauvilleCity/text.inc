@@ -1,43 +1,43 @@
 MauvilleCity_Text_165B76:: @ 8165B76
-	.string "UNCLE: It's because of POKéMON that\n"
+	.string "UNCLE: It's because of Pokémon that\n"
 	.string "this boy's got more pep, I suppose...\l"
 	.string "But he's become a bit too peppy...$"
 
 MauvilleCity_Text_165BE3:: @ 8165BE3
-	.string "WALLY: Aww, UNCLE, please?\p"
-	.string "I want to challenge this GYM and see\n"
+	.string "WALLY: Aww, Uncle, please?\p"
+	.string "I want to challenge this Gym and see\n"
 	.string "how much better I've become.\p"
 	.string "Please? May I, please?$"
 
 MauvilleCity_Text_165C57:: @ 8165C57
-	.string "UNCLE: Now hold on, WALLY.\p"
-	.string "Since you started living with POKéMON,\n"
+	.string "UNCLE: Now hold on, Wally.\p"
+	.string "Since you started living with Pokémon,\n"
 	.string "you have grown quite a lot stronger.\p"
 	.string "But don't you think you're pushing it\n"
-	.string "to suddenly challenge a GYM?$"
+	.string "to suddenly challenge a Gym?$"
 
 MauvilleCity_Text_165D01:: @ 8165D01
 	.string "WALLY: I'm not pushing it.\p"
-	.string "If I combine forces with RALTS,\n"
+	.string "If I combine forces with Ralts,\n"
 	.string "we can beat anyone!$"
 
 MauvilleCity_Text_165D50:: @ 8165D50
 	.string "WALLY: Oh! Hi, {PLAYER}!\p"
 	.string "I've gotten a lot stronger since we\n"
 	.string "met.\p"
-	.string "{PLAYER}, I want you and my UNCLE to\n"
+	.string "{PLAYER}, I want you and my Uncle to\n"
 	.string "understand that.\p"
 	.string "{PLAYER}, please, will you have a\n"
 	.string "battle with me?$"
 
 MauvilleCity_Text_165DE8:: @ 8165DE8
 	.string "WALLY: Oh... If you won't battle me,\n"
-	.string "{PLAYER}, my UNCLE won't know that I've\l"
+	.string "{PLAYER}, my Uncle won't know that I've\l"
 	.string "become really strong.$"
 
 MauvilleCity_Text_165E45:: @ 8165E45
 	.string "UNCLE: {PLAYER}{KUN}, was it?\n"
-	.string "On WALLY's behalf, can I ask you to\l"
+	.string "On Wally's behalf, can I ask you to\l"
 	.string "battle with him just this once?\p"
 	.string "I don't think he's going to listen to\n"
 	.string "any reason the way he is now.$"
@@ -56,18 +56,18 @@ MauvilleCity_Text_165F38:: @ 8165F38
 	.string "I lost...$"
 
 MauvilleCity_Text_165F85:: @ 8165F85
-	.string "WALLY: UNCLE...\n"
-	.string "I'll go back to VERDANTURF...$"
+	.string "WALLY: Uncle...\n"
+	.string "I'll go back to Verdanturf...$"
 
 MauvilleCity_Text_165FB3:: @ 8165FB3
 	.string "{PLAYER}, thank you.\n"
-	.string "Being a TRAINER is tough, isn't it?\p"
-	.string "It's not enough just to have POKéMON\n"
+	.string "Being a Trainer is tough, isn't it?\p"
+	.string "It's not enough just to have Pokémon\n"
 	.string "and make them battle. That isn't what\l"
-	.string "being a real TRAINER is about.$"
+	.string "being a real Trainer is about.$"
 
 MauvilleCity_Text_166050:: @ 8166050
-	.string "UNCLE: WALLY, there's no need to be so\n"
+	.string "UNCLE: Wally, there's no need to be so\n"
 	.string "down on yourself.\p"
 	.string "Why, what's keeping you from becoming\n"
 	.string "stronger and stronger?\p"
@@ -76,12 +76,12 @@ MauvilleCity_Text_166050:: @ 8166050
 
 MauvilleCity_Text_1660FA:: @ 81660FA
 	.string "UNCLE: {PLAYER}{KUN}, it just dawned on me\n"
-	.string "that you must be the TRAINER who kept\l"
-	.string "an eye out for WALLY when he caught\l"
-	.string "his POKéMON.\p"
-	.string "Why don't you visit us in VERDANTURF\n"
+	.string "that you must be the Trainer who kept\l"
+	.string "an eye out for Wally when he caught\l"
+	.string "his Pokémon.\p"
+	.string "Why don't you visit us in Verdanturf\n"
 	.string "sometime?\l"
-	.string "I'm sure WALLY would enjoy it.$"
+	.string "I'm sure Wally would enjoy it.$"
 
 MauvilleCity_Text_1661C1:: @ 81661C1
 	.string "WATTSON: Oh, {PLAYER}{KUN}!\n"
@@ -120,9 +120,9 @@ MauvilleCity_Text_166488:: @ 8166488
 	.string "young step up and take charge!$"
 
 MauvilleCity_Text_1664DF:: @ 81664DF
-	.string "You know, it's cool to have POKéMON\n"
+	.string "You know, it's cool to have Pokémon\n"
 	.string "battles and stuff...\p"
-	.string "But if your POKéMON gets hurt, you\n"
+	.string "But if your Pokémon gets hurt, you\n"
 	.string "have to nurse it back to health.$"
 
 MauvilleCity_Text_16655C:: @ 816655C
@@ -132,13 +132,13 @@ MauvilleCity_Text_16655C:: @ 816655C
 	.string "people coming through.$"
 
 MauvilleCity_Text_1665DB:: @ 81665DB
-	.string "Have you been to RYDEL'S CYCLES yet?\p"
-	.string "RYDEL, the owner, is a very generous\n"
+	.string "Have you been to Rydel's Cycles yet?\p"
+	.string "Rydel, the owner, is a very generous\n"
 	.string "man.$"
 
 MauvilleCity_Text_16662A:: @ 816662A
-	.string "Even if you're riding a BIKE, wild\n"
-	.string "POKéMON could jump you.$"
+	.string "Even if you're riding a Bike, wild\n"
+	.string "Pokémon could jump you.$"
 
 MauvilleCity_Text_166665:: @ 8166665
 	.string "MAUVILLE CITY\n"

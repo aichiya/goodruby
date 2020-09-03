@@ -1,5 +1,5 @@
 SlateportCity_OceanicMuseum_1F_Text_17E18D:: @ 817E18D
-	.string "Welcome to the OCEANIC MUSEUM.\p"
+	.string "Welcome to the Oceanic Museum.\p"
 	.string "The entrance fee is ¥50.\n"
 	.string "Would you like to enter?$"
 
@@ -20,13 +20,13 @@ UnknownString_817E2A0: @ 817E2A0
 	.string "Please visit another time!$"
 
 SlateportCity_OceanicMuseum_1F_Text_17E2BB:: @ 817E2BB
-	.string "We, TEAM {EVIL_TEAM}, exist for the good\n"
+	.string "We, Team Magma, exist for the good\n"
 	.string "of all!$"
 
 SlateportCity_OceanicMuseum_1F_Text_17E2E3:: @ 817E2E3
 	.string "We were told to assemble here, so\n"
 	.string "we did, but...\p"
-	.string "Our BOSS, the lynchpin, isn't here.$"
+	.string "Our Boss, the lynchpin, isn't here.$"
 
 SlateportCity_OceanicMuseum_1F_Text_17E338:: @ 817E338
 	.string "If I ripped off the stuff here,\n"
@@ -38,7 +38,7 @@ SlateportCity_OceanicMuseum_1F_Text_17E36F:: @ 817E36F
 
 SlateportCity_OceanicMuseum_1F_Text_17E3A9:: @ 817E3A9
 	.string "If our goons didn't bungle things\n"
-	.string "in RUSTBORO, we wouldn't be here!$"
+	.string "in Rustboro, we wouldn't be here!$"
 
 SlateportCity_OceanicMuseum_1F_Text_17E3ED:: @ 817E3ED
 	.string "I didn't have ¥50, so it took a long\n"
@@ -51,24 +51,24 @@ SlateportCity_OceanicMuseum_1F_Text_17E434:: @ 817E434
 SlateportCity_OceanicMuseum_1F_Text_17E477:: @ 817E477
 	.string "I get all giddy and gooey when I\n"
 	.string "see the sea!\p"
-	.string "For me, CAPT. STERN is the number\n"
+	.string "For me, Capt. Stern is the number\n"
 	.string "one role model!$"
 
 SlateportCity_OceanicMuseum_1F_Text_17E4D7:: @ 817E4D7
 	.string "The sea is vast without end, and\n"
 	.string "infinitely deep...\p"
-	.string "There must be many POKéMON that we\n"
+	.string "There must be many Pokémon that we\n"
 	.string "don't know about.$"
 
 SlateportCity_OceanicMuseum_1F_Text_17E540:: @ 817E540
-	.string "I want a sea POKéMON.\p"
+	.string "I want a sea Pokémon.\p"
 	.string "I think it would feel cool and nice\n"
 	.string "to hug.$"
 
 SlateportCity_OceanicMuseum_1F_Text_17E582:: @ 817E582
 	.string "Aiyeeeh!\n"
 	.string "What are you doing here?\p"
-	.string "Me? I'm the TEAM {EVIL_TEAM} member you\n"
+	.string "Me? I'm the Team Magma member you\n"
 	.string "thumped before, remember?\p"
 	.string "Here, take this!\n"
 	.string "You have to forgive me!$"
@@ -89,13 +89,13 @@ SlateportCity_OceanicMuseum_1F_Text_17E6C9:: @ 817E6C9
 	.string "A blue fluid is spiraling inside a\n"
 	.string "glass vessel.\p"
 	.string "“This is an experiment to create a\n"
-	.string "WHIRLPOOL artificially using wind.”$"
+	.string "whirlpool artificially using wind.”$"
 
 SlateportCity_OceanicMuseum_1F_Text_17E741:: @ 817E741
 	.string "A red ball is bobbing up and down\n"
 	.string "inside a glass vessel.\p"
 	.string "“This is an experiment simulating a\n"
-	.string "WATERFALL using the ball's buoyancy.”$"
+	.string "waterfall using the ball's buoyancy.”$"
 
 SlateportCity_OceanicMuseum_1F_Text_17E7C4:: @ 817E7C4
 	.string "It's a sample of soil from the ocean\n"

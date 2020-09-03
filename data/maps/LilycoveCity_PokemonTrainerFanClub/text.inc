@@ -6,11 +6,11 @@ LilycoveCity_PokemonTrainerFanClub_Text_18A1E8:: @ 818A1E8
 	.string "I've heard the news!\n"
 	.string "You're really strong, aren't you?\p"
 	.string "We always argue about who is the\n"
-	.string "strongest of all TRAINERS here.\p"
+	.string "strongest of all Trainers here.\p"
 	.string "So when I heard about you, I decided\n"
 	.string "to be your fan!\p"
 	.string "I hope you'll keep on battling other\n"
-	.string "tough TRAINERS.\p"
+	.string "tough Trainers.\p"
 	.string "That way, we'll be able to see more\n"
 	.string "of your hot, hot battles.\p"
 	.string "That will make the others here see\n"
@@ -29,10 +29,10 @@ LilycoveCity_PokemonTrainerFanClub_Text_18A391:: @ 818A391
 	.string "Show them you've got guts!$"
 
 LilycoveCity_PokemonTrainerFanClub_Text_18A400:: @ 818A400
-	.string "I hate to say this, but the TRAINER\n"
+	.string "I hate to say this, but the Trainer\n"
 	.string "everybody's talking about is\l"
 	.string "{STR_VAR_1}, no question about it!\p"
-	.string "That TRAINER's power...\n"
+	.string "That Trainer's power...\n"
 	.string "It's out of the ordinary.$"
 
 LilycoveCity_PokemonTrainerFanClub_Text_18A48D:: @ 818A48D
@@ -42,11 +42,11 @@ LilycoveCity_PokemonTrainerFanClub_Text_18A48D:: @ 818A48D
 
 LilycoveCity_PokemonTrainerFanClub_Text_18A4EA:: @ 818A4EA
 	.string "I've been hearing things about a\n"
-	.string "tough new TRAINER.\p"
-	.string "This TRAINER's supposed to be beating\n"
-	.string "GYM LEADERS, even.\p"
+	.string "tough new Trainer.\p"
+	.string "This Trainer's supposed to be beating\n"
+	.string "Gym Leaders, even.\p"
 	.string "Do you know anything about this\n"
-	.string "new TRAINER?$"
+	.string "new Trainer?$"
 
 LilycoveCity_PokemonTrainerFanClub_Text_18A584:: @ 818A584
 	.string "Oh!\n"
@@ -56,7 +56,7 @@ LilycoveCity_PokemonTrainerFanClub_Text_18A584:: @ 818A584
 
 LilycoveCity_PokemonTrainerFanClub_Text_18A5AC:: @ 818A5AC
 	.string "Sigh...\n"
-	.string "BRAWLY...\p"
+	.string "Brawly...\p"
 	.string "Oh, no! Wait!\n"
 	.string "That's not right! No, no, no!\p"
 	.string "I'm your fan through and through!\p"
@@ -65,19 +65,19 @@ LilycoveCity_PokemonTrainerFanClub_Text_18A5AC:: @ 818A5AC
 
 LilycoveCity_PokemonTrainerFanClub_Text_18A629:: @ 818A629
 	.string "I can't help it, I can only get to\n"
-	.string "like BRAWLY...$"
+	.string "like Brawly...$"
 
 LilycoveCity_PokemonTrainerFanClub_Text_18A65B:: @ 818A65B
 	.string "Nobody understands the charm of\n"
-	.string "BRAWLY...\p"
+	.string "Brawly...\p"
 	.string "I don't care!\p"
 	.string "Even if I'm the only one, I'm going\n"
-	.string "to keep cheering for BRAWLY!$"
+	.string "to keep cheering for Brawly!$"
 
 LilycoveCity_PokemonTrainerFanClub_Text_18A6D4:: @ 818A6D4
 	.string "Whatever anyone says, my favorite\n"
-	.string "TRAINER is DEWFORD's GYM LEADER\l"
-	.string "BRAWLY!$"
+	.string "Trainer is Dewford's Gym Leader\l"
+	.string "Brawly!$"
 
 LilycoveCity_PokemonTrainerFanClub_Text_18A71E:: @ 818A71E
 	.string "You've surpassed your own father in\n"
@@ -93,7 +93,7 @@ LilycoveCity_PokemonTrainerFanClub_Text_18A789:: @ 818A789
 	.string "So keep on battling!$"
 
 LilycoveCity_PokemonTrainerFanClub_Text_18A814:: @ 818A814
-	.string "NORMAN battled with more power,\n"
+	.string "Norman battled with more power,\n"
 	.string "charisma, and showmanship than you.\p"
 	.string "Even though people may say that\n"
 	.string "you're strong...\p"
@@ -102,17 +102,17 @@ LilycoveCity_PokemonTrainerFanClub_Text_18A814:: @ 818A814
 
 LilycoveCity_PokemonTrainerFanClub_Text_18A8C4:: @ 818A8C4
 	.string "You're beginning to get the same\n"
-	.string "air of awe NORMAN exudes.\p"
+	.string "air of awe Norman exudes.\p"
 	.string "But there's something conclusively\n"
-	.string "different between you and NORMAN.\p"
+	.string "different between you and Norman.\p"
 	.string "I can't tell you what that is.\n"
 	.string "You'll have to find it yourself.$"
 
 LilycoveCity_PokemonTrainerFanClub_Text_18A984:: @ 818A984
 	.string "Everyone here, we're all huge fans\n"
-	.string "of POKéMON battles.\p"
+	.string "of Pokémon battles.\p"
 	.string "We discuss who we consider to be\n"
-	.string "the strongest of all TRAINERS.\p"
+	.string "the strongest of all Trainers.\p"
 	.string "If you were to become famous, we\n"
 	.string "might even become your fans!$"
 
@@ -137,14 +137,14 @@ LilycoveCity_PokemonTrainerFanClub_Text_18AB41:: @ 818AB41
 	.string "{STR_VAR_1} really is cool, don't\n"
 	.string "you think so?\p"
 	.string "Even if it's just me, I'm going to keep\n"
-	.string "cheering my favorite TRAINER.$"
+	.string "cheering my favorite Trainer.$"
 
 LilycoveCity_PokemonTrainerFanClub_Text_18ABAE:: @ 818ABAE
-	.string "My favorite TRAINER is...\p"
+	.string "My favorite Trainer is...\p"
 	.string "Cool...\p"
 	.string "Strong...\p"
 	.string "And really nice...\p"
-	.string "I wish there was a TRAINER like that...$"
+	.string "I wish there was a Trainer like that...$"
 
 LilycoveCity_PokemonTrainerFanClub_Text_18AC15:: @ 818AC15
 	.string "Whoa! It's {PLAYER}!\n"
@@ -209,7 +209,7 @@ LilycoveCity_PokemonTrainerFanClub_Text_18AFD0:: @ 818AFD0
 	.string "I can't wait for your next battle!$"
 
 LilycoveCity_PokemonTrainerFanClub_Text_18B030:: @ 818B030
-	.string "Among the recently hot TRAINERS,\n"
+	.string "Among the recently hot Trainers,\n"
 	.string "{STR_VAR_1} is the standout.\p"
 	.string "That toughness, it's simply not normal.\p"
 	.string "You're doing okay, but you're not in\n"

@@ -1,9 +1,9 @@
 FortreeCity_Gym_Text_18589C:: @ 818589C
-	.string "Yo, how's it going, CHAMPION-\n"
+	.string "Yo, how's it going, Champion-\n"
 	.string "bound {PLAYER}?\p"
-	.string "FORTREE GYM LEADER WINONA is a\n"
-	.string "master of FLYING-type POKéMON.\p"
-	.string "She's waiting at the back of this GYM,\n"
+	.string "Fortree Gym Leader Winona is a\n"
+	.string "master of Flying-type Pokémon.\p"
+	.string "She's waiting at the back of this Gym,\n"
 	.string "behind the rotating doors.\p"
 	.string "She's waiting for new challengers who\n"
 	.string "are trying to take wing!\p"
@@ -15,22 +15,22 @@ FortreeCity_Gym_Text_185994:: @ 8185994
 
 FortreeCity_Gym_Text_1859B9:: @ 81859B9
 	.string "Behold the elegant battle style of\n"
-	.string "BIRD POKéMON!$"
+	.string "Bird Pokémon!$"
 
 FortreeCity_Gym_Text_1859EA:: @ 81859EA
 	.string "You...\n"
 	.string "You're strong...$"
 
 FortreeCity_Gym_Text_185A02:: @ 8185A02
-	.string "A TRAINER has to be smart to keep\n"
+	.string "A Trainer has to be smart to keep\n"
 	.string "up with unexpected turns of events.\p"
 	.string "Let's see if you have the smarts to\n"
-	.string "get to our LEADER?$"
+	.string "get to our Leader!$"
 
 FortreeCity_Gym_Text_185A7F:: @ 8185A7F
-	.string "The lovers of BIRD POKéMON aspire\n"
-	.string "to join this GYM.\p"
-	.string "As a member of the FORTREE GYM,\n"
+	.string "The lovers of Bird Pokémon aspire\n"
+	.string "to join this Gym.\p"
+	.string "As a member of the Fortree Gym,\n"
 	.string "I'm not allowed to lose!$"
 
 FortreeCity_Gym_Text_185AEC:: @ 8185AEC
@@ -39,34 +39,34 @@ FortreeCity_Gym_Text_185AEC:: @ 8185AEC
 
 FortreeCity_Gym_Text_185B18:: @ 8185B18
 	.string "The world is huge, and there are\n"
-	.string "countless tough TRAINERS.\p"
+	.string "countless tough Trainers.\p"
 	.string "I'm going to keep training and make\n"
 	.string "myself even stronger.$"
 
 FortreeCity_Gym_Text_185B8D:: @ 8185B8D
-	.string "There's no need for WINONA, our GYM\n"
-	.string "LEADER, to deal with you!\p"
+	.string "There's no need for Winona, our Gym\n"
+	.string "Leader, to deal with you!\p"
 	.string "I'm plenty good enough for you!$"
 
 FortreeCity_Gym_Text_185BEB:: @ 8185BEB
-	.string "WINONA, I...\n"
+	.string "Winona, I...\n"
 	.string "I lost!$"
 
 FortreeCity_Gym_Text_185C00:: @ 8185C00
-	.string "WINONA is cute and she's strong.\n"
-	.string "She's the ultimate LEADER!\p"
+	.string "Winona is cute and she's strong.\n"
+	.string "She's the ultimate Leader!\p"
 	.string "Blush...$"
 
 FortreeCity_Gym_Text_185C45:: @ 8185C45
-	.string "WINONA taught me personally!\n"
+	.string "Winona taught me personally!\n"
 	.string "You can't beat me easily!$"
 
 FortreeCity_Gym_Text_185C7C:: @ 8185C7C
 	.string "I was beaten...$"
 
 FortreeCity_Gym_Text_185C8C:: @ 8185C8C
-	.string "Thanks to WINONA, the people of\n"
-	.string "FORTREE can live without fear.$"
+	.string "Thanks to Winona, the people of\n"
+	.string "Fortree can live without fear.$"
 
 FortreeCity_Gym_Text_185CCB:: @ 8185CCB
 	.string "I am Winona. I am the Leader of the\n"
@@ -105,7 +105,7 @@ FortreeCity_Gym_Text_185F4A:: @ 8185F4A
 
 FortreeCity_Gym_Text_185F98:: @ 8185F98
 	.string "Though I fell to you, I will remain\n"
-	.string "devoted to BIRD Pokémon.$"
+	.string "devoted to Bird Pokémon.$"
 
 FortreeCity_Gym_Text_185FD5:: @ 8185FD5
 	.string "FORTREE CITY POKéMON GYM$"

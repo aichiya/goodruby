@@ -1,14 +1,14 @@
 MossdeepCity_Text_1690A9:: @ 81690A9
-	.string "I got this from STEVEN, but I don't\n"
+	.string "I got this from Steven, but I don't\n"
 	.string "know what it's good for.\p"
-	.string "I think it's called KING'S ROCK.\n"
+	.string "I think it's called King's Rock.\n"
 	.string "Do you want it?$"
 
 MossdeepCity_Text_169117:: @ 8169117
 	.string "Why would you want it?\n"
 	.string "You're weird.\p"
 	.string "You can keep it, but keep it a secret\n"
-	.string "from STEVEN.$"
+	.string "from Steven.$"
 
 MossdeepCity_Text_16916F:: @ 816916F
 	.string "Is it really that fun collecting\n"
@@ -19,20 +19,20 @@ MossdeepCity_Text_1691A7:: @ 81691A7
 	.string "supposed to do with some weird rock?$"
 
 MossdeepCity_Text_1691F2:: @ 81691F2
-	.string "Around MOSSDEEP, you can see wild\n"
-	.string "WAILMER.\p"
+	.string "Around Mossdeep, you can see wild\n"
+	.string "Wailmer.\p"
 	.string "It's called, uh...\n"
 	.string "What was it now...\p"
-	.string "WAI, WAI, WAI...\p"
-	.string "WAILMER watching!$"
+	.string "Wai, Wai, Wai...\p"
+	.string "Wailmer watching!$"
 
 MossdeepCity_Text_169266:: @ 8169266
-	.string "The island's SPACE CENTER has been\n"
+	.string "The island's Space Center has been\n"
 	.string "launching huge rockets.$"
 
 MossdeepCity_Text_1692A1:: @ 81692A1
-	.string "I'd heard from my mates in LILYCOVE\n"
-	.string "that the herd of WAILMER has\l"
+	.string "I'd heard from my mates in Lilycove\n"
+	.string "that the herd of Wailmer has\l"
 	.string "disappeared.\p"
 	.string "What went down over there, I wonder?$"
 
@@ -52,14 +52,14 @@ MossdeepCity_Text_169370:: @ 8169370
 
 MossdeepCity_Text_16944E:: @ 816944E
 	.string "A voyage on a ship is fine.\p"
-	.string "But crossing the sea with POKéMON\n"
-	.string "using SURF...\p"
+	.string "But crossing the sea with Pokémon\n"
+	.string "using Surf...\p"
 	.string "Now that's an exhilarating trip!\n"
 	.string "Wouldn't you agree, youngster?$"
 
 MossdeepCity_Text_1694DA:: @ 81694DA
 	.string "This rock has a special meaning to\n"
-	.string "the people at the SPACE CENTER.\p"
+	.string "the people at the Space Center.\p"
 	.string "They put it here as their wish for\n"
 	.string "their rockets to fly safely.\p"
 	.string "When you make a wish, what do you use?\n"
@@ -72,12 +72,12 @@ MossdeepCity_Text_1695D3:: @ 81695D3
 
 MossdeepCity_Text_1695E6:: @ 81695E6
 	.string "MOSSDEEP CITY POKéMON GYM\n"
-	.string "LEADERS: LIZA & TATE\p"
-	.string "“The mystic combination!”$"
+	.string "LEADER: LIZA\p"
+	.string "“The mystic prodigy!”$"
 
 MossdeepCity_Text_16962F:: @ 816962F
 	.string "MOSSDEEP CITY\n"
-	.string "“Our slogan: Cherish POKéMON!”$"
+	.string "“Our slogan: Cherish Pokémon!”$"
 
 MossdeepCity_Text_16965C:: @ 816965C
 	.string "MOSSDEEP SPACE CENTER\n"

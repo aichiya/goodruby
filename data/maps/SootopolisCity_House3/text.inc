@@ -1,6 +1,6 @@
 SootopolisCity_House3_Text_18FB36:: @ 818FB36
-	.string "You're a POKéMON TRAINER, aren't you?\p"
-	.string "SOOTOPOLIS's GYM LEADER WALLACE has\n"
+	.string "You're a Pokémon Trainer, aren't you?\p"
+	.string "Sootopolis's Gym Leader Wallace has\n"
 	.string "many fans.\l"
 	.string "Do you have any?$"
 
@@ -15,6 +15,6 @@ SootopolisCity_House3_Text_18FBC0:: @ 818FBC0
 
 SootopolisCity_House3_Text_18FC1A:: @ 818FC1A
 	.string "Dedicated fans come over from even\n"
-	.string "KANTO and JOHTO.\p"
+	.string "Kanto and Johto.\p"
 	.string "It was really wild when I went to the\n"
-	.string "TRAINER FAN CLUB in LILYCOVE.$"
+	.string "Trainer Fan Club in Lilycove.$"

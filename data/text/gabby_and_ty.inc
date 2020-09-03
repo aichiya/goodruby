@@ -1,6 +1,6 @@
 Route111_Text_1ABED8:: @ 81ABED8
 	.string "GABBY: Oh! We've just spotted a tough-\n"
-	.string "looking TRAINER here of all places!\p"
+	.string "looking Trainer here of all places!\p"
 	.string "Okay, roll camera!\n"
 	.string "Let's get this interview.$"
 
@@ -14,7 +14,7 @@ Route120_Text_1ABF50:: @ 81ABF50
 
 Route111_Text_1ABFD3:: @ 81ABFD3
 	.string "GABBY: My eyes didn't lie!\n"
-	.string "I did discover an astonishing TRAINER!$"
+	.string "I did discover an astonishing Trainer!$"
 
 Route111_Text_1AC015:: @ 81AC015
 	.string "GABBY: Awesome! Awesome!\n"
@@ -23,7 +23,7 @@ Route111_Text_1AC015:: @ 81AC015
 	.string "when we spotted you!\p"
 	.string "Oh, please let me explain. We travel\n"
 	.string "around everywhere interviewing all\l"
-	.string "sorts of TRAINERS.\p"
+	.string "sorts of Trainers.\p"
 	.string "So, would you give us a bit of your time\n"
 	.string "for an interview?$"
 
@@ -41,7 +41,7 @@ Route111_Text_1AC18D:: @ 81AC18D
 
 Route111_Text_1AC219:: @ 81AC219
 	.string "The last time we battled, didn't you\n"
-	.string "throw a POKé BALL at us?\p"
+	.string "throw a Poké Ball at us?\p"
 	.string "We were shocked! So we told everyone,\n"
 	.string "just everyone, about it!\p"
 	.string "Anyway, what do you think?\n"
@@ -94,15 +94,15 @@ Route120_Text_1AC59E:: @ 81AC59E
 Route111_Text_1AC5CA:: @ 81AC5CA
 Route118_Text_1AC5CA:: @ 81AC5CA
 Route120_Text_1AC5CA:: @ 81AC5CA
-	.string "GABBY: Is there a strong TRAINER\n"
-	.string "anywhere with a lot of POKéMON?$"
+	.string "GABBY: Is there a strong Trainer\n"
+	.string "anywhere with a lot of Pokémon?$"
 
 Route111_Text_1AC60B:: @ 81AC60B
 	.string "GABBY: Wow, you are something!\p"
 	.string "You've gotten a lot stronger - a lot -\n"
 	.string "since we last battled.\p"
 	.string "We were right about you when we\n"
-	.string "spotted you as a hot TRAINER.\p"
+	.string "spotted you as a hot Trainer.\p"
 	.string "So, anyway, what do you think?\n"
 	.string "Are you willing to give us an interview\l"
 	.string "this time?$"
@@ -115,7 +115,7 @@ Route120_Text_1AC6F8:: @ 81AC6F8
 
 Route111_Text_1AC73B:: @ 81AC73B
 	.string "TY: Hey, lookie here! A tough-looking\n"
-	.string "TRAINER here, of all places!\l"
+	.string "Trainer here, of all places!\l"
 	.string "Camera's rolling!$"
 
 Route111_Text_1AC790:: @ 81AC790
@@ -135,13 +135,13 @@ Route120_Text_1AC7E4:: @ 81AC7E4
 Route111_Text_1AC820:: @ 81AC820
 Route118_Text_1AC820:: @ 81AC820
 Route120_Text_1AC820:: @ 81AC820
-	.string "TY: Do you only have the one POKéMON\n"
+	.string "TY: Do you only have the one Pokémon\n"
 	.string "and that's it?\p"
-	.string "If you had more POKéMON, it'd make for\n"
+	.string "If you had more Pokémon, it'd make for\n"
 	.string "better footage, but...$"
 
 Route111_Text_1AC892:: @ 81AC892
-	.string "TY: Yep, we sure spotted a hot TRAINER.\n"
+	.string "TY: Yep, we sure spotted a hot Trainer.\n"
 	.string "This is a huge scoop for us!$"
 
 Route111_Text_1AC8D7:: @ 81AC8D7
@@ -157,20 +157,20 @@ gTVGabbyAndTyText1:: @ 81AC90D
 	.string "We're trying to spot some up-and-coming\n"
 	.string "new talent in the field.\p"
 	.string "Today, we turned our lens on the\n"
-	.string "TRAINER {PLAYER}.\p"
-	.string "There's something about this TRAINER\n"
+	.string "Trainer {PLAYER}.\p"
+	.string "There's something about this Trainer\n"
 	.string "that piqued our interest.$"
 
 gTVGabbyAndTyText2:: @ 81ACA02
 	.string "We've battled {PLAYER} before, but we\n"
-	.string "can attest that the TRAINER has most\l"
+	.string "can attest that the Trainer has most\l"
 	.string "definitely improved from before.\p"
 	.string "I knew we were onto someone special\n"
-	.string "when we spotted this TRAINER!$"
+	.string "when we spotted this Trainer!$"
 
 gTVGabbyAndTyText3:: @ 81ACAAA
 	.string "The best way to determine how strong\n"
-	.string "a TRAINER is...\p"
+	.string "a Trainer is...\p"
 	.string "Well, the fastest way is to battle.\n"
 	.string "And so we began our investigation!\p"
 	.string "... ...\p"
@@ -179,7 +179,7 @@ gTVGabbyAndTyText3:: @ 81ACAAA
 	.string "In a dominating performance, we were\n"
 	.string "flattened, rolled up, and tossed aside!\p"
 	.string "{PLAYER} is ruthlessly strong...\p"
-	.string "We asked the TRAINER for a succinct\n"
+	.string "We asked the Trainer for a succinct\n"
 	.string "summation of the battle we shared.$"
 
 gTVGabbyAndTyText4:: @ 81ACC07
@@ -189,7 +189,7 @@ gTVGabbyAndTyText4:: @ 81ACC07
 	.string "{STR_VAR_3} - selflessly supporting\l"
 	.string "each other in the thick of battle...\p"
 	.string "It was a marvelous sight to behold!\p"
-	.string "{STR_VAR_2} was the move the TRAINER\n"
+	.string "{STR_VAR_2} was the move the Trainer\n"
 	.string "used last in our battle.\p"
 	.string "The move {STR_VAR_2} is {STR_VAR_1}\n"
 	.string "and {STR_VAR_3}'s sign of friendship!$"
@@ -202,18 +202,18 @@ gTVGabbyAndTyText5:: @ 81ACD13
 	.string "Ohhh... Snivel...\p"
 	.string "In spite of that, {PLAYER}'s battles\n"
 	.string "are worth seeing.\p"
-	.string "I recommend confident TRAINERS to\n"
+	.string "I recommend confident Trainers to\n"
 	.string "challenge {PLAYER}.$"
 
 gTVGabbyAndTyText6:: @ 81ACDFA
 	.string "There's only one thing to be said.\n"
-	.string "Don't you dare throw a POKé BALL during\l"
-	.string "a TRAINER battle!\p"
+	.string "Don't you dare throw a Poké Ball during\l"
+	.string "a Trainer battle!\p"
 	.string "{PLAYER} is certainly strong, but has\n"
 	.string "no clue about the basic rules.\p"
 	.string "To our TV audience, I have a request.\p"
 	.string "If you see {PLAYER}, please caution\n"
-	.string "the TRAINER!$"
+	.string "the Trainer!$"
 
 gTVGabbyAndTyText7:: @ 81ACEE7
 	.string "{PLAYER} is adept at reading the\n"
@@ -232,13 +232,13 @@ gTVGabbyAndTyText8:: @ 81ACF49
 gTVGabbyAndTyText9:: @ 81AD00A
 	.string "After our battle, we asked {PLAYER} for\n"
 	.string "a succinct summary.\p"
-	.string "The TRAINER replied, “{STR_VAR_1}.”\p"
-	.string "{PLAYER}'s POKéMON {STR_VAR_2} and\n"
+	.string "The Trainer replied, “{STR_VAR_1}.”\p"
+	.string "{PLAYER}'s Pokémon {STR_VAR_2} and\n"
 	.string "{STR_VAR_3}...\l"
 	.string "And “{STR_VAR_1}”...\p"
 	.string "Mmm! That's deep! There's deep\n"
 	.string "significance behind that quote!\p"
-	.string "It's no surprise - a good TRAINER has\n"
+	.string "It's no surprise - a good Trainer has\n"
 	.string "good things to say.\p"
 	.string "That's all for today!\n"
 	.string "See you again on our next broadcast!$"

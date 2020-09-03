@@ -105,6 +105,6 @@ Route110_TrickHouseEnd_Text_19CA8B:: @ 819CA8B
 UnknownString_819CAD1: @ 819CAD1
 	.string "{PLAYER} wrote down the secret code\n"
 	.string "on the door.\p"
-	.string "“TRICK MASTER is fabulous.”\n"
+	.string "Trick Master is fabulous.”\n"
 	.string "... ... ... ... ... ... ... ...\p"
 	.string "The lock clicked open!$"

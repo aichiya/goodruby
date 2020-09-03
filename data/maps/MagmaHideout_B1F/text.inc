@@ -1,12 +1,12 @@
 AquaHideout_B1F_Text_196E6F:: @ 8196E6F
 	.string "If you want to know the secret about\n"
-	.string "our HIDEOUT, you have me to beat!$"
+	.string "our Hideout, you have me to beat!$"
 
 AquaHideout_B1F_Text_196EB6:: @ 8196EB6
 	.string "I can't win at all...$"
 
 AquaHideout_B1F_Text_196ECC:: @ 8196ECC
-	.string "Our HIDEOUT's secret?\p"
+	.string "Our Hideout's secret?\p"
 	.string "Well, let's just say...\n"
 	.string "There's a submarine at the far end!\p"
 	.string "But, by now...\n"
@@ -28,15 +28,15 @@ AquaHideout_B1F_Text_196FB5:: @ 8196FB5
 
 AquaHideout_B1F_Text_196FFD:: @ 8196FFD
 	.string "Yawn... Keeping watch over the\n"
-	.string "HIDEOUT bores me. I'll take you on.$"
+	.string "Hideout bores me. I'll take you on.$"
 
 AquaHideout_B1F_Text_197040:: @ 8197040
 	.string "Yawn...\n"
 	.string "Oh, I lost...$"
 
 AquaHideout_B1F_Text_197056:: @ 8197056
-	.string "If you scurry too much, other TEAM\n"
-	.string "{EVIL_TEAM} members might get you.$"
+	.string "If you scurry too much, other Team\n"
+	.string "Magma members might get you.$"
 
 MagmaHideout_B1F_Text_AquaGruntOneSpot::
     .string "Oh no! I'm done for!\n"

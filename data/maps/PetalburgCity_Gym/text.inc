@@ -144,10 +144,9 @@ PetalburgCity_Gym_Text_17A7DD:: @ 817A7DD
 	.string "from Dad!$"
 
 PetalburgCity_Gym_Text_17A805:: @ 817A805
-	.string "DAD: With that Badge, the Defense\n"
-	.string "of all your Pokémon will increase.\p"
-	.string "Pokémon that know the HM move Surf\n"
-	.string "will be able to travel over water.\p"
+	.string "DAD: With that Badge, Pokémon that\n"
+	.string "know the HM move Surf will be able\l"
+	.string "to ferry you over water.\p"
 	.string "This is my gift to you. {PLAYER}, I'm\n"
 	.string "sure you can use it correctly.$"
 

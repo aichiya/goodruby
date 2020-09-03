@@ -6,7 +6,7 @@ VictoryRoad_1F_Text_19782B:: @ 819782B
 	.string "{PLAYER}, losing to you that time\n"
 	.string "made me stronger!\p"
 	.string "But I'm not going to lose anymore!\p"
-	.string "I'm going to win! For the POKéMON who\n"
+	.string "I'm going to win! For the Pokémon who\n"
 	.string "gave me courage and strength!\p"
 	.string "Okay... Here I come!$"
 
@@ -33,7 +33,7 @@ VictoryRoad_1F_Text_197A47:: @ 8197A47
 	.string "WALLY: I couldn't beat you this time,\n"
 	.string "too... But one of these days, {PLAYER},\l"
 	.string "I'm going to catch up to you...\p"
-	.string "And challenge the POKéMON LEAGUE!$"
+	.string "And challenge the Pokémon League!$"
 
 VictoryRoad_1F_Text_197AD1:: @ 8197AD1
 	.string "I've made it this far a couple times,\n"
@@ -45,7 +45,7 @@ VictoryRoad_1F_Text_197B1A:: @ 8197B1A
 VictoryRoad_1F_Text_197B36:: @ 8197B36
 	.string "You've made it this far. Keep the\n"
 	.string "momentum going and become the\l"
-	.string "CHAMPION! If anyone can, it's you!$"
+	.string "Champion! If anyone can, it's you!$"
 
 VictoryRoad_1F_Text_197B99:: @ 8197B99
 	.string "I didn't come all this way to lose now.\n"
@@ -58,15 +58,15 @@ VictoryRoad_1F_Text_197BE1:: @ 8197BE1
 VictoryRoad_1F_Text_197BF7:: @ 8197BF7
 	.string "I lost here...\p"
 	.string "That means I lack the qualifications\n"
-	.string "to become the CHAMPION...$"
+	.string "to become the Champion...$"
 
 VictoryRoad_1F_Text_197C45:: @ 8197C45
 	.string "This seemingly infinite and harsh road\n"
-	.string "lives up to its name of VICTORY.$"
+	.string "lives up to its name of Victory.$"
 
 VictoryRoad_1F_Text_197C8D:: @ 8197C8D
 	.string "Your battle style is fantastic...$"
 
 VictoryRoad_1F_Text_197CAF:: @ 8197CAF
 	.string "You seem to have the potential for\n"
-	.string "becoming the CHAMPION.$"
+	.string "becoming the Champion.$"

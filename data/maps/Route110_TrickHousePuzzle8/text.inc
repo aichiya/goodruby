@@ -1,13 +1,13 @@
 Route110_TrickHousePuzzle8_Text_19E178:: @ 819E178
-	.string "Not many TRAINERS have made it\n"
+	.string "Not many Trainers have made it\n"
 	.string "this far.$"
 
 Route110_TrickHousePuzzle8_Text_19E1A1:: @ 819E1A1
 	.string "That must mean you're tough, too...$"
 
 Route110_TrickHousePuzzle8_Text_19E1C5:: @ 819E1C5
-	.string "You've beaten the POKéMON LEAGUE\n"
-	.string "CHAMPION? That's too much!$"
+	.string "You've beaten the Pokémon League\n"
+	.string "Champion? That's too much!$"
 
 Route110_TrickHousePuzzle8_Text_19E201:: @ 819E201
 	.string "Consider yourself lucky to be\n"
@@ -22,8 +22,8 @@ Route110_TrickHousePuzzle8_Text_19E24C:: @ 819E24C
 	.string "You can brag about it.$"
 
 Route110_TrickHousePuzzle8_Text_19E284:: @ 819E284
-	.string "You've been slugging through the TRICK\n"
-	.string "HOUSE challenge, too.$"
+	.string "You've been slugging through the Trick\n"
+	.string "House challenge, too.$"
 
 Route110_TrickHousePuzzle8_Text_19E2C1:: @ 819E2C1
 	.string "I see...\n"
@@ -31,4 +31,4 @@ Route110_TrickHousePuzzle8_Text_19E2C1:: @ 819E2C1
 
 Route110_TrickHousePuzzle8_Text_19E2EE:: @ 819E2EE
 	.string "Seeing someone like you should please\n"
-	.string "the TRICK MASTER.$"
+	.string "the Trick Master.$"

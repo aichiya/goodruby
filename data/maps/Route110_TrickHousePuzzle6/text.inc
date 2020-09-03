@@ -3,7 +3,7 @@ Route110_TrickHousePuzzle6_Text_19DC87:: @ 819DC87
 	.string "house, I had to check it out.$"
 
 Route110_TrickHousePuzzle6_Text_19DCC6:: @ 819DCC6
-	.string "I've discovered a tough TRAINER!$"
+	.string "I've discovered a tough Trainer!$"
 
 Route110_TrickHousePuzzle6_Text_19DCE7:: @ 819DCE7
 	.string "I'm sure having a good time checking\n"
@@ -12,7 +12,7 @@ Route110_TrickHousePuzzle6_Text_19DCE7:: @ 819DCE7
 	.string "repeating!$"
 
 Route110_TrickHousePuzzle6_Text_19DD49:: @ 819DD49
-	.string "Maybe I could get my BIRD POKéMON\n"
+	.string "Maybe I could get my Bird Pokémon\n"
 	.string "to fly over the wall...$"
 
 Route110_TrickHousePuzzle6_Text_19DD83:: @ 819DD83
@@ -37,6 +37,6 @@ Route110_TrickHousePuzzle6_Text_19DE44:: @ 819DE44
 UnknownString_819DE8D: @ 819DE8D
 	.string "{PLAYER} wrote down the secret code\n"
 	.string "on the door.\p"
-	.string "“TRICK MASTER is huggable.”\n"
+	.string "“Trick Master is huggable.”\n"
 	.string "... ... ... ... ... ... ... ...\p"
 	.string "The lock clicked open!$"

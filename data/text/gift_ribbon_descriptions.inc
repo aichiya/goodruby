@@ -2,7 +2,7 @@ gGiftRibbonDescriptionPart1_2003RegionalTourney:
 	.string "2003 REGIONAL TOURNEY$"
 
 gGiftRibbonDescriptionPart2_Champion:
-	.string "CHAMPION RIBBON$"
+	.string "Champion Ribbon$"
 
 gGiftRibbonDescriptionPart1_2003NationalTourney:
 	.string "2003 NATIONAL TOURNEY$"
@@ -38,25 +38,25 @@ gGiftRibbonDescriptionPart1_PokemonBattleCup:
 	.string "POKéMON BATTLE CUP$"
 
 gGiftRibbonDescriptionPart2_Participation:
-	.string "Participation RIBBON$"
+	.string "Participation Ribbon$"
 
 gGiftRibbonDescriptionPart1_PokemonLeague:
-	.string "POKéMON LEAGUE$"
+	.string "Pokémon League$"
 
 gGiftRibbonDescriptionPart1_AdvanceCup:
-	.string "ADVANCE CUP$"
+	.string "Advance Cup$"
 
 gGiftRibbonDescriptionPart1_PokemonTournament:
-	.string "POKéMON Tournament$"
+	.string "Pokémon Tournament$"
 
 gGiftRibbonDescriptionPart2_Participation2:
-	.string "Participation RIBBON$"
+	.string "Participation Ribbon$"
 
 gGiftRibbonDescriptionPart1_PokemonEvent:
-	.string "POKéMON Event$"
+	.string "Pokémon Event$"
 
 gGiftRibbonDescriptionPart1_PokemonFestival:
-	.string "POKéMON Festival$"
+	.string "Pokémon Festival$"
 
 gGiftRibbonDescriptionPart1_DifficultyClearing:
 	.string "Difficulty-clearing$"
@@ -65,7 +65,7 @@ gGiftRibbonDescriptionPart2_Commemorative:
 	.string "Commemorative RIBBON$"
 
 gGiftRibbonDescriptionPart1_ClearingAllDifficulties:
-	.string "RIBBON awarded for$"
+	.string "Ribbon awarded for$"
 
 gGiftRibbonDescriptionPart2_ClearingAllDifficulties:
 	.string "clearing all difficulties.$"
@@ -128,16 +128,16 @@ gGiftRibbonDescriptionPart1_FullOfEnergy:
 	.string "Full of Energy RIBBON$"
 
 gGiftRibbonDescriptionPart1_LovedPokemon:
-	.string "A commemorative RIBBON$"
+	.string "A commemorative Ribbon$"
 
 gGiftRibbonDescriptionPart2_LovedPokemon:
-	.string "for a loved POKéMON.$"
+	.string "for a loved Pokémon.$"
 
 gGiftRibbonDescriptionPart1_LoveForPokemon:
-	.string "RIBBON that shows$"
+	.string "Ribbon that shows$"
 
 gGiftRibbonDescriptionPart2_LoveForPokemon:
-	.string "love for POKéMON.$"
+	.string "love for Pokémon.$"
 
 	.align 2
 gGiftRibbonDescriptions:: @ 83E158C

@@ -1,8 +1,8 @@
 PacifidlogTown_House3_Text_17940E:: @ 817940E
-	.string "Hello, TRAINER. Would you do me a favor\n"
-	.string "and trade POKéMON with me?\p"
-	.string "Living in PACIFIDLOG, I can only catch\n"
-	.string "certain kinds of POKéMON.\p"
+	.string "Hello, Trainer. Would you do me a favor\n"
+	.string "and trade Pokémon with me?\p"
+	.string "Living in Pacifidlog, I can only catch\n"
+	.string "certain kinds of Pokémon.\p"
 	.string "{STR_VAR_1}? Do you have one?\n"
 	.string "I'll trade you my {STR_VAR_2} for it.$"
 
@@ -21,7 +21,7 @@ PacifidlogTown_House3_Text_17950A:: @ 817950A
 	.string "we're friends, aren't we?$"
 
 PacifidlogTown_House3_Text_179541:: @ 8179541
-	.string "Is that a POKéDEX?\p"
+	.string "Is that a Pokédex?\p"
 	.string "Did you get to meet a lot of different\n"
-	.string "POKéMON?\p"
+	.string "Pokémon?\p"
 	.string "I wish I was like you.$"

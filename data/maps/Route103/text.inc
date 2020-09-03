@@ -1,15 +1,15 @@
 Route103_Text_16D57A:: @ 816D57A
-	.string "MAY: Let's see... The POKéMON found\n"
-	.string "on ROUTE 103 include...$"
+	.string "MAY: Let's see... The Pokémon found\n"
+	.string "on Route 103 include...$"
 
 Route103_Text_16D5B6:: @ 816D5B6
 	.string "Oh, hi, {PLAYER}{KUN}!\p"
 	.string "...Oh, I see, my dad gave you a\n"
-	.string "POKéMON as a gift.\p"
+	.string "Pokémon as a gift.\p"
 	.string "Since we're here, let's have a quick\n"
 	.string "battle!\p"
 	.string "I'll give you a taste of what being a\n"
-	.string "TRAINER is like.$"
+	.string "Trainer is like.$"
 
 Route103_Text_16D65B:: @ 816D65B
 	.string "Wow! That's great!\n"
@@ -18,23 +18,23 @@ Route103_Text_16D65B:: @ 816D65B
 Route103_Text_16D688:: @ 816D688
 	.string "MAY: I think I know why my dad has an\n"
 	.string "eye out for you now.\p"
-	.string "I mean, you just got that POKéMON but\n"
+	.string "I mean, you just got that Pokémon but\n"
 	.string "it already likes you.\p"
 	.string "You might be able to befriend any\n"
-	.string "kind of POKéMON easily.\p"
+	.string "kind of Pokémon easily.\p"
 	.string "Well, it's time to head back to the\n"
-	.string "LAB.$"
+	.string "Lab.$"
 
 Route103_Text_16D762:: @ 816D762
 	.string "BRENDAN: Okay, so it's this one and\n"
-	.string "that one that live on ROUTE 103...$"
+	.string "that one that live on Route 103...$"
 
 Route103_Text_16D7A9:: @ 816D7A9
 	.string "Hey, it's {PLAYER}!\p"
-	.string "...Oh, yeah, Dad gave you a POKéMON.\p"
+	.string "...Oh, yeah, Dad gave you a Pokémon.\p"
 	.string "Since we're here, how about a little\n"
 	.string "battle?\p"
-	.string "I'll teach you what being a TRAINER's\n"
+	.string "I'll teach you what being a Trainer's\n"
 	.string "about!$"
 
 Route103_Text_16D836:: @ 816D836
@@ -44,19 +44,19 @@ Route103_Text_16D856:: @ 816D856
 	.string "BRENDAN: I think I get it.\n"
 	.string "I think I know why my dad has his eye\l"
 	.string "out for you now.\p"
-	.string "Look, your POKéMON already likes you,\n"
+	.string "Look, your Pokémon already likes you,\n"
 	.string "even though you just got it.\p"
 	.string "{PLAYER}, I get the feeling that you\n"
-	.string "could befriend any POKéMON with ease.\p"
-	.string "We should head back to the LAB.$"
+	.string "could befriend any Pokémon with ease.\p"
+	.string "We should head back to the Lab.$"
 
 Route103_Text_16D950:: @ 816D950
-	.string "My POKéMON is staggeringly tired...\n"
-	.string "I should have brought a POTION...$"
+	.string "My Pokémon is staggeringly tired...\n"
+	.string "I should have brought a Potion...$"
 
 Route103_Text_16D996:: @ 816D996
 	.string "If you cross the sea from here,\n"
-	.string "it'll be a shortcut to OLDALE TOWN.\p"
+	.string "it'll be a shortcut to Oldale Town.\p"
 	.string "Fufufu, that's useful, isn't it?$"
 
 Route103_Text_16D9FB:: @ 816D9FB

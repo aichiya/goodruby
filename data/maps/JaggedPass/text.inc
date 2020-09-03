@@ -1,5 +1,5 @@
 JaggedPass_Text_195DAC:: @ 8195DAC
-	.string "MT. CHIMNEY's JAGGED PASS...\p"
+	.string "Mt. Chimney's Jagged Pass...\p"
 	.string "Now this is what I've always wanted\n"
 	.string "in a mountain.\p"
 	.string "This jagged bumpiness...\n"
@@ -9,7 +9,7 @@ JaggedPass_Text_195E27:: @ 8195E27
 	.string "Losing left me bitter!$"
 
 JaggedPass_Text_195E3E:: @ 8195E3E
-	.string "Yes, I did lose at POKéMON...\p"
+	.string "Yes, I did lose at Pokémon...\p"
 	.string "But, when it comes to the love of\n"
 	.string "the mountains, I have you beat!$"
 
@@ -39,7 +39,7 @@ JaggedPass_Text_195FB9:: @ 8195FB9
 	.string "enjoy this bumpy hike.$"
 
 JaggedPass_Text_195FF2:: @ 8195FF2
-	.string "JAGGED PASS is hard to walk on.\n"
+	.string "Jagged Pass is hard to walk on.\n"
 	.string "It's a good place for training.$"
 
 JaggedPass_Text_196032:: @ 8196032
@@ -47,7 +47,7 @@ JaggedPass_Text_196032:: @ 8196032
 	.string "trying to find a good footing...$"
 
 JaggedPass_Text_196077:: @ 8196077
-	.string "If I had an ACRO BIKE, I'd be able to\n"
+	.string "If I had an Acro Bike, I'd be able to\n"
 	.string "jump ledges.$"
 
 JaggedPass_Text_1960AA:: @ 81960AA
@@ -59,5 +59,5 @@ JaggedPass_Text_1960E2:: @ 81960E2
 	.string "bumpy ground...$"
 
 JaggedPass_Text_196118:: @ 8196118
-	.string "I should get an ACRO BIKE from RYDEL\n"
-	.string "in MAUVILLE CITY...$"
+	.string "I should get an Acro Bike from Rydel\n"
+	.string "in Mauville City...$"

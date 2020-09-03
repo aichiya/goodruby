@@ -10,8 +10,8 @@ SlateportCity_SternsShipyard_2F_Text_17C80C:: @ 817C80C
 	.string "called buoyancy.$"
 
 UnknownString_817C882: @ 817C882
-	.string "The sea between SLATEPORT and\n"
-	.string "PACIFIDLOG has a fast-running tide.\p"
+	.string "The sea between Slateport and\n"
+	.string "Pacifidlog has a fast-running tide.\p"
 	.string "Ordinary ships can't make headway\n"
 	.string "through there.\p"
 	.string "You'd need substantial propulsion\n"

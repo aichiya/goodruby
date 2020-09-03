@@ -11,11 +11,11 @@ SSTidalCorridor_Text_199088:: @ 8199088
 
 SSTidalCorridor_Text_1990B4:: @ 81990B4
 SSTidalRooms_Text_1990B4:: @ 81990B4
-	.string "We have made land in SLATEPORT CITY.\n"
+	.string "We have made land in Slateport City.\n"
 	.string "Thank you for sailing with us.$"
 
 SSTidalRooms_Text_1990F8:: @ 81990F8
-	.string "We have made land in LILYCOVE CITY.\n"
+	.string "We have made land in Lilycove City.\n"
 	.string "Thank you for sailing with us.$"
 
 SSTidalCorridor_Text_19913B:: @ 819913B
@@ -31,7 +31,7 @@ SSTidalCorridor_Text_1991F4:: @ 81991F4
 
 SSTidalCorridor_Text_199203:: @ 8199203
 	.string "Go visit other cabins.\n"
-	.string "TRAINERS bored of the boat trip will\l"
+	.string "Trainers bored of the boat trip will\l"
 	.string "be itching to battle.$"
 
 SSTidalCorridor_Text_199255:: @ 8199255
@@ -44,8 +44,8 @@ SSTidalCorridor_Text_199268:: @ 8199268
 SSTidalCorridor_Text_199291:: @ 8199291
 	.string "MR. BRINEY: Welcome aboard, {PLAYER}{KUN}!\p"
 	.string "They made me honorary captain of the\n"
-	.string "S.S. TIDAL!\p"
-	.string "You can call me CAPTAIN BRINEY now!\p"
+	.string "S.S. Tidal!\p"
+	.string "You can call me Captain Briney now!\p"
 	.string "You know, I retired once before, but\n"
 	.string "when I saw this majestic ship...\p"
 	.string "Let me just say, it stirred my sleeping\n"

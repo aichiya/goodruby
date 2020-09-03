@@ -10,8 +10,8 @@ MossdeepCity_House1_Text_18D475:: @ 818D475
 
 MossdeepCity_House1_Text_18D4C0:: @ 818D4C0
 	.string "It doesn't appear to like or dislike\n"
-	.string "any {POKEBLOCK}S.$"
+	.string "any {POKEBLOCK}s.$"
 
 MossdeepCity_House1_Text_18D4F1:: @ 818D4F1
 	.string "My husband can tell what kind of\n"
-	.string "{POKEBLOCK}S a POKéMON likes at a glance.$"
+	.string "{POKEBLOCK}s a Pokémon likes at a glance.$"

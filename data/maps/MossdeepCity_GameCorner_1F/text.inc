@@ -1,15 +1,15 @@
 MossdeepCity_GameCorner_1F_Text_18E59A:: @ 818E59A
 	.string "When I was young, I traveled the world\n"
-	.string "as a POKéMON TRAINER.\p"
+	.string "as a Pokémon Trainer.\p"
 	.string "Now that I've become an old buzzard,\n"
 	.string "my only amusement is watching young\l"
-	.string "TRAINERS battle.$"
+	.string "Trainers battle.$"
 
 MossdeepCity_GameCorner_1F_Text_18E631:: @ 818E631
 	.string "The door appears to be locked.$"
 
 MossdeepCity_GameCorner_1F_Text_18E650:: @ 818E650
-	.string "A TRAINER named {STR_VAR_1} is\n"
+	.string "A Trainer named {STR_VAR_1} is\n"
 	.string "visiting my home.\p"
 	.string "Would you like to challenge\n"
 	.string "{STR_VAR_1}?$"

@@ -46,12 +46,12 @@ Route110_TrickHouseEntrance_Text_19BCFD:: @ 819BCFD
 	.string "For I am the greatest living mystery\n"
 	.string "of a man in all of HOENN!\l"
 	.string "They call me...\p"
-	.string "The TRICK MASTER!\n"
+	.string "The Trick Master!\n"
 	.string "Wahahaha! Glad to meet you!$"
 
 Route110_TrickHouseEntrance_Text_19BD82:: @ 819BD82
 	.string "You, you've come to challenge my\n"
-	.string "TRICK HOUSE, haven't you?\p"
+	.string "Trick House, haven't you?\p"
 	.string "That's why you're here, isn't it?\n"
 	.string "Yes, it is!\p"
 	.string "Consider your challenge accepted!\p"
@@ -69,7 +69,7 @@ Route110_TrickHouseEntrance_Text_19BE7D:: @ 819BE7D
 Route110_TrickHouseEntrance_Text_19BEB3:: @ 819BEB3
 	.string "There is a note affixed to the scroll...\p"
 	.string "“I am leaving on a journey.\n"
-	.string "Don't look for me. TRICK MASTER”$"
+	.string "Don't look for me. Trick Master”$"
 
 Route110_TrickHouseEntrance_Text_19BF19:: @ 819BF19
 	.string "For the next time, I'll use this trick,\n"

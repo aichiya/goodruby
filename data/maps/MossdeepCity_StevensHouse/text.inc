@@ -21,27 +21,27 @@ MossdeepCity_StevensHouse_Text_18DB22:: @ 818DB22
 MossdeepCity_StevensHouse_Text_18DC25:: @ 818DC25
 	.string "STEVEN: Apparently, there's an\n"
 	.string "underwater cavern between\l"
-	.string "MOSSDEEP and SOOTOPOLIS.\p"
-	.string "You know, the one that CAPT. STERN\n"
+	.string "Mossdeep and Sootopolis.\p"
+	.string "You know, the one that Capt. Stern\n"
 	.string "found in his submarine.\p"
 	.string "An underwater cavern...\p"
 	.string "There might be some rare stones down\n"
 	.string "there... I should go for a Dive...$"
 
 MossdeepCity_StevensHouse_Text_18DD12:: @ 818DD12
-	.string "{PLAYER} checked the POKé BALL.\p"
-	.string "It contained the POKéMON\n"
-	.string "BELDUM.\p"
-	.string "Take the POKé BALL?$"
+	.string "{PLAYER} checked the Poké Ball.\p"
+	.string "It contained the Pokémon\n"
+	.string "Beldum.\p"
+	.string "Take the Poké Ball?$"
 
 MossdeepCity_StevensHouse_Text_18DD61:: @ 818DD61
-	.string "{PLAYER} obtained a BELDUM.$"
+	.string "{PLAYER} obtained a Beldum.$"
 
 MossdeepCity_StevensHouse_Text_18DD77:: @ 818DD77
-	.string "There is no space for another POKéMON.$"
+	.string "There is no space for another Pokémon.$"
 
 MossdeepCity_StevensHouse_Text_18DD9E:: @ 818DD9E
-	.string "{PLAYER} left the POKé BALL where\n"
+	.string "{PLAYER} left the Poké Ball where\n"
 	.string "it was.$"
 
 MossdeepCity_StevensHouse_Text_18DDC2:: @ 818DDC2
@@ -53,10 +53,10 @@ MossdeepCity_StevensHouse_Text_18DDC2:: @ 818DDC2
 	.string "I don't plan to return home for some\n"
 	.string "time.\p"
 	.string "I have a favor to ask of you.\p"
-	.string "I want you to take the POKé BALL on\n"
+	.string "I want you to take the Poké Ball on\n"
 	.string "the desk.\p"
-	.string "Inside it is a BELDUM, my favorite\n"
-	.string "POKéMON.\p"
+	.string "Inside it is a Beldum, my favorite\n"
+	.string "Pokémon.\p"
 	.string "I'm counting on you.\p"
 	.string "May our paths cross some day.\p"
 	.string "STEVEN STONE$"
@@ -70,16 +70,16 @@ MossdeepCity_StevensHouse_Text_18DF1A:: @ 818DF1A
 	.string "I don't plan to return home for some\n"
 	.string "time.\p"
 	.string "I have a favor to ask of you.\p"
-	.string "I want you to take the POKé BALL on\n"
+	.string "I want you to take the Poké Ball on\n"
 	.string "the desk.\p"
-	.string "Inside it is a BELDUM, my favorite\n"
-	.string "POKéMON.\p"
+	.string "Inside it is a Beldum, my favorite\n"
+	.string "Pokémon.\p"
 	.string "I'm counting on you.\p"
 	.string "If you'd like, you should also take\n"
-	.string "the HM DIVE.\p"
+	.string "the TM Flash Cannon.\p"
 	.string "May our paths cross some day.\p"
 	.string "STEVEN STONE$"
 
 MossdeepCity_StevensHouse_Text_18E0A3:: @ 818E0A3
 	.string "It's a collection of rare rocks and\n"
-	.string "stones assembled by STEVEN.$"
+	.string "stones assembled by Steven.$"

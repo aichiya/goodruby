@@ -2,7 +2,7 @@ Route111_Text_16F705:: @ 816F705
 	.string "Hello! I take it you're a traveler.\p"
 	.string "How's this? What do you say to taking\n"
 	.string "on our family of four in a series of\l"
-	.string "POKéMON battles?$"
+	.string "Pokémon battles?$"
 
 Route111_Text_16F785:: @ 816F785
 	.string "Is that so?\n"
@@ -17,11 +17,11 @@ Route111_Text_16F7D2:: @ 816F7D2
 
 Route111_Text_16F7FF:: @ 816F7FF
 	.string "Hey, all!\n"
-	.string "I've found a pretty strong TRAINER!$"
+	.string "I've found a pretty strong Trainer!$"
 
 Route111_Text_16F82D:: @ 816F82D
 	.string "Oh, my goodness! Aren't you young?\p"
-	.string "You must be quite the TRAINER to beat\n"
+	.string "You must be quite the Trainer to beat\n"
 	.string "my husband, though.\p"
 	.string "It's my turn to battle now!$"
 
@@ -30,7 +30,7 @@ Route111_Text_16F8A6:: @ 816F8A6
 	.string "I can't get over how strong you are!$"
 
 Route111_Text_16F8D5:: @ 816F8D5
-	.string "There's a strong TRAINER here!\n"
+	.string "There's a strong Trainer here!\n"
 	.string "This one's really strong!$"
 
 Route111_Text_16F90E:: @ 816F90E
@@ -84,15 +84,15 @@ Route111_Text_16FB67:: @ 816FB67
 	.string "{PLAYER} left the CLAW FOSSIL alone.$"
 
 Route111_Text_16FB86:: @ 816FB86
-	.string "If you don't raise your POKéMON some\n"
+	.string "If you don't raise your Pokémon some\n"
 	.string "more, it could be tough to keep winning\l"
 	.string "up through the ranks.\p"
-	.string "I've heard the POKéMON LEAGUE's\n"
-	.string "ELITE FOUR are far stronger than\l"
-	.string "any GYM LEADER.$"
+	.string "I've heard the Pokémon League's\n"
+	.string "Elite Four are far stronger than\l"
+	.string "any Gym Leader.$"
 
 Route111_Text_16FC3A:: @ 816FC3A
-	.string "I challenged the WINSTRATE family,\n"
+	.string "I challenged the Winstrate family,\n"
 	.string "but four matches in a row is tough\l"
 	.string "going... They destroyed me.$"
 
@@ -118,8 +118,8 @@ Route111_Text_16FD1B:: @ 816FD1B
 
 Route111_Text_16FD55:: @ 816FD55
 	.string "TRAINER TIPS\p"
-	.string "One of the indicators of a POKéMON's\n"
-	.string "powerfulness is SP. ATK. It stands for\l"
-	.string "“SPECIAL ATTACK.”\p"
-	.string "Likewise, SP. DEF stands for “SPECIAL\n"
-	.string "DEFENSE.”$"
+	.string "One of the indicators of a Pokémon's\n"
+	.string "powerfulness is Sp. Atk. It stands for\l"
+	.string "“Special Attack.”\p"
+	.string "Likewise, Sp. Def stands for “Special\n"
+	.string "Defense.”$"

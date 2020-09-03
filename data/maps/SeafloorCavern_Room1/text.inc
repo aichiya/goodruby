@@ -7,7 +7,7 @@ SeafloorCavern_Room1_Text_1974EA:: @ 81974EA
 
 SeafloorCavern_Room1_Text_1974FF:: @ 81974FF
 	.string "I want to get a promotion so I can\n"
-	.string "boss around the GRUNTS...$"
+	.string "boss around the Grunts...$"
 
 SeafloorCavern_Room1_Text_19753C:: @ 819753C
 	.string "That submarine... It's tiny inside.\n"

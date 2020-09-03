@@ -36,6 +36,6 @@ Route110_TrickHousePuzzle3_Text_19D110:: @ 819D110
 UnknownString_819D164: @ 819D164
 	.string "{PLAYER} wrote down the secret code\n"
 	.string "on the door.\p"
-	.string "“TRICK MASTER is cool.”\n"
+	.string "“Trick Master is cool.”\n"
 	.string "... ... ... ... ... ... ... ...\p"
 	.string "The lock clicked open!$"

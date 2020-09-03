@@ -6,13 +6,13 @@ FallarborTown_ContestHall_Text_177335:: @ 8177335
 
 FallarborTown_ContestHall_Text_1773C6:: @ 81773C6
 	.string "See!\n"
-	.string "My POKéMON won all these RIBBONS!\p"
-	.string "Have your POKéMON earned any RIBBONS?\n"
-	.string "You can check them on your POKéNAV.$"
+	.string "My Pokémon won all these Ribbons!\p"
+	.string "Have your Pokémon earned any Robbons?\n"
+	.string "You can check them on your Pokénav.$"
 
 FallarborTown_ContestHall_Text_177437:: @ 8177437
-	.string "I can't beat GYM LEADERS...\p"
-	.string "I can't win any CONTESTS...\p"
+	.string "I can't beat Gym Leaders...\p"
+	.string "I can't win any Contests...\p"
 	.string "I've been here, there, and everywhere,\n"
 	.string "and it's all for naught...$"
 

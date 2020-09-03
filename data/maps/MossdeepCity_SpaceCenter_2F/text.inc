@@ -1,5 +1,5 @@
 MossdeepCity_SpaceCenter_2F_Text_18E483:: @ 818E483
-	.string "MOSSDEEP has mainly sunny weather,\n"
+	.string "Mossdeep has mainly sunny weather,\n"
 	.string "and its winds are stable.\p"
 	.string "It's an ideal location for launching\n"
 	.string "rockets.$"

@@ -1,8 +1,8 @@
 SlateportCity_OceanicMuseum_2F_Text_17ECFD:: @ 817ECFD
-	.string "Yes? If you're looking for STERN,\n"
+	.string "Yes? If you're looking for Stern,\n"
 	.string "that would be me.\p"
 	.string "Ah! That must be the part I\n"
-	.string "ordered from MR. STONE of DEVON.\p"
+	.string "ordered from Mr. Stone of Devon.\p"
 	.string "Thank you! That's great!\n"
 	.string "We can prepare for our expedition now.$"
 
@@ -15,8 +15,8 @@ SlateportCity_OceanicMuseum_2F_Text_17EDD7:: @ 817EDD7
 	.string "Who are you people?$"
 
 SlateportCity_OceanicMuseum_2F_Text_17EE01:: @ 817EE01
-	.string "We're TEAM {EVIL_TEAM}!\p"
-	.string "Our BOSS wants those parts!\n"
+	.string "We're Team Magma!\p"
+	.string "Our Boss wants those parts!\n"
 	.string "Shut your yap and fork them over!$"
 
 SlateportCity_OceanicMuseum_2F_Text_17EE4E:: @ 817EE4E
@@ -25,7 +25,7 @@ SlateportCity_OceanicMuseum_2F_Text_17EE4E:: @ 817EE4E
 
 SlateportCity_OceanicMuseum_2F_Text_17EE66:: @ 817EE66
 	.string "Oh, man, what a disaster...\n"
-	.string "The BOSS is going to be furious...$"
+	.string "The Boss is going to be furious...$"
 
 SlateportCity_OceanicMuseum_2F_Text_17EEA5:: @ 817EEA5
 	.string "Humph, sniveling wimp!\n"
@@ -97,11 +97,11 @@ SlateportCity_OceanicMuseum_2F_Text_17F352:: @ 817F352
 	.string "Anyway, that was a tense situation!\n"
 	.string "Thank you for saving us!\p"
 	.string "Oh, yes, I almost forgot that you\n"
-	.string "even brought the parts from DEVON!$"
+	.string "even brought the parts from Devon!$"
 
 UnknownString_817F404: @ 817F404
-	.string "{PLAYER} handed over the DEVON GOODS\n"
-	.string "to CAPT. STERN.$"
+	.string "{PLAYER} handed over the Devon Goods\n"
+	.string "to Capt. Stern.$"
 
 SlateportCity_OceanicMuseum_2F_Text_17F433:: @ 817F433
 	.string "CAPT. STERN: Whoops!\n"
@@ -112,12 +112,12 @@ SlateportCity_OceanicMuseum_2F_Text_17F433:: @ 817F433
 
 SlateportCity_OceanicMuseum_2F_Text_17F4B6:: @ 817F4B6
 	.string "I saw a model of a ship here.\p"
-	.string "It reminded me of the ABANDONED SHIP\n"
-	.string "near DEWFORD TOWN...$"
+	.string "It reminded me of the Abandoned Ship\n"
+	.string "near Dewford Town...$"
 
 SlateportCity_OceanicMuseum_2F_Text_17F50E:: @ 817F50E
 	.string "Don't you dare run around inside\n"
-	.string "the MUSEUM!$"
+	.string "the Museum!$"
 
 SlateportCity_OceanicMuseum_2F_Text_17F53B:: @ 817F53B
 	.string "Wow, the submarine's awesome!\n"
@@ -148,8 +148,8 @@ SlateportCity_OceanicMuseum_2F_Text_17F653:: @ 817F653
 SlateportCity_OceanicMuseum_2F_Text_17F754:: @ 817F754
 	.string "“MODEL OF HOENN REGION”\p"
 	.string "It's a miniature diorama of the\n"
-	.string "HOENN region.\p"
-	.string "Where is LITTLEROOT TOWN on this?$"
+	.string "Hoenn region.\p"
+	.string "Where is Littleroot Town on this?$"
 
 SlateportCity_OceanicMuseum_2F_Text_17F7BC:: @ 817F7BC
 	.string "It's a display on the flow of seawater.\p"
@@ -166,7 +166,7 @@ SlateportCity_OceanicMuseum_2F_Text_17F84E:: @ 817F84E
 SlateportCity_OceanicMuseum_2F_Text_17F8BC:: @ 817F8BC
 	.string "“THE FERRY S.S. TIDAL\p"
 	.string "“A scale replica of the ship under\n"
-	.string "construction at STERN'S SHIPYARD.”$"
+	.string "construction at Stern's Shipyard.”$"
 
 SlateportCity_OceanicMuseum_2F_Text_17F918:: @ 817F918
 	.string "“SUBMARINE EXPLORER 1\p"

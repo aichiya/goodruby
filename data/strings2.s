@@ -5,13 +5,13 @@
 
 	@ unused
 gOtherText_TopSpeed::
-	.string "TOP SPEED$"
+	.string "Top Speed$"
 
 gMultiText_BerryBlenderMaxSpeedRecord:: @ 842C2E6
 	.string "BERRY BLENDER\nMAXIMUM SPEED RECORD!$"
 
 gMultiText_2P3P4P:: @ 842C30A
-	.string "2 PLAYERS\n3 PLAYERS\n4 PLAYERS$"
+	.string "2 Players\n3 Players\n4 Players$"
 
 gMultiText_Saving:: @ 842C328
 	.string "SAVING...\nDON'T TURN OFF THE POWER.$"
@@ -132,7 +132,7 @@ gOtherText_OhABite:: @ 842C5BB
 	.string "Oh! A bite!$"
 
 gOtherText_PokeOnHook:: @ 842C5C7
-	.string "A POKéMON's on the hook!{PAUSE_UNTIL_PRESS}$"
+	.string "A Pokémon's on the hook!{PAUSE_UNTIL_PRESS}$"
 
 gOtherText_NotEvenANibble:: @ 842C5E2
 	.string "Not even a nibble...{PAUSE_UNTIL_PRESS}$"
@@ -153,33 +153,33 @@ gTradeText_TakeGoodCare:: @ 842C640
 	.string "Take good care of {STR_VAR_3}!$"
 
 TradeText_Cancel::
-	.string "CANCEL$"
+	.string "Cancel$"
 TradeText_ChoosePoke::
-	.string "Choose a POKéMON.$"
+	.string "Choose a Pokémon.$"
 TradeText_Summary1::
-	.string "SUMMARY$"
+	.string "Summary$"
 TradeText_Trade1::
-	.string "TRADE$"
+	.string "Trade$"
 TradeText_CancelTradePrompt::
 	.string "Cancel trade?$"
 TradeText_PressBToExit::
 	.string "Press the B Button to exit.$"
 TradeText_Summary2::
-	.string "SUMMARY$"
+	.string "Summary$"
 TradeText_Trade2::
-	.string "TRADE$"
+	.string "Trade$"
 TradeText_LinkStandby::
 	.string "{COLOR DARK_GREY}{HIGHLIGHT WHITE2}{SHADOW LIGHT_GREY}Link standby...\nPlease wait.$"
 TradeText_TradeCancelled::
 	.string "{COLOR DARK_GREY}{HIGHLIGHT WHITE2}{SHADOW LIGHT_GREY}The trade has\nbeen canceled.$"
 TradeText_OnlyPoke::
-	.string "{COLOR DARK_GREY}{HIGHLIGHT WHITE2}{SHADOW LIGHT_GREY}That's your only\nPOKéMON for battle.$"
+	.string "{COLOR DARK_GREY}{HIGHLIGHT WHITE2}{SHADOW LIGHT_GREY}That's your only\nPokémon for battle.$"
 TradeText_NonTradablePoke::
 	.string "{COLOR DARK_GREY}{HIGHLIGHT WHITE2}{SHADOW LIGHT_GREY}Your friend can't\ntrade that one.$"
 TradeText_WaitingForFriend::
 	.string "{COLOR DARK_GREY}{HIGHLIGHT WHITE2}{SHADOW LIGHT_GREY}Waiting for your\nfriend to finish...$"
 TradeText_WantToTrade::
-	.string "{COLOR DARK_GREY}{HIGHLIGHT WHITE2}{SHADOW LIGHT_GREY}Your friend wants\nto trade POKéMON.$"
+	.string "{COLOR DARK_GREY}{HIGHLIGHT WHITE2}{SHADOW LIGHT_GREY}Your friend wants\nto trade Pokémon.$"
 	.string "$"
 
 gTradeText_TradeOkayPrompt:: @ 842C7B6
@@ -213,7 +213,7 @@ gOtherText_MixingComplete:: @ 842C8AC
 	.string "Record mixing completed.\nThank you for waiting.$"
 
 gOtherText_TrainersTrainerCard:: @ 842C8DC
-	.string "'s TRAINER CARD$"
+	.string "'s Trainer Card$"
 
 gOtherText_FirstHOF:: @ 842C8EC
 	.string "FIRST HALL OF FAME$"
@@ -234,46 +234,46 @@ gOtherText_TradeRecord:: @ 842C96A
 	.string "POKéMON TRADES$"
 
 gOtherText_Boy:: @ 842C979
-	.string "BOY$"
+	.string "Boy$"
 
 gOtherText_Girl:: @ 842C97D
-	.string "GIRL$"
+	.string "Girl$"
 	.string "$"
 
 gOtherText_Player:: @ 842C983
-	.string "PLAYER$"
+	.string "Player$"
 
 gOtherText_Badges:: @ 842C98A
-	.string "BADGES$"
+	.string "Badges$"
 	.string "$"
 
 gOtherText_Pokedex:: @ 842C992
-	.string "POKéDEX$"
+	.string "Pokédex$"
 
 gOtherText_PlayTime:: @ 842C99A
-	.string "PLAY TIME$"
+	.string "Play Time$"
 
 gOtherText_SentToPC:: @ 842C9A4
 	.string "{STR_VAR_1} was sent to\nthe PC.{PAUSE_UNTIL_PRESS}$"
 
 OtherText_YourName::
-	.string "YOUR NAME?$"
+	.string "Your Name?$"
 OtherText_BoxName::
-	.string "BOX NAME?$"
+	.string "Box Name?$"
 OtherText_PokeName::
 	.string "{STR_VAR_1}'s nickname?$"
 
 gOtherText_Marco:: @ 842C9E1
-	.string "MARCO$" @ polo
+	.string "Marco$" @ polo
 
 gOtherText_Coins:: @ 842C9E7
-	.string "{STR_VAR_1} COINS$"
+	.string "{STR_VAR_1} Coins$"
 
 gOtherText_BattleResults:: @ 842C9F0
-	.string "{PLAYER}'s BATTLE RESULTS$"
+	.string "{PLAYER}'s Battle Results$"
 
 gOtherText_WinRecord:: @ 842CA04
-	.string "TOTAL RECORD W/{STR_VAR_1} L/{STR_VAR_2} D/{STR_VAR_3}$"
+	.string "Total Record W/{STR_VAR_1} L/{STR_VAR_2} D/{STR_VAR_3}$"
 
 gOtherText_WinLoseDraw:: @ 842CA20
 	.string "WIN        LOSE        DRAW$"
@@ -285,7 +285,7 @@ gOtherText_FourDashes:: @ 842CA44
 	.string "----$"
 
 gOtherText_BattleTowerResults:: @ 842CA49
-	.string "{PLAYER}'s BATTLE TOWER RESULTS$"
+	.string "{PLAYER}'s Battle Tower Results$"
 
 gOtherText_Lv50:: @ 842CA63
 	.string "LV 50$"
@@ -294,28 +294,28 @@ gOtherText_Lv100:: @ 842CA69
 	.string "LV 100$"
 
 gOtherText_WinStreak:: @ 842CA70
-	.string "{STR_VAR_1}W STREAK$"
+	.string "{STR_VAR_1}W Streak$"
 
 gOtherText_Current:: @ 842CA7B
-	.string "CURRENT$"
+	.string "Current$"
 
 gOtherText_Record:: @ 842CA83
-	.string "RECORD$"
+	.string "Record$"
 
 gOtherText_Prev:: @ 842CA8A
-	.string "PREV.$"
+	.string "Prev.$"
 
 gOtherText_QuitGamePrompt:: @ 842CA90
 	.string "Quit the game?$"
 
 gOtherText_MaxCoins:: @ 842CA9F
-	.string "You've got 9,999 COINS.$"
+	.string "You've got 9,999 Coins.$"
 
 gOtherText_OutOfCoins:: @ 842CAB7
-	.string "You've run out of COINS.\nGame over!$"
+	.string "You've run out of Coins.\nGame over!$"
 
 gOtherText_DontHaveThreeCoins:: @ 842CADB
-	.string "You don't have three COINS.$"
+	.string "You don't have three Coins.$"
 
 gOtherText_ReelTime:: @ 842CAF7
 	.string "REEL TIME\nHere's your chance to take\naim and nail marks!\nThe Reel Time continues for\nas often as the drawn number.\nIt all ends on a Big Bonus.$"
@@ -327,40 +327,40 @@ DaycareText_GetAlong::
 DaycareText_DontLikeOther::
 	.string "The two don't seem to like each other.$"
 DaycareText_PlayOther::
-	.string "The two prefer to play with other\nPOKéMON than each other.$"
+	.string "The two prefer to play with other\nPokémon than each other.$"
 
 gOtherText_NewLine2:: @ 842CC28
 	.string "\n$"
 
 gOtherText_CancelAndLv:: @ 842CC2A
-	.string "CANCEL$"
+	.string "Cancel$"
 	.string "LV$"
 
 gEggNickname:: @ 842CC34
-	.string "EGG$"
+	.string "Egg$"
 
 gOtherText_HatchedFromEgg:: @ 842CC38
-	.string "{COLOR WHITE2}{HIGHLIGHT TRANSPARENT}{SHADOW DARK_GREY}{STR_VAR_1} hatched from the EGG!$"
+	.string "{COLOR WHITE2}{HIGHLIGHT TRANSPARENT}{SHADOW DARK_GREY}{STR_VAR_1} hatched from the Egg!$"
 
 gOtherText_NickHatchPrompt:: @ 842CC5A
 	.string "{COLOR WHITE2}{HIGHLIGHT TRANSPARENT}{SHADOW DARK_GREY}Would you like to nickname the newly\nhatched {STR_VAR_1}?$"
 
 OtherText_Battle::
-	.string "BATTLE$"
+	.string "Battle$"
 OtherText_Contest::
-	.string "CONTEST$"
+	.string "Contest$"
 OtherText_Type::
-	.string "TYPE/$"
+	.string "Type/$"
 OtherText_PP::
 	.string "PP/$"
 OtherText_Power::
-	.string "POWER$"
+	.string "Power$"
 OtherText_Accuracy::
-	.string "ACCURACY$"
+	.string "Accuracy$"
 OtherText_Appeal::
-	.string "APPEAL$"
+	.string "Appeal$"
 OtherText_Jam::
-	.string "JAM$"
+	.string "Jam$"
 
 gOtherText_TeachWhichMove:: @ 842CCC7
 	.string "Teach which move to {STR_VAR_1}?$"
@@ -433,7 +433,7 @@ gOtherText_Met:: @ 842D0F3
 	.string " (met).$"
 
 gOtherText_Egg2:: @ 842D0FB
-	.string " (EGG).$"
+	.string " (Egg).$"
 
 gOtherText_ObtainedInTrade:: @ 842D103
 	.string "obtained in a trade.$"
@@ -445,16 +445,16 @@ gOtherText_Met2:: @ 842D12B
 	.string " (met).$"
 
 gOtherText_EggDayCare:: @ 842D133
-	.string "An odd POKéMON EGG found\nby the DAY CARE couple.$"
+	.string "An odd Pokémon Egg found\nby the Day Care couple.$"
 
 gOtherText_EggNicePlace:: @ 842D164
-	.string "A peculiar POKéMON EGG\nobtained at the nice place.$"
+	.string "A peculiar Pokémon Egg\nobtained at the nice place.$"
 
 gOtherText_EggObtainedInTrade:: @ 842D197
-	.string "A peculiar POKéMON EGG\nobtained in a trade.$"
+	.string "A peculiar Pokémon Egg\nobtained in a trade.$"
 
 gOtherText_EggHotSprings:: @ 842D1C3
-	.string "A POKéMON EGG obtained\nat the hot springs.$"
+	.string "A Pokémon Egg obtained\nat the hot springs.$"
 
 gOtherText_LinkStandby2:: @ 842D1EE
 	.string "Link standby...$"
@@ -471,7 +471,7 @@ gOtherText_NationalDex:: @ 842D222
 	.string "NATIONAL$"
 
 gOtherText_DiplomaCertificationGameFreak:: @ 842D22B
-	.string "{HIGHLIGHT TRANSPARENT}Player: {CLEAR 0x10}{COLOR RED}{PLAYER}\n\n{COLOR DARK_GREY}{STR_VAR_1} POKéDEX\nThis document certifies\nthat you have successfully\ncompleted your POKéDEX.\n\n{CLEAR_TO 0x42}{COLOR RED}GAME FREAK$"
+	.string "{HIGHLIGHT TRANSPARENT}Player: {CLEAR 0x10}{COLOR RED}{PLAYER}\n\n{COLOR DARK_GREY}{STR_VAR_1} POKéDEX\nThis document certifies\nthat you have successfully\ncompleted your Pokédex.\n\n{CLEAR_TO 0x42}{COLOR RED}GAME FREAK$"
 	.string "{COLOR RED}{HIGHLIGHT TRANSPARENT}GAME FREAK$"
 
 gOtherText_PLink:: @ 842D2BC
@@ -485,7 +485,7 @@ gOtherText_LinkNotFound:: @ 842D2D9
 	.string "Link partner(s) not found.\nPlease try again.\p$"
 
 gOtherText_BlenderChooseBerry:: @ 842D307
-	.string "Starting up the BERRY BLENDER.\pPlease select a BERRY from your BAG\nto put in the BERRY BLENDER.\p$"
+	.string "Starting up the Berry Blender.\pPlease select a Berry from your Bag\nto put in the Berry Blender.\p$"
 
 gOtherText_PokeBlockMade:: @ 842D368
 	.string " was made!$"
@@ -500,19 +500,19 @@ gOtherText_LinkStandby3:: @ 842D3A5
 	.string "Link standby...$"
 
 gOtherText_BlendAnotherBerryPrompt:: @ 842D3B5
-	.string "Would you like to blend another BERRY?$"
+	.string "Would you like to blend another Berry?$"
 
 gOtherText_OutOfBerries:: @ 842D3DC
-	.string "You've run out of BERRIES for\nblending in the BERRY BLENDER.\p$"
+	.string "You've run out of Berries for\nblending in the Berry Blender.\p$"
 
 gOtherText_CaseIsFull:: @ 842D41A
-	.string "Your {POKEBLOCK} CASE is full.\p$"
+	.string "Your {POKEBLOCK} Case is full.\p$"
 
 gOtherText_NoBerriesForBlend:: @ 842D434
-	.string " has no BERRIES to put in\nthe BERRY BLENDER.$"
+	.string " has no Berries to put in\nthe Berry Blender.$"
 
 gOtherText_OtherCaseIsFull:: @ 842D461
-	.string "'s {POKEBLOCK} CASE is full.\p$"
+	.string "'s {POKEBLOCK} Case is full.\p$"
 
 gOtherText_ResultsOfBlending:: @ 842D479
 	.string "RESULTS OF BLENDING$"

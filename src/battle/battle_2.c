@@ -6308,7 +6308,7 @@ u32 GetModifiedSpeed(u8 bank)
 		if (gBattleMons[bank].ability == ABILITY_QUICK_FEET)
 			speed = (speed * 15) / 10;
 		else if (gBattleMons[bank].status1 & STATUS_PARALYSIS)
-			speed /= 4;
+			speed /= 2;
 	}
 	
 	return speed;

@@ -1,5 +1,5 @@
 Route110_TrickHousePuzzle7_Text_19DF0B:: @ 819DF0B
-	.string "The TRICK MASTER always vanishes\n"
+	.string "The Trick Master always vanishes\n"
 	.string "like smoke. How does he do it?$"
 
 Route110_TrickHousePuzzle7_Text_19DF4B:: @ 819DF4B
@@ -32,11 +32,11 @@ Route110_TrickHousePuzzle7_Text_19E098:: @ 819E098
 
 Route110_TrickHousePuzzle7_Text_19E0B2:: @ 819E0B2
 	.string "You're solving all the puzzles in the\n"
-	.string "TRICK HOUSE. That's the feeling I get.$"
+	.string "Trick House. That's the feeling I get.$"
 
 UnknownString_819E0FF: @ 819E0FF
 	.string "{PLAYER} wrote down the secret code\n"
 	.string "on the door.\p"
-	.string "“TRICK MASTER I love.”\n"
+	.string "“Trick Master I love.”\n"
 	.string "... ... ... ... ... ... ... ...\p"
 	.string "The lock clicked open!$"

@@ -40,10 +40,6 @@ LilycoveCity_CoveLilyMotel_2F_EventScript_1583F7:: @ 81583F7
 	msgbox LilycoveCity_CoveLilyMotel_2F_Text_18719E, 2
 	end
 
-LilycoveCity_CoveLilyMotel_2F_EventScript_158400:: @ 8158400
-	msgbox LilycoveCity_CoveLilyMotel_2F_Text_1871DF, 2
-	end
-
 LilycoveCity_CoveLilyMotel_2F_EventScript_158409:: @ 8158409
 	msgbox LilycoveCity_CoveLilyMotel_2F_Text_18729A, 2
 	end

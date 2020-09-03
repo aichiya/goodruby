@@ -14,7 +14,7 @@ LilycoveCity_DepartmentStoreRooftop_Text_18C70E:: @ 818C70E
 	.string "Ohh... I'm bone-dry thirsty!$"
 
 LilycoveCity_DepartmentStoreRooftop_Text_18C72B:: @ 818C72B
-	.string "It's a VENDING MACHINE.\n"
+	.string "It's a vending machine.\n"
 	.string "Which drink would you like?$"
 
 LilycoveCity_DepartmentStoreRooftop_Text_18C75F:: @ 818C75F

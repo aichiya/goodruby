@@ -5,5 +5,5 @@ LilycoveCity_House4_Text_18BEE8:: @ 818BEE8
 
 LilycoveCity_House4_Text_18BF4E:: @ 818BF4E
 	.string "There's a deep underwater trench\n"
-	.string "between MOSSDEEP and SOOTOPOLIS.\p"
+	.string "between Mossdeep and Sootopolis.\p"
 	.string "That's what someone told me, anyway.$"

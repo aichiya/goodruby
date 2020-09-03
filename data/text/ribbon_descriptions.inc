@@ -1,23 +1,23 @@
 gRibbonDescriptionPart1_Champion:
-	.string "CHAMPION-beating, HALL$"
+	.string "Champion-beating, Hall$"
 
 gRibbonDescriptionPart2_Champion:
-	.string "OF FAME Member RIBBON$"
+	.string "of Fame Member Ribbon$"
 
 gRibbonDescriptionPart1_CoolContest:
-	.string "COOL CONTEST$"
+	.string "Cool Contest$"
 
 gRibbonDescriptionPart1_BeautyContest:
-	.string "BEAUTY CONTEST$"
+	.string "Beauty Contest$"
 
 gRibbonDescriptionPart1_CuteContest:
-	.string "CUTE CONTEST$"
+	.string "Cute Contest$"
 
 gRibbonDescriptionPart1_SmartContest:
-	.string "SMART CONTEST$"
+	.string "Smart Contest$"
 
 gRibbonDescriptionPart1_ToughContest:
-	.string "TOUGH CONTEST$"
+	.string "Tough Contest$"
 
 gRibbonDescriptionPart2_NormalRank:
 	.string "Normal Rank winner!$"
@@ -32,25 +32,25 @@ gRibbonDescriptionPart2_MasterRank:
 	.string "Master Rank winner!$"
 
 gRibbonDescriptionPart1_Winning:
-	.string "RIBBON for clearing LV50$"
+	.string "Ribbon for clearing LV50$"
 
 gRibbonDescriptionPart2_Winning:
-	.string "at the BATTLE TOWER.$"
+	.string "at the Battle Tower.$"
 
 gRibbonDescriptionPart1_Victory:
 	.string "Won for clearing LV100$"
 
 gRibbonDescriptionPart2_Victory:
-	.string "at the BATTLE TOWER.$"
+	.string "at the Battle Tower.$"
 
 gRibbonDescriptionPart1_Artist:
-	.string "RIBBON for being chosen$"
+	.string "Ribbon for being chosen$"
 
 gRibbonDescriptionPart2_Artist:
 	.string "as a super sketch model.$"
 
 gRibbonDescriptionPart1_Effort:
-	.string "RIBBON awarded for$"
+	.string "Ribbon awarded for$"
 
 gRibbonDescriptionPart2_Effort:
 	.string "being a hard worker.$"

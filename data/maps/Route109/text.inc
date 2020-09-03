@@ -1,27 +1,27 @@
 DewfordTown_Text_16E080:: @ 816E080
 	.string "MR. BRINEY: Ahoy!\n"
-	.string "We've made land in SLATEPORT!\p"
-	.string "I suppose you're going to visit CAPT.\n"
-	.string "STERN and deliver the DEVON GOODS?$"
+	.string "We've made land in Slateport!\p"
+	.string "I suppose you're going to visit Capt.\n"
+	.string "Stern and deliver the Devon Goods?$"
 
 Route109_Text_16E0F9:: @ 816E0F9
 	.string "MR. BRINEY: Aren't you delivering the\n"
-	.string "DEVON GOODS?\p"
+	.string "Devon Goods?\p"
 	.string "Or were you meaning to sail back to\n"
-	.string "DEWFORD?$"
+	.string "Dewford?$"
 
 Route109_Text_16E159:: @ 816E159
-	.string "MR. BRINEY: DEWFORD it is, then!\p"
+	.string "MR. BRINEY: Dewford it is, then!\p"
 	.string "Anchors aweigh!\n"
-	.string "PEEKO, we're setting sail, my darling!$"
+	.string "Peeko, we're setting sail, my darling!$"
 
 Route109_Text_16E1B1:: @ 816E1B1
 	.string "MR. BRINEY: Then you go on and deliver\n"
-	.string "the DEVON GOODS. I'll be waiting.$"
+	.string "the Devon Goods. I'll be waiting.$"
 
 DewfordTown_Text_16E1FA:: @ 816E1FA
 	.string "MR. BRINEY: Ahoy! We've made land in\n"
-	.string "SLATEPORT!\p"
+	.string "Slateport!\p"
 	.string "You just go on and tell me whenever\n"
 	.string "you want to set sail again!$"
 
@@ -35,7 +35,7 @@ Route109_Text_16E2C5:: @ 816E2C5
 	.string "you need to set sail again!$"
 
 Route109_Text_16E307:: @ 816E307
-	.string "Yo, TRAINERS!\n"
+	.string "Yo, Trainers!\n"
 	.string "Whether you're hot to trot,\l"
 	.string "or cool cat not,\l"
 	.string "chill at my papa's spot!$"
@@ -44,7 +44,7 @@ Route109_Text_16E35B:: @ 816E35B
 	.string "Little kids can dart around so quickly...\p"
 	.string "You don't dare take your eyes off them\n"
 	.string "for an instant. It's very taxing.\p"
-	.string "Mine's with my POKéMON, so they should\n"
+	.string "Mine's with my Pokémon, so they should\n"
 	.string "be okay, but...$"
 
 Route109_Text_16E405:: @ 816E405
@@ -63,7 +63,7 @@ Route109_Text_16E446:: @ 816E446
 
 Route109_Text_16E4D5:: @ 816E4D5
 	.string "The water around these parts is clean.\p"
-	.string "But, I get my ZIGZAGOON to pick up\n"
+	.string "But, I get my Zigzagoon to pick up\n"
 	.string "litter from the shoreline at times.\p"
 	.string "Dirty water becomes rain and joins our\n"
 	.string "rivers, which we drink from...\p"
@@ -76,11 +76,11 @@ Route109_Text_16E5CA:: @ 816E5CA
 Route109_Text_16E5DC:: @ 816E5DC
 	.string "SEASHORE HOUSE\p"
 	.string "“May hot battles rage on hot sands!\n"
-	.string "The place for hot TRAINERS!”$"
+	.string "The place for hot Trainers!”$"
 
 Route109_Text_16E62C:: @ 816E62C
 	.string "TRAINER TIPS\p"
-	.string "POKéMON at the same level may not\n"
+	.string "Pokémon at the same level may not\n"
 	.string "always have identical stats.\p"
-	.string "POKéMON raised by TRAINERS are said\n"
-	.string "to grow stronger than wild POKéMON.$"
+	.string "Pokémon raised by Trainers are said\n"
+	.string "to grow stronger than wild Pokémon.$"

@@ -1,22 +1,22 @@
 PetalburgCity_Text_16433E:: @ 816433E
-	.string "Where has our WALLY gone?\p"
-	.string "We have to leave for VERDANTURF TOWN\n"
+	.string "Where has our Wally gone?\p"
+	.string "We have to leave for Verdanturf Town\n"
 	.string "very soon...$"
 
 PetalburgCity_Text_16438A:: @ 816438A
 	.string "Hiya! Are you maybe...\n"
-	.string "A rookie TRAINER?\p"
-	.string "Do you know what POKéMON TRAINERS\n"
+	.string "A rookie Trainer?\p"
+	.string "Do you know what Pokémon Trainers\n"
 	.string "do when they reach a new town?\p"
-	.string "They first check what kind of GYM\n"
+	.string "They first check what kind of Gym\n"
 	.string "is in the town.$"
 
 PetalburgCity_Text_164426:: @ 8164426
-	.string "See? This is PETALBURG CITY's GYM.$"
+	.string "See? This is Petalburg City's Gym.$"
 
 PetalburgCity_Text_164449:: @ 8164449
-	.string "This is the GYM's sign. Look for it\n"
-	.string "whenever you're looking for a GYM.$"
+	.string "This is the Gym's sign. Look for it\n"
+	.string "whenever you're looking for a Gym.$"
 
 PetalburgCity_Text_164490:: @ 8164490
 	.string "My face is reflected in the water.\p"
@@ -26,10 +26,10 @@ PetalburgCity_Text_164490:: @ 8164490
 	.string "What do you see reflected in your face?$"
 
 PetalburgCity_Text_16453F:: @ 816453F
-	.string "Let's say you have six POKéMON.\n"
+	.string "Let's say you have six Pokémon.\n"
 	.string "If you catch another one...\p"
-	.string "It is automatically sent to a STORAGE\n"
-	.string "BOX over a PC connection.$"
+	.string "It is automatically sent to a Storage\n"
+	.string "Box over a PC connection.$"
 
 PetalburgCity_Text_1645BB:: @ 81645BB
 	.string "PETALBURG CITY POKéMON GYM\n"

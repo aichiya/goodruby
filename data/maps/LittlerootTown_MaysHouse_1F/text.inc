@@ -18,7 +18,7 @@ LittlerootTown_BrendansHouse_1F_Text_1731E3:: @ 81731E3
 	.string "Where has my husband gone?\n"
 	.string "Just when {PLAYER}{KUN} is visiting, too...\p"
 	.string "That man can never sit still for long...\n"
-	.string "He might be at his LAB.$"
+	.string "He might be at his Lab.$"
 
 LittlerootTown_BrendansHouse_1F_Text_173262:: @ 8173262
 	.string "Oh, {RIVAL} has gone out somewhere.\p"
@@ -27,7 +27,7 @@ LittlerootTown_BrendansHouse_1F_Text_173262:: @ 8173262
 
 LittlerootTown_BrendansHouse_1F_Text_1732B9:: @ 81732B9
 	.string "I think it's wonderful for people to\n"
-	.string "travel with POKéMON.\p"
+	.string "travel with Pokémon.\p"
 	.string "But you should go home every so often\n"
 	.string "to let your mother know you're okay.\p"
 	.string "She might not say it, but I'm sure she\n"

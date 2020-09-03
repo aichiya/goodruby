@@ -1,20 +1,18 @@
 MossdeepCity_Gym_Text_18C7E3:: @ 818C7E3
-	.string "Yo, how's it going, CHAMPION-bound\n"
+	.string "Yo, how's it going, Champion-bound\n"
 	.string "{PLAYER}?\p"
-	.string "The GYM LEADERS here use PSYCHIC-type\n"
+	.string "The Gym Leader here uses Psychic-type\n"
 	.string "POKéMON.\p"
 	.string "If you go up against them with\n"
-	.string "FIGHTING- or POISON-type POKéMON,\l"
+	.string "Fighting- or Poison-type Pokémon,\l"
 	.string "they'll inflict horrible damage!\p"
-	.string "Plus, they'll come at you with\n"
-	.string "outstanding combination attacks.\p"
 	.string "If you want to win, you'll need to show\n"
 	.string "them how tight you are with your\l"
-	.string "POKéMON. Go for it!$"
+	.string "Pokémon. Go for it!$"
 
 MossdeepCity_Gym_Text_18C938:: @ 818C938
 	.string "Wow, you're astounding!\n"
-	.string "You're one great TRAINER!$"
+	.string "You're one great Trainer!$"
 
 MossdeepCity_Gym_Text_18C96A:: @ 818C96A
 	.string "Battles hinge on the strength of your\n"
@@ -35,23 +33,23 @@ MossdeepCity_Gym_Text_18CA28:: @ 818CA28
 
 MossdeepCity_Gym_Text_18CA48:: @ 818CA48
 	.string "If there are prodigies in the world,\n"
-	.string "then our GYM LEADERS are them!\p"
+	.string "then our Gym Leader is one!\p"
 	.string "However, you may be even more talented\n"
 	.string "than them...$"
 
 MossdeepCity_Gym_Text_18CAC0:: @ 818CAC0
-	.string "Fufufufu... Watch me levitate a POKé\n"
-	.string "BALL telekinetically!\p"
+	.string "Fufufufu... Watch me levitate a Poké\n"
+	.string "Ball telekinetically!\p"
 	.string "Wrooooooooaaaar!\n"
 	.string "... ... ... ... ... ... ...\p"
 	.string "Sometimes, I'm out of sync...$"
 
 MossdeepCity_Gym_Text_18CB46:: @ 818CB46
-	.string "My POKéMON battling skills are out\n"
+	.string "My Pokémon battling skills are out\n"
 	.string "of sync, too!$"
 
 MossdeepCity_Gym_Text_18CB77:: @ 818CB77
-	.string "A POKé BALL was too heavy to lift\n"
+	.string "A Poké Ball was too heavy to lift\n"
 	.string "psychically. But this dust bunny...\p"
 	.string "Whoooooooooooooooh!\n"
 	.string "... ... ... ... ... ...\p"
@@ -84,7 +82,7 @@ MossdeepCity_Gym_Text_18CD66:: @ 818CD66
 
 MossdeepCity_Gym_Text_18CD73:: @ 818CD73
 	.string "You will wage a terrifically intense\n"
-	.string "battle with our GYM LEADERS...\p"
+	.string "battle with our Gym Leader...\p"
 	.string "The result...\n"
 	.string "You won't hear it from me!$"
 

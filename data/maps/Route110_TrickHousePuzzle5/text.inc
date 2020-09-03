@@ -8,7 +8,7 @@ Route110_TrickHousePuzzle4_Text_19D21F:: @ 819D21F
 
 Route110_TrickHousePuzzle4_Text_19D253:: @ 819D253
 	.string "Wouldn't you agree? You would go\n"
-	.string "anywhere if TRAINERS were there.$"
+	.string "anywhere if Trainers were there.$"
 
 Route110_TrickHousePuzzle4_Text_19D295:: @ 819D295
 	.string "Heh! Boulders like this, I can brush\n"
@@ -23,7 +23,7 @@ Route110_TrickHousePuzzle4_Text_19D306:: @ 819D306
 	.string "You have to use your head. Be brainy!$"
 
 Route110_TrickHousePuzzle4_Text_19D351:: @ 819D351
-	.string "The TRICK HOUSE is getting trickier,\n"
+	.string "The Trick House is getting trickier,\n"
 	.string "isn't it?$"
 
 Route110_TrickHousePuzzle4_Text_19D380:: @ 819D380
@@ -35,6 +35,6 @@ Route110_TrickHousePuzzle4_Text_19D386:: @ 819D386
 UnknownString_819D3A5: @ 819D3A5
 	.string "{PLAYER} wrote down the secret code\n"
 	.string "on the door.\p"
-	.string "“TRICK MASTER is a genius.”\n"
+	.string "“Trick Master is a genius.”\n"
 	.string "... ... ... ... ... ... ... ...\p"
 	.string "The lock clicked open!$"
