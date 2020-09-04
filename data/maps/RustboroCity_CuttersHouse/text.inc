@@ -16,7 +16,7 @@ RustboroCity_CuttersHouse_Text_1851C9:: @ 81851C9
 	.string "by Pokémon out of a battle.\p"
 	.string "Any Pokémon that's learned Cut can\n"
 	.string "chop down thin trees if the Trainer\l"
-	.string "has earned the Stone Badge.$
+	.string "has earned the Stone Badge.$"
 
 RustboroCity_CuttersHouse_Text_1852B3:: @ 81852B3
 	.string "When they were expanding the city of\n"

@@ -1,17 +1,21 @@
-DewfordTown_Gym_Text_174D98:: @ 8174D98
+DewfordTown_Gym_Text_GymGuyGiveWater::
 	.string "Hey, how's it going, Champion-\n"
 	.string "bound {PLAYER}?\p"
+    .string "Here, take this.$"
+
+DewfordTown_Gym_Text_GymGuyFullBag::
+    .string "Huh? Your Bag is too full.$"
+
+DewfordTown_Gym_Text_GymGuyAdvice::
 	.string "Dewford's Gym Leader Brawly commands\n"
 	.string "Fighting-type Pokémon.\p"
-	.string "Going against him with Normal-type\n"
-	.string "Pokémon is asking for trouble.\p"
-	.string "Fighting Pokémon will lay a serious\n"
-	.string "smack down on Normal Pokémon,\l"
-	.string "so be careful!\p"
-	.string "What's worse, the GYM is as dark as\n"
-	.string "the ocean floor.\p"
-	.string "But it will get brighter after defeating\n"
-	.string "the Trainers in your way.\p"
+	.string "Fighting-type attacks are strong\n"
+    .string "against Normal, Rock, and Dark types.\p"
+	.string "Use Psychic, Flying, and Fairy moves\n"
+    .string "to push back his Fighting Pokémon.\p"
+    .string "Brawly's strategy is straight-forward\n"
+    .string "aggression, so counter him with\l"
+    .string "your own offense.\p"
 	.string "Hey, okay, go for it!$"
 
 DewfordTown_Gym_Text_174F1E:: @ 8174F1E

@@ -9,14 +9,14 @@ const u8 gExpandedPlaceholder_Kun[] = _("");
 const u8 gExpandedPlaceholder_Chan[] = _("");
 const u8 gExpandedPlaceholder_Sapphire[] = _("SAPPHIRE");
 const u8 gExpandedPlaceholder_Ruby[] = _("RUBY");
-const u8 gExpandedPlaceholder_Aqua[] = _("AQUA");
-const u8 gExpandedPlaceholder_Magma[] = _("MAGMA");
-const u8 gExpandedPlaceholder_Archie[] = _("ARCHIE");
-const u8 gExpandedPlaceholder_Maxie[] = _("MAXIE");
-const u8 gExpandedPlaceholder_Kyogre[] = _("KYOGRE");
-const u8 gExpandedPlaceholder_Groudon[] = _("GROUDON");
-const u8 gExpandedPlaceholder_Brendan[] = _("BRENDAN");
-const u8 gExpandedPlaceholder_May[] = _("MAY");
+const u8 gExpandedPlaceholder_Aqua[] = _("Aqua");
+const u8 gExpandedPlaceholder_Magma[] = _("Magma");
+const u8 gExpandedPlaceholder_Archie[] = _("Archie");
+const u8 gExpandedPlaceholder_Maxie[] = _("Maxie");
+const u8 gExpandedPlaceholder_Kyogre[] = _("Kyogre");
+const u8 gExpandedPlaceholder_Groudon[] = _("Groudon");
+const u8 gExpandedPlaceholder_Brendan[] = _("Brendan");
+const u8 gExpandedPlaceholder_May[] = _("May");
 
 // system text
 const u8 gSystemText_Egg[] = _("Egg");

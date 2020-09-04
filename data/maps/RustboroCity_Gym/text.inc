@@ -1,4 +1,4 @@
-RustboroCity_Gym_Text_183A4B:: @ 8183A4B
+RustboroCity_Gym_Text_GymGuyGiveWater:: @ 8183A4B
 	.string "Yo, how's it going?\p"
 	.string "Listen, my friend!\n"
 	.string "Would you like to become the Champion?\p"
@@ -6,6 +6,13 @@ RustboroCity_Gym_Text_183A4B:: @ 8183A4B
 	.string "sure give you winning advice.\p"
 	.string "That's settled, then! We'll aim for the\n"
 	.string "Pokémon Championship together!\p"
+    .string "To commemorate our alliance, take\n"
+    .string "this Fresh Water!$"
+
+RustboroCity_Gym_Text_GymGuyFullBag::
+    .string "Huh? Your Bag is too full.$"
+
+RustboroCity_Gym_Text_GymGuyAdvice::
 	.string "It's your job as a Trainer to collect\n"
 	.string "Gym Badges, am I right?\p"
 	.string "But Gym Leaders aren't pushovers!\p"
@@ -13,9 +20,20 @@ RustboroCity_Gym_Text_183A4B:: @ 8183A4B
 	.string "I'm here to provide expert advice!\p"
 	.string "Roxanne, the Gym Leader, is a user\n"
 	.string "of Rock-type Pokémon.\p"
-	.string "TheRock type is very durable, but\n"
-	.string "it can't stand Water-type and\l"
-	.string "Grass-type moves.\p"
+	.string "The Rock type is very durable, and\n"
+	.string "it's resistant Normal-type attacks.\p"
+    .string "Water, Grass, and Fighting moves are\n"
+    .string "good against the Rock-type!\p"
+    .string "But! Gym Leaders are cunning, and\n"
+    .string "prepare for their chosen type's flaws!\p"
+    .string "Roxanne trains a Baltoy, a Ground- and\n"
+    .string "Psychic-type Pokémon. Don't rely on\l"
+    .string "Fighting Pokémon to beat it.\p"
+    .string "She also has a Lileep with the special\n"
+    .string "Ability Storm Drain, which gives it\l"
+    .string "immunity to Water-type attacks!\p"
+    .string "If you want to win, you'll need to\n"
+    .string "bring a coordinated team.\p"
 	.string "Come see me afterwards, if you beat\n"
 	.string "the Gym Leader.\p"
 	.string "Well, go for it!$"

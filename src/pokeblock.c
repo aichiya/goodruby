@@ -514,9 +514,9 @@ static void sub_810BC98(void)
 {
     u16 i, j;
     struct Pokeblock buf;
-    for (i=0; i<39; i++)
+    for (i=0; i<POKEBLOCKS_COUNT-1; i++)
     {
-        for (j=i+1; j<40; j++)
+        for (j=i+1; j<POKEBLOCKS_COUNT; j++)
         {
             if (gSaveBlock1.pokeblocks[i].color == 0)
             {
@@ -532,7 +532,7 @@ static void sub_810BD08(void)
 {
     u8 i;
     gUnknown_02039248.unk2 = 0;
-    for (i=0; i<40; i++)
+    for (i=0; i<POKEBLOCKS_COUNT; i++)
     {
         if (gSaveBlock1.pokeblocks[i].color != 0)
             gUnknown_02039248.unk2++;

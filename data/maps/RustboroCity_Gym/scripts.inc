@@ -47,9 +47,26 @@ RustboroCity_Gym_EventScript_15798E:: @ 815798E
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_RUSTBORO_GYM, RustboroCity_Gym_EventScript_1579A3
-	msgbox RustboroCity_Gym_Text_183A4B, 4
+    goto_if_set FLAG_GOT_GYM_REFRESHMENT_1, Rustboro_Gym_EventScript_GymGuyHaveDrink
+	msgbox RustboroCity_Gym_Text_GymGuyGiveWater, 4
+    giveitem_std ITEM_FRESH_WATER
+    compare RESULT, 0
+    goto_if_eq Rustboro_Gym_EventScript_GymGuyBagFull
+    setflag FLAG_GOT_GYM_REFRESHMENT_1
+    msgbox RustboroCity_Gym_Text_GymGuyAdvice, 4
 	release
 	end
+
+Rustboro_Gym_EventScript_GymGuyHaveDrink::
+    msgbox RustboroCity_Gym_Text_GymGuyAdvice, 4
+    release
+    end
+
+Rustboro_Gym_EventScript_GymGuyBagFull::
+    msgbox RustboroCity_Gym_Text_GymGuyFullBag, 4
+    msgbox RustboroCity_Gym_Text_GymGuyAdvice, 4
+    release
+    end
 
 RustboroCity_Gym_EventScript_1579A3:: @ 81579A3
 	msgbox RustboroCity_Gym_Text_183C90, 4

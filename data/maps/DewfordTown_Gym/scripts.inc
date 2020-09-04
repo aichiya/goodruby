@@ -160,9 +160,26 @@ DewfordTown_Gym_EventScript_15323F:: @ 815323F
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_DEWFORD_GYM, DewfordTown_Gym_EventScript_153254
-	msgbox DewfordTown_Gym_Text_174D98, 4
+    goto_if_set FLAG_GOT_GYM_REFRESHMENT_2, Dewford_Gym_EventScript_GymGuyHaveDrink
+	msgbox DewfordTown_Gym_Text_GymGuyGiveWater, 4
+    giveitem_std ITEM_FRESH_WATER
+    compare RESULT, 0
+    goto_if_eq Dewford_Gym_EventScript_GymGuyBagFull
+    setflag FLAG_GOT_GYM_REFRESHMENT_2
+    msgbox DewfordTown_Gym_Text_GymGuyAdvice, 4
 	release
 	end
+
+Dewford_Gym_EventScript_GymGuyHaveDrink::
+    msgbox DewfordTown_Gym_Text_GymGuyAdvice, 4
+    release
+    end
+
+Dewford_Gym_EventScript_GymGuyBagFull::
+    msgbox DewfordTown_Gym_Text_GymGuyFullBag, 4
+    msgbox DewfordTown_Gym_Text_GymGuyAdvice, 4
+    release
+    end
 
 DewfordTown_Gym_EventScript_153254:: @ 8153254
 	msgbox DewfordTown_Gym_Text_174F1E, 4

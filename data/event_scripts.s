@@ -1481,6 +1481,7 @@ OldaleTown_PokemonCenter_1F_EventScript_19FDB0:: @ 819FDB0
 	waitmovement 0
 	message gText_NurseJoy_WeHopeToSeeYouAgain
 	waitmessage
+    applymovement 255, OldaleTown_PokemonCenter_1F_Movement_PlayerDown
 	return
 
 dont_heal_party:: @ 819FDC7
@@ -1506,6 +1507,10 @@ OldaleTown_PokemonCenter_1F_Movement_19FDF4:: @ 819FDF4
 	nurse_joy_bow
 	delay_4
 	end_movement
+
+OldaleTown_PokemonCenter_1F_Movement_PlayerDown::
+    face_down
+    end_movement
 
 Std_ObtainItem: @ 819FDF7
 	giveitem VAR_SPECIAL_0, VAR_SPECIAL_1
@@ -2989,7 +2994,7 @@ SampleMessage3:: @ 81A0948
 
 UnusedMixRecordsPromptText: @ 81A099F
 	.string "Would you like to mix records with other\n"
-	.string "TRAINERS?$"
+	.string "Trainers?$"
 
 UnusedMixRecordsSeeYouAgainText: @ 81A09D2
 	.string "We hope to see you again!$"
@@ -3010,34 +3015,34 @@ UnknownString_81A0A54: @ 81A0A54
 	.string "Accessed {PLAYER}'s PC.$"
 
 UnknownString_81A0A66: @ 81A0A66
-	.string "Accessed LANETTE's PC.$"
+	.string "Accessed Lanette's PC.$"
 
 gText_NurseJoy_Welcome:: @ 81A0A7D
-	.string "Hello, and welcome to the POKéMON\n"
-	.string "CENTER.\p"
-	.string "We restore your tired POKéMON to\n"
+	.string "Hello, and welcome to the Pokémon\n"
+	.string "Center.\p"
+	.string "We restore your tired Pokémon to\n"
 	.string "full health.\p"
-	.string "Would you like to rest your POKéMON?$"
+	.string "Would you like to rest your Pokémon?$"
 
 gText_NurseJoy_WeHopeToSeeYouAgain:: @ 81A0AFA
 	.string "We hope to see you again!$"
 
 gText_NurseJoy_ThankYouForWaiting:: @ 81A0B14
 	.string "Thank you for waiting.\p"
-	.string "We've restored your POKéMON to\n"
+	.string "We've restored your Pokémon to\n"
 	.string "full health.$"
 
 UnknownString_81A0B57: @ 81A0B57
-	.string "Welcome to the POKéMON CABLE CLUB\n"
-	.string "TRADE CENTER.$"
+	.string "Welcome to the Pokémon Cable Club\n"
+	.string "Trade Center.$"
 
 UnknownString_81A0B87: @ 81A0B87
-	.string "Welcome to the POKéMON CABLE CLUB\n"
-	.string "COLOSSEUM.$"
+	.string "Welcome to the Pokémon Cable Club\n"
+	.string "Colosseum.$"
 
 UnknownString_81A0BB4: @ 81A0BB4
-	.string "Welcome to the POKéMON CABLE CLUB\n"
-	.string "TIME CAPSULE.$"
+	.string "Welcome to the Pokémon Cable Club\n"
+	.string "Time Capsule.$"
 
 EverGrandeCity_PokemonLeague_Text_1A0BE4:: @ 81A0BE4
 FallarborTown_Mart_Text_1A0BE4:: @ 81A0BE4
@@ -3096,12 +3101,12 @@ Message_ObtainedItem: @ 81A0C68
 	.string "Obtained the {STR_VAR_2}.$"
 
 LilycoveCity_DepartmentStoreRooftop_Text_1A0C79:: @ 81A0C79
-	.string "The BAG is full...$"
+	.string "The Bag is full...$"
 
 LilycoveCity_DepartmentStoreRooftop_Text_1A0C8C:: @ 81A0C8C
 Message_PutAwayItem:
 	.string "{PLAYER} put away the {STR_VAR_2}\n"
-	.string "in the {STR_VAR_3} POCKET.$"
+	.string "in the {STR_VAR_3} Pocket.$"
 
 Message_FoundOneItem:
 	.string "{PLAYER} found one {STR_VAR_2}!$"
@@ -3117,7 +3122,7 @@ OldaleTown_Text_1A0CC2:: @ 81A0CC2
 Route109_SeashoreHouse_Text_1A0CC2:: @ 81A0CC2
 Message_BagFull:
 	.string "Too bad!\n"
-	.string "The BAG is full...$"
+	.string "The Bag is full...$"
 
 Message_ObtainedDecoration: @ 81A0CDE
 	.string "Obtained the {STR_VAR_2}.$"
@@ -3158,13 +3163,13 @@ UnknownString_81A0DD4: @ 81A0DD4
 	.string "{STR_VAR_1}?$"
 
 UnknownString_81A0DF5: @ 81A0DF5
-	.string "It contains a POKéMON!$"
+	.string "It contains a Pokémon!$"
 
 UnknownString_81A0E0C: @ 81A0E0C
 	.string "We're making preparations.$"
 
 UnknownString_81A0E27: @ 81A0E27
-	.string "I'm a pseudo-GYM LEADER for\n"
+	.string "I'm a pseudo-Gym Leader for\n"
 	.string "interviews.$"
 
 UnknownString_81A0E4F: @ 81A0E4F
@@ -3179,37 +3184,37 @@ UnknownString_81A0ED6: @ 81A0ED6
 	.string "What should I do for fun today?$"
 
 LilycoveCity_DepartmentStoreElevator_Text_1A0EF6:: @ 81A0EF6
-	.string "Welcome to LILYCOVE DEPARTMENT STORE.\p"
+	.string "Welcome to Lilycove Department Store.\p"
 	.string "Which floor would you like?$"
 
 UnknownString_81A0F38: @ 81A0F38
-	.string "Warp to BATTLE TOWER.$"
+	.string "Warp to Battle Tower.$"
 
 UnknownString_81A0F4E: @ 81A0F4E
-	.string "Warp to LILYCOVE.$"
+	.string "Warp to Lilycove.$"
 
 UnknownString_81A0F60: @ 81A0F60
 	.string "The time is {STR_VAR_1}!$"
 
 UnknownString_81A0F70: @ 81A0F70
-	.string "The HALL OF FAME will be accessed.$"
+	.string "The Hall of Fame will be accessed.$"
 
 Route111_Text_1A0F93:: @ 81A0F93
 	.string "The sandstorm is vicious.\n"
 	.string "It's impossible to keep going.$"
 
 Text_NoRegisteredItem: @ 81A0FCC
-	.string "An item in the BAG can be registered\n"
-	.string "on SELECT for convenience.$"
+	.string "An item in the Bag can be registered\n"
+	.string "on Select for convenience.$"
 
 LittlerootTown_BrendansHouse_2F_Text_1A100C:: @ 81A100C
 LittlerootTown_MaysHouse_2F_Text_1A100C:: @ 81A100C
-	.string "There's an e-mail from POKéMON TRAINER\n"
-	.string "SCHOOL.\p"
+	.string "There's an e-mail from Pokémon Trainer\n"
+	.string "School.\p"
 	.string "... ... ... ... ... ...\p"
-	.string "A POKéMON may learn up to four moves.\p"
-	.string "A TRAINER's expertise is tested on the\n"
-	.string "move sets chosen for POKéMON.\p"
+	.string "A Pokémon may learn up to four moves.\p"
+	.string "A Trainer's expertise is tested on the\n"
+	.string "move sets chosen for Pokémon.\p"
 	.string "... ... ... ... ... ...$"
 
 LittlerootTown_BrendansHouse_2F_Text_1A10D6:: @ 81A10D6
@@ -3228,29 +3233,29 @@ fieldPoisonText_PokemonFainted:: @ 81A1132
 	.string "{STR_VAR_1} fainted...\p$"
 
 UnknownString_81A1141: @ 81A1141
-	.string "{PLAYER} is out of useable POKéMON!\p"
+	.string "{PLAYER} is out of useable Pokémon!\p"
 	.string "{PLAYER} whited out!$"
 
 SlateportCity_Text_1A116E:: @ 81A116E
-	.string "Do you know the TM SECRET POWER?\p"
-	.string "Our group, we love the TM SECRET\n"
-	.string "POWER.\p"
+	.string "Do you know the TM Secret Power?\p"
+	.string "Our group, we love the TM Secret\n"
+	.string "Power.\p"
 	.string "One of our members will give it to you.\n"
 	.string "Come back and show me if you get it.\p"
 	.string "We'll accept you as a member and sell\n"
 	.string "you good stuff in secrecy.$"
 
 gText_NurseJoy_OkayIllTakeYourPokemon:: @ 81A1245
-	.string "Okay, I'll take your POKéMON for a\n"
+	.string "Okay, I'll take your Pokémon for a\n"
 	.string "few seconds.$"
 
 gText_NurseJoy_Pokerus:: @ 81A1275
-	.string "Your POKéMON may be infected with\n"
-	.string "POKéRUS.\p"
-	.string "Little is known about the POKéRUS\n"
+	.string "Your Pokémon may be infected with\n"
+	.string "Pokérus.\p"
+	.string "Little is known about the Pokérus\n"
 	.string "except that they are microscopic life-\l"
-	.string "forms that attach to POKéMON.\p"
-	.string "While infected, POKéMON are said to\n"
+	.string "forms that attach to Pokémon.\p"
+	.string "While infected, Pokémon are said to\n"
 	.string "grow exceptionally well.$"
 
 	.include "data/text/surf.inc"
@@ -3266,15 +3271,15 @@ SealedChamber_OuterRoom_Text_1A13BE:: @ 81A13BE
 	.string "There is a big hole in the wall.$"
 
 OldaleTown_PokemonCenter_2F_Text_1A13DF:: @ 81A13DF
-	.string "I'm terribly sorry. The COLOSSEUM\n"
+	.string "I'm terribly sorry. The Colosseum\n"
 	.string "is undergoing adjustments.$"
 
 OldaleTown_PokemonCenter_2F_Text_1A141C:: @ 81A141C
-	.string "I'm terribly sorry. The TRADE CENTER\n"
+	.string "I'm terribly sorry. The Trade Center\n"
 	.string "is undergoing inspections.$"
 
 OldaleTown_PokemonCenter_2F_Text_1A145C:: @ 81A145C
-	.string "I'm terribly sorry. The RECORD CORNER\n"
+	.string "I'm terribly sorry. The Record Corner\n"
 	.string "is under preparation.$"
 
 FallarborTown_House1_Text_1A1498:: @ 81A1498
@@ -3321,13 +3326,13 @@ UnknownString_81A1948: @ 81A1948
 UnknownString_81A197B: @ 81A197B
 	.string "If some vines drop down, this tree can\n"
 	.string "be climbed.\p"
-	.string "Use the SECRET POWER?$"
+	.string "Use the Secret Power?$"
 
 UnknownString_81A19C4: @ 81A19C4
 	.string "A thick vine dropped down!$"
 
 UnknownString_81A19DF: @ 81A19DF
-	.string "Want to make your SECRET BASE here?$"
+	.string "Want to make your Secret Base here?$"
 
 UnknownString_81A1A03: @ 81A1A03
 	.string "If this clump of grass can be moved,\n"
@@ -3336,16 +3341,16 @@ UnknownString_81A1A03: @ 81A1A03
 UnknownString_81A1A4B: @ 81A1A4B
 	.string "If this clump of grass can be moved,\n"
 	.string "it might be possible to go inside.\p"
-	.string "Use the SECRET POWER?$"
+	.string "Use the Secret Power?$"
 
 UnknownString_81A1AA9: @ 81A1AA9
 	.string "Discovered a small entrance!$"
 
 UnknownString_81A1AC6: @ 81A1AC6
-	.string "Want to make your SECRET BASE here?$"
+	.string "Want to make your Secret Base here?$"
 
 SecretBase_RedCave1_Text_1A1AEA:: @ 81A1AEA
-	.string "Have you made a SECRET BASE already?\p"
+	.string "Have you made a Secret Base already?\p"
 	.string "I went here, there, everywhere before\n"
 	.string "choosing this place.\p"
 	.string "Since you're already here, how would\n"
@@ -3364,18 +3369,18 @@ UnknownString_81A1BB2:: @ 81A1BB2
 	.string "About me losing... Please keep it secret!$"
 
 SecretBase_RedCave1_Text_1A1BF8:: @ 81A1BF8
-	.string "What do you think of my SECRET BASE?\n"
+	.string "What do you think of my Secret Base?\n"
 	.string "Come visit me again tomorrow.$"
 
 SecretBase_RedCave1_Text_1A1C3B:: @ 81A1C3B
-	.string "Have you made a SECRET BASE already?\p"
+	.string "Have you made a Secret Base already?\p"
 	.string "I went here, there, everywhere before\n"
 	.string "choosing this place.\p"
 	.string "Feel free to hang out!$"
 
 SecretBase_RedCave1_Text_1A1CB2:: @ 81A1CB2
 	.string "There're a lot of places where you can\n"
-	.string "make a SECRET BASE.\p"
+	.string "make a Secret Base.\p"
 	.string "But I like this spot best.\n"
 	.string "Don't you think it's nice?\p"
 	.string "Oh, would you like to have a battle?$"
@@ -3398,7 +3403,7 @@ SecretBase_RedCave1_Text_1A1DC0:: @ 81A1DC0
 
 SecretBase_RedCave1_Text_1A1DF6:: @ 81A1DF6
 	.string "There're a lot of places where you can\n"
-	.string "make a SECRET BASE.\p"
+	.string "make a Secret Base.\p"
 	.string "But I like this spot best.\n"
 	.string "Don't you think it's nice?$"
 
@@ -3412,7 +3417,7 @@ SecretBase_RedCave1_Text_1A1E67:: @ 81A1E67
 
 SecretBase_RedCave1_Text_1A1F04:: @ 81A1F04
 	.string "Okay!\n"
-	.string "I'm going to defend my SECRET BASE!$"
+	.string "I'm going to defend my Secret Base!$"
 
 SecretBase_RedCave1_Text_1A1F2E:: @ 81A1F2E
 	.string "Hunh? Is that right?\n"
@@ -3433,7 +3438,7 @@ SecretBase_RedCave1_Text_1A1FBD:: @ 81A1FBD
 	.string "I finally got to use it!$"
 
 SecretBase_RedCave1_Text_1A2026:: @ 81A2026
-	.string "Welcome to my POKéMON LAB.\p"
+	.string "Welcome to my Pokémon Lab.\p"
 	.string "I carry out research on battling in\n"
 	.string "secrecy.\p"
 	.string "Would you like to see how strong I am?$"
@@ -3454,7 +3459,7 @@ SecretBase_RedCave1_Text_1A2109:: @ 81A2109
 	.string "Please come back again tomorrow.$"
 
 SecretBase_RedCave1_Text_1A2147:: @ 81A2147
-	.string "Welcome to my POKéMON LAB.\p"
+	.string "Welcome to my Pokémon Lab.\p"
 	.string "I carry out research on battling in\n"
 	.string "secrecy.$"
 
@@ -3478,7 +3483,7 @@ UnknownString_81A2254:: @ 81A2254
 SecretBase_RedCave1_Text_1A2280:: @ 81A2280
 	.string "Well, anyway, I should go buy some\n"
 	.string "decorations and furniture.\p"
-	.string "I want my SECRET BASE to be a place\n"
+	.string "I want my Secret Base to be a place\n"
 	.string "other people can enjoy.$"
 
 SecretBase_RedCave1_Text_1A22FA:: @ 81A22FA
@@ -3490,10 +3495,10 @@ SecretBase_RedCave1_Text_1A22FA:: @ 81A22FA
 SecretBase_RedCave1_Text_1A236A:: @ 81A236A
 	.string "I simply adore shopping for decorations\n"
 	.string "and furniture.\p"
-	.string "I also love raising POKéMON just\n"
+	.string "I also love raising Pokémon just\n"
 	.string "as much.\p"
 	.string "If you would be so kind, will you battle\n"
-	.string "with my POKéMON?$"
+	.string "with my Pokémon?$"
 
 SecretBase_RedCave1_Text_1A2405:: @ 81A2405
 	.string "Thank you.\n"
@@ -3513,11 +3518,11 @@ SecretBase_RedCave1_Text_1A2446:: @ 81A2446
 SecretBase_RedCave1_Text_1A2480:: @ 81A2480
 	.string "I simply adore shopping for decorations\n"
 	.string "and furniture.\p"
-	.string "I also love raising POKéMON just\n"
+	.string "I also love raising Pokémon just\n"
 	.string "as much.$"
 
 SecretBase_RedCave1_Text_1A24E1:: @ 81A24E1
-	.string "Some people make their SECRET BASES in\n"
+	.string "Some people make their Secret Bases in\n"
 	.string "hard-to-find places.\l"
 	.string "Do they want to just lie low?\p"
 	.string "But since you found me, how about we\n"
@@ -3534,11 +3539,11 @@ UnknownString_81A25C3:: @ 81A25C3
 	.string "I went down...$"
 
 SecretBase_RedCave1_Text_1A25D2:: @ 81A25D2
-	.string "Where's your SECRET BASE?\n"
+	.string "Where's your Secret Base?\n"
 	.string "I should go visit you there.$"
 
 SecretBase_RedCave1_Text_1A2609:: @ 81A2609
-	.string "Some people make their SECRET BASES in\n"
+	.string "Some people make their Secret Bases in\n"
 	.string "hard-to-find places.\l"
 	.string "Do they want to just lie low?$"
 
@@ -3550,7 +3555,7 @@ SecretBase_RedCave1_Text_1A2663:: @ 81A2663
 	.string "In the meantime, want to battle?$"
 
 SecretBase_RedCave1_Text_1A2710:: @ 81A2710
-	.string "This is my SECRET BASE.\n"
+	.string "This is my Secret Base.\n"
 	.string "I can't lose!$"
 
 SecretBase_RedCave1_Text_1A2736:: @ 81A2736
@@ -3573,7 +3578,7 @@ SecretBase_RedCave1_Text_1A27A4:: @ 81A27A4
 SecretBase_RedCave1_Text_1A2830:: @ 81A2830
 	.string "I found a spot I liked, and I did it up\n"
 	.string "with my favorite decorations.\p"
-	.string "I raise my favorite POKéMON and grow\n"
+	.string "I raise my favorite Pokémon and grow\n"
 	.string "stronger with it.\p"
 	.string "That's what I do.\n"
 	.string "Want to battle with me?$"
@@ -3595,7 +3600,7 @@ SecretBase_RedCave1_Text_1A294D:: @ 81A294D
 SecretBase_RedCave1_Text_1A297C:: @ 81A297C
 	.string "I found a spot I liked, and I did it up\n"
 	.string "with my favorite decorations.\p"
-	.string "I raise my favorite POKéMON and grow\n"
+	.string "I raise my favorite Pokémon and grow\n"
 	.string "stronger with it.\p"
 	.string "Every day is a great day.$"
 
@@ -4324,12 +4329,12 @@ SecretBase_RedCave1_EventScript_1A350A:: @ 81A350A
 
 UnknownString_81A38FB: @ 81A38FB
 	.string "All decorations and furniture in your\n"
-	.string "SECRET BASE will be returned to your PC.\p"
+	.string "Secret Base will be returned to your PC.\p"
 	.string "Is that okay?$"
 
 UnknownString_81A3958: @ 81A3958
 	.string "Do you want to register\n"
-	.string "{STR_VAR_1}'s SECRET BASE?$"
+	.string "{STR_VAR_1}'s Secret Base?$"
 
 UnknownString_81A3982: @ 81A3982
 	.string "This data is already registered.\n"
@@ -4356,36 +4361,36 @@ UnknownString_81A3A87: @ 81A3A87
 	.string "What would you like to do?$"
 
 UnknownString_81A3AA2: @ 81A3AA2
-	.string "The registered SECRET BASE will remain\n"
+	.string "The registered Secret Base will remain\n"
 	.string "unless the owner moves away.\p"
 	.string "If it is removed from the registry,\n"
-	.string "another SECRET BASE may take its place.\p"
+	.string "another Secret Base may take its place.\p"
 	.string "Up to ten locations can be registered.{PAUSE_UNTIL_PRESS}$"
 
 UnknownString_81A3B5B: @ 81A3B5B
 	.string "A shield of {STR_VAR_2} that marks winning\n"
-	.string "{STR_VAR_1} times in a row at the BATTLE TOWER.$"
+	.string "{STR_VAR_1} times in a row at the Battle Tower.$"
 
 UnknownString_81A3BA4: @ 81A3BA4
 	.string "A realistic toy TV. It could be easily\n"
 	.string "mistaken for the real thing.$"
 
 UnknownString_81A3BE8: @ 81A3BE8
-	.string "A toy TV shaped like a SEEDOT.\n"
+	.string "A toy TV shaped like a Seedot.\n"
 	.string "It looks ready to roll away on its own...$"
 
 UnknownString_81A3C31: @ 81A3C31
-	.string "A toy TV shaped like a SKITTY.\n"
+	.string "A toy TV shaped like a Skitty.\n"
 	.string "It looks ready to stroll away...$"
 
 UnknownString_81A3C71: @ 81A3C71
-	.string "You may only make one SECRET BASE.\p"
+	.string "You may only make one Secret Base.\p"
 	.string "Would you like to move from the SECRET\n"
 	.string "BASE near {STR_VAR_1}?$"
 
 UnknownString_81A3CC9: @ 81A3CC9
 	.string "Moving completed.\p"
-	.string "Would you like to use the SECRET POWER?$"
+	.string "Would you like to use the Secret Power?$"
 
 	.include "data/scripts/cable_club.inc"
 	.include "data/text/cable_club.inc"
@@ -4807,7 +4812,7 @@ S_RepelWoreOff:: @ 81C33E6
 	end
 
 Text_RepelWoreOff: @ 81C33EF
-	.string "REPEL's effect wore off...$"
+	.string "Repel's effect wore off...$"
 
 	.include "data/scripts/safari_zone.inc"
 	.include "data/text/safari_zone.inc"
@@ -4851,16 +4856,16 @@ MauvilleCity_GameCorner_EventScript_1C40DA:: @ 81C40DA
 	.include "data/text/shoal_cave.inc"
 
 PictureBookShelfText: @ 81C6A69
-	.string "There's a set of POKéMON picture books.$"
+	.string "There's a set of Pokémon picture books.$"
 
 BookshelfText: @ 81C6A91
 	.string "It's filled with all sorts of books.$"
 
 PokemonCenterBookshelfText: @ 81C6AB6
-	.string "POKéMON magazines!\n"
-	.string "POKéMON PAL...\p"
-	.string "POKéMON HANDBOOK...\n"
-	.string "ADORABLE POKéMON...$"
+	.string "Pokémon magazines!\n"
+	.string "Pokémon Pal...\p"
+	.string "Pokémon Handbook...\n"
+	.string "Adorable Pokémon...$"
 
 VaseText: @ 81C6B00
 	.string "This vase looks expensive...\n"
@@ -4872,7 +4877,7 @@ TrashCanText: @ 81C6B41
 
 ShopShelfText: @ 81C6B4D
 	.string "The shelves brim with all sorts of\n"
-	.string "POKéMON merchandise.$"
+	.string "Pokémon merchandise.$"
 
 BlueprintText: @ 81C6B85
 	.string "A blueprint of some sort?\n"

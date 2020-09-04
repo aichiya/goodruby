@@ -262,6 +262,14 @@
 #define FLAG_FOUGHT_CELEBI                  0x134
 #define FLAG_GOT_MAUVILLE_TM                0x135
 #define FLAG_GOT_RETURN_TM                  0x136
+#define FLAG_GOT_GYM_REFRESHMENT_1          0x137
+#define FLAG_GOT_GYM_REFRESHMENT_2          0x138
+#define FLAG_GOT_GYM_REFRESHMENT_3          0x139
+#define FLAG_GOT_GYM_REFRESHMENT_4          0x13A
+#define FLAG_GOT_GYM_REFRESHMENT_5          0x13B
+#define FLAG_GOT_GYM_REFRESHMENT_6          0x13C
+#define FLAG_GOT_GYM_REFRESHMENT_7          0x13D
+#define FLAG_GOT_GYM_REFRESHMENT_8          0x13E
 
 // hidden item flags
 #define FLAG_HIDDEN_ITEMS_START  0x258
