@@ -20,6 +20,12 @@ gUnknown_083CA310:: @ 83CA310
 	.byte 25, 10
 	.byte 25, 15
 
+gPreppedMoveNameLocations::
+	.byte 22,  2
+	.byte 22,  7
+	.byte 22, 12
+	.byte 22, 17
+
 gUnknown_083CA318:: @ 83CA318
 	.byte  20,   2
 	.byte  20,   7

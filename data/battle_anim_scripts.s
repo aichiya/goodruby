@@ -15654,9 +15654,6 @@ Move_DRAIN_PUNCH:
 	blendoff
 	end
 
-Move_FOCUS_BLAST:
-    end
-
 Move_VOLT_SWITCH::
 	loadspritegfx ANIM_TAG_SPARK
 	loadspritegfx ANIM_TAG_SPARK_2
@@ -15681,9 +15678,6 @@ Move_VOLT_SWITCH::
 	blendoff
 	delay 8
 	end
-
-Move_MAGIC_GLEAM:
-    end
 
 Move_GRASS_KNOT:
 	loadspritegfx 10160
@@ -15884,7 +15878,86 @@ _MysticFireSub:
 	createsprite gBattleAnimSpriteTemplate_83D9268, ANIM_BATTLER_ATTACKER, 3, 10, 10, 0, 16
 	delay 2
 	return
+
+Move_BURN_UP:
+	loadspritegfx ANIM_TAG_EXPLOSION
+	loadspritegfx ANIM_TAG_SMALL_EMBER
+	monbg ANIM_BATTLER_DEF_PARTNER
     
+    playsewithpan SE_W082, SOUND_PAN_ATTACKER
+	createvisualtask sub_80E4028, 5, 1, 0
+	delay 1
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_BATTLER_ATTACKER, 2, 2, 1, 0, 13, rgb(28, 0, 0)
+	createvisualtask AnimTask_ShakeMon, 5, 0, 2, 0, 15, 1
+	createsprite gBattleAnimSpriteTemplate_FlameCharge, ANIM_BANK_ATTACKER, 3, 0, 0, 64, 0, 12
+	createsprite gBattleAnimSpriteTemplate_FlameCharge, ANIM_BANK_ATTACKER, 3, 0, 0, 48, -48, 12
+	createsprite gBattleAnimSpriteTemplate_FlameCharge, ANIM_BANK_ATTACKER, 3, 0, 0, 0, -64, 12
+	createsprite gBattleAnimSpriteTemplate_FlameCharge, ANIM_BANK_ATTACKER, 3, 0, 0, -48, -48, 12
+	createsprite gBattleAnimSpriteTemplate_FlameCharge, ANIM_BANK_ATTACKER, 3, 0, 0, -64, 0, 12
+    delay 5
+	createsprite gBattleAnimSpriteTemplate_FlameCharge, ANIM_BANK_ATTACKER, 3, 0, 0, -56, -24, 12
+	createsprite gBattleAnimSpriteTemplate_FlameCharge, ANIM_BANK_ATTACKER, 3, 0, 0, -24, -56, 12
+	createsprite gBattleAnimSpriteTemplate_FlameCharge, ANIM_BANK_ATTACKER, 3, 0, 0,  24, -56, 12
+	createsprite gBattleAnimSpriteTemplate_FlameCharge, ANIM_BANK_ATTACKER, 3, 0, 0,  56, -24, 12
+	waitforvisualfinish
+    
+	loopsewithpan SE_W172, SOUND_PAN_ATTACKER, 1, 7
+	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, -16, -16, 20
+    delay 1
+	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, -8, -8, 20
+    delay 1
+	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, 0, 0, 20
+    delay 1
+	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, 8, 8, 20
+    delay 1
+	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, 16, 16, 20
+    delay 1
+    
+    createvisualtask sub_80E4178, 5, 1
+	delay 3
+    createsprite gSimplePaletteBlendSpriteTemplate, ANIM_BATTLER_ATTACKER, 2, 2, -1, 0, 13, rgb(12, 12, 12)
+	createvisualtask AnimTask_ShakeMon, 5, 0, 3, 0, 35, 1
+    
+    
+	loopsewithpan SE_W120, SOUND_PAN_TARGET, 3, 4
+	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, 16, 16, 20
+	createsprite gBattleAnimSpriteTemplate_83D7828, ANIM_BATTLER_TARGET, 4, -20, -20, 1, 0
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BATTLER_TARGET, 2, 0, 21, 1
+    delay 1
+	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, 8, 8, 20
+	createsprite gBattleAnimSpriteTemplate_83D7828, ANIM_BATTLER_TARGET, 4, -10, -10, 1, 0
+    delay 1
+	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, 0, 0, 20
+	createsprite gBattleAnimSpriteTemplate_83D7828, ANIM_BATTLER_TARGET, 4, 0, 0, 1, 0
+    delay 1
+	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, -8, -8, 20
+	createsprite gBattleAnimSpriteTemplate_83D7828, ANIM_BATTLER_TARGET, 4, 10, 10, 1, 0
+    delay 1
+	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, -16, -16, 20
+	createsprite gBattleAnimSpriteTemplate_83D7828, ANIM_BATTLER_TARGET, 4, 20, 20, 1, 0
+    delay 4
+    
+    
+	loopsewithpan SE_W120, SOUND_PAN_TARGET, 3, 4
+	createsprite gBattleAnimSpriteTemplate_83D7828, ANIM_BATTLER_TARGET, 4, 20, 20, 1, 0
+	delay 1
+	createsprite gBattleAnimSpriteTemplate_83D7828, ANIM_BATTLER_TARGET, 4, 10, 10, 1, 0
+    delay 1
+	createsprite gBattleAnimSpriteTemplate_83D7828, ANIM_BATTLER_TARGET, 4, 0, 0, 1, 0
+    delay 1
+	createsprite gBattleAnimSpriteTemplate_83D7828, ANIM_BATTLER_TARGET, 4, -10, -10, 1, 0
+    delay 1
+	createsprite gBattleAnimSpriteTemplate_83D7828, ANIM_BATTLER_TARGET, 4, -20, -20, 1, 0
+    delay 25
+    
+    createvisualtask sub_80E40D0, 5, 1, 0
+	delay 1
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_BATTLER_ATTACKER, 2, 2, 0, 13, 0, rgb(12, 12, 12)
+	waitforvisualfinish
+    
+	clearmonbg ANIM_BATTLER_DEF_PARTNER
+	end
+
 
 Move_LAST_RESORT:
 Move_FELL_STINGER:
@@ -15892,8 +15965,9 @@ Move_FINAL_GAMBIT:
 Move_CIRCLE_THROW:
 Move_ROCK_WRECKER:
 Move_HORSEPOWER:
-Move_BURN_UP:
 Move_SACRED_SWORD:
+Move_MAGIC_GLEAM:
+Move_FOCUS_BLAST:
     goto Move_TACKLE
     end
 

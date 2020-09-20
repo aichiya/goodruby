@@ -47,7 +47,7 @@ MauvilleCity_BikeShop_Text_18134A:: @ 818134A
 
 MauvilleCity_BikeShop_Text_181362:: @ 8181362
 	.string "RYDEL: If you get the urge to switch\n"
-	.string "BIKES, just come see me!$"
+	.string "Bikes, just come see me!$"
 
 MauvilleCity_BikeShop_Text_1813A0:: @ 81813A0
 	.string "RYDEL: Oh? Were you thinking about\n"

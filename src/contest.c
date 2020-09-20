@@ -55,6 +55,7 @@ extern struct SpriteTemplate gUnknown_02024E8C;
 extern const struct ContestPokemon gContestOpponents[60];
 extern const u8 gUnknown_083CA308[][2];
 extern const u8 gUnknown_083CA310[][2];
+extern const u8 gPreppedMoveNameLocations[][2];
 extern const u8 gUnknown_083CA318[][2];
 extern const u8 gUnknown_083CA330[][2];
 extern const u8 gUnknown_083CA338[];
@@ -171,6 +172,8 @@ void sub_80AE5BC(u8);
 void sub_80AE5D4(u8, u8);
 void sub_80AE6CC(u8);
 void sub_80AE6E4(u8, u8);
+void WritePlannedMoveName(u8);
+void ClearPlannedMoveName(u8);
 u8 CreateJudgeSprite(void);
 u8 sub_80AE8B4(void);
 u8 sub_80AE9FC(u16, u32, u32);
@@ -181,6 +184,7 @@ bool8 sub_80AEE54(u8, u8);
 bool8 sub_80AF038(u8);
 void sub_80AF120(void);
 void sub_80AF138(void);
+u16 GetChosenMoveFirstPass(u8);
 u16 GetChosenMove(u8);
 void sub_80AF1B8(void);
 void sub_80AF2A0(u8);
@@ -646,8 +650,17 @@ void sub_80ABB70(u8 taskId)
 
 void sub_80ABC3C(u8 taskId)
 {
+    u8 i;
     if (Text_UpdateWindowInContest(&gMenuWindow) == 1)
+    {
+        // Determine AI moves here instead of after player's selection.
+        for (i = 0; i < 4; i++)
+        {
+            sContestantStatus[i].currMove = GetChosenMoveFirstPass(i);
+            WritePlannedMoveName(i);
+        }
         gTasks[taskId].func = sub_80ABC70;
+    }
 }
 
 void sub_80ABC70(u8 taskId)
@@ -2301,8 +2314,8 @@ void sub_80AE514(void)
           gUnknown_083CA308[gUnknown_02038696[i]][1],
           gUnknown_083CA310[gUnknown_02038696[i]][0] + 5,
           gUnknown_083CA310[gUnknown_02038696[i]][1] + 1);
-        sub_80AE5BC(i);
-        sub_80AE6CC(i);
+        sub_80AE5BC(i); // write trainer name
+        sub_80AE6CC(i); // write mon nickname
     }
 }
 
@@ -2378,6 +2391,53 @@ void sub_80AE6E4(u8 a, u8 b)
       253 + gUnknown_083CA308[gUnknown_02038696[a]][0] * 8,
       gUnknown_083CA308[gUnknown_02038696[a]][1] * 8,
       1);
+}
+
+void WritePlannedMoveName(u8 a)
+{
+    u8 b = a + 10;
+    u8 *str = gDisplayedStringBattle;
+
+    str[0] = EXT_CTRL_CODE_BEGIN;
+    str[1] = 6;
+    str[2] = 4;
+    str += 3;
+
+    str = sub_80AE598(str, gMoveNames[sContestantStatus[a].currMove], b);
+    *str = EOS;
+
+    Text_InitWindowAndPrintText(
+      &gUnknown_03004210,
+      gDisplayedStringBattle,
+      672 + gUnknown_02038696[a] * 22,
+      gPreppedMoveNameLocations[gUnknown_02038696[a]][0],
+      gPreppedMoveNameLocations[gUnknown_02038696[a]][1]);
+}
+
+void ClearPlannedMoveName(u8 a)
+{
+    u8 *str = gDisplayedStringBattle;
+    u8 i;
+
+    str[0] = EXT_CTRL_CODE_BEGIN;
+    str[1] = 6;
+    str[2] = 4;
+    str += 3;
+    
+    for (i = 0; i < 18; i++)
+    {
+        str[0] = CHAR_SPACE;
+        str++;
+    }
+
+    *str = EOS;
+    
+    Text_InitWindowAndPrintText(
+      &gUnknown_03004210,
+      gDisplayedStringBattle,
+      672 + gUnknown_02038696[a] * 22,
+      gPreppedMoveNameLocations[gUnknown_02038696[a]][0],
+      gPreppedMoveNameLocations[gUnknown_02038696[a]][1]);
 }
 
 u16 sub_80AE770(u8 a, u8 b)
@@ -2790,13 +2850,13 @@ void sub_80AF138(void)
     Text_FillWindowRectDefPalette(&gUnknown_03004210, 0, 1, 15, 17, 18);
 }
 
-u16 GetChosenMove(u8 a)
+u16 GetChosenMoveFirstPass(u8 a)
 {
     if (Contest_IsMonsTurnDisabled(a))
         return 0;
     if (a == gContestPlayerMonIndex)
     {
-        return gContestMons[a].moves[sContest.playerMoveChoice];
+        return MOVE_NONE;
     }
     else
     {
@@ -2808,12 +2868,29 @@ u16 GetChosenMove(u8 a)
     }
 }
 
+u16 GetChosenMove(u8 a)
+{
+    if (Contest_IsMonsTurnDisabled(a))
+        return 0;
+    if (a == gContestPlayerMonIndex)
+    {
+        return gContestMons[a].moves[sContest.playerMoveChoice];
+    }
+    else
+    {
+        return sContestantStatus[a].currMove;
+    }
+}
+
 void sub_80AF1B8(void)
 {
     u8 i;
 
     for (i = 0; i < 4; i++)
+    {
         sContestantStatus[i].currMove = GetChosenMove(i);
+        ClearPlannedMoveName(i);
+    }
 }
 
 void sub_80AF1E4(u8 a, u8 b)

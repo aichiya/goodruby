@@ -4,7 +4,7 @@ LavaridgeTown_Gym_1F_EventObjects:: @ 838625C
 	object_event 3, EVENT_OBJ_GFX_MAN_4, 0, 4, 17, 3, MOVEMENT_TYPE_FACE_DOWN, 0, 0, 3, 1, LavaridgeTown_Gym_1F_EventScript_15383E, 0
 	object_event 4, EVENT_OBJ_GFX_MAN_6, 0, 4, 12, 3, MOVEMENT_TYPE_FACE_DOWN, 0, 0, 3, 1, LavaridgeTown_Gym_1F_EventScript_1537ED, 0
 	object_event 5, EVENT_OBJ_GFX_GIRL_3, 0, 0, 2, 3, MOVEMENT_TYPE_FACE_DOWN, 0, 0, 3, 1, LavaridgeTown_Gym_1F_EventScript_153823, 0
-	object_event 6, EVENT_OBJ_GFX_MAN_2, 0, 6, 23, 3, MOVEMENT_TYPE_FACE_RIGHT, 0, 0, 0, 0, LavaridgeTown_Gym_1F_EventScript_153859, 0
+	object_event 6, EVENT_OBJ_GFX_MAN_2, 0, 6, 23, 3, MOVEMENT_TYPE_FACE_RIGHT, 0, 0, 0, 0, LavaridgeTown_Gym_1F_EventScript_GymGuy, 0
 	object_event 7, EVENT_OBJ_GFX_MAN_6, 0, 6, 2, 3, MOVEMENT_TYPE_FACE_DOWN, 0, 0, 3, 1, LavaridgeTown_Gym_1F_EventScript_153808, 0
 
 LavaridgeTown_Gym_1F_MapWarps:: @ 8386304

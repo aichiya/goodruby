@@ -1,12 +1,23 @@
-FortreeCity_Gym_Text_18589C:: @ 818589C
+FortreeCity_Gym_Text_GymGuyGiveWater:: @ 818589C
 	.string "Yo, how's it going, Champion-\n"
 	.string "bound {PLAYER}?\p"
+    .string "Here, have a drink.$"
+
+FortreeCity_Gym_Text_GymGuyFullBag::
+    .string "Huh? Your Bag is too full.$"
+
+FortreeCity_Gym_Text_GymGuyAdvice::
 	.string "Fortree Gym Leader Winona is a\n"
 	.string "master of Flying-type Pokémon.\p"
 	.string "She's waiting at the back of this Gym,\n"
 	.string "behind the rotating doors.\p"
-	.string "She's waiting for new challengers who\n"
-	.string "are trying to take wing!\p"
+	.string "Her Pokémon can stay afloat for a\n"
+    .string "long time. You'll want Pokémon that\l"
+    .string "can break through durable foes.\p"
+    .string "Since most of Winona's Pokémon are\n"
+    .string "Flying, Stealth Rock would be effective.\p"
+	.string "A Rock- or Steel-type Pokémon might\n"
+    .string "also be helpful defensively.\p"
 	.string "Okay, go for it!$"
 
 FortreeCity_Gym_Text_185994:: @ 8185994

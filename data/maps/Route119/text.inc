@@ -81,7 +81,7 @@ Route119_Text_171698:: @ 8171698
 	.string "There's no way you can cycle here.$"
 
 Route119_Text_1716F4:: @ 81716F4
-	.string "Can your POKéMON use its Secret Power\n"
+	.string "Can your Pokémon use its Secret Power\n"
 	.string "on a big pile of grass and make a\l"
 	.string "Secret Base?$"
 

@@ -436,8 +436,17 @@ IN GENERAL:
  * Now learns Heat Wave by TM.
  // Forecast has been significantly improved as well.
 
+#352 Kecleon
+ * Now learns Soak and Power Whip by level.
+ | These are actually both for reasons unrelated to the obvious synergy, but that's a nice byproduct.
+
 #353 Shuppet, #354 Banette
  * Banette's type changed: Ghost -> Ghost/Dark.
+ * Shuppet's base stats changed: 44/75/35/63/33/45 (295) -> 44/75/35/73/33/45 (305).
+ * Banette's base stats changed: 64/115/65/83/63/65 (455) -> 64/115/65/113/63/65 (485).
+ * Now learns Play Rough by level.
+ | Why wasn't this line Dark to begin with? All of its dex entries scream malice,
+ | grudges, negativity. One of them even implies it will die if you're too nice to it.
 
 #357 Tropius
  * Tropius's type changed: Grass/Flying -> Grass/Dragon.

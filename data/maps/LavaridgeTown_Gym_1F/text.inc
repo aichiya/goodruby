@@ -1,13 +1,27 @@
-LavaridgeTown_Gym_1F_Text_176312:: @ 8176312
+LavaridgeTown_Gym_1F_Text_GymGuyGiveWater:: @ 8176312
 	.string "Hey, how's it going, Champion-\n"
 	.string "bound {PLAYER}?\p"
+    .string "This gym's hot, isn't it?\n"
+    .string "Here, take some water.$"
+
+LavaridgeTown_Gym_1F_Text_GymGuyWater2::
+    .string "I brought a whole bunch with me.\n"
+    .string "Have another!$"
+
+LavaridgeTown_Gym_1F_Text_GymGuyBagFull::
+    .string "Huh? Your Bag is too full.$"
+
+LavaridgeTown_Gym_1F_Text_GymGuyAdvice::
 	.string "Lavaridge's Gym Leader Flannery\n"
 	.string "uses Fire-type Pokémon.\p"
-	.string "Her passion for Pokémon burns stronger\n"
-	.string "and hotter than a volcano.\p"
-	.string "Don't get too close to her - you'll burn!\n"
-	.string "Hose her down with water and then\l"
-	.string "go for it!$"
+	.string "Watch the weather when fighting her.\n"
+	.string "In strong sunlight, Fire moves will\l"
+    .string "inflict extreme amounts of damage!\p"
+    .string "Furthermore, the sunlight will make\n"
+    .string "Water attacks do half as much damage.\p"
+    .string "The sun won't last forever, so hold\n"
+    .string "back your Water Pokémon while it's up\l"
+    .string "and use Rock Pokémon to block the heat.$"
 
 LavaridgeTown_Gym_1F_Text_17640C:: @ 817640C
 	.string "Yow! That was a scorching hot battle!$"
@@ -64,7 +78,7 @@ LavaridgeTown_Gym_1F_Text_1766FE:: @ 81766FE
 LavaridgeTown_Gym_1F_Text_17671D:: @ 817671D
 	.string "The temperature of magma is\n"
 	.string "392 degrees.\p"
-	.string "Your POKéMON beat me, so they should\n"
+	.string "Your Pokémon beat me, so they should\n"
 	.string "easily survive in magma.$"
 
 LavaridgeTown_Gym_1F_Text_176784:: @ 8176784

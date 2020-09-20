@@ -191,8 +191,15 @@ PetalburgCity_Gym_Text_17AB96:: @ 817AB96
 	.string "beat the awaiting Trainers.\p"
 	.string "Whoops! The doors in this room are\n"
 	.string "already open, so don't attack me!\p"
+    .string "Here, have this.\n"
+    .string "I've leveled up my refreshments.$"
+
+PetalburgCity_Gym_Text_GymGuyBagFull::
+    .string "Huh? Your Bag is too full.$"
+
+PetalburgCity_Gym_Text_GymGuyAdvice::
 	.string "The Trainers of Petalburg Gym use\n"
-	.string "all kinds of items.\p"
+	.string "all kinds of held items.\p"
 	.string "The door at the left leads to the\n"
 	.string "Speed Room.\p"
 	.string "The door at the right leads to the\n"

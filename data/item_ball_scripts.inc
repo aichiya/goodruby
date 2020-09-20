@@ -371,7 +371,7 @@ AbandonedShip_Rooms_B1F_EventScript_1B188A:: @ 81B188A
 	end
 
 AbandonedShip_Rooms2_B1F_EventScript_1B1897:: @ 81B1897
-	giveitem_std ITEM_STAR_PIECE, 1, 1
+	giveitem_std ITEM_TM34_SLUDGE_WAVE, 1, 1
 	end
 
 AbandonedShip_Room_B1F_EventScript_1B18A4:: @ 81B18A4

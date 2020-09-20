@@ -202,7 +202,7 @@ static void adjustBasePower(struct BattlePokemon *attacker, struct BattlePokemon
 		
 		case MOVE_PUNISHMENT:
 		{
-			u16 power = 20;
+			u16 power = 60;
 	
 			if (defender->statStages[STAT_STAGE_ATK] > 6)
 				power += (defender->statStages[STAT_STAGE_ATK] - 6) * 20;

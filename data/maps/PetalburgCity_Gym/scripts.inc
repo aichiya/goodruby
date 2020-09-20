@@ -1009,7 +1009,24 @@ PetalburgCity_Gym_EventScript_15518B:: @ 815518B
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, PetalburgCity_Gym_EventScript_1551A0
+    goto_if_set FLAG_GOT_GYM_REFRESHMENT_5, PetalburgCity_Gym_EventScript_GymGuyAdvice
 	msgbox PetalburgCity_Gym_Text_17AB96, 4
+    giveitem_std ITEM_MOOMOO_MILK
+    compare RESULT, 0
+    goto_if_eq PetalburgCity_Gym_EventScript_BagFull
+    setflag FLAG_GOT_GYM_REFRESHMENT_5
+	msgbox PetalburgCity_Gym_Text_GymGuyAdvice, 4
+	release
+	end
+
+PetalburgCity_Gym_EventScript_BagFull::
+    msgbox PetalburgCity_Gym_Text_GymGuyBagFull, 4
+	msgbox PetalburgCity_Gym_Text_GymGuyAdvice, 4
+	release
+	end
+
+PetalburgCity_Gym_EventScript_GymGuyAdvice::
+	msgbox PetalburgCity_Gym_Text_GymGuyAdvice, 4
 	release
 	end
 

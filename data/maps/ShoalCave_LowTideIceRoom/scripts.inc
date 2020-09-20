@@ -24,4 +24,3 @@ ShoalCave_LowTideIceRoom_EventScript_Articuno::
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	release
 	end
-    

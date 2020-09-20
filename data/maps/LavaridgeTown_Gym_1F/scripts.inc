@@ -121,13 +121,34 @@ LavaridgeTown_Gym_1F_EventScript_15383E:: @ 815383E
 	msgbox LavaridgeTown_Gym_1F_Text_17671D, 6
 	end
 
-LavaridgeTown_Gym_1F_EventScript_153859:: @ 8153859
+LavaridgeTown_Gym_1F_EventScript_GymGuy:: @ 8153859
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_LAVARIDGE_GYM, LavaridgeTown_Gym_1F_EventScript_15386E
-	msgbox LavaridgeTown_Gym_1F_Text_176312, 4
-	release
-	end
+    goto_if_set FLAG_GOT_GYM_REFRESHMENT_4, LavaridgeTown_Gym_1F_EventScript_GymGuyAdvice
+	msgbox LavaridgeTown_Gym_1F_Text_GymGuyGiveWater, 4
+    giveitem_std ITEM_FRESH_WATER
+    compare RESULT, 0
+    goto_if_eq LavaridgeTown_Gym_1F_EventScript_GymGuyBagFull
+    setflag FLAG_GOT_GYM_REFRESHMENT_4
+    msgbox LavaridgeTown_Gym_1F_Text_GymGuyWater2, 4
+    giveitem_std ITEM_FRESH_WATER
+    compare RESULT, 0
+    goto_if_eq LavaridgeTown_Gym_1F_EventScript_GymGuyBagFull
+    msgbox LavaridgeTown_Gym_1F_Text_GymGuyAdvice, 4
+    release
+    end
+
+LavaridgeTown_Gym_1F_EventScript_GymGuyBagFull::
+    msgbox LavaridgeTown_Gym_1F_Text_GymGuyBagFull, 4
+    msgbox LavaridgeTown_Gym_1F_Text_GymGuyAdvice, 4
+    release
+    end
+
+LavaridgeTown_Gym_1F_EventScript_GymGuyAdvice::
+    msgbox LavaridgeTown_Gym_1F_Text_GymGuyAdvice, 4
+    release
+    end
 
 LavaridgeTown_Gym_1F_EventScript_15386E:: @ 815386E
 	msgbox LavaridgeTown_Gym_1F_Text_17640C, 4

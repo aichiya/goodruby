@@ -67,7 +67,24 @@ FortreeCity_Gym_EventScript_157FBE:: @ 8157FBE
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_FORTREE_GYM, FortreeCity_Gym_EventScript_157FD3
-	msgbox FortreeCity_Gym_Text_18589C, 4
+    goto_if_set FLAG_GOT_GYM_REFRESHMENT_6, FortreeCity_Gym_EventScript_GymGuyHaveDrink
+	msgbox FortreeCity_Gym_Text_GymGuyGiveWater, 4
+    giveitem_std ITEM_MOOMOO_MILK
+    compare RESULT, 0
+    goto_if_eq FortreeCity_Gym_EventScript_GymGuyBagFull
+    setflag FLAG_GOT_GYM_REFRESHMENT_6
+    msgbox FortreeCity_Gym_Text_GymGuyAdvice, 4
+	release
+	end
+
+FortreeCity_Gym_EventScript_GymGuyHaveDrink::
+	msgbox FortreeCity_Gym_Text_GymGuyAdvice, 4
+	release
+	end
+
+FortreeCity_Gym_EventScript_GymGuyBagFull::
+	msgbox FortreeCity_Gym_Text_GymGuyFullBag, 4
+	msgbox FortreeCity_Gym_Text_GymGuyAdvice, 4
 	release
 	end
 

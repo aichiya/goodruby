@@ -12,7 +12,7 @@
 #include "constants/field_effects.h"
 
 static bool8 CheckTrainer(u8);
-static void sub_8084894(struct Sprite *sprite, u16 a2, u8 a3);
+static void sub_8084894(struct Sprite *sprite, u16 a2, u8 a3, u8 playerPalette);
 static void objc_exclamation_mark_probably(struct Sprite *sprite);
 static bool8 TrainerCanApproachPlayer(struct EventObject *);
 static void sub_80842C8(struct EventObject *, u8);
@@ -488,7 +488,7 @@ static const struct SpriteTemplate gSpriteTemplate_839B510 = {
     0xffff, 0xffff, &gOamData_839B4D8, gSpriteAnimTable_839B508, gSpriteImageTable_839B4E0, gDummySpriteAffineAnimTable, objc_exclamation_mark_probably
 };
 static const struct SpriteTemplate gSpriteTemplate_839B528 = {
-    0xffff, 4100, &gOamData_839B4D8, gSpriteAnimTable_839B508, gSpriteImageTable_839B4F0, gDummySpriteAffineAnimTable, objc_exclamation_mark_probably
+    0xffff, 0x1004, &gOamData_839B4D8, gSpriteAnimTable_839B508, gSpriteImageTable_839B4F0, gDummySpriteAffineAnimTable, objc_exclamation_mark_probably
 };
 
 u8 FldEff_ExclamationMarkIcon(void)
@@ -496,7 +496,7 @@ u8 FldEff_ExclamationMarkIcon(void)
     u8 spriteId = CreateSpriteAtEnd(&gSpriteTemplate_839B510, 0, 0, 0x53);
 
     if (spriteId != 64)
-        sub_8084894(&gSprites[spriteId], 0, 0);
+        sub_8084894(&gSprites[spriteId], 0, 0, 1);
 
     return 0;
 }
@@ -506,7 +506,7 @@ u8 FldEff_QuestionMarkIcon(void)
     u8 spriteId = CreateSpriteAtEnd(&gSpriteTemplate_839B510, 0, 0, 0x52);
 
     if (spriteId != 64)
-        sub_8084894(&gSprites[spriteId], 33, 1);
+        sub_8084894(&gSprites[spriteId], 33, 1, 1);
 
     return 0;
 }
@@ -516,12 +516,12 @@ u8 FldEff_HeartIcon(void)
     u8 spriteId = CreateSpriteAtEnd(&gSpriteTemplate_839B528, 0, 0, 0x52);
 
     if (spriteId != 64)
-        sub_8084894(&gSprites[spriteId], 46, 0);
+        sub_8084894(&gSprites[spriteId], 46, 0, 0);
 
     return 0;
 }
 
-static void sub_8084894(struct Sprite *sprite, u16 a2, u8 a3)
+static void sub_8084894(struct Sprite *sprite, u16 a2, u8 a3, u8 playerPalette)
 {
     sprite->oam.priority = 1;
     sprite->coordOffsetEnabled = 1;
@@ -531,7 +531,8 @@ static void sub_8084894(struct Sprite *sprite, u16 a2, u8 a3)
     sprite->data[2] = gFieldEffectArguments[2];
     sprite->data[3] = -5;
     sprite->data[7] = a2;
-    sprite->oam.paletteNum = getPlayerAvatarPaletteIndex();
+    if (playerPalette)
+        sprite->oam.paletteNum = getPlayerAvatarPaletteIndex();
 
     StartSpriteAnim(sprite, a3);
 }

@@ -761,7 +761,7 @@ static const s16 gUnknown_08216594[][5] =
 
 static const u8 gUnknown_082165BC[][3] =
 {
-    {4, 3, 2}, {0, 4, 3}, {1, 0, 4}, {2, 1, 0}, {3, 2, 1}, {0, 2, 3}, {1, 3, 4}, {2, 4, 0}, {3, 0, 1}, {4, 1, 2},
+    {6, 7, 9},
 };
 
 static const u8 gUnknown_082165DA[] = {1, 1, 2, 3, 4};
@@ -991,13 +991,13 @@ void sub_804E794(struct Sprite* sprite, s16 a2, s16 a3, s16 a4, s16 a5, s16 a6)
 
 static void sub_804E7C0(u16 a0, u8 a1)
 {
-    u8 spriteID = sub_80A7DEC(a0 + 123, 0, 80, a1 & 1);
+    u8 spriteID = sub_80A7DEC(a0 - ITEM_CHERI_BERRY, 0, 80, a1 & 1);
     sub_804E794(&gSprites[spriteID], gUnknown_08216594[a1][0], gUnknown_08216594[a1][1], gUnknown_08216594[a1][2], gUnknown_08216594[a1][3], gUnknown_08216594[a1][4]);
 }
 
 static void Blender_CopyBerryData(struct BlenderBerry* berry, u16 itemID)
 {
-    const struct Berry *berryInfo = GetBerryInfo(itemID + 124);
+    const struct Berry *berryInfo = GetBerryInfo(itemID - ITEM_CHERI_BERRY + 1);
     berry->itemID = itemID;
     StringCopy(berry->name, berryInfo->name);
     berry->flavours[FLAVOUR_SPICY] = berryInfo->spicy;
@@ -1312,24 +1312,9 @@ static void sub_804F1BC(u16 itemID, u8 a1, struct BlenderBerry* berry)
 {
     u16 r4 = 0;
     u16 i;
-    if (itemID == ITEM_ENIGMA_BERRY)
-    {
-        for (i = 0; i < 5; i++)
-        {
-            if (berry->flavours[r4] > berry->flavours[i])
-                r4 = i;
-        }
-        r4 += 5;
-    }
-    else
-    {
-        r4 = itemID - 133;
-        if (r4 >= 5)
-            r4 = (r4 % 5) + 5;
-    }
     for (i = 0; i < a1 - 1; i++)
     {
-        Blender_SetBankBerryData(i + 1, gUnknown_082165BC[r4][i] + 133);
+        Blender_SetBankBerryData(i + 1, gUnknown_082165BC[r4][i] + ITEM_CHERI_BERRY);
     }
 }
 
@@ -3071,7 +3056,7 @@ bool8 Blender_PrintBlendingResults(void)
         for (i = 0; i < BLENDER_MAX_PLAYERS; i++)
         {
             if (gBerryBlenderData->chosenItemID[i] != 0)
-                berryIDs[i] = gBerryBlenderData->chosenItemID[i] - 133;
+                berryIDs[i] = gBerryBlenderData->chosenItemID[i] - ITEM_CHERI_BERRY;
         }
         sub_8050760();
         Blender_CalculatePokeblock(gBerryBlenderData->blendedBerries, &pokeblock, gBerryBlenderData->playersNo, flavours, gBerryBlenderData->max_RPM);
@@ -3289,11 +3274,11 @@ static void BlenderDebug_PrintBerryData(void)
         if (sBlenderDebug.cursorPos == i)
         {
             text[0] = 0xEF;
-            CopyItemName(sBlenderDebug.berries[i] + 133, &text[1]);
+            CopyItemName(sBlenderDebug.berries[i] + ITEM_CHERI_BERRY, &text[1]);
         }
         else
         {
-            CopyItemName(sBlenderDebug.berries[i] + 133, &text[0]);
+            CopyItemName(sBlenderDebug.berries[i] + ITEM_CHERI_BERRY, &text[0]);
             text[6] = CHAR_SPACE;
             text[7] = EOS;
         }
@@ -3452,7 +3437,7 @@ static void sub_8052918(void)
             {
                 notEnigma++;
                 berryIDs[i] = sBlenderDebug.berries[i];
-                Blender_CopyBerryData(&berries[i], sBlenderDebug.berries[i] + 133);
+                Blender_CopyBerryData(&berries[i], sBlenderDebug.berries[i] + ITEM_CHERI_BERRY);
             }
             else
                 break;
