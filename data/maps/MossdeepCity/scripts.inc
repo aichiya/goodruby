@@ -36,9 +36,44 @@ MossdeepCity_EventScript_14CFD2:: @ 814CFD2
 	msgbox MossdeepCity_Text_169314, 2
 	end
 
-MossdeepCity_EventScript_14CFDB:: @ 814CFDB
-	msgbox MossdeepCity_Text_1694DA, 2
+MossdeepCity_EventScript_14CFDB:: @ 814CFDB ; white rock wishing lady
+    lock
+    faceplayer
+	msgbox MossdeepCity_Text_1694DA, 4
+    checkitem ITEM_RELIC_SHARD, 4
+    compare RESULT, 1
+    goto_if_eq MossdeepCity_EventScript_FourShards
+    checkitem ITEM_RELIC_SHARD, 3
+    compare RESULT, 1
+    goto_if_eq MossdeepCity_EventScript_ThreeShards
+    checkitem ITEM_RELIC_SHARD, 2
+    compare RESULT, 1
+    goto_if_eq MossdeepCity_EventScript_TwoShards
+    checkitem ITEM_RELIC_SHARD, 1
+    compare RESULT, 1
+    goto_if_eq MossdeepCity_EventScript_OneShard
+    release
 	end
+
+MossdeepCity_EventScript_FourShards::
+	msgbox MossdeepCity_Text_FourRelicShards, 4
+    release
+    end
+
+MossdeepCity_EventScript_ThreeShards::
+	msgbox MossdeepCity_Text_ThreeRelicShards, 4
+    release
+    end
+
+MossdeepCity_EventScript_TwoShards::
+	msgbox MossdeepCity_Text_TwoRelicShards, 4
+    release
+    end
+
+MossdeepCity_EventScript_OneShard::
+	msgbox MossdeepCity_Text_OneRelicShard, 4
+    release
+    end
 
 MossdeepCity_EventScript_14CFE4:: @ 814CFE4
 	msgbox MossdeepCity_Text_1695D3, 3

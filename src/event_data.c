@@ -21,7 +21,9 @@ EWRAM_DATA u16 gSpecialVar_0x800B = 0;
 EWRAM_DATA u16 gSpecialVar_Result = 0;
 EWRAM_DATA u16 gSpecialVar_LastTalked = 0;
 EWRAM_DATA u16 gSpecialVar_Facing = 0;
-EWRAM_DATA u8 gUnknown_0202E8E2[16] = {0};
+EWRAM_DATA u16 gSpecialVar_MonBoxId = 0;
+EWRAM_DATA u16 gSpecialVar_MonBoxPos = 0;
+EWRAM_DATA u8 gUnknown_0202E8E2[12] = {0};
 
 extern u16 *gSpecialVars[];
 

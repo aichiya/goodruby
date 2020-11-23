@@ -33,6 +33,7 @@
 #include "region_map.h"
 #include "random.h"
 #include "overworld.h"
+#include "pokemon_storage_system.h"
 #include "rtc.h"
 #include "script_menu.h"
 #include "constants/species.h"
@@ -2073,6 +2074,30 @@ void ChangePokemonNickname(void)
 void ChangePokemonNickname_CB(void)
 {
     SetMonData(&(gPlayerParty[gSpecialVar_0x8004]), MON_DATA_NICKNAME, gStringVar2);
+    c2_exit_to_overworld_1_continue_scripts_restart_music();
+}
+
+void ChangeBoxPokemonNickname_CB(void);
+
+void ChangeBoxPokemonNickname(void)
+{
+    u16 spec;
+    u16 gender;
+    u32 pval;
+    struct BoxPokemon *mon = GetBoxedMonPtr(gSpecialVar_MonBoxId, gSpecialVar_MonBoxPos);
+
+    GetBoxMonData(mon, MON_DATA_NICKNAME, &gStringVar3);
+    GetBoxMonData(mon, MON_DATA_NICKNAME, &gStringVar2);
+    spec = GetBoxMonData(mon, MON_DATA_SPECIES, 0);
+    gender = GetBoxMonGender(mon);
+    pval = GetBoxMonData(mon, MON_DATA_PERSONALITY, 0);
+    DoNamingScreen(3, gStringVar2, spec, gender, pval, ChangeBoxPokemonNickname_CB);
+}
+
+void ChangeBoxPokemonNickname_CB(void)
+{
+    struct BoxPokemon *mon = GetBoxedMonPtr(gSpecialVar_MonBoxId, gSpecialVar_MonBoxPos);
+    SetBoxMonData(mon, MON_DATA_NICKNAME, gStringVar2);
     c2_exit_to_overworld_1_continue_scripts_restart_music();
 }
 

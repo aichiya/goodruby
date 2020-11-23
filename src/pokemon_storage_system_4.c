@@ -3600,3 +3600,8 @@ void sub_809D1C4(struct UnkStruct_2000028 *unkStruct)
         unkStruct->unk_04 += 64;
     }
 }
+
+struct BoxPokemon* GetBoxedMonPtr(u8 box, u8 index)
+{
+    return (gPokemonStorage.boxes[box] + index);
+}

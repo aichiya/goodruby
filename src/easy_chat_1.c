@@ -22,7 +22,7 @@ extern const struct WindowTemplate gWindowTemplate_81E6DA8;
 
 extern void sub_80546B8(void);
 
-const u16 gMysteryEventPhrase[] = {EC_WORD_MYSTERY, EC_WORD_EVENT, EC_WORD_IS, EC_WORD_EXCITING};
+const u16 gMysteryEventPhrase[] = {EC_WORD_WONDER, EC_WORD_TIME, EC_WORD_SURPRISE, EC_WORD_EVENT};
 
 const u16 gBerryMasterWifePhrases[][2] =
 {

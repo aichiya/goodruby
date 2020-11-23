@@ -989,17 +989,19 @@ u8 GiveMonToPlayer(struct Pokemon *mon)
 
 u8 SendMonToPC(struct Pokemon *mon)
 {
-    s32 i = gPokemonStorage.currentBox;
+    u16 i = gPokemonStorage.currentBox;
 
     do
     {
-        s32 j;
+        u16 j;
         for (j = 0; j < 30; j++)
         {
             if (GetBoxMonData(&gPokemonStorage.boxes[i][j], MON_DATA_SPECIES, NULL) == SPECIES_NONE)
             {
                 MonRestorePP(mon);
                 CopyMon(&gPokemonStorage.boxes[i][j], &mon->box, sizeof(mon->box));
+                gSpecialVar_MonBoxId = i;
+                gSpecialVar_MonBoxPos = j;
                 return 1;
             }
         }

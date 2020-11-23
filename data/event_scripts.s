@@ -2560,15 +2560,6 @@ Route120_Movement_1A0662:: @ 81A0662
 	set_visible
 	end_movement
 
-LittlerootTown_ProfessorBirchsLab_EventScript_1A0678:: @ 81A0678
-MossdeepCity_StevensHouse_EventScript_1A0678:: @ 81A0678
-RustboroCity_DevonCorp_2F_EventScript_1A0678:: @ 81A0678
-SlateportCity_House1_EventScript_1A0678:: @ 81A0678
-	fadescreen 1
-	special ChangePokemonNickname
-	waitstate
-	return
-
 FallarborTown_House1_EventScript_1A067F:: @ 81A067F
 GraniteCave_StevensRoom_EventScript_1A067F:: @ 81A067F
 MtPyre_Summit_EventScript_1A067F:: @ 81A067F
@@ -3226,8 +3217,9 @@ FallarborTown_ContestLobby_Text_1A10EB:: @ 81A10EB
 
 MossdeepCity_StevensHouse_Text_1A1102:: @ 81A1102
 RustboroCity_DevonCorp_2F_Text_1A1102:: @ 81A1102
+CommonText_NicknameRecievedPokemon::
 	.string "Want to give a nickname to the\n"
-	.string "{STR_VAR_2} you received?$"
+	.string "{STR_VAR_1} you received?$"
 
 fieldPoisonText_PokemonFainted:: @ 81A1132
 	.string "{STR_VAR_1} fainted...\p$"
@@ -4977,3 +4969,26 @@ Text_1C6C62: @ 81C6C62
 
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
+
+Common_EventScript_NameReceivedBoxMon::
+	fadescreen 1
+	special ChangeBoxPokemonNickname
+	waitstate
+    lock
+    faceplayer
+	return
+
+Common_EventScript_TransferredToPC::
+    msgbox gText_PkmnTransferredToPC, 2
+    return
+
+LittlerootTown_ProfessorBirchsLab_EventScript_1A0678:: @ 81A0678
+MossdeepCity_StevensHouse_EventScript_1A0678:: @ 81A0678
+RustboroCity_DevonCorp_2F_EventScript_1A0678:: @ 81A0678
+SlateportCity_House1_EventScript_1A0678:: @ 81A0678
+Common_EventScript_NameRecievedPartyMon::
+	fadescreen 1
+	special ChangePokemonNickname
+    lock
+	waitstate
+	return

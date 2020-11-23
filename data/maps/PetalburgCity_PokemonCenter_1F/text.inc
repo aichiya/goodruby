@@ -37,3 +37,20 @@ PetalburgCity_PokemonCenter_1F_Text_17BF73:: @ 817BF73
 	.string "It's strong against the Fire type.\p"
 	.string "But, it's weak against Grass-type\n"
 	.string "and Electric-type Pokémon.$"
+
+PetalburgCity_PokemonCenter_1F_Text_JirachiGuyEarly::
+    .string "Hm...\n"
+    .string "You're quite well-informed.$"
+    .string "Isn't it a bit early for you to\n"
+    .string "know the secret saying?\p"
+    .string "Well, what matters is you know it.\n"
+    .string "Here. Weirdo.$"
+
+PetalburgCity_PokemonCenter_1F_Text_JirachiGuyNormal::
+    .string "Oh? You know the secret saying.\n"
+    .string "I see, I see.\p"
+    .string "Well, allow me to make your wish true.\n"
+    .string "A mystery gift from me to you!$"
+
+PetalburgCity_PokemonCenter_1F_Text_RecievedJirachi::
+    .string "{PLAYER} recieved Jirachi!$"

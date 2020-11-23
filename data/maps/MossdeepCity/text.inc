@@ -65,7 +65,56 @@ MossdeepCity_Text_1694DA:: @ 81694DA
 	.string "When you make a wish, what do you use?\n"
 	.string "Do you wish upon a star?\p"
 	.string "I use a wish tag to make it happen.\n"
-	.string "That's what I do.$"
+	.string "That's what I do.\p"
+    .string "But I've heard people used to use\n"
+    .string "an item called a Relic Shard, long ago.\p"
+    .string "Do you have any? I'd quite like\n"
+    .string "to see one.$"
+
+MossdeepCity_Text_OneRelicShard::
+    .string "Oh, you do!\n"
+    .string "Ah, it looks so worn...\p"
+    .string "There seems to be writing on it.\n"
+    .string "Let me translate...\p"
+    .string "“TIME”\p"
+    .string "How strange...\n"
+    .string "Do let me know if you find any more.$"
+
+MossdeepCity_Text_TwoRelicShards::
+    .string "Oh, you have two of them!\n"
+    .string "Ah, they look so worn...\p"
+    .string "It seems like they were two parts\n"
+    .string "of one table originally.\p"
+    .string "There's writing on them.\n"
+    .string "Let me translate...\p"
+    .string "“TIME” “EVENT”\p"
+    .string "How strange...\n"
+    .string "Do let me know if you find any more.$"
+
+MossdeepCity_Text_ThreeRelicShards::
+    .string "Oh, you have three of them!\n"
+    .string "Ah, they look so worn...\p"
+    .string "It seems like they were three parts\n"
+    .string "of one table originally.\p"
+    .string "There's writing on them.\n"
+    .string "Let me translate...\p"
+    .string "“WONDER” “TIME” “EVENT”\p"
+    .string "It looks like there's only piece\n"
+    .string "missing. Do let me know if you find it.$"
+
+MossdeepCity_Text_FourRelicShards::
+    .string "Oh, you have four of them!\n"
+    .string "Ah, they look so worn...\p"
+    .string "It seems like they were all\n"
+    .string "one table orignally.\p"
+    .string "There's writing on them.\n"
+    .string "Let me translate...\p"
+    .string "“WONDER” “TIME”\n"
+    .string "“SURPRISE” “EVENT”\p"
+    .string "Hm...It looks like this is a\n"
+    .string "complete set."
+    .string "Whatever could that saying mean?\n"
+    .string "Is that really how people made wishes?$"
 
 MossdeepCity_Text_1695D3:: @ 81695D3
 	.string "It's a white rock.$"

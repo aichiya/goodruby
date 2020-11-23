@@ -1292,8 +1292,8 @@ const struct Item gItems[] =
 		.natGiftPower = 0,
     },
     {
-        .name = _("Red Shard"),
-        .itemId = ITEM_RED_SHARD,
+        .name = _("Relic Shard"),
+        .itemId = ITEM_RELIC_SHARD,
         .price = 200,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
@@ -1312,7 +1312,7 @@ const struct Item gItems[] =
     },
     {
         .name = _("Blue Shard"),
-        .itemId = ITEM_BLUE_SHARD,
+        .itemId = ITEM_BLUE_SHARD_UNUSED,
         .price = 200,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
@@ -1331,7 +1331,7 @@ const struct Item gItems[] =
     },
     {
         .name = _("Yellow Shard"),
-        .itemId = ITEM_YELLOW_SHARD,
+        .itemId = ITEM_YELLOW_SHARD_UNUSED,
         .price = 200,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
@@ -1350,7 +1350,7 @@ const struct Item gItems[] =
     },
     {
         .name = _("Green Shard"),
-        .itemId = ITEM_GREEN_SHARD,
+        .itemId = ITEM_GREEN_SHARD_UNUSED,
         .price = 200,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,

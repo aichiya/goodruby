@@ -558,3 +558,7 @@ gOtherText_OK:: @ 842D4FC
 
 gOtherText_CorrectTimePrompt:: @ 842D4FF
 	.string "Is this the correct time?$"
+
+gText_PkmnTransferredToPC::
+    .string "{STR_VAR_2} was transferred to\n"
+	.string "the Pokémon Storage System.$"

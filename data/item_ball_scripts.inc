@@ -187,19 +187,19 @@ Route123_EventScript_1B1682:: @ 81B1682
 	end
 
 Route124_EventScript_1B168F:: @ 81B168F
-	giveitem_std ITEM_RED_SHARD, 1, 1
+	giveitem_std ITEM_RELIC_SHARD, 1, 1
 	end
 
 Route124_EventScript_1B169C:: @ 81B169C
-	giveitem_std ITEM_BLUE_SHARD, 1, 1
+	giveitem_std ITEM_RELIC_SHARD, 1, 1
 	end
 
 Route124_EventScript_1B16A9:: @ 81B16A9
-	giveitem_std ITEM_YELLOW_SHARD, 1, 1
+	giveitem_std ITEM_RELIC_SHARD, 1, 1
 	end
 
 Route126_EventScript_1B16B6:: @ 81B16B6
-	giveitem_std ITEM_GREEN_SHARD, 1, 1
+	giveitem_std ITEM_RELIC_SHARD, 1, 1
 	end
 
 Route127_EventScript_1B16C3:: @ 81B16C3

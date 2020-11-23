@@ -95,13 +95,78 @@ PetalburgCity_PokemonCenter_1F_EventScript_1B1C6D:: @ 81B1C6D
 	release
 	end
 
-PetalburgCity_PokemonCenter_1F_EventScript_1B1C77:: @ 81B1C77
-	goto_if_unset FLAG_BADGE05_GET, PetalburgCity_PokemonCenter_1F_EventScript_1B1C96
-	goto_if_set FLAG_SYS_EXDATA_ENABLE, PetalburgCity_PokemonCenter_1F_EventScript_1B1C96
-	setflag FLAG_SYS_EXDATA_ENABLE
-	msgbox PetalburgCity_PokemonCenter_1F_Text_1B21CC, 3
+PetalburgCity_PokemonCenter_1F_EventScript_1B1C77:: @ 81B1C77 ; said the phrase
+	goto_if_set FLAG_SAID_JIRACHI_PHRASE, PetalburgCity_PokemonCenter_1F_EventScript_Return
+	setflag FLAG_SAID_JIRACHI_PHRASE
+	call_if_unset FLAG_VISITED_MOSSDEEP_CITY, PetalburgCity_PokemonCenter_1F_EventScript_JirachiGuyEarly
+	call_if_set FLAG_VISITED_MOSSDEEP_CITY, PetalburgCity_PokemonCenter_1F_EventScript_JirachiGuyNormal
+	goto_if_unset FLAG_VISITED_MOSSDEEP_CITY, PetalburgCity_PokemonCenter_1F_EventScript_JirachiGuyEarlyGive
+	goto_if_set FLAG_VISITED_MOSSDEEP_CITY, PetalburgCity_PokemonCenter_1F_EventScript_JirachiGuyNormalGive
 	release
 	end
 
-PetalburgCity_PokemonCenter_1F_EventScript_1B1C96:: @ 81B1C96
+PetalburgCity_PokemonCenter_1F_EventScript_Return::
+    return
+
+PetalburgCity_PokemonCenter_1F_EventScript_JirachiGuyEarly::
+	msgbox PetalburgCity_PokemonCenter_1F_Text_JirachiGuyEarly, 3
+	return
+
+PetalburgCity_PokemonCenter_1F_EventScript_JirachiGuyNormal::
+	msgbox PetalburgCity_PokemonCenter_1F_Text_JirachiGuyNormal, 3
+	return
+
+PetalburgCity_PokemonCenter_1F_EventScript_JirachiGuyEarlyGive::
+	givemon SPECIES_JIRACHI, 10, ITEM_GANLON_BERRY, 0x0, 0x0, 0
+    goto PetalburgCity_PokemonCenter_1F_EventScript_JirachiGuyGiveMerge
+
+PetalburgCity_PokemonCenter_1F_EventScript_JirachiGuyNormalGive::
+	getpartysize
+    copyvar VAR_SPECIAL_4, RESULT
+	givemon SPECIES_JIRACHI, 50, ITEM_SALAC_BERRY, 0x0, 0x0, 0
+    goto PetalburgCity_PokemonCenter_1F_EventScript_JirachiGuyGiveMerge
+
+PetalburgCity_PokemonCenter_1F_EventScript_JirachiGuyGiveMerge::
+    compare RESULT, 0
+    goto_if_eq PetalburgCity_PokemonCenter_1F_EventScript_JirachiGuyRecieveParty
+    compare RESULT, 1
+    goto_if_eq PetalburgCity_PokemonCenter_1F_EventScript_JirachiGuyRecievePC
+    release
+    end
+@ TODO: complain about all boxes full
+
+PetalburgCity_PokemonCenter_1F_EventScript_JirachiGuyRecieveParty::
+    call PetalburgCity_PokemonCenter_1F_EventScript_JirachiGuyFanfare
+	bufferspeciesname 0, SPECIES_JIRACHI
+    msgbox CommonText_NicknameRecievedPokemon, MSGBOX_YESNO
+    compare RESULT, NO
+    goto_if_eq PetalburgCity_PokemonCenter_1F_EventScript_JirachiGuyEnd
+    call Common_EventScript_NameRecievedPartyMon
+    goto PetalburgCity_PokemonCenter_1F_EventScript_JirachiGuyEnd
+
+PetalburgCity_PokemonCenter_1F_EventScript_JirachiGuyEnd::
+    setflag FLAG_GOT_JIRACHI
+    release
+    end
+
+PetalburgCity_PokemonCenter_1F_EventScript_JirachiGuyRecievePC::
+    call PetalburgCity_PokemonCenter_1F_EventScript_JirachiGuyFanfare
+	bufferspeciesname 0, SPECIES_JIRACHI
+    msgbox CommonText_NicknameRecievedPokemon, MSGBOX_YESNO
+    compare RESULT, NO
+    goto_if_eq PetalburgCity_PokemonCenter_1F_EventScript_JirachiGuySendToPC
+    call Common_EventScript_NameReceivedBoxMon
+    goto PetalburgCity_PokemonCenter_1F_EventScript_JirachiGuySendToPC
+
+PetalburgCity_PokemonCenter_1F_EventScript_JirachiGuySendToPC::
+    call Common_EventScript_TransferredToPC
+    setflag FLAG_GOT_JIRACHI
+    release
+    end
+
+PetalburgCity_PokemonCenter_1F_EventScript_JirachiGuyFanfare::
+	playfanfare MUS_FANFA5
+	message PetalburgCity_PokemonCenter_1F_Text_RecievedJirachi
+	waitfanfare
+	waitmessage
 	return
