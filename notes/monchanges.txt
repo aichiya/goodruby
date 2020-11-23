@@ -266,6 +266,9 @@ IN GENERAL:
  * Level-up movepool slightly adjusted.
  * Misdreavus now learns Hyper Voice by level.
 
+#201 Unown
+ * Base stats changed: 48/72/48/72/48/48 (336) -> 48/72/48/245/48/48 (509)
+
 #215 Sneasel, #461 Weavile
  * Sneasel's Hidden Ability Pickpocket replaced with Early Bird.
  * Weavile's Hidden Ability Pickpocket replaced with Pressure.
