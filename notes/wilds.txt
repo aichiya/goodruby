@@ -145,7 +145,8 @@ UNDERWATER: Lanturn (30%) Huntail (20%), Gorebyss (20%), Octillery (20%) Relican
 SEAFLOOR CAVERN:  Golbat (20%), Kingler (20%), Parasect (15%), Kabuto (10%), Omanyte (10%), Lileep (10%), Anorith (10%), Aerodactyl (5%)
 MIRAGE ISLAND: Wynaut (20%), Xatu (20%), Venomoth (15%), Exeggcute (15%), Tangela (15%), Mantine (10%), Munchlax (5%)
 CAVE OF ORIGIN: Unown (80%), Mawile (5%), Sableye (5%), Wobbuffet (5%), Golbat (5%)
-SEALED CHAMBER:
+DEEP METEOR FALLS: Golbat (20%), Lunatone (20%), Solrock (20%), Lairon (10%), Clefairy (10%), Misdreavus (10%), Bagon (5%), Beldum (5%)
+METEOR FALLS BACK ROOM: Bagon (35%), Beldum (35%), Lunatone (10%), Solrock (10%), Shelgon (5%), Metang (5%)
 
 GNARLED DEN: Kangaskhan
 

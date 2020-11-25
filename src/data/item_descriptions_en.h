@@ -929,9 +929,19 @@ static const u8 gItemDescription_MentalHerb[] = _(
     "of infatuation.");
 
 static const u8 gItemDescription_ChoiceBand[] = _(
-    "Raises a move's\n"
-    "power, but permits\n"
-    "only that move.");
+    "Boosts Attack by\n"
+    "50%, but permits\n"
+    "only one move.");
+
+static const u8 gItemDescription_ChoiceSpecs[] = _(
+    "Boosts Sp. Atk. by\n"
+    "50%, but permits\n"
+    "only one move.");
+
+static const u8 gItemDescription_ChoiceScarf[] = _(
+    "Boosts Speed by\n"
+    "50%, but permits\n"
+    "only one move.");
 
 static const u8 gItemDescription_KingsRock[] = _(
     "A hold item that\n"

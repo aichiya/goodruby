@@ -30,84 +30,52 @@ const struct WildPokemonInfo MeteorFalls_1F_1R_LandMonsInfo = {10, MeteorFalls_1
 
 const struct WildPokemon MeteorFalls_1F_2R_LandMons [] =
 {
-    {33, 33, SPECIES_GOLBAT},
-    {35, 35, SPECIES_GOLBAT},
-    {33, 33, SPECIES_GOLBAT},
-#ifdef SAPPHIRE
-    {35, 35, SPECIES_LUNATONE},
-    {33, 33, SPECIES_LUNATONE},
-    {37, 37, SPECIES_LUNATONE},
-#else
-    {35, 35, SPECIES_SOLROCK},
-    {33, 33, SPECIES_SOLROCK},
-    {37, 37, SPECIES_SOLROCK},
-#endif
-    {35, 35, SPECIES_GOLBAT},
-#ifdef SAPPHIRE
-    {39, 39, SPECIES_LUNATONE},
-#else
-    {39, 39, SPECIES_SOLROCK},
-#endif
-    {38, 38, SPECIES_GOLBAT},
-    {40, 40, SPECIES_GOLBAT},
-    {38, 38, SPECIES_GOLBAT},
-    {40, 40, SPECIES_GOLBAT},
+    {41, 43, SPECIES_GOLBAT},
+    {41, 43, SPECIES_LUNATONE},
+    {41, 43, SPECIES_SOLROCK},
+    {41, 43, SPECIES_SOLROCK},
+    {41, 43, SPECIES_CLEFAIRY},
+    {41, 43, SPECIES_LAIRON},
+    {41, 43, SPECIES_MISDREAVUS},
+    {41, 43, SPECIES_MISDREAVUS},
+    {15, 19, SPECIES_BELDUM},
+    {15, 19, SPECIES_BAGON},
+    {15, 19, SPECIES_BELDUM},
+    {15, 19, SPECIES_BAGON},
 };
 const struct WildPokemonInfo MeteorFalls_1F_2R_LandMonsInfo = {10, MeteorFalls_1F_2R_LandMons};
 
 const struct WildPokemon MeteorFalls_B1F_1R_LandMons [] =
 {
-    {33, 33, SPECIES_GOLBAT},
-    {35, 35, SPECIES_GOLBAT},
-    {33, 33, SPECIES_GOLBAT},
-#ifdef SAPPHIRE
-    {35, 35, SPECIES_LUNATONE},
-    {33, 33, SPECIES_LUNATONE},
-    {37, 37, SPECIES_LUNATONE},
-#else
-    {35, 35, SPECIES_SOLROCK},
-    {33, 33, SPECIES_SOLROCK},
-    {37, 37, SPECIES_SOLROCK},
-#endif
-    {35, 35, SPECIES_GOLBAT},
-#ifdef SAPPHIRE
-    {39, 39, SPECIES_LUNATONE},
-#else
-    {39, 39, SPECIES_SOLROCK},
-#endif
-    {38, 38, SPECIES_GOLBAT},
-    {40, 40, SPECIES_GOLBAT},
-    {38, 38, SPECIES_GOLBAT},
-    {40, 40, SPECIES_GOLBAT},
+    {41, 43, SPECIES_GOLBAT},
+    {41, 43, SPECIES_LUNATONE},
+    {41, 43, SPECIES_SOLROCK},
+    {41, 43, SPECIES_SOLROCK},
+    {41, 43, SPECIES_CLEFAIRY},
+    {41, 43, SPECIES_LAIRON},
+    {41, 43, SPECIES_MISDREAVUS},
+    {41, 43, SPECIES_MISDREAVUS},
+    {15, 19, SPECIES_BELDUM},
+    {15, 19, SPECIES_BAGON},
+    {15, 19, SPECIES_BELDUM},
+    {15, 19, SPECIES_BAGON},
 };
 const struct WildPokemonInfo MeteorFalls_B1F_1R_LandMonsInfo = {10, MeteorFalls_B1F_1R_LandMons};
 
 const struct WildPokemon MeteorFalls_B1F_2R_LandMons [] =
 {
-    {33, 33, SPECIES_GOLBAT},
-    {35, 35, SPECIES_GOLBAT},
-    {30, 30, SPECIES_BAGON},
-#ifdef SAPPHIRE
-    {35, 35, SPECIES_LUNATONE},
-#else
-    {35, 35, SPECIES_SOLROCK},
-#endif
-    {35, 35, SPECIES_BAGON},
-#ifdef SAPPHIRE
-    {37, 37, SPECIES_LUNATONE},
-#else
-    {37, 37, SPECIES_SOLROCK},
-#endif
-    {25, 25, SPECIES_BAGON},
-#ifdef SAPPHIRE
-    {39, 39, SPECIES_LUNATONE},
-#else
-    {39, 39, SPECIES_SOLROCK},
-#endif
-    {38, 38, SPECIES_GOLBAT},
-    {40, 40, SPECIES_GOLBAT},
-    {38, 38, SPECIES_GOLBAT},
-    {40, 40, SPECIES_GOLBAT},
+    {15, 19, SPECIES_BELDUM},
+    {15, 19, SPECIES_BAGON},
+    {41, 43, SPECIES_LUNATONE},
+    {41, 43, SPECIES_SOLROCK},
+    {15, 19, SPECIES_BELDUM},
+    {15, 19, SPECIES_BAGON},
+    {15, 19, SPECIES_BELDUM},
+    {15, 19, SPECIES_BAGON},
+    {41, 43, SPECIES_SHELGON},
+    {41, 43, SPECIES_METANG},
+    {41, 43, SPECIES_SHELGON},
+    {41, 43, SPECIES_METANG},
 };
 const struct WildPokemonInfo MeteorFalls_B1F_2R_LandMonsInfo = {10, MeteorFalls_B1F_2R_LandMons};
 

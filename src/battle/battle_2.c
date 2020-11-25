@@ -6302,6 +6302,8 @@ u32 GetModifiedSpeed(u8 bank)
 
     if (heldItemEffect == HOLD_EFFECT_MACHO_BRACE)
         speed /= 2;
+    if (heldItemEffect == HOLD_EFFECT_CHOICE_BAND && gBattleMons[bank].item == ITEM_CHOICE_SCARF)
+        speed = (speed * 15) / 10;
 
     if (gBattleMons[bank].status1)
     {

@@ -323,7 +323,7 @@ FieryPath_EventScript_Item4::
 	end
 
 MeteorFalls_1F_1R_EventScript_1B17FB:: @ 81B17FB
-	giveitem_std ITEM_TM23_IRON_TAIL, 1, 1
+	giveitem_std ITEM_TM71_STONE_EDGE, 1, 1
 	end
 
 MeteorFalls_1F_1R_EventScript_1B1808:: @ 81B1808
@@ -339,7 +339,7 @@ MeteorFalls_1F_1R_EventScript_1B1822:: @ 81B1822
 	end
 
 MeteorFalls_B1F_2R_EventScript_1B182F:: @ 81B182F
-	giveitem_std ITEM_TM02_DRAGON_CLAW, 1, 1
+	giveitem_std ITEM_TM75_SWORDS_DANCE, 1, 1
 	end
 
 NewMauville_Inside_EventScript_1B183C:: @ 81B183C
@@ -559,7 +559,7 @@ VictoryRoad_1F_EventScript_1B1AD3:: @ 81B1AD3
 	end
 
 VictoryRoad_B1F_EventScript_1B1AE0:: @ 81B1AE0
-	giveitem_std ITEM_TM29_PSYCHIC, 1, 1
+	giveitem_std ITEM_TM52_FOCUS_BLAST, 1, 1
 	end
 
 VictoryRoad_B1F_EventScript_1B1AED:: @ 81B1AED

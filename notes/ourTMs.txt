@@ -1,5 +1,5 @@
 01 - Focus Punch    North of Rustboro, on ground
-02 - Dragon Claw    Route 134 (*Meteor Falls)
+02 - Dragon Claw    Route 134
 03 - Psyshock       Nameless Cavern
 04 - Calm Mind      Mossdeep Gym
 05 - Roar           West of Fallarbor
@@ -18,15 +18,15 @@
 18 - Rain Dance     Abandoned Ship
 19 - Giga Drain     South of Mt. Pyre
 20 - Safeguard      Department Store
-21 - Seed Bomb      Route 119 (*Pacifidlog (replacing Frustration))
+21 - Seed Bomb      Route 119
 22 - Solar Beam     Safari Zone
-23 - Iron Tail      Safari Zone (*Meteor Falls)
+23 - Iron Tail      Safari Zone
 24 - Thunderbolt    Department Store
 25 - Thunder        New Mauville Basement
 26 - Earthquake     Seafloor Cavern
 27 - Return         Pacifidlog Town
 28 - Dig            Fossil Maniac
-29 - Psychic        Department Store (*Victory Road+Game Corner)
+29 - Psychic        Department Store
 30 - Shadow Ball    Mt. Pyre
 31 - Brick Break    Route 111
 32 - Drain Punch    Game Corner
@@ -45,11 +45,11 @@
 45 - Attract        Verdanturf Contest Hall
 46 - Thief          Slateport Museum
 47 - Steel Wing     Granite Cave from Steven
-48 - Icy Wind       Abandoned Ship (*Mt. Pyre)
+48 - Icy Wind       Abandoned Ship
 49 - Superpower     Sootopolis City (*SS Tidal)
 50 - Overheat       Lavaridge Gym
 51 - Roost          Fortree Gym
-52 - Focus Blast
+52 - Focus Blast    Victory Road
 53 - Energy Ball    Department Store
 54 - Fire Punch     Game Corner
 55 - Ice Punch      Game Corner
@@ -68,11 +68,11 @@
 68 - Giga Impact    Department Store
 69 - Rock Polish    Slateport Market
 70 - Foul Play
-71 - Stone Edge
+71 - Stone Edge     Meteor Falls (deep)
 72 - Volt Switch    Mauville Gym
 73 - Thunder Wave   Wattson after New Mauville
 74 - Wild Charge
-75 - Swords Dance
+75 - Swords Dance   Meteor Falls (deep)
 76 - Stealth Rock   Rustboro Gym
 77 - Drill Run
 78 - Bulldoze       Rusturf Tunnel

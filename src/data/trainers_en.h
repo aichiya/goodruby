@@ -3817,7 +3817,7 @@ const struct Trainer gTrainers[] = {
         .items = {0, 0, 0, 0}, //{ITEM_HYPER_POTION, ITEM_HYPER_POTION, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = 0x7,
-        .partySize = 5,
+        .partySize = 6,
         .party = {.FullControl = gTrainerParty_Wallace }
     },
 

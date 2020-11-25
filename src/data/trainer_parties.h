@@ -4235,6 +4235,18 @@ const struct TrainerMonFullControl gTrainerParty_Wallace[] = {
     },
     {
 	.iv = 12,
+	.level = 51,
+	.species = SPECIES_FARFETCHD,
+	.heldItem = ITEM_STICK,
+	.ability = 2, // Defiant
+	.moves = {MOVE_BRAVE_BIRD, MOVE_SACRED_SWORD, MOVE_LEAF_BLADE, MOVE_SWORDS_DANCE},
+		.evs = {0, 252, 0, 252, 0, 0},
+		.nature = NATURE_ADAMANT,
+		.gender = MON_MALE,
+		.ball = ITEM_NET_BALL,
+    },
+    {
+	.iv = 12,
 	.level = 52,
 	.species = SPECIES_DRAGONITE,
 	.heldItem = ITEM_LIFE_ORB,
@@ -5807,13 +5819,13 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Katelyn5[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Nicolas1[] = {
     {
 	.iv = 100,
-	.level = 38,
-	.species = SPECIES_ALTARIA
+	.level = 50,
+	.species = SPECIES_CHARIZARD
     },
     {
 	.iv = 100,
-	.level = 38,
-	.species = SPECIES_ALTARIA
+	.level = 51,
+	.species = SPECIES_SALAMENCE
     }
 };
 
@@ -10394,15 +10406,15 @@ const struct TrainerMonNoItemCustomMoves gTrainerParty_MelAndPaul[] = {
 const struct TrainerMonNoItemCustomMoves gTrainerParty_JohnAndJay1[] = {
     {
 	.iv = 200,
-	.level = 40,
-	.species = SPECIES_MEDICHAM,
-        .moves = MOVE_PSYCHIC, MOVE_FIRE_PUNCH, MOVE_PSYCH_UP, MOVE_PROTECT
+	.level = 50,
+	.species = SPECIES_HITMONLEE,
+        .moves = MOVE_HI_JUMP_KICK, MOVE_BLAZE_KICK, MOVE_KNOCK_OFF, 0
     },
     {
 	.iv = 200,
-	.level = 40,
-	.species = SPECIES_HARIYAMA,
-        .moves = MOVE_FOCUS_PUNCH, MOVE_ROCK_TOMB, MOVE_REST, MOVE_BELLY_DRUM
+	.level = 50,
+	.species = SPECIES_HITMONCHAN,
+        .moves = MOVE_FAKE_OUT, MOVE_HELPING_HAND, MOVE_DRAIN_PUNCH, MOVE_ICE_PUNCH
     }
 };
 

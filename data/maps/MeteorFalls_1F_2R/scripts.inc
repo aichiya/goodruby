@@ -39,3 +39,22 @@ MeteorFalls_1F_2R_EventScript_15C728:: @ 815C728
 	trainerbattle 7, TRAINER_JOHN_AND_JAY_1, 0, MeteorFalls_1F_2R_Text_193FCA, MeteorFalls_1F_2R_Text_19403A, MeteorFalls_1F_2R_Text_1940DF
 	msgbox MeteorFalls_1F_2R_Text_194066, 6
 	end
+
+MeteorFalls_1F_2R_EventScript_ChoiceMart::
+	lock
+	faceplayer
+	message MossdeepCity_Mart_Text_1A0BE4
+	waitmessage
+	pokemart MeteorFalls_ChoiceMartItems
+	msgbox MossdeepCity_Mart_Text_1A0C02, 4
+	release
+	end
+
+	.align 2
+MeteorFalls_ChoiceMartItems:: @ 815A940
+	.2byte ITEM_CHOICE_BAND
+	.2byte ITEM_CHOICE_SPECS
+	.2byte ITEM_CHOICE_SCARF
+	.2byte ITEM_NONE
+	release
+	end

@@ -6,7 +6,7 @@ VictoryRoad_B1F:: @ 8307240
 	.2byte MUS_C_ROAD
 	.2byte 286
 	.byte MAPSEC_VICTORY_ROAD
-	.byte 1
+	.byte 0
 	.byte WEATHER_NONE
 	.byte MAP_TYPE_UNDERGROUND
 	.2byte 0
