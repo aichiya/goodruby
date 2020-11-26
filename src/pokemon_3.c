@@ -1242,8 +1242,6 @@ u16 GetMUS_ForBattle(void)
         case 0x20:
             return MUS_BATTLE33;
         case 0x2E:
-            if (!StringCompare(gTrainers[gTrainerBattleOpponent].trainerName, BattleText_Wally))
-                return MUS_BATTLE20;
             return MUS_BATTLE35;
         case 0x18:
             return MUS_BATTLE38;

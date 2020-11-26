@@ -567,7 +567,7 @@ VictoryRoad_B1F_EventScript_1B1AED:: @ 81B1AED
 	end
 
 VictoryRoad_B2F_EventScript_1B1AFA:: @ 81B1AFA
-	giveitem_std ITEM_FULL_HEAL, 1, 1
+	giveitem_std ITEM_LIFE_ORB, 1, 1
 	end
 
 @ 81B1B07

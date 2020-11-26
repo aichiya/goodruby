@@ -4250,6 +4250,7 @@ const u16 gOctilleryEggMoves[] = {
 const u16 gDelibirdEggMoves[] = {
     MOVE_AURORA_BEAM,
     // Bestow
+    MOVE_BRAVE_BIRD,
     MOVE_COUNTER,
     MOVE_DESTINY_BOND,
     MOVE_FAKE_OUT,

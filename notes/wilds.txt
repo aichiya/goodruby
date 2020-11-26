@@ -144,9 +144,11 @@ DEEP FIERY PATH: Magcargo (20%), Graveler (20%), Camerupt (15%), Machoke (15%), 
 UNDERWATER: Lanturn (30%) Huntail (20%), Gorebyss (20%), Octillery (20%) Relicanth (5%), Corsola (5%)
 SEAFLOOR CAVERN:  Golbat (20%), Kingler (20%), Parasect (15%), Kabuto (10%), Omanyte (10%), Lileep (10%), Anorith (10%), Aerodactyl (5%)
 MIRAGE ISLAND: Wynaut (20%), Xatu (20%), Venomoth (15%), Exeggcute (15%), Tangela (15%), Mantine (10%), Munchlax (5%)
-CAVE OF ORIGIN: Unown (80%), Mawile (5%), Sableye (5%), Wobbuffet (5%), Golbat (5%)
+CAVE OF ORIGIN: Unown (80%), Mawile (5%), Sableye (5%), Wobbuffet (5%), Shuckle (5%)
 DEEP METEOR FALLS: Golbat (20%), Lunatone (20%), Solrock (20%), Lairon (10%), Clefairy (10%), Misdreavus (10%), Bagon (5%), Beldum (5%)
 METEOR FALLS BACK ROOM: Bagon (35%), Beldum (35%), Lunatone (10%), Solrock (10%), Shelgon (5%), Metang (5%)
+VICTORY ROAD 1F: Golbat (20%), Loudred (20%), Lairon (10%), Hariyama (10%), Graveler (10%), Ursaring (10%), Medicham (10%), Donphan (10%)
+VICTORY ROAD B1F/B2F: Golbat (20%), Graveler (20%), Lairon (10%), Medicham (10%), Mawile (10%), Sableye (10%), Wobbuffet (10%), Parasect (10%)
 
 GNARLED DEN: Kangaskhan
 

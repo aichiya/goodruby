@@ -527,19 +527,18 @@ METEOR FALLS:
 JOHN & JAY: Hitmonlee Lv50, Hitmonchan Lv50
 NICOLAS: Charizard Lv50, Salamence Lv51
 
-ENDGAME:
-
-Ten VR trainers each with 4-5 mons
-
-Sunflora, Venusaur, Swellow, Octillery
-Politoed, Ludicolo, Ampharos, Relicanth
-Dusknoir, Cloyster, Breloom, Golem, Raichu
-Forretress, Sharpedo, Crobat, Kangaskhan, Delibird
-Meganium, Typhlosion, Feraligatr, Hitmontop, Porygon2
+VICTORY ROAD: all mons are Lv52
+SAMUEL: Exploud, Gliscor, Blastoise, Electivire
+JULIE: Aerodactyl, Weavile, Heracross, Porygon-Z
+OWEN: Kingler, Tauros, Medicham, Muk, Mr. Mime
+CAROLINE: Forretress, Sharpedo, Crobat, Kangaskhan, Delibird
+HOPE: Sunflora, Venusaur, Swellow, Octillery
+SHANNON: Dusknoir, Cloyster, Breloom, Golem, Raichu
+ALBERT: Meganium, Typhlosion, Feraligatr, Hitmontop, Porygon2
 VITO: Machamp, Qwilfish, Slowking, Donphan, Yanmega
-Exploud, Gliscor, Blastoise, Electivire
-Poliwrath, Miltank, Clefable, Tangrowth, Marowak
-Kingler, Tauros, Medicham, Muk, Marowak
-Aerodactyl, Weavile, Heracross, Porygon-Z
+MICHELLE: Politoed, Ludicolo, Ampharos, Relicanth
+EDGAR: Poliwrath, Miltank, Clefable, Tangrowth, Marowak
+
+
 
 

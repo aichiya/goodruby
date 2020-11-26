@@ -453,82 +453,60 @@ const struct WildPokemon CaveOfOrigin_LandMons [] =
     {39, 41, SPECIES_MAWILE},
     {39, 41, SPECIES_SABLEYE},
     {39, 41, SPECIES_WOBBUFFET},
-    {39, 41, SPECIES_GOLBAT},
+    {39, 41, SPECIES_SHUCKLE},
     {39, 41, SPECIES_WOBBUFFET},
-    {39, 41, SPECIES_GOLBAT},
+    {39, 41, SPECIES_SHUCKLE},
 };
 const struct WildPokemonInfo CaveOfOrigin_LandMonsInfo = {4, CaveOfOrigin_LandMons};
 
 const struct WildPokemon VictoryRoad_1F_LandMons [] =
 {
-    {40, 40, SPECIES_GOLBAT},
-    {40, 40, SPECIES_HARIYAMA},
-    {40, 40, SPECIES_LAIRON},
-    {40, 40, SPECIES_LOUDRED},
-    {36, 36, SPECIES_ZUBAT},
-    {36, 36, SPECIES_MAKUHITA},
-    {38, 38, SPECIES_GOLBAT},
-    {38, 38, SPECIES_HARIYAMA},
-    {36, 36, SPECIES_ARON},
-    {36, 36, SPECIES_WHISMUR},
-    {36, 36, SPECIES_ARON},
-    {36, 36, SPECIES_WHISMUR},
+    {41, 43, SPECIES_GOLBAT},
+    {41, 43, SPECIES_LOUDRED},
+    {41, 43, SPECIES_LAIRON},
+    {41, 43, SPECIES_HARIYAMA},
+    {41, 43, SPECIES_GRAVELER},
+    {41, 43, SPECIES_MEDICHAM},
+    {41, 43, SPECIES_URSARING},
+    {41, 43, SPECIES_DONPHAN},
+    {41, 43, SPECIES_URSARING},
+    {41, 43, SPECIES_DONPHAN},
+    {41, 43, SPECIES_URSARING},
+    {41, 43, SPECIES_DONPHAN},
 };
 const struct WildPokemonInfo VictoryRoad_1F_LandMonsInfo = {10, VictoryRoad_1F_LandMons};
 
 const struct WildPokemon VictoryRoad_B1F_LandMons [] =
 {
-    {40, 40, SPECIES_GOLBAT},
-    {40, 40, SPECIES_HARIYAMA},
-    {40, 40, SPECIES_LAIRON},
-    {40, 40, SPECIES_MEDICHAM},
-    {38, 38, SPECIES_GOLBAT},
-    {38, 38, SPECIES_HARIYAMA},
-    {42, 42, SPECIES_GOLBAT},
-    {42, 42, SPECIES_HARIYAMA},
-    {42, 42, SPECIES_LAIRON},
-    {38, 38, SPECIES_MEDITITE},
-    {42, 42, SPECIES_LAIRON},
-    {38, 38, SPECIES_MEDITITE},
+    {41, 43, SPECIES_GOLBAT},
+    {41, 43, SPECIES_GRAVELER},
+    {41, 43, SPECIES_LAIRON},
+    {41, 43, SPECIES_MEDICHAM},
+    {41, 43, SPECIES_SABLEYE},
+    {41, 43, SPECIES_MAWILE},
+    {41, 43, SPECIES_WOBBUFFET},
+    {41, 43, SPECIES_PARASECT},
+    {41, 43, SPECIES_WOBBUFFET},
+    {41, 43, SPECIES_PARASECT},
+    {41, 43, SPECIES_WOBBUFFET},
+    {41, 43, SPECIES_PARASECT},
 };
 const struct WildPokemonInfo VictoryRoad_B1F_LandMonsInfo = {10, VictoryRoad_B1F_LandMons};
 
-const struct WildPokemon VictoryRoad_B1F_RockSmashMons [] =
-{
-    {30, 40, SPECIES_GRAVELER},
-    {30, 40, SPECIES_GEODUDE},
-    {35, 40, SPECIES_GRAVELER},
-    {35, 40, SPECIES_GRAVELER},
-    {35, 40, SPECIES_GRAVELER},
-};
-const struct WildPokemonInfo VictoryRoad_B1F_RockSmashMonsInfo = {20, VictoryRoad_B1F_RockSmashMons};
-
 const struct WildPokemon VictoryRoad_B2F_LandMons [] =
 {
-    {40, 40, SPECIES_GOLBAT},
-#ifdef SAPPHIRE
-    {40, 40, SPECIES_SABLEYE},
-#else
-    {40, 40, SPECIES_MAWILE},
-#endif
-    {40, 40, SPECIES_LAIRON},
-    {40, 40, SPECIES_MEDICHAM},
-    {42, 42, SPECIES_GOLBAT},
-#ifdef SAPPHIRE
-    {42, 42, SPECIES_SABLEYE},
-#else
-    {42, 42, SPECIES_MAWILE},
-#endif
-    {44, 44, SPECIES_GOLBAT},
-#ifdef SAPPHIRE
-    {44, 44, SPECIES_SABLEYE},
-#else
-    {44, 44, SPECIES_MAWILE},
-#endif
-    {42, 42, SPECIES_LAIRON},
-    {42, 42, SPECIES_MEDICHAM},
-    {44, 44, SPECIES_LAIRON},
-    {44, 44, SPECIES_MEDICHAM},
+    {41, 43, SPECIES_GOLBAT},
+    {41, 43, SPECIES_GRAVELER},
+    {41, 43, SPECIES_LAIRON},
+    {41, 43, SPECIES_MEDICHAM},
+    {41, 43, SPECIES_SABLEYE},
+    {41, 43, SPECIES_MAWILE},
+    {41, 43, SPECIES_WOBBUFFET},
+    {41, 43, SPECIES_PARASECT},
+    {41, 43, SPECIES_WOBBUFFET},
+    {41, 43, SPECIES_PARASECT},
+    {41, 43, SPECIES_WOBBUFFET},
+    {41, 43, SPECIES_PARASECT},
 };
 const struct WildPokemonInfo VictoryRoad_B2F_LandMonsInfo = {10, VictoryRoad_B2F_LandMons};
 
@@ -1668,7 +1646,7 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapNum = MAP_NUM(VICTORY_ROAD_B1F),
         .landMonsInfo = &VictoryRoad_B1F_LandMonsInfo,
         .waterMonsInfo = NULL,
-        .rockSmashMonsInfo = &VictoryRoad_B1F_RockSmashMonsInfo,
+        .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = NULL,
     },
     {
