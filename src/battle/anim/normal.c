@@ -1488,16 +1488,18 @@ static void sub_80E3704(u8 taskId)
 
 void sub_80E388C(u8 taskId)
 {
+    u16 color = gBattleAnimArgs[0];
     u32 selectedPalettes = sub_80792C0(1, 1, 1, 1);
     sub_80E39BC(selectedPalettes, 0);
     gTasks[taskId].data[14] = selectedPalettes >> 16;
 
     selectedPalettes = sub_80791A8(1, 0, 0, 0, 0, 0, 0) & 0xFFFF;
-    sub_80E39BC(selectedPalettes, 0xFFFF);
+    sub_80E39BC(selectedPalettes, color);
     gTasks[taskId].data[15] = selectedPalettes;
 
     gTasks[taskId].data[0] = 0;
     gTasks[taskId].data[1] = 0;
+    gTasks[taskId].data[3] = color;
     gTasks[taskId].func = sub_80E38F8;
 }
 
@@ -1527,7 +1529,7 @@ static void sub_80E38F8(u8 taskId)
                 if ((task->data[15] >> i) & 1)
                 {
                     u16 paletteOffset = i * 16;
-                    BlendPalette(paletteOffset, 16, task->data[2], 0xFFFF);
+                    BlendPalette(paletteOffset, 16, task->data[2], task->data[3]);
                 }
 
                 if ((task->data[14] >> i) & 1)

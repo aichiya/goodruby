@@ -3156,7 +3156,7 @@ _81CB68E:
 
 Move_FLASH: @ 81CB713
 	playsewithpan SE_W043, SOUND_PAN_ATTACKER
-	createvisualtask sub_80E388C, 2
+	createvisualtask sub_80E388C, 2, rgb(31, 31, 31)
 	waitforvisualfinish
 	end
 
@@ -3822,7 +3822,7 @@ Move_ASSIST: @ 81CC332
 	playsewithpan SE_W010, 0
 	end
 
-Move_SUPERPOWER: @ 81CC3A3
+Move_FOCUS_BLAST: @ 81CC3A3
 	loadspritegfx ANIM_TAG_CIRCLE_OF_LIGHT
 	loadspritegfx ANIM_TAG_METEOR
 	loadspritegfx ANIM_TAG_FLAT_ROCK
@@ -12941,7 +12941,7 @@ Move_ROCK_POLISH:
 	blendoff
 	waitforvisualfinish
 	playsewithpan SE_W043, 192
-	createvisualtask sub_80E388C, 2
+	createvisualtask sub_80E388C, 2, rgb(31, 31, 31)
 	waitforvisualfinish
 	end
 
@@ -15966,10 +15966,44 @@ Move_CIRCLE_THROW:
 Move_ROCK_WRECKER:
 Move_HORSEPOWER:
 Move_SACRED_SWORD:
-Move_MAGIC_GLEAM:
-Move_FOCUS_BLAST:
     goto Move_TACKLE
     end
+
+
+Move_SUPERPOWER:
+	loadspritegfx ANIM_TAG_IMPACT
+	monbg ANIM_BATTLER_TARGET
+    
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_BATTLER_ATTACKER, 2, 1, 0, 0, 16, rgb(0, 0, 0)
+	setalpha 12, 8
+	playsewithpan SE_W025, SOUND_PAN_ATTACKER
+	createvisualtask sub_80E1F8C, 2, 2, 2, 4, 0, 6, rgb(31, 31, 10)
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BATTLER_ATTACKER, 1, 0, 16, 2
+    waitforvisualfinish
+
+	playsewithpan SE_W207, SOUND_PAN_ATTACKER
+	createsprite gSlideMonToOffsetSpriteTemplate, ANIM_BATTLER_ATTACKER, 2, 0, 28, 0, 0, 4
+	delay 2
+	call _81C85E9
+	playsewithpan SE_W025B, SOUND_PAN_TARGET
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BATTLER_TARGET, 5, 0, 12, 5
+	createsprite gSlideMonToOriginalPosSpriteTemplate, ANIM_BATTLER_ATTACKER, 2, 0, 0, 9
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_BATTLER_ATTACKER, 3, 0, 0, 3, 1
+	createsprite gBattleAnimSpriteTemplate_83DB3DC, ANIM_BATTLER_ATTACKER, 2, 31, 3, 1, 0, 8, 0, 0
+    
+	waitforvisualfinish
+	clearmonbg ANIM_BATTLER_TARGET
+	blendoff
+	delay 2
+	restorebg
+	waitbgfadein
+	end
+
+Move_MAGIC_GLEAM:
+	playsewithpan SE_W043, SOUND_PAN_ATTACKER
+	createvisualtask sub_80E388C, 2, rgb(31, 24, 24)
+    waitforvisualfinish
+	end
 
 General_AuraFlare:
 	monbg ANIM_BATTLER_DEF_PARTNER
