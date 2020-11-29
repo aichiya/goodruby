@@ -84,6 +84,7 @@ NewMauville_Inside_EventScript_15E5DA:: @ 815E5DA
 	setmetatile 17, 10, 558, 0
 	setmetatile 25, 18, 558, 0
 	setmetatile 18, 36, 558, 0
+	setmetatile 33, 24, 558, 0
 	return
 
 NewMauville_Inside_EventScript_15E728:: @ 815E728
@@ -124,6 +125,7 @@ NewMauville_Inside_EventScript_15E728:: @ 815E728
 	setmetatile 16, 22, 566, 0
 	setmetatile 4, 26, 566, 0
 	setmetatile 30, 38, 566, 0
+	setmetatile 33, 24, 591, 0
 	return
 
 NewMauville_Inside_EventScript_15E876:: @ 815E876

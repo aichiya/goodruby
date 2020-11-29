@@ -180,6 +180,9 @@ IN GENERAL:
  * Now learns Megahorn by level.
  * Now learns Magnitude, Mud Shot, and Mud Bomb by breeding.
 
+#128 Tauros
+ * Now learns Body Slam and Head Smash by level.
+
 #133 Eevee, #134 Vapreon, #135 Jolteon, #136 Flareon, #196 Espeon, #197 Umbreon, #470 Leafeon, #471 Glaceon, #700 Sylveon
  * Leafeon's Ability Leaf Guard replaced with Sap Sipper.
  * Glaceon's Ability Snow Cloak replaced with Ice Body.
@@ -265,6 +268,7 @@ IN GENERAL:
 #200 Misdreavus, #429 Mismagius
  * Level-up movepool slightly adjusted.
  * Misdreavus now learns Hyper Voice by level.
+ * Entire line's Hidden Ability Levitate replaced by Pixilate.
 
 #201 Unown
  * Base stats changed: 48/72/48/72/48/48 (336) -> 48/72/48/245/48/48 (509)
@@ -312,6 +316,7 @@ IN GENERAL:
 
 #258 Mudkip, #259 Marshtomp, #260 Swampert
  * Level-up movepool adjusted.
+ * Now learns Sludge Wave by breeding.
 
 #261 Poochyena, #262 Mightyena
  * Now learns Close Combat by breeding.
@@ -370,6 +375,12 @@ IN GENERAL:
 
 #304 Aron, #305 Lairon, #306 Aggron
  * Aggron's Hidden Ability Heavy Metal replaced with Solid Rock.
+
+#311 Plusle
+ * Now learns Flamethrower, Fire Blast, Fire Punch, and Overheat by TM.
+
+#312 Minun
+ * Now learns Ice Beam, Blizzard, Icy Wind, and Ice Punch by TM.
 
 #313 Volbeat, #314 Illumise
  * Volbeat's type changed: Bug -> Bug/Electric.
@@ -492,6 +503,9 @@ IN GENERAL:
  * Now learns Heal Bell and Dazzling Gleam by TM.
  * Now learns Wish and Healing Wish by breeding.
 
+#374 Beldum, #375 Metang, #376 Metagross
+ * Metang's Hidden Ability Light Metal replaced with Iron Fist.
+ * Metagross's Hidden Ability Light Metal replaced with Iron Fist.
 
 
 EVOLUTION CHANGES:
@@ -530,8 +544,6 @@ GLIGAR: Evolves to Gliscor using a Noble Stone.
 DUSCLOPS: Evolves to Dusknoir using a Noble Stone.
 PORYGON2: Evolves to Porygon-Z using a Noble Stone.
 
-CURRENTLY UNIMPLEMENTED EVOS: Sneasel, Rhydon, Electabuzz, Magmar, Gligar, Porygon, Porygon2, Dusclops
-
 
 
 EXPERIENCE CHANGES:
@@ -555,6 +567,7 @@ ILLUMISE: Fluctuating -> Fast
 
 MOVE CHANGES:
 Crabhammer: Gains 10% chance to lower Defense.
+Fury Cutter: Now reaches maximum power on its 5th use at 640 (was 160 at 3rd use).
 
 ABILITY CHANGES:
 Flower Gift: Raises Attack, Defense, Special Attack, and Special Defense by 50% (instead of just Attack and Special Defense).

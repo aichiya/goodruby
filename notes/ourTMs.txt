@@ -31,7 +31,7 @@
 31 - Brick Break    Route 111
 32 - Drain Punch    Game Corner
 33 - Reflect        Department Store
-34 - Sludge Wave    
+34 - Draco Meteor   Meteor Falls (deep)
 35 - Flamethrower   Department Store
 36 - Sludge Bomb    Dewford Town (later)
 37 - Heat Wave      Magma Hideout
@@ -71,16 +71,16 @@
 71 - Stone Edge     Meteor Falls (deep)
 72 - Volt Switch    Mauville Gym
 73 - Thunder Wave   Wattson after New Mauville
-74 - Wild Charge
-75 - Swords Dance   Meteor Falls (deep)
+74 - Wild Charge    Outside Berry Master's House
+75 - Swords Dance   Victory Road
 76 - Stealth Rock   Rustboro Gym
-77 - Drill Run
+77 - Drill Run      Dr. Cozmo
 78 - Bulldoze       Rusturf Tunnel
-79 - Dark Pulse
+79 - Dark Pulse     Abandoned Ship
 80 - Rock Slide     Route 111 Desert
 81 - X-Scissor      Route 135
 82 - Dragon Tail
-83 - Natural Gift   Deparment Store
+83 - Natural Gift   Department Store
 84 - Poison Jab
 85 - Dazzling Gleam Department Store
 86 - Grass Knot     Boy South of Rustboro
@@ -97,7 +97,6 @@ H4 - Strength
 H5 - Flash
 H6 - Rock Smash
 H7 - Waterfall
-H8 - Dive
 
 TUTORS:
 Frenzy Plant

@@ -527,6 +527,11 @@ METEOR FALLS:
 JOHN & JAY: Hitmonlee Lv50, Hitmonchan Lv50
 NICOLAS: Charizard Lv50, Salamence Lv51
 
+TRICK HOUSE 7
+SEBASTIEN: Pinsir Lv50
+SOPHIA: Arbok Lv50, Stantler Lv50
+BENNY: Fearow Lv50, Xatu Lv50
+
 VICTORY ROAD: all mons are Lv52
 SAMUEL: Exploud, Gliscor, Blastoise, Electivire
 JULIE: Aerodactyl, Weavile, Heracross, Porygon-Z

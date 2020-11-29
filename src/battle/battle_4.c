@@ -5274,12 +5274,12 @@ static void atk49_moveend(void)
 
     arg1 = T2_READ_8(gBattlescriptCurrInstr + 1);
     arg2 = T2_READ_8(gBattlescriptCurrInstr + 2);
-    if (gBattleMons[gBankTarget].item == ITEM_ENIGMA_BERRY)
+    if (gBattleMons[gBankAttacker].item == ITEM_ENIGMA_BERRY)
         hold_effect_atk = gEnigmaBerries[gBankAttacker].holdEffect;
     else
-        hold_effect_atk = ItemId_GetHoldEffect(gBattleMons[gBankTarget].item);
+        hold_effect_atk = ItemId_GetHoldEffect(gBattleMons[gBankAttacker].item);
 
-    choiced_move_atk = (u16*)(gBankAttacker * (ewram_addr + 0x160E8));
+    choiced_move_atk = &((u16*)(gSharedMem + 0x160E8))[gBankAttacker];
     if (gBattleStruct->dynamicMoveType)
         move_type = gBattleStruct->dynamicMoveType & 0x3F;
     else

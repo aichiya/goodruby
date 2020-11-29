@@ -5908,6 +5908,7 @@ BattleScript_EffectBelch:
 BattleScript_EffectAllHit::
 	jumpifmove MOVE_LAVA_PLUME, BattleScript_EffectAllHitBurn
 	jumpifmove MOVE_DISCHARGE, BattleScript_EffectAllHitPara
+	jumpifmove MOVE_BULLDOZE, BattleScript_EffectAllHitSpeedDown
 	goto BattleScript_EffectAllHitStart
 
 BattleScript_EffectAllHitBurn::
@@ -5916,6 +5917,10 @@ BattleScript_EffectAllHitBurn::
 
 BattleScript_EffectAllHitPara::
 	setmoveeffect EFFECT_PARALYSIS
+	goto BattleScript_EffectAllHitStart
+
+BattleScript_EffectAllHitSpeedDown::
+	setmoveeffect EFFECT_SPD_MINUS_1
 	goto BattleScript_EffectAllHitStart
 
 BattleScript_EffectAllHitStart:

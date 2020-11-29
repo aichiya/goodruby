@@ -5505,13 +5505,13 @@ const struct BattleMove gBattleMoves[] = {
     },
 
     [MOVE_BULLDOZE] = {
-        .effect = EFFECT_SPEED_DOWN_HIT,
+        .effect = EFFECT_ALL_HIT,
         .power = 60,
         .type = TYPE_GROUND,
         .accuracy = 100,
         .pp = 20,
         .secondaryEffectChance = 100,
-        .target = TARGET_SELECTED_POKEMON,
+        .target = TARGET_ALL_EXCEPT_USER,
         .priority = 0,
         .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_SHEER_FORCE,
 		.moveClass = CLASS_PHYSICAL,
@@ -5563,7 +5563,7 @@ const struct BattleMove gBattleMoves[] = {
         .accuracy = 100,
         .pp = 15,
         .secondaryEffectChance = 30,
-        .target = TARGET_SELECTED_POKEMON,
+        .target = TARGET_ALL_EXCEPT_USER,
         .priority = 0,
         .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_SHEER_FORCE,
 		.moveClass = CLASS_SPECIAL,
@@ -6906,5 +6906,18 @@ const struct BattleMove gBattleMoves[] = {
         .priority = 0,
         .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
 		.moveClass = CLASS_PHYSICAL,
+    },
+
+    [MOVE_DRACO_METEOR] = {
+        .effect = EFFECT_OVERHEAT,
+        .power = 130,
+        .type = TYPE_DRAGON,
+        .accuracy = 90,
+        .pp = 5,
+        .secondaryEffectChance = 100,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
+		.moveClass = CLASS_SPECIAL,
     },
 };

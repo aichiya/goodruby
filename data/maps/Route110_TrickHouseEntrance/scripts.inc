@@ -411,7 +411,7 @@ Route110_TrickHouseEntrance_EventScript_16147E:: @ 816147E
 	end
 
 Route110_TrickHouseEntrance_EventScript_1614AA:: @ 81614AA
-	giveitem_std ITEM_MAGNET
+	giveitem_std ITEM_BIG_NUGGET
 	compare RESULT, 1
 	goto_if_eq Route110_TrickHouseEntrance_EventScript_161502
 	compare RESULT, 0

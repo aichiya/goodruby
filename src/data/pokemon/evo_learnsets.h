@@ -105,7 +105,7 @@ const u16 gAlakazamEvoMoves[] = {
 };
 
 const u16 gMachampEvoMoves[] = {
-	MOVE_STRENGTH,
+	MOVE_SUPERPOWER,
 	0,
 };
 

@@ -125,7 +125,7 @@ Route110_TrickHouseEnd_EventScript_161B37:: @ 8161B37
 	msgbox Route110_TrickHouseEnd_Text_19C515, 4
 	msgbox Route110_TrickHouseEnd_Text_19C90B, 4
 	setvar VAR_TRICK_HOUSE_PRIZE_PICKUP, 0
-	giveitem_std ITEM_MAGNET
+	giveitem_std ITEM_BIG_NUGGET
 	compare RESULT, 0
 	call_if_eq Route110_TrickHouseEnd_EventScript_161C4E
 	msgbox Route110_TrickHouseEnd_Text_19C9BD, 4

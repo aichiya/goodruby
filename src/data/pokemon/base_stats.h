@@ -6806,7 +6806,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_LEVITATE,
+		.hiddenAbility = ABILITY_PIXILATE,
     },
 
     [SPECIES_UNOWN] =
@@ -13547,7 +13547,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_LIGHT_METAL,
+		.hiddenAbility = ABILITY_IRON_FIST,
     },
 
     [SPECIES_METAGROSS] =
@@ -13581,7 +13581,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_LIGHT_METAL,
+		.hiddenAbility = ABILITY_IRON_FIST,
     },
 
     [SPECIES_REGIROCK] =
@@ -14091,7 +14091,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_LEVITATE,
+		.hiddenAbility = ABILITY_PIXILATE,
     },
 
     [SPECIES_HONCHKROW] =

@@ -12,7 +12,7 @@ struct Item
 {
     u8 name[14];
     u16 itemId;
-    u16 price;
+    u32 price;
     u8 holdEffect;
     u8 holdEffectParam;
     const u8 *description;
@@ -461,7 +461,7 @@ u16 ItemId_GetId(u16 itemId)
     return gItems[SanitizeItemId(itemId)].itemId;
 }
 
-u16 ItemId_GetPrice(u16 itemId)
+u32 ItemId_GetPrice(u16 itemId)
 {
     return gItems[SanitizeItemId(itemId)].price;
 }

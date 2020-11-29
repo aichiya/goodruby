@@ -339,7 +339,7 @@ MeteorFalls_1F_1R_EventScript_1B1822:: @ 81B1822
 	end
 
 MeteorFalls_B1F_2R_EventScript_1B182F:: @ 81B182F
-	giveitem_std ITEM_TM75_SWORDS_DANCE, 1, 1
+	giveitem_std ITEM_TM34_DRACO_METEOR, 1, 1
 	end
 
 NewMauville_Inside_EventScript_1B183C:: @ 81B183C
@@ -371,7 +371,7 @@ AbandonedShip_Rooms_B1F_EventScript_1B188A:: @ 81B188A
 	end
 
 AbandonedShip_Rooms2_B1F_EventScript_1B1897:: @ 81B1897
-	giveitem_std ITEM_TM34_SLUDGE_WAVE, 1, 1
+	giveitem_std ITEM_TM79_DARK_PULSE, 1, 1
 	end
 
 AbandonedShip_Room_B1F_EventScript_1B18A4:: @ 81B18A4
@@ -539,15 +539,15 @@ Route110_TrickHousePuzzle4_EventScript_1B1A92:: @ 81B1A92
 	end
 
 Route110_TrickHousePuzzle6_EventScript_1B1A9F:: @ 81B1A9F
-	giveitem_std ITEM_GLITTER_MAIL, 1, 1
+	giveitem_std ITEM_MAX_ELIXIR, 1, 1
 	end
 
 Route110_TrickHousePuzzle7_EventScript_1B1AAC:: @ 81B1AAC
-	giveitem_std ITEM_TROPIC_MAIL, 1, 1
+	giveitem_std ITEM_MAX_REVIVE, 1, 1
 	end
 
 Route110_TrickHousePuzzle8_EventScript_1B1AB9:: @ 81B1AB9
-	giveitem_std ITEM_BEAD_MAIL, 1, 1
+	giveitem_std ITEM_MASTER_BALL, 1, 1
 	end
 
 VictoryRoad_1F_EventScript_1B1AC6:: @ 81B1AC6
@@ -555,7 +555,7 @@ VictoryRoad_1F_EventScript_1B1AC6:: @ 81B1AC6
 	end
 
 VictoryRoad_1F_EventScript_1B1AD3:: @ 81B1AD3
-	giveitem_std ITEM_PP_UP, 1, 1
+	giveitem_std ITEM_TM75_SWORDS_DANCE, 1, 1
 	end
 
 VictoryRoad_B1F_EventScript_1B1AE0:: @ 81B1AE0
@@ -620,4 +620,8 @@ NamelessCavern_EventScript_Item::
 
 Route134_EventScript_Item::
     giveitem_std ITEM_TM02_DRAGON_CLAW, 1, 1
+    end
+
+VictoryRoad_1F_EventScript_BigNugget::
+    giveitem_std ITEM_BIG_NUGGET, 1, 1
     end

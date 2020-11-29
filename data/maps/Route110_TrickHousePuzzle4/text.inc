@@ -73,7 +73,7 @@ Route110_TrickHousePuzzle5_Text_19D81B:: @ 819D81B
 Route110_TrickHousePuzzle5_Text_19D865:: @ 819D865
 	.string "MECHADOLL 3 QUIZ.\p"
 	.string "How much money would be spent buying\n"
-	.string "the Coins to exchange for a Pikachu?$"
+	.string "the Coins to exchange for a Meowth?$"
 
 Route110_TrickHousePuzzle5_Text_19D8BA:: @ 819D8BA
 	.string "MECHADOLL 3 QUIZ.\p"

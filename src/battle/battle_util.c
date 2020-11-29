@@ -2732,7 +2732,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 				 && !gProtectStructs[gBankAttacker].confusionSelfDmg
 				 && gDisableStructs[gBankAttacker].disabledMove == 0
 				 && (gSpecialStatuses[gBankTarget].moveturnLostHP_physical || gSpecialStatuses[gBankTarget].moveturnLostHP_special)
-				 && Random() % 10 < 3)
+				 && (Random() % 10) < 3)
 				{
 					for (i = 0; i < 4; i++)
 					{
@@ -2749,7 +2749,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 
 						gDisableStructs[gBankAttacker].disabledMove = gCurrentMove;
 						gDisableStructs[gBankAttacker].disableTimer1 = 4;
-						gDisableStructs[gBankAttacker].disableTimer2 = gDisableStructs[gBankTarget].disableTimer1;
+						gDisableStructs[gBankAttacker].disableTimer2 = gDisableStructs[gBankAttacker].disableTimer1;
 						
 						BattleScriptPushCursor();
 						gBattlescriptCurrInstr = BattleScript_CursedBodyActivates;

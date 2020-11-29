@@ -808,6 +808,7 @@
 #define FLAG_HIDE_NAMELESS_CAVERN_ITEM      0x492
 #define FLAG_ITEM_ROUTE134                  0x493
 #define FLAG_ITEM_ROUTE130                  0x494
+#define FLAG_ITEM_VR_BIG_NUGGET             0x495
 
 #define FLAG_DEFEATED_RUSTBORO_GYM          0x4B1
 

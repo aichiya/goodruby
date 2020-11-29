@@ -970,7 +970,7 @@ const struct Item gItems[] =
 		.natGiftPower = 0,
     },
     {
-        .name = _("Energy Roost"),
+        .name = _("Energy Root"),
         .itemId = ITEM_ENERGY_ROOT,
         .price = 800,
         .holdEffect = HOLD_EFFECT_NONE,
@@ -1311,9 +1311,9 @@ const struct Item gItems[] =
 		.natGiftPower = 0,
     },
     {
-        .name = _("Blue Shard"),
-        .itemId = ITEM_BLUE_SHARD_UNUSED,
-        .price = 200,
+        .name = _("Big Nugget"),
+        .itemId = ITEM_BIG_NUGGET,
+        .price = 200000,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_BlueShard,
@@ -6679,7 +6679,7 @@ const struct Item gItems[] =
     },
     {
         .name = _("TM34"),
-        .itemId = ITEM_TM34_SLUDGE_WAVE,
+        .itemId = ITEM_TM34_DRACO_METEOR,
         .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,

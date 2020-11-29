@@ -1361,13 +1361,13 @@ static const u8 gItemDescription_TM02[] = _(
     "physical damage.");
 
 static const u8 gItemDescription_TM03[] = _(
-    "Generates an\n"
-    "ultrasonic wave\n"
-    "that may confuse.");
+    "An odd psychic\n"
+    "wave that does\n"
+    "physical damage.");
 
 static const u8 gItemDescription_TM04[] = _(
-    "Raises SP. ATK and\n"
-    "SP. DEF by focusing\n"
+    "Raises Sp. Atk and\n"
+    "Sp. Def by focusing\n"
     "the mind.");
 
 static const u8 gItemDescription_TM05[] = _(
@@ -1396,9 +1396,9 @@ static const u8 gItemDescription_TM09[] = _(
     "poisoned.");
 
 static const u8 gItemDescription_TM10[] = _(
-    "The attack power\n"
+    "The attack type\n"
     "varies among\n"
-    "different POKéMON.");
+    "different Pokémon.");
 
 static const u8 gItemDescription_TM11[] = _(
     "Raises the power of\n"
@@ -1427,8 +1427,8 @@ static const u8 gItemDescription_TM15[] = _(
 
 static const u8 gItemDescription_TM16[] = _(
     "Creates a wall of\n"
-    "light that lowers\n"
-    "SP. ATK damage.");
+    "light that weakens\n"
+    "special attacks.");
 
 static const u8 gItemDescription_TM17[] = _(
     "Negates all damage,\n"
@@ -1437,7 +1437,7 @@ static const u8 gItemDescription_TM17[] = _(
 
 static const u8 gItemDescription_TM18[] = _(
     "Raises the power of\n"
-    "WATER-type moves\n"
+    "Water-type moves\n"
     "for 5 turns.");
 
 static const u8 gItemDescription_TM19[] = _(
@@ -1463,7 +1463,7 @@ static const u8 gItemDescription_TM22[] = _(
 static const u8 gItemDescription_TM23[] = _(
     "Slams the foe with\n"
     "a hard tail. It may\n"
-    "lower DEFENSE.");
+    "lower Defense.");
 
 static const u8 gItemDescription_TM24[] = _(
     "A powerful electric\n"
@@ -1493,16 +1493,16 @@ static const u8 gItemDescription_TM28[] = _(
 static const u8 gItemDescription_TM29[] = _(
     "A powerful psychic\n"
     "attack that may\n"
-    "lower SP. DEF.");
+    "lower Sp. Def.");
 
 static const u8 gItemDescription_TM30[] = _(
     "Hurls a dark lump\n"
     "at the foe. It may\n"
-    "lower SP. DEF.");
+    "lower Sp. Def.");
 
 static const u8 gItemDescription_TM31[] = _(
-    "Destroys barriers\n"
-    "like LIGHT SCREEN\n"
+    "Destroys Reflect\n"
+    "and Light Screen\n"
     "and causes damage.");
 
 static const u8 gItemDescription_TM32[] = _(
@@ -1543,7 +1543,7 @@ static const u8 gItemDescription_TM38[] = _(
 static const u8 gItemDescription_TM39[] = _(
     "Stops the foe from\n"
     "moving with rocks.\n"
-    "May lower SPEED.");
+    "May lower Speed.");
 
 static const u8 gItemDescription_TM40[] = _(
     "An extremely fast\n"
@@ -1556,7 +1556,7 @@ static const u8 gItemDescription_TM41[] = _(
     "move in a row.");
 
 static const u8 gItemDescription_TM42[] = _(
-    "Raises ATTACK when\n"
+    "Hits harder when\n"
     "poisoned, burned,\n"
     "or paralyzed.");
 
@@ -1592,8 +1592,8 @@ static const u8 gItemDescription_TM48[] = _(
 
 static const u8 gItemDescription_TM49[] = _(
     "Attacks at full\n"
-    "strength, but lowers\n"
-    "Attack and Defense.");
+    "power, but lowers\n"
+    "physical stats.");
 
 static const u8 gItemDescription_TM50[] = _(
     "Enables full-power\n"
@@ -1622,7 +1622,7 @@ static const u8 gItemDescription_TM54[] = _(
  
 static const u8 gItemDescription_TM55[] = _(
     "An icy punch\n"
-    "that may burn\n"
+    "that may freeze\n"
     "the foe.");
  
 static const u8 gItemDescription_TM56[] = _(
@@ -1721,9 +1721,9 @@ static const u8 gItemDescription_TM74[] = _(
     ".");
  
 static const u8 gItemDescription_TM75[] = _(
-    "placeholder text\n"
-    "stuff\n"
-    ".");
+    "A fighting dance\n"
+    "that sharply\n"
+    "raises Attack.");
  
 static const u8 gItemDescription_TM76[] = _(
     "Floating stones\n"
@@ -1761,9 +1761,9 @@ static const u8 gItemDescription_TM82[] = _(
     ".");
  
 static const u8 gItemDescription_TM83[] = _(
-    "placeholder text\n"
-    "stuff\n"
-    ".");
+    "Consumes held\n"
+    "berry, which\n"
+    "influences type.");
  
 static const u8 gItemDescription_TM84[] = _(
     "placeholder text\n"
@@ -1771,9 +1771,9 @@ static const u8 gItemDescription_TM84[] = _(
     ".");
  
 static const u8 gItemDescription_TM85[] = _(
-    "placeholder text\n"
-    "stuff\n"
-    ".");
+    "Attacks all foes\n"
+    "with a burst of\n"
+    "dazzling light.");
  
 static const u8 gItemDescription_TM86[] = _(
     "A trip that does\n"
@@ -1786,14 +1786,14 @@ static const u8 gItemDescription_TM87[] = _(
     "confuse the foe.");
  
 static const u8 gItemDescription_TM88[] = _(
-    "placeholder text\n"
-    "stuff\n"
-    ".");
+    "Uses a move\n"
+    "randomly while\n"
+    "asleep.");
  
 static const u8 gItemDescription_TM89[] = _(
-    "placeholder text\n"
-    "stuff\n"
-    ".");
+    "After attacking,\n"
+    "switches to\n"
+    "another Pokémon.");
  
 static const u8 gItemDescription_TM90[] = _(
     "Creates a decoy\n"
@@ -1801,9 +1801,9 @@ static const u8 gItemDescription_TM90[] = _(
     "user's maximum HP.");
  
 static const u8 gItemDescription_TM91[] = _(
-    "placeholder text\n"
-    "stuff\n"
-    ".");
+    "A metallic flash\n"
+    "of light. May\n"
+    "lower Sp. Def.");
  
 static const u8 gItemDescription_TM92[] = _(
     "Slow Pokémon move\n"
@@ -1838,7 +1838,7 @@ static const u8 gItemDescription_HM05[] = _(
 static const u8 gItemDescription_HM06[] = _(
     "A rock-crushingly\n"
     "tough attack that\n"
-    "may lower DEFENSE.");
+    "may lower Defense.");
 
 static const u8 gItemDescription_HM07[] = _(
     "Attacks the foe\n"

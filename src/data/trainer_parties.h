@@ -6354,17 +6354,12 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Robert1[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Benny[] = {
     {
 	.iv = 0,
-	.level = 36,
-	.species = SPECIES_SWELLOW
+	.level = 50,
+	.species = SPECIES_FEAROW
     },
     {
 	.iv = 0,
-	.level = 36,
-	.species = SPECIES_PELIPPER
-    },
-    {
-	.iv = 0,
-	.level = 36,
+	.level = 50,
 	.species = SPECIES_XATU
     }
 };
@@ -8664,8 +8659,8 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Carlos[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Sebastian[] = {
     {
 	.iv = 50,
-	.level = 39,
-	.species = SPECIES_CACTURNE
+	.level = 50,
+	.species = SPECIES_PINSIR
     }
 };
 
@@ -8730,13 +8725,13 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Jenna[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Sophia[] = {
     {
 	.iv = 50,
-	.level = 38,
-	.species = SPECIES_SWABLU
+	.level = 50,
+	.species = SPECIES_ARBOK
     },
     {
 	.iv = 50,
-	.level = 38,
-	.species = SPECIES_ROSELIA
+	.level = 50,
+	.species = SPECIES_STANTLER
     }
 };
 

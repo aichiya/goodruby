@@ -512,9 +512,9 @@ static void BattleAICmd_score(void)
 {
     AI_THINKING_STRUCT->score[AI_THINKING_STRUCT->movesetIndex] += gAIScriptPtr[1]; // add the result to the array of the move consider's score.
 
-    // don't do this holy shit it makes things so so much worse
-    //if (AI_THINKING_STRUCT->score[AI_THINKING_STRUCT->movesetIndex] < 0) // if the score is negative, flatten it to 0.
-        //AI_THINKING_STRUCT->score[AI_THINKING_STRUCT->movesetIndex] = 0;
+    
+    if (AI_THINKING_STRUCT->score[AI_THINKING_STRUCT->movesetIndex] < 0) // if the score is negative, flatten it to 0.
+        AI_THINKING_STRUCT->score[AI_THINKING_STRUCT->movesetIndex] = 0;
 
     gAIScriptPtr += 2; // AI return.
 }

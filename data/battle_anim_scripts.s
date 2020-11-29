@@ -549,6 +549,7 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_TOXIC_THREAD
     .4byte Move_ROUND
 	.4byte Move_SACRED_SWORD
+    .4byte Move_DRACO_METEOR
 	.4byte PoundCopy
 
 	.align 2
@@ -15966,6 +15967,7 @@ Move_CIRCLE_THROW:
 Move_ROCK_WRECKER:
 Move_HORSEPOWER:
 Move_SACRED_SWORD:
+Move_DRACO_METEOR:
     goto Move_TACKLE
     end
 

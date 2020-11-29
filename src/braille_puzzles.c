@@ -112,7 +112,7 @@ bool8 CheckPoisonedPoison(void)
     CalculatePlayerPartyCount();
     for (i = 0; i < gPlayerPartyCount; i++)
     {
-        u8 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES2, 0);
+        u16 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES2, 0);
         u8 status = GetPrimaryStatus(GetMonData(&gPlayerParty[i], MON_DATA_STATUS, 0));
         if ((gBaseStats[species].type1 == TYPE_POISON || gBaseStats[species].type2 == TYPE_POISON) &&
             (status == STATUS_PRIMARY_POISON || status == STATUS_PRIMARY_TOXIC))
@@ -157,12 +157,6 @@ void DoBrailleStrengthEffect(void)
 
 bool8 ShouldDoBrailleFlyEffect(void)
 {
-    if (!FlagGet(FLAG_SYS_BRAILLE_FLY) && (gSaveBlock1.location.mapGroup == MAP_GROUP(ANCIENT_TOMB) && gSaveBlock1.location.mapNum == MAP_NUM(ANCIENT_TOMB)))
-    {
-        if (gSaveBlock1.pos.x == 8 && gSaveBlock1.pos.y == 25)
-            return TRUE;
-    }
-
     return FALSE;
 }
 

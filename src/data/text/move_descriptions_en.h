@@ -851,7 +851,7 @@ static const u8 MoveDescription_Attract[] = _(
     "less likely to attack.");
 
 static const u8 MoveDescription_SleepTalk[] = _(
-    "Uses an own move randomly\n"
+    "Uses a move randomly\n"
     "while asleep.");
 
 static const u8 MoveDescription_HealBell[] = _(
@@ -1115,7 +1115,7 @@ static const u8 MoveDescription_Revenge[] = _(
     "if injured by the foe.");
 
 static const u8 MoveDescription_BrickBreak[] = _(
-    "Destroys barriers such as\n"
+    "Destroys Light Screen and\n"
     "Reflect and causes damage.");
 
 static const u8 MoveDescription_Yawn[] = _(
@@ -2106,6 +2106,10 @@ static const u8 MoveDescription_SacredSword[] = _(
     "An attack that ignores\n"
     "the foe's stat changes.");
 
+static const u8 MoveDescription_DracoMeteor[] = _(
+    "Allows a full-power attack,\n"
+    "but sharply lowers Sp.Atk.");
+
 
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
@@ -2638,4 +2642,5 @@ const u8 * const gMoveDescriptions[] = {
     MoveDescription_ToxicThread,
     MoveDescription_Round,
     MoveDescription_SacredSword,
+    MoveDescription_DracoMeteor,
 };

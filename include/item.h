@@ -26,7 +26,7 @@ void RemovePCItem(u8 index, u16 count);
 void SwapRegisteredBike(void);
 const u8 *ItemId_GetName(u16 itemId);
 u16 ItemId_GetId(u16 itemId);
-u16 ItemId_GetPrice(u16 itemId);
+u32 ItemId_GetPrice(u16 itemId);
 u8 ItemId_GetHoldEffect(u16 itemId);
 u8 ItemId_GetHoldEffectParam(u16 itemId);
 const u8 *ItemId_GetDescription(u16 itemId);

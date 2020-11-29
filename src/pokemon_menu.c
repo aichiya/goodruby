@@ -723,7 +723,7 @@ static void PokemonMenu_FieldMove(u8 taskID)
             PrintPartyMenuPromptText(sFieldMoveFuncs[tFieldMoveId].field_1, 0);
         gTasks[taskID].func = sub_808ABF4;
     }
-    else if (tFieldMoveId <= 7 && FlagGet(FLAG_BADGE01_GET + tFieldMoveId) != TRUE)
+    else if ((tFieldMoveId <= 5 && FlagGet(FLAG_BADGE01_GET + tFieldMoveId) != TRUE) || (tFieldMoveId == 6 && !FlagGet(FLAG_BADGE08_GET)))
     {
         // can't use a field HM move without a proper badge
         Menu_EraseWindowRect(19, 0, 29, 19);
