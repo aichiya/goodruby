@@ -469,7 +469,8 @@ struct ProtectStruct
     u32 notFirstStrike:1;
     u32 free : 4;
     /*field3*/
-    u32 field3 : 8;
+    u32 field3 : 7;
+    u32 dealtDmg : 1;
     u32 physicalDmg;
     u32 specialDmg;
     u8 physicalBank;

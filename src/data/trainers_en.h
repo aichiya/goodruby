@@ -3655,7 +3655,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_SIDNEY] =
     {
-        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .partyFlags = F_TRAINER_PARTY_FULL_CONTROL,
         .trainerClass = TRAINER_CLASS_ELITE_FOUR,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
         .trainerPic = TRAINER_PIC_SIDNEY,
@@ -3664,12 +3664,12 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = 0x7,
         .partySize = 5,
-        .party = {.ItemCustomMoves = gTrainerParty_Sidney }
+        .party = {.FullControl = gTrainerParty_Sidney }
     },
 
     [TRAINER_PHOEBE] =
     {
-        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .partyFlags = F_TRAINER_PARTY_FULL_CONTROL,
         .trainerClass = TRAINER_CLASS_ELITE_FOUR,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
         .trainerPic = TRAINER_PIC_PHOEBE,
@@ -3678,12 +3678,12 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = 0x7,
         .partySize = 5,
-        .party = {.ItemCustomMoves = gTrainerParty_Phoebe }
+        .party = {.FullControl = gTrainerParty_Phoebe }
     },
 
     [TRAINER_GLACIA] =
     {
-        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .partyFlags = F_TRAINER_PARTY_FULL_CONTROL,
         .trainerClass = TRAINER_CLASS_ELITE_FOUR,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
         .trainerPic = TRAINER_PIC_GLACIA,
@@ -3692,12 +3692,12 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = 0x7,
         .partySize = 5,
-        .party = {.ItemCustomMoves = gTrainerParty_Glacia }
+        .party = {.FullControl = gTrainerParty_Glacia }
     },
 
     [TRAINER_DRAKE] =
     {
-        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .partyFlags = F_TRAINER_PARTY_FULL_CONTROL,
         .trainerClass = TRAINER_CLASS_ELITE_FOUR,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
         .trainerPic = TRAINER_PIC_DRAKE,
@@ -3706,7 +3706,7 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = 0x7,
         .partySize = 5,
-        .party = {.ItemCustomMoves = gTrainerParty_Drake }
+        .party = {.FullControl = gTrainerParty_Drake }
     },
 
     [TRAINER_ROXANNE] =
@@ -4691,7 +4691,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_STEVEN] =
     {
-        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .partyFlags = F_TRAINER_PARTY_FULL_CONTROL,
         .trainerClass = TRAINER_CLASS_CHAMPION,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_STEVEN,
@@ -4700,7 +4700,7 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = 0x7,
         .partySize = 6,
-        .party = {.ItemCustomMoves = gTrainerParty_Steven }
+        .party = {.FullControl = gTrainerParty_Steven }
     },
 
     [TRAINER_ANDREW] =

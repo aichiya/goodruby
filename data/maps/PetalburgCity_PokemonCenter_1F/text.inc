@@ -40,7 +40,7 @@ PetalburgCity_PokemonCenter_1F_Text_17BF73:: @ 817BF73
 
 PetalburgCity_PokemonCenter_1F_Text_JirachiGuyEarly::
     .string "Hm...\n"
-    .string "You're quite well-informed.$"
+    .string "You're quite well-informed.\p"
     .string "Isn't it a bit early for you to\n"
     .string "know the secret saying?\p"
     .string "Well, what matters is you know it.\n"

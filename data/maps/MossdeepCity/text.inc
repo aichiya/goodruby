@@ -112,7 +112,7 @@ MossdeepCity_Text_FourRelicShards::
     .string "“WONDER” “TIME”\n"
     .string "“SURPRISE” “EVENT”\p"
     .string "Hm...It looks like this is a\n"
-    .string "complete set."
+    .string "complete set.\p"
     .string "Whatever could that saying mean?\n"
     .string "Is that really how people made wishes?$"
 

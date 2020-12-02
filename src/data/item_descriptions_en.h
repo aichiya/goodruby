@@ -635,7 +635,7 @@ static const u8 gItemDescription_LumBerry[] = _(
 
 static const u8 gItemDescription_SitrusBerry[] = _(
     "A hold item that\n"
-    "restores 30 HP in\n"
+    "restores 25% HP in\n"
     "battle.");
 
 static const u8 gItemDescription_FigyBerry[] = _(
@@ -1516,7 +1516,7 @@ static const u8 gItemDescription_TM33[] = _(
     "physical attacks.");
 
 static const u8 gItemDescription_TM34[] = _(
-    "Attacks with a great\n"
+    "Attacks with a big\n"
     "wave of garbage.\n"
     "May also poison.");
 

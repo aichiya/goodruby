@@ -18,7 +18,7 @@ Route109_SeashoreHouse_Text_19B609:: @ 819B609
 	.string "I'm more than just satisfied!\p"
 	.string "As thanks for showing me your hot\n"
 	.string "streak, I want you to take these.\p"
-	.string "It's half a dozen bottles of SODA POP!$"
+	.string "It's half a dozen bottles of Soda Pop!$"
 
 Route109_SeashoreHouse_Text_19B6BE:: @ 819B6BE
 	.string "Oh, but hey, your Bag's jammed full.\n"

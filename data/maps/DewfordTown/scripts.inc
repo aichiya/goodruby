@@ -654,9 +654,7 @@ DewfordTown_EventScript_BrawlyWifeIntro::
 DewfordTown_EventScript_BrawlyWifeGiveStarter:
 	msgbox DewfordTown_Text_BrawlyWifeHaveBadge, 4
     getpartysize
-	compare RESULT, 6
-	goto_if_eq DewfordTown_EventScript_BrawlyWifeFullParty
-	playfanfare MUS_FANFA4
+    copyvar VAR_SPECIAL_4, RESULT
     switch VAR_SECOND_STARTER
     case SPECIES_BULBASAUR, DewfordTown_EventScript_BrawlyWifeBulbasaur
     case SPECIES_CHARMANDER, DewfordTown_EventScript_BrawlyWifeCharmander
@@ -678,66 +676,72 @@ DewfordTown_EventScript_BrawlyWifeFullParty:
 
 DewfordTown_EventScript_BrawlyWifeBulbasaur:
     bufferspeciesname 0, SPECIES_BULBASAUR
-	message DewfordTown_Text_BrawlyWifeGotPokemon
-	waitfanfare
-	waitmessage
 	givemon SPECIES_BULBASAUR, 14, 0x0, 0x0, 0x0, 0
-	setflag FLAG_RECIEVED_SECOND_STARTER
-	msgbox DewfordTown_Text_BrawlyWifeGavePokemon, 4
-	release
-	end
+    goto DewfordTown_EventScript_BrawlyWifeGiftMerge
 
 DewfordTown_EventScript_BrawlyWifeCharmander:
     bufferspeciesname 0, SPECIES_CHARMANDER
-	message DewfordTown_Text_BrawlyWifeGotPokemon
-	waitfanfare
-	waitmessage
 	givemon SPECIES_CHARMANDER, 14, 0x0, 0x0, 0x0, 0
-	setflag FLAG_RECIEVED_SECOND_STARTER
-	msgbox DewfordTown_Text_BrawlyWifeGavePokemon, 4
-	release
-	end
+    goto DewfordTown_EventScript_BrawlyWifeGiftMerge
 
 DewfordTown_EventScript_BrawlyWifeSquirtle:
     bufferspeciesname 0, SPECIES_SQUIRTLE
-	message DewfordTown_Text_BrawlyWifeGotPokemon
-	waitfanfare
-	waitmessage
 	givemon SPECIES_SQUIRTLE, 14, 0x0, 0x0, 0x0, 0
-	setflag FLAG_RECIEVED_SECOND_STARTER
-	msgbox DewfordTown_Text_BrawlyWifeGavePokemon, 4
-	release
-	end
+    goto DewfordTown_EventScript_BrawlyWifeGiftMerge
 
 DewfordTown_EventScript_BrawlyWifeChikorita:
     bufferspeciesname 0, SPECIES_CHIKORITA
-	message DewfordTown_Text_BrawlyWifeGotPokemon
-	waitfanfare
-	waitmessage
 	givemon SPECIES_CHIKORITA, 14, 0x0, 0x0, 0x0, 0
-	setflag FLAG_RECIEVED_SECOND_STARTER
-	msgbox DewfordTown_Text_BrawlyWifeGavePokemon, 4
-	release
-	end
+    goto DewfordTown_EventScript_BrawlyWifeGiftMerge
 
 DewfordTown_EventScript_BrawlyWifeCyndaquil:
     bufferspeciesname 0, SPECIES_CYNDAQUIL
-	message DewfordTown_Text_BrawlyWifeGotPokemon
-	waitfanfare
-	waitmessage
 	givemon SPECIES_CYNDAQUIL, 14, 0x0, 0x0, 0x0, 0
-	setflag FLAG_RECIEVED_SECOND_STARTER
-	msgbox DewfordTown_Text_BrawlyWifeGavePokemon, 4
-	release
-	end
+    goto DewfordTown_EventScript_BrawlyWifeGiftMerge
 
 DewfordTown_EventScript_BrawlyWifeTotodile:
     bufferspeciesname 0, SPECIES_TOTODILE
+	givemon SPECIES_TOTODILE, 14, 0x0, 0x0, 0x0, 0
+    goto DewfordTown_EventScript_BrawlyWifeGiftMerge
+
+DewfordTown_EventScript_BrawlyWifeGiftMerge::
+    compare RESULT, 0
+    goto_if_eq DewfordTown_EventScript_BrawlyWifeGiftParty
+    compare RESULT, 1
+    goto_if_eq DewfordTown_EventScript_BrawlyWifeGiftPC
+    release
+    end
+
+DewfordTown_EventScript_BrawlyWifeGiftParty::
+    call DewfordTown_EventScript_BrawlyWifeGiftFanfare
+    msgbox CommonText_NicknameRecievedPokemon, MSGBOX_YESNO
+    compare RESULT, NO
+    goto_if_eq DewfordTown_EventScript_BrawlyWifeEnd
+    call Common_EventScript_NameRecievedPartyMon
+    goto DewfordTown_EventScript_BrawlyWifeEnd
+
+DewfordTown_EventScript_BrawlyWifeGiftPC::
+    call DewfordTown_EventScript_BrawlyWifeGiftFanfare
+    msgbox CommonText_NicknameRecievedPokemon, MSGBOX_YESNO
+    bufferspeciesname 1, VAR_SECOND_STARTER
+    compare RESULT, NO
+    goto_if_eq DewfordTown_EventScript_BrawlyWifeGiftSendToPC
+    call Common_EventScript_NameReceivedBoxMon
+    goto DewfordTown_EventScript_BrawlyWifeGiftSendToPC
+
+DewfordTown_EventScript_BrawlyWifeGiftSendToPC::
+    call Common_EventScript_TransferredToPC
+    goto DewfordTown_EventScript_BrawlyWifeEnd
+
+DewfordTown_EventScript_BrawlyWifeGiftFanfare::
+	playfanfare MUS_FANFA5
 	message DewfordTown_Text_BrawlyWifeGotPokemon
 	waitfanfare
 	waitmessage
-	givemon SPECIES_TOTODILE, 14, 0x0, 0x0, 0x0, 0
+	return
+
+DewfordTown_EventScript_BrawlyWifeEnd::
+    msgbox DewfordTown_Text_BrawlyWifeGavePokemon, 4
 	setflag FLAG_RECIEVED_SECOND_STARTER
-	msgbox DewfordTown_Text_BrawlyWifeGavePokemon, 4
 	release
 	end

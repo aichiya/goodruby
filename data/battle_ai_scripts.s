@@ -50,7 +50,9 @@ AI_CheckBadMove: @ 81DA09C
 	if_damage_bonus 0, Score_Minus10
 	get_ability TARGET
 	if_equal ABILITY_VOLT_ABSORB, CheckIfVoltAbsorbCancelsElectric
+	if_equal ABILITY_LIGHTNING_ROD, CheckIfVoltAbsorbCancelsElectric
 	if_equal ABILITY_WATER_ABSORB, CheckIfWaterAbsorbCancelsWater
+	if_equal ABILITY_STORM_DRAIN, CheckIfWaterAbsorbCancelsWater
 	if_equal ABILITY_DRY_SKIN, CheckIfWaterAbsorbCancelsWater
 	if_equal ABILITY_FLASH_FIRE, CheckIfFlashFireCancelsFire
 	if_equal ABILITY_WONDER_GUARD, CheckIfWonderGuardCancelsMove

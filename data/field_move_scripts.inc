@@ -46,14 +46,14 @@ Cut_ChoseNo: @ 81B0E3C
 	end
 
 UseCutPromptText: @ 81B0E3F
-	.string "This tree looks like it can be CUT down.\p"
-	.string "Would you like to CUT it?$"
+	.string "This tree looks like it can be Cut down.\p"
+	.string "Would you like to Cut it?$"
 
 UsedCutRockSmashText: @ 81B0E82
 	.string "{STR_VAR_1} used {STR_VAR_2}.$"
 
 CannotUseCutText: @ 81B0E8E
-	.string "This tree looks like it can be CUT down.$"
+	.string "This tree looks like it can be Cut down.$"
 
 S_BreakableRock:: @ 81B0EB7
 	lockall

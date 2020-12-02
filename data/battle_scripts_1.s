@@ -476,7 +476,7 @@ BattleScript_1D70A7: @ 81D70A7
 	waitmessage 64
 	tryfaintmon TARGET, FALSE, NULL
 	setbyte sMOVEEND_STATE, 0
-	moveend 2, 16
+	moveend 2, 17
 BattleScript_ExplosionLoop::
 	jumpifnexttargetvalid BattleScript_1D70A7
 	tryfaintmon USER, FALSE, NULL
@@ -487,7 +487,7 @@ BattleScript_1D70E0: @ 81D70E0
 	resultmessage
 	waitmessage 64
 	setbyte sMOVEEND_STATE, 0
-	moveend 2, 16
+	moveend 2, 17
 	jumpifnexttargetvalid BattleScript_1D70A7
 	tryfaintmon USER, FALSE, NULL
 	end
@@ -725,7 +725,7 @@ BattleScript_DoMultiHit: @ 81D7322
 	waitmessage 1
 	addbyte sMULTIHIT_STRING + 4, 1
 	setbyte sMOVEEND_STATE, 0
-	moveend 2, 16
+	moveend 2, 17
 	decrementmultihit BattleScript_MultiHitLoop
 	goto BattleScript_MultiHitPrintStrings
 
@@ -1552,7 +1552,7 @@ BattleScript_DoTripleKickAttack: @ 81D7C2E
 	printstring BATTLE_TEXT_Terminator2
 	waitmessage 1
 	setbyte sMOVEEND_STATE, 0
-	moveend 2, 16
+	moveend 2, 17
 	jumpifbyte COMMON_BITS, gMoveResultFlags, MOVE_RESULT_FOE_ENDURED, BattleScript_TripleKickPrintStrings
 	decrementmultihit BattleScript_TripleKickLoop
 	goto BattleScript_TripleKickPrintStrings
@@ -2022,8 +2022,9 @@ BattleScript_DoHitAllWithUndergroundBonus: @ 81D812C
 	waitmessage 1
 	tryfaintmon TARGET, FALSE, NULL
 	setbyte sMOVEEND_STATE, 0
-	moveend 2, 16
+	moveend 2, 17
 	jumpifnexttargetvalid BattleScript_HitsAllWithUndergroundBonusLoop
+    moveend 0, 0
 	end
 
 BattleScript_HitAllWithUndergroundBonusMissed: @ 81D8165
@@ -2033,8 +2034,9 @@ BattleScript_HitAllWithUndergroundBonusMissed: @ 81D8165
 	resultmessage
 	waitmessage 64
 	setbyte sMOVEEND_STATE, 0
-	moveend 2, 16
+	moveend 2, 17
 	jumpifnexttargetvalid BattleScript_HitsAllWithUndergroundBonusLoop
+    moveend 0, 0
 	end
 
 BattleScript_EffectFutureSight: @ 81D817D
@@ -2129,7 +2131,7 @@ BattleScript_BeatUpAttack: @ 81D829C
 	waitmessage 64
 	tryfaintmon TARGET, FALSE, NULL
 	setbyte sMOVEEND_STATE, 0
-	moveend 2, 16
+	moveend 2, 17
 	goto BattleScript_BeatUpLoop
 
 BattleScript_BeatUpEnd: @ 81D82C4
@@ -2786,7 +2788,7 @@ BattleScript_TeeterDanceLoop: @ 81D8932
 
 BattleScript_TeeterDanceDoMoveEndIncrement: @ 81D8978
 	setbyte sMOVEEND_STATE, 0
-	moveend 2, 16
+	moveend 2, 17
 	addbyte gBankTarget, 1
 	jumpifbytenotequal gBankTarget, gBattlersCount, BattleScript_TeeterDanceLoop
 	end
@@ -4520,7 +4522,7 @@ gUnknown_081D995F:: @ 81D995F
 	printstring BATTLE_TEXT_IgnoredOrdersSLP
 	waitmessage 64
 	setbyte sMOVEEND_STATE, 0
-	moveend 2, 16
+	moveend 2, 17
 	end
 
 BattleScript_IgnoresAndUsesRandomMove:: @ 81D996F
@@ -4532,7 +4534,7 @@ BattleScript_MoveUsedLoafingAround:: @ 81D9977
 	printfromtable gInobedientStringIds
 	waitmessage 64
 	setbyte sMOVEEND_STATE, 0
-	moveend 2, 16
+	moveend 2, 17
 	end
 
 BattleScript_IgnoresAndFallsAsleep:: @ 81D9989
@@ -4541,7 +4543,7 @@ BattleScript_IgnoresAndFallsAsleep:: @ 81D9989
 	setmoveeffect EFFECT_SLEEP | AFFECTS_USER
 	seteffectprimary
 	setbyte sMOVEEND_STATE, 0
-	moveend 2, 16
+	moveend 2, 17
 	end
 
 gUnknown_081D99A0:: @ 81D99A0
@@ -5950,9 +5952,10 @@ _AllHitDoStuff:
 	seteffectwithchance
 	tryfaintmon TARGET, FALSE, NULL
 	setbyte sMOVEEND_STATE, 0
-	moveend 2, 16
+	moveend 2, 17
 	jumpifnexttargetvalid _AllHitDoStuff
 	tryfaintmon USER, FALSE, NULL
+    moveend 0, 0
 	end
 
 _AllHitMissed:
@@ -5960,9 +5963,10 @@ _AllHitMissed:
 	resultmessage
 	waitmessage 64
 	setbyte sMOVEEND_STATE, 0
-	moveend 2, 16
+	moveend 2, 17
 	jumpifnexttargetvalid BattleScript_1D70A7
 	tryfaintmon USER, FALSE, NULL
+    moveend 0, 0
 	end
 
 BattleScript_EffectIncinerate::
@@ -6979,3 +6983,9 @@ BattleScript_ItemHurtHP::
 	datahpupdate USER
 	tryfaintmon USER, FALSE, NULL
 	end2
+
+BattleScript_ExertsPressure::
+	pause 32
+	printstring BATTLE_TEXT_ExertsPressure
+	waitmessage 64
+	end3

@@ -2845,8 +2845,10 @@ static void atk0C_datahpupdate(void)
     if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT))
     {
         gActiveBattler = GetBattleBank(gBattlescriptCurrInstr[1]);
+        
         if (gBattleMons[gActiveBattler].status2 & STATUS2_SUBSTITUTE && gDisableStructs[gActiveBattler].substituteHP && !(gHitMarker & HITMARKER_IGNORE_SUBSTITUTE))
         {
+            gProtectStructs[gBankAttacker].dealtDmg = 1;
             if (gDisableStructs[gActiveBattler].substituteHP >= gBattleMoveDamage)
             {
                 if (gSpecialStatuses[gActiveBattler].moveturnLostHP == 0)
@@ -2924,6 +2926,7 @@ static void atk0C_datahpupdate(void)
                         gProtectStructs[gActiveBattler].classLastHit = CLASS_PHYSICAL;
                         gProtectStructs[gActiveBattler].physicalBank = gBankTarget;
                         gSpecialStatuses[gActiveBattler].moveturnPhysicalBank = gBankTarget;
+                        gProtectStructs[gBankAttacker].dealtDmg = 1;
                     }
                 }
                 else if (moveClass == 1 && !(gHitMarker & HITMARKER_x100000))
@@ -2941,6 +2944,7 @@ static void atk0C_datahpupdate(void)
                         gProtectStructs[gActiveBattler].classLastHit = CLASS_SPECIAL;
                         gProtectStructs[gActiveBattler].specialBank = gBankTarget;
                         gSpecialStatuses[gActiveBattler].moveturnSpecialBank = gBankTarget;
+                        gProtectStructs[gBankAttacker].dealtDmg = 1;
                     }
                 }
             }
@@ -5266,6 +5270,7 @@ static void atk48_playstatchangeanimation(void)
 static void atk49_moveend(void)
 {
     int i;
+    u8 abort = 0;
     int effect = 0;
     u16 last_move = 0, *choiced_move_atk;
     int arg1, arg2, hold_effect_atk, move_type;
@@ -5529,11 +5534,11 @@ static void atk49_moveend(void)
 		if (arg1 == 1 && effect == FALSE)
 			gBattleStruct->cmd49StateTracker = ATK49_LAST_CASE;
 		if (arg1 == 2 && arg2 == gBattleStruct->cmd49StateTracker)
-			gBattleStruct->cmd49StateTracker = ATK49_LAST_CASE;
+			abort = 1; //gBattleStruct->cmd49StateTracker = ATK49_LAST_CASE;
 
-    } while (gBattleStruct->cmd49StateTracker != ATK49_LAST_CASE && effect == FALSE);
+    } while (gBattleStruct->cmd49StateTracker != ATK49_LAST_CASE && effect == FALSE && !abort);
 	
-	if (gBattleStruct->cmd49StateTracker == ATK49_LAST_CASE && effect == FALSE)
+	if ((gBattleStruct->cmd49StateTracker == ATK49_LAST_CASE && effect == FALSE) || abort)
 		gBattlescriptCurrInstr += 3;
 }
 

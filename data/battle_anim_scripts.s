@@ -15967,7 +15967,6 @@ Move_CIRCLE_THROW:
 Move_ROCK_WRECKER:
 Move_HORSEPOWER:
 Move_SACRED_SWORD:
-Move_DRACO_METEOR:
     goto Move_TACKLE
     end
 
@@ -16005,6 +16004,40 @@ Move_MAGIC_GLEAM:
 	playsewithpan SE_W043, SOUND_PAN_ATTACKER
 	createvisualtask sub_80E388C, 2, rgb(31, 24, 24)
     waitforvisualfinish
+	end
+
+Move_DRACO_METEOR:
+	loadspritegfx ANIM_TAG_EXPLOSION
+	loadspritegfx ANIM_TAG_GOLD_STARS
+	loadspritegfx ANIM_TAG_ROCKS
+	loadspritegfx 10306
+	panse_1B SE_W112, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, 3, 0
+	fadetobg BG_COSMIC
+	waitbgfadein
+	waitforvisualfinish
+    
+	createsprite gBattleAnimSpriteTemplate_DracoMeteorRock, ANIM_BATTLER_TARGET, 3, -48, -64, 72, 32, 30
+	delay 8
+    createsprite gBattleAnimSpriteTemplate_83D7828, ANIM_BATTLER_TARGET, 4, 15, -15, 1, 0
+	loopsewithpan SE_W120, SOUND_PAN_TARGET, 4, 2
+    delay 2
+	createsprite gBattleAnimSpriteTemplate_DracoMeteorRock, ANIM_BATTLER_TARGET, 3, -112, -64, 8, 32, 30
+	delay 20
+    createsprite gBattleAnimSpriteTemplate_83D7828, ANIM_BATTLER_TARGET, 4, -15, 15, 1, 0
+	loopsewithpan SE_W120, SOUND_PAN_TARGET, 4, 2
+    delay 20
+	createsprite gBattleAnimSpriteTemplate_DracoMeteorRock, ANIM_BATTLER_TARGET, 3, -80, -64, 40, 32, 30
+	delay 14
+    createsprite gBattleAnimSpriteTemplate_83D7828, ANIM_BATTLER_TARGET, 4, 0, 0, 1, 0
+	loopsewithpan SE_W120, SOUND_PAN_TARGET, 6, 2
+    delay 6
+    
+    
+	waitforvisualfinish
+	delay 10
+	restorebg
+	waitbgfadein
+	waitforvisualfinish
 	end
 
 General_AuraFlare:

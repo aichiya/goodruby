@@ -20,10 +20,8 @@ PetalburgCity_Text_164449:: @ 8164449
 
 PetalburgCity_Text_164490:: @ 8164490
 	.string "My face is reflected in the water.\p"
-	.string "It's a shining grin full of hope...\p"
-	.string "Or it could be a look of somber silence\n"
-	.string "struggling with fear...\p"
-	.string "What do you see reflected in your face?$"
+	.string "I sure hope my reflection can breathe\n"
+	.string "down there. I sure wouldn't be able to.$"
 
 PetalburgCity_Text_16453F:: @ 816453F
 	.string "Let's say you have six Pokémon.\n"

@@ -117,6 +117,8 @@ PetalburgCity_PokemonCenter_1F_EventScript_JirachiGuyNormal::
 	return
 
 PetalburgCity_PokemonCenter_1F_EventScript_JirachiGuyEarlyGive::
+	getpartysize
+    copyvar VAR_SPECIAL_4, RESULT
 	givemon SPECIES_JIRACHI, 10, ITEM_GANLON_BERRY, 0x0, 0x0, 0
     goto PetalburgCity_PokemonCenter_1F_EventScript_JirachiGuyGiveMerge
 
@@ -153,6 +155,7 @@ PetalburgCity_PokemonCenter_1F_EventScript_JirachiGuyRecievePC::
     call PetalburgCity_PokemonCenter_1F_EventScript_JirachiGuyFanfare
 	bufferspeciesname 0, SPECIES_JIRACHI
     msgbox CommonText_NicknameRecievedPokemon, MSGBOX_YESNO
+	bufferspeciesname 1, SPECIES_JIRACHI
     compare RESULT, NO
     goto_if_eq PetalburgCity_PokemonCenter_1F_EventScript_JirachiGuySendToPC
     call Common_EventScript_NameReceivedBoxMon

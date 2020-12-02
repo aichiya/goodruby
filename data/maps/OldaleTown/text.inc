@@ -1,6 +1,8 @@
 OldaleTown_Text_16AEC0:: @ 816AEC0
-	.string "I want to take a rest, so I'm saving my\n"
-	.string "progress.$"
+    .string "Isn't it neat how there's different\n"
+    .string "colors of Pokémon?\p"
+    .string "I want to find a Zigzagoon with\n"
+    .string "nice, green-tinted fur.$"
 
 OldaleTown_Text_16AEF2:: @ 816AEF2
 	.string "Hi!\n"

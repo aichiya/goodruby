@@ -1323,7 +1323,6 @@ EverGrandeCity_HallOfFame_EventScript_19FC13:: @ 819FC13
 	clearflag FLAG_HIDE_SS_TIDAL_LILYCOVE_HARBOR
 	special sub_810FAA0
 	call_if_unset FLAG_RECEIVED_SS_TICKET, EverGrandeCity_HallOfFame_EventScript_19FC62
-	call_if_unset FLAG_LATIOS_OR_LATIAS_ROAMING, EverGrandeCity_HallOfFame_EventScript_19FC70
 	call_if_unset FLAG_RECEIVED_BELDUM, EverGrandeCity_HallOfFame_EventScript_19FC5A
 	call_if_unset FLAG_RECEIVED_HM08, EverGrandeCity_HallOfFame_EventScript_19FC5E
 	return
@@ -1340,10 +1339,6 @@ EverGrandeCity_HallOfFame_EventScript_19FC62:: @ 819FC62
 	setvar VAR_LITTLEROOT_HOUSES_STATE, 3
 	setvar VAR_LITTLEROOT_HOUSES_STATE_2, 3
 	clearflag FLAG_HIDE_NORMAN_LITTLEROOT
-	return
-
-EverGrandeCity_HallOfFame_EventScript_19FC70:: @ 819FC70
-	setflag FLAG_SYS_TV_LATI
 	return
 
 S_WhiteOut:: @ 819FC74
@@ -4979,7 +4974,7 @@ Common_EventScript_NameReceivedBoxMon::
 	return
 
 Common_EventScript_TransferredToPC::
-    msgbox gText_PkmnTransferredToPC, 2
+    msgbox gText_PkmnTransferredToPC, 4
     return
 
 LittlerootTown_ProfessorBirchsLab_EventScript_1A0678:: @ 81A0678
@@ -4989,6 +4984,7 @@ SlateportCity_House1_EventScript_1A0678:: @ 81A0678
 Common_EventScript_NameRecievedPartyMon::
 	fadescreen 1
 	special ChangePokemonNickname
-    lock
 	waitstate
+    lock
+    faceplayer
 	return

@@ -203,6 +203,7 @@ extern u8 BattleScript_Frisk1[];
 extern u8 BattleScript_Frisk2[];
 extern u8 BattleScript_TraceActivates[];
 extern u8 BattleScript_MoxieActivates[];
+extern u8 BattleScript_ExertsPressure[];
 
 extern u8 BattleScript_WhiteHerbEnd2[];
 extern u8 BattleScript_WhiteHerbRet[];
@@ -1980,6 +1981,15 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
                 {
                     gBattleCommunication[MULTISTRING_CHOOSER] = GetCurrentWeather();
                     BattleScriptPushCursorAndCallback(BattleScript_OverworldWeatherStarts);
+                }
+                break;
+            case ABILITY_PRESSURE:
+				if (!(gSpecialStatuses[bank].traced))
+                {
+                    BattleScriptPushCursorAndCallback(BattleScript_ExertsPressure);
+                    gBattleStruct->scriptingActive = bank;
+                    gSpecialStatuses[bank].traced = 1;
+                    effect++;
                 }
                 break;
             case ABILITY_DRIZZLE:
@@ -4313,9 +4323,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
             switch (atkHoldEffect)
             {
             case HOLD_EFFECT_LIFE_ORB:
-                if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
-                    && (gSpecialStatuses[gBankTarget].moveturnLostHP_physical
-                     || gSpecialStatuses[gBankTarget].moveturnLostHP_special)
+                if (gProtectStructs[gBankAttacker].dealtDmg
                     && gBankAttacker != gBankTarget
                     && gBattleMons[gBankAttacker].hp != 0)
                 {

@@ -5962,6 +5962,7 @@ const u32 gTorkoalLevelUpLearnset[] = {
 };
 
 const u32 gSableyeLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_SKILL_SWAP),
     LEVEL_UP_MOVE( 1, MOVE_LEER),
     LEVEL_UP_MOVE( 1, MOVE_SCRATCH),
     LEVEL_UP_MOVE( 4, MOVE_FORESIGHT),
@@ -6506,7 +6507,7 @@ const u32 gLunatoneLevelUpLearnset[] = {
     LEVEL_UP_MOVE(21, MOVE_ROCK_SLIDE),
     LEVEL_UP_MOVE(25, MOVE_COSMIC_POWER),
     LEVEL_UP_MOVE(29, MOVE_PSYCHIC),
-    LEVEL_UP_MOVE(33, MOVE_STEALTH_ROCK), // Heal Block -> tutor move
+    LEVEL_UP_MOVE(33, MOVE_EARTH_POWER), // Heal Block -> tutor move
     LEVEL_UP_MOVE(37, MOVE_STONE_EDGE),
     LEVEL_UP_MOVE(41, MOVE_FUTURE_SIGHT),
     LEVEL_UP_MOVE(45, MOVE_EXPLOSION),
@@ -6527,7 +6528,7 @@ const u32 gSolrockLevelUpLearnset[] = {
     LEVEL_UP_MOVE(21, MOVE_ROCK_SLIDE),
     LEVEL_UP_MOVE(25, MOVE_COSMIC_POWER),
     LEVEL_UP_MOVE(29, MOVE_PSYCHIC),
-    LEVEL_UP_MOVE(33, MOVE_STEALTH_ROCK), // Heal Block -> tutor move
+    LEVEL_UP_MOVE(33, MOVE_EARTH_POWER), // Heal Block -> tutor move
     LEVEL_UP_MOVE(37, MOVE_STONE_EDGE),
     LEVEL_UP_MOVE(41, MOVE_SOLAR_BEAM),
     LEVEL_UP_MOVE(45, MOVE_EXPLOSION),

@@ -1069,6 +1069,17 @@ const struct SpriteTemplate gBattleAnimSpriteTemplate_8402A3C =
     .callback = sub_8131264,
 };
 
+const struct SpriteTemplate gBattleAnimSpriteTemplate_DracoMeteorRock =
+{
+    .tileTag = ANIM_TAG_ROCKS,
+    .paletteTag = 10306,
+    .oam = &gOamData_837DF34,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = sub_8131264,
+};
+
 const struct SpriteTemplate gSpriteTemplate_8402A54 =
 {
     .tileTag = ANIM_TAG_GOLD_STARS,

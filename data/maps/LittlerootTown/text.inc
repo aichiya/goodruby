@@ -49,8 +49,8 @@ LittlerootTown_Text_16AB10:: @ 816AB10
 	.string "Go on, go get them, honey!$"
 
 LittlerootTown_Text_16AC00:: @ 816AC00
-	.string "If you use a PC, you can store items\n"
-	.string "and Pokémon.\p"
+    .string "I heard people can recompile GBA\n"
+    .string "games to edit them these days.\p"
 	.string "The power of science is staggering!$"
 
 LittlerootTown_Text_16AC56:: @ 816AC56
