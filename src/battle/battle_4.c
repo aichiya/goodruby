@@ -12557,6 +12557,8 @@ static void atkE2_switchoutabilities(void)
         break;
 	case ABILITY_REGENERATOR:
         gBattleMons[gActiveBattler].hp += gBattleMons[gActiveBattler].maxHP / 3;
+        if (gBattleMons[gActiveBattler].hp > gBattleMons[gActiveBattler].maxHP)
+            gBattleMons[gActiveBattler].hp = gBattleMons[gActiveBattler].maxHP;
         EmitSetMonData(0, REQUEST_HP_BATTLE, 0, 2, &gBattleMons[gActiveBattler].hp);
         MarkBufferBankForExecution(gActiveBattler);
         break;
