@@ -743,120 +743,111 @@ MauvilleCity_GameCorner_EventScript_Meowth:
 	compare VAR_TEMP_2, 120
 	goto_if_lt MauvilleCity_GameCorner_EventScript_NoCoinsForMon
 	getpartysize
-	compare RESULT, 6
-    goto_if_eq MauvilleCity_GameCorner_EventScript_NoRoom
 	copyvar VAR_SPECIAL_4, RESULT
 	takecoins 120
 	updatecoinsbox 0, 0
 	playse SE_REGI
     waitse
-	playfanfare MUS_FANFA4
-	bufferspeciesname 0, SPECIES_MEOWTH
-	message MauvilleCity_GameCorner_Text_GetMon
-	waitfanfare
-	waitmessage
+    setvar VAR_SPECIAL_3, SPECIES_MEOWTH
+    bufferspeciesname 0, SPECIES_MEOWTH
 	givemon SPECIES_MEOWTH, 18, ITEM_NONE, 0x0, 0x0, 0
-	bufferspeciesname 1, SPECIES_MEOWTH
-	msgbox MossdeepCity_StevensHouse_Text_1A1102, MSGBOX_YESNO
-	compare RESULT, YES
-	call_if_eq MossdeepCity_StevensHouse_EventScript_1A0678
-    goto MauvilleCity_GameCorner_EventScript_MonPrizesStartFirst
+    goto MauvilleCity_GameCorner_EventScript_GiveMonMerge
     
 MauvilleCity_GameCorner_EventScript_Spheal:
 	checkcoins VAR_TEMP_2
 	compare VAR_TEMP_2, 520
 	goto_if_lt MauvilleCity_GameCorner_EventScript_NoCoinsForMon
 	getpartysize
-	compare RESULT, 6
-    goto_if_eq MauvilleCity_GameCorner_EventScript_NoRoom
 	copyvar VAR_SPECIAL_4, RESULT
 	takecoins 520
 	updatecoinsbox 0, 0
 	playse SE_REGI
     waitse
-	playfanfare MUS_FANFA4
-	bufferspeciesname 0, SPECIES_SPHEAL
-	message MauvilleCity_GameCorner_Text_GetMon
-	waitfanfare
-	waitmessage
+    setvar VAR_SPECIAL_3, SPECIES_SPHEAL
+    bufferspeciesname 0, SPECIES_SPHEAL
 	givemon SPECIES_SPHEAL, 19, ITEM_NONE, 0x0, 0x0, 0
-	bufferspeciesname 1, SPECIES_SPHEAL
-	msgbox MossdeepCity_StevensHouse_Text_1A1102, MSGBOX_YESNO
-	compare RESULT, YES
-	call_if_eq MossdeepCity_StevensHouse_EventScript_1A0678
-    goto MauvilleCity_GameCorner_EventScript_MonPrizesStartFirst
+    goto MauvilleCity_GameCorner_EventScript_GiveMonMerge
     
 MauvilleCity_GameCorner_EventScript_Jigglypuff:
 	checkcoins VAR_TEMP_2
 	compare VAR_TEMP_2, 1030
 	goto_if_lt MauvilleCity_GameCorner_EventScript_NoCoinsForMon
 	getpartysize
-	compare RESULT, 6
-    goto_if_eq MauvilleCity_GameCorner_EventScript_NoRoom
 	copyvar VAR_SPECIAL_4, RESULT
 	takecoins 1030
 	updatecoinsbox 0, 0
 	playse SE_REGI
     waitse
-	playfanfare MUS_FANFA4
-	bufferspeciesname 0, SPECIES_JIGGLYPUFF
-	message MauvilleCity_GameCorner_Text_GetMon
-	waitfanfare
-	waitmessage
+    setvar VAR_SPECIAL_3, SPECIES_JIGGLYPUFF
+    bufferspeciesname 0, SPECIES_JIGGLYPUFF
 	givemon SPECIES_JIGGLYPUFF, 20, ITEM_NONE, 0x0, 0x0, 0
-	bufferspeciesname 1, SPECIES_JIGGLYPUFF
-	msgbox MossdeepCity_StevensHouse_Text_1A1102, MSGBOX_YESNO
-	compare RESULT, YES
-	call_if_eq MossdeepCity_StevensHouse_EventScript_1A0678
-    goto MauvilleCity_GameCorner_EventScript_MonPrizesStartFirst
+    goto MauvilleCity_GameCorner_EventScript_GiveMonMerge
     
 MauvilleCity_GameCorner_EventScript_Eevee:
 	checkcoins VAR_TEMP_2
 	compare VAR_TEMP_2, 2700
 	goto_if_lt MauvilleCity_GameCorner_EventScript_NoCoinsForMon
 	getpartysize
-	compare RESULT, 6
-    goto_if_eq MauvilleCity_GameCorner_EventScript_NoRoom
 	copyvar VAR_SPECIAL_4, RESULT
 	takecoins 2700
 	updatecoinsbox 0, 0
 	playse SE_REGI
     waitse
-	playfanfare MUS_FANFA4
-	bufferspeciesname 0, SPECIES_EEVEE
-	message MauvilleCity_GameCorner_Text_GetMon
-	waitfanfare
-	waitmessage
+    setvar VAR_SPECIAL_3, SPECIES_EEVEE
+    bufferspeciesname 0, SPECIES_EEVEE
 	givemon SPECIES_EEVEE, 22, ITEM_NONE, 0x0, 0x0, 0
-	bufferspeciesname 1, SPECIES_EEVEE
-	msgbox MossdeepCity_StevensHouse_Text_1A1102, MSGBOX_YESNO
-	compare RESULT, YES
-	call_if_eq MossdeepCity_StevensHouse_EventScript_1A0678
-    goto MauvilleCity_GameCorner_EventScript_MonPrizesStartFirst
+    goto MauvilleCity_GameCorner_EventScript_GiveMonMerge
     
 MauvilleCity_GameCorner_EventScript_Porygon:
 	checkcoins VAR_TEMP_2
 	compare VAR_TEMP_2, 7777
 	goto_if_lt MauvilleCity_GameCorner_EventScript_NoCoinsForMon
 	getpartysize
-	compare RESULT, 6
-    goto_if_eq MauvilleCity_GameCorner_EventScript_NoRoom
 	copyvar VAR_SPECIAL_4, RESULT
 	takecoins 7777
 	updatecoinsbox 0, 0
 	playse SE_REGI
     waitse
-	playfanfare MUS_FANFA4
-	bufferspeciesname 0, SPECIES_PORYGON
+    setvar VAR_SPECIAL_3, SPECIES_PORYGON
+    bufferspeciesname 0, SPECIES_PORYGON
+	givemon SPECIES_PORYGON, 25, ITEM_NONE, 0x0, 0x0, 0
+    goto MauvilleCity_GameCorner_EventScript_GiveMonMerge
+
+MauvilleCity_GameCorner_EventScript_GiveMonMerge::
+    compare RESULT, 0
+    goto_if_eq MauvilleCity_GameCorner_EventScript_GiveMonParty
+    compare RESULT, 1
+    goto_if_eq MauvilleCity_GameCorner_EventScript_GiveMonPC
+    release
+    end
+
+MauvilleCity_GameCorner_EventScript_GiveMonParty::
+    call MauvilleCity_GameCorner_EventScript_GiftMonFanfare
+    msgbox CommonText_NicknameRecievedPokemon, MSGBOX_YESNO
+    compare RESULT, NO
+    goto_if_eq MauvilleCity_GameCorner_EventScript_MonPrizesStartFirst
+    call Common_EventScript_NameRecievedPartyMon
+    goto MauvilleCity_GameCorner_EventScript_MonPrizesStartFirst
+
+MauvilleCity_GameCorner_EventScript_GiveMonPC::
+    call MauvilleCity_GameCorner_EventScript_GiftMonFanfare
+    msgbox CommonText_NicknameRecievedPokemon, MSGBOX_YESNO
+    bufferspeciesname 1, VAR_SPECIAL_3
+    compare RESULT, NO
+    goto_if_eq MauvilleCity_GameCorner_EventScript_GiveMonSendToPC
+    call Common_EventScript_NameReceivedBoxMon
+    goto MauvilleCity_GameCorner_EventScript_GiveMonSendToPC
+
+MauvilleCity_GameCorner_EventScript_GiveMonSendToPC::
+    call Common_EventScript_TransferredToPC
+    goto MauvilleCity_GameCorner_EventScript_MonPrizesStartFirst
+
+MauvilleCity_GameCorner_EventScript_GiftMonFanfare::	
+    playfanfare MUS_FANFA4
 	message MauvilleCity_GameCorner_Text_GetMon
 	waitfanfare
 	waitmessage
-	givemon SPECIES_PORYGON, 25, ITEM_NONE, 0x0, 0x0, 0
-	bufferspeciesname 1, SPECIES_PORYGON
-	msgbox MossdeepCity_StevensHouse_Text_1A1102, MSGBOX_YESNO
-	compare RESULT, YES
-	call_if_eq MossdeepCity_StevensHouse_EventScript_1A0678
-    goto MauvilleCity_GameCorner_EventScript_MonPrizesStartFirst
+    return
 
 MauvilleCity_GameCorner_EventScript_NoRoom:
 	msgbox MauvilleCity_GameCorner_Text_NoRoom, 4
