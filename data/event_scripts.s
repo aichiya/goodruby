@@ -3211,7 +3211,6 @@ FallarborTown_ContestLobby_Text_1A10EB:: @ 81A10EB
 	.string "The link was canceled.$"
 
 MossdeepCity_StevensHouse_Text_1A1102:: @ 81A1102
-RustboroCity_DevonCorp_2F_Text_1A1102:: @ 81A1102
 CommonText_NicknameRecievedPokemon::
 	.string "Want to give a nickname to the\n"
 	.string "{STR_VAR_1} you received?$"
@@ -4979,7 +4978,6 @@ Common_EventScript_TransferredToPC::
 
 LittlerootTown_ProfessorBirchsLab_EventScript_1A0678:: @ 81A0678
 MossdeepCity_StevensHouse_EventScript_1A0678:: @ 81A0678
-RustboroCity_DevonCorp_2F_EventScript_1A0678:: @ 81A0678
 SlateportCity_House1_EventScript_1A0678:: @ 81A0678
 Common_EventScript_NameRecievedPartyMon::
 	fadescreen 1

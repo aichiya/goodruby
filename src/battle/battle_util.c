@@ -3719,6 +3719,7 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                     BattleScriptExecute(BattleScript_ItemHurtHP);
                     effect = ITEM_HP_CHANGE;
                 }
+                break;
             case HOLD_EFFECT_TOXIC_ORB:
                 if (gBattleMons[bank].status1 == 0 && !moveTurn &&
                 gBattleMons[bank].type1 != TYPE_POISON && gBattleMons[bank].type2 != TYPE_POISON &&

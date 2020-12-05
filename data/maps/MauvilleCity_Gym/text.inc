@@ -1,12 +1,20 @@
-MauvilleCity_Gym_Text_180815:: @ 8180815
-	.string "Hey, how's it going, the Champion-\n"
+MauvilleCity_Gym_Text_GiveWater::
+	.string "Hey, how's it going, Champion-\n"
 	.string "bound {PLAYER}?\p"
+	.string "Here's your water.$"
+
+MauvilleCity_Gym_Text_GymGuyFullBag::
+    .string "Huh? Your Bag is too full.$"
+
+MauvilleCity_Gym_Text_GymGuyAdvice:: @ 8180815
 	.string "Wattson, the Leader of Mauville\n"
 	.string "Gym, uses Electric-type Pokémon.\p"
-	.string "If you challenge him with Water-type\n"
+	.string "If you bring Water or Flying-type\n"
 	.string "Pokémon, he'll zap them! Bzzt!\p"
-	.string "And, he's put in switch-controlled doors\n"
-	.string "all over his Gym! Eccentric!\p"
+	.string "Wattson's Pokémon all know moves that\n"
+	.string "let them switch out after attacking.\p"
+	.string "If you use a move like Stealth Rock,\n"
+	.string "it could rack up a lot of damage!\p"
 	.string "Hey, go for it!$"
 
 MauvilleCity_Gym_Text_18091D:: @ 818091D

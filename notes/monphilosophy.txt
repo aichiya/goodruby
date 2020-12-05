@@ -1,0 +1,72 @@
+Changes in general are meant to make mons viable at some stage of the game.
+Not every mon will be equal, and not every mon will be super good at endgame.
+Most should be at least usable there, though.
+
+
+
+#001 Bulbasaur, #002 Ivysaur, #003 Venusaur
+ // This is one of the best lines for in-game play. The evolution change is just to standardize.
+ // It learns Sleep Powder notably later now, but not by too much.
+ 
+#098 Krabby, #099 Kingler
+ // I really dislike Liquidation, if for nothing else than that it makes Kingler not use Crabhammer.
+ // This is horrible, and as such Crabhammer has been changed to work with Sheer Force.
+ // It's also technically a Crawdaunt buff, but the main reason is just so Kingler will be using Crabhammer.
+
+#191 Sunkern, #192 Sunflora
+ // I probably would have thrown up at this change a few years ago, heh.
+ // Pure Grass Sunflora just has no place in the game.
+ // It's hardly stronger than Victreebel, while being way slower and not actually being bulky.
+ // Thus, it gets the sunny sunflower overhaul.
+ // Drought and STAB Fire typing let it actually nuke things, and have coverage to boot.
+ // It's still frail and slow, and the typing isn't as good defensively as you might expect w/o Flash Fire.
+
+#223 Remoraid, #224 Octillery
+ // Moody -> Protean.
+ // Helps it abuse its crazy coverage and generally be more interesting, hopefully.
+ // Unlike its fellow Protean Kecleon it lacks priority, but it makes up for it with more and stronger moves.
+ // As for why it has Protean in particular...it's an octopus.
+
+#252 Treecko, #253 Grovyle, #254 Sceptile
+ // Treecko is pretty infamous for being the worst Hoenn starter, so the lack of real buffs may seem odd.
+ // This is because its level-up movepool is extremely good in mid-game.
+ // Fury Cutter, Screech, Detect, and Dual Chop specifically have stealth utility vs nearby bosses.
+ // It also gets Leaf Blade extremely early, when the other starters are working with 40 and 60 BP STABs.
+ // Because of this, Grovyle is actually quite handy in-game.
+ // Sceptile falls off a bit, but it's hardly useless; it's exceptionally fast and can be bred Leech Seed.
+
+#255 Torchic, #256 Combusken, #257 Blaziken
+ // I expect a lot of people will be mad at me for taking Speed Boost away from this line.
+ // It's not out of spite for it; it's my favorite Hoenn starter line!
+ // It's out of concern for how it warps the game; Speed Boost Blaziken is wildly and destructively broken.
+ // Even restricting it to late-game isn't an option I like, since it still destroys basically all of late-game.
+ // Speed Boost also breaks parity with the other starters, which have extremely trashy HAs.
+ // Worst though, I just don't find it as fun to work with as Blaze. Flame Charge into Blaze is really cool.
+ // So, it gets Mold Breaker instead, which has a couple uses (mostly against Grumpig) but isn't earth-shattering.
+
+#352 Kecleon
+ // Kecleon gains Soak and Power Whip.
+ // These are actually not meant for the synergy; that's a funny coincidence.
+ // It gets Soak to be a conveniently placed aid for the Registeel puzzle.
+ // Power Whip is there so it has a strong move to use, and fits given its anatomy.
+
+#353 Shuppet, #354 Banette
+ // Banette is now Ghost/Dark.
+ // I know a lot of people push for Ghost/Normal on this, but...
+ // Go look at its dex entries. It's so malicious.
+ // It already has a ton of Dark moves in its natural pool, too.
+
+#357 Tropius
+ // Tropius's changes are fairly drastic, but Tropius was in a very painful spot.
+ // It joins late, at a point in the game where you probably have a Grass-type.
+ // The bosses immediately after it abuse it horribly.
+ // Making matters worse, Grass is a competitive type and it can't even learn Sleep Powder.
+ // It's really bad when your mon is outclassed hard by Jumpluff for utility.
+ // Dragon is a rare type and very reasonable for it, so it gains that and some power.
+ // It's quite similar to Appletun now, but with aggressive Abilities and Harvest.
+
+#374 Beldum, #375 Metang, #376 Metagross
+ // I know buffing Metagross is kind of insane, but Light Metal does literally nothing for it.
+ // It goes from taking 120 BP from weight moves to taking 120 BP. Actually useless in a not funny way.
+ // For what it's worth, Steven's Metagross is still Clear Body.
+ // I value the Intimidate immunity on the AI more than Iron Fist's extra oomph there.

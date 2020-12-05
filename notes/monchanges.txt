@@ -21,8 +21,6 @@ IN GENERAL:
 #001 Bulbasaur, #002 Ivysaur, #003 Venusaur
  * Level-up movepool adjusted.
  * Ivysaur now evolves at level 36 instead of 32.
- | This is one of the best lines for in-game play. The evolution change is just to standardize.
- | It learns Sleep Powder notably later now, but not by too much.
 
 #004 Charmander, #005 Charmelon, #006 Charizard
  * Level-up movepool adjusted.
@@ -99,6 +97,7 @@ IN GENERAL:
 #056 Mankey, #057 Primeape
  * Mankey's base stats changed: 40/80/35/35/45/70 (305) -> 40/80/35/35/45/80 (315).
  * Primeape's base stats changed: 60/105/60/60/70/95 (420) -> 60/105/60/60/70/115 (440).
+ * Now learns Stealth Rock by TM.
 
 #058 Growlithe, #059 Arcanine
  * Now learns Howl by level.
@@ -253,7 +252,6 @@ IN GENERAL:
 
 #438 Bonsly, #185 Sudowoodo
  * Now learns Recover by breeding.
- // It is painfully tempting to give this thing Synthesis instead.
 
 #187 Hoppip, #188 Skiploom, #189 Jumpluff
  * Entire line's Ability Leaf Guard replaced with Unburden.
@@ -297,7 +295,6 @@ IN GENERAL:
 #223 Remoraid, #224 Octillery
  * Octillery's Hidden Ability Moody replaced with Protean.
  * Now learns Zap Cannon by breeding.
- | Octopi are known for their camoflauge.
 
 #225 Delibird
  * Delibird's base stats changed: 45/55/45/65/45/75 (330) -> 45/85/45/105/45/105 (430).
@@ -458,15 +455,12 @@ IN GENERAL:
 
 #352 Kecleon
  * Now learns Soak and Power Whip by level.
- | These are actually both for reasons unrelated to the obvious synergy, but that's a nice byproduct.
 
 #353 Shuppet, #354 Banette
  * Banette's type changed: Ghost -> Ghost/Dark.
  * Shuppet's base stats changed: 44/75/35/63/33/45 (295) -> 44/75/35/73/33/45 (305).
  * Banette's base stats changed: 64/115/65/83/63/65 (455) -> 64/115/65/113/63/65 (485).
  * Now learns Play Rough by level.
- | Why wasn't this line Dark to begin with? All of its dex entries scream malice,
- | grudges, negativity. One of them even implies it will die if you're too nice to it.
 
 #357 Tropius
  * Tropius's type changed: Grass/Flying -> Grass/Dragon.
@@ -475,13 +469,6 @@ IN GENERAL:
  * Now learns Twister, DragonBreath, Dragon Pulse, Outrage, and Hurricane by level.
  * Now learns Dragon Claw and Heat Wave by TM.
  * Now learns Gust, Air Slash, and Whirlwind by breeding.
- | These changes are fairly drastic, but Tropius was in a very painful spot.
- | It joins late, at a point in the game where you probably have a Grass-type.
- | The bosses immediately after it abuse it horribly.
- | Making matters worse, Grass is a competitive type and it can't even learn Sleep Powder.
- | It's really bad when your mon is outclassed hard by Jumpluff for utility.
- | Dragon is a rare type and very reasonable for it, so it gains that and some power.
- | It's quite similar to Appletun now, but with aggressive Abilities and Harvest.
 
 #359 Absol
  * Base stats changed: 65/130/60/75/60/75 (465) -> 65/130/60/90/60/85 (490).

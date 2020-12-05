@@ -307,82 +307,84 @@ RustboroCity_DevonCorp_2F_EventScript_15764A:: @ 815764A
 RustboroCity_DevonCorp_2F_EventScript_GiveLileep:: @ 8157661
 	bufferspeciesname 1, SPECIES_LILEEP
 	msgbox RustboroCity_DevonCorp_2F_Text_183124, 4
-	getpartysize
-	compare RESULT, 6
-	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_157707
-	copyvar VAR_SPECIAL_4, RESULT
-	setvar VAR_FOSSIL_RESURRECTION_STATE, 0
-	setflag FLAG_RECEIVED_FOSSIL_MON
-	playfanfare MUS_FANFA4
-	message RustboroCity_DevonCorp_2F_Text_18319E
-	waitfanfare
-	waitmessage
+    getpartysize
+    copyvar VAR_SPECIAL_4, RESULT
+    setvar VAR_SPECIAL_3, SPECIES_LILEEP
+    bufferspeciesname 0, SPECIES_LILEEP
 	givemon SPECIES_LILEEP, 24, ITEM_NONE, 0x0, 0x0, 0
-	msgbox RustboroCity_DevonCorp_2F_Text_1A1102, MSGBOX_YESNO
-	compare RESULT, YES
-	call_if_eq RustboroCity_DevonCorp_2F_EventScript_1A0678
-	release
-	end
+    goto RustboroCity_DevonCorp_2F_EventScript_GiveFossilMerge
 
 RustboroCity_DevonCorp_2F_EventScript_GiveAnorith:: @ 81576B4
 	bufferspeciesname 1, SPECIES_ANORITH
 	msgbox RustboroCity_DevonCorp_2F_Text_183124, 4
-	getpartysize
-	compare RESULT, 6
-	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_157707
-	copyvar VAR_SPECIAL_4, RESULT
-	setvar VAR_FOSSIL_RESURRECTION_STATE, 0
-	setflag FLAG_RECEIVED_FOSSIL_MON
-	playfanfare MUS_FANFA4
-	message RustboroCity_DevonCorp_2F_Text_18319E
-	waitfanfare
-	waitmessage
+    getpartysize
+    copyvar VAR_SPECIAL_4, RESULT
+    setvar VAR_SPECIAL_3, SPECIES_ANORITH
+    bufferspeciesname 0, SPECIES_ANORITH
 	givemon SPECIES_ANORITH, 24, ITEM_NONE, 0x0, 0x0, 0
-	msgbox RustboroCity_DevonCorp_2F_Text_1A1102, MSGBOX_YESNO
-	compare RESULT, YES
-	call_if_eq RustboroCity_DevonCorp_2F_EventScript_1A0678
-	release
-	end
+    goto RustboroCity_DevonCorp_2F_EventScript_GiveFossilMerge
 
 RustboroCity_DevonCorp_2F_EventScript_GiveKabuto::
 	bufferspeciesname 1, SPECIES_KABUTO
 	msgbox RustboroCity_DevonCorp_2F_Text_183124, 4
-	getpartysize
-	compare RESULT, 6
-	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_157707
-	copyvar VAR_SPECIAL_4, RESULT
-	setvar VAR_FOSSIL_RESURRECTION_STATE, 0
-	setflag FLAG_RECEIVED_FOSSIL_MON
-	playfanfare MUS_FANFA4
-	message RustboroCity_DevonCorp_2F_Text_18319E
-	waitfanfare
-	waitmessage
+    getpartysize
+    copyvar VAR_SPECIAL_4, RESULT
+    setvar VAR_SPECIAL_3, SPECIES_KABUTO
+    bufferspeciesname 0, SPECIES_KABUTO
 	givemon SPECIES_KABUTO, 24, ITEM_NONE, 0x0, 0x0, 0
-	msgbox RustboroCity_DevonCorp_2F_Text_1A1102, MSGBOX_YESNO
-	compare RESULT, YES
-	call_if_eq RustboroCity_DevonCorp_2F_EventScript_1A0678
-	release
-	end
+    goto RustboroCity_DevonCorp_2F_EventScript_GiveFossilMerge
 
 RustboroCity_DevonCorp_2F_EventScript_GiveOmanyte::
 	bufferspeciesname 1, SPECIES_OMANYTE
 	msgbox RustboroCity_DevonCorp_2F_Text_183124, 4
-	getpartysize
-	compare RESULT, 6
-	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_157707
-	copyvar VAR_SPECIAL_4, RESULT
-	setvar VAR_FOSSIL_RESURRECTION_STATE, 0
-	setflag FLAG_RECEIVED_FOSSIL_MON
-	playfanfare MUS_FANFA4
+    getpartysize
+    copyvar VAR_SPECIAL_4, RESULT
+    setvar VAR_SPECIAL_3, SPECIES_OMANYTE
+    bufferspeciesname 0, SPECIES_OMANYTE
+	givemon SPECIES_OMANYTE, 24, ITEM_NONE, 0x0, 0x0, 0
+    goto RustboroCity_DevonCorp_2F_EventScript_GiveFossilMerge
+
+RustboroCity_DevonCorp_2F_EventScript_GiveFossilMerge::
+    compare RESULT, 0
+    goto_if_eq RustboroCity_DevonCorp_2F_EventScript_GiveFossilMonParty
+    compare RESULT, 1
+    goto_if_eq RustboroCity_DevonCorp_2F_EventScript_GiveFossilMonPC
+    release
+    end
+
+RustboroCity_DevonCorp_2F_EventScript_GiveFossilMonParty::
+    call RustboroCity_DevonCorp_2F_EventScript_Fanfare
+    msgbox CommonText_NicknameRecievedPokemon, MSGBOX_YESNO
+    compare RESULT, NO
+    goto_if_eq RustboroCity_DevonCorp_2F_EventScript_GiveFossilEnd
+    call Common_EventScript_NameRecievedPartyMon
+    goto RustboroCity_DevonCorp_2F_EventScript_GiveFossilEnd
+
+RustboroCity_DevonCorp_2F_EventScript_GiveFossilMonPC::
+    call RustboroCity_DevonCorp_2F_EventScript_Fanfare
+    msgbox CommonText_NicknameRecievedPokemon, MSGBOX_YESNO
+    bufferspeciesname 1, VAR_SPECIAL_3
+    compare RESULT, NO
+    goto_if_eq RustboroCity_DevonCorp_2F_EventScript_GiveFossilMonSendToPC
+    call Common_EventScript_NameReceivedBoxMon
+    goto RustboroCity_DevonCorp_2F_EventScript_GiveFossilMonSendToPC
+
+RustboroCity_DevonCorp_2F_EventScript_GiveFossilMonSendToPC::
+    call Common_EventScript_TransferredToPC
+    goto RustboroCity_DevonCorp_2F_EventScript_GiveFossilEnd
+
+RustboroCity_DevonCorp_2F_EventScript_Fanfare::
+	playfanfare MUS_FANFA5
 	message RustboroCity_DevonCorp_2F_Text_18319E
 	waitfanfare
 	waitmessage
-	givemon SPECIES_OMANYTE, 24, ITEM_NONE, 0x0, 0x0, 0
-	msgbox RustboroCity_DevonCorp_2F_Text_1A1102, MSGBOX_YESNO
-	compare RESULT, YES
-	call_if_eq RustboroCity_DevonCorp_2F_EventScript_1A0678
+	return
+
+RustboroCity_DevonCorp_2F_EventScript_GiveFossilEnd::
+	setvar VAR_FOSSIL_RESURRECTION_STATE, 0
+	setflag FLAG_RECEIVED_FOSSIL_MON
 	release
-	end
+	end 
 
 RustboroCity_DevonCorp_2F_EventScript_157707:: @ 8157707
 	msgbox RustboroCity_DevonCorp_2F_Text_1831C8, 4

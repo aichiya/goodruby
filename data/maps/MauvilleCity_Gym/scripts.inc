@@ -184,9 +184,26 @@ MauvilleCity_Gym_EventScript_156742:: @ 8156742
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_MAUVILLE_GYM, MauvilleCity_Gym_EventScript_156757
-	msgbox MauvilleCity_Gym_Text_180815, 4
+    goto_if_set FLAG_GOT_GYM_REFRESHMENT_3, MauvilleCity_Gym_EventScript_GymGuyHaveDrink
+	msgbox MauvilleCity_Gym_Text_GiveWater, 4
+    giveitem_std ITEM_FRESH_WATER
+    compare RESULT, 0
+    goto_if_eq MauvilleCity_Gym_EventScript_GymGuyBagFull
+    setflag FLAG_GOT_GYM_REFRESHMENT_3
+    msgbox MauvilleCity_Gym_Text_GymGuyAdvice, 4
 	release
 	end
+
+MauvilleCity_Gym_EventScript_GymGuyHaveDrink::
+	msgbox MauvilleCity_Gym_Text_GymGuyAdvice, 4
+	release
+	end
+
+MauvilleCity_Gym_EventScript_GymGuyBagFull::
+    msgbox MauvilleCity_Gym_Text_GymGuyFullBag, 4
+    msgbox MauvilleCity_Gym_Text_GymGuyAdvice, 4
+    release
+    end
 
 MauvilleCity_Gym_EventScript_156757:: @ 8156757
 	msgbox MauvilleCity_Gym_Text_18091D, 4
