@@ -2110,6 +2110,10 @@ static const u8 MoveDescription_DracoMeteor[] = _(
     "Allows a full-power attack,\n"
     "but sharply lowers Sp.Atk.");
 
+static const u8 MoveDescription_DarkVoid[] = _(
+    "Drags the foe into total\n"
+    "darkness to inflict slumber.");
+
 
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
@@ -2643,4 +2647,5 @@ const u8 * const gMoveDescriptions[] = {
     MoveDescription_Round,
     MoveDescription_SacredSword,
     MoveDescription_DracoMeteor,
+    MoveDescription_DarkVoid,
 };

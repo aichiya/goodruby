@@ -8,10 +8,27 @@ Most should be at least usable there, though.
  // This is one of the best lines for in-game play. The evolution change is just to standardize.
  // It learns Sleep Powder notably later now, but not by too much.
  
+#056 Mankey, #057 Primeape
+ // Originally I was going to do nothing for these. Mankey's the most obvious crutch for Roxanne.
+ // Primeape is largely outclassed but in my testing it was still usable, and it gets good moves fairly early.
+ // Playtesters complained the line was too weak, so it got a Speed hike and Stealth Rock.
+ // These are to help it fill the holes left by the musketeers, Mienshao, Hawlucha, Infernape, etc.
+ // Primeape was already the fastest Fighting mon in the game before the buff, at a modest 95.
+ // Now it has a build very similar to Hawlucha's, without being a bird.
+
 #098 Krabby, #099 Kingler
  // I really dislike Liquidation, if for nothing else than that it makes Kingler not use Crabhammer.
  // This is horrible, and as such Crabhammer has been changed to work with Sheer Force.
  // It's also technically a Crawdaunt buff, but the main reason is just so Kingler will be using Crabhammer.
+
+#155 Cyndaquil, #156 Quilava, #157 Typhlosion
+ // This is probably one of the weirder mon tweaks.
+ // This is admittedly inspired heavily by the Touhoumon 1.8 puppet Yuki, which has a similar build.
+ // It's defined by its physical frailty and special offense supplemented by jank physical coverage.
+ // I tried to play Typhlosion towards this: Play Rough lets it hit Dragons, Rollout lets it hit other Fires.
+ // For Fire offense though, its special options are king between Burn Up, Overheat, and Eruption.
+ // ExtremeSpeed is absolutely a stretch, but it is fast.
+ // The physical slant also helps Quilava a good bit while it relies on Flame Wheel.
 
 #191 Sunkern, #192 Sunflora
  // I probably would have thrown up at this change a few years ago, heh.
@@ -44,6 +61,14 @@ Most should be at least usable there, though.
  // Worst though, I just don't find it as fun to work with as Blaze. Flame Charge into Blaze is really cool.
  // So, it gets Mold Breaker instead, which has a couple uses (mostly against Grumpig) but isn't earth-shattering.
 
+#283 Surskit, #284 Masquerain
+ // Bug/Water is a pretty obvious move for it.
+ // It's also an anti-flavor move, but Bug/Flying is so diluted that it's completely unreasonable not to do this...
+
+#336 Seviper
+ // Merciless on this is one of my favorite changes.
+ // It's adapted to Toxic Boost Zangoose. Still slower, but it can put the ability to some use.
+
 #352 Kecleon
  // Kecleon gains Soak and Power Whip.
  // These are actually not meant for the synergy; that's a funny coincidence.
@@ -64,6 +89,11 @@ Most should be at least usable there, though.
  // It's really bad when your mon is outclassed hard by Jumpluff for utility.
  // Dragon is a rare type and very reasonable for it, so it gains that and some power.
  // It's quite similar to Appletun now, but with aggressive Abilities and Harvest.
+
+#361 Snorunt, #362 Glalie, #478 Froslass
+ // Froslass gains Snow Warning on account of its whole flavor, and no other users of the ability existing.
+ // Glalie, sadly, is really hard to work with. Refrigerate is tempting.
+ // For now though, it can be the sole Moody abuser, now that Octillery has moved to new waters.
 
 #374 Beldum, #375 Metang, #376 Metagross
  // I know buffing Metagross is kind of insane, but Light Metal does literally nothing for it.

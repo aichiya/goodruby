@@ -8892,10 +8892,8 @@ static void atk8D_setmultihitcounter(void)
         gMultiHitCounter = T2_READ_8(gBattlescriptCurrInstr + 1);
     else
     {
-        gMultiHitCounter = Random() & 3;
-        if (gMultiHitCounter > 1)
-            gMultiHitCounter = (Random() & 3) + 2;
-        else
+        gMultiHitCounter = Random() % 6;
+        if (gMultiHitCounter < 2)
             gMultiHitCounter += 2;
     }
     gBattlescriptCurrInstr += 2;

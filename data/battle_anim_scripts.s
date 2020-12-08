@@ -550,6 +550,7 @@ gBattleAnims_Moves:: @ 81C7168
     .4byte Move_ROUND
 	.4byte Move_SACRED_SWORD
     .4byte Move_DRACO_METEOR
+    .4byte Move_DARK_VOID
 	.4byte PoundCopy
 
 	.align 2
@@ -15967,6 +15968,7 @@ Move_CIRCLE_THROW:
 Move_ROCK_WRECKER:
 Move_HORSEPOWER:
 Move_SACRED_SWORD:
+Move_DARK_VOID:
     goto Move_TACKLE
     end
 
@@ -16059,3 +16061,5 @@ General_AuraFlare:
 	clearmonbg ANIM_BATTLER_DEF_PARTNER
 	blendoff
 	end
+
+
