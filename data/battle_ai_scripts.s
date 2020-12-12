@@ -1937,7 +1937,7 @@ AI_CV_Flail_End: @ 81DB680
 	end
 
 AI_CV_HealBell: @ 81DB681
-	if_status TARGET, SLP | PSN | BRN | FRZ | PAR | TOX, AI_CV_HealBell_End
+	if_status USER, SLP | PSN | BRN | FRZ | PAR | TOX, AI_CV_HealBell_End
 	if_status_in_party TARGET, SLP | PSN | BRN | FRZ | PAR | TOX, AI_CV_HealBell_End
 	score -5
 
@@ -2300,8 +2300,8 @@ AI_CV_Fly2: @ 81DBA9F
 	if_status2 TARGET, S_CURSED, AI_CV_Fly6
 	if_status3 TARGET, S_LEECH_SEED, AI_CV_Fly6
 	get_weather
-	if_equal BATTLE_WEATHER_HAIL, AI_CV_Fly3
-	if_equal BATTLE_WEATHER_SANDSTORM, AI_CV_Fly4
+	if_equal BATTLE_WEATHER_HAIL, AI_CV_Fly4
+	if_equal BATTLE_WEATHER_SANDSTORM, AI_CV_Fly3
 	jump AI_CV_Fly5
 
 AI_CV_Fly3: @ 81DBACF

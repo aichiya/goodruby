@@ -203,7 +203,7 @@ PetalburgCity_Gym_Text_GymGuyAdvice::
 	.string "The door at the left leads to the\n"
 	.string "Speed Room.\p"
 	.string "The door at the right leads to the\n"
-	.string "Accuracy Room.\p"
+	.string "Evasion Room.\p"
 	.string "The room's name will be on the\n"
 	.string "door, so choose carefully.\p"
 	.string "Once you've chosen the door...\n"

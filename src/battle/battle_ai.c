@@ -1536,7 +1536,7 @@ static void BattleAICmd_if_status_in_party(void)
         u16 hp = GetMonData(&party[i], MON_DATA_HP);
         u32 status = GetMonData(&party[i], MON_DATA_STATUS);
 
-        if (species != SPECIES_NONE && species != SPECIES_EGG && hp != 0 && status == statusToCompareTo)
+        if (species != SPECIES_NONE && species != SPECIES_EGG && hp != 0 && status & statusToCompareTo)
         {
             gAIScriptPtr = T1_READ_PTR(gAIScriptPtr + 6); // WHAT. why is this being merged into the above switch
             return;
