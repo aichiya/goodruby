@@ -558,6 +558,8 @@ ILLUMISE: Fluctuating -> Fast
 
 MOVE CHANGES:
 Crabhammer: Gains 10% chance to lower Defense.
+Shadow Punch: Base power raised from 60 to 90.
+
 Fury Cutter: Now reaches maximum power on its 5th use at 640 (was 160 at 3rd use).
 Dark Void: Has 100% accuracy (up from 50%) but only hits a single target. Can be used by species other than Darkrai.
 

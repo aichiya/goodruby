@@ -55,16 +55,48 @@ Route119_WeatherInstitute_2F_EventScript_163D45:: @ 8163D45
 
 Route119_WeatherInstitute_2F_EventScript_163D7A:: @ 8163D7A
 	msgbox Route119_WeatherInstitute_2F_Text_19F1CF, 4
-	getpartysize
-	compare RESULT, 6
-	goto_if_eq Route119_WeatherInstitute_2F_EventScript_163DB4
+    getpartysize
+    copyvar VAR_SPECIAL_4, RESULT
+    bufferspeciesname 0, SPECIES_CASTFORM
+	givemon SPECIES_CASTFORM, 30, ITEM_MYSTIC_WATER, 0x0, 0x0, 0
+    compare RESULT, 0
+    goto_if_eq Route119_WeatherInstitute_2F_EventScript_GiveCastformParty
+    compare RESULT, 1
+    goto_if_eq Route119_WeatherInstitute_2F_EventScript_GiveCastformPC
+    release
+    end
+
+Route119_WeatherInstitute_2F_EventScript_GiveCastformParty::
+    call Route119_WeatherInstitute_2F_EventScript_CastformFanfare
+    msgbox CommonText_NicknameRecievedPokemon, MSGBOX_YESNO
+    compare RESULT, NO
+    goto_if_eq Route119_WeatherInstitute_2F_EventScript_CastformEnd
+    call Common_EventScript_NameRecievedPartyMon
+    goto Route119_WeatherInstitute_2F_EventScript_CastformEnd
+
+Route119_WeatherInstitute_2F_EventScript_GiveCastformPC::
+    call Route119_WeatherInstitute_2F_EventScript_CastformFanfare
+    msgbox CommonText_NicknameRecievedPokemon, MSGBOX_YESNO
+    bufferspeciesname 1, SPECIES_CASTFORM
+    compare RESULT, NO
+    goto_if_eq Route119_WeatherInstitute_2F_EventScript_SendCastformToPC
+    call Common_EventScript_NameReceivedBoxMon
+    goto Route119_WeatherInstitute_2F_EventScript_SendCastformToPC
+
+Route119_WeatherInstitute_2F_EventScript_SendCastformToPC::
+    call Common_EventScript_TransferredToPC
+    goto Route119_WeatherInstitute_2F_EventScript_CastformEnd
+
+Route119_WeatherInstitute_2F_EventScript_CastformFanfare::
 	playfanfare MUS_FANFA4
 	message Route119_WeatherInstitute_2F_Text_19F267
 	waitfanfare
 	waitmessage
-	givemon SPECIES_CASTFORM, 30, ITEM_MYSTIC_WATER, 0x0, 0x0, 0
+	return
+
+Route119_WeatherInstitute_2F_EventScript_CastformEnd::
+    msgbox Route119_WeatherInstitute_2F_Text_19F27D, 4
 	setflag FLAG_RECEIVED_CASTFORM
-	msgbox Route119_WeatherInstitute_2F_Text_19F27D, 4
 	release
 	end
 

@@ -60,7 +60,7 @@ Route119_WeatherInstitute_2F_Text_19F267:: @ 819F267
 	.string "{PLAYER} received Castform!$"
 
 Route119_WeatherInstitute_2F_Text_19F27D:: @ 819F27D
-	.string "That POKéMON changes shape according\n"
+	.string "That Pokémon changes shape according\n"
 	.string "to the weather conditions.\p"
 	.string "There're plenty of them in the\n"
 	.string "Institute - go ahead and take it.$"
