@@ -81,18 +81,18 @@ const struct WildPokemonInfo MeteorFalls_B1F_2R_LandMonsInfo = {10, MeteorFalls_
 
 const struct WildPokemon RusturfTunnel_LandMons [] =
 {
-    {9, 10, SPECIES_WHISMUR},
-    {9, 10, SPECIES_WHISMUR},
-    {9, 10, SPECIES_WHISMUR},
-    {9, 10, SPECIES_WHISMUR},
-    {9, 10, SPECIES_CHINGLING},
-    {9, 10, SPECIES_DROWZEE},
-    {9, 10, SPECIES_CHINGLING},
-    {9, 10, SPECIES_DROWZEE},
-    {9, 10, SPECIES_DUNSPARCE},
-    {9, 10, SPECIES_DROWZEE},
-    {9, 10, SPECIES_DUNSPARCE},
-    {9, 10, SPECIES_DROWZEE},
+    {9, 10, SPECIES_WHISMUR}, //20%
+    {9, 10, SPECIES_WHISMUR}, //20%
+    {9, 10, SPECIES_WHISMUR}, //10%
+    {9, 10, SPECIES_TYROGUE}, //10%
+    {9, 10, SPECIES_CHINGLING}, //10%
+    {9, 10, SPECIES_DROWZEE}, //10%
+    {9, 10, SPECIES_CHINGLING}, //5%
+    {9, 10, SPECIES_TYROGUE}, //5%
+    {9, 10, SPECIES_DUNSPARCE}, //4%
+    {9, 10, SPECIES_DROWZEE}, //4%
+    {9, 10, SPECIES_DUNSPARCE}, //1%
+    {9, 10, SPECIES_DROWZEE}, //1%
 };
 const struct WildPokemonInfo RusturfTunnel_LandMonsInfo = {10, RusturfTunnel_LandMons};
 

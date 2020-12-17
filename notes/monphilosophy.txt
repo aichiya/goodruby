@@ -21,6 +21,21 @@ Most should be at least usable there, though.
  // This is horrible, and as such Crabhammer has been changed to work with Sheer Force.
  // It's also technically a Crawdaunt buff, but the main reason is just so Kingler will be using Crabhammer.
 
+#236 Tyrogue, #106 Hitmonlee, #107 Hitmonchan, #237 Hitmontop
+ // Speed Boost Hitmonchan is a somewhat bonkers change, obviously.
+ // To explain it: first off, Hitmonchan really sucks.
+ // It's the middle child of the Hitmons with respect to every stat...
+ // ...but having a balanced spread with 455 BST is not a good thing.
+ // To make matters worse, its one viable ability is Iron Fist.
+ // This is not a great ability; it's basically Reckless but generally worse.
+ // Hitmonlee has two niches: huge hits with Reckless, and zooming with Unburden.
+ // Speed Boost basically lets Hitmonchan crib and improve on the latter.
+ // It's still somewhat frail, so getting sweeps with it is probably inconsistent.
+ // I will be doing a test run with one to see how it goes in practice.
+ // Flavor-wise, it's a half fit. Hitmonchan is a notoriously fast fighter.
+ // Unfortunately, it's not an endurance fighter.
+ // An ability that gave extra Speed on only the first turn would fit it best, I think.
+
 #155 Cyndaquil, #156 Quilava, #157 Typhlosion
  // This is probably one of the weirder mon tweaks.
  // This is admittedly inspired heavily by the Touhoumon 1.8 puppet Yuki, which has a similar build.

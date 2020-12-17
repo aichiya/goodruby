@@ -328,7 +328,7 @@ const u16 gDonphanEvoMoves[] = {
 };
 
 const u16 gHitmontopEvoMoves[] = {
-	MOVE_ROLLING_KICK,
+	MOVE_TRIPLE_KICK,
 	0,
 };
 

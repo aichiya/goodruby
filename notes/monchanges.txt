@@ -159,7 +159,11 @@ IN GENERAL:
  * Now learns Overheat by TM.
 
 #236 Tyrogue, #106 Hitmonlee, #107 Hitmonchan, #237 Hitmontop
- * Hitmonchan learns Drain Punch by relearner.
+ * Tyrogue's base stats changed: 35/35/35/35/35/35 (210) -> 35/55/55/35/35/35 (250).
+ * Hitonchan's Hidden Ability Inner Focus replaced with Speed Boost.
+ * Tyrogue now learns Focus Energy, Rock Smash, and Meditate by level.
+ * Hitmontop now learns Sucker Punch by level.
+ * Level-up movepools significantly adjusted.
 
 #440 Happiny, #113 Chansey, #242 Blissey
  * Chansey and Blissey now learn Body Slam by level.
@@ -559,6 +563,8 @@ ILLUMISE: Fluctuating -> Fast
 MOVE CHANGES:
 Crabhammer: Gains 10% chance to lower Defense.
 Shadow Punch: Base power raised from 60 to 90.
+Mega Punch: Base power raised from 80 to 120. PP lowered from 20 to 10. (Accuracy remains at 85%).
+Mega Kick: Base power raised from 120 to 130. Accuracy raised from 75% to 90%. PP raised from 5 to 10. Now inflicts 50% recoil if it misses.
 
 Fury Cutter: Now reaches maximum power on its 5th use at 640 (was 160 at 3rd use).
 Dark Void: Has 100% accuracy (up from 50%) but only hits a single target. Can be used by species other than Darkrai.
@@ -574,4 +580,5 @@ Forecast: When using certain moves, changes the weather before attacking.
  * Castform will transform with the weather before attacking.
  * The weather changes occur even if the Pokemon with Forecast is not Castform.
 
-Sand Veil: Pokemon with this ability do not take damage from Sandstorm, regardless of type.
+Sand Stream: Pokemon with this ability do not take damage from Sandstorm, regardless of type.
+Snow Warning: Pokemon with this ability do not take damage from Hail, regardless of type.

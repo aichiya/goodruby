@@ -72,10 +72,10 @@ const struct BattleMove gBattleMoves[] = {
 
     [MOVE_MEGA_PUNCH] = {
         .effect = EFFECT_HIT,
-        .power = 80,
+        .power = 120,
         .type = TYPE_NORMAL,
         .accuracy = 85,
-        .pp = 20,
+        .pp = 10,
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
@@ -331,11 +331,11 @@ const struct BattleMove gBattleMoves[] = {
     },
 
     [MOVE_MEGA_KICK] = {
-        .effect = EFFECT_HIT,
-        .power = 120,
+        .effect = EFFECT_RECOIL_IF_MISS,
+        .power = 130,
         .type = TYPE_NORMAL,
-        .accuracy = 75,
-        .pp = 5,
+        .accuracy = 90,
+        .pp = 10,
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,

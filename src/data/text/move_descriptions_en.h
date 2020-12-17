@@ -95,8 +95,8 @@ static const u8 MoveDescription_DoubleKick[] = _(
     "that strikes the foe twice.");
 
 static const u8 MoveDescription_MegaKick[] = _(
-    "An extremely powerful kick\n"
-    "with intense force.");
+    "A powerful kick. May\n"
+    "miss and hurt the kicker.");
 
 static const u8 MoveDescription_JumpKick[] = _(
     "A strong jumping kick. May\n"

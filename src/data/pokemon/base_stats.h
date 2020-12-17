@@ -3644,7 +3644,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_INNER_FOCUS,
+		.hiddenAbility = ABILITY_SPEED_BOOST,
     },
 
     [SPECIES_LICKITUNG] =
@@ -8002,8 +8002,8 @@ const struct BaseStats gBaseStats[] =
     [SPECIES_TYROGUE] =
     {
         .baseHP        = 35,
-        .baseAttack    = 35,
-        .baseDefense   = 35,
+        .baseAttack    = 55,
+        .baseDefense   = 55,
         .baseSpeed     = 35,
         .baseSpAttack  = 35,
         .baseSpDefense = 35,
