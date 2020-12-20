@@ -44,7 +44,7 @@ Route109_EventScript_14F548:: @ 814F548
 	waitmovement 0
 	addobject 4
 	clearflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD
-	setobjectxyperm 2, 12, 8
+	setobjectxyperm 2, 20, 8
 	addobject 2
 	setobjectpriority 2, MAP_DEWFORD_TOWN, 0
 	applymovement 2, Route109_Movement_14F67D

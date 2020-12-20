@@ -5,10 +5,9 @@ RustboroCity_House3_Text_185584:: @ 8185584
 	.string "originality, yes, that's it!$"
 
 RustboroCity_House3_Text_1855FA:: @ 81855FA
-	.string "But giving the name Pekachu to a\n"
-	.string "Pikachu? It seems pointless.\p"
-	.string "I suppose it is good to use a name\n"
-	.string "that's easy to understand, but...$"
+	.string "But giving the name Jeff to all\n"
+	.string "of your Pikachu? It makes no sense.\p"
+	.string "How do you tell them apart?$"
 
 RustboroCity_House3_Text_18567D:: @ 818567D
-	.string "PEKACHU: Peka!$"
+	.string "JEFF: Peka!$"

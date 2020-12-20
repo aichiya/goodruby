@@ -8,7 +8,9 @@ RustboroCity_Mart_Text_184CD8:: @ 8184CD8
 	.string "My Pokémon evolved.\n"
 	.string "It has a lot of HP now.\p"
 	.string "I should buy Super Potions for it\n"
-	.string "instead of ordinary Potions.$"
+	.string "instead of ordinary Potions.\p"
+    .string "But, they won't sell any Super Potions\n"
+    .string "unless you have a Gym Badge.$"
 
 RustboroCity_Mart_Text_184D43:: @ 8184D43
 	.string "I'm getting an Escape Rope just in\n"

@@ -127,6 +127,7 @@ gStdScripts_End::
 	.include "data/maps/DewfordTown_Gym/scripts.inc"
 	.include "data/maps/DewfordTown_Hall/scripts.inc"
 	.include "data/maps/DewfordTown_House2/scripts.inc"
+	.include "data/maps/DewfordTown_Mart/scripts.inc"
 	.include "data/maps/LavaridgeTown_HerbShop/scripts.inc"
 	.include "data/maps/LavaridgeTown_Gym_1F/scripts.inc"
 	.include "data/maps/LavaridgeTown_Gym_B1F/scripts.inc"
@@ -687,6 +688,7 @@ EventScript_15F573:
 	.include "data/maps/DewfordTown_Gym/text.inc"
 	.include "data/maps/DewfordTown_Hall/text.inc"
 	.include "data/maps/DewfordTown_House2/text.inc"
+	.include "data/maps/DewfordTown_Mart/text.inc"
 	.include "data/maps/LavaridgeTown_HerbShop/text.inc"
 	.include "data/maps/LavaridgeTown_Gym_1F/text.inc"
 	.include "data/maps/LavaridgeTown_House/text.inc"
@@ -4986,3 +4988,237 @@ Common_EventScript_NameRecievedPartyMon::
     lock
     faceplayer
 	return
+
+Common_EventScript_StandardMart::
+	lock
+	faceplayer
+	message OldaleTown_Mart_Text_1A0BE4
+	waitmessage
+	goto_if_unset FLAG_ADVENTURE_STARTED, OldaleTown_Mart_EventScript_152FA8
+    special GetBadgeCount
+    switch RESULT
+    case 0, Common_EventScript_StandardMart0Badges
+    case 1, Common_EventScript_StandardMart1Badge
+    case 2, Common_EventScript_StandardMart2Badges
+    case 3, Common_EventScript_StandardMart3Badges
+    case 4, Common_EventScript_StandardMart4Badges
+    case 5, Common_EventScript_StandardMart5Badges
+    case 6, Common_EventScript_StandardMart6Badges
+    case 7, Common_EventScript_StandardMart7Badges
+    case 8, Common_EventScript_StandardMart8Badges
+	pokemart StandardMartItems0Badges
+	msgbox OldaleTown_Mart_Text_1A0C02, 4
+	release
+	end
+
+Common_EventScript_StandardMartPreDex::
+	pokemart StandardMartItemsPreDex
+	msgbox OldaleTown_Mart_Text_1A0C02, 4
+	release
+	end
+
+Common_EventScript_StandardMart0Badges::
+	pokemart StandardMartItems0Badges
+	msgbox OldaleTown_Mart_Text_1A0C02, 4
+	release
+	end
+
+Common_EventScript_StandardMart1Badge::
+	pokemart StandardMartItems1Badge
+	msgbox OldaleTown_Mart_Text_1A0C02, 4
+	release
+	end
+
+Common_EventScript_StandardMart2Badges::
+	pokemart StandardMartItems2Badges
+	msgbox OldaleTown_Mart_Text_1A0C02, 4
+	release
+	end
+
+Common_EventScript_StandardMart3Badges::
+	pokemart StandardMartItems3Badges
+	msgbox OldaleTown_Mart_Text_1A0C02, 4
+	release
+	end
+
+Common_EventScript_StandardMart4Badges::
+	pokemart StandardMartItems4Badges
+	msgbox OldaleTown_Mart_Text_1A0C02, 4
+	release
+	end
+
+Common_EventScript_StandardMart5Badges::
+	pokemart StandardMartItems5Badges
+	msgbox OldaleTown_Mart_Text_1A0C02, 4
+	release
+	end
+
+Common_EventScript_StandardMart6Badges::
+	pokemart StandardMartItems6Badges
+	msgbox OldaleTown_Mart_Text_1A0C02, 4
+	release
+	end
+
+Common_EventScript_StandardMart7Badges::
+	pokemart StandardMartItems7Badges
+	msgbox OldaleTown_Mart_Text_1A0C02, 4
+	release
+	end
+
+Common_EventScript_StandardMart8Badges::
+	pokemart StandardMartItems8Badges
+	msgbox OldaleTown_Mart_Text_1A0C02, 4
+	release
+	end
+
+StandardMartItemsPreDex::
+	.2byte ITEM_POTION
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_AWAKENING
+	.2byte ITEM_NONE
+
+StandardMartItems0Badges::
+	.2byte ITEM_POKE_BALL
+	.2byte ITEM_POTION
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_AWAKENING
+	.2byte ITEM_NONE
+
+StandardMartItems1Badge::
+	.2byte ITEM_POKE_BALL
+	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_POTION
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_AWAKENING
+	.2byte ITEM_BURN_HEAL
+	.2byte ITEM_ICE_HEAL
+	.2byte ITEM_ESCAPE_ROPE
+	.2byte ITEM_REPEL
+	.2byte ITEM_NONE
+
+StandardMartItems2Badges::
+	.2byte ITEM_GREAT_BALL
+	.2byte ITEM_POKE_BALL
+	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_POTION
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_AWAKENING
+	.2byte ITEM_BURN_HEAL
+	.2byte ITEM_ICE_HEAL
+	.2byte ITEM_ESCAPE_ROPE
+	.2byte ITEM_REPEL
+	.2byte ITEM_NONE
+
+StandardMartItems3Badges::
+	.2byte ITEM_GREAT_BALL
+	.2byte ITEM_POKE_BALL
+	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_POTION
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_AWAKENING
+	.2byte ITEM_BURN_HEAL
+	.2byte ITEM_ICE_HEAL
+	.2byte ITEM_ESCAPE_ROPE
+	.2byte ITEM_SUPER_REPEL
+	.2byte ITEM_REPEL
+	.2byte ITEM_NONE
+
+StandardMartItems4Badges::
+	.2byte ITEM_GREAT_BALL
+	.2byte ITEM_POKE_BALL
+	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_POTION
+    .2byte ITEM_FULL_HEAL
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_AWAKENING
+	.2byte ITEM_BURN_HEAL
+	.2byte ITEM_ICE_HEAL
+	.2byte ITEM_ESCAPE_ROPE
+	.2byte ITEM_SUPER_REPEL
+	.2byte ITEM_REPEL
+	.2byte ITEM_NONE
+
+StandardMartItems5Badges::
+	.2byte ITEM_ULTRA_BALL
+	.2byte ITEM_GREAT_BALL
+	.2byte ITEM_POKE_BALL
+	.2byte ITEM_HYPER_POTION
+	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_POTION
+    .2byte ITEM_FULL_HEAL
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_AWAKENING
+	.2byte ITEM_BURN_HEAL
+	.2byte ITEM_ICE_HEAL
+	.2byte ITEM_ESCAPE_ROPE
+	.2byte ITEM_MAX_REPEL
+	.2byte ITEM_SUPER_REPEL
+	.2byte ITEM_REPEL
+	.2byte ITEM_NONE
+
+StandardMartItems6Badges::
+	.2byte ITEM_ULTRA_BALL
+	.2byte ITEM_GREAT_BALL
+	.2byte ITEM_POKE_BALL
+	.2byte ITEM_HYPER_POTION
+	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_POTION
+    .2byte ITEM_REVIVE
+    .2byte ITEM_FULL_HEAL
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_AWAKENING
+	.2byte ITEM_BURN_HEAL
+	.2byte ITEM_ICE_HEAL
+	.2byte ITEM_ESCAPE_ROPE
+	.2byte ITEM_SUPER_REPEL
+	.2byte ITEM_REPEL
+	.2byte ITEM_NONE
+
+StandardMartItems7Badges::
+	.2byte ITEM_ULTRA_BALL
+	.2byte ITEM_GREAT_BALL
+	.2byte ITEM_POKE_BALL
+    .2byte ITEM_MAX_POTION
+	.2byte ITEM_HYPER_POTION
+	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_POTION
+    .2byte ITEM_REVIVE
+    .2byte ITEM_FULL_HEAL
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_AWAKENING
+	.2byte ITEM_BURN_HEAL
+	.2byte ITEM_ICE_HEAL
+	.2byte ITEM_ESCAPE_ROPE
+	.2byte ITEM_SUPER_REPEL
+	.2byte ITEM_REPEL
+	.2byte ITEM_NONE
+
+StandardMartItems8Badges::
+	.2byte ITEM_ULTRA_BALL
+	.2byte ITEM_GREAT_BALL
+	.2byte ITEM_POKE_BALL
+    .2byte ITEM_FULL_RESTORE
+    .2byte ITEM_MAX_POTION
+	.2byte ITEM_HYPER_POTION
+	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_POTION
+    .2byte ITEM_REVIVE
+    .2byte ITEM_FULL_HEAL
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_AWAKENING
+	.2byte ITEM_BURN_HEAL
+	.2byte ITEM_ICE_HEAL
+	.2byte ITEM_ESCAPE_ROPE
+	.2byte ITEM_SUPER_REPEL
+	.2byte ITEM_REPEL
+	.2byte ITEM_NONE

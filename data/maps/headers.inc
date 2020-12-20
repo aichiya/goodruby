@@ -70,6 +70,7 @@
 	.include "data/maps/DewfordTown_Gym/header.inc"
 	.include "data/maps/DewfordTown_Hall/header.inc"
 	.include "data/maps/DewfordTown_House2/header.inc"
+	.include "data/maps/DewfordTown_Mart/header.inc"
 	.include "data/maps/LavaridgeTown_HerbShop/header.inc"
 	.include "data/maps/LavaridgeTown_Gym_1F/header.inc"
 	.include "data/maps/LavaridgeTown_Gym_B1F/header.inc"

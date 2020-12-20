@@ -1,5 +1,5 @@
 DewfordTown_MapConnectionsList:: @ 8308650
-	connection up, -60, MAP_ROUTE106
+	connection up, -52, MAP_ROUTE106
 	connection right, 0, MAP_ROUTE107
 
 DewfordTown_MapConnections:: @ 8308668

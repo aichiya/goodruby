@@ -6,7 +6,7 @@ DewfordTown_MapBlockdata:: @ 8291A34
 
 	.align 2
 DewfordTown_Layout:: @ 8291D54
-	.4byte 0x14
+	.4byte 0x1C
 	.4byte 0x14
 	.4byte DewfordTown_MapBorder
 	.4byte DewfordTown_MapBlockdata

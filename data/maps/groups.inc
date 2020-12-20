@@ -82,6 +82,7 @@ gMapGroup3:: @ 8308060
 	.4byte DewfordTown_Gym
 	.4byte DewfordTown_Hall
 	.4byte DewfordTown_House2
+	.4byte DewfordTown_Mart
 
 	.align 2
 gMapGroup4:: @ 8308078

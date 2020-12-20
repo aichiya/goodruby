@@ -18,8 +18,8 @@ GraniteCave_B2F_MapWarps:: @ 838C0C4
 	warp_def 29, 5, 3, 0, MAP_GRANITE_CAVE_B3F
 
 GraniteCave_B2F_MapBGEvents:: @ 838C0EC
-	bg_hidden_item_event 28, 6, 3, ITEM_EVERSTONE, FLAG_HIDDEN_ITEM_30
-	bg_hidden_item_event 15, 11, 3, ITEM_EVERSTONE, FLAG_HIDDEN_ITEM_31
+	bg_hidden_item_event 28, 6, 3, ITEM_HEART_SCALE, FLAG_HIDDEN_ITEM_30
+	bg_hidden_item_event 15, 11, 3, ITEM_HEART_SCALE, FLAG_HIDDEN_ITEM_31
 
 GraniteCave_B2F_MapEvents:: @ 838C104
 	map_events GraniteCave_B2F_EventObjects, GraniteCave_B2F_MapWarps, 0x0, GraniteCave_B2F_MapBGEvents

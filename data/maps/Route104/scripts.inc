@@ -137,7 +137,7 @@ Route104_EventScript_14EFD5:: @ 814EFD5
 	showobjectat 255, MAP_DEWFORD_TOWN
 	applymovement 255, Route104_Movement_14F168
 	waitmovement 0
-	setobjectxyperm 2, 12, 8
+	setobjectxyperm 2, 20, 8
 	addobject 2
 	setobjectpriority 2, MAP_DEWFORD_TOWN, 0
 	clearflag FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN

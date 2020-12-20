@@ -109,6 +109,8 @@ u8 GetBadgeCount(void)
     for (badgeFlag = FLAG_BADGE01_GET; badgeFlag <= FLAG_BADGE08_GET; badgeFlag++)
         if (FlagGet(badgeFlag))
             badgeCount++;
+    
+    gSpecialVar_Result = badgeCount;
 
     return badgeCount;
 }

@@ -85,6 +85,7 @@
 	.include "data/maps/DewfordTown_Gym/events.inc"
 	.include "data/maps/DewfordTown_Hall/events.inc"
 	.include "data/maps/DewfordTown_House2/events.inc"
+	.include "data/maps/DewfordTown_Mart/events.inc"
 	.include "data/maps/LavaridgeTown_HerbShop/events.inc"
 	.include "data/maps/LavaridgeTown_Gym_1F/events.inc"
 	.include "data/maps/LavaridgeTown_Gym_B1F/events.inc"

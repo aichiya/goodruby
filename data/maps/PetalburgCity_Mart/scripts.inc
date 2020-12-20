@@ -14,17 +14,7 @@ PetalburgCity_Mart_EventScript_1552B0:: @ 81552B0
 
 	.align 2
 PetalburgCity_Mart_Items1:: @ 81552D0
-	.2byte ITEM_POKE_BALL
     .2byte ITEM_HEAL_BALL
-	.2byte ITEM_POTION
-	.2byte ITEM_ANTIDOTE
-	.2byte ITEM_PARALYZE_HEAL
-	.2byte ITEM_AWAKENING
-	.2byte ITEM_ESCAPE_ROPE
-	.2byte ITEM_REPEL
-	.2byte ITEM_X_SPEED
-	.2byte ITEM_X_ATTACK
-	.2byte ITEM_X_DEFEND
 	.2byte ITEM_ORANGE_MAIL
 	.2byte ITEM_NONE
 	release
@@ -38,19 +28,7 @@ PetalburgCity_Mart_EventScript_1552EA:: @ 81552EA
 
 	.align 2
 PetalburgCity_Mart_Items2:: @ 81552FC
-	.2byte ITEM_POKE_BALL
-	.2byte ITEM_GREAT_BALL
     .2byte ITEM_HEAL_BALL
-	.2byte ITEM_POTION
-	.2byte ITEM_SUPER_POTION
-	.2byte ITEM_ANTIDOTE
-	.2byte ITEM_PARALYZE_HEAL
-	.2byte ITEM_AWAKENING
-	.2byte ITEM_ESCAPE_ROPE
-	.2byte ITEM_REPEL
-	.2byte ITEM_X_SPEED
-	.2byte ITEM_X_ATTACK
-	.2byte ITEM_X_DEFEND
 	.2byte ITEM_ORANGE_MAIL
 	.2byte ITEM_NONE
 	release

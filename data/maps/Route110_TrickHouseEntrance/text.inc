@@ -44,7 +44,7 @@ Route110_TrickHouseEntrance_Text_19BCA8:: @ 819BCA8
 Route110_TrickHouseEntrance_Text_19BCFD:: @ 819BCFD
 	.string "Behold!\p"
 	.string "For I am the greatest living mystery\n"
-	.string "of a man in all of HOENN!\l"
+	.string "of a man in all of Hoenn!\l"
 	.string "They call me...\p"
 	.string "The Trick Master!\n"
 	.string "Wahahaha! Glad to meet you!$"

@@ -360,3 +360,4 @@ gSpecials::
     def_special BufferTMMoveString
     def_special CountLegendariesSeen
     def_special ChangeBoxPokemonNickname
+    def_special GetBadgeCount
