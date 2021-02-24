@@ -13,17 +13,10 @@ VerdanturfTown_Mart_EventScript_153EBC:: @ 8153EBC
 
 	.align 2
 VerdanturfTown_Mart_Items:: @ 8153ED4
-	.2byte ITEM_GREAT_BALL
 	.2byte ITEM_NEST_BALL
-	.2byte ITEM_SUPER_POTION
-	.2byte ITEM_ANTIDOTE
-	.2byte ITEM_PARALYZE_HEAL
-	.2byte ITEM_AWAKENING
-	.2byte ITEM_BURN_HEAL
-	.2byte ITEM_ICE_HEAL
-	.2byte ITEM_REPEL
-	.2byte ITEM_X_SPECIAL
 	.2byte ITEM_FLUFFY_TAIL
+	.2byte ITEM_GLITTER_MAIL
+	.2byte ITEM_X_DEFEND
 	.2byte ITEM_NONE
 	release
 	end

@@ -15961,18 +15961,6 @@ Move_BURN_UP:
 	end
 
 
-Move_LAST_RESORT:
-Move_FELL_STINGER:
-Move_FINAL_GAMBIT:
-Move_CIRCLE_THROW:
-Move_ROCK_WRECKER:
-Move_HORSEPOWER:
-Move_SACRED_SWORD:
-Move_DARK_VOID:
-    goto Move_TACKLE
-    end
-
-
 Move_SUPERPOWER:
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_BATTLER_TARGET
@@ -16062,4 +16050,85 @@ General_AuraFlare:
 	blendoff
 	end
 
+
+Move_ROCK_WRECKER:
+	loadspritegfx ANIM_TAG_EXPLOSION
+	loadspritegfx ANIM_TAG_ROCKS
+	loadspritegfx ANIM_TAG_IMPACT
+	monbg ANIM_BATTLER_DEF_PARTNER
+	setalpha 12, 8
+	createsprite gBattleAnimSpriteTemplate_83DB428, ANIM_BATTLER_ATTACKER, 2, 4, 1, 10, 1
+	createsprite gAncientPowerRockSpriteTemplate, ANIM_BATTLER_ATTACKER, 2, 20, 32, -48, 50, 2
+	createsprite gAncientPowerRockSpriteTemplate, ANIM_BATTLER_ATTACKER, 2, 0, 32, -38, 25, 5
+	createsprite gAncientPowerRockSpriteTemplate, ANIM_BATTLER_ATTACKER, 2, 32, 32, -28, 40, 3
+	createsprite gAncientPowerRockSpriteTemplate, ANIM_BATTLER_ATTACKER, 2, -20, 32, -48, 50, 2
+	createsprite gAncientPowerRockSpriteTemplate, ANIM_BATTLER_ATTACKER, 2, 20, 32, -28, 60, 1
+	createsprite gAncientPowerRockSpriteTemplate, ANIM_BATTLER_ATTACKER, 2, 0, 32, -28, 30, 4
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BATTLER_ATTACKER, 1, 0, 30, 1
+	playsewithpan SE_W082, SOUND_PAN_ATTACKER
+	delay 10
+	createsprite gAncientPowerRockSpriteTemplate, ANIM_BATTLER_ATTACKER, 2, 15, 32, -48, 25, 5
+	createsprite gAncientPowerRockSpriteTemplate, ANIM_BATTLER_ATTACKER, 2, -10, 32, -42, 30, 4
+	delay 10
+	createsprite gAncientPowerRockSpriteTemplate, ANIM_BATTLER_ATTACKER, 2, 0, 32, -42, 25, 5
+	createsprite gAncientPowerRockSpriteTemplate, ANIM_BATTLER_ATTACKER, 2, -25, 32, -48, 30, 4
+	waitforvisualfinish
+    
+	playsewithpan SE_W207, SOUND_PAN_ATTACKER
+	createsprite gBattleAnimSpriteTemplate_RockWrecker1, ANIM_BATTLER_TARGET, 3, 10, 0, 0, 0, 20, 0
+	waitforvisualfinish
+    
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BATTLER_TARGET, 4, 0, 16, 1
+	createsprite gBattleAnimSpriteTemplate_83D7828, ANIM_BATTLER_TARGET, 4, 6, 5, 1, 0
+	playsewithpan SE_W120, SOUND_PAN_TARGET
+	createsprite gBattleAnimSpriteTemplate_83DAC64, ANIM_BATTLER_ATTACKER, 2, 0, 0, 20, 24, 14, 2
+	createsprite gBattleAnimSpriteTemplate_83DAC64, ANIM_BATTLER_ATTACKER, 2, 5, 0, -20, 24, 14, 1
+	createsprite gBattleAnimSpriteTemplate_83DAC64, ANIM_BATTLER_ATTACKER, 2, 0, 5, 20, -24, 14, 2
+	createsprite gBattleAnimSpriteTemplate_83DAC64, ANIM_BATTLER_ATTACKER, 2, -5, 0, -20, -24, 14, 2
+	createsprite gBattleAnimSpriteTemplate_83DAC64, ANIM_BATTLER_ATTACKER, 2, 0, -5, 30, 18, 8, 2
+	createsprite gBattleAnimSpriteTemplate_83DAC64, ANIM_BATTLER_ATTACKER, 2, 0, 0, 30, -18, 8, 2
+	createsprite gBattleAnimSpriteTemplate_83DAC64, ANIM_BATTLER_ATTACKER, 2, 0, 0, -30, 18, 8, 2
+	createsprite gBattleAnimSpriteTemplate_83DAC64, ANIM_BATTLER_ATTACKER, 2, 0, 0, -30, -18, 8, 2
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BATTLER_TARGET, 0, 3, 7, 1
+	waitforvisualfinish
+	clearmonbg ANIM_BATTLER_DEF_PARTNER
+	blendoff
+	end
+
+Move_FELL_STINGER:
+	loadspritegfx ANIM_TAG_NEEDLE
+	loadspritegfx ANIM_TAG_IMPACT
+	loadspritegfx ANIM_TAG_POISON_BUBBLE
+	loadspritegfx ANIM_TAG_LEER
+    
+    monbg ANIM_BATTLER_ATTACKER
+	monbgprio_28 0
+	setalpha 8, 8
+	playsewithpan SE_W043, SOUND_PAN_ATTACKER
+	createsprite gBattleAnimSpriteTemplate_84022B0, ANIM_BATTLER_ATTACKER, 2, 24, -12
+	createvisualtask AnimTask_ScaleMonAndRestore, 5, -5, -5, 10, ANIM_BATTLER_ATTACKER, 1
+	waitforvisualfinish
+    
+	playsewithpan SE_W013B, SOUND_PAN_ATTACKER
+	createsprite gLinearStingerSpriteTemplate, ANIM_BATTLER_TARGET, 2, 20, 0, -8, 0, 20
+	waitforvisualfinish
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_BATTLER_ATTACKER, 3, 0, 0, 1, 2
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BATTLER_TARGET, 2, 0, 5, 1
+	createsprite gBattleAnimSpriteTemplate_83DB3DC, ANIM_BATTLER_ATTACKER, 2, 31, 3, 1, rgb(31, 0, 0), 10, 0, 0
+	playsewithpan SE_W030, SOUND_PAN_TARGET
+	waitforvisualfinish
+	clearmonbg ANIM_BATTLER_ATTACKER
+	blendoff
+    delay 1
+	end
+
+
+Move_LAST_RESORT:
+Move_FINAL_GAMBIT:
+Move_CIRCLE_THROW:
+Move_HORSEPOWER:
+Move_SACRED_SWORD:
+Move_DARK_VOID:
+    goto Move_TACKLE
+    end
 

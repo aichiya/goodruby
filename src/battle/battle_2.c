@@ -4496,22 +4496,22 @@ void BattleBeginFirstTurn(void)
                 }
             }
         }
-        if (ewram160E6 == 0 && AbilityBattleEffects(0, 0, 0, 0xFF, 0) != 0)
+        if (ewram160E6 == 0 && AbilityBattleEffects(ABILITYEFFECT_ON_SWITCHIN, 0, 0, 0xFF, 0) != 0)
         {
             ewram160E6 = 1;
             return;
         }
         while (ewram16058 < gBattlersCount)
         {
-            if (AbilityBattleEffects(0, gBanksByTurnOrder[ewram16058], 0, 0, 0) != 0)
+            if (AbilityBattleEffects(ABILITYEFFECT_ON_SWITCHIN, gBanksByTurnOrder[ewram16058], 0, 0, 0) != 0)
                 r9++;
             ewram16058++;
             if (r9 != 0)
                 return;
         }
-        if (AbilityBattleEffects(9, 0, 0, 0, 0) != 0)
+        if (AbilityBattleEffects(ABILITYEFFECT_INTIMIDATE1, 0, 0, 0, 0) != 0)
             return;
-        if (AbilityBattleEffects(11, 0, 0, 0, 0) != 0)
+        if (AbilityBattleEffects(ABILITYEFFECT_TRACE, 0, 0, 0, 0) != 0)
             return;
         while (ewram160F9 < gBattlersCount)
         {
@@ -4664,7 +4664,7 @@ u8 CanRunFromBattle(void)
             return 2;
         }
     }
-    i = AbilityBattleEffects(15, gActiveBattler, ABILITY_MAGNET_PULL, 0, 0);
+    i = AbilityBattleEffects(ABILITYEFFECT_CHECK_FIELD_EXCEPT_BANK, gActiveBattler, ABILITY_MAGNET_PULL, 0, 0);
     if (i != 0 && (gBattleMons[gActiveBattler].type1 == 8 || gBattleMons[gActiveBattler].type2 == 8))
     {
         ewram16003 = i - 1;

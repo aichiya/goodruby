@@ -107,11 +107,11 @@ ROUTE 110 SOUTH: Rattata (20%), Electrike (20%), Houndour (15%), Gulpin (15%), P
 ROUTE 110 NORTH: Wingull (20%), Electrike (20%), Houndour (15%), Gulpin (15%), Plusle (10%), Minun (10%), Rattata (10%) (event: Voltorb)
 ROUTE 103 EAST: Rattata (20%), Mareep (20%), Zigzagoon (15%), Wingull (15%), Ledyba (15%), Hoppip (10%), Abra (5%)
 ROUTE 117: Rattata (20%), Oddish (20%), Mareep (20%), Roselia (10%), Volbeat (10%), Illumise (10%), Marill (5%), Mime Jr. (5%)
-ROUTE 111: Rattata (25%), Cacnea (25%), Machop (15%), Sandshrew (15%), Slugma (10%), Oddish (10%)
+ROUTE 111: Rattata (25%), Cacnea (25%), Machop (15%), Sandshrew (15%), Slugma (10%), Spoink (10%)
 GAME CORNER: Pikachu, Cubone, Clefairy, Eevee, Porygon
 GRANITE CAVE B4F: Zubat (25%), Nosepass (25%), Onix (10%), Krabby (10%), Seel (10%), Sableye (10%), Mawile (10%)
 NEW MAUVILLE: Voltorb (35%), Magnemite (35%), Shuppet (20%), Elekid (10%)
-ROUTE 112: Machop (30%), Numel (30%), Slugma (15%), Ponyta (15%), Tyrogue (10%)
+ROUTE 112: Machop (30%), Numel (30%), Slugma (15%), Ponyta (15%), Spoink (10%)
 PATH: Numel (20%), Grimer (20%), Koffing (20%), Slugma (10%), Torkoal (10%), Magby (10%), Machop (5%), Diglett (5%)
 ROUTE 113: Spinda (50%), Venonat (15%), Doduo (15%), Sandshrew (15%), Skarmory (5%)
 ROUTE 114: Lombre (20%), Nuzleaf (20%), Swablu (15%), Sunkern (15%), Zangoose (10%), Seviper (10%), Furret (5%), Misdreavus (5%)

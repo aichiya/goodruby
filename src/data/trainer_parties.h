@@ -4661,7 +4661,7 @@ const struct TrainerMonFullControl gTrainerParty_Wallace[] = {
 		.evs = {0, 252, 0, 252, 0, 0},
 		.nature = NATURE_ADAMANT,
 		.gender = MON_MALE,
-		.ball = ITEM_NET_BALL,
+		.ball = ITEM_LUXURY_BALL,
     },
     {
 	.iv = 12,
@@ -4680,7 +4680,7 @@ const struct TrainerMonFullControl gTrainerParty_Wallace[] = {
 	.level = 53,
 	.species = SPECIES_MILOTIC,
 	.heldItem = ITEM_LEFTOVERS,
-	.ability = 2, // Competitive
+	.ability = 1, // Competitive
 	.moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_TOXIC, MOVE_RECOVER},
 		.evs = {252, 0, 128, 0, 128, 0},
 		.nature = NATURE_MODEST,

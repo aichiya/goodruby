@@ -900,7 +900,7 @@ const struct WildPokemon Route111_AltLandMons [] =
     {15, 18, SPECIES_MACHOP},
     {15, 18, SPECIES_SANDSHREW},
     {15, 18, SPECIES_SLUGMA},
-    {15, 18, SPECIES_ODDISH},
+    {15, 18, SPECIES_SPOINK},
     {15, 18, SPECIES_RATTATA},
     {15, 18, SPECIES_CACNEA},
     {15, 18, SPECIES_MACHOP},
@@ -920,10 +920,10 @@ const struct WildPokemon Route112_LandMons [] =
     {16, 19, SPECIES_PONYTA},
     {16, 19, SPECIES_SLUGMA},
     {16, 19, SPECIES_PONYTA},
-    {16, 19, SPECIES_TYROGUE},
-    {16, 19, SPECIES_TYROGUE},
-    {16, 19, SPECIES_TYROGUE},
-    {16, 19, SPECIES_TYROGUE},
+    {16, 19, SPECIES_SPOINK},
+    {16, 19, SPECIES_SPOINK},
+    {16, 19, SPECIES_SPOINK},
+    {16, 19, SPECIES_SPOINK},
 };
 const struct WildPokemonInfo Route112_LandMonsInfo = {20, Route112_LandMons};
 

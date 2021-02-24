@@ -5704,11 +5704,13 @@ const u16 gTorkoalEggMoves[] = {
 
 const u16 gSpoinkEggMoves[] = {
     MOVE_AMNESIA,
+    MOVE_BRINE,
     MOVE_ENDURE,
     MOVE_EXTRASENSORY,
     MOVE_FUTURE_SIGHT,
     MOVE_LUCKY_CHANT,
     MOVE_MIRROR_COAT,
+    MOVE_RECYCLE,
     // Simple Beam
     MOVE_SKILL_SWAP,
     MOVE_SUBSTITUTE,
@@ -5720,12 +5722,14 @@ const u16 gSpoinkEggMoves[] = {
 
 const u16 gGrumpigEggMoves[] = {
     MOVE_AMNESIA,
+    MOVE_BRINE,
     MOVE_ENDURE,
     MOVE_EXTRASENSORY,
     MOVE_FUTURE_SIGHT,
     MOVE_LUCKY_CHANT,
     MOVE_MIRROR_COAT,
     // Simple Beam
+    MOVE_RECYCLE,
     MOVE_SKILL_SWAP,
     MOVE_SUBSTITUTE,
     MOVE_TRICK,

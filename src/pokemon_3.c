@@ -1331,12 +1331,6 @@ const u16 gHMMoves[] =
 
 bool32 IsHMMove2(u16 move)
 {
-    int i = 0;
-    while (gHMMoves[i] != 0xFFFF)
-    {
-        if (gHMMoves[i++] == move)
-            return TRUE;
-    }
     return FALSE;
 }
 

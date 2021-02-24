@@ -13,14 +13,8 @@ SootopolisCity_Mart_EventScript_15B21B:: @ 815B21B
 
 	.align 2
 SootopolisCity_Mart_Items:: @ 815B234
-	.2byte ITEM_ULTRA_BALL
-	.2byte ITEM_HYPER_POTION
-	.2byte ITEM_MAX_POTION
-	.2byte ITEM_FULL_HEAL
-	.2byte ITEM_REVIVE
-	.2byte ITEM_MAX_REPEL
-	.2byte ITEM_X_ATTACK
-	.2byte ITEM_X_DEFEND
+	.2byte ITEM_DIVE_BALL
+	.2byte ITEM_DUSK_BALL
 	.2byte ITEM_SHADOW_MAIL
 	.2byte ITEM_NONE
 	release

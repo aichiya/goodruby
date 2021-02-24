@@ -4015,14 +4015,6 @@ void StopTryingToTeachMove_806F6B4(u8 taskId)
 
 bool8 IsHMMove(u16 move)
 {
-    u8 i;
-
-    for (i = 0; i < NUM_HIDDEN_MACHINES; i++)
-    {
-        if (gTMHMMoves[NUM_TECHNICAL_MACHINES + i] == move)
-            return TRUE;
-    }
-
     return FALSE;
 }
 

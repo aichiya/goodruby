@@ -11911,16 +11911,16 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FIELD,
         .ability1 = ABILITY_THICK_FAT,
-        .ability2 = ABILITY_OWN_TEMPO,
+        .ability2 = ABILITY_GLUTTONY,
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_BLACK,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_GLUTTONY,
+		.hiddenAbility = ABILITY_UNAWARE,
     },
 
     [SPECIES_GRUMPIG] =
     {
-        .baseHP        = 80,
+        .baseHP        = 90,
         .baseAttack    = 45,
         .baseDefense   = 65,
         .baseSpeed     = 80,
@@ -11945,11 +11945,11 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FIELD,
         .ability1 = ABILITY_THICK_FAT,
-        .ability2 = ABILITY_OWN_TEMPO,
+        .ability2 = ABILITY_GLUTTONY,
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_PURPLE,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_GLUTTONY,
+		.hiddenAbility = ABILITY_UNAWARE,
     },
 
     [SPECIES_PLUSLE] =

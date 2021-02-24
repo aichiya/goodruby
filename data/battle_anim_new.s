@@ -275,3 +275,7 @@ gBattleAnimSpriteTemplate_Avalanche1::
 	.align 2
 gBattleAnimSpriteTemplate_AuraSphere::
 	spr_template 10303, 10303, gOamData_837DF94, gDummySpriteAnimTable, NULL, gSpriteAffineAnimTable_83DAEA4, InitAnimShadowBall
+
+	.align 2
+gBattleAnimSpriteTemplate_RockWrecker1::
+	spr_template 10058, 10058, gOamData_837DF34, gSpriteAnimTable_83930A4, NULL, gDummySpriteAffineAnimTable, TranslateAnimSpriteToTargetMonLocation

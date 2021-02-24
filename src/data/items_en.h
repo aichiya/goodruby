@@ -4298,7 +4298,7 @@ const struct Item gItems[] =
     {
         .name = _("SilverPowder"),
         .itemId = ITEM_SILVER_POWDER,
-        .price = 100,
+        .price = 9800,
         .holdEffect = HOLD_EFFECT_BUG_POWER,
         .holdEffectParam = 20,
         .description = gItemDescription_SilverPowder,
@@ -4507,7 +4507,7 @@ const struct Item gItems[] =
     {
         .name = _("Metal Coat"),
         .itemId = ITEM_METAL_COAT,
-        .price = 100,
+        .price = 9800,
         .holdEffect = HOLD_EFFECT_STEEL_POWER,
         .holdEffectParam = 20,
         .description = gItemDescription_MetalCoat,
@@ -4678,7 +4678,7 @@ const struct Item gItems[] =
     {
         .name = _("Magnet"),
         .itemId = ITEM_MAGNET,
-        .price = 100,
+        .price = 9800,
         .holdEffect = HOLD_EFFECT_ELECTRIC_POWER,
         .holdEffectParam = 20,
         .description = gItemDescription_Magnet,

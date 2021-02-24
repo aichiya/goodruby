@@ -160,12 +160,12 @@ const u16 gExeggutorEvoMoves[] = {
 };
 
 const u16 gHitmonleeEvoMoves[] = {
-	MOVE_DOUBLE_KICK,
+	MOVE_ROLLING_KICK,
 	0,
 };
 
 const u16 gHitmonchanEvoMoves[] = {
-	MOVE_COMET_PUNCH,
+	MOVE_MACH_PUNCH,
 	0,
 };
 

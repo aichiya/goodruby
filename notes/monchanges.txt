@@ -417,6 +417,16 @@ IN GENERAL:
  * Torkoal's Ability Drought is replaced with Shell Armor.
  * Torkoal's Hidden Ability Shell Armor is replaced with Drought.
 
+#325 Spoink, #326 Grumpig
+ * Spoink now evolves at level 26 instead of level 32.
+ * Grumpig's base stats changed: 80/45/65/90/110/80 (470) -> 90/45/65/90/110/80 (480).
+ * Entire line's Ability Own Tempo replaced with Gluttony.
+ * Entire line's Hidden Ability Gluttony replaced with Unaware.
+ * Level-up movepool adjusted.
+ * Entire line now learns Extrasensory, Shadow Ball, and Aura Sphere by level.
+ * Entire line no longer learns Psyshock or Payback by level.
+ * Now learns Brine and Recycle by breeding.
+
 #327 Spinda
  * Base stats changed: 60/60/60/60/60/60 (360) -> 70/70/70/70/70/70 (420).
  * Now learns Superpower and Overheat by TM.
