@@ -3230,15 +3230,15 @@ const struct BattleMove gBattleMoves[] = {
     },
 
     [MOVE_FUTURE_SIGHT] = {
-        .effect = EFFECT_FUTURE_SIGHT,
-        .power = 120,
+        .effect = EFFECT_SKULL_BASH,
+        .power = 130,
         .type = TYPE_PSYCHIC,
         .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
 		.moveClass = CLASS_SPECIAL,
     },
 
@@ -4595,7 +4595,7 @@ const struct BattleMove gBattleMoves[] = {
     },
 
     [MOVE_DOOM_DESIRE] = {
-        .effect = EFFECT_FUTURE_SIGHT,
+        .effect = EFFECT_SKULL_BASH,
         .power = 140,
         .type = TYPE_STEEL,
         .accuracy = 100,
@@ -4603,7 +4603,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
 		.moveClass = CLASS_SPECIAL,
     },
 

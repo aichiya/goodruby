@@ -515,7 +515,7 @@ static const u8 MoveDescription_Swift[] = _(
     "that never miss.");
 
 static const u8 MoveDescription_SkullBash[] = _(
-    "Tucks in the head, then\n"
+    "Raises Defense, then\n"
     "attacks on the next turn.");
 
 static const u8 MoveDescription_SpikeCannon[] = _(
@@ -987,8 +987,8 @@ static const u8 MoveDescription_ShadowBall[] = _(
     "lower the foe's Sp.Def.");
 
 static const u8 MoveDescription_FutureSight[] = _(
-    "Heightens inner power to\n"
-    "strike 2 turns later.");
+    "Raises Sp. Atk, then\n"
+    "attacks on the next turn.");
 
 static const u8 MoveDescription_RockSmash[] = _(
     "A rock-crushing attack\n"
@@ -1407,8 +1407,8 @@ static const u8 MoveDescription_WaterPulse[] = _(
     "waves. May confuse the foe.");
 
 static const u8 MoveDescription_DoomDesire[] = _(
-    "Summons strong sunlight to\n"
-    "attack 2 turns later.");
+    "Raises Sp. Atk, then\n"
+    "attacks on the next turn.");
 
 static const u8 MoveDescription_PsychoBoost[] = _(
     "Allows a full-power attack,\n"

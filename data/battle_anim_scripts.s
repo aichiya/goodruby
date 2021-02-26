@@ -4897,13 +4897,8 @@ Move_PSYCHIC: @ 81CDCCA
 	end
 
 Move_FUTURE_SIGHT: @ 81CDD2D
-	goto _81CDD3B
-_81CDD32:
-	waitforvisualfinish
-	delay 1
-	call BackgroundRestore
-	end
-_81CDD3B:
+	choosetwoturnanim _FutureSightTurn1, General_FutureSightHit
+_FutureSightTurn1:
 	monbg ANIM_BATTLER_ATK_PARTNER
 	playsewithpan SE_W060, SOUND_PAN_ATTACKER
 	call SetPsychicBackground
@@ -4914,23 +4909,10 @@ _81CDD3B:
 	waitforvisualfinish
 	clearmonbg ANIM_BATTLER_ATK_PARTNER
 	blendoff
-	goto _81CDD32
-
-Unknown_81CDD7A: @ 81CDD7A
-	monbg ANIM_BATTLER_DEF_PARTNER
-	playsewithpan SE_W060, SOUND_PAN_ATTACKER
-	call SetPsychicBackground
-	setalpha 8, 8
-	playsewithpan SE_W048, SOUND_PAN_TARGET
-	waitplaysewithpan SE_W048, SOUND_PAN_TARGET, 8
-	createvisualtask AnimTask_ShakeMon, 2, ANIM_BATTLER_TARGET, 4, 0, 15, 1
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -5, -5, 15, ANIM_BATTLER_TARGET, 1
 	waitforvisualfinish
-	createvisualtask AnimTask_ShakeMon, 2, ANIM_BATTLER_TARGET, 4, 0, 24, 1
-	waitforvisualfinish
-	clearmonbg ANIM_BATTLER_DEF_PARTNER
-	blendoff
-	goto _81CDD32
+	delay 1
+	call BackgroundRestore
+	end
 
 Move_THUNDER: @ 81CDDCE
 	loadspritegfx ANIM_TAG_LIGHTNING
@@ -9615,6 +9597,9 @@ Move_KNOCK_OFF: @ 81D523B
 	end
 
 Move_DOOM_DESIRE: @ 81D52CB
+	choosetwoturnanim _DoomDesireTurn1, General_DoomDesireHit
+    
+_DoomDesireTurn1:
 	createvisualtask sub_80E0EE8, 2
 	delay 1
 	monbg ANIM_BATTLER_ATK_PARTNER

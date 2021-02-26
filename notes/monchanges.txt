@@ -575,6 +575,8 @@ Crabhammer: Gains 10% chance to lower Defense.
 Shadow Punch: Base power raised from 60 to 90.
 Mega Punch: Base power raised from 80 to 120. PP lowered from 20 to 10. (Accuracy remains at 85%).
 Mega Kick: Base power raised from 120 to 130. Accuracy raised from 75% to 90%. PP raised from 5 to 10. Now inflicts 50% recoil if it misses.
+Future Sight: Is now a 2-turn move. User's SAtk increases on first turn, damage is dealt second turn. Base power raised to 130 from 120.
+Doom Desire: Is now a 2-turn move. User's SAtk increases on first turn, damage is dealt second turn.
 
 Fury Cutter: Now reaches maximum power on its 5th use at 640 (was 160 at 3rd use).
 Dark Void: Has 100% accuracy (up from 50%) but only hits a single target. Can be used by species other than Darkrai.

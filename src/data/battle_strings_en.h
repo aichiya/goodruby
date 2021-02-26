@@ -1661,6 +1661,8 @@ const u16 gFirstTurnOfTwoStringIds[] =
     BATTLE_TEXT_HidUnderwater,
     BATTLE_TEXT_SprangUp,
 	BATTLE_TEXT_HidInShadows,
+    BATTLE_TEXT_ForesawAttack,
+    BATTLE_TEXT_ChoseDestiny,
 };
 
 const u16 gWrappedStringIds[] =

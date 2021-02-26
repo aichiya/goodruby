@@ -1963,8 +1963,11 @@ BattleScript_EffectMirrorCoat: @ 81D806F
 BattleScript_EffectSkullBash: @ 81D8085
 	jumpifstatus2 USER, STATUS2_MULTIPLETURNS, BattleScript_TwoTurnMovesSecondTurn
 	jumpifword COMMON_BITS, gHitMarker, HITMARKER_NO_ATTACKSTRING, BattleScript_TwoTurnMovesSecondTurn
-	setbyte sTWOTURN_STRINGID, 2
+    call BattleScript_SkullBashSetStringMultichooser
 	call BattleScriptFirstChargingTurn
+	jumpifnotmove MOVE_SKULL_BASH, BattleScript_SkullBashSAtk
+
+BattleScript_SkullBashDef:
 	setstatchanger DEFENSE, 1, FALSE
 	statbuffchange AFFECTS_USER | 0x1, BattleScript_SkullBashEnd
 	jumpifbyte EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_SkullBashEnd
@@ -1972,9 +1975,38 @@ BattleScript_EffectSkullBash: @ 81D8085
 	playanimation USER, B_ANIM_STATS_CHANGE, sANIM_ARG1
 	printfromtable gStatUpStringIds
 	waitmessage 64
+    goto BattleScript_SkullBashEnd
+
+BattleScript_SkullBashSAtk:
+	setstatchanger SP_ATTACK, 1, FALSE
+	statbuffchange AFFECTS_USER | 0x1, BattleScript_SkullBashEnd
+	jumpifbyte EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_SkullBashEnd
+	setgraphicalstatchangevalues
+	playanimation USER, B_ANIM_STATS_CHANGE, sANIM_ARG1
+	printfromtable gStatUpStringIds
+	waitmessage 64
+    goto BattleScript_SkullBashEnd
 
 BattleScript_SkullBashEnd: @ 81D80CF
 	goto BattleScript_MoveEnd
+
+BattleScript_SkullBashSetStringMultichooser:
+    jumpifmove MOVE_SKULL_BASH, BattleScript_SkullBashStringSkullBash
+    jumpifmove MOVE_FUTURE_SIGHT, BattleScript_SkullBashStringFutureSight
+    jumpifmove MOVE_DOOM_DESIRE, BattleScript_SkullBashStringDoomDesire
+    return
+
+BattleScript_SkullBashStringSkullBash:
+	setbyte sTWOTURN_STRINGID, 2
+    return
+
+BattleScript_SkullBashStringFutureSight:
+	setbyte sTWOTURN_STRINGID, 9
+    return
+
+BattleScript_SkullBashStringDoomDesire:
+	setbyte sTWOTURN_STRINGID, 10
+    return
 
 BattleScript_EffectTwister: @ 81D80D4
 	jumpifnostatus3 TARGET, STATUS3_ON_AIR, BattleScript_FlinchEffect
