@@ -514,6 +514,8 @@ IN GENERAL:
 
 
 EVOLUTION CHANGES:
+NOTE: All of these are documented in the Pokedex in-game.
+
 GOLBAT: Evolves to Crobat at level 36 or by friendship.
 CHANSEY: Evolves to Blissey at level 55 or by friendship.
 PICHU: Evolves to Pikachu at level 20 or by friendship.

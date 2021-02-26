@@ -1,0 +1,59 @@
+
+No important trainers use OHKO moves, though some random trainers in late-game do.
+
+Most bosses do not use mono-type teams. Gym Leaders and Elite Four members have one wild card.
+
+Evil team members, Wallace, and Steven use whatever they want.
+
+Enemy trainers do have EVs, but generally have subpar IVs.
+
+
+Route 103 Rival: 5
+
+Roxanne: 14, 14, 15
+
+Brawly: 18, 18, 19
+
+Slateport Museum: 17, 17 / 17, 17 / 18, 18, 20
+
+Route 110 Rival: 20, 20, 20, 21
+
+Winstrate Family: 22, 22 / 22, 22 / 22, 22 / 22, 22
+
+Wattson: 23, 23, 24, 25
+
+Mt. Chimney: 26, 26 / 26, 26, / 28, 28, 28, 29
+
+Flannery: 32, 32, 32, 33
+
+Norman: 33, 34, 34, 35
+
+Weather Institute: 38, 38, 38, 39
+
+Route 119 Rival: 39, 39, 39, 39, 39, 40
+
+Winona: 40, 41, 41, 41, 42
+
+Magma Hideout Admin 1: 43, 44, 44, 45
+
+Magma Hideout Admin 2: 44, 44, 44, 44, 46
+
+Liza: 47, 48, 48, 48, 50
+
+Seafloor Cavern: 49, 49 / 50, 50, 50 / 51, 51, 51, 52, 52
+
+Groudon: 55
+
+Wallace: 51, 51, 51, 51, 52, 53
+
+Victory Road Wally: 53, 53, 53, 53, 53, 55
+
+Sidney: 55, 55, 55, 55, 58
+
+Phoebe: 55, 55, 56, 56, 58
+
+Glacia: 56, 56, 56, 56, 59
+
+Drake: 56, 56, 57, 57, 59
+
+Steven: 57, 58, 58, 58, 59, 60

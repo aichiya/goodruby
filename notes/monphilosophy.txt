@@ -1,3 +1,5 @@
+"Why did you do X"
+
 Changes in general are meant to make mons viable at some stage of the game.
 Not every mon will be equal, and not every mon will be super good at endgame.
 Most should be at least usable there, though.
@@ -33,8 +35,7 @@ Most should be at least usable there, though.
  // It's still somewhat frail, so getting sweeps with it is probably inconsistent.
  // I will be doing a test run with one to see how it goes in practice.
  // Flavor-wise, it's a half fit. Hitmonchan is a notoriously fast fighter.
- // Unfortunately, it's not an endurance fighter.
- // An ability that gave extra Speed on only the first turn would fit it best, I think.
+ // I have tested it in-game, and found it functional but not truly busted.
 
 #155 Cyndaquil, #156 Quilava, #157 Typhlosion
  // This is probably one of the weirder mon tweaks.
