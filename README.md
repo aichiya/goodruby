@@ -15,8 +15,8 @@ Features:
 Screenshots:
 
 ![s1](screenshots/tmshop.png)
-![s2](screenshots/moltres.png)
-![s3](screenshots/drainpunch.png)
+![s2](screenshots/dewfordmart.png)
+![s3](screenshots/moltres.png)
 
 ![s4](screenshots/battle.png)
 ![s5](screenshots/gen4mons.png)
