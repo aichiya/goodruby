@@ -1,36 +1,13 @@
-# Pokémon Ruby and Sapphire [![Build Status][travis-badge]][travis]
+# Pokémon GOod Ruby
 
-This is a disassembly of Pokémon Ruby and Sapphire.
+This is an overhaul mod of Pokémon Ruby, built from pret's disassembly of the original game.
 
-It builds the following roms:
+Features:
 
-* pokeruby.gba `sha1: f28b6ffc97847e94a6c21a63cacf633ee5c8df1e`
-* pokesapphire.gba `sha1: 3ccbbd45f8553c36463f13b938e833f652b793e4`
-
-To set up the repository, see [INSTALL.md](INSTALL.md).
-
-## See also
-
-* Disassembly of [**Pokémon Red/Blue**][pokered]
-* Disassembly of [**Pokémon Yellow**][pokeyellow]
-* Disassembly of [**Pokémon Gold**][pokegold]
-* Disassembly of [**Pokémon Crystal**][pokecrystal]
-* Disassembly of [**Pokémon Pinball**][pokepinball]
-* Disassembly of [**Pokémon TCG**][poketcg]
-* Disassembly of [**Pokémon Fire Red**][pokefirered]
-* Disassembly of [**Pokémon Emerald**][pokeemerald]
-* Discord: [**pret**][Discord]
-* irc: **irc.freenode.net** [**#pret**][irc]
-
-[pokered]: https://github.com/pret/pokered
-[pokeyellow]: https://github.com/pret/pokeyellow
-[pokegold]: https://github.com/pret/pokegold
-[pokecrystal]: https://github.com/pret/pokecrystal
-[pokepinball]: https://github.com/pret/pokepinball
-[poketcg]: https://github.com/pret/poketcg
-[pokefirered]: https://github.com/pret/pokefirered
-[pokeemerald]: https://github.com/pret/pokeemerald
-[Discord]: https://discord.gg/6EuWgX9
-[irc]: https://kiwiirc.com/client/irc.freenode.net/?#pret
-[travis]: https://travis-ci.org/pret/pokeruby
-[travis-badge]: https://travis-ci.org/pret/pokeruby.svg?branch=master
+* First 386 Pokemon are all obtainable, as well as their evolutionary relatives in future gens.
+* Battle system updated to Gen 7 mechanics, including physical/special split, modern moves, and modern abilities.
+* A handful of new areas to explore, housing some rare mons.
+* Enemy trainers no longer use items in battle, but have more difficult teams.
+* Hidden Abilities, 92 TMs, and an Egg Move Tutor to help you customize your mons to your liking.
+* Adjustments to the stats and movepools of various Pokemon to improve balance and diversity.
+* A bunch of smaller tweaks that would make this list far too long.

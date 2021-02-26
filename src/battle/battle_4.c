@@ -2920,13 +2920,13 @@ static void atk0C_datahpupdate(void)
                         gProtectStructs[gActiveBattler].classLastHit = CLASS_PHYSICAL;
                         gProtectStructs[gActiveBattler].physicalBank = gBankAttacker;
                         gSpecialStatuses[gActiveBattler].moveturnPhysicalBank = gBankAttacker;
+                        gProtectStructs[gBankAttacker].dealtDmg = 1;
                     }
                     else
                     {
                         gProtectStructs[gActiveBattler].classLastHit = CLASS_PHYSICAL;
                         gProtectStructs[gActiveBattler].physicalBank = gBankTarget;
                         gSpecialStatuses[gActiveBattler].moveturnPhysicalBank = gBankTarget;
-                        gProtectStructs[gBankAttacker].dealtDmg = 1;
                     }
                 }
                 else if (moveClass == 1 && !(gHitMarker & HITMARKER_x100000))
@@ -2938,13 +2938,13 @@ static void atk0C_datahpupdate(void)
                         gProtectStructs[gActiveBattler].classLastHit = CLASS_SPECIAL;
                         gProtectStructs[gActiveBattler].specialBank = gBankAttacker;
                         gSpecialStatuses[gActiveBattler].moveturnSpecialBank = gBankAttacker;
+                        gProtectStructs[gBankAttacker].dealtDmg = 1;
                     }
                     else
                     {
                         gProtectStructs[gActiveBattler].classLastHit = CLASS_SPECIAL;
                         gProtectStructs[gActiveBattler].specialBank = gBankTarget;
                         gSpecialStatuses[gActiveBattler].moveturnSpecialBank = gBankTarget;
-                        gProtectStructs[gBankAttacker].dealtDmg = 1;
                     }
                 }
             }
