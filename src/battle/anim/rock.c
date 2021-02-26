@@ -138,6 +138,17 @@ const struct SpriteTemplate gBattleAnimSpriteTemplate_83DACD0 =
     .callback = sub_80DCFE4,
 };
 
+const struct SpriteTemplate gBattleAnimSpriteTemplate_LastResort =
+{
+    .tileTag = ANIM_TAG_GOLD_STARS,
+    .paletteTag = ANIM_TAG_GOLD_STARS,
+    .oam = &gOamData_837DF2C,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = sub_80DCFE4,
+};
+
 const struct SpriteTemplate gFlyingDirtSpriteTemplate =
 {
     .tileTag = ANIM_TAG_FLYING_DIRT,

@@ -238,6 +238,17 @@ const struct SpriteTemplate gStompFootSpriteTemplate =
     .callback = AnimStompFoot,
 };
 
+const struct SpriteTemplate gHorseshoeSpriteTemplate =
+{
+    .tileTag = 10307,
+    .paletteTag = ANIM_TAG_HANDS_AND_FEET,
+    .oam = &gOamData_837DF34,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimStompFoot,
+};
+
 const struct SpriteTemplate gBattleAnimSpriteTemplate_83DA088 =
 {
     .tileTag = ANIM_TAG_DUCK,

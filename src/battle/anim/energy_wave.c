@@ -114,6 +114,17 @@ const struct SpriteTemplate gBattleAnimSpriteTemplate_83D9280 =
     .callback = sub_80D3554,
 };
 
+const struct SpriteTemplate gBattleAnimSpriteTemplate_DarkVoidWave =
+{
+    .tileTag = 10308,
+    .paletteTag = 10308,
+    .oam = &gOamData_837E034,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gSpriteAffineAnimTable_83D752C,
+    .callback = sub_80D3554,
+};
+
 const union AffineAnimCmd gSpriteAffineAnim_83D9298[] =
 {
     AFFINEANIMCMD_FRAME(0x3, 0x3, 10, 50),
