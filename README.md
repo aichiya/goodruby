@@ -12,10 +12,14 @@ Features:
 * Adjustments to the stats and movepools of various Pokemon to improve balance and diversity.
 * A bunch of smaller tweaks that would make this list far too long.
 
+Downloads can be found in the [Releases tab](https://github.com/Doesnty/goodruby/releases). The current version is v1.0 beta.
+
+I also advise looking through [monchanges.txt](https://github.com/Doesnty/goodruby/blob/master/notes/monchanges.txt), which documents significant type and move changes.
+
 Screenshots:
 
 ![s1](screenshots/tmshop.png)
-![s2](screenshots/dewfordmart.png)
+![s2](screenshots/dewfordmart2.png)
 ![s3](screenshots/moltres.png)
 
 ![s4](screenshots/battle.png)
