@@ -242,9 +242,9 @@ static const u8 gItemDescription_MaxElixir[] = _(
     "moves.");
 
 static const u8 gItemDescription_LavaCookie[] = _(
-    "A local specialty\n"
-    "that heals all\n"
-    "status problems.");
+    "Tasty. Heals all\n"
+    "status problems\n"
+    "outside of battle.");
 
 static const u8 gItemDescription_BlueFlute[] = _(
     "A glass flute that\n"
