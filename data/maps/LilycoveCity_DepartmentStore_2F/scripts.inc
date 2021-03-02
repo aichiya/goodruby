@@ -32,6 +32,9 @@ LilycoveCity_DepartmentStore_2F_Items1:: @ 8159F44
 	.2byte ITEM_MOOMOO_MILK
 	.2byte ITEM_LAVA_COOKIE
 	.2byte ITEM_FLUFFY_TAIL
+    .2byte ITEM_WHITE_HERB
+    .2byte ITEM_MENTAL_HERB
+    .2byte ITEM_POWER_HERB
 	.2byte ITEM_SHADOW_MAIL
 	.2byte ITEM_MECH_MAIL
 	.2byte ITEM_WAVE_MAIL

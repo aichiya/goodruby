@@ -447,3 +447,4 @@
     enum BATTLE_TEXT_AuraAll
     enum BATTLE_TEXT_AuraAllSharply
     enum BATTLE_TEXT_ExertsPressure
+    enum BATTLE_TEXT_PowerHerb

@@ -3231,7 +3231,7 @@ const struct BattleMove gBattleMoves[] = {
 
     [MOVE_FUTURE_SIGHT] = {
         .effect = EFFECT_SKULL_BASH,
-        .power = 130,
+        .power = 100,
         .type = TYPE_PSYCHIC,
         .accuracy = 100,
         .pp = 10,

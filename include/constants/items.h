@@ -280,7 +280,7 @@
 #define ITEM_LIFE_ORB 270
 #define ITEM_CHOICE_SPECS 271
 #define ITEM_CHOICE_SCARF 272
-#define ITEM_0EB 273
+#define ITEM_POWER_HERB 273
 #define ITEM_0EC 274
 #define ITEM_0ED 275
 #define ITEM_0EE 276
@@ -443,7 +443,7 @@
 #define NUM_HIDDEN_MACHINES     8
 
 // Check if the item is one that can be used on a Pokemon.
-#define IS_POKEMON_ITEM(item) ((item) >= ITEM_POTION && (item) <= ITEM_0B2)
+#define IS_POKEMON_ITEM(item) ((item) >= ITEM_POTION && (item) <= ITEM_ENIGMA_BERRY)
 
 #define IS_ITEM_MAIL(item) ((item) >= ITEM_ORANGE_MAIL && (item) <= ITEM_RETRO_MAIL)
 

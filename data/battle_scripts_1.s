@@ -861,7 +861,13 @@ BattleScript_EffectRazorWind: @ 81D7515
 	jumpifword COMMON_BITS, gHitMarker, HITMARKER_NO_ATTACKSTRING, BattleScript_TwoTurnMovesSecondTurn
 	setbyte sTWOTURN_STRINGID, 0
 	call BattleScriptFirstChargingTurn
-	goto BattleScript_MoveEnd
+    
+    special 0x4D
+	playanimation USER, B_ANIM_ITEM_EFFECT, NULL
+	printstring BATTLE_TEXT_PowerHerb
+	waitmessage 64
+	removeitem USER
+	goto BattleScript_EffectRazorWind
 
 BattleScript_TwoTurnMovesSecondTurn: @ 81D753D
 	attackcanceler
@@ -1190,7 +1196,13 @@ BattleScript_EffectSkyAttack: @ 81D78B5
 	jumpifword COMMON_BITS, gHitMarker, HITMARKER_NO_ATTACKSTRING, BattleScript_TwoTurnMovesSecondTurn
 	setbyte sTWOTURN_STRINGID, 3
 	call BattleScriptFirstChargingTurn
-	goto BattleScript_MoveEnd
+    
+    special 0x4D
+	playanimation USER, B_ANIM_ITEM_EFFECT, NULL
+	printstring BATTLE_TEXT_PowerHerb
+	waitmessage 64
+	removeitem USER
+	goto BattleScript_EffectRazorWind
 
 BattleScript_EffectConfuseHit: @ 81D78DD
 	setmoveeffect EFFECT_CONFUSION
@@ -1988,7 +2000,12 @@ BattleScript_SkullBashSAtk:
     goto BattleScript_SkullBashEnd
 
 BattleScript_SkullBashEnd: @ 81D80CF
-	goto BattleScript_MoveEnd
+    special 0x4D
+	playanimation USER, B_ANIM_ITEM_EFFECT, NULL
+	printstring BATTLE_TEXT_PowerHerb
+	waitmessage 64
+	removeitem USER
+	goto BattleScript_EffectSkullBash
 
 BattleScript_SkullBashSetStringMultichooser:
     jumpifmove MOVE_SKULL_BASH, BattleScript_SkullBashStringSkullBash
@@ -2104,7 +2121,13 @@ BattleScript_SolarbeamDecideTurn: @ 81D81E1
 	jumpifword COMMON_BITS, gHitMarker, HITMARKER_NO_ATTACKSTRING, BattleScript_TwoTurnMovesSecondTurn
 	setbyte sTWOTURN_STRINGID, 1
 	call BattleScriptFirstChargingTurn
-	goto BattleScript_MoveEnd
+    
+    special 0x4D
+	playanimation USER, B_ANIM_ITEM_EFFECT, NULL
+	printstring BATTLE_TEXT_PowerHerb
+	waitmessage 64
+	removeitem USER
+	goto BattleScript_EffectSolarbeam
 
 BattleScript_SolarbeamOnFirstTurn: @ 81D8209
 	orword gHitMarker, HITMARKER_x8000000
@@ -2198,7 +2221,13 @@ BattleScript_FirstTurnFly: @ 81D8322
 BattleScript_FirstTurnSemiInvulnerable: @ 81D8328
 	call BattleScriptFirstChargingTurn
 	setsemiinvulnerablebit
-	goto BattleScript_MoveEnd
+    
+    special 0x4D
+	playanimation USER, B_ANIM_ITEM_EFFECT, NULL
+	printstring BATTLE_TEXT_PowerHerb
+	waitmessage 64
+	removeitem USER
+	goto BattleScript_EffectSemiInvulnerable
 
 BattleScript_SecondTurnSemiInvulnerable: @ 81D8333
 	attackcanceler

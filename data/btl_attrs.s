@@ -295,14 +295,22 @@ gUnknown_081FA71F:: @ 81FA71F
 
 	.align 1
 gSoundMovesTable:: @ 81FA724
-	.2byte   0x2D
-	.2byte   0x2E
-	.2byte   0x2F
-	.2byte   0x30
-	.2byte   0x67
-	.2byte   0xAD
-	.2byte   0xFD
-	.2byte  0x13F
-	.2byte  0x140
-	.2byte  0x130
+	.2byte   MOVE_GROWL
+	.2byte   MOVE_ROAR
+	.2byte   MOVE_SING
+	.2byte   MOVE_SUPERSONIC
+	.2byte   MOVE_SCREECH
+	.2byte   MOVE_SNORE
+	.2byte   MOVE_UPROAR
+	.2byte   MOVE_HYPER_VOICE
+	.2byte   MOVE_METAL_SOUND
+	.2byte   MOVE_GRASS_WHISTLE
+	.2byte   MOVE_BOOMBURST
+	.2byte   MOVE_BUG_BUZZ
+	.2byte   MOVE_DISARM_VOICE
+	.2byte   MOVE_ECHOED_VOICE
+	.2byte   MOVE_HOWL
+	.2byte   MOVE_NOBLE_ROAR
+	.2byte   MOVE_ROUND
+	.2byte   MOVE_SNARL
 	.2byte 0xFFFF

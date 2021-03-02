@@ -736,6 +736,7 @@ static void sp49_losemoney(void);
 static void sp4A_round(void);
 static void sp4B_jumpkickrecoil(void);
 static void sp4C_checkexplosiontargetvalidity(void);
+static void sp4D_endifnopowerherb(void);
 
 
 void (* const gBattleScriptingCommandsTable[])(void) =
@@ -13424,6 +13425,7 @@ void (* const gBattleScriptingSpecialTable[])(void) =
     sp4A_round,
     sp4B_jumpkickrecoil,
     sp4C_checkexplosiontargetvalidity,
+    sp4D_endifnopowerherb,
 };
 
 
@@ -15128,4 +15130,11 @@ static void sp4C_checkexplosiontargetvalidity(void)
     if (gBattleMons[gBankTarget].hp == 0)
         gBattlescriptCurrInstr = BattleScript_ExplosionLoop;
     
+}
+
+static void sp4D_endifnopowerherb(void)
+{
+    u8 holdEffect = ItemId_GetHoldEffect(gBattleMons[gBankAttacker].item);
+    if (holdEffect != HOLD_EFFECT_POWER_HERB)
+        gBattlescriptCurrInstr = BattleScript_MoveEnd;
 }

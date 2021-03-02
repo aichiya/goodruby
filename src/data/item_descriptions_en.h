@@ -903,6 +903,11 @@ static const u8 gItemDescription_WhiteHerb[] = _(
     "restores any\n"
     "lowered stat.");
 
+static const u8 gItemDescription_PowerHerb[] = _(
+    "A hold item that\n"
+    "allows instant use\n"
+    "of a charge move.");
+
 static const u8 gItemDescription_MachoBrace[] = _(
     "A hold item that\n"
     "promotes growth,\n"

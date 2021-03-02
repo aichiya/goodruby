@@ -757,9 +757,9 @@ const struct WildPokemon Route103_AltLandMons [] =
     {14, 16, SPECIES_ZIGZAGOON},
     {14, 16, SPECIES_WINGULL},
     {14, 16, SPECIES_LEDYBA},
-    {14, 16, SPECIES_ABRA},
+    {14, 16, SPECIES_SNUBBULL},
     {14, 16, SPECIES_LEDYBA},
-    {14, 16, SPECIES_ABRA},
+    {14, 16, SPECIES_SNUBBULL},
 };
 const struct WildPokemonInfo Route103_AltLandMonsInfo = {20, Route103_AltLandMons};
 

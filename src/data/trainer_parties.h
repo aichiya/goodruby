@@ -4691,17 +4691,17 @@ const struct TrainerMonFullControl gTrainerParty_Wallace[] = {
 
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Jerry1[] = {
     {
-	.iv = 10,
+	.iv = 0,
 	.level = 13,
 	.species = SPECIES_DROWZEE
     },
     {
-	.iv = 10,
+	.iv = 0,
 	.level = 13,
 	.species = SPECIES_ZIGZAGOON
     },
     {
-	.iv = 10,
+	.iv = 0,
 	.level = 13,
 	.species = SPECIES_PARAS
     }
@@ -4787,13 +4787,13 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Jerry5[] = {
 
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Karen1[] = {
     {
-	.iv = 10,
-	.level = 13,
+	.iv = 0,
+	.level = 12,
 	.species = SPECIES_SHROOMISH
     },
     {
-	.iv = 10,
-	.level = 14,
+	.iv = 0,
+	.level = 13,
 	.species = SPECIES_TAILLOW
     }
 };

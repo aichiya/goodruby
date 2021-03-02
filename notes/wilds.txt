@@ -105,7 +105,7 @@ GRANITE CAVE B1F: Zubat (25%), Aron (20%), Ekans (10%), Makuhita (10%), Onix (10
 GRANITE CAVE B2F: Zubat (25%), Aron (20%), Ekans (10%), Onix (10%), Abra (10%), Sableye (10%), Mawile (10%), Geodude (5%)
 ROUTE 110 SOUTH: Rattata (20%), Electrike (20%), Houndour (15%), Gulpin (15%), Plusle (10%), Minun (10%), Wingull (10%)
 ROUTE 110 NORTH: Wingull (20%), Electrike (20%), Houndour (15%), Gulpin (15%), Plusle (10%), Minun (10%), Rattata (10%) (event: Voltorb)
-ROUTE 103 EAST: Rattata (20%), Mareep (20%), Zigzagoon (15%), Wingull (15%), Ledyba (15%), Hoppip (10%), Abra (5%)
+ROUTE 103 EAST: Rattata (20%), Mareep (20%), Zigzagoon (15%), Wingull (15%), Ledyba (15%), Hoppip (10%), Snubbull (5%)
 ROUTE 117: Rattata (20%), Oddish (20%), Mareep (20%), Roselia (10%), Volbeat (10%), Illumise (10%), Marill (5%), Mime Jr. (5%)
 ROUTE 111: Rattata (25%), Cacnea (25%), Machop (15%), Sandshrew (15%), Slugma (10%), Spoink (10%)
 GAME CORNER: Pikachu, Cubone, Clefairy, Eevee, Porygon
@@ -150,7 +150,6 @@ METEOR FALLS BACK ROOM: Bagon (35%), Beldum (35%), Lunatone (10%), Solrock (10%)
 VICTORY ROAD 1F: Golbat (20%), Loudred (20%), Lairon (10%), Hariyama (10%), Graveler (10%), Ursaring (10%), Medicham (10%), Donphan (10%)
 VICTORY ROAD B1F/B2F: Golbat (20%), Graveler (20%), Lairon (10%), Medicham (10%), Mawile (10%), Sableye (10%), Wobbuffet (10%), Parasect (10%)
 
-GNARLED DEN: Kangaskhan
 
 ROCK SMASH: Nosepass and Shuckle in Granite Cave, Geodude everywhere else.
 
