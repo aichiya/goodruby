@@ -4,13 +4,13 @@ This is an overhaul mod of Pokémon Ruby, built from pret's disassembly of the o
 
 Features:
 
-* First 386 Pokemon are all obtainable, as well as their evolutionary relatives in future gens.
+* 416 Pokemon are obtainable, consisting of the first 386 and all their evolutionary relatives.
 * Battle system updated to Gen 7 mechanics, including physical/special split, modern moves, and modern abilities.
 * A handful of new areas to explore, housing some rare mons.
 * Enemy trainers no longer use items in battle, but have more difficult teams.
 * Hidden Abilities, 92 TMs, and an Egg Move Tutor to help you customize your mons to your liking.
 * Adjustments to the stats and movepools of various Pokemon to improve balance and diversity.
-* A bunch of smaller tweaks that would make this list far too long.
+* Countless smaller tweaks that would make this list far too long.
 
 Downloads can be found in the [Releases tab](https://github.com/Doesnty/goodruby/releases). The current version is v1.0 beta.
 
@@ -22,8 +22,8 @@ Screenshots:
 ![s2](screenshots/dewfordmart2.png)
 ![s3](screenshots/moltres.png)
 
-![s4](screenshots/battle.png)
-![s5](screenshots/gen4mons.png)
+![s4](screenshots/sylveon.png)
+![s5](screenshots/battle.png)
 ![s6](screenshots/passho.png)
 
 ![s7](screenshots/status.png)
