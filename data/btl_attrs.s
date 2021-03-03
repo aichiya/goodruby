@@ -309,7 +309,6 @@ gSoundMovesTable:: @ 81FA724
 	.2byte   MOVE_BUG_BUZZ
 	.2byte   MOVE_DISARM_VOICE
 	.2byte   MOVE_ECHOED_VOICE
-	.2byte   MOVE_HOWL
 	.2byte   MOVE_NOBLE_ROAR
 	.2byte   MOVE_ROUND
 	.2byte   MOVE_SNARL
