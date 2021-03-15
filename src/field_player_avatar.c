@@ -1554,7 +1554,7 @@ static bool8 Fishing2(struct Task *task)
 {
     struct EventObject *playerEventObj;
     const s16 arr1[] = {1, 1, 1};
-    const s16 arr2[] = {1, 3, 6};
+    const s16 arr2[] = {1, 2, 4};
 
     task->tRoundsPlayed = 0;
     task->tMinRoundsRequired = arr1[task->tFishingRod] + (Random() % arr2[task->tFishingRod]);
@@ -1637,7 +1637,7 @@ static bool8 Fishing6(struct Task *task)
 {
     AlignFishingAnimationFrames();
     task->tStep++;
-    if (!DoesCurrentMapHaveFishingMons() || (Random() & 1))
+    if (!DoesCurrentMapHaveFishingMons())
         task->tStep = FISHING_NO_BITE;
     else
         StartSpriteAnim(&gSprites[gPlayerAvatar.spriteId], GetFishingBiteDirectionAnimNum(GetPlayerFacingDirection()));
