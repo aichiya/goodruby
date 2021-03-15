@@ -101,11 +101,10 @@ SSTidalRooms_Text_199ADE:: @ 8199ADE
 SSTidalRooms_Text_199B65:: @ 8199B65
 	.string "Uh... Hi! I... I'm not acting suspicious!\n"
 	.string "Uh... You can have this! For free!\p"
-	.string "It... Honestly, I didn't Snatch it from\n"
+	.string "It... Honestly, I didn't steal it from\n"
 	.string "someone! I'd never do such a thing!\l"
 	.string "It's clean! You can use it!$"
 
 SSTidalRooms_Text_199C1A:: @ 8199C1A
-	.string "Snatch steals the foe's move in\n"
-	.string "advance, and then uses the snatched\l"
-	.string "move on the foe.$"
+	.string "Clean! It's clean, I swear!\n"
+	.string "It's rude to question Big Nuggets!$"

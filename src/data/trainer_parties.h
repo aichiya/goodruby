@@ -2108,8 +2108,8 @@ const struct TrainerMonItemDefaultMoves gTrainerParty_Brianna2[] = {
 const struct TrainerMonItemDefaultMoves gTrainerParty_Anette[] = {
     {
 	.iv = 100,
-	.level = 45,
-	.species = SPECIES_ROSELIA,
+	.level = 55,
+	.species = SPECIES_ROSERADE,
         .heldItem = ITEM_NUGGET
     }
 };
@@ -2350,8 +2350,8 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Anonymous3[] = {
 const struct TrainerMonItemDefaultMoves gTrainerParty_Garret[] = {
     {
 	.iv = 0,
-	.level = 45,
-	.species = SPECIES_AZUMARILL,
+	.level = 54,
+	.species = SPECIES_PERSIAN,
         .heldItem = ITEM_NUGGET
     }
 };
@@ -3928,21 +3928,21 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Walter1[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Tucker[] = {
     {
 	.iv = 0,
-	.level = 44,
-	.species = SPECIES_MANECTRIC
+	.level = 54,
+	.species = SPECIES_ARCANINE
     },
     {
 	.iv = 0,
-	.level = 44,
-	.species = SPECIES_MANECTRIC
+	.level = 54,
+	.species = SPECIES_GALLADE
     }
 };
 
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Thomas[] = {
     {
 	.iv = 0,
-	.level = 45,
-	.species = SPECIES_ZANGOOSE
+	.level = 55,
+	.species = SPECIES_PIDGEOT
     }
 };
 
@@ -4986,45 +4986,45 @@ const struct TrainerMonItemDefaultMoves gTrainerParty_Miguel1[] = {
 const struct TrainerMonItemCustomMoves gTrainerParty_Colton[] = {
     {
 	.iv = 0,
-	.level = 22,
+	.level = 54,
 	.species = SPECIES_SKITTY,
         .heldItem = ITEM_ORAN_BERRY,
-        .moves = MOVE_ASSIST, MOVE_CHARM, MOVE_FAINT_ATTACK, MOVE_HEAL_BELL
+        .moves = MOVE_PLAY_ROUGH, MOVE_DOUBLE_EDGE, MOVE_ICE_BEAM, MOVE_HEAL_BELL
     },
     {
 	.iv = 0,
-	.level = 36,
+	.level = 64,
 	.species = SPECIES_SKITTY,
         .heldItem = ITEM_ORAN_BERRY,
-        .moves = MOVE_ASSIST, MOVE_CHARM, MOVE_FAINT_ATTACK, MOVE_HEAL_BELL
+        .moves = MOVE_PLAY_ROUGH, MOVE_DOUBLE_EDGE, MOVE_ICE_BEAM, MOVE_HEAL_BELL
     },
     {
 	.iv = 0,
-	.level = 40,
+	.level = 74,
 	.species = SPECIES_SKITTY,
         .heldItem = ITEM_ORAN_BERRY,
-        .moves = MOVE_ASSIST, MOVE_CHARM, MOVE_FAINT_ATTACK, MOVE_HEAL_BELL
+        .moves = MOVE_PLAY_ROUGH, MOVE_DOUBLE_EDGE, MOVE_ICE_BEAM, MOVE_HEAL_BELL
     },
     {
 	.iv = 0,
-	.level = 12,
+	.level = 84,
 	.species = SPECIES_SKITTY,
         .heldItem = ITEM_ORAN_BERRY,
-        .moves = MOVE_ASSIST, MOVE_CHARM, MOVE_FAINT_ATTACK, MOVE_HEAL_BELL
+        .moves = MOVE_PLAY_ROUGH, MOVE_DOUBLE_EDGE, MOVE_ICE_BEAM, MOVE_HEAL_BELL
     },
     {
 	.iv = 0,
-	.level = 30,
-	.species = SPECIES_SKITTY,
-        .heldItem = ITEM_ORAN_BERRY,
-        .moves = MOVE_ASSIST, MOVE_CHARM, MOVE_FAINT_ATTACK, MOVE_HEAL_BELL
-    },
-    {
-	.iv = 0,
-	.level = 42,
+	.level = 94,
 	.species = SPECIES_DELCATTY,
         .heldItem = ITEM_ORAN_BERRY,
-        .moves = MOVE_ASSIST, MOVE_CHARM, MOVE_FAINT_ATTACK, MOVE_HEAL_BELL
+        .moves = MOVE_PLAY_ROUGH, MOVE_DOUBLE_EDGE, MOVE_ICE_BEAM, MOVE_HEAL_BELL
+    },
+    {
+	.iv = 0,
+	.level = 100,
+	.species = SPECIES_SKITTY,
+        .heldItem = ITEM_ORAN_BERRY,
+        .moves = MOVE_PLAY_ROUGH, MOVE_DOUBLE_EDGE, MOVE_ICE_BEAM, MOVE_HEAL_BELL
     }
 };
 
@@ -7713,31 +7713,31 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Dwayne[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Phillip[] = {
     {
 	.iv = 0,
-	.level = 44,
-	.species = SPECIES_TENTACRUEL
+	.level = 54,
+	.species = SPECIES_MACHOKE
     },
     {
 	.iv = 0,
-	.level = 44,
-	.species = SPECIES_MACHOKE
+	.level = 54,
+	.species = SPECIES_SEADRA
     }
 };
 
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Leonard[] = {
     {
 	.iv = 0,
-	.level = 43,
-	.species = SPECIES_MACHOP
+	.level = 54,
+	.species = SPECIES_HARIYAMA
     },
     {
 	.iv = 0,
-	.level = 43,
-	.species = SPECIES_PELIPPER
+	.level = 54,
+	.species = SPECIES_TENTACRUEL
     },
     {
 	.iv = 0,
-	.level = 43,
-	.species = SPECIES_MACHOKE
+	.level = 54,
+	.species = SPECIES_KINGLER
     }
 };
 
@@ -10187,12 +10187,12 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_DezAndLuke[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_LeaAndJed[] = {
     {
 	.iv = 0,
-	.level = 45,
+	.level = 54,
 	.species = SPECIES_LUVDISC
     },
     {
 	.iv = 0,
-	.level = 45,
+	.level = 54,
 	.species = SPECIES_LUVDISC
     }
 };
