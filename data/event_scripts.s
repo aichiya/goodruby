@@ -4994,7 +4994,7 @@ Common_EventScript_StandardMart::
 	faceplayer
 	message OldaleTown_Mart_Text_1A0BE4
 	waitmessage
-	goto_if_unset FLAG_ADVENTURE_STARTED, OldaleTown_Mart_EventScript_152FA8
+	goto_if_unset FLAG_ADVENTURE_STARTED, Common_EventScript_StandardMartPreDex
     special GetBadgeCount
     switch RESULT
     case 0, Common_EventScript_StandardMart0Badges
