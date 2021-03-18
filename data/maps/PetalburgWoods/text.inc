@@ -7,6 +7,10 @@ PetalburgWoods_Text_194D92:: @ 8194D92
 	.string "called Shroomish around here?\p"
 	.string "I really love that Pokémon.$"
 
+PetalburgWoods_Text_HaveShroomish::
+    .string "Oh, you have a Shroomish!\n"
+    .string "What a cute little fellow...$"
+
 PetalburgWoods_Text_194DED:: @ 8194DED
 	.string "I was going to ambush you, but you\n"
 	.string "had to dawdle in Petalburg Woods\l"

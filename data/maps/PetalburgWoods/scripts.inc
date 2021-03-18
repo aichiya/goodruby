@@ -13,6 +13,14 @@ PetalburgWoods_EventScript_15CCA8:: @ 815CCA8
 	waitmovement 0
 	msgbox PetalburgWoods_Text_194D92, 4
 	closemessage
+    specialvar RESULT, ScanPartyForShroomish
+	compare RESULT, 0
+    goto_if_eq PetalburgWoods_EventScript_BadGuyShowsUp
+    
+	msgbox PetalburgWoods_Text_HaveShroomish, 4
+	closemessage
+
+PetalburgWoods_EventScript_BadGuyShowsUp::
 	playbgm MUS_EVIL_TEAM, FALSE
 	applymovement 3, PetalburgWoods_Movement_15CEC3
 	waitmovement 0

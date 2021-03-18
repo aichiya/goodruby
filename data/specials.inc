@@ -361,3 +361,4 @@ gSpecials::
     def_special CountLegendariesSeen
     def_special ChangeBoxPokemonNickname
     def_special GetBadgeCount
+    def_special ScanPartyForShroomish

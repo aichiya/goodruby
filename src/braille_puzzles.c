@@ -336,3 +336,18 @@ void SealedChamberShakingEffect(u8 taskId)
         }
     }
 }
+
+bool8 ScanPartyForShroomish(void)
+{
+    u8 i;
+    CalculatePlayerPartyCount();
+    for (i = 0; i < gPlayerPartyCount; i++)
+    {
+        u16 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES2, 0);
+        if (species == SPECIES_SHROOMISH)
+        {
+            return TRUE;
+        }
+    }
+    return FALSE;
+}
