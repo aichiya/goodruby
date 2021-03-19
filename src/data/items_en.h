@@ -2891,7 +2891,7 @@ const struct Item gItems[] =
     {
         .name = _("Retro Mail"),
         .itemId = ITEM_RETRO_MAIL,
-        .price = 0,
+        .price = 50,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_RetroMail,
