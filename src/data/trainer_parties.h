@@ -1,7 +1,7 @@
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Jimmy[] = {
     {
 	.iv = 0,
-	.level = 14,
+	.level = 13,
 	.species = SPECIES_PIDGEY
     },
     {
@@ -12,7 +12,7 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Jimmy[] = {
     {
 	.iv = 0,
 	.level = 13,
-	.species = SPECIES_GROWLITHE
+	.species = SPECIES_DIGLETT
     },
 };
 
@@ -24,7 +24,7 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Oliver[] = {
     },
     {
 	.iv = 0,
-	.level = 13,
+	.level = 14,
 	.species = SPECIES_TEDDIURSA
     }
 };
@@ -4692,17 +4692,17 @@ const struct TrainerMonFullControl gTrainerParty_Wallace[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Jerry1[] = {
     {
 	.iv = 0,
-	.level = 13,
+	.level = 12,
 	.species = SPECIES_DROWZEE
     },
     {
 	.iv = 0,
-	.level = 13,
+	.level = 12,
 	.species = SPECIES_ZIGZAGOON
     },
     {
 	.iv = 0,
-	.level = 13,
+	.level = 12,
 	.species = SPECIES_PARAS
     }
 };
