@@ -21,7 +21,7 @@ RustboroCity_Gym_Text_GymGuyAdvice::
 	.string "Roxanne, the Gym Leader, is a user\n"
 	.string "of Rock-type Pokémon.\p"
 	.string "The Rock type is very durable, and\n"
-	.string "it's resistant Normal-type attacks.\p"
+	.string "it's resistant to Normal-type attacks.\p"
     .string "Water, Grass, and Fighting moves are\n"
     .string "good against the Rock-type!\p"
     .string "But! Gym Leaders are cunning, and\n"

@@ -440,7 +440,7 @@ IN GENERAL:
 
 #331 Cacnea, #332 Cacturne
  * Gained secondary ability Water Absorb.
- * Hidden Ability Dry Skin replaced with Sand Stream.
+ * Hidden Ability Water Absorb replaced with Sand Stream.
  * Now learns Weather Ball by breeding.
 
 #333 Swablu, #334 Altaria
