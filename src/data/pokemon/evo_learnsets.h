@@ -501,12 +501,12 @@ const u16 gSwalotEvoMoves[] = {
 };
 
 const u16 gLoudredEvoMoves[] = {
-	MOVE_BITE,
+	MOVE_UPROAR,
 	0,
 };
 
 const u16 gExploudEvoMoves[] = {
-	MOVE_CRUNCH,
+	MOVE_BOOMBURST,
 	0,
 };
 

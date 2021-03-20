@@ -365,6 +365,12 @@ IN GENERAL:
  * Shedinja now learns Pain Split by level.
  * Shedinja now learns U-Turn by TM.
 
+#293 Whismur, #294 Loudred, #294 Exploud
+ * Level-up movepool heavily adjusted.
+ * Entire line now learns Fake Tears, Snarl, Work Up, and Thrash by level.
+ * No longer learns Stomp or Supersonic by level.
+ * Now learns Stomp and Supersonic by breeding.
+
 #299 Nosepass, #476 Probopass
  * Probopass's Hidden Ability Sand Force replaced with Levitate.
 
