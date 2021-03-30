@@ -342,3 +342,7 @@
 	.include "data/layouts/NewMauville_Inside_B2F/layout.inc"
 	.include "data/layouts/NewMauville_Inside_B3F/layout.inc"
     .include "data/layouts/NamelessCavern/layout.inc"
+    .include "data/layouts/AlteringCave1FV1/layout.inc"
+    .include "data/layouts/AlteringCave1FV2/layout.inc"
+    .include "data/layouts/AlteringCave1FV3/layout.inc"
+    .include "data/layouts/AlteringCave1FV4/layout.inc"

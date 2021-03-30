@@ -344,3 +344,7 @@ gMapLayouts:: @ 8304F18
     .4byte NewMauville_Inside_B3F_Layout
     .4byte NamelessCavern_Layout
     .4byte Underwater5_Layout
+    .4byte AlteringCave1FV1_Layout
+    .4byte AlteringCave1FV2_Layout
+    .4byte AlteringCave1FV3_Layout
+    .4byte AlteringCave1FV4_Layout
