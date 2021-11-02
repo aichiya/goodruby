@@ -5976,21 +5976,6 @@ BattleScript_EffectBelch:
 	end
 
 BattleScript_EffectAllHit::
-	jumpifmove MOVE_LAVA_PLUME, BattleScript_EffectAllHitBurn
-	jumpifmove MOVE_DISCHARGE, BattleScript_EffectAllHitPara
-	jumpifmove MOVE_BULLDOZE, BattleScript_EffectAllHitSpeedDown
-	goto BattleScript_EffectAllHitStart
-
-BattleScript_EffectAllHitBurn::
-	setmoveeffect EFFECT_BURN
-	goto BattleScript_EffectAllHitStart
-
-BattleScript_EffectAllHitPara::
-	setmoveeffect EFFECT_PARALYSIS
-	goto BattleScript_EffectAllHitStart
-
-BattleScript_EffectAllHitSpeedDown::
-	setmoveeffect EFFECT_SPD_MINUS_1
 	goto BattleScript_EffectAllHitStart
 
 BattleScript_EffectAllHitStart:
@@ -6017,6 +6002,9 @@ _AllHitDoStuff:
 	waitmessage 64
 	resultmessage
 	waitmessage 64
+    goto _AllHitPickEffect
+    
+_AllHitDoEffect:
 	seteffectwithchance
 	tryfaintmon TARGET, FALSE, NULL
 	setbyte sMOVEEND_STATE, 0
@@ -6025,6 +6013,25 @@ _AllHitDoStuff:
 	tryfaintmon USER, FALSE, NULL
     moveend 0, 0
 	end
+
+_AllHitPickEffect:
+	jumpifmove MOVE_LAVA_PLUME, BattleScript_EffectAllHitBurn
+	jumpifmove MOVE_DISCHARGE, BattleScript_EffectAllHitPara
+	jumpifmove MOVE_BULLDOZE, BattleScript_EffectAllHitSpeedDown
+	setmoveeffect 0
+	goto _AllHitDoEffect
+
+BattleScript_EffectAllHitBurn::
+	setmoveeffect EFFECT_BURN
+	goto _AllHitDoEffect
+
+BattleScript_EffectAllHitPara::
+	setmoveeffect EFFECT_PARALYSIS
+	goto _AllHitDoEffect
+
+BattleScript_EffectAllHitSpeedDown::
+	setmoveeffect EFFECT_SPD_MINUS_1
+	goto _AllHitDoEffect
 
 _AllHitMissed:
 	effectivenesssound
