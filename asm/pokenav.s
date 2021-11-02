@@ -1720,7 +1720,7 @@ _080F629A:
 	lsls r1, 4
 	add r1, r8
 	adds r0, r1
-	movs r1, 0x51
+	movs r1, 0x52
 	bl GetBoxMonData
 	cmp r0, 0
 	bne _080F636C
@@ -1736,7 +1736,7 @@ _080F629A:
 	lsls r1, 4
 	add r1, r9
 	adds r0, r1
-	movs r1, 0x51
+	movs r1, 0x52
 	bl GetBoxMonData
 	adds r1, r0, 0
 	cmp r1, 0
@@ -1784,7 +1784,7 @@ _080F632A:
 	muls r0, r6
 	ldr r1, _080F635C @ =gPlayerParty
 	adds r0, r1
-	movs r1, 0x51
+	movs r1, 0x52
 	bl GetMonData
 	cmp r0, 0
 	beq _080F6324
@@ -1900,7 +1900,7 @@ _080F63FC:
 	ldr r2, _080F6488 @ =gPokemonStorage + 0x4
 	adds r1, r2
 	adds r0, r1
-	movs r1, 0x51
+	movs r1, 0x52
 	bl GetBoxMonData
 	lsls r0, 24
 	lsrs r3, r0, 24
@@ -1972,7 +1972,7 @@ _080F64A8:
 	muls r0, r6
 	ldr r1, _080F64FC @ =gPlayerParty
 	adds r0, r1
-	movs r1, 0x51
+	movs r1, 0x52
 	bl GetMonData
 	lsls r0, 24
 	lsrs r3, r0, 24
@@ -2293,7 +2293,7 @@ sub_80F66E0: @ 80F66E0
 	ldrb r1, [r1]
 	lsls r1, 27
 	lsrs r1, 27
-	movs r2, 0x52
+	movs r2, 0x53
 	movs r3, 0
 	bl sub_80F44B0
 	adds r7, r0, 0

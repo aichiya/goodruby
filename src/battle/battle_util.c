@@ -2550,7 +2550,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 		    && (gSpecialStatuses[gBankTarget].moveturnLostHP_physical || gSpecialStatuses[gBankTarget].moveturnLostHP_special)
 			&& gBattleMons[gBankAttacker].type1 != TYPE_GRASS && gBattleMons[gBankAttacker].type2 != TYPE_GRASS
 		    && (gBattleMoves[move].flags & F_MAKES_CONTACT)
-		    && (Random() % 10) == 0)
+		    && (Random() % 3) == 0)
 		    {
 			do
 			{
@@ -4326,7 +4326,8 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
             case HOLD_EFFECT_LIFE_ORB:
                 if (gProtectStructs[gBankAttacker].dealtDmg
                     && gBankAttacker != gBankTarget
-                    && gBattleMons[gBankAttacker].hp != 0)
+                    && gBattleMons[gBankAttacker].hp != 0
+                    && gBattleMons[gBankAttacker].ability != ABILITY_MAGIC_GUARD)
                 {
                     gLastUsedItem = atkItem;
                     gStringBank = gBankAttacker;

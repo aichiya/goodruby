@@ -71,7 +71,7 @@ LittlerootTown_ProfessorBirchsLab_Text_174075:: @ 8174075
 LittlerootTown_ProfessorBirchsLab_Text_1740B4:: @ 81740B4
 	.string "PROF. BIRCH: {RIVAL} should be on\n"
 	.string "Route 103 somewhere.\p"
-	.string "If you or your POKéMON get tired,\n"
+	.string "If you or your Pokémon get tired,\n"
 	.string "get some rest at home.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_17411F:: @ 817411F

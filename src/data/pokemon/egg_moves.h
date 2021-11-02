@@ -2554,10 +2554,12 @@ const u16 gTaurosEggMoves[] = {
 };
 
 const u16 gMagikarpEggMoves[] = {
+    MOVE_BOUNCE,
     0,
 };
 
 const u16 gGyaradosEggMoves[] = {
+    MOVE_BOUNCE,
     0,
 };
 
@@ -2871,17 +2873,15 @@ const u16 gSnorlaxEggMoves[] = {
     MOVE_COUNTER,
     MOVE_CURSE,
     MOVE_DOUBLE_EDGE,
-    MOVE_LICK,
-    MOVE_NATURAL_GIFT,
     MOVE_FISSURE,
     MOVE_LICK,
     MOVE_NATURAL_GIFT,
     MOVE_PURSUIT,
     // Power-Up Punch,
     MOVE_SELF_DESTRUCT,
-    MOVE_PURSUIT,
     MOVE_SUBSTITUTE,
     MOVE_WHIRLWIND,
+    MOVE_ZEN_HEADBUTT,
     0,
 };
 
@@ -3645,6 +3645,7 @@ const u16 gAmbipomEggMoves[] = {
 const u16 gSunkernEggMoves[] = {
     MOVE_BIDE,
     MOVE_CURSE,
+    MOVE_EARTH_POWER,
     MOVE_ENCORE,
     MOVE_ENDURE,
     MOVE_GRASS_WHISTLE,
@@ -3662,6 +3663,7 @@ const u16 gSunkernEggMoves[] = {
 const u16 gSunfloraEggMoves[] = {
     MOVE_BIDE,
     MOVE_CURSE,
+    MOVE_EARTH_POWER,
     MOVE_ENCORE,
     MOVE_ENDURE,
     MOVE_GRASS_WHISTLE,
@@ -5043,6 +5045,7 @@ const u16 gShroomishEggMoves[] = {
     MOVE_HELPING_HAND,
     MOVE_NATURAL_GIFT,
     MOVE_SEED_BOMB,
+    MOVE_SPORE,
     MOVE_SWAGGER,
     MOVE_WAKE_UP_SLAP,
     MOVE_WORRY_SEED,
@@ -5059,6 +5062,7 @@ const u16 gBreloomEggMoves[] = {
     MOVE_HELPING_HAND,
     MOVE_NATURAL_GIFT,
     MOVE_SEED_BOMB,
+    MOVE_SPORE,
     MOVE_SWAGGER,
     MOVE_WAKE_UP_SLAP,
     MOVE_WORRY_SEED,

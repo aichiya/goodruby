@@ -34,6 +34,7 @@
 #include "roamer.h"
 #include "rotating_gate.h"
 #include "safari_zone.h"
+#include "save_menu_util.h"
 #include "script.h"
 #include "script_pokemon_80C4.h"
 #include "secret_base.h"
@@ -409,6 +410,77 @@ struct MapHeader *const GetDestinationWarpMapHeader(void)
 
 static void LoadCurrentMapData(void)
 {
+    if (gSaveBlock1.location.mapGroup == MAP_GROUP(ALTERING_CAVE_1FV1) &&
+        gSaveBlock1.location.mapNum == MAP_NUM(ALTERING_CAVE_1FV1))
+    {
+        switch (GetBadgeCount())
+        {
+            case 0:
+            case 1:
+                break;
+            case 2:
+                gSaveBlock1.location.mapGroup = MAP_GROUP(ALTERING_CAVE_1FV2);
+                gSaveBlock1.location.mapNum = MAP_NUM(ALTERING_CAVE_1FV2);
+                break;
+            case 3:
+                gSaveBlock1.location.mapGroup = MAP_GROUP(ALTERING_CAVE_1FV3);
+                gSaveBlock1.location.mapNum = MAP_NUM(ALTERING_CAVE_1FV3);
+                break;
+            default:
+                gSaveBlock1.location.mapGroup = MAP_GROUP(ALTERING_CAVE_1FV4);
+                gSaveBlock1.location.mapNum = MAP_NUM(ALTERING_CAVE_1FV4);
+                break;
+        }
+    }
+    else if (gSaveBlock1.location.mapGroup == MAP_GROUP(ALTERING_CAVE_2FV1) &&
+        gSaveBlock1.location.mapNum == MAP_NUM(ALTERING_CAVE_2FV1))
+    {
+        switch (GetBadgeCount())
+        {
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+                break;
+            case 5:
+                gSaveBlock1.location.mapGroup = MAP_GROUP(ALTERING_CAVE_2FV2);
+                gSaveBlock1.location.mapNum = MAP_NUM(ALTERING_CAVE_2FV2);
+                break;
+            case 6:
+                gSaveBlock1.location.mapGroup = MAP_GROUP(ALTERING_CAVE_2FV3);
+                gSaveBlock1.location.mapNum = MAP_NUM(ALTERING_CAVE_2FV3);
+                break;
+            default:
+                gSaveBlock1.location.mapGroup = MAP_GROUP(ALTERING_CAVE_2FV4);
+                gSaveBlock1.location.mapNum = MAP_NUM(ALTERING_CAVE_2FV4);
+                break;
+        }
+    }
+    else if (gSaveBlock1.location.mapGroup == MAP_GROUP(ALTERING_CAVE_3FV1) &&
+        gSaveBlock1.location.mapNum == MAP_NUM(ALTERING_CAVE_3FV1))
+    {
+        switch (GetBadgeCount())
+        {
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+            case 7:
+                break;
+            case 8:
+                gSaveBlock1.location.mapGroup = MAP_GROUP(ALTERING_CAVE_3FV2);
+                gSaveBlock1.location.mapNum = MAP_NUM(ALTERING_CAVE_3FV2);
+                break;
+        }
+        if (GetGameStat(GAME_STAT_ENTERED_HOF)) {
+            gSaveBlock1.location.mapGroup = MAP_GROUP(ALTERING_CAVE_3FV3);
+            gSaveBlock1.location.mapNum = MAP_NUM(ALTERING_CAVE_3FV3);
+        }
+    }
     gMapHeader = *Overworld_GetMapHeaderByGroupAndId(gSaveBlock1.location.mapGroup, gSaveBlock1.location.mapNum);
     gSaveBlock1.mapLayoutId = gMapHeader.mapLayoutId;
     gMapHeader.mapLayout = GetMapLayout();

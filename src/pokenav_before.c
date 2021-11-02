@@ -1230,19 +1230,19 @@ void sub_80ECC08()
             switch ((s8)ewram0_10.var6dad)
             {
             case 0:
-                ewram0_10.var87D8 = 22;
+                ewram0_10.var87D8 = MON_DATA_COOL;
                 break;
             case 1:
-                ewram0_10.var87D8 = 23;
+                ewram0_10.var87D8 = MON_DATA_BEAUTY;
                 break;
             case 2:
-                ewram0_10.var87D8 = 24;
+                ewram0_10.var87D8 = MON_DATA_CUTE;
                 break;
             case 3:
-                ewram0_10.var87D8 = 33;
+                ewram0_10.var87D8 = MON_DATA_SMART;
                 break;
             case 4:
-                ewram0_10.var87D8 = 47;
+                ewram0_10.var87D8 = MON_DATA_TOUGH;
                 break;
             case 5:
                 sub_80EBDBC(&sub_80EC9A8);
@@ -5633,7 +5633,6 @@ void sub_80F1480(void)
 // intended access is.
 static void sub_80F1494(void)
 {
-    u8 *arr;
     u8 *tileBuffer1 = &gUnknown_083DFEC8[0x800];
     u8 *tileBuffer2 = &gUnknown_083DFEC8[0xA98];
 
@@ -5649,13 +5648,7 @@ static void sub_80F1494(void)
         gUnknown_020388B4 = gUnknown_083DFEC4->unkBC8E - gUnknown_083DFEC4->unkBC8F;
         gUnknown_020388B4 = gUnknown_083DFEC4->unkBC4C[gUnknown_020388B4 + gUnknown_083DFEC4->unkBC90];
 
-        // FIXME!
-        arr = ((u8*)&gSaveBlock1);
-        asm("ldrh r1, [r5]\n\
-            add r0, r0, r1");
-        gUnknown_020388B4 = arr[0x30F7];
-        // The bug fix for this code is the following:
-        // gUnknown_020388B4 = gSaveBlock1.externalReservedData.giftRibbons[gUnknown_020388B4];
+        gUnknown_020388B4 = gSaveBlock1.externalReservedData.giftRibbons[gUnknown_020388B4];
         if (gUnknown_020388B4)
         {
             gUnknown_020388B4--;

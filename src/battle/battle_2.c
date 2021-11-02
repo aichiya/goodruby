@@ -1190,7 +1190,7 @@ u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
 
                 case TRAINER_CLASS_POKEFAN: 
                 case TRAINER_CLASS_POKEMON_BREEDER:
-                    ball = personalityValue % 23; // incomprehensible taste
+                    ball = 1 + (personalityValue % 22); // incomprehensible taste
                     if (ball == ITEM_MASTER_BALL)
                         ball = ITEM_POKE_BALL;
                     break;
@@ -4353,6 +4353,14 @@ void bc_aura_message(void)
                 PREPARE_STAT_BUFFER(gBattleTextBuff1, statId)
                 gActiveBattler = 1;
                 PrepareStringBattle(447, 1);
+                break;
+            case SPECIES_MEWTWO: // satk+2, eva+2
+                gBattleMons[1].statStages[STAT_STAGE_SPATK] += 2;
+                gBattleMons[1].statStages[STAT_STAGE_EVASION] += 2;
+                gActiveBattler = 1;
+                PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_STAGE_SPATK)
+                PREPARE_STAT_BUFFER(gBattleTextBuff2, STAT_STAGE_EVASION)
+                PrepareStringBattle(448, 1);
                 break;
             case SPECIES_MEW:
             case SPECIES_CELEBI:

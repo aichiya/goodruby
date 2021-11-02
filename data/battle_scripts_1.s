@@ -1044,8 +1044,13 @@ BattleScript_EffectSpeedUp2: @ 81D7722
 	goto BattleScript_EffectStatUp
 
 BattleScript_EffectSpecialAttackUp2: @ 81D772D
+    jumpifmove MOVE_TAIL_GLOW, BattleScript_EffectSpecialAttackUp3
 	setstatchanger SP_ATTACK, 2, FALSE
 	goto BattleScript_EffectStatUp
+
+BattleScript_EffectSpecialAttackUp3:
+    setstatchanger SP_ATTACK, 3, FALSE
+    goto BattleScript_EffectStatUp
 
 BattleScript_EffectSpecialDefenseUp2: @ 81D7738
 	setstatchanger SP_DEFENSE, 2, FALSE
@@ -2114,6 +2119,7 @@ BattleScript_EffectStomp: @ 81D81B3
 BattleScript_EffectSolarbeam: @ 81D81C9
 	jumpifabilitypresent ABILITY_CLOUD_NINE, BattleScript_SolarbeamDecideTurn
 	jumpifabilitypresent ABILITY_AIR_LOCK, BattleScript_SolarbeamDecideTurn
+	jumpifability USER, ABILITY_FORECAST, BattleScript_SolarbeamOnFirstTurn
 	jumpifhalfword COMMON_BITS, gBattleWeather, 96, BattleScript_SolarbeamOnFirstTurn
 
 BattleScript_SolarbeamDecideTurn: @ 81D81E1

@@ -154,6 +154,7 @@ const struct WildPokemon GraniteCave_B2F_RockSmashMons [] =
     {15, 20, SPECIES_NOSEPASS},
     {15, 20, SPECIES_NOSEPASS},
     {15, 20, SPECIES_NOSEPASS},
+    {15, 20, SPECIES_NOSEPASS},
 };
 const struct WildPokemonInfo GraniteCave_B2F_RockSmashMonsInfo = {90, GraniteCave_B2F_RockSmashMons};
 
@@ -177,6 +178,7 @@ const struct WildPokemonInfo GraniteCave_B4F_LandMonsInfo = {10, GraniteCave_B4F
 const struct WildPokemon GraniteCave_B4F_RockSmashMons [] =
 {
     {15, 20, SPECIES_SHUCKLE},
+    {15, 20, SPECIES_NOSEPASS},
     {15, 20, SPECIES_NOSEPASS},
     {15, 20, SPECIES_NOSEPASS},
     {15, 20, SPECIES_NOSEPASS},
@@ -890,6 +892,7 @@ const struct WildPokemon Route111_RockSmashMons [] =
     {15, 20, SPECIES_GEODUDE},
     {15, 20, SPECIES_GEODUDE},
     {15, 20, SPECIES_GEODUDE},
+    {15, 20, SPECIES_GEODUDE},
 };
 const struct WildPokemonInfo Route111_RockSmashMonsInfo = {20, Route111_RockSmashMons};
 
@@ -965,6 +968,7 @@ const struct WildPokemon Route114_RockSmashMons [] =
 {
     {10, 15, SPECIES_GEODUDE},
     {5, 10, SPECIES_GEODUDE},
+    {15, 20, SPECIES_GEODUDE},
     {15, 20, SPECIES_GEODUDE},
     {15, 20, SPECIES_GEODUDE},
     {15, 20, SPECIES_GEODUDE},
@@ -1199,6 +1203,7 @@ const struct WildPokemon SafariZone_Northeast_RockSmashMons [] =
     {15, 20, SPECIES_GEODUDE},
     {20, 25, SPECIES_GEODUDE},
     {25, 30, SPECIES_GEODUDE},
+    {25, 30, SPECIES_GEODUDE},
 };
 const struct WildPokemonInfo SafariZone_Northeast_RockSmashMonsInfo = {25, SafariZone_Northeast_RockSmashMons};
 
@@ -1280,6 +1285,142 @@ const struct WildPokemon TracklessForest_LandMons [] =
     {22, 25, SPECIES_PINSIR},
 };
 const struct WildPokemonInfo TracklessForest_LandMonsInfo = {20, TracklessForest_LandMons};
+
+const struct WildPokemon AlteringCave1FV1_LandMons [] =
+{
+    {11, 13, SPECIES_ZUBAT},
+    {11, 13, SPECIES_ZUBAT},
+    {11, 13, SPECIES_ZUBAT},
+    {11, 13, SPECIES_ZUBAT},
+    {11, 13, SPECIES_ZUBAT},
+    {11, 13, SPECIES_ZUBAT},
+    {11, 13, SPECIES_ZUBAT},
+    {11, 13, SPECIES_ZUBAT},
+    {11, 13, SPECIES_ZUBAT},
+    {11, 13, SPECIES_ZUBAT},
+    {11, 13, SPECIES_ZUBAT},
+    {11, 13, SPECIES_ZUBAT},
+};
+const struct WildPokemonInfo AlteringCave1FV1_LandMonsInfo = {10, AlteringCave1FV1_LandMons};
+
+const struct WildPokemon AlteringCave1FV2_LandMons [] =
+{
+    {14, 16, SPECIES_ZUBAT},
+    {14, 16, SPECIES_ONIX},
+    {14, 16, SPECIES_ZUBAT},
+    {14, 16, SPECIES_ONIX},
+    {14, 16, SPECIES_TEDDIURSA},
+    {14, 16, SPECIES_HOUNDOUR},
+    {14, 16, SPECIES_TEDDIURSA},
+    {14, 16, SPECIES_HOUNDOUR},
+    {14, 16, SPECIES_TEDDIURSA},
+    {14, 16, SPECIES_HOUNDOUR},
+    {14, 16, SPECIES_TEDDIURSA},
+    {14, 16, SPECIES_HOUNDOUR},
+};
+const struct WildPokemonInfo AlteringCave1FV2_LandMonsInfo = {10, AlteringCave1FV2_LandMons};
+
+const struct WildPokemon AlteringCave1FV3_LandMons [] =
+{
+    {16, 19, SPECIES_ZUBAT},
+    {16, 19, SPECIES_ONIX},
+    {16, 19, SPECIES_SHUCKLE},
+    {16, 19, SPECIES_SMEARGLE},
+    {16, 19, SPECIES_TEDDIURSA},
+    {16, 19, SPECIES_HOUNDOUR},
+    {16, 19, SPECIES_TEDDIURSA},
+    {16, 19, SPECIES_HOUNDOUR},
+    {16, 19, SPECIES_TEDDIURSA},
+    {16, 19, SPECIES_HOUNDOUR},
+    {16, 19, SPECIES_TEDDIURSA},
+    {16, 19, SPECIES_HOUNDOUR},
+};
+const struct WildPokemonInfo AlteringCave1FV3_LandMonsInfo = {10, AlteringCave1FV3_LandMons};
+
+const struct WildPokemon AlteringCave2FV1_LandMons [] =
+{
+    {22, 25, SPECIES_DUSKULL},
+    {22, 25, SPECIES_SNORUNT},
+    {22, 25, SPECIES_ZUBAT},
+    {22, 25, SPECIES_ONIX},
+    {22, 25, SPECIES_ZUBAT},
+    {22, 25, SPECIES_ONIX},
+    {22, 25, SPECIES_ZUBAT},
+    {22, 25, SPECIES_ONIX},
+    {22, 25, SPECIES_KANGASKHAN},
+    {22, 25, SPECIES_KANGASKHAN},
+    {22, 25, SPECIES_KANGASKHAN},
+    {22, 25, SPECIES_KANGASKHAN},
+};
+const struct WildPokemonInfo AlteringCave2FV1_LandMonsInfo = {10, AlteringCave2FV1_LandMons};
+
+const struct WildPokemon AlteringCave2FV2_LandMons [] =
+{
+    {26, 28, SPECIES_DUSKULL},
+    {26, 28, SPECIES_SNORUNT},
+    {26, 28, SPECIES_GOLBAT},
+    {26, 28, SPECIES_ONIX},
+    {26, 28, SPECIES_GOLBAT},
+    {26, 28, SPECIES_ONIX},
+    {26, 28, SPECIES_SNEASEL},
+    {26, 28, SPECIES_BELDUM},
+    {26, 28, SPECIES_KANGASKHAN},
+    {26, 28, SPECIES_KANGASKHAN},
+    {26, 28, SPECIES_KANGASKHAN},
+    {26, 28, SPECIES_KANGASKHAN},
+};
+const struct WildPokemonInfo AlteringCave2FV2_LandMonsInfo = {10, AlteringCave2FV2_LandMons};
+
+const struct WildPokemon AlteringCave2FV3_LandMons [] =
+{
+    {32, 35, SPECIES_DUSKULL},
+    {32, 35, SPECIES_SNORUNT},
+    {32, 35, SPECIES_GOLBAT},
+    {32, 35, SPECIES_ONIX},
+    {32, 35, SPECIES_SNEASEL},
+    {32, 35, SPECIES_KANGASKHAN},
+    {32, 35, SPECIES_BELDUM},
+    {10, 15, SPECIES_BULBASAUR},
+    {10, 15, SPECIES_CHARMANDER},
+    {10, 15, SPECIES_SQUIRTLE},
+    {10, 15, SPECIES_CHARMANDER},
+    {10, 15, SPECIES_SQUIRTLE},
+};
+const struct WildPokemonInfo AlteringCave2FV3_LandMonsInfo = {10, AlteringCave2FV3_LandMons};
+
+const struct WildPokemon AlteringCave3FV1_LandMons [] =
+{
+    {37, 39, SPECIES_DUSCLOPS},
+    {37, 39, SPECIES_SNEASEL},
+    {37, 39, SPECIES_KANGASKHAN},
+    {37, 39, SPECIES_METANG},
+    {37, 39, SPECIES_AERODACTYL},
+    {37, 39, SPECIES_GRUMPIG},
+    {37, 39, SPECIES_DITTO},
+    {10, 15, SPECIES_BULBASAUR},
+    {10, 15, SPECIES_CHARMANDER},
+    {10, 15, SPECIES_SQUIRTLE},
+    {10, 15, SPECIES_CHARMANDER},
+    {10, 15, SPECIES_SQUIRTLE},
+};
+const struct WildPokemonInfo AlteringCave3FV1_LandMonsInfo = {10, AlteringCave3FV1_LandMons};
+
+const struct WildPokemon AlteringCave3FV2_LandMons [] =
+{
+    {41, 43, SPECIES_DUSCLOPS},
+    {41, 43, SPECIES_SNEASEL},
+    {41, 43, SPECIES_KANGASKHAN},
+    {41, 43, SPECIES_METANG},
+    {41, 43, SPECIES_AERODACTYL},
+    {41, 43, SPECIES_GRUMPIG},
+    {41, 43, SPECIES_DITTO},
+    {10, 15, SPECIES_BULBASAUR},
+    {10, 15, SPECIES_CHARMANDER},
+    {10, 15, SPECIES_SQUIRTLE},
+    {10, 15, SPECIES_CHARMANDER},
+    {10, 15, SPECIES_SQUIRTLE},
+};
+const struct WildPokemonInfo AlteringCave3FV2_LandMonsInfo = {10, AlteringCave3FV2_LandMons};
 
 
 const struct WildPokemonHeader gWildMonHeaders[] =
@@ -2174,6 +2315,94 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapGroup = MAP_GROUP(NEW_MAUVILLE_INSIDE_B3F),
         .mapNum = MAP_NUM(NEW_MAUVILLE_INSIDE_B3F),
         .landMonsInfo = &NewMauville_Inside_B3F_LandMonsInfo,
+        .waterMonsInfo = NULL,
+        .rockSmashMonsInfo = NULL,
+        .fishingMonsInfo = NULL,
+    },
+    {
+        .mapGroup = MAP_GROUP(ALTERING_CAVE_1FV1),
+        .mapNum = MAP_NUM(ALTERING_CAVE_1FV1),
+        .landMonsInfo = &AlteringCave1FV1_LandMonsInfo,
+        .waterMonsInfo = NULL,
+        .rockSmashMonsInfo = NULL,
+        .fishingMonsInfo = NULL,
+    },
+    {
+        .mapGroup = MAP_GROUP(ALTERING_CAVE_1FV2),
+        .mapNum = MAP_NUM(ALTERING_CAVE_1FV2),
+        .landMonsInfo = &AlteringCave1FV2_LandMonsInfo,
+        .waterMonsInfo = NULL,
+        .rockSmashMonsInfo = NULL,
+        .fishingMonsInfo = NULL,
+    },
+    {
+        .mapGroup = MAP_GROUP(ALTERING_CAVE_1FV3),
+        .mapNum = MAP_NUM(ALTERING_CAVE_1FV3),
+        .landMonsInfo = &AlteringCave1FV3_LandMonsInfo,
+        .waterMonsInfo = NULL,
+        .rockSmashMonsInfo = NULL,
+        .fishingMonsInfo = NULL,
+    },
+    {
+        .mapGroup = MAP_GROUP(ALTERING_CAVE_1FV4),
+        .mapNum = MAP_NUM(ALTERING_CAVE_1FV4),
+        .landMonsInfo = &AlteringCave1FV3_LandMonsInfo,
+        .waterMonsInfo = NULL,
+        .rockSmashMonsInfo = NULL,
+        .fishingMonsInfo = NULL,
+    },
+    {
+        .mapGroup = MAP_GROUP(ALTERING_CAVE_2FV1),
+        .mapNum = MAP_NUM(ALTERING_CAVE_2FV1),
+        .landMonsInfo = &AlteringCave2FV1_LandMonsInfo,
+        .waterMonsInfo = NULL,
+        .rockSmashMonsInfo = NULL,
+        .fishingMonsInfo = NULL,
+    },
+    {
+        .mapGroup = MAP_GROUP(ALTERING_CAVE_2FV2),
+        .mapNum = MAP_NUM(ALTERING_CAVE_2FV2),
+        .landMonsInfo = &AlteringCave2FV2_LandMonsInfo,
+        .waterMonsInfo = NULL,
+        .rockSmashMonsInfo = NULL,
+        .fishingMonsInfo = NULL,
+    },
+    {
+        .mapGroup = MAP_GROUP(ALTERING_CAVE_2FV3),
+        .mapNum = MAP_NUM(ALTERING_CAVE_2FV3),
+        .landMonsInfo = &AlteringCave2FV3_LandMonsInfo,
+        .waterMonsInfo = NULL,
+        .rockSmashMonsInfo = NULL,
+        .fishingMonsInfo = NULL,
+    },
+    {
+        .mapGroup = MAP_GROUP(ALTERING_CAVE_2FV4),
+        .mapNum = MAP_NUM(ALTERING_CAVE_2FV4),
+        .landMonsInfo = &AlteringCave2FV3_LandMonsInfo,
+        .waterMonsInfo = NULL,
+        .rockSmashMonsInfo = NULL,
+        .fishingMonsInfo = NULL,
+    },
+    {
+        .mapGroup = MAP_GROUP(ALTERING_CAVE_3FV1),
+        .mapNum = MAP_NUM(ALTERING_CAVE_3FV1),
+        .landMonsInfo = &AlteringCave3FV1_LandMonsInfo,
+        .waterMonsInfo = NULL,
+        .rockSmashMonsInfo = NULL,
+        .fishingMonsInfo = NULL,
+    },
+    {
+        .mapGroup = MAP_GROUP(ALTERING_CAVE_3FV2),
+        .mapNum = MAP_NUM(ALTERING_CAVE_3FV2),
+        .landMonsInfo = &AlteringCave3FV2_LandMonsInfo,
+        .waterMonsInfo = NULL,
+        .rockSmashMonsInfo = NULL,
+        .fishingMonsInfo = NULL,
+    },
+    {
+        .mapGroup = MAP_GROUP(ALTERING_CAVE_3FV3),
+        .mapNum = MAP_NUM(ALTERING_CAVE_3FV3),
+        .landMonsInfo = &AlteringCave3FV2_LandMonsInfo,
         .waterMonsInfo = NULL,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = NULL,

@@ -585,6 +585,7 @@ Mega Punch: Base power raised from 80 to 120. PP lowered from 20 to 10. (Accurac
 Mega Kick: Base power raised from 120 to 130. Accuracy raised from 75% to 90%. PP raised from 5 to 10. Now inflicts 50% recoil if it misses.
 Future Sight: Old effect scrapped; is now a 2-turn move. User's SAtk increases on first turn, damage is dealt second turn. Base power lowered to 100 from 120.
 Doom Desire: Old effect scrapped; is now a 2-turn move. User's SAtk increases on first turn, damage is dealt second turn.
+Punishment: PP raised from 5 to 15.
 
 Fury Cutter: Now reaches maximum power on its 5th use at 640 (was 160 at 3rd use).
 Dark Void: Has 100% accuracy (up from 50%) but only hits a single target. Can be used by species other than Darkrai.

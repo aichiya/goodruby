@@ -348,3 +348,11 @@ gMapLayouts:: @ 8304F18
     .4byte AlteringCave1FV2_Layout
     .4byte AlteringCave1FV3_Layout
     .4byte AlteringCave1FV4_Layout
+    .4byte AlteringCave2FV1_Layout
+    .4byte AlteringCave2FV2_Layout
+    .4byte AlteringCave2FV3_Layout
+    .4byte AlteringCave2FV4_Layout
+    .4byte AlteringCave3FV1_Layout
+    .4byte AlteringCave3FV2_Layout
+    .4byte AlteringCave3FV3_Layout
+    .4byte AlteringCave4F_Layout

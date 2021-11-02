@@ -80,4 +80,5 @@ const u8 gMapName_SecretBase[] = _("Secret Base");
 const u8 gMapName_GnarledRidge[] = _("Gnarled Ridge");
 const u8 gMapName_TracklessForest[] = _("Trackless Forest");
 const u8 gMapName_NamelessCavern[] = _("Nameless Cavern");
+const u8 gMapName_AlteringCave[] = _("Altering Cave");
 const u8 gMapName_None[] = _("");

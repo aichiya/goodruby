@@ -409,6 +409,18 @@ gStdScripts_End::
 	.include "data/maps/NewMauville_Inside_B3F/scripts.inc"
 	.include "data/maps/NamelessCavern/scripts.inc"
 	.include "data/maps/Underwater5/scripts.inc"
+	.include "data/maps/AlteringCave_1FV1/scripts.inc"
+	.include "data/maps/AlteringCave_1FV2/scripts.inc"
+	.include "data/maps/AlteringCave_1FV3/scripts.inc"
+	.include "data/maps/AlteringCave_1FV4/scripts.inc"
+	.include "data/maps/AlteringCave_2FV1/scripts.inc"
+	.include "data/maps/AlteringCave_2FV2/scripts.inc"
+	.include "data/maps/AlteringCave_2FV3/scripts.inc"
+	.include "data/maps/AlteringCave_2FV4/scripts.inc"
+	.include "data/maps/AlteringCave_3FV1/scripts.inc"
+	.include "data/maps/AlteringCave_3FV2/scripts.inc"
+	.include "data/maps/AlteringCave_3FV3/scripts.inc"
+	.include "data/maps/AlteringCave_4F/scripts.inc"
 
 gUnknown_0815F36C:: @ 815F36C
 	lockall

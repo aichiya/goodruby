@@ -379,6 +379,18 @@
 #define MAP_NEW_MAUVILLE_INSIDE_B2F               (92 | (24 << 8))
 #define MAP_NEW_MAUVILLE_INSIDE_B3F               (93 | (24 << 8))
 #define MAP_NAMELESS_CAVERN                       (94 | (24 << 8))
+#define MAP_ALTERING_CAVE_1FV1                    (95 | (24 << 8))
+#define MAP_ALTERING_CAVE_1FV2                    (96 | (24 << 8))
+#define MAP_ALTERING_CAVE_1FV3                    (97 | (24 << 8))
+#define MAP_ALTERING_CAVE_1FV4                    (98 | (24 << 8))
+#define MAP_ALTERING_CAVE_2FV1                    (99 | (24 << 8))
+#define MAP_ALTERING_CAVE_2FV2                    (100 | (24 << 8))
+#define MAP_ALTERING_CAVE_2FV3                    (101 | (24 << 8))
+#define MAP_ALTERING_CAVE_2FV4                    (102 | (24 << 8))
+#define MAP_ALTERING_CAVE_3FV1                    (103 | (24 << 8))
+#define MAP_ALTERING_CAVE_3FV2                    (104 | (24 << 8))
+#define MAP_ALTERING_CAVE_3FV3                    (105 | (24 << 8))
+#define MAP_ALTERING_CAVE_4F                      (106 | (24 << 8))
 
 // Map Group 25
 #define MAP_SECRET_BASE_RED_CAVE1    (0 | (25 << 8))

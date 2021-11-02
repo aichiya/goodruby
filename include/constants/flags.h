@@ -809,6 +809,14 @@
 #define FLAG_ITEM_ROUTE134                  0x493
 #define FLAG_ITEM_ROUTE130                  0x494
 #define FLAG_ITEM_VR_BIG_NUGGET             0x495
+#define FLAG_ITEM_ALTERING_CAVE_F1_1        0x496
+#define FLAG_ITEM_ALTERING_CAVE_F1_2        0x497
+#define FLAG_ITEM_ALTERING_CAVE_F2_1        0x498
+#define FLAG_ITEM_ALTERING_CAVE_F2_2        0x499
+#define FLAG_ITEM_ALTERING_CAVE_F2_3        0x49A
+#define FLAG_ITEM_ALTERING_CAVE_F3_1        0x49B
+#define FLAG_ITEM_ALTERING_CAVE_F3_2        0x49C
+#define FLAG_ITEM_ALTERING_CAVE_F3_3        0x49D
 
 #define FLAG_DEFEATED_RUSTBORO_GYM          0x4B1
 
@@ -841,6 +849,7 @@
 #define FLAG_FOUGHT_LAPRAS                  0x4E8
 #define FLAG_HIDE_CELEBI                    0x4E9
 #define FLAG_HIDE_MEW                       0x4EA
+#define FLAG_HIDE_MEWTWO                    0x4EB
 
 
 #define TRAINER_FLAG_START 0x500

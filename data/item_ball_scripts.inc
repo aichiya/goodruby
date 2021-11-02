@@ -435,11 +435,11 @@ MtPyre_3F_EventScript_1B1940:: @ 81B1940
 	end
 
 MtPyre_4F_EventScript_1B194D:: @ 81B194D
-	giveitem_std ITEM_SEA_INCENSE, 1, 1
+	giveitem_std ITEM_MAX_REVIVE, 1, 1
 	end
 
 MtPyre_5F_EventScript_1B195A:: @ 81B195A
-	giveitem_std ITEM_LAX_INCENSE, 1, 1
+	giveitem_std ITEM_HEART_SCALE, 1, 1
 	end
 
 MtPyre_6F_EventScript_1B1967:: @ 81B1967
@@ -624,4 +624,32 @@ Route134_EventScript_Item::
 
 VictoryRoad_1F_EventScript_BigNugget::
     giveitem_std ITEM_BIG_NUGGET, 1, 1
+    end
+
+AlteringCave_1F_EventScript_HeartScale::
+    giveitem_std ITEM_HEART_SCALE, 1, 1
+    end
+
+AlteringCave_1F_EventScript_Nugget::
+    giveitem_std ITEM_NUGGET, 1, 1
+    end
+
+AlteringCave_2F_EventScript_Spoon::
+    giveitem_std ITEM_TWISTED_SPOON, 1, 1
+    end
+
+AlteringCave_2F_EventScript_TM84::
+    giveitem_std ITEM_TM84_POISON_JAB, 1, 1
+    end
+
+AlteringCave_2F_EventScript_RareCandy::
+    giveitem_std ITEM_RARE_CANDY, 1, 1
+    end
+
+AlteringCave_3F_EventScript_TM67::
+    giveitem_std ITEM_TM67_KNOCK_OFF, 1, 1
+    end
+
+AlteringCave_3F_EventScript_RareCandy::
+    giveitem_std ITEM_RARE_CANDY, 1, 1
     end

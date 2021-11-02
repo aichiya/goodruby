@@ -290,10 +290,10 @@ static const u8 gItemDescription_ShoalShell[] = _(
     "deep inside the\n"
     "Shoal Cave.");
 
-static const u8 gItemDescription_RedShard[] = _(
+static const u8 gItemDescription_RelicShard[] = _(
     "A shard from an\n"
     "ancient item.\n"
-    "Can be sold cheaply.");
+    "Seems important.");
 
 static const u8 gItemDescription_BlueShard[] = _(
     "A shard from an\n"
@@ -1159,7 +1159,7 @@ static const u8 gItemDescription_FlameOrb[] = _(
 
 static const u8 gItemDescription_BlackSludge[] = _(
     "A hold item that\n"
-    "gradually heals Poison-\n"
+    "heals Poison\n"
     "types in battle.");
 
 static const u8 gItemDescription_AssaultVest[] = _(
@@ -1521,9 +1521,9 @@ static const u8 gItemDescription_TM33[] = _(
     "physical attacks.");
 
 static const u8 gItemDescription_TM34[] = _(
-    "Attacks with a big\n"
-    "wave of garbage.\n"
-    "May also poison.");
+    "Enables full-power\n"
+    "attack, but sharply\n"
+    "lowers Sp. Atk.");
 
 static const u8 gItemDescription_TM35[] = _(
     "Looses a stream of\n"
@@ -1736,9 +1736,9 @@ static const u8 gItemDescription_TM76[] = _(
     "switch into battle.");
  
 static const u8 gItemDescription_TM77[] = _(
-    "placeholder text\n"
-    "stuff\n"
-    ".");
+    "A rotating attack\n"
+    "with a high chance\n"
+    "to critically hit.");
  
 static const u8 gItemDescription_TM78[] = _(
     "Smashes the ground\n"

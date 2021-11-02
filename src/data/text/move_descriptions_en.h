@@ -807,8 +807,8 @@ static const u8 MoveDescription_GigaDrain[] = _(
     "the damage inflicted.");
 
 static const u8 MoveDescription_Endure[] = _(
-    "Endures any attack for\n"
-    "1 turn, leaving at least 1HP.");
+    "Endures any attack for a\n"
+    "turn, leaving at least 1HP.");
 
 static const u8 MoveDescription_Charm[] = _(
     "Charms the foe and sharply\n"

@@ -21,6 +21,7 @@ extern const u8 gSystemText_Sound[];
 extern const u8 gSystemText_Frame[];
 extern const u8 gSystemText_Cancel[];
 extern const u8 gSystemText_ButtonMode[];
+extern const u8 gSystemText_Font[];
 extern const u8 gSystemText_Slow[];
 extern const u8 gSystemText_Mid[];
 extern const u8 gSystemText_Fast[];
@@ -35,6 +36,9 @@ extern const u8 gSystemText_Terminator[];
 extern const u8 gSystemText_Normal[];
 extern const u8 gSystemText_LR[];
 extern const u8 gSystemText_LA[];
+extern const u8 gSystemText_RS[];
+extern const u8 gSystemText_Emerald[];
+extern const u8 gSystemText_FRLG[];
 
 // start_menu
 extern const u8 SystemText_Pokedex[];

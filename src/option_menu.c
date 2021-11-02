@@ -19,7 +19,7 @@ enum
     MENUITEM_SOUND,
     MENUITEM_BUTTONMODE,
     MENUITEM_FRAMETYPE,
-    MENUITEM_CANCEL,
+    MENUITEM_FONT,
 };
 
 // Task data
@@ -30,6 +30,7 @@ enum
 #define tOptSound       data[4]
 #define tOptButtonMode  data[5]
 #define tOptFrameType   data[6]
+#define tOptFont        data[7]
 
 const u16 gUnknown_0839F5FC[] = INCBIN_U16("graphics/misc/option_menu_text.gbapal");
 // note: this is only used in the Japanese release
@@ -52,6 +53,8 @@ static u8   FrameType_ProcessInput(u8 selection);
 static void FrameType_DrawChoices(u8 selection);
 static u8   ButtonMode_ProcessInput(u8 selection);
 static void ButtonMode_DrawChoices(u8 selection);
+static u8   Font_ProcessInput(u8 selection);
+static void Font_DrawChoices(u8 selection);
 
 static void MainCB(void)
 {
@@ -154,6 +157,7 @@ void CB2_InitOptionMenu(void)
         gTasks[taskId].tOptSound       = gSaveBlock2.optionsSound;
         gTasks[taskId].tOptButtonMode  = gSaveBlock2.optionsButtonMode;
         gTasks[taskId].tOptFrameType   = gSaveBlock2.optionsWindowFrameType;
+        gTasks[taskId].tOptFont        = gSaveBlock2.optionsFontStyle;
 
         Menu_DrawStdWindowFrame(2, 0, 27, 3);   // title box
         Menu_DrawStdWindowFrame(2, 4, 27, 19);  // options list box
@@ -166,7 +170,7 @@ void CB2_InitOptionMenu(void)
         Menu_PrintText(gSystemText_Sound,       4, 11);
         Menu_PrintText(gSystemText_ButtonMode,  4, 13);
         Menu_PrintText(gSystemText_Frame,       4, 15);
-        Menu_PrintText(gSystemText_Cancel,      4, 17);
+        Menu_PrintText(gSystemText_Font,        4, 17);
 
         TextSpeed_DrawChoices(gTasks[taskId].tOptTextSpeed);
         BattleScene_DrawChoices(gTasks[taskId].tOptBattleScene);
@@ -174,6 +178,7 @@ void CB2_InitOptionMenu(void)
         Sound_DrawChoices(gTasks[taskId].tOptSound);
         ButtonMode_DrawChoices(gTasks[taskId].tOptButtonMode);
         FrameType_DrawChoices(gTasks[taskId].tOptFrameType);
+        Font_DrawChoices(gTasks[taskId].tOptFont);
 
         REG_WIN0H = WIN_RANGE(17, 223);
         REG_WIN0V = WIN_RANGE(1, 31);
@@ -196,12 +201,7 @@ static void Task_OptionMenuFadeIn(u8 taskId)
 
 static void Task_OptionMenuProcessInput(u8 taskId)
 {
-    if (gMain.newKeys & A_BUTTON)
-    {
-        if (gTasks[taskId].tMenuSelection == MENUITEM_CANCEL)
-            gTasks[taskId].func = Task_OptionMenuSave;
-    }
-    else if (gMain.newKeys & B_BUTTON)
+    if (gMain.newKeys & B_BUTTON)
     {
         gTasks[taskId].func = Task_OptionMenuSave;
     }
@@ -249,6 +249,10 @@ static void Task_OptionMenuProcessInput(u8 taskId)
             gTasks[taskId].tOptFrameType = FrameType_ProcessInput(gTasks[taskId].tOptFrameType);
             FrameType_DrawChoices(gTasks[taskId].tOptFrameType);
             break;
+        case MENUITEM_FONT:
+            gTasks[taskId].tOptFont = Font_ProcessInput(gTasks[taskId].tOptFont);
+            Font_DrawChoices(gTasks[taskId].tOptFont);
+            break;
         }
     }
 }
@@ -261,6 +265,7 @@ static void Task_OptionMenuSave(u8 taskId)
     gSaveBlock2.optionsSound           = gTasks[taskId].tOptSound;
     gSaveBlock2.optionsButtonMode      = gTasks[taskId].tOptButtonMode;
     gSaveBlock2.optionsWindowFrameType = gTasks[taskId].tOptFrameType;
+    gSaveBlock2.optionsFontStyle       = gTasks[taskId].tOptFont;
 
     BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 16, RGB(0, 0, 0));
     gTasks[taskId].func = Task_OptionMenuFadeOut;
@@ -432,7 +437,6 @@ static u8 FrameType_ProcessInput(u8 selection)
 
 #define CHAR_0 0xA1 //Character code of '0' character
 
-#if ENGLISH
 static void FrameType_DrawChoices(u8 selection)
 {
     u8 text[6];
@@ -462,69 +466,6 @@ static void FrameType_DrawChoices(u8 selection)
     Menu_PrintText(gSystemText_Type, 15, 15);
     Menu_PrintText(text, 18, 15);
 }
-#elif GERMAN
-NAKED
-static void FrameType_DrawChoices(u8 selection)
-{
-    asm(".syntax unified\n\
-    push {r4-r6,lr}\n\
-    sub sp, 0x10\n\
-    lsls r0, 24\n\
-    movs r1, 0x80\n\
-    lsls r1, 17\n\
-    adds r0, r1\n\
-    lsrs r5, r0, 24\n\
-    ldr r1, _0808C368 @ =gSystemText_Type\n\
-    mov r0, sp\n\
-    bl StringCopy\n\
-    ldr r1, _0808C36C @ =gSystemText_Terminator\n\
-    mov r0, sp\n\
-    bl StringAppend\n\
-    adds r4, r0, 0\n\
-    adds r0, r5, 0\n\
-    movs r1, 0xA\n\
-    bl __udivsi3\n\
-    adds r1, r0, 0\n\
-    lsls r0, r1, 24\n\
-    lsrs r6, r0, 24\n\
-    cmp r6, 0\n\
-    beq _0808C370\n\
-    adds r0, r1, 0\n\
-    adds r0, 0xA1\n\
-    strb r0, [r4]\n\
-    adds r4, 0x1\n\
-    adds r0, r5, 0\n\
-    movs r1, 0xA\n\
-    bl __umodsi3\n\
-    adds r0, 0xA1\n\
-    strb r0, [r4]\n\
-    b _0808C380\n\
-    .align 2, 0\n\
-_0808C368: .4byte gSystemText_Type\n\
-_0808C36C: .4byte gSystemText_Terminator\n\
-_0808C370:\n\
-    adds r0, r5, 0\n\
-    movs r1, 0xA\n\
-    bl __umodsi3\n\
-    adds r0, 0xA1\n\
-    strb r0, [r4]\n\
-    adds r4, 0x1\n\
-    strb r6, [r4]\n\
-_0808C380:\n\
-    adds r4, 0x1\n\
-    movs r0, 0xFF\n\
-    strb r0, [r4]\n\
-    mov r0, sp\n\
-    movs r1, 0xF\n\
-    movs r2, 0xF\n\
-    bl Menu_PrintText\n\
-    add sp, 0x10\n\
-    pop {r4-r6}\n\
-    pop {r0}\n\
-    bx r0\n\
-    .syntax divided\n");
-}
-#endif
 
 static u8 ButtonMode_ProcessInput(u8 selection)
 {
@@ -557,4 +498,37 @@ static void ButtonMode_DrawChoices(u8 selection)
     DrawOptionMenuChoice(gSystemText_Normal, 120, 104, styles[0]);
     DrawOptionMenuChoice(gSystemText_LR,     166, 104, styles[1]);
     DrawOptionMenuChoice(gSystemText_LA,     188, 104, styles[2]);
+}
+
+static u8 Font_ProcessInput(u8 selection)
+{
+    if (gMain.newKeys & DPAD_RIGHT)
+    {
+        if (selection < 1)
+            selection++;
+        else
+            selection = 0;
+    }
+    if (gMain.newKeys & DPAD_LEFT)
+    {
+        if (selection > 0)
+            selection--;
+        else
+            selection = 1;
+    }
+    return selection;
+}
+
+static void Font_DrawChoices(u8 selection)
+{
+    u8 styles[3];
+
+    styles[0] = 0xF;
+    styles[1] = 0xF;
+    styles[2] = 0xF;
+    styles[selection] = 0x8;
+
+    DrawOptionMenuChoice(gSystemText_RS,      120, 136, styles[0]);
+    DrawOptionMenuChoice(gSystemText_Emerald, 160, 136, styles[1]);
+    //DrawOptionMenuChoice(gSystemText_FRLG,    188, 136, styles[2]);
 }

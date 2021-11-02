@@ -401,6 +401,18 @@ gMapGroup24:: @ 83082F8
     .4byte NewMauville_Inside_B2F
     .4byte NewMauville_Inside_B3F
     .4byte NamelessCavern
+    .4byte AlteringCave_1FV1
+    .4byte AlteringCave_1FV2
+    .4byte AlteringCave_1FV3
+    .4byte AlteringCave_1FV4
+    .4byte AlteringCave_2FV1
+    .4byte AlteringCave_2FV2
+    .4byte AlteringCave_2FV3
+    .4byte AlteringCave_2FV4
+    .4byte AlteringCave_3FV1
+    .4byte AlteringCave_3FV2
+    .4byte AlteringCave_3FV3
+    .4byte AlteringCave_4F
 
 	.align 2
 gMapGroup25:: @ 8308450

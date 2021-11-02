@@ -43,6 +43,9 @@ gSystemText_Cancel:: @ 842C3F0
 gSystemText_ButtonMode:: @ 842C3FA
 	.string "{PALETTE 9}BUTTON MODE$"
 
+gSystemText_Font:: @ 842C3F0
+	.string "{PALETTE 9}FONT$"
+
 gSystemText_Slow:: @ 842C409
 	.string "{PALETTE 15}Mid$"
 
@@ -84,6 +87,15 @@ gSystemText_LR:: @ 842C465
 
 gSystemText_LA:: @ 842C46B
 	.string "{PALETTE 15}L=A$"
+    
+gSystemText_RS::
+    .string "{PALETTE 15}RS$"
+    
+gSystemText_Emerald::
+    .string "{PALETTE 15}Emerald$"
+    
+gSystemText_FRLG::
+    .string "{PALETTE 15}FRLG$"
 
 SystemText_Pokedex::
 	.string "Pokédex$"

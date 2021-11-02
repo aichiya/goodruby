@@ -240,6 +240,8 @@ static const u32 sDownArrowTiles[] = INCBIN_U32("graphics/fonts/down_arrow.4bpp"
 #include "data/text/font4_widths.h"
 #include "data/text/font0_widths.h"
 #include "data/text/font3_widths.h"
+#include "data/text/font7_widths.h"
+#include "data/text/font8_widths.h"
 // clang-format on
 
 const u16 gUnknownPalette_81E6692[] = INCBIN_U16("graphics/fonts/unknown_81E6692.gbapal");
@@ -373,6 +375,8 @@ static const WriteGlyphTilemapFunc sWriteGlyphTilemapFuncs[] =
     WriteGlyphTilemap_Font1_Font4,
     WriteGlyphTilemap_Font2_Font5,
     WriteGlyphTilemap_Font6,
+    WriteGlyphTilemap_Font0_Font3,
+    WriteGlyphTilemap_Font0_Font3,
 };
 
 static const struct Window sDefaultWindow = { .language = GAME_LANGUAGE };
@@ -408,6 +412,8 @@ static const ExtCtrlCodeFunc sExtCtrlCodeFuncs[] =
 
 extern const u32 gFont3LatinGlyphs[];
 extern const u32 gFont4LatinGlyphs[];
+extern const u32 gFont7LatinGlyphs[];
+extern const u32 gFont8LatinGlyphs[];
 extern const u32 gFont3JapaneseGlyphs[];
 extern const u32 gFont4JapaneseGlyphs[];
 
@@ -431,6 +437,8 @@ static const struct Font sFonts[] =
     { 1, (u8 *)gFont4LatinGlyphs, 32,   0 },
     { 2, (u8 *)gFont4LatinGlyphs, 32,   0 },
     { 3, (u8 *)sBrailleGlyphs,  8,   0 },
+    { 0, (u8 *)gFont7LatinGlyphs, 64,  32 },
+    { 0, (u8 *)gFont8LatinGlyphs, 64,  32 },
 };
 
 static const u8 sTextSpeedDelays[] = { 3, 1, 0 }; // slow, mid, fast
@@ -1776,6 +1784,8 @@ u16 InitWindowTileData(struct Window *win, u16 startOffset)
         {
         case 0:
         case 3:
+        case 7:
+        case 8:
             retVal = LoadFixedWidthFont(win, startOffset);
             break;
         case 1:
@@ -1873,7 +1883,9 @@ u32 MultistepInitWindowTileData(struct Window *win, u16 startOffset)
     case TEXT_MODE_MONOSPACE:
         retVal = 256;
         if (win->template->fontNum == 0
-         || win->template->fontNum == 3)
+         || win->template->fontNum == 3
+         || win->template->fontNum == 7
+         || win->template->fontNum == 8)
             retVal *= 2;
         break;
     }
@@ -1909,6 +1921,8 @@ static void MultistepLoadFont_LoadGlyph(struct Window *win, u16 startOffset, u8 
     {
     case 0:
     case 3:
+    case 7:
+    case 8:
         buffer = win->tileData + 32 * startOffset + 64 * glyph;
         LoadFixedWidthGlyph(win, glyph, buffer);
         break;
@@ -1952,6 +1966,15 @@ void Text_InitWindowWithTemplate(struct Window *win, const struct WindowTemplate
     win->height = winTemplate->height;
     win->tileData = winTemplate->tileData;
     win->tilemap = winTemplate->tilemap;
+
+    if (win->fontNum == 3)
+    {
+        if (gSaveBlock2.optionsFontStyle == 1)
+            win->fontNum = 7;
+        else if (gSaveBlock2.optionsFontStyle == 2)
+            win->fontNum = 8;
+    }
+
     SetWindowDefaultColors(win);
     SetWindowBackgroundColor(win, winTemplate->backgroundColor);
     SetWindowShadowColor(win, winTemplate->shadowColor);
@@ -1986,6 +2009,15 @@ void Text_InitWindow(struct Window *win, const u8 *text, u16 tileDataStartOffset
     win->downArrowCounter = 0;
     win->tileData = winTemplate->tileData;
     win->tilemap = winTemplate->tilemap;
+    
+    if (win->fontNum == 3)
+    {
+        if (gSaveBlock2.optionsFontStyle == 1)
+            win->fontNum = 7;
+        else if (gSaveBlock2.optionsFontStyle == 2)
+            win->fontNum = 8;
+    }
+    
     SetWindowDefaultColors(win);
     SetWindowBackgroundColor(win, winTemplate->backgroundColor);
     SetWindowShadowColor(win, winTemplate->shadowColor);
@@ -2653,6 +2685,8 @@ static void LoadFixedWidthGlyph(struct Window *win, u32 glyph, u8 *dest)
     case 3:
     case 4:
     case 5:
+    case 7:
+    case 8:
         ApplyColors_ShadowedFont(upperTile, dest, win->foregroundColor, win->shadowColor, win->backgroundColor);
         ApplyColors_ShadowedFont(lowerTile, dest + 32, win->foregroundColor, win->shadowColor, win->backgroundColor);
         break;
@@ -3179,7 +3213,7 @@ static void DrawDownArrow(struct Window *win)
         {
             u8 *buffer;
             u16 tileNum = win->tileDataStartOffset + 254;
-            if (win->fontNum == 0 || win->fontNum == 3)
+            if (win->fontNum == 0 || win->fontNum == 3 || win->fontNum == 7 || win->fontNum == 8)
                 tileNum *= 2;
             buffer = win->tileData + 32 * tileNum;
             ApplyColors_ShadowedFont(downArrowTiles, buffer, win->foregroundColor, win->shadowColor, win->backgroundColor);
@@ -3388,6 +3422,8 @@ static u16 GetBlankTileNum(struct Window *win)
         case 0:
         case 3:
         case 6:
+        case 7:
+        case 8:
             break;
         default:
             retVal = 0;
@@ -3435,6 +3471,12 @@ static u8 GetGlyphWidth(struct Window *win, u32 glyph)
                 break;
             case 6:
                 width = 8;
+                break;
+            case 7:
+                width = sFont7Widths[glyph];
+                break;
+            case 8:
+                width = sFont8Widths[glyph];
                 break;
             default:
                 width = 8;
@@ -4344,6 +4386,8 @@ static s32 DrawGlyphTiles(struct Window *win, u32 glyph, u32 glyphWidth)
     case 3:
     case 4:
     case 5:
+    case 7:
+    case 8:
         DrawGlyphTile_ShadowedFont(&glyphTileInfo);
         glyphTileInfo.src = lowerTile;
         glyphTileInfo.dest = (u32 *)(win->tileData + 32 * GetCursorTileNum(win, 0, 1));
