@@ -73,20 +73,49 @@ MossdeepCity_StevensHouse_EventScript_15AA7C:: @ 815AA7C
 	msgbox MossdeepCity_StevensHouse_Text_18DD12, MSGBOX_YESNO
 	compare RESULT, NO
 	goto_if_eq MossdeepCity_StevensHouse_EventScript_15AAE6
-	getpartysize
-	compare RESULT, 6
-	goto_if_eq MossdeepCity_StevensHouse_EventScript_15AADC
-	copyvar VAR_SPECIAL_4, RESULT
+	
+    getpartysize
+    copyvar VAR_SPECIAL_4, RESULT
+    
 	removeobject 2
+	bufferspeciesname 0, SPECIES_BELDUM
+	givemon SPECIES_BELDUM, 5, ITEM_NONE, 0x0, 0x0, 0
+    compare RESULT, 0
+    goto_if_eq MossdeepCity_StevensHouse_EventScript_BeldumGiftParty
+    compare RESULT, 1
+    goto_if_eq MossdeepCity_StevensHouse_EventScript_BeldumGiftPC
+    release
+    end
+    
+MossdeepCity_StevensHouse_EventScript_BeldumGiftParty::
+    call MossdeepCity_StevensHouse_EventScript_BeldumGiftFanfare
+    msgbox CommonText_NicknameRecievedPokemon, MSGBOX_YESNO
+    compare RESULT, NO
+    goto_if_eq MossdeepCity_StevensHouse_EventScript_BeldumGiftEnd
+    call Common_EventScript_NameRecievedPartyMon
+    goto MossdeepCity_StevensHouse_EventScript_BeldumGiftEnd
+
+MossdeepCity_StevensHouse_EventScript_BeldumGiftPC::
+    call MossdeepCity_StevensHouse_EventScript_BeldumGiftFanfare
+    msgbox CommonText_NicknameRecievedPokemon, MSGBOX_YESNO
+    bufferspeciesname 1, SPECIES_BELDUM
+    compare RESULT, NO
+    goto_if_eq MossdeepCity_StevensHouse_EventScript_BeldumGiftSendToPC
+    call Common_EventScript_NameReceivedBoxMon
+    goto MossdeepCity_StevensHouse_EventScript_BeldumGiftSendToPC
+
+MossdeepCity_StevensHouse_EventScript_BeldumGiftSendToPC::
+    call Common_EventScript_TransferredToPC
+    goto MossdeepCity_StevensHouse_EventScript_BeldumGiftEnd
+    
+MossdeepCity_StevensHouse_EventScript_BeldumGiftFanfare::
 	playfanfare MUS_FANFA4
 	message MossdeepCity_StevensHouse_Text_18DD61
 	waitfanfare
 	waitmessage
-	givemon SPECIES_BELDUM, 5, ITEM_NONE, 0x0, 0x0, 0
-	bufferspeciesname 1, SPECIES_BELDUM
-	msgbox MossdeepCity_StevensHouse_Text_1A1102, MSGBOX_YESNO
-	compare RESULT, YES
-	call_if_eq MossdeepCity_StevensHouse_EventScript_1A0678
+    return
+
+MossdeepCity_StevensHouse_EventScript_BeldumGiftEnd::
 	setflag FLAG_HIDE_BELDUM_BALL_STEVENS_HOUSE
 	setflag FLAG_RECEIVED_BELDUM
 	releaseall

@@ -1103,7 +1103,7 @@ u8 GetLevelUpMovesBySpecies(u16 species, u16 *moves)
     u8 numMoves = 0;
     int i;
 
-    for (i = 0; i < 20 && gLevelUpLearnsets[species][i] != 0xFFFFFFFF; i++)
+    for (i = 0; i < MAX_MOVE_TUTOR_MOVES && gLevelUpLearnsets[species][i] != 0xFFFFFFFF; i++)
          moves[numMoves++] = gLevelUpLearnsets[species][i] & 0xFFFF;
 
      return numMoves;
@@ -1112,7 +1112,7 @@ u8 GetLevelUpMovesBySpecies(u16 species, u16 *moves)
 u8 CountMoveTutorMoves(struct Pokemon *mon)
 {
     u16 learnedMoves[4];
-    u16 moves[20];
+    u16 moves[MAX_MOVE_TUTOR_MOVES];
     u8 numMoves = 0;
     u16 species = GetMonData(mon, MON_DATA_SPECIES2, 0);
     u8 level = GetMonData(mon, MON_DATA_LEVEL, 0);
@@ -1181,7 +1181,7 @@ u8 GetEggTutorMoves(struct Pokemon *mon, u16* moves)
 
 u8 CountEggTutorMoves(struct Pokemon *mon)
 {
-    u16 moves[20];
+    u16 moves[MAX_MOVE_TUTOR_MOVES];
     return GetEggTutorMoves(mon, moves);
 }
 
