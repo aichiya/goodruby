@@ -6044,6 +6044,7 @@ const u16 gAnorithEggMoves[] = {
     MOVE_SAND_ATTACK,
     MOVE_SCREECH,
     MOVE_SWORDS_DANCE,
+    MOVE_WATER_GUN,
     MOVE_WATER_PULSE,
     0,
 };
@@ -6059,6 +6060,7 @@ const u16 gArmaldoEggMoves[] = {
     MOVE_SAND_ATTACK,
     MOVE_SCREECH,
     MOVE_SWORDS_DANCE,
+    MOVE_WATER_GUN,
     MOVE_WATER_PULSE,
     0,
 };

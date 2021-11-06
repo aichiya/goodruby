@@ -2114,6 +2114,10 @@ static const u8 MoveDescription_DarkVoid[] = _(
     "Drags the foe into total\n"
     "darkness to inflict slumber.");
 
+static const u8 MoveDescription_Accelerock[] = _(
+    "An extremely fast attack\n"
+    "that always strikes first.");
+
 
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
@@ -2648,4 +2652,5 @@ const u8 * const gMoveDescriptions[] = {
     MoveDescription_SacredSword,
     MoveDescription_DracoMeteor,
     MoveDescription_DarkVoid,
+    MoveDescription_Accelerock,
 };

@@ -5391,16 +5391,18 @@ const struct TrainerMonNoItemCustomMoves gTrainerParty_Josh[] = {
     },
 };
 
-const struct TrainerMonNoItemDefaultMoves gTrainerParty_Tommy[] = {
+const struct TrainerMonNoItemCustomMoves gTrainerParty_Tommy[] = {
     {
 	.iv = 100,
 	.level = 11,
-	.species = SPECIES_GEODUDE
+	.species = SPECIES_GEODUDE,
+        .moves = MOVE_ROLLOUT, MOVE_ROCK_POLISH, MOVE_DEFENSE_CURL, MOVE_MUD_SPORT
     },
     {
 	.iv = 100,
 	.level = 11,
-	.species = SPECIES_ANORITH
+	.species = SPECIES_ANORITH,
+        .moves = MOVE_FURY_CUTTER, MOVE_WATER_GUN, MOVE_MUD_SPORT, MOVE_HARDEN 
     }
 };
 

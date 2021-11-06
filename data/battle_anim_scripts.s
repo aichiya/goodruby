@@ -551,6 +551,7 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_SACRED_SWORD
     .4byte Move_DRACO_METEOR
     .4byte Move_DARK_VOID
+    .4byte Move_ACCELEROCK
 	.4byte PoundCopy
 
 	.align 2
@@ -16300,4 +16301,29 @@ _DarkVoidSub:
 	createsprite gBattleAnimSpriteTemplate_DarkVoidWave, ANIM_BATTLER_TARGET, 3, 10, 10, 0, 16
 	delay 4
 	return
+
+Move_ACCELEROCK:
+	loadspritegfx ANIM_TAG_ROCKS
+	loadspritegfx ANIM_TAG_IMPACT
+	monbg ANIM_BATTLER_ATK_PARTNER
+	setalpha 12, 8
+	createvisualtask AnimTask_TranslateMonEllipticalRespectSide, 2, ANIM_BATTLER_ATTACKER, 24, 6, 1, 5
+	createvisualtask sub_80E2DD8, 2, 0, 4, 7, 3
+	playsewithpan SE_W026, SOUND_PAN_ATTACKER
+	delay 4
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_BATTLER_TARGET, 5, 0, 6, 1
+	playsewithpan SE_W088, SOUND_PAN_TARGET
+	createsprite gBattleAnimSpriteTemplate_83DAC64, ANIM_BATTLER_ATTACKER, 2, 0, 0, 20, 24, 14, 2
+	createsprite gBattleAnimSpriteTemplate_83DAC64, ANIM_BATTLER_ATTACKER, 2, 5, 0, -20, 24, 14, 1
+	createsprite gBattleAnimSpriteTemplate_83DAC64, ANIM_BATTLER_ATTACKER, 2, 0, 5, 20, -24, 14, 2
+	createsprite gBattleAnimSpriteTemplate_83DAC64, ANIM_BATTLER_ATTACKER, 2, -5, 0, -20, -24, 14, 2
+	createsprite gBattleAnimSpriteTemplate_83DAC64, ANIM_BATTLER_ATTACKER, 2, 0, -5, 30, 18, 8, 2
+	createsprite gBattleAnimSpriteTemplate_83DAC64, ANIM_BATTLER_ATTACKER, 2, 0, 0, 30, -18, 8, 2
+	createsprite gBattleAnimSpriteTemplate_83DAC64, ANIM_BATTLER_ATTACKER, 2, 0, 0, -30, 18, 8, 2
+	createsprite gBattleAnimSpriteTemplate_83DAC64, ANIM_BATTLER_ATTACKER, 2, 0, 0, -30, -18, 8, 2
+	waitforvisualfinish
+	clearmonbg ANIM_BATTLER_ATK_PARTNER
+	blendoff
+	waitforvisualfinish
+	end
 

@@ -4766,7 +4766,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_WEAK_ARMOR,
+		.hiddenAbility = ABILITY_TECHNICIAN,
     },
 
     [SPECIES_KABUTOPS] =
@@ -4800,7 +4800,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_WEAK_ARMOR,
+		.hiddenAbility = ABILITY_TECHNICIAN,
     },
 
     [SPECIES_AERODACTYL] =
@@ -13237,11 +13237,11 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_WATER_3,
         .eggGroup2 = EGG_GROUP_WATER_3,
         .ability1 = ABILITY_BATTLE_ARMOR,
-        .ability2 = ABILITY_NONE,
+        .ability2 = ABILITY_SWIFT_SWIM,
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_SWIFT_SWIM,
+		.hiddenAbility = ABILITY_INTIMIDATE,
     },
 
     [SPECIES_ARMALDO] =
@@ -13249,8 +13249,8 @@ const struct BaseStats gBaseStats[] =
         .baseHP        = 75,
         .baseAttack    = 125,
         .baseDefense   = 100,
-        .baseSpeed     = 45,
-        .baseSpAttack  = 70,
+        .baseSpeed     = 75,
+        .baseSpAttack  = 40,
         .baseSpDefense = 80,
         .type1 = TYPE_ROCK,
         .type2 = TYPE_BUG,
@@ -13271,11 +13271,11 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_WATER_3,
         .eggGroup2 = EGG_GROUP_WATER_3,
         .ability1 = ABILITY_BATTLE_ARMOR,
-        .ability2 = ABILITY_NONE,
+        .ability2 = ABILITY_SWIFT_SWIM,
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_SWIFT_SWIM,
+		.hiddenAbility = ABILITY_INTIMIDATE,
     },
 
     [SPECIES_RALTS] =

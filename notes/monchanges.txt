@@ -201,9 +201,10 @@ IN GENERAL:
  * Now learns Bubblebeam by level.
 
 #140 Kabuto, #141 Kabutops
+ * Entire line's Hidden Ability Weak Armor replaced with Technician.
  * Level-up movepool heavily adjusted.
- * Now learns Giga Drain, Leech Life, and Swords Dance by level.
- * No longer learns Absorb or Endure by level.
+ * Now learns Giga Drain, Accelerock, Leech Life, and Swords Dance by level.
+ * No longer learns Absorb, Leer, or Endure by level.
 
 #144 Articuno
  * Articuno's Hidden Ability Snow Cloak replaced with Snow Warning.
@@ -463,8 +464,13 @@ IN GENERAL:
  * Cradily now learns Acid Spray on evolution.
 
 #347 Anorith, #348 Armaldo
- * Level-up movepool slightly adjusted.
+ * Armaldo's base stats changed: 75/125/100/70/80/45 (495) -> 75/125/100/40/80/75 (495).
+ * Gained secondary ability Swift Swim.
+ * Hidden Ability Swift Swim replaced with Intimidate.
+ * Level-up movepool significantly adjusted.
  * Armaldo now learns Aqua Tail on evolution.
+ * Now learns U-Turn, Surf, and Waterfall by TM.
+ * Now learns Water Gun by breeding (instead of by level).
 
 #351 Castform
  * Castform's base stats changed: 70/70/70/70/70/70 (420) -> 70/70/70/80/80/70 (440).
