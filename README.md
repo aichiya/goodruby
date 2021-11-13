@@ -15,9 +15,8 @@ Features:
 Downloads can be found in the [Releases tab](https://github.com/Doesnty/goodruby/releases). The current version is v1.0 beta.
 
 Known issues:
- * Looking at your Ribbons will freeze the game, so don't do that.
  * Contests aren't finished. You can run them, but they'll be boring vanilla opponents, and the Berry Blender is only partly overhauled.
- * Post-game is under construction. Mewtwo, Lugia, Ho-oh, Kyogre, Deoxys and one of Latias or Latios are unobtainable.
+ * Post-game is under construction. Lugia, Ho-oh, Kyogre, Deoxys and one of Latias or Latios are unobtainable.
  * There are map connections in new areas that will connect to the lairs of these legendaries which are non-functional.
  * Attacks don't automatically re-target in Doubles. It's possible other weirdness happens there as well; the hack's focus is on Singles.
 
