@@ -1,0 +1,6 @@
+GraniteCave_Underwater_EventObjects::
+
+GraniteCave_Underwater_MapWarps::
+
+GraniteCave_Underwater_MapEvents::
+	map_events GraniteCave_StevensRoom_EventObjects, GraniteCave_StevensRoom_MapWarps, 0x0, 0x0

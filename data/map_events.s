@@ -260,6 +260,8 @@
 	.include "data/maps/GraniteCave_B4F/events.inc"
 	.include "data/maps/GraniteCave_Stairs/events.inc"
 	.include "data/maps/GraniteCave_StevensRoom/events.inc"
+	.include "data/maps/GraniteCave_Underwater/events.inc"
+	.include "data/maps/GraniteCave_LugiaChamber/events.inc"
 	.include "data/maps/PetalburgWoods/events.inc"
 	.include "data/maps/MtChimney/events.inc"
 	.include "data/maps/JaggedPass/events.inc"

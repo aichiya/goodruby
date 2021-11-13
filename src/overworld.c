@@ -715,7 +715,7 @@ void sub_8053994(u32 a1)
 
     LoadCurrentMapData();
     LoadEventObjTemplatesFromHeader();
-    v2 = is_map_type_1_2_3_5_or_6(gMapHeader.mapType);
+    v2 = is_map_type_1_2_3_5_or_6(gMapHeader.mapType) && gMapHeader.mapType != MAP_TYPE_UNDERWATER;
     v3 = Overworld_MapTypeIsIndoors(gMapHeader.mapType);
     ClearTempFieldEventData();
     ResetCyclingRoadChallengeData();

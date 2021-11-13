@@ -302,6 +302,8 @@ gStdScripts_End::
 	.include "data/maps/GraniteCave_B4F/scripts.inc"
 	.include "data/maps/GraniteCave_Stairs/scripts.inc"
 	.include "data/maps/GraniteCave_StevensRoom/scripts.inc"
+	.include "data/maps/GraniteCave_Underwater/scripts.inc"
+	.include "data/maps/GraniteCave_LugiaChamber/scripts.inc"
 	.include "data/maps/PetalburgWoods/scripts.inc"
 	.include "data/maps/MtChimney/scripts.inc"
 	.include "data/maps/JaggedPass/scripts.inc"

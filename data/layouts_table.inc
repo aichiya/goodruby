@@ -356,3 +356,5 @@ gMapLayouts:: @ 8304F18
     .4byte AlteringCave3FV2_Layout
     .4byte AlteringCave3FV3_Layout
     .4byte AlteringCave4F_Layout
+    .4byte GraniteCave_Underwater_Layout
+    .4byte GraniteCave_LugiaChamber_Layout

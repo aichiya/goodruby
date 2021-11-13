@@ -2044,4 +2044,28 @@ const struct SpriteFrameImage gEventObjectPicTable_Mewtwo[] = {
     overworld_frame(gEventObjectPic_Mewtwo, 4, 4, 0)
 };
 
+const struct SpriteFrameImage gEventObjectPicTable_Lugia[] = {
+    overworld_frame(gEventObjectPic_Lugia, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Lugia, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Lugia, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Lugia, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Lugia, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Lugia, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Lugia, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Lugia, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Lugia, 4, 4, 0)
+};
+
+const struct SpriteFrameImage gEventObjectPicTable_Hooh[] = {
+    overworld_frame(gEventObjectPic_Hooh, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Hooh, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Hooh, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Hooh, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Hooh, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Hooh, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Hooh, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Hooh, 4, 4, 0),
+    overworld_frame(gEventObjectPic_Hooh, 4, 4, 0)
+};
+
 #endif //POKERUBY_EVENT_OBJECT_PIC_TABLES_H

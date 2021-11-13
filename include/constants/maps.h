@@ -391,6 +391,8 @@
 #define MAP_ALTERING_CAVE_3FV2                    (104 | (24 << 8))
 #define MAP_ALTERING_CAVE_3FV3                    (105 | (24 << 8))
 #define MAP_ALTERING_CAVE_4F                      (106 | (24 << 8))
+#define MAP_GRANITE_CAVE_UNDERWATER               (107 | (24 << 8))
+#define MAP_GRANITE_CAVE_LUGIA_CHAMBER            (108 | (24 << 8))
 
 // Map Group 25
 #define MAP_SECRET_BASE_RED_CAVE1    (0 | (25 << 8))

@@ -64,7 +64,7 @@
 64 - Explosion      Trick House
 65 - Shadow Claw    Trackless Forest
 66 - Payback        Slateport Market
-67 - Knock Off
+67 - Knock Off      Altering Cave
 68 - Giga Impact    Department Store
 69 - Rock Polish    Slateport Market
 70 - Foul Play

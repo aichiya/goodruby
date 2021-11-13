@@ -14,6 +14,7 @@
 #include "sound.h"
 #include "constants/map_types.h"
 #include "constants/songs.h"
+#include "constants/species.h"
 
 
 extern u16 gBattleTypeFlags;
@@ -268,7 +269,8 @@ void DrawMainBattleBackground(void)
     }
     else if (gBattleTypeFlags & BATTLE_TYPE_KYOGRE_GROUDON)
     {
-        if (gGameVersion == VERSION_RUBY)
+        u16 species = GetMonData(&gEnemyParty[0], MON_DATA_SPECIES);
+        if (species == SPECIES_GROUDON || species == SPECIES_HO_OH)
         {
             LZDecompressVram(gBattleTerrainTiles_Cave, (void*)(VRAM + 0x8000));
             LZDecompressVram(gBattleTerrainTilemap_Cave, (void*)(VRAM + 0xD000));
@@ -634,6 +636,7 @@ void sub_800DE30(u8 taskId)
 }
 
 void LoadBattleEntryBackground(void) {
+    u16 species = GetMonData(&gEnemyParty[0], MON_DATA_SPECIES);
     if (gBattleTypeFlags & BATTLE_TYPE_LINK) {
         LZDecompressVram(gVersusFrameGfx, (void *)0x6004000);
         LZDecompressVram(gVersusFrameTilemap, (void *)0x600e000);
@@ -652,7 +655,7 @@ void LoadBattleEntryBackground(void) {
         LZDecompressVram(gBattleTerrainAnimTilemap_Building, (void *)0x600e000);
         return;
     } else if (gBattleTypeFlags & BATTLE_TYPE_KYOGRE_GROUDON) {
-        if (gGameVersion == VERSION_RUBY) {
+        if (species == SPECIES_GROUDON || species == SPECIES_HO_OH) {
             LZDecompressVram(gBattleTerrainAnimTiles_Cave, (void *)0x6004000);
             LZDecompressVram(gBattleTerrainAnimTilemap_Cave, (void *)0x600e000);
             return;
@@ -683,6 +686,7 @@ void LoadBattleEntryBackground(void) {
 
 int LoadChosenBattleElement(u8 type) {
     int ret = 0;
+    u16 species = GetMonData(&gEnemyParty[0], MON_DATA_SPECIES);
     switch (type) {
     case 0:
         LZDecompressVram(&gBattleTextboxTiles, (void *)0x6000000);
@@ -696,7 +700,7 @@ int LoadChosenBattleElement(u8 type) {
     case 3: // tiles
         if (!(gBattleTypeFlags & (BATTLE_TYPE_EREADER_TRAINER | BATTLE_TYPE_BATTLE_TOWER | BATTLE_TYPE_LINK))) {
             if (gBattleTypeFlags & BATTLE_TYPE_KYOGRE_GROUDON) {
-                if (gGameVersion == VERSION_RUBY) {
+                if (species == SPECIES_GROUDON || species == SPECIES_HO_OH) {
                     LZDecompressVram(gBattleTerrainTiles_Cave, (void *)0x6008000);
                     break;
                 } else {
@@ -749,7 +753,7 @@ int LoadChosenBattleElement(u8 type) {
     case 4: // tilemap
         if (!(gBattleTypeFlags & (BATTLE_TYPE_EREADER_TRAINER | BATTLE_TYPE_BATTLE_TOWER | BATTLE_TYPE_LINK))) {
             if (gBattleTypeFlags & BATTLE_TYPE_KYOGRE_GROUDON) {
-                if (gGameVersion == 2) {
+                if (species == SPECIES_GROUDON || species == SPECIES_HO_OH) {
                     LZDecompressVram(gBattleTerrainTilemap_Cave, (void *)0x600d000);
                     break;
                 } else {
@@ -802,7 +806,7 @@ int LoadChosenBattleElement(u8 type) {
     case 5: // palette
         if (!(gBattleTypeFlags & (BATTLE_TYPE_EREADER_TRAINER | BATTLE_TYPE_BATTLE_TOWER | BATTLE_TYPE_LINK))) {
             if (gBattleTypeFlags & BATTLE_TYPE_KYOGRE_GROUDON) {
-                if (gGameVersion == 2) {
+                if (species == SPECIES_GROUDON || species == SPECIES_HO_OH) {
                     LoadCompressedPalette(gBattleTerrainPalette_Groudon, 0x20, 0x60);
                     break;
                 } else {

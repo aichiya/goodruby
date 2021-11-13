@@ -413,6 +413,8 @@ gMapGroup24:: @ 83082F8
     .4byte AlteringCave_3FV2
     .4byte AlteringCave_3FV3
     .4byte AlteringCave_4F
+	.4byte GraniteCave_Underwater
+	.4byte GraniteCave_LugiaChamber
 
 	.align 2
 gMapGroup25:: @ 8308450

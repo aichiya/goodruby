@@ -236,6 +236,8 @@ const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_Mew;
 const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_Celebi;
 const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_Jirachi;
 const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_Mewtwo;
+const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_Lugia;
+const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_Hooh;
 
 const struct EventObjectGraphicsInfo *const gEventObjectGraphicsInfoPointers[] = {
     &gEventObjectGraphicsInfo_BrendanNormal,
@@ -469,6 +471,8 @@ const struct EventObjectGraphicsInfo *const gEventObjectGraphicsInfoPointers[] =
     &gEventObjectGraphicsInfo_Celebi,
     &gEventObjectGraphicsInfo_Jirachi,
     &gEventObjectGraphicsInfo_Mewtwo,
+    &gEventObjectGraphicsInfo_Lugia,
+    &gEventObjectGraphicsInfo_Hooh,
 };
 
 #endif //POKERUBY_EVENT_OBJECT_GRAPHICS_INFO_POINTERS_H

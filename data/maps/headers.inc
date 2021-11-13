@@ -245,6 +245,8 @@
 	.include "data/maps/GraniteCave_B4F/header.inc"
 	.include "data/maps/GraniteCave_Stairs/header.inc"
 	.include "data/maps/GraniteCave_StevensRoom/header.inc"
+	.include "data/maps/GraniteCave_Underwater/header.inc"
+	.include "data/maps/GraniteCave_LugiaChamber/header.inc"
 	.include "data/maps/PetalburgWoods/header.inc"
 	.include "data/maps/MtChimney/header.inc"
 	.include "data/maps/JaggedPass/header.inc"

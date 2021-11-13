@@ -1,5 +1,10 @@
 GraniteCave_B4F_MapScripts::
+	map_script 5, GraniteCave_B4F_MapScript_DiveSetup
 	.byte 0
+
+GraniteCave_B4F_MapScript_DiveSetup:
+	setdivewarp MAP_GRANITE_CAVE_UNDERWATER, 255, 11, 61
+	end
 
 GraniteCave_B4F_EventScript_BrailleWallMorning::
 	lockall

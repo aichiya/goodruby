@@ -354,3 +354,5 @@
     .include "data/layouts/AlteringCave_3FV2/layout.inc"
     .include "data/layouts/AlteringCave_3FV3/layout.inc"
     .include "data/layouts/AlteringCave_4F/layout.inc"
+	.include "data/layouts/GraniteCave_Underwater/layout.inc"
+	.include "data/layouts/GraniteCave_LugiaChamber/layout.inc"

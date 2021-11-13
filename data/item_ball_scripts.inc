@@ -302,6 +302,10 @@ GraniteCave_B3F_EventScript_Calcium::
 	giveitem_std ITEM_CALCIUM, 1, 1
 	end
 
+GraniteCave_LugiaChamber_EventScript_TM60::
+	giveitem_std ITEM_TM60_HYPER_VOICE, 1, 1
+	end
+
 JaggedPass_EventScript_1B17D4:: @ 81B17D4
 	giveitem_std ITEM_BURN_HEAL, 1, 1
 	end

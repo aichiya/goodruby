@@ -595,12 +595,13 @@ void ScrSpecial_StartRayquazaBattle(void)
 
 void ScrSpecial_StartGroudonKyogreBattle(void)
 {
+    u16 species = GetMonData(&gEnemyParty[0], MON_DATA_SPECIES);
     ScriptContext2_Enable();
     gMain.savedCallback = CB2_EndScriptedWildBattle;
     gBattleTypeFlags = BATTLE_TYPE_LEGENDARY | BATTLE_TYPE_KYOGRE_GROUDON;
-    if (gGameVersion == VERSION_RUBY)
+    if (species == SPECIES_GROUDON || species == SPECIES_HO_OH)
         CreateBattleStartTask(B_TRANSITION_SHARDS, MUS_BATTLE34); // GROUDON
-    else
+    else if (species == SPECIES_KYOGRE || species == SPECIES_LUGIA)
         CreateBattleStartTask(B_TRANSITION_RIPPLE, MUS_BATTLE34); // KYOGRE
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
