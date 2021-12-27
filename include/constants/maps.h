@@ -59,6 +59,7 @@
 #define MAP_GNARLED_RIDGE    (54 | (0 << 8))
 #define MAP_ROUTE135         (55 | (0 << 8))
 #define MAP_UNDERWATER5      (56 | (0 << 8))
+#define MAP_ROUTE136         (57 | (0 << 8))
 
 // Map Group 1
 #define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F    (0 | (1 << 8))
@@ -393,6 +394,7 @@
 #define MAP_ALTERING_CAVE_4F                      (106 | (24 << 8))
 #define MAP_GRANITE_CAVE_UNDERWATER               (107 | (24 << 8))
 #define MAP_GRANITE_CAVE_LUGIA_CHAMBER            (108 | (24 << 8))
+#define MAP_FABLED_CAVE                           (109 | (24 << 8))
 
 // Map Group 25
 #define MAP_SECRET_BASE_RED_CAVE1    (0 | (25 << 8))

@@ -57,7 +57,7 @@
 57 - Charge Beam    Slateport Market
 58 - Endure         Slateport Market
 59 - Dragon Pulse   Route 130
-60 - Hyper Voice
+60 - Hyper Voice    Fabled Cave
 61 - Will-o-Wisp    Mt. Pyre
 62 - Acrobatics
 63 - Aqua Tail      Route 119

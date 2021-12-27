@@ -818,6 +818,7 @@
 #define FLAG_ITEM_ALTERING_CAVE_F3_2        0x49C
 #define FLAG_ITEM_ALTERING_CAVE_F3_3        0x49D
 #define FLAG_ITEM_LUGIA_CHAMBER_TM          0x49E
+#define FLAG_ITEM_FABLED_CAVE_TM            0x49F
 
 #define FLAG_DEFEATED_RUSTBORO_GYM          0x4B1
 
@@ -852,6 +853,7 @@
 #define FLAG_HIDE_MEW                       0x4EA
 #define FLAG_HIDE_MEWTWO                    0x4EB
 #define FLAG_HIDE_LUGIA                     0x4EC
+#define FLAG_HIDE_HO_OH                     0x4ED
 
 
 #define TRAINER_FLAG_START 0x500

@@ -57,6 +57,7 @@ gMapGroup0:: @ 8307F60
     .4byte GnarledRidge
     .4byte Route135
     .4byte Underwater5
+    .4byte Route136
 
 	.align 2
 gMapGroup1:: @ 8308038
@@ -415,6 +416,7 @@ gMapGroup24:: @ 83082F8
     .4byte AlteringCave_4F
 	.4byte GraniteCave_Underwater
 	.4byte GraniteCave_LugiaChamber
+    .4byte FabledCave
 
 	.align 2
 gMapGroup25:: @ 8308450

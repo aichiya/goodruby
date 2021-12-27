@@ -64,6 +64,7 @@
 	.include "data/maps/Route133/events.inc"
 	.include "data/maps/Route134/events.inc"
 	.include "data/maps/Route135/events.inc"
+	.include "data/maps/Route136/events.inc"
 	.include "data/maps/Underwater1/events.inc"
 	.include "data/maps/Underwater2/events.inc"
 	.include "data/maps/Underwater3/events.inc"
@@ -434,3 +435,4 @@
     .include "data/maps/AlteringCave_3FV2/events.inc"
     .include "data/maps/AlteringCave_3FV3/events.inc"
     .include "data/maps/AlteringCave_4F/events.inc"
+    .include "data/maps/FabledCave/events.inc"

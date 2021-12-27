@@ -107,6 +107,7 @@ gStdScripts_End::
 	.include "data/maps/Route133/scripts.inc"
 	.include "data/maps/Route134/scripts.inc"
 	.include "data/maps/Route135/scripts.inc"
+	.include "data/maps/Route136/scripts.inc"
 	.include "data/maps/Underwater1/scripts.inc"
 	.include "data/maps/Underwater2/scripts.inc"
 	.include "data/maps/Underwater3/scripts.inc"
@@ -423,6 +424,7 @@ gStdScripts_End::
 	.include "data/maps/AlteringCave_3FV2/scripts.inc"
 	.include "data/maps/AlteringCave_3FV3/scripts.inc"
 	.include "data/maps/AlteringCave_4F/scripts.inc"
+	.include "data/maps/FabledCave/scripts.inc"
 
 gUnknown_0815F36C:: @ 815F36C
 	lockall

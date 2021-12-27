@@ -156,6 +156,8 @@ const struct RegionMapLocation gRegionMapLocations[] =
     {22,  6, 1, 1, gMapName_NamelessCavern},
     {24, 10, 2, 1, gMapName_Underwater},
     { 6,  8, 1, 1, gMapName_AlteringCave},
+    {12,  8, 1, 2, gMapName_Route136},
+    {12,  8, 1, 1, gMapName_FabledCave},
     { 0,  0, 1, 1, gMapName_None},
 };
 

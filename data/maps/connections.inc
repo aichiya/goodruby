@@ -49,6 +49,7 @@
 	.include "data/maps/Route133/connections.inc"
 	.include "data/maps/Route134/connections.inc"
 	.include "data/maps/Route135/connections.inc"
+	.include "data/maps/Route136/connections.inc"
 	.include "data/maps/Underwater1/connections.inc"
 	.include "data/maps/Underwater2/connections.inc"
 	.include "data/maps/Underwater3/connections.inc"

@@ -356,3 +356,5 @@
     .include "data/layouts/AlteringCave_4F/layout.inc"
 	.include "data/layouts/GraniteCave_Underwater/layout.inc"
 	.include "data/layouts/GraniteCave_LugiaChamber/layout.inc"
+	.include "data/layouts/Route136/layout.inc"
+	.include "data/layouts/FabledCave/layout.inc"

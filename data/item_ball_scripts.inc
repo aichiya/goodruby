@@ -657,3 +657,7 @@ AlteringCave_3F_EventScript_TM67::
 AlteringCave_3F_EventScript_RareCandy::
     giveitem_std ITEM_RARE_CANDY, 1, 1
     end
+
+FabledCave_EventScript_TM60::
+    giveitem_std ITEM_TM60_HYPER_VOICE, 1, 1
+    end

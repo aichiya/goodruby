@@ -94,7 +94,9 @@
 #define MAPSEC_NAMELESS_CAVERN       0x5A
 #define MAPSEC_UNDERWATER_129        0x5B
 #define MAPSEC_ALTERING_CAVE         0x5C
-#define MAPSEC_DYNAMIC               0x5D
-#define MAPSEC_NOTHING               0x5E
+#define MAPSEC_ROUTE_136             0x5D
+#define MAPSEC_FABLED_CAVE           0x5E
+#define MAPSEC_DYNAMIC               0x5F
+#define MAPSEC_NOTHING               0x60
 
 #endif // GUARD_REGIONMAPSEC_H

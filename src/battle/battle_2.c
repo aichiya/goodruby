@@ -4417,6 +4417,14 @@ void bc_aura_message(void)
                 PREPARE_STAT_BUFFER(gBattleTextBuff2, STAT_STAGE_EVASION)
                 PrepareStringBattle(448, 1);
                 break;
+            case SPECIES_HO_OH: // atk+2, sdef+2
+                gBattleMons[1].statStages[STAT_STAGE_ATK] += 2;
+                gBattleMons[1].statStages[STAT_STAGE_SPDEF] += 2;
+                gActiveBattler = 1;
+                PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_STAGE_ATK)
+                PREPARE_STAT_BUFFER(gBattleTextBuff2, STAT_STAGE_SPDEF)
+                PrepareStringBattle(448, 1);
+                break;
             case SPECIES_LUGIA: // def+2, sdef+2
                 gBattleMons[1].statStages[STAT_STAGE_DEF] += 2;
                 gBattleMons[1].statStages[STAT_STAGE_SPDEF] += 2;

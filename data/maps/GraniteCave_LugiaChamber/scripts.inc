@@ -18,7 +18,7 @@ GraniteCave_LugiaChamber_EventScript_Lugia::
 	delay 40
 	waitmoncry
 	setwildbattle SPECIES_LUGIA, 70, ITEM_NONE
-	setflag FLAG_HIDE_MEWTWO
+	setflag FLAG_HIDE_LUGIA
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special ScrSpecial_StartGroudonKyogreBattle
 	waitstate
