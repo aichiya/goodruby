@@ -89,7 +89,7 @@ Good Rod is obtained at Mauville now, not post-Norman
 
 
 
-ROUTE 101: Zigzagoon (30%), Wurmple (30%), Ledyba (30%), Poochyena (10%)
+ROUTE 101: Zigzagoon (30%), Wurmple (20%), Ledyba (30%), Pidgey (10%), Poochyena (10%)
 ROUTE 103: Zigzagoon (30%), Poochyena (30%), Ledyba (20%), Wingull (10%), Hoppip (10%)
 ROUTE 102: Zigzagoon (20%), Poochyena (20%), Wurmple (20%), Seedot (10%), Lotad (10%), Psyduck (10%), Taillow (4%), Ralts (4%), Surskit (2%)
 ROUTE 104 SOUTH: Zigzagoon (20%), Poochyena (20%), Wurmple (20%), Wingull (10%), Hoppip (10%), Taillow (10%), Azurill (5%), Bellsprout (5%)
@@ -116,7 +116,7 @@ PATH: Numel (20%), Grimer (20%), Koffing (20%), Slugma (10%), Torkoal (10%), Mag
 ROUTE 113: Spinda (50%), Venonat (15%), Doduo (15%), Sandshrew (15%), Skarmory (5%)
 ROUTE 114: Lombre (20%), Nuzleaf (20%), Swablu (15%), Sunkern (15%), Zangoose (10%), Seviper (10%), Furret (5%), Misdreavus (5%)
 FALLS 1F: Zubat (40%), Aron (20%), Clefairy (15%), Lunatone (10%), Solrock (10%), Misdreavus (5%)
-JAGGED PASS: Machop (20%), Numel (20%), Murkrow (15%), Spoink (10%), Pineco (10%), Slugma (10%), Ponyta (10%), Bonsly (5%)
+JAGGED PASS: Machop (20%), Numel (20%), Murkrow (15%), Spoink (10%), Pineco (10%), Slugma (10%), Stantler (10%), Bonsly (5%)
 FALLARBOR: Togepi egg
 DESERT: Sandshrew (25%), Trapinch (25%), Cacnea (15%), Baltoy (10%), Diglett (10%), Gligar (10%), Larvitar (5%)
 TRACKLESS FOREST: Nosepass (20%), Natu (20%), Weepinbell (15%), Noctowl (10%), Rhyhorn (10%), Duskull (10%), Bonsly (5%), Pinsir (5%), Girafarig (5%)
@@ -149,6 +149,7 @@ DEEP METEOR FALLS: Golbat (20%), Lunatone (20%), Solrock (20%), Lairon (10%), Cl
 METEOR FALLS BACK ROOM: Bagon (35%), Beldum (35%), Lunatone (10%), Solrock (10%), Shelgon (5%), Metang (5%)
 VICTORY ROAD 1F: Golbat (20%), Loudred (20%), Lairon (10%), Hariyama (10%), Graveler (10%), Ursaring (10%), Medicham (10%), Donphan (10%)
 VICTORY ROAD B1F/B2F: Golbat (20%), Graveler (20%), Lairon (10%), Medicham (10%), Mawile (10%), Sableye (10%), Wobbuffet (10%), Parasect (10%)
+FABLED CAVE: Spinda (20%), Golem (20%), Pidgeot (10%), Castform (10%), Medicham (10%), Skarmory (10%), Arcanine (5%), Flareon (5%), Jolteon (5%), Vaporeon (5%)
 
 
 ROCK SMASH: Nosepass and Shuckle in Granite Cave, Geodude everywhere else.

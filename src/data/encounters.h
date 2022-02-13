@@ -245,8 +245,8 @@ const struct WildPokemon JaggedPass_LandMons [] =
     {20, 23, SPECIES_SPOINK},
     {20, 23, SPECIES_PINECO},
     {20, 23, SPECIES_SLUGMA},
-    {20, 23, SPECIES_PONYTA},
-    {20, 23, SPECIES_PONYTA},
+    {20, 23, SPECIES_STANTLER},
+    {20, 23, SPECIES_STANTLER},
     {20, 23, SPECIES_MURKROW},
     {20, 23, SPECIES_BONSLY},
     {20, 23, SPECIES_MURKROW},
@@ -702,7 +702,7 @@ const struct WildPokemon Route101_LandMons [] =
     {2, 3, SPECIES_ZIGZAGOON},
     {2, 3, SPECIES_WURMPLE},
     {2, 3, SPECIES_ZIGZAGOON},
-    {2, 3, SPECIES_WURMPLE},
+    {2, 3, SPECIES_PIDGEY},
     {2, 3, SPECIES_LEDYBA},
     {2, 3, SPECIES_LEDYBA},
     {2, 3, SPECIES_LEDYBA},
@@ -1422,6 +1422,23 @@ const struct WildPokemon AlteringCave3FV2_LandMons [] =
 };
 const struct WildPokemonInfo AlteringCave3FV2_LandMonsInfo = {10, AlteringCave3FV2_LandMons};
 
+const struct WildPokemon FabledCave_LandMons [] =
+{
+    {37, 39, SPECIES_SPINDA},
+    {37, 39, SPECIES_GOLEM},
+    {37, 39, SPECIES_PIDGEOT},
+    {37, 39, SPECIES_CASTFORM},
+    {37, 39, SPECIES_MEDICHAM},
+    {37, 39, SPECIES_SKARMORY},
+    {37, 39, SPECIES_ARCANINE},
+    {37, 39, SPECIES_VAPOREON},
+    {37, 39, SPECIES_JOLTEON},
+    {37, 39, SPECIES_FLAREON},
+    {37, 39, SPECIES_JOLTEON},
+    {37, 39, SPECIES_FLAREON},
+};
+const struct WildPokemonInfo FabledCave_LandMonsInfo = {10, AlteringCave3FV2_LandMons};
+
 
 const struct WildPokemonHeader gWildMonHeaders[] =
 {
@@ -1562,12 +1579,20 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .fishingMonsInfo = NULL,
     },
     {
-        .mapGroup = MAP_GROUP(GRANITE_CAVE_STEVENS_ROOM),
-        .mapNum = MAP_NUM(GRANITE_CAVE_STEVENS_ROOM),
-        .landMonsInfo = &GraniteCave_StevensRoom_LandMonsInfo,
+        .mapGroup = MAP_GROUP(GRANITE_CAVE_B4F),
+        .mapNum = MAP_NUM(GRANITE_CAVE_B4F),
+        .landMonsInfo = &GraniteCave_B4F_LandMonsInfo,
+        .waterMonsInfo = NULL,
+        .rockSmashMonsInfo = &GraniteCave_B4F_RockSmashMonsInfo,
+        .fishingMonsInfo = &GraniteCaveInterior_FishingMonsInfo,
+    },
+    {
+        .mapGroup = MAP_GROUP(GRANITE_CAVE_LUGIA_CHAMBER),
+        .mapNum = MAP_NUM(GRANITE_CAVE_LUGIA_CHAMBER),
+        .landMonsInfo = &GraniteCave_B4F_LandMonsInfo,
         .waterMonsInfo = NULL,
         .rockSmashMonsInfo = NULL,
-        .fishingMonsInfo = NULL,
+        .fishingMonsInfo = &GraniteCaveInterior_FishingMonsInfo,
     },
     {
         .mapGroup = MAP_GROUP(PETALBURG_WOODS),
@@ -2195,6 +2220,14 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .fishingMonsInfo = &MauvilleLakeRegion_FishingMonsInfo,
     },
     {
+        .mapGroup = MAP_GROUP(ROUTE136),
+        .mapNum = MAP_NUM(ROUTE136),
+        .landMonsInfo = NULL,
+        .waterMonsInfo = NULL, //&Route134_WaterMonsInfo,
+        .rockSmashMonsInfo = NULL,
+        .fishingMonsInfo = &PacifidlogSeaRegion_FishingMonsInfo,
+    },
+    {
         .mapGroup = MAP_GROUP(SAFARI_ZONE_NORTHWEST),
         .mapNum = MAP_NUM(SAFARI_ZONE_NORTHWEST),
         .landMonsInfo = &SafariZone_Northwest_LandMonsInfo,
@@ -2406,6 +2439,14 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .waterMonsInfo = NULL,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = NULL,
+    },
+    {
+        .mapGroup = MAP_GROUP(FABLED_CAVE),
+        .mapNum = MAP_NUM(FABLED_CAVE),
+        .landMonsInfo = &FabledCave_LandMonsInfo,
+        .waterMonsInfo = NULL,
+        .rockSmashMonsInfo = NULL,
+        .fishingMonsInfo = &GraniteCaveInterior_FishingMonsInfo,
     },
     {
         .mapGroup = MAP_GROUP(UNDEFINED),

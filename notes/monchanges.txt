@@ -31,6 +31,12 @@ IN GENERAL:
  * Level-up movepool adjusted.
  * No longer learns Water Gun by level.
  * Now learns Crunch, Ice Beam, and Shell Smash by level.
+ 
+#010 Caterpie, #011 Metapod, #012 Butterfree
+ * Butterfree now learns Hurricane by level.
+
+#013 Weedle, #012 Kakuna, #013 Beedrill
+ * Beedrill now learns U-Turn and Megahorn by level.
 
 #016 Pidgey, #017 Pidgeotto, #018 Pidgeot
  * Level-up movepool adjusted.
