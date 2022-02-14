@@ -775,7 +775,7 @@ static const u8 gItemDescription_PasshoBerry[] = _(
 
 static const u8 gItemDescription_WacanBerry[] = _(
     "A hold item that\n"
-    "weakens a Electric\n"
+    "weakens an Electric\n"
     "move if weak to it.");
 
 static const u8 gItemDescription_RindoBerry[] = _(
@@ -785,7 +785,7 @@ static const u8 gItemDescription_RindoBerry[] = _(
 
 static const u8 gItemDescription_YacheBerry[] = _(
     "A hold item that\n"
-    "weakens a Ice\n"
+    "weakens an Ice\n"
     "move if weak to it.");
 
 static const u8 gItemDescription_ChopleBerry[] = _(
@@ -1721,9 +1721,9 @@ static const u8 gItemDescription_TM73[] = _(
     "paralyzes the foe.");
  
 static const u8 gItemDescription_TM74[] = _(
-    "placeholder text\n"
-    "stuff\n"
-    ".");
+    "A reckless charge\n"
+    "attack that also\n"
+    "hurts the user.");
  
 static const u8 gItemDescription_TM75[] = _(
     "A fighting dance\n"
@@ -1746,9 +1746,9 @@ static const u8 gItemDescription_TM78[] = _(
     "Speed.");
  
 static const u8 gItemDescription_TM79[] = _(
-    "placeholder text\n"
-    "stuff\n"
-    ".");
+    "A horrible aura\n"
+    "attack that may\n"
+    "cause flinching.");
  
 static const u8 gItemDescription_TM80[] = _(
     "Large boulders are\n"
@@ -1761,9 +1761,9 @@ static const u8 gItemDescription_TM81[] = _(
     "special effect.");
  
 static const u8 gItemDescription_TM82[] = _(
-    "placeholder text\n"
-    "stuff\n"
-    ".");
+    "Knocks the target\n"
+    "away. Ends\n"
+    "wild battles.");
  
 static const u8 gItemDescription_TM83[] = _(
     "Consumes held\n"
@@ -1771,9 +1771,9 @@ static const u8 gItemDescription_TM83[] = _(
     "influences type.");
  
 static const u8 gItemDescription_TM84[] = _(
-    "placeholder text\n"
-    "stuff\n"
-    ".");
+    "A basic stabbing\n"
+    "attack. May\n"
+    "inflict poison.");
  
 static const u8 gItemDescription_TM85[] = _(
     "Attacks all foes\n"

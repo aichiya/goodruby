@@ -261,6 +261,9 @@ IN GENERAL:
  * Now learns Poison Fang, Bug Bite, and Leech Life by level.
  * No longer learns Constrict or Fury Swipes by level.
 
+#179 Mareep, #180 Flaaffy, #181 Ampharos
+ * Entire line's Hidden Ability Plus replaced with LightningRod.
+
 #438 Bonsly, #185 Sudowoodo
  * Now learns Recover by breeding.
 
@@ -393,6 +396,9 @@ IN GENERAL:
 
 #304 Aron, #305 Lairon, #306 Aggron
  * Aggron's Hidden Ability Heavy Metal replaced with Solid Rock.
+
+#309 Electrike, #310 Manectric
+ * Entire line's Hidden Ability Minus replaced with Unnerve.
 
 #311 Plusle
  * Now learns Flamethrower, Fire Blast, Fire Punch, and Overheat by TM.

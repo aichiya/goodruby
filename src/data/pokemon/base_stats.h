@@ -6092,7 +6092,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_WHITE,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_PLUS,
+		.hiddenAbility = ABILITY_LIGHTNING_ROD,
     },
 
     [SPECIES_FLAAFFY] =
@@ -6126,7 +6126,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_PINK,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_PLUS,
+		.hiddenAbility = ABILITY_LIGHTNING_ROD,
     },
 
     [SPECIES_AMPHAROS] =
@@ -6160,7 +6160,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_YELLOW,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_PLUS,
+		.hiddenAbility = ABILITY_LIGHTNING_ROD,
     },
 
     [SPECIES_BELLOSSOM] =
@@ -11439,7 +11439,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_MINUS,
+		.hiddenAbility = ABILITY_UNNERVE,
     },
 
     [SPECIES_MANECTRIC] =
@@ -11473,7 +11473,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_YELLOW,
         .noFlip = FALSE,
-		.hiddenAbility = ABILITY_MINUS,
+		.hiddenAbility = ABILITY_UNNERVE,
     },
 
     [SPECIES_NUMEL] =

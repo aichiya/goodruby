@@ -1437,7 +1437,7 @@ const struct WildPokemon FabledCave_LandMons [] =
     {37, 39, SPECIES_JOLTEON},
     {37, 39, SPECIES_FLAREON},
 };
-const struct WildPokemonInfo FabledCave_LandMonsInfo = {10, AlteringCave3FV2_LandMons};
+const struct WildPokemonInfo FabledCave_LandMonsInfo = {10, FabledCave_LandMons};
 
 
 const struct WildPokemonHeader gWildMonHeaders[] =
