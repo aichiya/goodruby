@@ -79,7 +79,7 @@
 79 - Dark Pulse     Abandoned Ship
 80 - Rock Slide     Route 111 Desert
 81 - X-Scissor      Route 135
-82 - Dragon Tail
+82 - Dragon Tail    Route 115
 83 - Natural Gift   Department Store
 84 - Poison Jab
 85 - Dazzling Gleam Department Store

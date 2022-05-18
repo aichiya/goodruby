@@ -28,11 +28,11 @@ RustboroCity_PokemonSchool_Text_1844EC:: @ 81844EC
 	.string "If a Pokémon falls asleep, it will be\n"
 	.string "unable to attack.\p"
 	.string "A Pokémon may wake up on its own,\n"
-	.string "but if a battle ends while it is sleeping,\l"
+	.string "but if a battle ends while it sleeps,\l"
 	.string "it will stay asleep.\p"
     .string "A Pokémon will spend at most 3\n"
     .string "turns sleeping before waking.\p"
-	.string "Wake it up using an AWAKENING.$"
+	.string "Wake it up using an Awakening.$"
 
 RustboroCity_PokemonSchool_Text_1845A5:: @ 81845A5
 	.string "A burn halves Attack power, and it\n"

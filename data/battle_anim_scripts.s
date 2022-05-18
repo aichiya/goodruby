@@ -14005,7 +14005,6 @@ Move_INCINERATE:
 	createvisualtask AnimTask_ShakeMon, 5, ANIM_BATTLER_DEF_PARTNER, 3, 0, 43, 1
 	call _Incinsubcall
 	call _Incinsubcall
-	call _Incinsubcall
 	waitforvisualfinish
 	end
 	
@@ -14013,39 +14012,25 @@ Move_INCINERATE:
 _Incinsubcall:
 	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, 8, -44, 20
 	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, -8, 44, 20
-	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, 44, 8, 20
-	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, -44, -8, 20
-	delay 2
+	delay 4
 	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, 16, -42, 20
 	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, -16, 42, 20
-	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, 42, 16, 20
-	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, -42, -16, 20
-	delay 2
+	delay 4
 	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, 24, -38, 20
 	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, -24, 38, 20
-	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, 38, 24, 20
-	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, -38, -24, 20
-	delay 2
+	delay 4
 	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, 32, -32, 20
 	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, -32, 32, 20
-	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, 32, 32, 20
-	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, -32, -32, 20
-	delay 2
+	delay 4
 	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, 38, -24, 20
 	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, -38, 24, 20
-	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, 24, 38, 20
-	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, -24, -38, 20
-	delay 2
+	delay 4
 	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, 42, -16, 20
 	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, -42, 16, 20
-	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, 16, 42, 20
-	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, -16, -42, 20
-	delay 2
+	delay 4
 	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, 44, -8, 20
 	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, -44, 8, 20
-	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, 8, 44, 20
-	createsprite gBattleAnimSpriteTemplate_83DB044, ANIM_BATTLER_TARGET, 2, 0, 0, -8, -44, 20
-	delay 2
+	delay 4
 	return
 
 Move_CLEAR_SMOG:

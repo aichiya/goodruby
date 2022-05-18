@@ -87,7 +87,7 @@ Route115_EventScript_1B154A:: @ 81B154A
 	end
 
 Route115_EventScript_1B1557:: @ 81B1557
-	giveitem_std ITEM_GREAT_BALL, 1, 1
+	giveitem_std ITEM_TM82_DRAGON_TAIL, 1, 1
 	end
 
 Route116_EventScript_1B1564:: @ 81B1564
