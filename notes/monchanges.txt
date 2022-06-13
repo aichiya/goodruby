@@ -93,6 +93,11 @@ IN GENERAL:
  * Now learns Mega Drain, Curse, Clear Smog, and Leech Life by level.
  * Now learns Aromatherapy, Memento, and Seed Bomb by breeding.
 
+#050 Diglett, #051 Dugtrio
+ * Diglett's Ability Arena Trap replaced with Run Away.
+ // Dugtrio's abilities are unchanged.
+ * Now learns Work Up and Final Gambit by level.
+
 #052 Meowth, #053 Persian
  * Persian's base stats changed: 65/70/60/65/65/115 (440) -> 65/90/60/85/65/115 (480).
  * Now learns Shock Wave and Water Pulse by breeding.
@@ -533,6 +538,7 @@ IN GENERAL:
  * Now learns Wish and Healing Wish by breeding.
 
 #374 Beldum, #375 Metang, #376 Metagross
+ * Beldum's catch rate is now 45 (up from 3).
  * Metang's Hidden Ability Light Metal replaced with Iron Fist.
  * Metagross's Hidden Ability Light Metal replaced with Iron Fist.
 

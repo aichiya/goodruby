@@ -158,6 +158,10 @@ Route120_EventScript_1B1627:: @ 81B1627
 	giveitem_std ITEM_FULL_HEAL, 1, 1
 	end
 
+Route120_EventScript_AcroTM::
+	giveitem_std ITEM_TM62_ACROBATICS, 1, 1
+	end
+
 Route120_EventScript_1B1634:: @ 81B1634
 	giveitem_std ITEM_HYPER_POTION, 1, 1
 	end

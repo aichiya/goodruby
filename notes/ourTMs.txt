@@ -59,7 +59,7 @@
 59 - Dragon Pulse   Route 130
 60 - Hyper Voice    Fabled Cave
 61 - Will-o-Wisp    Mt. Pyre
-62 - Acrobatics
+62 - Acrobatics     Route 120
 63 - Aqua Tail      Route 119
 64 - Explosion      Trick House
 65 - Shadow Claw    Trackless Forest
@@ -81,7 +81,7 @@
 81 - X-Scissor      Route 135
 82 - Dragon Tail    Route 115
 83 - Natural Gift   Department Store
-84 - Poison Jab
+84 - Poison Jab     Altering Cave
 85 - Dazzling Gleam Department Store
 86 - Grass Knot     Boy South of Rustboro
 87 - Signal Beam    New Mauville

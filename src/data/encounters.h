@@ -87,8 +87,8 @@ const struct WildPokemon RusturfTunnel_LandMons [] =
     {9, 10, SPECIES_TYROGUE}, //10%
     {9, 10, SPECIES_CHINGLING}, //10%
     {9, 10, SPECIES_DROWZEE}, //10%
-    {9, 10, SPECIES_CHINGLING}, //5%
-    {9, 10, SPECIES_TYROGUE}, //5%
+    {9, 10, SPECIES_DIGLETT}, //5%
+    {9, 10, SPECIES_DIGLETT}, //5%
     {9, 10, SPECIES_DUNSPARCE}, //4%
     {9, 10, SPECIES_DROWZEE}, //4%
     {9, 10, SPECIES_DUNSPARCE}, //1%

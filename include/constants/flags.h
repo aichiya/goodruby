@@ -819,6 +819,7 @@
 #define FLAG_ITEM_ALTERING_CAVE_F3_3        0x49D
 #define FLAG_ITEM_LUGIA_CHAMBER_TM          0x49E
 #define FLAG_ITEM_FABLED_CAVE_TM            0x49F
+#define FLAG_ITEM_ROUTE120_5                0x4A0
 
 #define FLAG_DEFEATED_RUSTBORO_GYM          0x4B1
 
