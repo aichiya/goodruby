@@ -7923,18 +7923,18 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = gTrainerParty_Catherine5 }
     },
 
-    [TRAINER_MAXIE_1] =
+    [TRAINER_DOESNT] =
     {
-        .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_MAGMA_LEADER,
+        .partyFlags = F_TRAINER_PARTY_FULL_CONTROL,
+        .trainerClass = TRAINER_CLASS_HACK_LORD,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
-        .trainerPic = TRAINER_PIC_MAXIE,
-        .trainerName = _("Maxie"),
+        .trainerPic = TRAINER_PIC_POKEMANIAC,
+        .trainerName = _("Doesnt"),
         .items = {0, 0, 0, 0}, //{ITEM_SUPER_POTION, ITEM_SUPER_POTION, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = 0x7,
-        .partySize = 2,
-        .party = {.NoItemDefaultMoves = gTrainerParty_Maxie1 }
+        .partySize = 6,
+        .party = {.FullControl = gTrainerParty_Doesnt }
     },
 
     [TRAINER_GRUNT_28] =

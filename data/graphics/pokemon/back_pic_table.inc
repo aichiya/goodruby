@@ -252,11 +252,11 @@ gMonBackPicTable:: @ 81E97F4
 	obj_tiles gMonBackPic_Lugia, 0x800, SPECIES_LUGIA
 	obj_tiles gMonBackPic_HoOh, 0x800, SPECIES_HO_OH
 	obj_tiles gMonBackPic_Celebi, 0x800, SPECIES_CELEBI
-	obj_tiles gMonBackPic_QuestionMark, 0x800, SPECIES_OLD_UNOWN_B
-	obj_tiles gMonBackPic_QuestionMark, 0x800, SPECIES_OLD_UNOWN_C
-	obj_tiles gMonBackPic_QuestionMark, 0x800, SPECIES_OLD_UNOWN_D
-	obj_tiles gMonBackPic_QuestionMark, 0x800, SPECIES_OLD_UNOWN_E
-	obj_tiles gMonBackPic_QuestionMark, 0x800, SPECIES_OLD_UNOWN_F
+	obj_tiles gMonBackPic_Kosuzu, 0x800, SPECIES_KOSUZU
+	obj_tiles gMonBackPic_DLZFurret2, 0x800, SPECIES_DLZFURRET2
+	obj_tiles gMonBackPic_Neotank, 0x800, SPECIES_NEOTANK
+	obj_tiles gMonBackPic_Lilligant, 0x800, SPECIES_GIGA_LILLI
+	obj_tiles gMonBackPic_Archie, 0x800, SPECIES_ARCHIE
 	obj_tiles gMonBackPic_QuestionMark, 0x800, SPECIES_OLD_UNOWN_G
 	obj_tiles gMonBackPic_QuestionMark, 0x800, SPECIES_OLD_UNOWN_H
 	obj_tiles gMonBackPic_QuestionMark, 0x800, SPECIES_OLD_UNOWN_I

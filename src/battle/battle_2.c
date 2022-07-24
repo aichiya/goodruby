@@ -1032,6 +1032,15 @@ u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
 {
     u32 ball = 0;
     s32 i;
+    u8 playerHighestLevel = 0;
+    
+    for (i = 0; i < 6; i++) {
+        u8 level = GetMonData(&gPlayerParty[i], MON_DATA_LEVEL);
+        if (level > playerHighestLevel)
+            playerHighestLevel = level;
+    }
+    if (playerHighestLevel < 50)
+        playerHighestLevel = 50;
 
     if (trainerNum == 0x400)
         return 0;
@@ -1262,13 +1271,16 @@ u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
 			{
 				const struct TrainerMonFullControl *partyData = gTrainers[trainerNum].party.FullControl;
 				u8 ability;
+                u8 level = partyData[i].level;
+                if (level == 0)
+                    level = playerHighestLevel;
 
                 fixedIV = partyData[i].iv;
                 if (partyData[i].gender == MON_MALE)
                     personalityValue |= 0x80;
                 else if (partyData[i].gender == MON_FEMALE)
                     personalityValue &= ~(0x80);
-                CreateMon(&party[i], partyData[i].species, partyData[i].level, fixedIV, TRUE, personalityValue, 1, 0);
+                CreateMon(&party[i], partyData[i].species, level, fixedIV, TRUE, personalityValue, 1, 0);
 
 				//CreateMonWithGenderNatureLetterOTID(&party[i], partyData[i].species, partyData[i].level, fixedIV, partyData[i].gender, partyData[i].nature, 0, 1, 0);
 				SetMonData(&party[i], MON_DATA_NATURE_OVERRIDE, &partyData[i].nature);
@@ -6699,6 +6711,7 @@ void HandleEndTurn_BattleWon(void)
         {
         case TRAINER_CLASS_ELITE_FOUR:
         case TRAINER_CLASS_CHAMPION:
+        case TRAINER_CLASS_HACK_LORD:
             PlayBGM(MUS_KACHI5);
             break;
         case TRAINER_CLASS_TEAM_AQUA:

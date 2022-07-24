@@ -55,4 +55,5 @@ gTrainerMoney:: @ 81F98F0
 	.byte       TRAINER_CLASS_BUG_CATCHER,  4, 0, 0
 	.byte             TRAINER_CLASS_HIKER, 10, 0, 0
 	.byte      TRAINER_CLASS_YOUNG_COUPLE,  8, 0, 0
+	.byte         TRAINER_CLASS_HACK_LORD, 50, 0, 0
 	.byte                                   -1,  5, 0, 0

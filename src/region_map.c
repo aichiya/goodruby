@@ -158,6 +158,7 @@ const struct RegionMapLocation gRegionMapLocations[] =
     { 6,  8, 1, 1, gMapName_AlteringCave},
     {12,  8, 1, 2, gMapName_Route136},
     {12,  8, 1, 1, gMapName_FabledCave},
+    {18,  3, 1, 1, gMapName_TopSecretArea},
     { 0,  0, 1, 1, gMapName_None},
 };
 
@@ -176,6 +177,7 @@ static const u16 sUnderwaterMaps[][2] =
     {MAPSEC_JAGGED_PASS,     MAPSEC_ROUTE_112},
     {MAPSEC_MT_PYRE,           MAPSEC_ROUTE_122},
     {MAPSEC_SKY_PILLAR,        MAPSEC_ROUTE_131},
+    {MAPSEC_TOP_SECRET_AREA, MAPSEC_LILYCOVE_CITY},
     {MAPSEC_NOTHING,              MAPSEC_NOTHING},
 };
 

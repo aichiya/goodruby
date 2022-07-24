@@ -533,4 +533,7 @@ const u8 gMoveNames[][13] = {
     [MOVE_DRACO_METEOR] = _("Draco Meteor"),
     [MOVE_DARK_VOID] = _("Dark Void"),
     [MOVE_ACCELEROCK] = _("Accelerock"),
+    [MOVE_DEMON_BOOK] = _("Demon Book"),
+    [MOVE_AQUA_SUPLEX] = _("Aqua Suplex"),
+    [MOVE_FORCEWIN] = _("/forcewin"),
 };

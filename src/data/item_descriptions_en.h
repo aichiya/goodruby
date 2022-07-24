@@ -1701,8 +1701,8 @@ static const u8 gItemDescription_TM69[] = _(
     "Speed.");
  
 static const u8 gItemDescription_TM70[] = _(
-    "Uses the Attack stat\n"
-    "of the target\n"
+    "Uses the Attack\n"
+    "stat of the target\n"
     "for damage.");
  
 static const u8 gItemDescription_TM71[] = _(

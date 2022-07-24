@@ -436,3 +436,4 @@
     .include "data/maps/AlteringCave_3FV3/events.inc"
     .include "data/maps/AlteringCave_4F/events.inc"
     .include "data/maps/FabledCave/events.inc"
+    .include "data/maps/TopSecretArea/events.inc"

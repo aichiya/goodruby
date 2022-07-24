@@ -218,6 +218,7 @@
 	.set TRAINER_CLASS_YOUNG_COUPLE,      55
 	.set TRAINER_CLASS_OLD_COUPLE,        56
 	.set TRAINER_CLASS_SIS_AND_BRO,       57
+	.set TRAINER_CLASS_HACK_LORD,         58
 
 	.set TRAINER_ENCOUNTER_MUSIC_MALE,         0 @ standard male encounter music
 	.set TRAINER_ENCOUNTER_MUSIC_FEMALE,       1 @ standard female encounter music

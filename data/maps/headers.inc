@@ -421,3 +421,4 @@
     .include "data/maps/AlteringCave_3FV3/header.inc"
     .include "data/maps/AlteringCave_4F/header.inc"
 	.include "data/maps/FabledCave/header.inc"
+    .include "data/maps/TopSecretArea/header.inc"

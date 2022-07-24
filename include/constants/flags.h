@@ -272,6 +272,7 @@
 #define FLAG_GOT_GYM_REFRESHMENT_8          0x13E
 #define FLAG_SAID_JIRACHI_PHRASE            0x13F
 #define FLAG_GOT_JIRACHI                    0x140
+#define FLAG_BEAT_HACK_LORD                 0x141
 
 // hidden item flags
 #define FLAG_HIDDEN_ITEMS_START  0x258

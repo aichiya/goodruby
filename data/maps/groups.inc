@@ -222,6 +222,7 @@ gMapGroup13:: @ 83081C8
 	.4byte LilycoveCity_DepartmentStore_5F
 	.4byte LilycoveCity_DepartmentStoreRooftop
 	.4byte LilycoveCity_DepartmentStoreElevator
+	.4byte TopSecretArea
 
 	.align 2
 gMapGroup14:: @ 8308228

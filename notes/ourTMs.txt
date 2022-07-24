@@ -67,7 +67,7 @@
 67 - Knock Off      Altering Cave
 68 - Giga Impact    Department Store
 69 - Rock Polish    Slateport Market
-70 - Foul Play
+70 - Foul Play      Department Store
 71 - Stone Edge     Meteor Falls (deep)
 72 - Volt Switch    Mauville Gym
 73 - Thunder Wave   Wattson after New Mauville

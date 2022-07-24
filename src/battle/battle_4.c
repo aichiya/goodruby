@@ -737,7 +737,8 @@ static void sp4A_round(void);
 static void sp4B_jumpkickrecoil(void);
 static void sp4C_checkexplosiontargetvalidity(void);
 static void sp4D_endifnopowerherb(void);
-
+static void sp4E_demonbook(void);
+static void sp4F_forcewin(void);
 
 void (* const gBattleScriptingCommandsTable[])(void) =
 {
@@ -13426,6 +13427,8 @@ void (* const gBattleScriptingSpecialTable[])(void) =
     sp4B_jumpkickrecoil,
     sp4C_checkexplosiontargetvalidity,
     sp4D_endifnopowerherb,
+    sp4E_demonbook,
+    sp4F_forcewin,
 };
 
 
@@ -15137,4 +15140,113 @@ static void sp4D_endifnopowerherb(void)
     u8 holdEffect = ItemId_GetHoldEffect(gBattleMons[gBankAttacker].item);
     if (holdEffect != HOLD_EFFECT_POWER_HERB)
         gBattlescriptCurrInstr = BattleScript_MoveEnd;
+}
+
+// The order of this is assumed to be the same as the types
+static const u16 demonbookmoves[] = {
+    MOVE_TRI_ATTACK,
+    MOVE_AURA_SPHERE,
+    MOVE_AIR_SLASH,
+    MOVE_SLUDGE_BOMB,
+    MOVE_EARTH_POWER,
+    MOVE_POWER_GEM,
+    MOVE_BUG_BUZZ,
+    MOVE_SHADOW_BALL,
+    MOVE_FLASH_CANNON,
+    MOVE_MOONBLAST,
+    MOVE_FLAMETHROWER,
+    MOVE_SURF,
+    MOVE_ENERGY_BALL,
+    MOVE_THUNDERBOLT,
+    MOVE_PSYCHIC,
+    MOVE_ICE_BEAM,
+    MOVE_DRAGON_PULSE,
+    MOVE_DARK_PULSE,
+    0x00,
+};
+
+static void sp4E_demonbook(void)
+{
+    u8 i = 0;
+    u16 moveUsed = 0;
+    u16 highestDamage = 0;
+    s32 baseDamage[18];
+    u16 side_hword = gSideAffecting[GetBattlerPosition(gBankTarget) & 1];
+    
+    // Okay:
+    // First use applicable OHKO if we locked on
+    // (Levitate Froslass is the only way to block all of them, which is impossible but whatever)
+    if (gStatuses3[gBankTarget] & STATUS3_ALWAYS_HITS && 
+        gDisableStructs[gBankTarget].bankWithSureHit == gBankAttacker && 
+        gBattleMons[gBankTarget].ability != ABILITY_STURDY) {
+        if (gBattleMons[gBankTarget].type1 != TYPE_ICE && gBattleMons[gBankTarget].type2 != TYPE_ICE)
+            moveUsed = MOVE_SHEER_COLD;
+        else if (gBattleMons[gBankTarget].type1 != TYPE_GHOST && gBattleMons[gBankTarget].type2 != TYPE_GHOST)
+            moveUsed = MOVE_GUILLOTINE;
+        else if (gBattleMons[gBankTarget].ability != ABILITY_LEVITATE)
+            moveUsed = MOVE_FISSURE;
+        
+        if (moveUsed != 0) {
+            gHitMarker &= ~(HITMARKER_ATTACKSTRING_PRINTED);
+            gCurrentMove = moveUsed;
+            gBattlescriptCurrInstr = gBattleScriptsForMoveEffects[gBattleMoves[gCurrentMove].effect];
+            return;
+        }
+    }
+    
+    // Run through all of them and determine which is strongest
+    for (i = 0; i < 18; i++) {
+        gCurrentMove = demonbookmoves[i];
+        gBattleMoveDamage = CalculateBaseDamage(&gBattleMons[gBankAttacker], &gBattleMons[gBankTarget],
+                                                gCurrentMove, side_hword, 0, 0, gBankAttacker, gBankTarget);
+        AI_TypeCalc(gCurrentMove, gBattleMons[gBankTarget].species, gBattleMons[gBankTarget].ability);
+        baseDamage[i] = gBattleMoveDamage;
+    }
+    
+    // Check foe's immunities
+    if (gBattleMons[gBankTarget].ability == ABILITY_VOLT_ABSORB ||
+        gBattleMons[gBankTarget].ability == ABILITY_MOTOR_DRIVE)
+        baseDamage[TYPE_ELECTRIC] = 0;
+        
+    if (gBattleMons[gBankTarget].ability == ABILITY_WATER_ABSORB ||
+        gBattleMons[gBankTarget].ability == ABILITY_DRY_SKIN ||
+        gBattleMons[gBankTarget].ability == ABILITY_STORM_DRAIN)
+        baseDamage[TYPE_WATER] = 0;
+    
+    if (gBattleMons[gBankTarget].ability == ABILITY_FLASH_FIRE)
+        baseDamage[TYPE_FIRE] = 0;
+    
+    if (gBattleMons[gBankTarget].ability == ABILITY_SAP_SIPPER)
+        baseDamage[TYPE_GRASS] = 0;
+    
+    if (gBattleMons[gBankTarget].ability == ABILITY_LEVITATE)
+        baseDamage[TYPE_GROUND] = 0;
+    
+    // we can mostly ignore wonder guard since type effectiveness should push up a super-effective move
+
+    // Pick the move with the highest damage
+    for (i = 0; i < 18; i++) {
+        if (baseDamage[i] > highestDamage) {
+            highestDamage = baseDamage[i];
+            moveUsed = demonbookmoves[i];
+        }
+    }
+    
+    // we somehow didn't find a move?
+    if (moveUsed == 0)
+        moveUsed = demonbookmoves[Random() % 18];
+    
+    gBattleMoveDamage = 0;
+    gHitMarker &= ~(HITMARKER_ATTACKSTRING_PRINTED);
+    gCurrentMove = moveUsed;
+    gBattlescriptCurrInstr = gBattleScriptsForMoveEffects[gBattleMoves[gCurrentMove].effect];
+}
+
+static void sp4F_forcewin(void)
+{
+    u32 zero = 0;
+    u8 i = 0;
+    gBattleMons[0].hp = 0;
+    for (i = 0; i < 6; i++)
+        SetMonData(&gPlayerParty[i], MON_DATA_HP, &zero);
 }

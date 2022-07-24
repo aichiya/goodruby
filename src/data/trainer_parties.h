@@ -8986,17 +8986,79 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Catherine5[] = {
     }
 };
 
-const struct TrainerMonNoItemDefaultMoves gTrainerParty_Maxie1[] = {
+const struct TrainerMonFullControl gTrainerParty_Doesnt[] = {
     {
-	.iv = 0,
-	.level = 17,
-	.species = SPECIES_TORKOAL
+	.iv = 31,
+	.level = 0,
+	.species = SPECIES_KOSUZU,
+	.heldItem = ITEM_LEFTOVERS,
+	.ability = 2, // Magic Bounce
+	.moves = {MOVE_DEMON_BOOK, MOVE_BLOCK, MOVE_RECOVER, MOVE_STEALTH_ROCK},
+		.evs = {252, 0, 124, 0, 0, 124},
+		.nature = NATURE_BOLD,
+		.gender = MON_FEMALE,
+		.ball = ITEM_MASTER_BALL,
     },
     {
-	.iv = 0,
-	.level = 17,
-	.species = SPECIES_CAMERUPT
-    }
+	.iv = 31,
+	.level = 0,
+	.species = SPECIES_ARCHIE,
+	.heldItem = ITEM_TOXIC_ORB,
+	.ability = 2, // Poison Heal
+	.moves = {MOVE_AQUA_SUPLEX, MOVE_CIRCLE_THROW, MOVE_SPORE, MOVE_BULK_UP},
+		.evs = {252, 124, 0, 0, 0, 124},
+		.nature = NATURE_ADAMANT,
+		.gender = MON_MALE,
+		.ball = ITEM_MASTER_BALL,
+    },
+    {
+	.iv = 31,
+	.level = 0,
+	.species = SPECIES_DLZFURRET2,
+	.heldItem = ITEM_SHELL_BELL,
+	.ability = 2, // Scrappy
+	.moves = {MOVE_FACADE, MOVE_DRAIN_PUNCH, MOVE_MEGA_PUNCH, MOVE_COIL},
+		.evs = {0, 252, 0, 252, 0, 0},
+		.nature = NATURE_ADAMANT,
+		.gender = MON_MALE,
+		.ball = ITEM_MASTER_BALL,
+    },
+    {
+	.iv = 31,
+	.level = 0,
+	.species = SPECIES_WURMPLE,
+	.heldItem = ITEM_FOCUS_SASH,
+	.ability = 0, // Shield Dust
+	.moves = {MOVE_FORCEWIN, 0, 0, 0},
+		.evs = {0, 0, 0, 0, 0, 0},
+		.nature = NATURE_ADAMANT,
+		.gender = MON_MALE,
+		.ball = ITEM_MASTER_BALL,
+    },
+    {
+	.iv = 31,
+	.level = 0,
+	.species = SPECIES_NEOTANK,
+	.heldItem = ITEM_LIFE_ORB,
+	.ability = 2, // Mold Breaker
+	.moves = {MOVE_FLASH_CANNON, MOVE_PSYSTRIKE, MOVE_SACRED_FIRE, MOVE_SHELL_SMASH},
+		.evs = {0, 252, 0, 124, 124, 0},
+		.nature = NATURE_RASH,
+		.gender = MON_GENDERLESS,
+		.ball = ITEM_MASTER_BALL,
+    },
+    {
+	.iv = 31,
+	.level = 0,
+	.species = SPECIES_GIGA_LILLI,
+	.heldItem = ITEM_LUM_BERRY,
+	.ability = 2, // Unaware
+	.moves = {MOVE_QUIVER_DANCE, MOVE_GIGA_DRAIN, MOVE_EARTH_POWER, MOVE_ICE_BEAM},
+		.evs = {252, 0, 124, 124, 0, 0},
+		.nature = NATURE_BOLD,
+		.gender = MON_FEMALE,
+		.ball = ITEM_MASTER_BALL,
+    },
 };
 
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Grunt28[] = {

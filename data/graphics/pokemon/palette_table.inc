@@ -252,11 +252,11 @@ gMonPaletteTable:: @ 81EA5B4
 	obj_pal gMonPalette_Lugia, SPECIES_LUGIA
 	obj_pal gMonPalette_HoOh, SPECIES_HO_OH
 	obj_pal gMonPalette_Celebi, SPECIES_CELEBI
-	obj_pal gMonPalette_QuestionMark, SPECIES_OLD_UNOWN_B
-	obj_pal gMonPalette_QuestionMark, SPECIES_OLD_UNOWN_C
-	obj_pal gMonPalette_QuestionMark, SPECIES_OLD_UNOWN_D
-	obj_pal gMonPalette_QuestionMark, SPECIES_OLD_UNOWN_E
-	obj_pal gMonPalette_QuestionMark, SPECIES_OLD_UNOWN_F
+	obj_pal gMonPalette_Kosuzu, SPECIES_KOSUZU
+	obj_pal gMonPalette_DLZFurret2, SPECIES_DLZFURRET2
+	obj_pal gMonPalette_Neotank, SPECIES_NEOTANK
+	obj_pal gMonPalette_Lilligant, SPECIES_GIGA_LILLI
+	obj_pal gMonPalette_Archie, SPECIES_ARCHIE
 	obj_pal gMonPalette_QuestionMark, SPECIES_OLD_UNOWN_G
 	obj_pal gMonPalette_QuestionMark, SPECIES_OLD_UNOWN_H
 	obj_pal gMonPalette_QuestionMark, SPECIES_OLD_UNOWN_I

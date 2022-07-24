@@ -254,11 +254,11 @@ gMonShinyPaletteTable:: @ 81EB374
 	obj_pal gMonShinyPalette_Lugia, PAL_ID_SHINY + SPECIES_LUGIA
 	obj_pal gMonShinyPalette_HoOh, PAL_ID_SHINY + SPECIES_HO_OH
 	obj_pal gMonShinyPalette_Celebi, PAL_ID_SHINY + SPECIES_CELEBI
-	obj_pal gMonShinyPalette_QuestionMark, PAL_ID_SHINY + SPECIES_OLD_UNOWN_B
-	obj_pal gMonShinyPalette_QuestionMark, PAL_ID_SHINY + SPECIES_OLD_UNOWN_C
-	obj_pal gMonShinyPalette_QuestionMark, PAL_ID_SHINY + SPECIES_OLD_UNOWN_D
-	obj_pal gMonShinyPalette_QuestionMark, PAL_ID_SHINY + SPECIES_OLD_UNOWN_E
-	obj_pal gMonShinyPalette_QuestionMark, PAL_ID_SHINY + SPECIES_OLD_UNOWN_F
+	obj_pal gMonShinyPalette_Kosuzu, PAL_ID_SHINY + SPECIES_KOSUZU
+	obj_pal gMonShinyPalette_DLZFurret2, PAL_ID_SHINY + SPECIES_DLZFURRET2
+	obj_pal gMonShinyPalette_Neotank, PAL_ID_SHINY + SPECIES_NEOTANK
+	obj_pal gMonShinyPalette_Lilligant, PAL_ID_SHINY + SPECIES_GIGA_LILLI
+	obj_pal gMonShinyPalette_Archie, PAL_ID_SHINY + SPECIES_ARCHIE
 	obj_pal gMonShinyPalette_QuestionMark, PAL_ID_SHINY + SPECIES_OLD_UNOWN_G
 	obj_pal gMonShinyPalette_QuestionMark, PAL_ID_SHINY + SPECIES_OLD_UNOWN_H
 	obj_pal gMonShinyPalette_QuestionMark, PAL_ID_SHINY + SPECIES_OLD_UNOWN_I

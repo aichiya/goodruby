@@ -1660,6 +1660,7 @@ void sub_802E2D4(void)
         u8 *str = gDisplayedStringBattle;
 
         str = StringCopy(str, BattleText_Format);
+        
         StringCopy(str, gTypeNames[gBattleMoves[r4->moves[gMoveSelectionCursor[gActiveBattler]]].type]);
         Text_FillWindowRect(&gUnknown_03004210, 0x1016, 0x17, 0x39, 0x1C, 0x3A);
         Text_InitWindow(&gUnknown_03004210, gDisplayedStringBattle, 0x2C0, 0x17, 0x39);

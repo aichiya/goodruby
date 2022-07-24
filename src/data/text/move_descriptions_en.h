@@ -2118,6 +2118,18 @@ static const u8 MoveDescription_Accelerock[] = _(
     "An extremely fast attack\n"
     "that always strikes first.");
 
+static const u8 MoveDescription_DemonBook[] = _(
+    "Stolen property. Please\n"
+    "return to Suzunaan.");
+
+static const u8 MoveDescription_AquaSuplex[] = _(
+    "Some say this move is\n"
+    "in vanilla Emerald.");
+
+static const u8 MoveDescription_Forcewin[] = _(
+    "When I make a move that\n"
+    "makes the player lose....");
+
 
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
@@ -2653,4 +2665,7 @@ const u8 * const gMoveDescriptions[] = {
     MoveDescription_DracoMeteor,
     MoveDescription_DarkVoid,
     MoveDescription_Accelerock,
+    MoveDescription_DemonBook,
+    MoveDescription_AquaSuplex,
+    MoveDescription_Forcewin,
 };

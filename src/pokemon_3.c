@@ -516,13 +516,10 @@ u16 HoennToNationalOrder(u16 hoennNum)
 
 u16 SpeciesToCryId(u16 species)
 {
-    if (species < SPECIES_OLD_UNOWN_B - 1)
+    if (species <= SPECIES_CELEBI)
         return species;
 
-    if (species <= SPECIES_OLD_UNOWN_Z - 1)
-        return SPECIES_UNOWN - 1;
-
-    return gSpeciesIdToCryId[species - ((SPECIES_OLD_UNOWN_Z + 1) - 1)];
+    return gSpeciesIdToCryId[species - (SPECIES_CELEBI)];
 }
 
 void unref_sub_803F938(u16 species, u32 personality, u8 *dest)
@@ -1229,21 +1226,22 @@ u16 GetMUS_ForBattle(void)
     {
         switch (gTrainers[gTrainerBattleOpponent].trainerClass)
         {
-        case 2:
-        case 0x31:
+        case TRAINER_CLASS_AQUA_LEADER:
+        case TRAINER_CLASS_MAGMA_LEADER:
             return MUS_BATTLE30;
-        case 3:
-        case 4:
-        case 0x32:
-        case 0x33:
+        case TRAINER_CLASS_TEAM_AQUA:
+        case TRAINER_CLASS_AQUA_ADMIN:
+        case TRAINER_CLASS_TEAM_MAGMA:
+        case TRAINER_CLASS_MAGMA_ADMIN:
             return MUS_BATTLE31;
-        case 0x19:
+        case TRAINER_CLASS_LEADER:
             return MUS_BATTLE32;
-        case 0x20:
+        case TRAINER_CLASS_CHAMPION:
             return MUS_BATTLE33;
-        case 0x2E:
+        case TRAINER_CLASS_POKEMON_TRAINER_3:
             return MUS_BATTLE35;
-        case 0x18:
+        case TRAINER_CLASS_ELITE_FOUR:
+        case TRAINER_CLASS_HACK_LORD:
             return MUS_BATTLE38;
         default:
             return MUS_BATTLE20;

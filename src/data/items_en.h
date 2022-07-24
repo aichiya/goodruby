@@ -7297,7 +7297,7 @@ const struct Item gItems[] =
     {
         .name = _("TM70"),
         .itemId = ITEM_TM70_FOUL_PLAY,
-        .price = 0,
+        .price = 50,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TM70,
@@ -7310,6 +7310,7 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
         .flingPower = 0,
+        .expensive = 1,
     },
     {
         .name = _("TM71"),

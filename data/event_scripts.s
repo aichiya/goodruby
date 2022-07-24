@@ -425,6 +425,7 @@ gStdScripts_End::
 	.include "data/maps/AlteringCave_3FV3/scripts.inc"
 	.include "data/maps/AlteringCave_4F/scripts.inc"
 	.include "data/maps/FabledCave/scripts.inc"
+	.include "data/maps/TopSecretArea/scripts.inc"
 
 gUnknown_0815F36C:: @ 815F36C
 	lockall
@@ -899,6 +900,7 @@ EventScript_15F573:
 	.include "data/maps/Route109_SeashoreHouse/text.inc"
 	.include "data/maps/Route110_TrickHouseEntrance/text.inc"
     .include "data/maps/TracklessForest/text.inc"
+    .include "data/maps/TopSecretArea/text.inc"
 
 Route110_TrickHousePuzzle1_Text_19C1B8:: @ 819C1B8
 	.string "{PLAYER} found a scroll.$"

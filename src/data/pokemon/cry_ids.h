@@ -6,6 +6,34 @@
 #define POKERUBY_CRY_IDS_H
 
 const u16 gSpeciesIdToCryId[] = {
+    0,
+    
+    296, // kosuzu / kirlia
+    161, // dlzfurret2 / furret
+    400, // neotank / magnezone
+    389, // lilligant / roserade
+    370, // archie / kyogre
+    200, // unown G
+    200, // unown H
+    200, // unown I
+    200, // unown J
+    200, // unown K
+    200, // unown L
+    200, // unown M
+    200, // unown N
+    200, // unown O
+    200, // unown P
+    200, // unown Q
+    200, // unown R
+    200, // unown S
+    200, // unown T
+    200, // unown U
+    200, // unown V
+    200, // unown W
+    200, // unown X
+    200, // unown Y
+    200, // unown Z
+
     273, // TREECKO
     274, // GROVYLE
     275, // SCEPTILE

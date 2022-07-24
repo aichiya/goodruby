@@ -358,3 +358,4 @@
 	.include "data/layouts/GraniteCave_LugiaChamber/layout.inc"
 	.include "data/layouts/Route136/layout.inc"
 	.include "data/layouts/FabledCave/layout.inc"
+	.include "data/layouts/TopSecretArea/layout.inc"

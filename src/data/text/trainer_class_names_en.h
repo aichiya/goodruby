@@ -59,7 +59,8 @@ const u8 gTrainerClassNames[][13] = {
     _("Hiker"),
     _("Young Couple"),
     _("Old Couple"),
-    _("Sis and Bro")
+    _("Sis and Bro"),
+    _("Hack Lord")
 };
 
 #endif

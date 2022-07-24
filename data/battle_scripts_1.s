@@ -210,7 +210,7 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectSecretPower
 	.4byte BattleScript_EffectDoubleEdge
 	.4byte BattleScript_EffectTeeterDance
-	.4byte BattleScript_EffectBlazeKick
+	.4byte BattleScript_EffectDemonBook
 	.4byte BattleScript_EffectMudSport
 	.4byte BattleScript_EffectPoisonFang
 	.4byte BattleScript_EffectWeatherBall
@@ -219,7 +219,7 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectCosmicPower
 	.4byte BattleScript_EffectSkyUppercut
 	.4byte BattleScript_EffectBulkUp
-	.4byte BattleScript_EffectPoisonTail
+	.4byte BattleScript_EffectForceWin
 	.4byte BattleScript_EffectWaterSport
 	.4byte BattleScript_EffectCalmMind
 	.4byte BattleScript_EffectDragonDance
@@ -384,7 +384,6 @@ BattleScript_CantMakeAsleep: @ 81D6FE0
 	goto BattleScript_MoveEnd
 
 BattleScript_EffectPoisonHit: @ 81D6FF0
-BattleScript_EffectPoisonTail: @ 81D6FF0
 	setmoveeffect EFFECT_POISON
 	goto BattleScript_EffectHit
 
@@ -430,7 +429,6 @@ BattleScript_AbsorbTryFainting: @ 81D7056
 	tryfaintmon TARGET, FALSE, NULL
 	goto BattleScript_MoveEnd
 
-BattleScript_EffectBlazeKick: @ 81D7069
 BattleScript_EffectBurnHit: @ 81D7069
 	setmoveeffect EFFECT_BURN
 	goto BattleScript_EffectHit
@@ -7064,3 +7062,27 @@ BattleScript_ExertsPressure::
 	printstring BATTLE_TEXT_ExertsPressure
 	waitmessage 64
 	end3
+
+BattleScript_EffectDemonBook::
+	attackcanceler
+	attackstring
+	pause 64
+	special 0x4D
+	ppreduce
+	goto BattleScript_ButItFailed
+	end
+
+BattleScript_EffectForceWin::
+	attackcanceler
+	attackstring
+	pause 64
+	ppreduce
+	special 0x4E
+	healthbarupdate TARGET
+	healthbarupdate USER
+	datahpupdate TARGET
+	datahpupdate USER
+	tryfaintmon TARGET, FALSE, NULL
+	tryfaintmon USER, FALSE, NULL
+	end
+

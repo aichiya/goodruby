@@ -69,6 +69,7 @@ static void DrawExperienceProgressBar(struct Pokemon *, u8, u8);
 static void SummaryScreen_DestroyTask(u8 taskId);
 static void sub_80A1950(void);
 static void sub_809DE64(void);
+static void SummaryPokemonSkillsScreenHandleAButton(u8);
 static void SummaryScreenHandleAButton(u8);
 void SummaryScreenHandleUpDownInput(u8, s8);
 static bool8 SummaryScreen_CanForgetSelectedMove(u8);
@@ -104,6 +105,7 @@ static void sub_80A1654(s8, u8);
 static void sub_80A1488(s8, u8);
 static void SummaryScreen_PrintPokemonInfo(struct Pokemon *);
 static void SummaryScreen_PrintPokemonSkills(struct Pokemon *);
+static void SummaryScreen_PrintPokemonSkillsRanks(struct Pokemon *);
 static void sub_80A1918(u8, u8);
 static void SummaryScreen_DrawTypeIcon(u8, u8, u8, u8);
 static u16 GetMonMove(struct Pokemon *, u8);
@@ -521,7 +523,7 @@ static void (*const sUnknown_083C1580[])(void) = {
     SummaryScreen_PrintPokemonSkillsLabels,
 };
 
-static void (*const sUnknown_083C1588[])(struct Pokemon *) = {
+static void (*const sUnknown_083C1588[])(struct Pokemon *) = { // skills page
     sub_809F63C,
     sub_809F650,
     sub_809F664,
@@ -964,6 +966,11 @@ static void SummaryScreenHandleKeyInput(u8 taskId)
     {
         SummaryScreenHandleLeftRightInput(taskId, 1);
     }
+    else if (gMain.newKeys & SELECT_BUTTON)
+    {
+        if (pssData.page == PSS_PAGE_SKILLS)
+            SummaryPokemonSkillsScreenHandleAButton(taskId);
+    }
     else if (gMain.newKeys & A_BUTTON)
     {
         if (pssData.page >= PSS_PAGE_BATTLE_MOVES)
@@ -1394,6 +1401,14 @@ _0809EA34:\n\
     .align 2, 0\n\
 _0809EA4C: .4byte gSharedMem + 0x18010\n\
     .syntax divided\n");
+}
+
+static void SummaryPokemonSkillsScreenHandleAButton(u8 taskId)
+{
+    if (pssData.selectedMoveIndex == 4)
+        pssData.selectedMoveIndex = 0;
+    pssData.selectedMoveIndex = !pssData.selectedMoveIndex;
+    sub_809F650(&pssData.loadedMon);
 }
 
 static void SummaryScreenHandleAButton(u8 taskId)
@@ -2110,13 +2125,18 @@ static bool8 sub_809F5F8(void)
 static void sub_809F63C(struct Pokemon *mon)
 {
     sub_809FE80();
+    pssData.selectedMoveIndex = 0;
     SummaryScreen_PrintPokemonInfo(mon);
 }
 
 static void sub_809F650(struct Pokemon *mon)
 {
     sub_80A00A4();
-    SummaryScreen_PrintPokemonSkills(mon);
+    SummaryScreen_PrintPokemonSkillsLabels();
+    if (pssData.selectedMoveIndex)
+        SummaryScreen_PrintPokemonSkillsRanks(mon);
+    else
+        SummaryScreen_PrintPokemonSkills(mon);
 }
 
 static void sub_809F664(struct Pokemon *mon)
@@ -2492,18 +2512,27 @@ static void sub_809FE80(void)
     Menu_EraseWindowRect(11, 14, 28, 17);
 }
 
-static void SummaryScreen_PrintPokemonSkillsLabels(void)
+static u8 SummaryScreen_DetermineStatColor(u8 stat)
 {
+    u16 mod;
+    u8 color;
+    mod = nature_stat_mod(GetNature(&pssData.loadedMon), 10, stat);
+    color = mod == 9 ? (9 /*blue*/) : mod == 11 ? (14 /*red*/) : (13 /* white*/);
+    return color;
+}
+
+static void SummaryScreen_PrintPokemonSkillsLabels(void)
+{    
     SummaryScreen_PrintColoredText(gOtherText_ExpPoints, 13, 11, 14);
     SummaryScreen_PrintColoredText(gOtherText_NextLv, 13, 11, 16);
     Menu_PrintText(gOtherText_Terminator18, 21, 16);
-
+    
     SummaryScreen_PrintColoredTextCentered(gOtherText_HP, 13, 11, 7, 42);
-    SummaryScreen_PrintColoredTextCentered(gOtherText_Attack, 13, 11, 9, 42);
-    SummaryScreen_PrintColoredTextCentered(gOtherText_Defense, 13, 11, 11, 42);
-    SummaryScreen_PrintColoredTextCentered(gOtherText_SpAtk, 13, 22, 7, 36);
-    SummaryScreen_PrintColoredTextCentered(gOtherText_SpDef, 13, 22, 9, 36);
-    SummaryScreen_PrintColoredTextCentered(gOtherText_Speed, 13, 22, 11, 36);
+    SummaryScreen_PrintColoredTextCentered(gOtherText_Attack, SummaryScreen_DetermineStatColor(1), 11, 9, 42);
+    SummaryScreen_PrintColoredTextCentered(gOtherText_Defense, SummaryScreen_DetermineStatColor(2), 11, 11, 42);
+    SummaryScreen_PrintColoredTextCentered(gOtherText_SpAtk, SummaryScreen_DetermineStatColor(4), 22, 7, 36);
+    SummaryScreen_PrintColoredTextCentered(gOtherText_SpDef, SummaryScreen_DetermineStatColor(5), 22, 9, 36);
+    SummaryScreen_PrintColoredTextCentered(gOtherText_Speed, SummaryScreen_DetermineStatColor(3), 22, 11, 36);
 }
 
 static void SummaryScreen_PrintPokemonSkills(struct Pokemon *mon)
@@ -2545,6 +2574,44 @@ static void SummaryScreen_PrintPokemonSkills(struct Pokemon *mon)
     buffer = AlignInt1InMenuWindow(buffer, GetMonData(mon, MON_DATA_MAX_HP), 48, 1);
 
     Menu_PrintTextPixelCoords(gStringVar1, 126, 56, 1);
+}
+
+static void SummaryScreen_PrintPokemonSkillsRanks(struct Pokemon *mon)
+{
+    u8 i;
+    u16 heldItem;
+    u8 *buffer;
+
+    for (i = 0; i < 5; i++)
+        sub_80A1918(i, 1);
+
+    heldItem = GetMonData(mon, MON_DATA_HELD_ITEM);
+    PrintHeldItemName(heldItem, 11, 4);
+    PrintNumRibbons(mon);
+
+    buffer = gStringVar1;
+
+    ConvertIntToDecimalString(buffer, GetMonData(mon, MON_DATA_EXP));
+    MenuPrint_RightAligned(buffer, 29, 14);
+    DrawExperienceProgressBar(mon, 23, 16);
+
+    ConvertIntToDecimalString(buffer, GetMonData(mon, MON_DATA_HP_IV));
+    MenuPrint_Centered(buffer, 16, 7, 50);
+    
+    ConvertIntToDecimalString(buffer, GetMonData(mon, MON_DATA_ATK_IV));
+    MenuPrint_Centered(buffer, 16, 9, 50);
+
+    ConvertIntToDecimalString(buffer, GetMonData(mon, MON_DATA_DEF_IV));
+    MenuPrint_Centered(buffer, 16, 11, 50);
+
+    ConvertIntToDecimalString(buffer, GetMonData(mon, MON_DATA_SPATK_IV));
+    MenuPrint_Centered(buffer, 27, 7, 18);
+
+    ConvertIntToDecimalString(buffer, GetMonData(mon, MON_DATA_SPDEF_IV));
+    MenuPrint_Centered(buffer, 27, 9, 18);
+
+    ConvertIntToDecimalString(buffer, GetMonData(mon, MON_DATA_SPEED_IV));
+    MenuPrint_Centered(buffer, 27, 11, 18);
 }
 
 static void sub_80A0090(struct Pokemon *mon)

@@ -695,6 +695,7 @@ AI_CheckViability: @ 81DA86D
 	if_effect EFFECT_LIGHT_SCREEN, AI_CV_LightScreen
 	if_effect EFFECT_REST, AI_CV_Rest
 	if_effect EFFECT_OHKO, AI_CV_OneHitKO
+	if_effect EFFECT_DEMON_BOOK, AI_CV_OneHitKO
 	if_effect EFFECT_RAZOR_WIND, AI_CV_ChargeUpMove
 	if_effect EFFECT_SUPER_FANG, AI_CV_SuperFang
 	if_effect EFFECT_TRAP, AI_CV_Trap
@@ -777,13 +778,11 @@ AI_CheckViability: @ 81DA86D
 	if_effect EFFECT_IMPRISON, AI_CV_Imprison
 	if_effect EFFECT_REFRESH, AI_CV_Refresh
 	if_effect EFFECT_SNATCH, AI_CV_Snatch
-	if_effect EFFECT_BLAZE_KICK, AI_CV_HighCrit
 	if_effect EFFECT_MUD_SPORT, AI_CV_MudSport
 	if_effect EFFECT_OVERHEAT, AI_CV_Overheat
 	if_effect EFFECT_TICKLE, AI_CV_DefenseDown
 	if_effect EFFECT_COSMIC_POWER, AI_CV_SpDefUp
 	if_effect EFFECT_BULK_UP, AI_CV_DefenseUp
-	if_effect EFFECT_POISON_TAIL, AI_CV_HighCrit
 	if_effect EFFECT_WATER_SPORT, AI_CV_WaterSport
 	if_effect EFFECT_CALM_MIND, AI_CV_SpDefUp
 	if_effect EFFECT_DRAGON_DANCE, AI_CV_DragonDance
@@ -1521,7 +1520,12 @@ AI_CV_Rest_End: @ 81DB2D1
 	end
 
 AI_CV_OneHitKO: @ 81DB2D2
+    if_status3 TARGET, S_ALWAYS_HIT, AI_CV_OneHitKO2
 	end
+    
+AI_CV_OneHitKO2:
+    score +2
+    end
 
 AI_CV_SuperFang: @ 81DB2D3
 	if_hp_more_than TARGET, 50, AI_CV_SuperFang_End
