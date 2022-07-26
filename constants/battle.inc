@@ -21,7 +21,7 @@
 
 @ status 3
 .equiv S_LEECH_SEED,  0x00000004
-.equiv S_ALWAYS_HIT,  0x00000010
+.equiv S_ALWAYS_HIT,  0x00000018
 .equiv S_PERISH_SONG, 0x00000020
 .equiv S_ROOTED,      0x00000400
 .equiv S_YAWN,        0x00001800

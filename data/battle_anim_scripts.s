@@ -552,6 +552,9 @@ gBattleAnims_Moves:: @ 81C7168
     .4byte Move_DRACO_METEOR
     .4byte Move_DARK_VOID
     .4byte Move_ACCELEROCK
+    .4byte Move_DEMON_BOOK
+    .4byte Move_AQUA_SUPLEX
+    .4byte Move_FORCEWIN
 	.4byte PoundCopy
 
 	.align 2
@@ -16311,4 +16314,88 @@ Move_ACCELEROCK:
 	blendoff
 	waitforvisualfinish
 	end
+
+Move_DEMON_BOOK:
+    end
+    
+Move_AQUA_SUPLEX:
+	loadspritegfx ANIM_TAG_WATER_IMPACT
+	loadspritegfx ANIM_TAG_SMALL_BUBBLES
+	loadspritegfx ANIM_TAG_ICE_CRYSTALS
+	monbg ANIM_BATTLER_DEF_PARTNER
+	setalpha 12, 8
+	createvisualtask AnimTask_ShakeMon, 5, 0, 0, 2, 23, 1
+	delay 5
+	playsewithpan SE_W152, SOUND_PAN_ATTACKER
+	createsprite gBattleAnimSpriteTemplate_83D9348, ANIM_BATTLER_ATTACKER, 2, 10, 10, 25, 0
+	delay 4
+	playsewithpan SE_W152, SOUND_PAN_ATTACKER
+	createsprite gBattleAnimSpriteTemplate_83D9348, ANIM_BATTLER_ATTACKER, 2, -15, 0, 25, 0
+	delay 4
+	playsewithpan SE_W152, SOUND_PAN_ATTACKER
+	createsprite gBattleAnimSpriteTemplate_83D9348, ANIM_BATTLER_ATTACKER, 2, 20, 10, 25, 0
+	delay 4
+	playsewithpan SE_W152, SOUND_PAN_ATTACKER
+	createsprite gBattleAnimSpriteTemplate_83D9348, ANIM_BATTLER_ATTACKER, 2, 0, -10, 25, 0
+	delay 4
+	playsewithpan SE_W152, SOUND_PAN_ATTACKER
+	createsprite gBattleAnimSpriteTemplate_83D9348, ANIM_BATTLER_ATTACKER, 2, -10, 15, 25, 0
+	delay 4
+	playsewithpan SE_W152, SOUND_PAN_ATTACKER
+	createsprite gBattleAnimSpriteTemplate_83D9348, ANIM_BATTLER_ATTACKER, 2, 25, 20, 25, 0
+	delay 4
+	playsewithpan SE_W152, SOUND_PAN_ATTACKER
+	createsprite gBattleAnimSpriteTemplate_83D9348, ANIM_BATTLER_ATTACKER, 2, -20, 20, 25, 0
+	delay 4
+	playsewithpan SE_W152, SOUND_PAN_ATTACKER
+	createsprite gBattleAnimSpriteTemplate_83D9348, ANIM_BATTLER_ATTACKER, 2, 12, 0, 25, 0
+	waitforvisualfinish
+	delay 10
+	createsprite gHorizontalLungeSpriteTemplate, ANIM_BATTLER_ATTACKER, 2, 6, 5
+	delay 6
+    playsewithpan SE_W127, SOUND_PAN_TARGET
+	createvisualtask AnimTask_ShakeMon2, 5, 1, 4, 0, 17, 1
+	createsprite gBattleAnimSpriteTemplate_83DB4D8, ANIM_BATTLER_ATTACKER, 3, -20, 0, 1, 1
+	createsprite gBattleAnimSpriteTemplate_83D9360, ANIM_BATTLER_ATTACKER, 4, -20, 0
+	createsprite gBattleAnimSpriteTemplate_83D9360, ANIM_BATTLER_ATTACKER, 4, -20, 0
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83DB4D8, ANIM_BATTLER_ATTACKER, 3, -15, 0, 1, 1
+	createsprite gBattleAnimSpriteTemplate_83D9360, ANIM_BATTLER_ATTACKER, 4, -15, 0
+	createsprite gBattleAnimSpriteTemplate_83D9360, ANIM_BATTLER_ATTACKER, 4, -15, 0
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83DB4D8, ANIM_BATTLER_ATTACKER, 3, -10, 0, 1, 1
+	createsprite gBattleAnimSpriteTemplate_83D9360, ANIM_BATTLER_ATTACKER, 4, -10, 0
+	createsprite gBattleAnimSpriteTemplate_83D9360, ANIM_BATTLER_ATTACKER, 4, -10, 0
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83DB4D8, ANIM_BATTLER_ATTACKER, 3, -5, 0, 1, 1
+	createsprite gBattleAnimSpriteTemplate_83D9360, ANIM_BATTLER_ATTACKER, 4, -5, 0
+	createsprite gBattleAnimSpriteTemplate_83D9360, ANIM_BATTLER_ATTACKER, 4, -5, 0
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83DB4D8, ANIM_BATTLER_ATTACKER, 3, 0, 0, 1, 1
+	createsprite gBattleAnimSpriteTemplate_83D9360, ANIM_BATTLER_ATTACKER, 4, 0, 0
+	createsprite gBattleAnimSpriteTemplate_83D9360, ANIM_BATTLER_ATTACKER, 4, 0, 0
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83DB4D8, ANIM_BATTLER_ATTACKER, 3, 5, 0, 1, 1
+	createsprite gBattleAnimSpriteTemplate_83D9360, ANIM_BATTLER_ATTACKER, 4, 5, 0
+	createsprite gBattleAnimSpriteTemplate_83D9360, ANIM_BATTLER_ATTACKER, 4, 5, 0
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83DB4D8, ANIM_BATTLER_ATTACKER, 3, 10, 0, 1, 1
+	createsprite gBattleAnimSpriteTemplate_83D9360, ANIM_BATTLER_ATTACKER, 4, 10, 0
+	createsprite gBattleAnimSpriteTemplate_83D9360, ANIM_BATTLER_ATTACKER, 4, 10, 0
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83DB4D8, ANIM_BATTLER_ATTACKER, 3, 15, 0, 1, 1
+	createsprite gBattleAnimSpriteTemplate_83D9360, ANIM_BATTLER_ATTACKER, 4, 15, 0
+	createsprite gBattleAnimSpriteTemplate_83D9360, ANIM_BATTLER_ATTACKER, 4, 15, 0
+	delay 2
+	createsprite gBattleAnimSpriteTemplate_83DB4D8, ANIM_BATTLER_ATTACKER, 3, 20, 0, 1, 1
+	createsprite gBattleAnimSpriteTemplate_83D9360, ANIM_BATTLER_ATTACKER, 4, 20, 0
+	createsprite gBattleAnimSpriteTemplate_83D9360, ANIM_BATTLER_ATTACKER, 4, 20, 0
+	waitforvisualfinish
+	clearmonbg ANIM_BATTLER_DEF_PARTNER
+	blendoff
+	end
+
+
+Move_FORCEWIN:
+    end
 

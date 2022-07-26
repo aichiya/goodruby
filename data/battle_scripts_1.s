@@ -5668,6 +5668,7 @@ BattleScript_EffectAquaRing:
 
 BattleScript_EffectSoak:
 	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
 	attackstring
 	ppreduce
 	jumpifstatus2 TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
@@ -7067,7 +7068,7 @@ BattleScript_EffectDemonBook::
 	attackcanceler
 	attackstring
 	pause 64
-	special 0x4D
+	special 0x4E
 	ppreduce
 	goto BattleScript_ButItFailed
 	end
@@ -7077,7 +7078,7 @@ BattleScript_EffectForceWin::
 	attackstring
 	pause 64
 	ppreduce
-	special 0x4E
+	special 0x4F
 	healthbarupdate TARGET
 	healthbarupdate USER
 	datahpupdate TARGET

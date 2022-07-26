@@ -1884,11 +1884,16 @@ AI_CV_Snore: @ 81DB5F7
 	end
 
 AI_CV_LockOn: @ 81DB5FA
+    if_status3 TARGET, S_ALWAYS_HIT, AI_CV_LockOn2
 	if_random_less_than 128, AI_CV_LockOn_End
 	score +2
 
 AI_CV_LockOn_End: @ 81DB602
 	end
+    
+AI_CV_LockOn2:
+    score -10
+    end
 
 AI_CV_SleepTalk: @ 81DB603
 	score +2

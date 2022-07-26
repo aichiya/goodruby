@@ -6,8 +6,6 @@
 #define POKERUBY_CRY_IDS_H
 
 const u16 gSpeciesIdToCryId[] = {
-    0,
-    
     296, // kosuzu / kirlia
     161, // dlzfurret2 / furret
     400, // neotank / magnezone

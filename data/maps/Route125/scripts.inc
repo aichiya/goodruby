@@ -48,3 +48,55 @@ Route125_EventScript_151FE3:: @ 8151FE3
 	trainerbattle 4, TRAINER_KIM_AND_IRIS, 0, Route125_Text_1C14AB, Route125_Text_1C14E7, Route125_Text_1C154F
 	msgbox Route125_Text_1C1508, 6
 	end
+
+Route125_ShellBellLass::
+    lock
+    goto_if_set FLAG_GOT_FOCUS_SASH, Route125_ShellBellLassDone
+	checkitem ITEM_SHELL_BELL, 1
+	compare RESULT, 0
+	goto_if_eq Route125_ShellBellLassNoBell
+    faceplayer
+    msgbox Route125_Text_Lass2, MSGBOX_YESNO
+    switch RESULT
+	case NO, Route125_ShellBellLassDisappointed
+    
+    
+	checkitemspace ITEM_FOCUS_SASH, 1
+	compare RESULT, 0
+	call_if_eq Route125_ShellBellLassMaybeFullInv
+    
+	msgbox Route125_Text_Lass5, 4
+	takeitem ITEM_SHELL_BELL, 1
+	giveitem_std ITEM_FOCUS_SASH
+	msgbox Route125_Text_Lass6, 4
+	setflag FLAG_GOT_FOCUS_SASH
+	release
+	end
+
+Route125_ShellBellLassMaybeFullInv::
+	checkitem ITEM_SHELL_BELL, 2
+	compare RESULT, 1
+	goto_if_eq Route125_ShellBellLassFullInv
+	return
+
+Route125_ShellBellLassFullInv::
+    msgbox Route125_Text_Lass4, 3
+    release
+    end
+
+Route125_ShellBellLassDisappointed::
+    msgbox Route125_Text_Lass4, 2
+    release
+    end
+
+Route125_ShellBellLassNoBell::
+    msgbox Route125_Text_Lass1, 2
+    release
+    end
+
+Route125_ShellBellLassDone::
+    msgbox Route125_Text_Lass6, 2
+    release
+    end
+    
+

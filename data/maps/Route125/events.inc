@@ -6,6 +6,7 @@ Route125_EventObjects:: @ 8384E28
 	object_event 5, EVENT_OBJ_GFX_SAILOR, 0, 23, 28, 3, MOVEMENT_TYPE_FACE_LEFT_AND_RIGHT, 0, 0, 1, 2, Route125_EventScript_151F8A, 0
 	object_event 6, EVENT_OBJ_GFX_LASS, 0, 20, 21, 3, MOVEMENT_TYPE_FACE_DOWN, 1, 1, 1, 0, Route125_EventScript_151FC8, 0
 	object_event 7, EVENT_OBJ_GFX_LASS, 0, 21, 21, 3, MOVEMENT_TYPE_FACE_DOWN, 1, 1, 1, 0, Route125_EventScript_151FE3, 0
+	object_event 8, EVENT_OBJ_GFX_LASS, 0, 15, 17, 3, MOVEMENT_TYPE_FACE_RIGHT, 0, 0, 0, 0, Route125_ShellBellLass, 0
 
 Route125_MapWarps:: @ 8384ED0
 	warp_def 22, 19, 0, 0, MAP_SHOAL_CAVE_LOW_TIDE_ENTRANCE_ROOM

@@ -4213,6 +4213,8 @@ static void atk23_getexp(void)
 
                 if (GetMonData(&gPlayerParty[gBattleStruct->expGetterID], MON_DATA_HP))
                 {
+                    u8 enemyLevel = gBattleMons[gBank1].level;
+                    u8 playerLevel = GetMonData(&gPlayerParty[gBattleStruct->expGetterID]);
                     if (gBattleStruct->sentInPokes & 1)
                         gBattleMoveDamage = *exp;
                     else
@@ -4221,9 +4223,15 @@ static void atk23_getexp(void)
                     if (holdEffect == HOLD_EFFECT_EXP_SHARE)
                         gBattleMoveDamage += gExpShareExp;
 					
-					gBattleMoveDamage *= sExperienceScalingFactors[(gBattleMons[gBank1].level * 2) + 10];
-					gBattleMoveDamage /= sExperienceScalingFactors[gBattleMons[gBank1].level + GetMonData(&gPlayerParty[gBattleStruct->expGetterID], MON_DATA_LEVEL) + 10];
+					gBattleMoveDamage *= sExperienceScalingFactors[(enemyLevel * 2) + 10];
+					gBattleMoveDamage /= sExperienceScalingFactors[(enemyLevel + playerLevel) + 10];
 					
+                    if (enemyLevel > playerLevel + 5)
+                    {
+                        gBattleMoveDamage *= 5 + (enemyLevel - playerLevel);
+                        gBattleMoveDamage /= 10;
+                    }
+                    
                     if (holdEffect == HOLD_EFFECT_LUCKY_EGG)
                         gBattleMoveDamage = (gBattleMoveDamage * 150) / 100;
 
@@ -15174,7 +15182,19 @@ static void sp4E_demonbook(void)
     u16 side_hword = gSideAffecting[GetBattlerPosition(gBankTarget) & 1];
     
     // Okay:
-    // First use applicable OHKO if we locked on
+    // If foe is behind a sub, blow them away if possible
+    if ((gBattleMons[gBankTarget].status2 & STATUS2_SUBSTITUTE) &&
+        gBattleMons[gBankTarget].ability != ABILITY_SUCTION_CUPS &&
+        gBattleMons[gBankTarget].ability != ABILITY_MAGIC_BOUNCE)
+    {
+        moveUsed = MOVE_WHIRLWIND;
+        gHitMarker &= ~(HITMARKER_ATTACKSTRING_PRINTED);
+        gCurrentMove = moveUsed;
+        gBattlescriptCurrInstr = gBattleScriptsForMoveEffects[gBattleMoves[gCurrentMove].effect];
+        return;
+    }
+    
+    // Use applicable OHKO if we locked on
     // (Levitate Froslass is the only way to block all of them, which is impossible but whatever)
     if (gStatuses3[gBankTarget] & STATUS3_ALWAYS_HITS && 
         gDisableStructs[gBankTarget].bankWithSureHit == gBankAttacker && 
