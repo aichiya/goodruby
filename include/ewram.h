@@ -267,6 +267,8 @@ extern u8 gSharedMem[];
 #define ewram1FE00                      (*(struct Unk201FE00 *)(gSharedMem + 0x1FE00))
 #define eMailboxInfo                    (*(struct MailboxStruct *)(gSharedMem + 0x1FE00))
 #define eCutGrassSpriteArray            (gSharedMem + 0x1FFF0) // 8 sprite IDs
+#define eAIItemsUsed                    (gSharedMem[0x1FFF0])
+#define ePCItemsUsed                    (gSharedMem[0x1FFF1])
 #define ewram1FFFC                      (gSharedMem[0x1FFFC])
 #define ewram1FFFD                      (gSharedMem[0x1FFFD])
 #define gHelperState                    (gSharedMem[0x1FFFE])

@@ -6974,7 +6974,7 @@ const struct BattleMove gBattleMoves[] = {
     },
 
     [MOVE_FORCEWIN] = {
-        .effect = EFFECT_SPLASH,
+        .effect = EFFECT_FORCE_WIN,
         .power = 0,
         .type = TYPE_DARK,
         .accuracy = 0,

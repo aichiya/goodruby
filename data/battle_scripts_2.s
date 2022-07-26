@@ -44,6 +44,9 @@ gBattlescriptsForUsingItem:: @ 81D9E7C
 	.4byte BattleScript_OpponentUsesStatusCureItem
 	.4byte BattleScript_OpponentUsesXItem
 	.4byte BattleScript_OpponentUsesGuardSpecs
+	.4byte BattleScript_OpponentUsesGun
+	.4byte BattleScript_OpponentUsesXNihilo
+	.4byte BattleScript_OpponentUsesMaxRevive
 
 gBattlescriptsForRunningByItem:: @ 81D9E94
 	.4byte BattleScript_RunByUsingItem
@@ -176,6 +179,49 @@ BattleScript_OpponentUsesGuardSpecs: @ 81D9FBB
 	waitmessage 64
 	useitemonopponent
 	printfromtable gMistUsedStringIds
+	waitmessage 64
+	setbyte sMOVEEND_STATE, 15
+	moveend 1, 0
+	finishaction
+
+BattleScript_OpponentUsesGun:
+	pause 48
+	playse SE_KAIFUKU
+	printstring BATTLE_TEXT_Used2
+	waitmessage 64
+	special 0x50
+	
+    effectivenesssound
+	hitanimation TARGET
+	waitstate
+	healthbarupdate TARGET
+	datahpupdate TARGET
+	resultmessage
+	waitmessage 64
+	tryfaintmon TARGET, FALSE, NULL
+	setbyte sMOVEEND_STATE, 15
+	moveend 1, 0
+	finishaction
+
+BattleScript_OpponentUsesXNihilo:
+	pause 48
+	playse SE_KAIFUKU
+	printstring BATTLE_TEXT_Used2
+	waitmessage 64
+	special 0x51
+	printstring BATTLE_TEXT_XNihilo
+	waitmessage 64
+	setbyte sMOVEEND_STATE, 15
+	moveend 1, 0
+	finishaction
+
+BattleScript_OpponentUsesMaxRevive:
+	pause 48
+	playse SE_KAIFUKU
+	printstring BATTLE_TEXT_Used2
+	waitmessage 64
+	special 0x52
+	printstring BATTLE_TEXT_MaxRevive
 	waitmessage 64
 	setbyte sMOVEEND_STATE, 15
 	moveend 1, 0

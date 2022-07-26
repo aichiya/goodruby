@@ -739,6 +739,9 @@ static void sp4C_checkexplosiontargetvalidity(void);
 static void sp4D_endifnopowerherb(void);
 static void sp4E_demonbook(void);
 static void sp4F_forcewin(void);
+static void sp50_usegun(void);
+static void sp51_usexnihilo(void);
+static void sp52_usemaxrevive(void);
 
 void (* const gBattleScriptingCommandsTable[])(void) =
 {
@@ -4214,7 +4217,7 @@ static void atk23_getexp(void)
                 if (GetMonData(&gPlayerParty[gBattleStruct->expGetterID], MON_DATA_HP))
                 {
                     u8 enemyLevel = gBattleMons[gBank1].level;
-                    u8 playerLevel = GetMonData(&gPlayerParty[gBattleStruct->expGetterID]);
+                    u8 playerLevel = GetMonData(&gPlayerParty[gBattleStruct->expGetterID], MON_DATA_LEVEL);
                     if (gBattleStruct->sentInPokes & 1)
                         gBattleMoveDamage = *exp;
                     else
@@ -4226,7 +4229,7 @@ static void atk23_getexp(void)
 					gBattleMoveDamage *= sExperienceScalingFactors[(enemyLevel * 2) + 10];
 					gBattleMoveDamage /= sExperienceScalingFactors[(enemyLevel + playerLevel) + 10];
 					
-                    if (enemyLevel > playerLevel + 5)
+                    if (enemyLevel > (playerLevel + 5))
                     {
                         gBattleMoveDamage *= 5 + (enemyLevel - playerLevel);
                         gBattleMoveDamage /= 10;
@@ -13437,6 +13440,9 @@ void (* const gBattleScriptingSpecialTable[])(void) =
     sp4D_endifnopowerherb,
     sp4E_demonbook,
     sp4F_forcewin,
+    sp50_usegun,
+    sp51_usexnihilo,
+    sp52_usemaxrevive,
 };
 
 
@@ -15269,4 +15275,75 @@ static void sp4F_forcewin(void)
     gBattleMons[0].hp = 0;
     for (i = 0; i < 6; i++)
         SetMonData(&gPlayerParty[i], MON_DATA_HP, &zero);
+}
+
+static void sp50_usegun(void)
+{
+    gBankTarget = 0;
+    gBattleMoveDamage = gBattleMons[gBankTarget].hp;
+    gHitMarker = HITMARKER_IGNORE_SUBSTITUTE;
+    gMoveResultFlags = MOVE_RESULT_SUPER_EFFECTIVE;
+}
+
+static void sp51_usexnihilo(void)
+{
+    gBankTarget = 0;
+    gBattleMons[0].statStages[STAT_STAGE_ATK] = 0;
+    gBattleMons[0].statStages[STAT_STAGE_DEF] = 0;
+    gBattleMons[0].statStages[STAT_STAGE_SPATK] = 0;
+    gBattleMons[0].statStages[STAT_STAGE_SPATK] = 0;
+    gBattleMons[0].statStages[STAT_STAGE_SPEED] = 0;
+    gBattleMons[0].statStages[STAT_STAGE_ACC] = 0;
+    gBattleMons[0].statStages[STAT_STAGE_EVASION] = 0;
+}
+
+static void sp52_usemaxrevive(void)
+{
+    // pick a random fainted mon in the party to revive
+    u32 hp = 0;
+    u8 bitMask = 0;
+    u8 numFainted = 0;
+    u8 target = 0;
+    u8 i = 0;
+    u16 species = 0;
+    
+    for (i = 0; i < 6; i++)
+    {
+        if (GetMonData(&gEnemyParty[i], MON_DATA_HP) == 0)
+        {
+            bitMask |= (1 << i);
+            numFainted++;
+        }
+    }
+    
+    if (numFainted == 0) // impossible??
+        return;
+    
+    target = Random() % numFainted;
+    
+    for (i = 0; i < 6; i++)
+    {
+        if (bitMask & 0x1)
+        {
+            if (target == 0)
+                break;
+            else
+                target--;
+        }
+        
+        bitMask = bitMask >> 1;
+    }
+    
+    target = i;
+    hp = GetMonData(&gEnemyParty[target], MON_DATA_MAX_HP);
+    SetMonData(&gEnemyParty[target], MON_DATA_HP, &hp);
+    
+    species = GetMonData(&gEnemyParty[target], MON_DATA_SPECIES);
+    
+    gBattleTextBuff1[0] = 0xFD;
+    gBattleTextBuff1[1] = 6;
+    gBattleTextBuff1[2] = (species);
+    gBattleTextBuff1[3] = uBYTE1_16(species);
+    gBattleTextBuff1[4] = 0xFF;
+    
 }

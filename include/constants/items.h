@@ -113,8 +113,8 @@
 #define ITEM_ESCAPE_ROPE 105
 #define ITEM_REPEL 106
 #define ITEM_HONEY 107
-#define ITEM_058 108
-#define ITEM_059 109
+#define ITEM_GUN 108
+#define ITEM_X_NIHILO 109
 #define ITEM_05A 110
 #define ITEM_05B 111
 #define ITEM_05C 112

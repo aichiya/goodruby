@@ -4,6 +4,7 @@
 #include "constants/hold_effects.h"
 #include "constants/items.h"
 #include "constants/moves.h"
+#include "constants/opponents.h"
 #include "constants/songs.h"
 #include "constants/species.h"
 #include "gba/flash_internal.h"
@@ -7154,6 +7155,58 @@ void HandleAction_UseItem(void)
     else if (GetBattlerSide(gBankAttacker) == B_SIDE_PLAYER)
     {
         gBattlescriptCurrInstr = gBattlescriptsForUsingItem[0];
+        // naughty hard-coded penalties for naughty behavior
+        if (gTrainerBattleOpponent == TRAINER_DOESNT)
+        {
+            u8 index = 0;
+            if (ePCItemsUsed < 50)
+                ePCItemsUsed++;
+            if (AI_BATTLE_HISTORY->numItems < 4)
+                AI_BATTLE_HISTORY->numItems++;
+            while (AI_BATTLE_HISTORY->trainerItems[index] != 0 && index < 3)
+                index++;
+            
+            // Start mixing in guns IFF:
+            // AI has used at least 3 items, AND
+            // Player has used 5, 9, 12, 14, or more items
+            if (eAIItemsUsed >= 3 && (
+                ePCItemsUsed == 5 ||
+                ePCItemsUsed == 9 ||
+                ePCItemsUsed == 12 ||
+                ePCItemsUsed >= 14))
+            {
+                AI_BATTLE_HISTORY->trainerItems[index] = ITEM_GUN;
+            }
+            else
+            {
+                switch (gLastUsedItem)
+                {
+                case ITEM_X_ATTACK:
+                case ITEM_X_DEFEND:
+                case ITEM_X_SPEED:
+                case ITEM_X_SPECIAL:
+                case ITEM_DIRE_HIT:
+                    AI_BATTLE_HISTORY->trainerItems[index] = ITEM_X_NIHILO;
+                    break;
+                case ITEM_REVIVE:
+                case ITEM_MAX_REVIVE:
+                case ITEM_REVIVAL_HERB:
+                    AI_BATTLE_HISTORY->trainerItems[index] = ITEM_MAX_REVIVE;
+                    break;
+                case ITEM_ETHER:
+                case ITEM_MAX_ETHER:
+                case ITEM_ELIXIR:
+                case ITEM_MAX_ELIXIR:
+                case ITEM_LEPPA_BERRY:
+                    AI_BATTLE_HISTORY->trainerItems[index] = ITEM_GUN;
+                    break;
+                    
+                default:
+                    AI_BATTLE_HISTORY->trainerItems[index] = ITEM_FULL_RESTORE;
+                    break;
+                }
+            }
+        }
     }
     else
     {
@@ -7207,6 +7260,12 @@ void HandleAction_UseItem(void)
             else
                 gBattleCommunication[MULTISTRING_CHOOSER] = 0;
             break;
+        }
+        
+        if (gTrainerBattleOpponent == TRAINER_DOESNT)
+        {
+            if (eAIItemsUsed < 50)
+                eAIItemsUsed++;
         }
 
         gBattlescriptCurrInstr = gBattlescriptsForUsingItem[*(gBattleStruct->AI_itemType + gBankAttacker / 2)];

@@ -369,6 +369,9 @@
 #define AI_ITEM_CURE_CONDITION   3
 #define AI_ITEM_X_STAT           4
 #define AI_ITEM_GUARD_SPECS      5
-#define AI_ITEM_NOT_RECOGNIZABLE 6
+#define AI_ITEM_GUN              6
+#define AI_ITEM_X_NIHILO         7
+#define AI_ITEM_REVIVE           8
+#define AI_ITEM_NOT_RECOGNIZABLE 9
 
 #endif // GUARD_CONSTANTS_BATTLE_CONSTANTS_H

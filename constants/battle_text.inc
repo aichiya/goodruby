@@ -448,3 +448,6 @@
     enum BATTLE_TEXT_AuraAllSharply
     enum BATTLE_TEXT_ExertsPressure
     enum BATTLE_TEXT_PowerHerb
+    enum BATTLE_TEXT_MaxRevive
+    enum BATTLE_TEXT_Gun
+    enum BATTLE_TEXT_XNihilo

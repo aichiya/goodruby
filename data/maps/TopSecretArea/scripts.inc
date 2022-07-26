@@ -4,7 +4,7 @@ TopSecretArea_MapScripts::
 
 TopSecretArea_MapScript::
 	goto_if_unset FLAG_BEAT_HACK_LORD, TopSecretArea_MapScriptEnd
-	setobjectxyperm 2, 23, 16
+	setobjectxyperm 2, 23, 17
 
 TopSecretArea_MapScriptEnd::
 	end
@@ -67,7 +67,7 @@ TopSecretArea_HackLordRequestFight::
 	msgbox TopSecretArea_Text_Hacker4, 4
 	trainerbattle 3, TRAINER_DOESNT, 0, TopSecretArea_Text_Hacker5
 	setflag FLAG_BEAT_HACK_LORD
-	setobjectxyperm 2, 23, 16
+	setobjectxyperm 2, 23, 17
     msgbox TopSecretArea_Text_Hacker6, 4
 	closemessage
     release

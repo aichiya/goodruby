@@ -30,6 +30,8 @@ extern const u8 gTypeEffectiveness[];
 extern struct BattlePokemon gBattleMons[];
 extern u32 gStatuses3[MAX_BATTLERS_COUNT];
 
+extern void DoSoftReset(void);
+
 static bool8 HasSuperEffectiveMoveAgainstOpponents(bool8 noRng);
 static bool8 FindMonWithFlagsAndSuperEffective(u8 flags, u8 moduloPercent);
 static bool8 ShouldUseItem(void);
@@ -858,8 +860,14 @@ u8 GetMostSuitableMonToSwitchInto(void)
 }
 
 // TODO: use PokemonItemEffect struct instead of u8 once it's documented
-static u8 GetAI_ItemType(u8 itemId, const u8 *itemEffect) // NOTE: should take u16 as item Id argument
+static u8 GetAI_ItemType(u16 itemId, const u8 *itemEffect) // NOTE: should take u16 as item Id argument
 {
+    if (itemId == ITEM_MAX_REVIVE)
+        return AI_ITEM_REVIVE;
+    if (itemId == ITEM_GUN)
+        return AI_ITEM_GUN;
+    if (itemId == ITEM_X_NIHILO)
+        return AI_ITEM_X_NIHILO;
     if (itemId == ITEM_FULL_RESTORE)
         return AI_ITEM_FULL_RESTORE;
     if (itemEffect[4] & 4)
@@ -902,13 +910,13 @@ static bool8 ShouldUseItem(void)
         item = AI_BATTLE_HISTORY->trainerItems[i];
         if (item == ITEM_NONE)
             continue;
-        if (gItemEffectTable[item - 13] == NULL)
+        if (gItemEffectTable[item - ITEM_POTION] == NULL)
             continue;
 
         if (item == ITEM_ENIGMA_BERRY)
             itemEffects = gSaveBlock1.enigmaBerry.itemEffect;
         else
-            itemEffects = gItemEffectTable[item - 13];
+            itemEffects = gItemEffectTable[item - ITEM_POTION];
 
         ewram160D8(gActiveBattler) = GetAI_ItemType(item, itemEffects);
 
@@ -979,6 +987,31 @@ static bool8 ShouldUseItem(void)
                ewram160DA(gActiveBattler) |= 0x20;
             if (itemEffects[0] & 0x30)
                ewram160DA(gActiveBattler) |= 0x80;
+            shouldUse = TRUE;
+            break;
+        case AI_ITEM_REVIVE:
+            for (i = 0; i < 6; i++)
+            {
+                if (GetMonData(&gEnemyParty[i], MON_DATA_HP) == 0)
+                {
+                    shouldUse = TRUE;
+                    break;
+                }
+            }
+            break;
+        case AI_ITEM_X_NIHILO:
+            if (gBattleMons[0].statStages[STAT_STAGE_ATK] > 5 ||
+                gBattleMons[0].statStages[STAT_STAGE_DEF] > 5 ||
+                gBattleMons[0].statStages[STAT_STAGE_SPATK] > 5 ||
+                gBattleMons[0].statStages[STAT_STAGE_SPDEF] > 5 ||
+                gBattleMons[0].statStages[STAT_STAGE_SPEED] > 5 ||
+                gBattleMons[0].statStages[STAT_STAGE_ACC] > 5 ||
+                gBattleMons[0].statStages[STAT_STAGE_EVASION] > 5)
+                shouldUse = TRUE;
+            if (gBattleMons[1].ability == ABILITY_UNAWARE)
+                shouldUse = FALSE;
+            break;
+        case AI_ITEM_GUN:
             shouldUse = TRUE;
             break;
         case AI_ITEM_GUARD_SPECS:

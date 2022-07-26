@@ -452,6 +452,9 @@ enum
     BATTLE_TEXT_AuraAllSharply,
     BATTLE_TEXT_ExertsPressure,
     BATTLE_TEXT_PowerHerb,
+    BATTLE_TEXT_MaxRevive,
+    BATTLE_TEXT_Gun,
+    BATTLE_TEXT_XNihilo,
 };
 
 const u8 BattleText_UnknownString[] = _("{STRING 33}");
@@ -1033,6 +1036,9 @@ const u8 BattleText_AuraAll[] = _("{STRING 3}'s aura flared to life!\nIts stats 
 const u8 BattleText_AuraAllSharply[] = _("{STRING 3}'s aura flared to life!\nIts stats rose sharply!\p");
 const u8 BattleText_ExertsPressure[] = _("{STRING 16}\nexerts its Pressure!");
 const u8 BattleText_PowerHerb[] = _("{ATTACKING_MON} became fully charged\ndue to its Power Herb!");
+const u8 BattleText_MaxRevive[] = _("Using Max Revive, {STRING 0}\nrecovered from fainting!");
+const u8 BattleText_Gun[] = _("Using Gun, grievous violence\nwas inflicted!");
+const u8 BattleText_XNihilo[] = _("Using X Nihilo, {STRING 13}'s stats\nwere reduced to minimum values!");
 
 
 
@@ -1508,6 +1514,9 @@ const u8 *const gBattleStringsTable[] =
     BattleText_AuraAllSharply,
     BattleText_ExertsPressure,
     BattleText_PowerHerb,
+    BattleText_MaxRevive,
+    BattleText_Gun,
+    BattleText_XNihilo,
 };
 
 // below are lists of battle string enums and NOT pointers to the strings.
